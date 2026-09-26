@@ -42,6 +42,7 @@ def validate(data):
 OPTIONAL = {'bandwidth_tbs': None, 'bandwidth_note': None, 'ai_compute': None, 'interconnect': None, 'form_factor': None, 'cooling': None, 'msrp_usd': None, 'use_ar': None, 'price': None, 'image': None}
 AED_PEG = 3.6725  # UAE dirham is pegged to the US dollar.
 INSTAGRAM = 'https://www.instagram.com/qahwa.w.ai/'
+BACKEND_ONLY = ('announcements',)
 
 def money(low, high, prefix):
     if low is None and high is None:
@@ -95,7 +96,7 @@ def news_lists(news, sources, uae_only, limit=12):
         name = s['name_ar'] if lang == 'ar' else s['name']
         mt = '<span class="mt">ترجمة آلية</span>' if lang == 'ar' and i['lang'] == 'en' else ''
         text_dir = 'rtl' if (lang == 'ar') else 'ltr'
-        return f'<li><a href="{E(i["url"])}" target="_blank" rel="noopener noreferrer" dir="{text_dir}">{E(title)}</a><span class="meta">{E(name)} · {news_date(i["published"], lang)}{mt}</span></li>'
+        return f'<li><a href="{E(i["url"])}" target="_blank" rel="noopener noreferrer" dir="{text_dir}">{E(title)}</a><span class="meta"><a class="src" href="{E(s["homepage"])}" target="_blank" rel="noopener noreferrer">{E(name)}</a> · {news_date(i["published"], lang)}{mt}</span></li>'
     def varied(pool):
         # Newest first, at most two headlines per source so one outlet can't fill the list.
         seen, out = {}, []
@@ -215,16 +216,15 @@ def main():
     models=load('models.json') or {'models':[]}
     slim={'updated_at':models.get('updated_at'),'models':[{'n':m['name'],'b':m['params_b'],'o':m['open'],'s':m['params_source'],'moe':m.get('moe',False),'c':m['context'],'hf':m['hf']} for m in models['models']]}
     text=(ROOT/'web/template.html').read_text(encoding='utf-8')
-    news='<p>No announcement check has run yet.</p>'
-    if data.get('announcements'):
-        news='<ul>'+''.join(f'<li><a href="{E(n["url"])}" target="_blank" rel="noopener noreferrer">{E(n["title"])}</a> - discovered {E(n["discovered_at"][:10])}</li>' for n in data['announcements'][:12])+'</ul><p>These are official source headlines. Discovery dates are not release dates.</p>'
-    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWS':news,'NEWSFEED':news_section(feed,sources),'UAE':uae_section(uae,feed,sources),'INSTAGRAM':INSTAGRAM,'MODELS':json.dumps(slim,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c'),'EDITION':E(data['edition_note']),'JSON':json.dumps(data,ensure_ascii=False).replace('<','\\u003c')}
+    # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
+    public={k:v for k,v in data.items() if k not in BACKEND_ONLY}
+    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWSFEED':news_section(feed,sources),'UAE':uae_section(uae,feed,sources),'INSTAGRAM':INSTAGRAM,'MODELS':json.dumps(slim,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c'),'EDITION':E(data['edition_note']),'JSON':json.dumps(public,ensure_ascii=False).replace('<','\\u003c')}
     health=data.get('check_health')
     if health:
         replacements['CHECKED'] += E(f" ({health['successful_sources']}/{health['attempted_sources']} sources reached)")
     for k,v in replacements.items():text=text.replace('__'+k+'__',v)
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
-    (OUT/'catalog.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
+    (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     pdf(data)
     if args.standalone:

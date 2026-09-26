@@ -112,7 +112,7 @@
     'Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.':'اختر من {n} نموذجًا مدرجًا على OpenRouter (آخر تحديث للقائمة {d})، أو أدخل الحجم أدناه.','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات','News sources':'مصادر الأخبار',
     'UAE AI headlines':'عناوين الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
     'Follow Qahwa & AI on Instagram':'تابع قهوة و AI على إنستغرام','Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق','Not publicly priced':'لا يوجد سعر معلن',
-    'US retail':'متاجر أمريكية','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Official announcement watch':'رصد الإعلانات الرسمية','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل'
+    'US retail':'متاجر أمريكية','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل'
   };
   const $ = id => document.getElementById(id);
   const data = JSON.parse($('catalog-data').textContent);
