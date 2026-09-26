@@ -1,10 +1,13 @@
 # AI Hardware Atlas
 
-Public NVIDIA / AMD comparison, static HTML, one-page PDF and an official-source checker.
+Cipher AI Knowledge: public NVIDIA / AMD comparison, AI news and UAE AI, as one static bilingual page, plus a one-page PDF and an official-source checker.
 
 ## Current scope
 
-- 31 GPU, system and rack entries, kept in `data/catalog.json`.
+- Three-pillar hub. `#home` is a short hero plus three equal pillars (Hardware, AI news, UAE AI), each a mini-dashboard with stats computed from the data and an "Open …" button. Inner views: `#hardware` (the full tool below), `#news`, `#uae` and `#contact`, each with a top nav, breadcrumb and "Back to overview". Unknown hashes open `#home`. Deep links such as `#hardware/level/Personal`, `#hardware/p/<id>`, `#news/uae` or `#uae/f/<id>` are applied and then reduced to the view. Filters stay in the query string next to the hash, so Copy link shares both. Without JavaScript all views render one after another.
+- Featured products and the two UAE highlights on `#home` are chosen in `data/site.json` (unknown ids are skipped and filled from the data).
+- Brand: text wordmark "Cipher AI Knowledge". Logo slot: drop `web/brand/logo.svg` (shown before the wordmark) and `web/brand/favicon.svg`, then rebuild; both are sanitised and embedded as images, so they cannot run script. Until then the favicon is a neutral gradient square. See `web/brand/README.md`.
+- GPU, system and rack entries, kept in `data/catalog.json`.
 - Search and filters; numeric memory, bandwidth, power and launch-price sorting; chronological date-window sorting.
 - Separate announcement and availability/target dates; memory scope on every entry.
 - Specs where officially published: memory bandwidth, headline AI compute (precision and sparsity as stated), interconnect, form factor, cooling and launch MSRP. Unknown values show "Not listed".
@@ -15,7 +18,7 @@ Public NVIDIA / AMD comparison, static HTML, one-page PDF and an official-source
 - English / Arabic (RTL) interface, light / dark / auto theme, printable table.
 - Official product photos (NVIDIA / AMD, credited and linked), stored as small WebP files in `images/` (`python scripts/images.py`).
 - Approximate current prices in USD and AED: dated retail listings or reported estimates, with sources (`price` in the catalog). Without a UAE listing, AED is converted at the 3.6725 peg and labelled. The review issue flags prices older than 45 days.
-- AI news in English and Arabic, refreshed with every scheduled run from 40 vetted feeds (`data/news-sources.json`, `scripts/news.py`). Only headlines, links, source and date are stored; links must stay on the publisher's domain. With `ANTHROPIC_API_KEY`, recent English headlines also get an Arabic translation, marked "ترجمة آلية".
+- AI news in English and Arabic (full lists grouped by day in UAE time, Global / UAE filter, source names linked to publisher homepages), refreshed with every scheduled run from 40 vetted feeds (`data/news-sources.json`, `scripts/news.py`). Only headlines, links, source and date are stored; links must stay on the publisher's domain. With `ANTHROPIC_API_KEY`, recent English headlines also get an Arabic translation, marked "ترجمة آلية".
 - UAE AI section: sourced fact cards (`data/uae.json`, reviewed by hand) plus headlines about the UAE or from UAE newsrooms.
 - Link to Qahwa & AI on Instagram (@qahwa.w.ai).
 - "Pick a model" in the estimator: every model listed on OpenRouter (`data/models.json`, refreshed with each scheduled run by `scripts/models.py`). Open-weight sizes come from Hugging Face safetensors metadata (all experts of MoE models counted); only unambiguous dense names are used as a fallback. Closed models are shown as cloud-only.
@@ -63,6 +66,8 @@ python -m http.server 8080 --directory dist
 ```
 
 Open http://localhost:8080. `dist/index.html` is self-contained and can also be opened directly. Keep the generated PDF next to it for the download button.
+
+Browser smoke test (not part of `unittest discover`; needs `pip install playwright` and `python -m playwright install chromium`): serve `dist` and run `python tests/e2e_smoke.py http://localhost:8080/`. It clicks through every view in English and Arabic at 375, 768 and 1280 px and checks console errors, horizontal scroll, deep links, filters and the no-JavaScript fallback.
 
 ## Data integrity
 
