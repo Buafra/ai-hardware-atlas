@@ -104,7 +104,11 @@
     'Capacity is not speed':'السعة ليست السرعة','Memory capacity determines what can fit. Bandwidth, compute, precision and software influence how quickly it runs. Sorting by memory is not a performance ranking.':'سعة الذاكرة تحدد ما يمكن أن يتسع. أما سرعة التشغيل فتتأثر بعرض النطاق والحوسبة والدقة والبرمجيات. الترتيب حسب الذاكرة ليس ترتيبًا للأداء.',
     'Compare the same scope':'قارن النطاق نفسه','A single GPU, shared CPU/GPU system, and rack total are different measurements. Multiple GPUs do not automatically expose one shared VRAM pool.':'معالج رسوميات واحد، ونظام بذاكرة مشتركة، وإجمالي رف كامل هي قياسات مختلفة. تعدد معالجات الرسوميات لا يعني تلقائيًا ذاكرة واحدة مشتركة.',
     'Dates have different meanings':'للتواريخ معانٍ مختلفة','An announcement does not establish first shipment. Vendor targets remain labeled as targets until a release or availability statement is verified. Unknown values stay blank.':'الإعلان لا يعني بدء الشحن. تبقى أهداف الشركات موسومة كأهداف حتى يتم التحقق من الإصدار أو التوفر. القيم غير المعروفة تبقى فارغة.',
-    'What changed':'ما الذي تغيّر','Pick a model from OpenRouter':'اختر نموذجًا من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
+    'What changed':'ما الذي تغيّر','Contact':'تواصل معنا','Questions, corrections or partnership ideas? Send a message.':'أسئلة أو تصحيحات أو أفكار للتعاون؟ أرسل رسالة.',
+    'Your name':'اسمك','Your email (optional)':'بريدك الإلكتروني (اختياري)','Subject':'الموضوع','Message':'الرسالة','Send message':'إرسال الرسالة',
+    'Opens your email app with the message ready to send, or write to':'يفتح تطبيق البريد لديك والرسالة جاهزة للإرسال، أو راسلنا على',
+    'Please add a subject and a message.':'يرجى إضافة الموضوع والرسالة.','Opening your email app…':'جارٍ فتح تطبيق البريد…',
+    'All rights reserved.':'جميع الحقوق محفوظة.','Product images © NVIDIA and AMD. Headlines © their publishers and link to the original articles.':'صور المنتجات © NVIDIA وAMD. العناوين © لناشريها وترتبط بالمقالات الأصلية.','Pick a model from OpenRouter':'اختر نموذجًا من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
     "{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.":'{name} نموذج مغلق: أوزانه غير منشورة، لذا يعمل فقط في سحابة المزوّد (مثلًا عبر OpenRouter). لا يمكن لأي عتاد في هذه الصفحة تشغيله محليًا.',
     '{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.':'{name} مفتوح الأوزان، لكن حجمه غير منشور بصيغة يمكننا التحقق منها. أدخل الحجم يدويًا.',
     '{name}: {b} billion parameters':'{name}: {b} مليار مُعامل','size taken from the model name':'الحجم مأخوذ من اسم النموذج','counted from Hugging Face weights':'محسوب من أوزان Hugging Face',
@@ -345,6 +349,20 @@
     catch (e) { window.prompt(T('Copy link'), location.href); }
   });
   $('print').addEventListener('click', () => { state.view = 'table'; render(); window.print(); });
+  // Contact: the address is assembled here so it isn't sitting in the page source for scrapers.
+  const contactAddress = ['buafra', 'gmail.com'].join('@');
+  $('c-mail').href = 'mailto:' + contactAddress;
+  $('c-mail').textContent = contactAddress;
+  $('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = id => $(id).value.trim();
+    if (!v('c-subject') || !v('c-message')) { $('c-error').textContent = T('Please add a subject and a message.'); $('c-error').hidden = false; return; }
+    $('c-error').hidden = true;
+    const from = [v('c-name'), v('c-email')].filter(Boolean).join(' · ');
+    const body = (from ? from + '\n\n' : '') + v('c-message') + '\n\n— ' + location.href;
+    flash(T('Opening your email app…'));
+    location.href = `mailto:${contactAddress}?subject=${encodeURIComponent('[Cipher AI Knowledge] ' + v('c-subject'))}&body=${encodeURIComponent(body)}`;
+  });
   $('csv').addEventListener('click', () => {
     const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
     const cell = v => '"' + String(v ?? '').replaceAll('"', '""') + '"';

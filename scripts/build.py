@@ -161,10 +161,10 @@ def pdf(data):
     pdfmetrics.registerFont(TTFont('Atlas-Bold', str(fontdir/'DejaVuSans-Bold.ttf')))
     w,h = A3
     c=canvas.Canvas(str(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf'),pagesize=A3)
-    c.setTitle('AI Hardware Atlas - NVIDIA and AMD')
+    c.setTitle('AI Hardware Atlas - NVIDIA and AMD | Cipher AI Knowledge');c.setAuthor('Cipher AI Knowledge')
     c.setFillColor(HexColor('#f5f8ff'));c.rect(0,0,w,h,fill=1,stroke=0)
     c.setFillColor(HexColor('#4d2899'));c.roundRect(24,h-117,w-48,93,16,fill=1,stroke=0)
-    c.setFillColor(HexColor('#ffffff'));c.setFont('Atlas-Bold',27);c.drawString(43,h-66,'AI HARDWARE ATLAS')
+    c.setFillColor(HexColor('#ffffff'));c.setFont('Atlas-Bold',27);c.drawString(43,h-66,'AI HARDWARE ATLAS');c.setFont('Atlas-Bold',10);c.drawRightString(w-43,h-58,'CIPHER AI KNOWLEDGE')
     c.setFont('Atlas',12);c.drawString(44,h-95,f"NVIDIA + AMD / {len(data['products'])} products / Updated {data['updated_at'][:10]}")
     c.setFillColor(HexColor('#42516e'));c.setFont('Atlas',9)
     c.drawString(30,h-144,'A = announced / launched. R = availability or vendor target. Blank dates are not established.')
@@ -198,7 +198,7 @@ def pdf(data):
     c.setFillColor(HexColor('#39236f'));c.setFont('Atlas-Bold',10);c.drawString(45,97,'COMPARE LIKE FOR LIKE')
     c.setFont('Atlas',8.4);c.drawString(45,80,'Dedicated GPU VRAM, shared system memory and rack totals have different meanings. Capacity is not speed.')
     c.drawString(45,65,'Each row links to an official source. The website includes power, architecture, detailed notes and all sources.')
-    c.setFillColor(HexColor('#65758f'));c.setFont('Atlas',8);c.drawString(30,28,'One-page overview. Precise dates are shown only where established; availability varies by partner and region.')
+    c.setFillColor(HexColor('#65758f'));c.setFont('Atlas',8);c.drawString(30,28,'One-page overview. Precise dates are shown only where established; availability varies by partner and region.');c.drawRightString(w-30,28,f'© {datetime.now().year} Cipher AI Knowledge')
     c.showPage();c.save()
 
 def main():
@@ -218,7 +218,7 @@ def main():
     text=(ROOT/'web/template.html').read_text(encoding='utf-8')
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public={k:v for k,v in data.items() if k not in BACKEND_ONLY}
-    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWSFEED':news_section(feed,sources),'UAE':uae_section(uae,feed,sources),'INSTAGRAM':INSTAGRAM,'MODELS':json.dumps(slim,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c'),'EDITION':E(data['edition_note']),'JSON':json.dumps(public,ensure_ascii=False).replace('<','\\u003c')}
+    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWSFEED':news_section(feed,sources),'UAE':uae_section(uae,feed,sources),'INSTAGRAM':INSTAGRAM,'YEAR':str(datetime.now().year),'MODELS':json.dumps(slim,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c'),'EDITION':E(data['edition_note']),'JSON':json.dumps(public,ensure_ascii=False).replace('<','\\u003c')}
     health=data.get('check_health')
     if health:
         replacements['CHECKED'] += E(f" ({health['successful_sources']}/{health['attempted_sources']} sources reached)")
