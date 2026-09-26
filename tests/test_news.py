@@ -214,14 +214,17 @@ class SummaryTests(unittest.TestCase):
         client=FakeClient();self.run_summaries([bare],client)
         self.assertEqual(client.calls,[]);self.assertEqual(bare['summary_attempts'],1)
     def test_validation(self):
-        answers={'i00':{'summary_en':'x'*451,'summary_ar':'ملخص.'},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},
+        long_en='The company announced a new accelerator for data centres this week. '*12
+        answers={'i00':{'summary_en':long_en,'summary_ar':'ملخص.'},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},
                  'i02':{'summary_en':'','summary_ar':''},'i03':{'summary_en':'Good summary of the <b>story</b>.','summary_ar':'ملخص جيد للخبر.'}}
         items=[item(n) for n in range(4)]
         done,_=self.run_summaries(items,FakeClient(answer=lambda i:answers[i]))
-        self.assertEqual(done,1)
-        self.assertNotIn('summary_en',items[0]);self.assertNotIn('summary_en',items[1])
-        # Too long, wrong language or empty (too little to summarise): each counts as a try.
-        self.assertEqual([i.get('summary_attempts') for i in items[:3]],[1,1,1])
+        self.assertEqual(done,2)
+        # Too long: trimmed back to whole sentences within the limit and kept, not thrown away.
+        self.assertLessEqual(len(items[0]['summary_en']),news.SUMMARY_MAX);self.assertTrue(items[0]['summary_en'].endswith('this week.'))
+        self.assertNotIn('summary_en',items[1])
+        # Wrong language or empty (too little to summarise): each counts as a try.
+        self.assertEqual([i.get('summary_attempts') for i in items[:3]],[None,1,1])
         self.assertEqual((items[3]['summary_en'],items[3]['summary_source'],items[3]['summary_basis']),('Good summary of the story.','ai','excerpt'))  # markup removed
         # Mostly the right script: Arabic that names NVIDIA is Arabic; English with one Arabic word is English.
         self.assertTrue(news._valid_summary('أعلنت NVIDIA عن شريحة جديدة للذكاء الاصطناعي.',True))
