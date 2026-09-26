@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-26T18:36:24+00:00",
+  "at": "2026-09-26T20:02:22+00:00",
   "health": {
     "successful_sources": 114,
     "failed_sources": 0,
@@ -10,12 +10,12 @@
     {
       "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-26T18:36:24+00:00"
+      "at": "2026-09-26T20:02:22+00:00"
     },
     {
       "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-26T18:36:24+00:00"
+      "at": "2026-09-26T20:02:22+00:00"
     }
   ],
   "errors": {}
