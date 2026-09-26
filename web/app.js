@@ -158,7 +158,7 @@
     'Compare GPUs, desktop systems, servers and racks.':'قارن معالجات الرسوميات والأجهزة المكتبية والخوادم والرفوف.',
     'One-page PDF':'ملف PDF من صفحة واحدة','Export CSV':'تصدير CSV','Copy link':'نسخ الرابط','Link copied':'تم نسخ الرابط','Print table':'طباعة الجدول',
     'Theme: Auto':'المظهر: تلقائي','Theme: Light':'المظهر: فاتح','Theme: Dark':'المظهر: داكن','Auto':'تلقائي','Light':'فاتح','Dark':'داكن',
-    'Content updated:':'آخر تحديث للمحتوى:','Prices checked:':'آخر تحقق من الأسعار:',
+    'Content updated:':'تاريخ المحتوى:','Prices checked:':'آخر تحقق من الأسعار:',
     'Search':'بحث','Vendor':'الشركة','Level':'المستوى','Memory scope':'نطاق الذاكرة','Model, memory, architecture…':'الطراز، الذاكرة، المعمارية…',
     'All levels':'كل المستويات','All memory scopes':'كل نطاقات الذاكرة',
     'Personal':'شخصي','Workstation':'محطة عمل','Enterprise':'مؤسسات','Data center':'مراكز البيانات','Rack scale':'على مستوى الرف',
@@ -203,32 +203,37 @@
     '{name}: {b} billion parameters':'{name}: {b} مليار مُعامل','size taken from the model name':'الحجم مأخوذ من اسم النموذج','counted from Hugging Face weights':'محسوب من أوزان Hugging Face',
     'mixture-of-experts: all experts must fit in memory':'نموذج خبراء متعددين (MoE): يجب أن تتسع الذاكرة لكل الخبراء','context up to {c}':'سياق حتى {c}',
     'Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.':'اختر من {n} نموذجاً مدرجاً على OpenRouter (آخر تحديث للقائمة {d})، أو أدخل الحجم أدناه.','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات',
-    'UAE AI headlines':'عناوين الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
+    'Latest UAE AI news':'أحدث أخبار الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
     'Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق في','Not publicly priced':'لا يوجد سعر معلن',
     'US retail':'متاجر أمريكية','US used market':'سوق المستعمل الأمريكي','UAE used market':'سوق المستعمل في الإمارات','Ada Lovelace':'Ada Lovelace','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل',
     'Reference total graphics power':'الطاقة الإجمالية المرجعية للرسوميات','Official specification, checked automatically':'مواصفة رسمية يُتحقق منها تلقائياً','Accelerator rating; excludes host':'تصنيف المسرّع، دون النظام المضيف','Total board power':'إجمالي طاقة البطاقة','Workstation Edition maximum':'الحد الأقصى لإصدار محطة العمل',
-    // Site shell and the three-pillar hub
+    // Site shell and the four-pillar hub
     'Skip to content':'انتقل إلى المحتوى','Main sections':'الأقسام الرئيسية','Overview':'الرئيسية','News':'الأخبار','UAE':'الإمارات',
     'Breadcrumb':'مسار التنقل','Back to overview':'العودة إلى الرئيسية','Other areas':'الأقسام الأخرى','Footer':'تذييل الصفحة',
     'AI hardware, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات','Decoding the gaps in AI knowledge':'كشف المجهول في عالم الذكاء الاصطناعي',
     'Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.':'قارن عتاد الذكاء الاصطناعي من NVIDIA وAMD، وتابع آخر أخبار الذكاء الاصطناعي، واطّلع على ما تبنيه الإمارات، مع ذكر المصادر والتواريخ في كل قسم.',
     'Follow Qahwa & AI':'تابع قهوة و AI','AI lessons and news from Qahwa & AI, in English and Arabic.':'دروس وأخبار الذكاء الاصطناعي من قهوة و AI، بالعربية والإنجليزية.',
-    'The three areas':'الأقسام الثلاثة','The three areas of the site':'أقسام الموقع الثلاثة',
+    'Quick links':'روابط سريعة','The four areas of the site':'أقسام الموقع الأربعة',
     'NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.':'معالجات رسوميات وأجهزة مكتبية وخوادم ورفوف من NVIDIA وAMD، جنباً إلى جنب.',
     'products':'المنتجات','levels':'المستويات','with approx. price':'بسعر تقريبي','Featured':'مختارات','Prices approximate':'الأسعار تقريبية',
     'Browse by level':'تصفّح حسب المستوى','Browse':'تصفّح','Approx.':'حوالي','Open hardware':'افتح قسم العتاد',
     'headlines':'العناوين','English · Arabic':'إنجليزي · عربي','sources':'المصادر','Latest headlines':'أحدث العناوين','Times in UAE time':'الأوقات بتوقيت الإمارات',
     'Global':'عالمي','Open AI news':'افتح قسم الأخبار',
     'What the UAE is building in AI: strategy, compute and models, each fact with its source.':'ما تبنيه الإمارات في الذكاء الاصطناعي: الاستراتيجية والحوسبة والنماذج، ولكل معلومة مصدرها.',
-    'key facts':'المعلومات الرئيسية','UAE headlines':'عناوين الإمارات','Highlights':'أبرز المعلومات',
-    'Latest UAE headlines':'أحدث عناوين الإمارات','Twice a day':'مرتين يومياً','Open UAE AI':'افتح قسم الإمارات',
+    'key facts':'الحقائق الرئيسية','UAE headlines':'عناوين الإمارات','Key fact':'حقيقة رئيسية',
+    'Latest UAE headlines':'أحدث عناوين الإمارات','Open UAE AI':'افتح قسم الإمارات',
+    // Learn AI: its nav item and the fourth pillar (the page itself, learn.html, carries both languages in its HTML)
+    'Learn AI':'تعلّم الذكاء الاصطناعي','Learn':'تعلّم','Open Learn AI':'افتح صفحة تعلّم الذكاء الاصطناعي',
+    "Plain-language guides to the ideas behind today's AI, and recommended stacks for building with it.":'شروح واضحة للأفكار التي يقوم عليها الذكاء الاصطناعي اليوم، وتركيبات تقنية موصى بها للبناء به.',
+    'concepts':'المفاهيم','AI stacks':'التركيبات التقنية','foundations':'الأسس','Start here':'ابدأ من هنا','Beginner concepts':'مفاهيم للمبتدئين',
+    'Local, cloud and UAE-hosted options':'خيارات محلية وسحابية ومستضافة في الإمارات','Browse by topic':'تصفّح حسب الموضوع',
     'Why trust this':'لماذا تثق بهذه البيانات؟','Official sources':'مصادر رسمية','Dated prices':'أسعار مؤرّخة',
     'Prices are approximate, labelled by kind, with the date they were checked.':'الأسعار تقريبية، ويظهر مع كل سعر نوعه وتاريخ التحقق منه.',
-    'News twice a day':'الأخبار مرتين يومياً','Official sources checked':'فحص المصادر الرسمية','Hardware sources are checked twice a day.':'تُفحص مصادر العتاد مرتين يومياً.',
+    'Every headline sourced':'لكل عنوان مصدره','Official sources checked':'فحص المصادر الرسمية','Hardware sources are checked automatically.':'تُفحص مصادر العتاد تلقائياً.',
     'Each summary says whether AI or the publisher wrote it, and every headline has a source link to the original article.':'يوضح كل ملخص إن كان من كتابة الذكاء الاصطناعي أو من الناشر، ولكل عنوان رابط إلى المقال الأصلي.',
     'Headlines at a glance':'العناوين في لمحة','Region':'النطاق','All':'الكل','English':'الإنجليزية','Arabic':'العربية',
     'Headlines':'العناوين','Show more':'عرض المزيد','Showing {n} of {m}':'المعروض {n} من أصل {m}',
-    'Key facts':'معلومات رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولاً. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
+    'Key facts':'حقائق رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولاً. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
     'Each product links to its evidence. Uses are editorial guidance. Power figures apply to the listed component or edition, not the whole server. Launch prices are vendor MSRPs at launch, not current street prices. Timing and stock vary by manufacturer and region. Approximate prices are dated snapshots of retail listings or reported estimates, not offers; UAE retail prices normally include 5% VAT. Product images belong to NVIDIA and AMD and link to their source pages.':'كل منتج مرتبط بمصدره. الاستخدامات المقترحة إرشاد تحريري. أرقام الطاقة تخص المكوّن أو الإصدار المذكور، لا الخادم كاملاً. أسعار الإطلاق هي الأسعار المقترحة من الشركة عند الإطلاق، وليست أسعار السوق الحالية. المواعيد والتوفر يختلفان حسب الشركة المصنّعة والمنطقة. الأسعار التقريبية لقطات مؤرّخة من قوائم المتاجر أو تقديرات منشورة، وليست عروض بيع، وأسعار متاجر الإمارات تشمل عادةً ضريبة القيمة المضافة 5%. صور المنتجات مملوكة لـ NVIDIA وAMD وترتبط بصفحات مصادرها.',
     'Llama, Qwen, DeepSeek, gpt-oss…':'مثل Llama وQwen وDeepSeek وgpt-oss…','Specification':'المواصفة','Selected for comparison':'المنتجات المختارة للمقارنة'
   };
@@ -264,6 +269,9 @@
   const known = {levels, vendors: ['NVIDIA', 'AMD'], products: [...byId.keys()], facts: [...document.querySelectorAll('[data-fact]')].map(el => el.dataset.fact)};
   const NEWS_STEP = 30;
   let newsLimit = NEWS_STEP;
+  // The UAE view lists its headlines before the key facts: a first few, then "Show more", so the facts stay near on a phone.
+  const UAE_STEP = 8;
+  let uaeLimit = UAE_STEP;
 
   const MODELS = (() => { try { return JSON.parse($('models-data').textContent); } catch (e) { return {models: []}; } })();
   const modelByName = new Map(MODELS.models.map(m => [m.n.toLowerCase(), m]));
@@ -314,9 +322,20 @@
     lb.querySelector('.l-long').textContent = state.lang === 'ar' ? 'English' : 'العربية';
     lb.querySelector('.l-short').textContent = state.lang === 'ar' ? 'EN' : 'عربي';
     lb.lang = state.lang === 'ar' ? 'en' : 'ar';
+    learnLinks();
     applyTheme();
     setTitle();
     document.documentElement.classList.remove('i18n-wait');
+  }
+  function learnLinks() {
+    // learn.html is a separate page that takes its language from ?lang= or the saved choice. A ?lang=ar visit (every
+    // Arabic link copied from this page has one) saves nothing, so the links to it carry the language shown here.
+    const want = state.lang === 'ar' ? 'ar' : store.get('atlas-lang') === 'ar' ? 'en' : '';
+    document.querySelectorAll('a[href^="learn.html"]').forEach(a => {
+      if (a.dataset.baseHref == null) a.dataset.baseHref = a.getAttribute('href');
+      const h = a.dataset.baseHref, i = h.indexOf('#'), path = i < 0 ? h : h.slice(0, i), frag = i < 0 ? '' : h.slice(i);
+      a.setAttribute('href', want ? path + '?lang=' + want + frag : h);
+    });
   }
   function applyTheme() {
     if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
@@ -367,6 +386,7 @@
     renderTray();
     modelNote();
     renderNews();
+    renderUae();
     syncUrl();
   }
 
@@ -387,6 +407,15 @@
     list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
     $('news-count').textContent = F('Showing {n} of {m}', {n: shown, m: countLabel(total, 'headline', state.lang)});
     if (more) more.hidden = shown >= total;
+  }
+
+  function renderUae() {
+    const view = $('uae'), more = $('uae-more');
+    if (!view || !more) return;
+    const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), items = list ? [...list.querySelectorAll('li.nitem')] : [];
+    items.forEach((li, n) => { li.hidden = n >= uaeLimit; });
+    if (list) list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
+    more.hidden = items.length <= uaeLimit;
   }
 
   function renderTable(n) {
@@ -597,6 +626,7 @@
     if (rc) { state.region = rc.dataset.regionChip; newsLimit = NEWS_STEP; render(); }
   });
   $('news-more') && $('news-more').addEventListener('click', () => { newsLimit += NEWS_STEP; renderNews(); });
+  $('uae-more') && $('uae-more').addEventListener('click', () => { uaeLimit += UAE_STEP; renderUae(); });
   $('skip').addEventListener('click', e => {
     e.preventDefault();
     const h = document.querySelector(`[data-view="${currentView}"] h1`);

@@ -11,9 +11,14 @@ query string + hash together, legacy query-only links, deep links on a fresh pag
 view change, Back closing the comparison, Arabic direction, filters, compare, theme, language, no-JavaScript fallback,
 no requests to other hosts, and that the contact address is not in the page source. Also the owner's requests of
 26 Sep 2026: headline cards with a summary and a small source link to the original article, no public source list or
-fetch statistics, schedule or newsroom list, the UAE flag (not mirrored in Arabic, whole-pixel size), the contact card
-instead of a form with the footer at the bottom of the window, the estimator wording, and the Qahwa & AI follow button
-in every view, the footer and the top bar at every width.
+fetch statistics, schedule or newsroom list, the contact card instead of a form with the footer at the bottom of the
+window, the estimator wording, and the Qahwa & AI follow button in every view, the footer and the top bar at every
+width. Second round: the UAE flag removed again (the generic icon and markers are back), the "Updated <date> · twice a
+day" line only once (top of AI news), full summaries in the news and UAE lists (clamped on the overview), the «ترجمة
+بالذكاء الاصطناعي» label, and the UAE view and pillar with the latest UAE headlines before the key facts. Learn AI
+(learn.html, a separate page): its header link at every width, the fourth pillar two by two with the others on wide
+screens (one column below 1000px) with its counts from data/learn, and its links opening the page and its deep links.
+Review of that round: the UAE list in steps of 8 ("Show more"), and Arabic carried across to learn.html by its links.
 """
 import json
 import re
@@ -25,6 +30,8 @@ from playwright.sync_api import sync_playwright
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8791/').rstrip('/') + '/'
 ORIGIN = '{0.scheme}://{0.netloc}'.format(urlparse(BASE))
 DATA = Path(__file__).resolve().parents[1] / 'data'
+LEARN = [json.loads((DATA / 'learn' / f).read_text(encoding='utf-8')) for f in ('concepts.json', 'stacks.json')]
+LEARN_COUNTS = [len(LEARN[0]['concepts']), sum(s['kind'] != 'foundation' for s in LEARN[1]['stacks']), sum(s['kind'] == 'foundation' for s in LEARN[1]['stacks'])]
 ITEM_URLS = {i['url'] for i in json.loads((DATA / 'news.json').read_text(encoding='utf-8'))['items']}
 HOMEPAGES = {s['homepage'] for s in json.loads((DATA / 'news-sources.json').read_text(encoding='utf-8'))}
 # The site's own phrases for what was removed; checked only in the site's own text, never in headlines or summaries.
@@ -33,11 +40,11 @@ BACKEND_WORDS = ('feeds responded', 'sources responded', 'responded in the lates
 LABELS = {'en': ('AI summary', 'From the publisher'), 'ar': ('ملخص بالذكاء الاصطناعي', 'من الناشر')}
 ROUTES = ['home', 'hardware', 'news', 'uae', 'contact']
 KEY = {
-    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-flag .flag', '.pillar .cta', '.trust', '#home .follow-btn'],
+    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-icon svg', '.pillar.p-uae .heads li .n-title', '.pillar .cta', '.trust', '#home .follow-btn', '.pillar.p-learn .stats .stat', '.pillar.p-learn .lpicks a', '.pillar.p-learn .lvl .chip', '.pillar.p-learn .cta'],
     'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort', '#extra-hint', '#hardware .ihead .follow-btn'],
-    'news': ['#news-title', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
-    'uae': ['#uae-title', '#uae-title .flag', '#uae .fact', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
-    'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .contact-card .follow-btn', '#contact .xcard.x-uae .flag'],
+    'news': ['#news-title', '#news .ifresh', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
+    'uae': ['#uae-title', '#uae .uae-facts .fact', '#uae .uae-heads .sec-h h2', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
+    'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .contact-card .follow-btn', '#contact .xcard.x-uae .p-icon svg'],
 }
 LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
 failures, checks = [], 0
@@ -91,14 +98,22 @@ def route_checks(page, route, lang, width, hash=None):
     check(page.locator(f'[data-view="{route}"] .follow-btn >> visible=true').count() >= 1, f'{tag} no visible follow button in the view')
     check(page.locator('.top .ig-mini').is_visible(), f'{tag} top-bar @qahwa.w.ai pill hidden')
     check(page.locator('.foot .follow-btn').count() == 1, f'{tag} footer follow button missing')
-    # UAE flag in the nav, red band on the left in both directions (flags are not mirrored).
-    check(page.locator('.nav .n-uae .flag').is_visible(), f'{tag} UAE flag not visible in the nav')
-    red = page.evaluate("""() => { const f = document.querySelector('.nav .n-uae .flag'), r = f.querySelector('rect[fill="#EF3340"]').getBoundingClientRect(), b = f.getBoundingClientRect();
-        return [Math.round(r.left - b.left), Math.round(r.width * 4 - b.width)]; }""")
-    check(abs(red[0]) <= 1 and abs(red[1]) <= 2, f'{tag} UAE flag red band not a quarter-width band at the left: {red}')
-    # Whole-pixel sizes: the red band (width/4) and the stripes (height/3) do not land on half pixels.
-    sizes = page.evaluate("[...document.querySelectorAll('.flag')].filter(f => f.getClientRects().length).map(f => { const r = f.getBoundingClientRect(); return [r.width, r.height]; })")
-    check(all(w == 2 * h and w % 4 == 0 and (h % 3 == 0 or (w, h) == (32, 16)) for w, h in sizes), f'{tag} UAE flag sizes {sizes}')
+    # The UAE flag is gone again: the nav has the same coloured dot as Hardware and AI news, the pillars the generic icon.
+    check(page.locator('.flag, .p-flag, .ih-flag, .j-flag').count() == 0, f'{tag} UAE flag still rendered')
+    check(page.locator('.nav .n-uae > i.dot').count() == 1, f'{tag} UAE nav marker missing')
+    # Learn AI is a separate page: a plain link in the header at every width, never marked as the current view here.
+    # In Arabic the link carries ?lang=ar (learn.html would otherwise open in the saved or default language).
+    ln = page.locator('.top .nav a.n-learn[href^="learn.html"]')
+    check(ln.count() == 1 and ln.is_visible() and ln.get_attribute('aria-current') is None, f'{tag} Learn AI header link hidden or marked current')
+    check(ln.get_attribute('href') == ('learn.html', 'learn.html?lang=ar')[lang == 'ar'], f'{tag} Learn AI header link href {ln.get_attribute("href")}')
+    shown = page.evaluate("[...document.querySelectorAll('.top .nav a.n-learn span')].filter(s => s.getBoundingClientRect().width > 2).map(s => s.textContent.trim())")
+    check(len(shown) == 1 and shown[0] in (('Learn AI', 'Learn'), ('تعلّم الذكاء الاصطناعي', 'تعلّم'))[lang == 'ar'], f'{tag} Learn AI header label {shown}')
+    # "Updated <date> · twice a day" appears once on the whole site, at the top of the AI news view.
+    fresh = page.evaluate(r"""() => { const t = [...document.querySelectorAll('main, header, footer')].map(e => e.textContent).join(' ');
+        return [(t.match(/Updated \d{1,2} [A-Z][a-z]{2} \d{4}/g) || []).length, (t.match(/آخر تحديث \d/g) || []).length,
+                (t.match(/twice a day/gi) || []).length, (t.match(/مرتين يومياً/g) || []).length]; }""")
+    check(fresh == [1, 1, 1, 1], f'{tag} freshness line / "twice a day" counts {fresh} (want one each)')
+    check(page.locator('.ifresh >> visible=true').count() == (1 if route == 'news' else 0), f'{tag} freshness line visible outside #news')
     # The site's own text only: headlines and summaries may well say "reached".
     text = page.evaluate("[...document.querySelectorAll('.hero, .trust, .ihead, .side, .p-head, .stats, .live, .xnav, .sec-h, .n-note, .foot, .main-col > h2')].map(e => e.innerText).join(' ')")
     left = [w for w in BACKEND_WORDS if w in text]
@@ -112,11 +127,39 @@ def route_checks(page, route, lang, width, hash=None):
         check(not bad, f'{tag} source links must open the original article: {bad[:3]}')
         check(all((c['label'] in LABELS[lang]) == c['sum'] for c in cards), f'{tag} every summary needs its label, and only summaries')
         check(any(c['sum'] for c in cards), f'{tag} no summaries shown')
+        # Full summaries in the lists: no line clamp, nothing cut off.
+        cut = page.evaluate(f"""[...document.querySelectorAll('[data-view="{route}"] .nlist[data-lang="{lang}"] .n-sum')].filter(e => e.getClientRects().length)
+            .filter(e => getComputedStyle(e).webkitLineClamp !== 'none' || e.scrollHeight > e.clientHeight + 1).length""")
+        check(cut == 0, f'{tag} {cut} summaries clamped or cut in the list')
+        mt = page.evaluate(f"[...document.querySelectorAll('[data-view=\"{route}\"] .nlist[data-lang=\"{lang}\"] .mt')].map(e => e.textContent)")
+        check(all(t == 'ترجمة بالذكاء الاصطناعي' for t in mt) and (lang == 'ar' or not mt), f'{tag} translation labels {sorted(set(mt))}')
         if route == 'uae':
             check(page.locator('#uae .nr-list').count() == 0, f'{tag} UAE newsroom list still rendered')
+            # Latest UAE headlines first, then the key facts, each with its "as of" date.
+            order = page.evaluate("""() => ['#uae .uae-heads .nitem:not([hidden])', '#uae .uae-facts .fact'].map(s => [...document.querySelectorAll(s)].filter(e => e.getClientRects().length)[0]).map(e => e ? e.getBoundingClientRect().top + scrollY : null)""")
+            check(None not in order and order[0] < order[1], f'{tag} UAE headlines should come before the key facts: {order}')
+            check(page.locator('#uae .uae-facts .fact .f-date >> visible=true').count() == page.locator('#uae .uae-facts .fact').count(), f'{tag} a key fact lost its date')
+            want_h = {'en': ('Latest UAE AI news', 'Key facts'), 'ar': ('أحدث أخبار الذكاء الاصطناعي في الإمارات', 'حقائق رئيسية')}[lang]
+            got_h = (page.text_content('#uae-news-h'), page.text_content('#uae-facts-h'))
+            check(got_h == want_h, f'{tag} UAE section headings {got_h}')
             if lang == 'en':
                 share = sum(c['sum'] for c in cards) / len(cards)
                 check(share >= 0.8, f'{tag} only {share:.0%} of UAE headlines have a summary')
+    if route == 'home':
+        # The UAE pillar: latest UAE headlines, then one highlighted fact. Overview summaries are clamped to three lines.
+        tops = page.evaluate("""() => ['.pillar.p-uae .heads', '.pillar.p-uae .fminis'].map(s => [...document.querySelectorAll(s)].filter(e => e.getClientRects().length)[0]).map(e => e ? e.getBoundingClientRect().top : null)""")
+        check(None not in tops and tops[0] < tops[1], f'{tag} UAE pillar: headlines should come before the key fact {tops}')
+        check(page.locator('.pillar.p-uae .fmini').count() == 1, f'{tag} UAE pillar should show one key fact')
+        clamps = page.evaluate("[...document.querySelectorAll('.pillar .heads .n-sum')].filter(e => e.getClientRects().length).map(e => getComputedStyle(e).webkitLineClamp)")
+        check(clamps and all(c == '3' for c in clamps), f'{tag} overview summary clamps {sorted(set(clamps))}')
+        # Four pillars: two by two from 1000px (each row's cards level), one column below, never a lone card in a row.
+        boxes = page.evaluate("[...document.querySelectorAll('.pillars > .pillar')].map(p => { const r = p.getBoundingClientRect(); return [p.classList[1], Math.round(r.left), Math.round(r.top + scrollY), Math.round(r.height)]; })")
+        tops = sorted({b[2] for b in boxes})
+        want_rows = 2 if width >= 1000 else 4
+        check([b[0] for b in boxes] == ['p-hw', 'p-news', 'p-uae', 'p-learn'] and len(tops) == want_rows and all(sum(b[2] == t for b in boxes) == 4 // want_rows for t in tops), f'{tag} pillar layout {boxes}')
+        check(all(len({b[3] for b in boxes if b[2] == t}) == 1 for t in tops), f'{tag} pillars in a row differ in height {boxes}')
+        nums = page.evaluate("[...document.querySelectorAll('.pillar.p-learn .stats dd')].map(d => +d.textContent)")
+        check(nums == LEARN_COUNTS, f'{tag} Learn AI pillar counts {nums}, want {LEARN_COUNTS}')
     if route == 'hardware':
         want = ('Extra memory\u00a0(%)', 'ذاكرة إضافية\u00a0(%)')[lang == 'ar']
         check(page.text_content('label:has(#extra) .fl') == want, f'{tag} estimator label: {page.text_content("label:has(#extra) .fl")}')
@@ -239,6 +282,14 @@ def main():
         check(page.input_value('#search') == tagtext and 0 < n < total, f'UAE hardware tag {tagtext!r} gave {n} products')
         page.go_back(); page.wait_for_function('location.hash === "#uae"')
         check(visible_views(page) == ['uae'], 'back from a hardware tag did not return to #uae')
+        # The UAE headlines come in steps of 8 ("Show more"), so the key facts below them stay close.
+        go(page, '#uae', 'uae')
+        uae_shown = lambda: page.evaluate("[...document.querySelectorAll('#uae .nlist li.nitem')].filter(l => l.getClientRects().length).length")
+        uae_total = page.evaluate("document.querySelectorAll('#uae .nlist[data-lang=\"en\"] li.nitem').length")
+        check(uae_shown() == min(8, uae_total) and page.locator('#uae-more').is_visible() == (uae_total > 8), f'UAE list: {uae_shown()} of {uae_total} shown first')
+        if uae_total > 8:
+            page.click('#uae-more'); page.wait_for_timeout(100)
+            check(uae_shown() == min(16, uae_total), f'UAE Show more: {uae_shown()} of {uae_total}')
 
         # 7. Compare tray and dialog; CSV export.
         go(page, '#hardware', 'hardware')
@@ -328,6 +379,49 @@ def main():
         check(re.search(r'[؀-ۿ]', page.text_content('#hardware .footnote')) is not None, 'footnote not translated')
         raw = page.evaluate(r"[...document.querySelectorAll('#table-view td, #products dd')].map(e => e.innerText).filter(t => /\d{4}-(Q\d|H\d|Summer|end)/.test(t))")
         check(not raw, f'raw date windows shown in Arabic: {raw[:3]}')
+        ctx.close()
+
+        # 10g. Learn AI: the header link and the pillar's button open learn.html; a pick opens its concept there.
+        for width in (375, 1280):
+            ctx = browser.new_context(viewport={'width': width, 'height': 900})
+            page, errors, foreign = ctx.new_page(), [], []
+            watch(page, errors, foreign)
+            page.goto(BASE); page.wait_for_load_state('networkidle')
+            page.click('.top .nav a.n-learn'); page.wait_for_url('**/learn.html')
+            check(page.locator('.top .nav a.n-learn[aria-current="page"]').is_visible(), f'[{width}px] header link did not open Learn AI')
+            page.go_back(); page.wait_for_load_state('networkidle')
+            page.click('.pillar.p-learn .cta'); page.wait_for_url('**/learn.html')
+            check(page.evaluate('location.pathname').endswith('/learn.html'), f'[{width}px] Learn AI button opened {page.url}')
+            page.go_back(); page.wait_for_load_state('networkidle')
+            href = page.get_attribute('.pillar.p-learn .lpicks a >> nth=0', 'href')
+            page.click('.pillar.p-learn .lpicks a >> nth=0'); page.wait_for_url('**/' + href); page.wait_for_timeout(200)
+            item = href.split('#', 1)[1]
+            check(page.evaluate('id => { const e = document.getElementById(id); return !!e && e.open && e.getBoundingClientRect().top < innerHeight / 2; }', item), f'[{width}px] {href} did not open its concept')
+            check(not errors and not foreign, f'[{width}px] Learn AI links: errors {errors[:3]} foreign {foreign[:3]}')
+            ctx.close()
+
+        # 10h. Arabic opened from a shared ?lang=ar link (nothing saved) stays Arabic on learn.html, whichever link is used.
+        for width in (375, 1280):
+            for sel in ('.top .nav a.n-learn', '.pillar.p-learn .cta', '.pillar.p-learn .lvl .chip >> nth=0', '.foot a[href^="learn.html"]'):
+                ctx = browser.new_context(viewport={'width': width, 'height': 900})
+                page, errors, foreign = ctx.new_page(), [], []
+                watch(page, errors, foreign)
+                page.goto(BASE + '?lang=ar#home'); page.wait_for_load_state('networkidle')
+                href = page.get_attribute(sel, 'href')
+                page.click(sel); page.wait_for_url(lambda u: '/learn.html' in u); page.wait_for_load_state('load')
+                got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
+                check(got == ['ar', 'rtl', None] and re.match(r'^learn\.html\?lang=ar(#|$)', href or ''), f'[{width}px] {sel} ({href}) opened Learn AI as {got}')
+                check(not errors and not foreign, f'[{width}px] Arabic Learn link: errors {errors[:3]} foreign {foreign[:3]}')
+                ctx.close()
+        # English (the default) keeps the plain links.
+        ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
+        page = ctx.new_page(); page.goto(BASE); page.wait_for_load_state('networkidle')
+        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"]')].map(a => a.getAttribute('href'))")
+        check(hrefs and not any('lang=' in h for h in hrefs), f'English Learn links carry a language: {[h for h in hrefs if "lang=" in h][:3]}')
+        # Switching to Arabic on the overview updates the links too.
+        page.click('#lang'); page.wait_for_timeout(100)
+        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"]')].map(a => a.getAttribute('href'))")
+        check(hrefs and all(re.match(r'^learn\.html\?lang=ar(#|$)', h) for h in hrefs), f'Learn links after switching to Arabic: {hrefs[:3]}')
         ctx.close()
 
         # 10. Without JavaScript every view is rendered, stacked and readable.

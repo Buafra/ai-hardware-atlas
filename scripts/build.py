@@ -13,6 +13,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A3
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import learn
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -58,6 +59,9 @@ INSTAGRAM = 'https://www.instagram.com/qahwa.w.ai/'
 BACKEND_ONLY = ('announcements', 'check_health', 'automation_status', 'schedule', 'last_attempt_at')
 SITE_NAME = 'Cipher Lacuna'
 UAE_TZ = timezone(timedelta(hours=4))
+UAE_HIGHLIGHTS = 1  # key facts on the landing's UAE pillar
+NEWS_PICKS = 3  # headlines on the landing's AI news pillar (its row partner, Hardware, has no headlines)
+LEARN_PICKS = 2  # concepts and stacks each on the landing's Learn AI pillar
 LEVELS = ['Personal', 'Workstation', 'Enterprise', 'Data center', 'Rack scale']
 BRAND_DIR = ROOT / 'web' / 'brand'
 # Neutral, text-free placeholder until the owner's own favicon is dropped into web/brand/.
@@ -156,7 +160,7 @@ def day_label(d, lang):
 NOUNS = {
     'product': (('product', 'products'), ('منتج واحد', 'منتجان', 'منتجات', 'منتجاً', 'منتج')),
     'headline': (('headline', 'headlines'), ('عنوان واحد', 'عنوانان', 'عناوين', 'عنواناً', 'عنوان')),
-    'fact': (('key fact', 'key facts'), ('معلومة رئيسية واحدة', 'معلومتان رئيسيتان', 'معلومات رئيسية', 'معلومة رئيسية', 'معلومة رئيسية')),
+    'fact': (('key fact', 'key facts'), ('حقيقة رئيسية واحدة', 'حقيقتان رئيسيتان', 'حقائق رئيسية', 'حقيقة رئيسية', 'حقيقة رئيسية')),
     'source': (('source', 'sources'), ('مصدر واحد', 'مصدران', 'مصادر', 'مصدراً', 'مصدر')),
     'vetted': (('vetted source', 'vetted sources'), ('مصدر موثوق واحد', 'مصدران موثوقان', 'مصادر موثوقة', 'مصدراً موثوقاً', 'مصدر موثوق')),
 }
@@ -284,7 +288,8 @@ def copy_brand_images(dest, brand_dir=BRAND_DIR):
 # ---------- owner choices (data/site.json) ----------
 
 def load_site(products, facts, path=None):
-    """Featured products and UAE highlights from data/site.json. Unknown ids are skipped and gaps filled, so a bad edit never breaks the build."""
+    """Featured products and the UAE highlight from data/site.json (the landing shows one key fact, under the latest UAE
+    headlines). Unknown ids are skipped and gaps filled, so a bad edit never breaks the build."""
     path = path or ROOT / 'data' / 'site.json'
     try:
         site = json.loads(Path(path).read_text(encoding='utf-8'))
@@ -302,9 +307,9 @@ def load_site(products, facts, path=None):
         if extra:
             featured.append(extra)
     fact_ids = {f['id']: f for f in facts}
-    highlights = pick(site.get('uae_highlights'), fact_ids, 2)
+    highlights = pick(site.get('uae_highlights'), fact_ids, UAE_HIGHLIGHTS)
     for f in sorted(facts, key=lambda f: str(f.get('as_of') or ''), reverse=True):
-        if len(highlights) >= 2:
+        if len(highlights) >= UAE_HIGHLIGHTS:
             break
         if f['id'] not in highlights:
             highlights.append(f['id'])
@@ -315,7 +320,10 @@ def load_site(products, facts, path=None):
 def news_items(news, sources):
     src = {s['id'] for s in sources}
     # news.py only keeps https links from allowed hosts; this guards against a hand edit of news.json.
-    items = [i for i in (news or {}).get('items', []) if i.get('source') in src and https(i.get('url'))]
+    # Items the AI summary step judged not mainly about AI (ai_focus false: a weekend digest, a lifestyle piece that
+    # only lists AI) stay in news.json but are not shown anywhere. Without a verdict the collection rule stands:
+    # general-news feeds only keep headlines that mention AI.
+    items = [i for i in (news or {}).get('items', []) if i.get('source') in src and https(i.get('url')) and i.get('ai_focus') is not False]
     return sorted(items, key=lambda i: i['published'], reverse=True)
 
 def in_lang(i, lang):
@@ -341,9 +349,12 @@ def varied(pool, per, limit):
             break
     return out
 
+# The marker on English headlines shown in Arabic with an AI translation (only the Arabic page shows it).
+MT_LABEL = {'en': 'AI translation', 'ar': 'ترجمة بالذكاء الاصطناعي'}
+
 def headline_text(i, lang):
     title = i['title_ar'] if lang == 'ar' and i['lang'] == 'en' and i.get('title_ar') else i['title']
-    mt = '<span class="mt">ترجمة آلية</span>' if lang == 'ar' and i['lang'] == 'en' else ''
+    mt = f'<span class="mt">{MT_LABEL["ar"]}</span>' if lang == 'ar' and i['lang'] == 'en' else ''
     return title, mt
 
 SUMMARY_LABEL = {'ai': {'en': 'AI summary', 'ar': 'ملخص بالذكاء الاصطناعي'}, 'publisher': {'en': 'From the publisher', 'ar': 'من الناشر'}}
@@ -389,7 +400,7 @@ def news_li(i, lang, src):
     return f'<li class="nitem" data-region="{" ".join(reg)}">{news_card(i, lang, src, tags)}</li>'
 
 NEWS_NOTE = L('Summaries marked "AI summary" are machine-written from the article or the publisher\'s description and may contain mistakes. Follow the source link to read the full story.',
-              'الملخصات الموسومة «ملخص بالذكاء الاصطناعي» مكتوبة آلياً من نص المقال أو من وصف الناشر، والعناوين الموسومة «ترجمة آلية» مترجمة آلياً، وقد تحتوي على أخطاء. اتبع رابط المصدر لقراءة الخبر كاملاً.')
+              'الملخصات الموسومة «ملخص بالذكاء الاصطناعي» يكتبها الذكاء الاصطناعي من نص المقال أو من وصف الناشر، والعناوين الموسومة «ترجمة بالذكاء الاصطناعي» يترجمها الذكاء الاصطناعي، وقد تحتوي على أخطاء. اتبع رابط المصدر لقراءة الخبر كاملاً.')
 
 def day_lists(items, src, empty_en, empty_ar):
     """Full headline lists, one per language, grouped by day in UAE time."""
@@ -411,20 +422,10 @@ def day_lists(items, src, empty_en, empty_ar):
 
 # ---------- shared markup ----------
 
-# The UAE flag marks the UAE AI area: red band at the hoist (a quarter of the width), then green, white and black
-# stripes, in the official 1:2 proportion. It is shown at sizes where the band and the stripes fall on whole pixels
-# (24x12, 36x18) and drawn with crisp edges; the thin frame that keeps the white stripe visible on light backgrounds
-# and the black one on dark backgrounds is a CSS box-shadow outside the flag, not a stroke over the colours.
-# Flags are not mirrored, so it has no "flip" class: the red band stays on the left in Arabic too.
-UAE_FLAG = ('<svg class="flag" viewBox="0 0 24 12" width="24" height="12" shape-rendering="crispEdges" aria-hidden="true" focusable="false">'
-            '<rect width="24" height="12" fill="#FFFFFF"/><rect x="6" width="18" height="4" fill="#009739"/>'
-            '<rect x="6" y="8" width="18" height="4" fill="#000000"/><rect width="6" height="12" fill="#EF3340"/></svg>')
-
 ICON = {
     'hw': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>',
     'news': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M8 9h5M8 13h5M8 16h3"/></svg>',
-    'uae': UAE_FLAG,
-    'flag': UAE_FLAG,
+    'uae': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h14v10H5"/><path d="M9 4v10"/></svg>',
     'contact': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
     'mail': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
     'home': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>',
@@ -449,9 +450,9 @@ def follow_btn():
             '<span data-i18n>Follow Qahwa &amp; AI</span> <bdi class="handle" lang="en">@qahwa.w.ai</bdi></a>')
 
 def ihead(view, title, lead, extra='', follow=True):
-    """Inner view header: breadcrumb, title (the UAE flag before "UAE AI"), lead, Back to overview and the follow button.
+    """Inner view header: breadcrumb, title, lead, Back to overview and the follow button.
     The contact view leaves the follow button to its card."""
-    heading = f'<span class="ih-flag">{UAE_FLAG}</span><span data-i18n>{title}</span>' if view == 'uae' else f'<span data-i18n>{title}</span>'
+    heading = f'<span data-i18n>{title}</span>'
     acts = f'<a class="back" href="#home">{ICON["back"]}<span data-i18n>Back to overview</span></a>' + (follow_btn() if follow else '')
     return (f'<div class="ihead ih-{view}"><nav class="crumbs" aria-label="Breadcrumb" data-i18n-aria="Breadcrumb"><a href="#home" data-i18n>Overview</a><span aria-hidden="true">/</span><span aria-current="page" data-i18n>{NAV[view]}</span></nav>'
             f'<div class="ihead-row"><div><h1 id="{view}-title" tabindex="-1">{heading}</h1><p class="lead">{lead}</p></div>'
@@ -471,7 +472,8 @@ def schedule_phrase(data, lang):
     return {1: 'once a day', 2: 'twice a day'}.get(n, f'{n} times a day')
 
 def fresh_line(feed, data=None):
-    """'Updated 26 Sep 2026 · twice a day': when the headlines last changed and how often they do. No fetch statistics."""
+    """'Updated 26 Sep 2026 · twice a day': when the headlines last changed and how often they do. No fetch statistics.
+    Shown once on the whole site, at the top of the AI news view."""
     if not feed or not feed.get('updated_at'):
         return T('Headlines appear after the first scheduled update.')
     en, ar = schedule_phrase(data, 'en'), schedule_phrase(data, 'ar')
@@ -480,11 +482,13 @@ def fresh_line(feed, data=None):
 def xnav(c, views):
     cards = {
         'hardware': ('', ICON['hw'], L(E(f'Compare {cnt(c["n_products"], "product", "en")} from NVIDIA and AMD'), f'قارن {cnt(c["n_products"], "product", "ar")} من NVIDIA وAMD')),
-        'news': (' x-news', ICON['news'], L(E(f'{cnt(c["n_headlines"], "headline", "en")} from {cnt(c["n_active_sources"], "source", "en")}'), f'{cnt(c["n_headlines"], "headline", "ar")} من {cnt(c["n_active_sources"], "source", "ar")}')),
-        'uae': (' x-uae', ICON['uae'], L(E(f'{cnt(c["n_facts"], "fact", "en")} and UAE headlines'), f'{cnt(c["n_facts"], "fact", "ar")} وعناوين إماراتية')),
+        # No source count here: the pillar and #news give the number of sources followed, and a second figure (the
+        # sources with a headline right now) read as a contradiction.
+        'news': (' x-news', ICON['news'], L(E(f'{cnt(c["n_headlines"], "headline", "en")} in English and Arabic'), f'{cnt(c["n_headlines"], "headline", "ar")} بالعربية والإنجليزية')),
+        'uae': (' x-uae', ICON['uae'], L(E(f'UAE headlines and {cnt(c["n_facts"], "fact", "en")}'), f'عناوين إماراتية و{cnt(c["n_facts"], "fact", "ar")}')),
         'contact': (' x-contact', ICON['contact'], T(CONTACT_LEAD)),
     }
-    out = ''.join(f'<a class="xcard{cls}" href="#{v}"><span class="p-icon{" p-flag" if v == "uae" else ""}" aria-hidden="true">{icon}</span><span><b data-i18n>{NAV[v]}</b><span class="x-sub">{sub}</span></span><span class="x-arr">{ICON["arrow"]}</span></a>' for v in views for cls, icon, sub in [cards[v]])
+    out = ''.join(f'<a class="xcard{cls}" href="#{v}"><span class="p-icon" aria-hidden="true">{icon}</span><span><b data-i18n>{NAV[v]}</b><span class="x-sub">{sub}</span></span><span class="x-arr">{ICON["arrow"]}</span></a>' for v in views for cls, icon, sub in [cards[v]])
     return f'<nav class="xnav" aria-label="Other areas" data-i18n-aria="Other areas">{out}</nav>'
 
 def stat(value, label):
@@ -522,15 +526,19 @@ def home_view(c):
     checked_en, checked_ar = ymd(c['last_check'], 'en') if c['last_check'] else '—', ymd(c['last_check'], 'ar') if c['last_check'] else '—'
     trust3 = (L(E(f'{cnt(health["attempted_sources"], "source", "en")} checked'), f'فحص {cnt(health["attempted_sources"], "source", "ar")}'),
               L(f'Hardware sources last checked {checked_en}.', f'آخر فحص لمصادر العتاد في {checked_ar}.')) if health else (
-              T('Official sources checked'), T('Hardware sources are checked twice a day.'))
+              T('Official sources checked'), T('Hardware sources are checked automatically.'))
     trust4 = T('Each summary says whether AI or the publisher wrote it, and every headline has a source link to the original article.')
     cta = lambda href, label: f'<div class="p-foot"><a class="cta" href="#{href}"><span data-i18n>{label}</span><span class="arr">{ICON["arrow"]}</span></a></div>'
     en_ar = L(f'{len(en_items)} · {len(ar_items)}', f'{len(ar_items)} · {len(en_items)}')
+    lc, page = c['learn'], learn.PAGE
+    lmini = lambda kind, x: (f'<li><a href="{page}#{kind}/{E(x["id"])}"><span class="lp-t">{L(E(x["title_en"]), E(x["title_ar"]))}</span>'
+                             f'<span class="lp-s">{L(E(x["summary_en"]), E(x["summary_ar"]))}</span></a></li>')
+    topics = ''.join(f'<a class="chip" href="{page}#group/{E(g["id"])}">{L(E(g["title_en"]), E(g["title_ar"]))} <span class="n">{n}</span></a>' for g, n in lc['topics'])
     return f'''<div id="home" class="view" data-view="home">
 <section class="hero" aria-labelledby="home-title"><div class="hero-main"><p class="eyebrow"><bdi>NVIDIA + AMD</bdi> · <span data-i18n>AI news</span> · <span data-i18n>UAE</span></p><h1 id="home-title" tabindex="-1"><bdi lang="en">{SITE_NAME}</bdi></h1><p class="hero-tag" data-i18n>Decoding the gaps in AI knowledge</p><p class="promise" data-i18n>Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.</p></div>
-<div class="hero-side"><p class="fresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(c['feed'], c['data'])}</span></p>{follow_btn()}</div>
-<nav class="jump" aria-label="The three areas" data-i18n-aria="The three areas"><a href="#hardware"><i class="j-hw" aria-hidden="true"></i><b data-i18n>Hardware</b><span>{L(cnt(len(ps), "product", "en"), cnt(len(ps), "product", "ar"))}</span></a><a href="#news"><i class="j-news" aria-hidden="true"></i><b data-i18n>News</b><span>{L(cnt(c["n_headlines"], "headline", "en"), cnt(c["n_headlines"], "headline", "ar"))}</span></a><a href="#uae"><i class="j-flag" aria-hidden="true">{UAE_FLAG}</i><b data-i18n>UAE</b><span>{L(cnt(c["n_facts"], "fact", "en"), cnt(c["n_facts"], "fact", "ar"))}</span></a></nav></section>
-<section class="pillars" aria-label="The three areas of the site" data-i18n-aria="The three areas of the site">
+<div class="hero-side">{follow_btn()}</div>
+<nav class="jump" aria-label="Quick links" data-i18n-aria="Quick links"><a href="#hardware"><i class="j-hw" aria-hidden="true"></i><b data-i18n>Hardware</b><span>{L(cnt(len(ps), "product", "en"), cnt(len(ps), "product", "ar"))}</span></a><a href="#news"><i class="j-news" aria-hidden="true"></i><b data-i18n>News</b><span>{L(cnt(c["n_headlines"], "headline", "en"), cnt(c["n_headlines"], "headline", "ar"))}</span></a><a href="#uae"><i class="j-uae" aria-hidden="true"></i><b data-i18n>UAE</b><span>{L(cnt(c["n_facts"], "fact", "en"), cnt(c["n_facts"], "fact", "ar"))}</span></a></nav></section>
+<section class="pillars" aria-label="The four areas of the site" data-i18n-aria="The four areas of the site">
 <article class="pillar p-hw" aria-labelledby="p1-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['hw']}</span><span>01</span></div><h2 id="p1-title"><a href="#hardware" data-i18n>Hardware</a></h2><p class="p-lead" data-i18n>NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.</p></div>
 <div class="p-body"><dl class="stats">{stat(len(ps), 'products')}{stat(len(c['levels']), 'levels')}{stat(c['n_priced'], 'with approx. price')}</dl>
 <div class="split-wrap"><div class="split" role="img" aria-label="NVIDIA {nv}, AMD {amd}"><i class="s-nv" style="width:{nv / total * 100:.2f}%"></i><i class="s-amd" style="width:{amd / total * 100:.2f}%"></i></div><div class="split-legend"><a class="lg" href="#hardware" data-route="hardware/vendor/NVIDIA"><bdi>NVIDIA <b>{nv}</b></bdi></a><a class="lg amd" href="#hardware" data-route="hardware/vendor/AMD"><bdi>AMD <b>{amd}</b></bdi></a></div></div>
@@ -540,20 +548,25 @@ def home_view(c):
 {cta('hardware', 'Open hardware')}</article>
 <article class="pillar p-news" aria-labelledby="p2-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['news']}</span><span>02</span></div><h2 id="p2-title"><a href="#news" data-i18n>AI news</a></h2><p class="p-lead">{L(E(f"The latest AI headlines in English and Arabic, from the {cnt(c['n_sources'], 'vetted', 'en')} we follow."), f"أحدث عناوين الذكاء الاصطناعي بالعربية والإنجليزية، من {cnt(c['n_sources'], 'vetted', 'ar')} نتابعها.")}</p></div>
 <div class="p-body"><dl class="stats">{stat(c['n_headlines'], 'headlines')}{stat(en_ar, 'English · Arabic')}{stat(c['n_sources'], 'sources')}</dl>
-<p class="live"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(c['feed'], c['data'])}</span></p>
-<div><h3 class="p-sub"><span data-i18n>Latest headlines</span><small data-i18n>Times in UAE time</small></h3>{heads([i for i in items if 'global' in regions(i, src)], src, 1, 4)}</div>
+<div><h3 class="p-sub"><span data-i18n>Latest headlines</span><small data-i18n>Times in UAE time</small></h3>{heads([i for i in items if 'global' in regions(i, src)], src, 1, NEWS_PICKS)}</div>
 <div><h3 class="p-sub"><span data-i18n>Browse</span></h3><div class="lvl">{browse}</div></div></div>
 {cta('news', 'Open AI news')}</article>
-<article class="pillar p-uae" aria-labelledby="p3-title"><div class="p-head"><div class="kick"><span class="p-icon p-flag" aria-hidden="true">{ICON['uae']}</span><span>03</span></div><h2 id="p3-title"><a href="#uae" data-i18n>UAE AI</a></h2><p class="p-lead" data-i18n>What the UAE is building in AI: strategy, compute and models, each fact with its source.</p></div>
-<div class="p-body"><dl class="stats">{stat(c['n_facts'], 'key facts')}{stat(len(uae_items), 'UAE headlines')}{stat(uae_en_ar, 'English · Arabic')}</dl>
-<div><h3 class="p-sub"><span data-i18n>Highlights</span><small>{L('Checked ' + ymd(c['uae_checked'], 'en'), 'تم التحقق في ' + ymd(c['uae_checked'], 'ar'))}</small></h3><div class="fminis">{facts}</div></div>
-<div><h3 class="p-sub"><span data-i18n>Latest UAE headlines</span><small data-i18n>Twice a day</small></h3>{heads(uae_items, src, 2, 3)}</div></div>
-{cta('uae', 'Open UAE AI')}</article></section>
+<article class="pillar p-uae" aria-labelledby="p3-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['uae']}</span><span>03</span></div><h2 id="p3-title"><a href="#uae" data-i18n>UAE AI</a></h2><p class="p-lead" data-i18n>What the UAE is building in AI: strategy, compute and models, each fact with its source.</p></div>
+<div class="p-body"><dl class="stats">{stat(len(uae_items), 'UAE headlines')}{stat(uae_en_ar, 'English · Arabic')}{stat(c['n_facts'], 'key facts')}</dl>
+<div><h3 class="p-sub"><span data-i18n>Latest UAE headlines</span><small data-i18n>Times in UAE time</small></h3>{heads(uae_items, src, 2, 3)}</div>
+<div><h3 class="p-sub"><span data-i18n>Key fact</span><small>{L('Checked ' + ymd(c['uae_checked'], 'en'), 'تم التحقق في ' + ymd(c['uae_checked'], 'ar'))}</small></h3><div class="fminis">{facts}</div></div></div>
+{cta('uae', 'Open UAE AI')}</article>
+<article class="pillar p-learn" aria-labelledby="p4-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{learn.BOOK}</span><span>04</span></div><h2 id="p4-title"><a href="{page}" data-i18n>Learn AI</a></h2><p class="p-lead" data-i18n>Plain-language guides to the ideas behind today's AI, and recommended stacks for building with it.</p></div>
+<div class="p-body"><dl class="stats">{stat(lc['n_concepts'], 'concepts')}{stat(lc['n_stacks'], 'AI stacks')}{stat(lc['n_foundations'], 'foundations')}</dl>
+<div><h3 class="p-sub"><span data-i18n>Start here</span><small data-i18n>Beginner concepts</small></h3><ul class="lpicks">{''.join(lmini('concept', x) for x in lc['start'])}</ul></div>
+<div><h3 class="p-sub"><span data-i18n>AI stacks</span><small data-i18n>Local, cloud and UAE-hosted options</small></h3><ul class="lpicks">{''.join(lmini('stack', x) for x in lc['stacks'])}</ul></div>
+<div><h3 class="p-sub"><span data-i18n>Browse by topic</span></h3><div class="lvl">{topics}</div></div></div>
+<div class="p-foot"><a class="cta" href="{page}"><span data-i18n>Open Learn AI</span><span class="arr">{ICON["arrow"]}</span></a></div></article></section>
 <section class="trust" aria-labelledby="trust-title"><h2 id="trust-title" class="sr-only" data-i18n>Why trust this</h2>
 <div><span class="t-ic" aria-hidden="true">{ICON['shield']}</span><div><h3 data-i18n>Official sources</h3><p>{L(f"All {len(ps)} products link to official NVIDIA or AMD pages.", f"كل المنتجات الـ{len(ps)} مرتبطة بصفحات رسمية من NVIDIA أو AMD.")}</p></div></div>
 <div><span class="t-ic" aria-hidden="true">{ICON['calendar']}</span><div><h3 data-i18n>Dated prices</h3><p data-i18n>Prices are approximate, labelled by kind, with the date they were checked.</p></div></div>
 <div><span class="t-ic" aria-hidden="true">{ICON['check']}</span><div><h3>{trust3[0]}</h3><p>{trust3[1]}</p></div></div>
-<div><span class="t-ic" aria-hidden="true">{ICON['clock']}</span><div><h3 data-i18n>News twice a day</h3><p>{trust4}</p></div></div></section>
+<div><span class="t-ic" aria-hidden="true">{ICON['clock']}</span><div><h3 data-i18n>Every headline sourced</h3><p>{trust4}</p></div></div></section>
 </div>'''
 
 def hardware_head(c, data):
@@ -579,8 +592,8 @@ def news_view(c):
     reg_n = lambda pool, r: sum(r in regions(i, src) for i in pool) if r else len(pool)
     chips = ''.join(f'<button type="button" class="chip" data-region-chip="{r}" aria-pressed="{str(r == "").lower()}"><span data-i18n>{label}</span> <span class="n">{L(reg_n(en_items, r), reg_n(ar_items, r))}</span></button>' for r, label in (('', 'All'), ('global', 'Global'), ('uae', 'UAE')))
     side = stat(c['n_headlines'], 'headlines') + stat(len(en_items), 'English') + stat(len(ar_items), 'Arabic')
-    lead = L(E(f'Headlines from the {cnt(c["n_sources"], "vetted", "en")} we follow, official and news, in English and Arabic, each with a short summary where one is available and a link to the original article.'),
-             f'عناوين من {cnt(c["n_sources"], "vetted", "ar")} نتابعها، بين رسمي وإخباري، بالعربية والإنجليزية، مع ملخص قصير حين يتوفر ورابط إلى المقال الأصلي.')
+    lead = L(E(f'Headlines from the {cnt(c["n_sources"], "vetted", "en")} we follow, official and news, in English and Arabic, each with a summary where one is available and a link to the original article.'),
+             f'عناوين من {cnt(c["n_sources"], "vetted", "ar")} نتابعها، بين رسمي وإخباري، بالعربية والإنجليزية، مع ملخص حين يتوفر ورابط إلى المقال الأصلي.')
     return f'''<section id="news" class="view v-news" data-view="news" aria-labelledby="news-title">
 {ihead('news', 'AI news', lead, f'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(feed, c["data"])}</span></p>')}
 <div class="split-layout"><aside class="side" aria-labelledby="n-side-h"><div class="panel"><h2 class="side-h" id="n-side-h" data-i18n>Headlines at a glance</h2>
@@ -610,16 +623,18 @@ def uae_view(c):
     n_en, n_ar = sum(in_lang(i, 'en') for i in uae_items), sum(in_lang(i, 'ar') for i in uae_items)
     # Each headline names its publisher and links to the article, so there is no separate list of newsrooms.
     side = stat(len(uae_items), 'headlines') + stat(n_en, 'English') + stat(n_ar, 'Arabic')
-    lead = L(f'Key facts checked {ymd(uae["checked"], "en")} against their sources, plus AI headlines about the UAE or from UAE newsrooms, updated twice a day.',
-             f'حقائق رئيسية تم التحقق منها بتاريخ {ymd(uae["checked"], "ar")} من مصادرها، مع عناوين الذكاء الاصطناعي عن الإمارات أو من غرف الأخبار الإماراتية، تُحدَّث مرتين يومياً.')
+    lead = L(f'The latest AI headlines about the UAE or from UAE newsrooms, then key facts checked {ymd(uae["checked"], "en")} against their sources.',
+             f'أحدث عناوين الذكاء الاصطناعي عن الإمارات أو من غرف الأخبار الإماراتية، تليها حقائق رئيسية تم التحقق منها من مصادرها بتاريخ {ymd(uae["checked"], "ar")}.')
+    # Latest headlines first, then the key facts (each with its "as of" date) below them.
     return f'''<section id="uae" class="view v-uae" data-view="uae" aria-labelledby="uae-title">
-{ihead('uae', 'UAE AI', lead, f'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(c["feed"], c["data"])}</span></p>')}
-<div class="sec-h"><h2 data-i18n>Key facts</h2><p data-i18n>Newest first. Hardware tags open the matching products.</p></div>
-<div class="fgrid">{cards}</div>
+{ihead('uae', 'UAE AI', lead)}
 <div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2><dl class="side-stats">{side}</dl></div></aside>
-<div class="main-col"><div class="sec-h"><h2 data-i18n>UAE AI headlines</h2><p>{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
+<div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p>{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
 {day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.')}
+<div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
 <p class="muted n-note">{NEWS_NOTE}</p></div></div>
+<section class="uae-facts" aria-labelledby="uae-facts-h"><div class="sec-h"><h2 id="uae-facts-h" data-i18n>Key facts</h2><p data-i18n>Newest first. Hardware tags open the matching products.</p></div>
+<div class="fgrid">{cards}</div></section>
 {xnav(c, ('hardware', 'news'))}
 </section>'''
 
@@ -627,6 +642,17 @@ def contact_head():
     return ihead('contact', 'Contact', T(CONTACT_LEAD), follow=False)
 
 # ---------- page ----------
+
+def learn_context():
+    """Counts and picks for the landing's Learn AI pillar, from data/learn (the files learn.html is built from): the first
+    beginner concepts and the first core stacks in the page's own order, and the topics with their concept counts."""
+    concepts_doc, stacks_doc = learn.load()
+    concepts = concepts_doc['concepts']
+    stacks = sorted(stacks_doc['stacks'], key=lambda s: s.get('order', 0))
+    core = [s for s in stacks if s['kind'] != 'foundation']
+    return {'n_concepts': len(concepts), 'n_stacks': len(core), 'n_foundations': len(stacks) - len(core),
+            'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
+            'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
 def context(data, feed, sources, uae):
     ps = data['products']
@@ -642,11 +668,11 @@ def context(data, feed, sources, uae):
         'src': {s['id']: s for s in sources}, 'featured': featured, 'highlights': highlights,
         'vendors': vendors, 'levels': levels, 'n_products': len(ps), 'n_priced': sum(1 for p in ps if p.get('price_view')),
         'n_headlines': len(items), 'n_sources': len(sources), 'n_facts': len(facts),
-        'n_active_sources': len({i['source'] for i in items}),
         'check_health': data.get('check_health'),
         'last_check': data.get('last_check_at'), 'uae_checked': (uae or {}).get('checked'),
         # Oldest and newest price check: one date while they agree, a range once they differ.
         'prices_checked': sorted({p['price_view']['checked'] for p in ps if p.get('price_view') and p['price_view'].get('checked')}),
+        'learn': learn_context(),
     }
 
 def prepare(data):
@@ -664,6 +690,9 @@ def load_all():
     load = lambda name: json.loads((ROOT/'data'/name).read_text(encoding='utf-8')) if (ROOT/'data'/name).exists() else None
     sources, uae = load('news-sources.json') or [], load('uae.json')
     validate_links(sources, uae)
+    # The Learn AI data feeds the landing's fourth pillar and learn.html: checked here, before anything is written, so a
+    # bad edit fails the build without leaving a new index.html beside an old (or missing) learn.html.
+    learn.validate(*learn.load(), data['products'])
     return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
 
 def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR):
@@ -756,14 +785,18 @@ def main():
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     copy_brand_images(OUT/'brand')
+    learn.build(OUT)
+    import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
+    app_data.write(OUT,data,feed,sources,uae,models)  # dist/app/*.json for the Android app
     pdf(data)
     if args.standalone:
         target=args.standalone.resolve()
         shutil.copyfile(OUT/'index.html',target)
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
         copy_brand_images(target.parent/'brand')
+        learn.build(target.parent, home=target.name)  # its links back to the overview go to the standalone file
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
-    print(f"Built {len(data['products'])} products, self-contained HTML, JSON and one-page PDF")
+    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF and {learn.PAGE}")
 
 if __name__=='__main__':main()

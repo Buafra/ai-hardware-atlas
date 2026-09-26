@@ -102,7 +102,7 @@ class FeedTests(unittest.TestCase):
 <item><title>AI podcast about the frontier</title><link>https://www.example-news.com/podcast</link><pubDate>Fri, 25 Sep 2026 09:00:00 GMT</pubDate><description>When AI leaders started talking about pacing the frontier, nobody asked what pace.</description></item>
 <item><title>AI video about the frontier</title><link>https://www.example-news.com/video</link><pubDate>Fri, 25 Sep 2026 07:00:00 GMT</pubDate><description>When AI leaders started talking about pacing the frontier, nobody asked what pace.</description></item>
 </channel></rss>'''
-        src={**SRC,'drop_titles':next(x for x in json.load(open(Path(__file__).resolve().parents[1]/'data/news-sources.json',encoding='utf-8')) if x['id']=='techcrunch-ai')['drop_titles']}
+        src={**SRC,'drop_titles':next(x for x in json.loads((Path(__file__).resolve().parents[1]/'data/news-sources.json').read_text(encoding='utf-8')) if x['id']=='techcrunch-ai')['drop_titles']}
         with mock.patch.object(news,'fetch',return_value=rss):items=news.collect(src,NOW)
         self.assertEqual([i['title'] for i in items],['AI podcast about the frontier','AI video about the frontier'])
         self.assertIn('excerpt',items[0]);self.assertNotIn('excerpt',items[1])  # same text twice: first item only
@@ -137,6 +137,11 @@ class MergeTests(unittest.TestCase):
         fresh={'ex':[{'id':'1','title':'A new headline','url':'https://www.example-news.com/a','source':'ex','lang':'en','published':'2026-09-25T08:00:00+00:00','excerpt':'Fresh excerpt text from the feed.'}]}
         a={i['url']:i for i in news.merge(old,fresh,{})}['https://www.example-news.com/a']
         self.assertEqual(a['excerpt'],'Fresh excerpt text from the feed.');self.assertNotIn('title_ar',a);self.assertEqual(a['summary_en'],'An English summary.')
+        # The summary version and the AI verdict carry over too (an item judged not about AI stays hidden).
+        old[0].update(summary_version=news.SUMMARY_VERSION,ai_focus=False,summary_attempts=1,summary_attempts_version=news.SUMMARY_VERSION)
+        a=news.merge(old,{'ex':[{k:v for k,v in old[0].items() if k in ('id','title','url','source','lang','published')}]},{})
+        a=[i for i in a if i['url']=='https://www.example-news.com/a'][0]
+        self.assertEqual((a['summary_version'],a['ai_focus'],a['summary_attempts'],a['summary_attempts_version']),(news.SUMMARY_VERSION,False,1,news.SUMMARY_VERSION))
     def test_page_excerpts_carry_over_while_they_pass_the_rules(self):
         base={'id':'1','url':'https://www.example-news.com/a','source':'ex','lang':'en','published':'2026-09-25T08:00:00+00:00'}
         old=[{**base,'title':'OpenAI says its AI agents posted ChatGPT user images online in error','excerpt':'Most have been removed with the help of the hosting providers involved.','excerpt_source':'page'}]
@@ -169,7 +174,7 @@ class FakeClient:
         self.calls.append(kw)
         if self.error:raise self.error
         ids=[l.split('"')[1] for l in kw['messages'][0]['content'].splitlines() if l.startswith('<item id=')]
-        out=[news.Summary(id=i,**(self.answer(i) if self.answer else {'summary_en':f'Summary of {i}. It has two sentences.','summary_ar':f'ملخص الخبر {i}.'})) for i in ids]
+        out=[news.Summary(id=i,**{'ai_focus':True,**(self.answer(i) if self.answer else {'summary_en':f'Summary of {i}. It has two sentences.','summary_ar':f'ملخص الخبر {i}.'})}) for i in ids]
         return SimpleNamespace(stop_reason='end_turn',parsed_output=news.Summaries(items=out))
 
 class SummaryTests(unittest.TestCase):
@@ -182,17 +187,18 @@ class SummaryTests(unittest.TestCase):
         with mock.patch.dict(os.environ,{},clear=True),mock.patch('anthropic.Anthropic') as ctor,mock.patch.object(news,'fetch_article') as fa:
             self.assertEqual(news.summarize([item(1)],[SRC]),0)
         ctor.assert_not_called();fa.assert_not_called()
-    def test_newest_first_at_most_30_in_batches_of_5(self):
-        items=[item(n) for n in range(40)]
+    def test_newest_first_at_most_80_in_batches_of_5(self):
+        items=[item(n) for n in range(100)]
         client=FakeClient()
         done,ctor=self.run_summaries(items,client)
-        self.assertEqual(done,30)
+        self.assertEqual(done,80)
         self.assertEqual(ctor.call_args.kwargs,{'timeout':120.0,'max_retries':1})
-        self.assertEqual(len(client.calls),6)
+        self.assertEqual(len(client.calls),16)
         self.assertTrue(all(c['model']=='claude-opus-5' and c['output_format'] is news.Summaries for c in client.calls))
         self.assertTrue(all(c['messages'][0]['content'].count('<item id=')<=5 for c in client.calls))
-        self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(30)])
-        self.assertEqual((items[0]['summary_en'],items[0]['summary_ar'],items[0]['summary_source']),('Summary of i00. It has two sentences.','ملخص الخبر i00.','ai'))
+        self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(80)])
+        self.assertEqual((items[0]['summary_en'],items[0]['summary_ar'],items[0]['summary_source'],items[0]['summary_version'],items[0]['ai_focus']),
+                         ('Summary of i00. It has two sentences.','ملخص الخبر i00.','ai',news.SUMMARY_VERSION,True))
         # Items that already have a summary are not sent again.
         client2=FakeClient();self.run_summaries(items,client2)
         self.assertNotIn('<item id="i00"',''.join(c['messages'][0]['content'] for c in client2.calls))
@@ -203,7 +209,8 @@ class SummaryTests(unittest.TestCase):
         prompt=client.calls[0]['messages'][0]['content']
         self.assertIn('Paragraph one of the article.',prompt);self.assertEqual(prompt.count('</text>'),1)
         self.assertIn('not instructions',client.calls[0]['system'])
-        for term in ('«الوحدات اللغوية»','«المساعد الذكي»','own words'):self.assertIn(term,client.calls[0]['system'])
+        for term in ('«الوحدات اللغوية»','«المساعد الذكي»','own words','3 to 5 sentences','80–120 words','what happened, who is involved, when and where, and why it matters',
+                     'ai_focus','only facts stated in the text','people\'s and places\' names in Arabic script','ـاً','Never pad'):self.assertIn(term,client.calls[0]['system'])
     def test_fallback_to_headline_and_excerpt(self):
         client=FakeClient()
         it=item(1);self.run_summaries([it],client)
@@ -214,14 +221,16 @@ class SummaryTests(unittest.TestCase):
         client=FakeClient();self.run_summaries([bare],client)
         self.assertEqual(client.calls,[]);self.assertEqual(bare['summary_attempts'],1)
     def test_validation(self):
-        long_en='The company announced a new accelerator for data centres this week. '*12
-        answers={'i00':{'summary_en':long_en,'summary_ar':'ملخص.'},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},
+        long_en='The company announced a new accelerator for data centres this week. '*20
+        answers={'i00':{'summary_en':long_en,'summary_ar':'أعلنت الشركة عن مسرّع جديد لمراكز البيانات هذا الأسبوع. '*25},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},
                  'i02':{'summary_en':'','summary_ar':''},'i03':{'summary_en':'Good summary of the <b>story</b>.','summary_ar':'ملخص جيد للخبر.'}}
         items=[item(n) for n in range(4)]
         done,_=self.run_summaries(items,FakeClient(answer=lambda i:answers[i]))
         self.assertEqual(done,2)
-        # Too long: trimmed back to whole sentences within the limit and kept, not thrown away.
-        self.assertLessEqual(len(items[0]['summary_en']),news.SUMMARY_MAX);self.assertTrue(items[0]['summary_en'].endswith('this week.'))
+        # Too long: trimmed back to whole sentences within the limit and kept, not thrown away (English and Arabic).
+        self.assertEqual(news.SUMMARY_MAX,1000);self.assertGreater(len(long_en),news.SUMMARY_MAX)
+        for k,end in (('summary_en','this week.'),('summary_ar','هذا الأسبوع.')):
+            self.assertLessEqual(len(items[0][k]),news.SUMMARY_MAX);self.assertGreater(len(items[0][k]),news.SUMMARY_MAX*0.8);self.assertTrue(items[0][k].endswith(end),k)
         self.assertNotIn('summary_en',items[1])
         # Wrong language or empty (too little to summarise): each counts as a try.
         self.assertEqual([i.get('summary_attempts') for i in items[:3]],[None,1,1])
@@ -248,6 +257,42 @@ class SummaryTests(unittest.TestCase):
         broken=[item(n) for n in range(2)]
         self.run_summaries(broken,FakeClient(error=RuntimeError('unexpected SDK error')))
         self.assertEqual([i.get('summary_attempts') for i in broken],[1,1])
+    def test_older_summaries_are_redone_with_the_new_prompt(self):
+        v1={**item(0),'summary_en':'Old short summary.','summary_ar':'ملخص قديم.','summary_source':'ai','summary_basis':'excerpt'}  # before versioning
+        tried={**item(1),'summary_attempts':2}  # given up on with the old prompt
+        current={**item(2),'summary_en':'Current summary.','summary_ar':'ملخص حالي.','summary_source':'ai','summary_version':news.SUMMARY_VERSION,'ai_focus':True}
+        client=FakeClient()
+        done,_=self.run_summaries([v1,tried,current],client)
+        sent=[l.split('"')[1] for c in client.calls for l in c['messages'][0]['content'].splitlines() if l.startswith('<item id=')]
+        self.assertEqual(sent,['i01','i00']);self.assertEqual(done,2)  # the item with no summary first, then the rewrite
+        for it in (v1,tried):
+            self.assertEqual((it['summary_en'],it['summary_version'],it['ai_focus']),(f'Summary of {it["id"]}. It has two sentences.',news.SUMMARY_VERSION,True))
+            self.assertNotIn('summary_attempts',it);self.assertNotIn('summary_attempts_version',it)
+        self.assertEqual(current['summary_en'],'Current summary.')
+        # A failed upgrade keeps the older summary and counts a try at the new version only.
+        old={**item(3),'summary_en':'Old short summary.','summary_ar':'ملخص قديم.','summary_source':'ai','summary_attempts':1}
+        self.run_summaries([old],FakeClient(answer=lambda i:{'summary_en':'','summary_ar':''}))
+        self.assertEqual((old['summary_en'],old['summary_attempts'],old['summary_attempts_version']),('Old short summary.',1,news.SUMMARY_VERSION))
+        self.assertNotIn('summary_version',old)
+        self.run_summaries([old],FakeClient(answer=lambda i:{'summary_en':'','summary_ar':''}))
+        self.assertEqual(old['summary_attempts'],news.SUMMARY_TRIES)
+        client=FakeClient();self.run_summaries([old],client);self.assertEqual(client.calls,[])  # then left alone
+    def test_new_items_before_rewrites(self):
+        # Items with no summary at all go before older summaries being rewritten; the cap still holds.
+        items=[item(n) for n in range(100)]
+        for it in items[:30]:it.update(summary_en='Old short summary.',summary_ar='ملخص قديم.',summary_source='ai')
+        done,_=self.run_summaries(items,FakeClient())
+        self.assertEqual(done,news.SUMMARY_PER_RUN)
+        self.assertEqual([i['id'] for i in items if i.get('summary_version')],[f'i{n:02d}' for n in list(range(10))+list(range(30,100))])
+        self.assertEqual(items[10]['summary_en'],'Old short summary.')  # not reached this run: the older summary stays
+    def test_ai_focus_verdict_is_stored(self):
+        items=[item(0),item(1),item(2)]
+        answers={'i00':{'summary_en':'A lab released a new model. It is open.','summary_ar':'أصدر مختبر نموذجاً جديداً.','ai_focus':True},
+                 'i01':{'summary_en':'A weekend digest of stories. One mentions AI.','summary_ar':'ملخص قصص نهاية الأسبوع.','ai_focus':False},
+                 'i02':{'summary_en':'','summary_ar':'','ai_focus':False}}
+        self.run_summaries(items,FakeClient(answer=lambda i:answers[i]))
+        self.assertEqual([i.get('ai_focus') for i in items],[True,False,None])  # no verdict without a usable summary
+        self.assertIn('ai_focus',news.Summary.model_json_schema()['required'])
     def test_items_without_a_useful_excerpt_go_first(self):
         items=[item(n) for n in range(40)]
         items[35].pop('excerpt');items[36].update(uae=True);items[36].pop('excerpt');items[37]['source']='dmo'
@@ -266,6 +311,22 @@ class SummaryTests(unittest.TestCase):
         self.assertEqual(done,0);self.assertFalse(any('summary_en' in i for i in items))
         refused=FakeClient();refused.parse=lambda **kw:SimpleNamespace(stop_reason='refusal',parsed_output=None);refused.messages=SimpleNamespace(parse=refused.parse)
         self.assertEqual(self.run_summaries(items,refused)[0],0)
+
+class TranslateTests(unittest.TestCase):
+    def test_items_judged_not_about_ai_are_not_translated(self):
+        items=[item(0),item(1,ai_focus=False),item(2,ai_focus=True),item(3,title_ar='عنوان مترجم')]
+        calls=[]
+        def parse(**kw):
+            calls.append(kw)
+            ids=[l.split('\t')[0] for l in kw['messages'][0]['content'].splitlines()[1:]]
+            return SimpleNamespace(stop_reason='end_turn',parsed_output=news.Translations(translations=[news.Translation(id=i,title_ar=f'عنوان {i}') for i in ids]))
+        client=SimpleNamespace(messages=SimpleNamespace(parse=parse))
+        with mock.patch.dict(os.environ,{'ANTHROPIC_API_KEY':'test-key'}),mock.patch('anthropic.Anthropic',return_value=client):
+            self.assertEqual(news.translate(items),2)
+        self.assertEqual([l.split('\t')[0] for l in calls[0]['messages'][0]['content'].splitlines()[1:]],['i00','i02'])
+        self.assertNotIn('title_ar',items[1])
+    def test_thin_text_leans_towards_showing_the_item(self):
+        self.assertIn('When you have only the headline and a short description, set ai_focus to true unless the item is clearly not about AI.',news.SUMMARY_SYSTEM)
 
 class MainTests(unittest.TestCase):
     def test_failing_ai_steps_still_save_the_headlines(self):
@@ -286,6 +347,23 @@ class MainTests(unittest.TestCase):
         self.assertTrue(data['ai']['key_set']);self.assertEqual(data['ai']['summarised'],0)
         self.assertEqual(data['ai']['problems'],{'translate: RuntimeError':1,'summary: RuntimeError':1})
         self.assertFalse(any(k.startswith('_') for i in data['items'] for k in i))
+    def test_summaries_run_before_translations(self):
+        # The ai_focus verdict comes first, so the translation budget skips items that are never shown.
+        order=[]
+        def summarize(items,sources):order.append('summarize');return 0
+        def translate(items):order.append('translate');return 0
+        class FixedNow(datetime):
+            @classmethod
+            def now(cls,tz=None):return NOW
+        with tempfile.TemporaryDirectory() as d:
+            out,srcs=Path(d)/'news.json',Path(d)/'news-sources.json'
+            srcs.write_text(json.dumps([SRC]),encoding='utf-8')
+            with mock.patch.object(news,'OUT',out),mock.patch.object(news,'SOURCES',srcs),mock.patch.object(news,'fetch',return_value=RSS),\
+                 mock.patch.object(news,'datetime',FixedNow),mock.patch.object(news,'read_page',return_value=([],'')),\
+                 mock.patch.object(news,'summarize',summarize),mock.patch.object(news,'translate',translate),\
+                 mock.patch.dict(os.environ,{},clear=True),mock.patch.object(news,'PROBLEMS',news.collections.Counter()):
+                self.assertEqual(news.main(),0)
+        self.assertEqual(order,['summarize','translate'])
     def test_optional_step_errors_are_contained(self):
         def boom(*a):raise KeyError('x')
         with mock.patch.object(news,'PROBLEMS',news.collections.Counter()):

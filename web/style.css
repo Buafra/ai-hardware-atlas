@@ -7,6 +7,7 @@
 --hw:#6537d7;--hw-ink:#5531b0;--hw-soft:#f1ebff;
 --news:#c0247a;--news-ink:#a01a63;--news-soft:#fdeaf4;
 --uae:#0b7a55;--uae-ink:#08664a;--uae-soft:#e3f5ed;
+--learn:#1d5fd1;--learn-ink:#1a4fae;--learn-soft:#e8f0ff;
 --good:#12703f;--good-bg:#e2f6ea;--multi:#2f5fc4;--multi-bg:#e4edff;--bad:#a5314b;--bad-bg:#fde8ec;--warn-bg:#fff4dc;
 --frame:#0b0d16;
 --shadow-sm:0 1px 2px #1a254a0d,0 2px 6px #1a254a0a;
@@ -22,6 +23,7 @@
 --hw:#7c4ee4;--hw-ink:#c4b5fd;--hw-soft:#231d45;
 --news:#c72a80;--news-ink:#f9a8d4;--news-soft:#35162c;
 --uae:#0b845a;--uae-ink:#6ee7b7;--uae-soft:#10302a;
+--learn:#3b7be6;--learn-ink:#a5c8ff;--learn-soft:#14223f;
 --good:#5ee394;--good-bg:#12321f;--multi:#8fb3ff;--multi-bg:#1b2a52;--bad:#fb8aa0;--bad-bg:#3a1622;--warn-bg:#3a2e12;
 --frame:#05060c;
 --shadow-sm:0 1px 2px #0000004d;--shadow:0 1px 2px #00000059,0 10px 28px #00000047;--shadow-lg:0 2px 4px #00000066,0 22px 48px #00000073}}
@@ -34,6 +36,7 @@
 --hw:#7c4ee4;--hw-ink:#c4b5fd;--hw-soft:#231d45;
 --news:#c72a80;--news-ink:#f9a8d4;--news-soft:#35162c;
 --uae:#0b845a;--uae-ink:#6ee7b7;--uae-soft:#10302a;
+--learn:#3b7be6;--learn-ink:#a5c8ff;--learn-soft:#14223f;
 --good:#5ee394;--good-bg:#12321f;--multi:#8fb3ff;--multi-bg:#1b2a52;--bad:#fb8aa0;--bad-bg:#3a1622;--warn-bg:#3a2e12;
 --frame:#05060c;
 --shadow-sm:0 1px 2px #0000004d;--shadow:0 1px 2px #00000059,0 10px 28px #00000047;--shadow-lg:0 2px 4px #00000066,0 22px 48px #00000073}
@@ -97,12 +100,7 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .nav a:hover{color:var(--strong);background:var(--surface-2)}
 .nav a[aria-current="page"]{color:var(--strong);background:var(--surface-2);border-color:var(--border)}
 .nav .dot{width:8px;height:8px;border-radius:50%;background:var(--c);flex:none}
-.n-hw{--c:var(--hw)}.n-news{--c:var(--news)}.n-uae{--c:var(--uae)}
-/* UAE flag (inline SVG from build.py): never mirrored, so the red band stays at the hoist (left) in Arabic too.
-   Sizes keep the red band (width/4) and the stripes (height/3) on whole pixels: 24x12 or 36x18. The thin frame sits
-   outside the flag, so it keeps the white stripe visible on light backgrounds and the black one on dark ones without
-   dulling the colours. */
-.flag{display:block;flex:none;width:24px;height:12px;box-shadow:0 0 0 1px #7a839899}
+.n-hw{--c:var(--hw)}.n-news{--c:var(--news)}.n-uae{--c:var(--uae)}.n-learn{--c:var(--learn)}
 .nl-short{display:none}
 [lang="ar"] .nav .nl-full{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 [lang="ar"] .nav .nl-short{display:inline}
@@ -127,7 +125,6 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 /* The tagline, repeated here only on phones, where the header has no room for it. */
 .hero-tag{display:none;margin:-2px 0 10px;font-size:15px;font-weight:700;line-height:1.35;color:#b9fff4}
 .hero-side{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
-.fresh{display:flex;gap:10px;align-items:flex-start;margin:0;background:#1a0a3d66;border:1px solid #ffffff38;border-radius:14px;padding:11px 15px;font-size:14px;line-height:1.45;max-width:380px;color:#fff}
 .pulse{flex:none;width:10px;height:10px;margin-top:5px;border-radius:50%;background:#22d4d6;box-shadow:0 0 0 0 #22d4d680;animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 #22d4d699}70%{box-shadow:0 0 0 9px #22d4d600}100%{box-shadow:0 0 0 0 #22d4d600}}
 .ig{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#fff;color:#5a1d8f;font-weight:800;font-size:14.5px;text-decoration:none;box-shadow:0 6px 18px #2a0b5a40}
@@ -141,11 +138,13 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .jump{display:none}
 
 /* pillars */
-.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:22px}
+/* Four pillars: two by two on wide screens (one column below 1000px), so no row is left with a single card. */
+.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:22px}
 .pillar{--c:var(--hw);--ink:var(--hw-ink);--soft:var(--hw-soft);position:relative;display:flex;flex-direction:column;min-width:0;background:var(--surface);border:1px solid var(--border);border-top:5px solid var(--c);border-radius:var(--r-lg);box-shadow:var(--shadow);transition:box-shadow .2s}
 .pillar:hover{box-shadow:var(--shadow-lg)}
 .p-news{--c:var(--news);--ink:var(--news-ink);--soft:var(--news-soft)}
 .p-uae{--c:var(--uae);--ink:var(--uae-ink);--soft:var(--uae-soft)}
+.p-learn{--c:var(--learn);--ink:var(--learn-ink);--soft:var(--learn-soft)}
 .p-head{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:center;padding:20px 22px 14px;background:linear-gradient(180deg,var(--soft),transparent);border-radius:var(--r-lg) var(--r-lg) 0 0}
 .kick{display:contents;font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--ink)}
 .kick>.p-icon{grid-row:1/3;width:46px;height:46px;border-radius:13px}
@@ -153,9 +152,6 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .p-head .p-lead{grid-column:1/-1;margin-top:10px}
 .p-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--c);color:#fff;box-shadow:0 6px 14px color-mix(in srgb,var(--c) 35%,transparent)}
 .p-icon svg{width:21px;height:21px}
-.p-icon .flag{width:24px;height:12px}
-.p-icon.p-flag{background:var(--surface);border:1px solid var(--border-strong);box-shadow:var(--shadow-sm)}
-.kick>.p-flag .flag{width:32px;height:16px}
 .pillar h2{grid-column:2;grid-row:2;align-self:start;font-size:25px;line-height:1.2;letter-spacing:-.02em;margin:2px 0 0}
 .pillar h2 a{color:inherit;text-decoration:none}
 .pillar h2 a:hover{color:var(--ink)}
@@ -194,8 +190,6 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .quick{display:flex;flex-wrap:wrap;gap:6px}
 .quick a{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border-strong);border-radius:999px;padding:6px 10px;font-size:12.5px;font-weight:700;color:var(--ink);text-decoration:none;background:var(--surface)}
 .quick a:hover{background:var(--soft);border-color:var(--c)}
-.live{display:flex;align-items:center;gap:9px;margin:-4px 0 0;font-size:13px;font-weight:700;color:var(--ink)}
-.live .pulse{margin:0;width:8px;height:8px;background:var(--c);animation:none;box-shadow:0 0 0 4px var(--soft)}
 .heads{list-style:none;margin:0;padding:0}
 .heads li{padding:11px 0;border-top:1px solid var(--border)}
 .heads li:first-child{border-top:0;padding-top:2px}
@@ -210,13 +204,19 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .f-date{display:inline-block;font-size:11.5px;font-weight:800;color:var(--ink,var(--uae-ink));margin:0 0 3px}
 .fmini h4{margin:0 0 4px;font-size:15px;line-height:1.35}
 .fmini p{margin:0;font-size:13.5px;line-height:1.5;color:var(--text);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.lpicks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lpicks a{display:block;padding:10px 13px;border:1px solid var(--border);border-inline-start:3px solid var(--c);border-radius:12px;text-decoration:none;color:inherit;background:var(--surface);transition:border-color .15s,background .15s}
+.lpicks a:hover{border-color:var(--c);background:var(--surface-2)}
+.lp-t{display:block;color:var(--strong);font-weight:750;font-size:14.5px;line-height:1.4}
+.lp-s{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:2px;font-size:13px;line-height:1.5;color:var(--muted)}
 .p-foot{padding:0 22px 22px}
 .cta{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;background:var(--c);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:13px 14px;padding-inline:20px 14px;border-radius:14px;box-shadow:0 8px 20px color-mix(in srgb,var(--c) 30%,transparent);transition:transform .15s,filter .15s}
 .cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .cta .arr{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#ffffff2e;flex:none}
-/* keep the three pillar heads (and so their stat rows) aligned when a title wraps */
+/* keep the pillar heads (and so their stat rows) aligned across each row when a title wraps; auto rows, so the second
+   row of pillars is only as tall as its own content */
 @supports (grid-template-rows:subgrid){@media (min-width:1000px){
-  .pillars{grid-template-rows:auto 1fr auto}
+  .pillars{grid-auto-rows:auto}
   .pillar{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}
 }}
 .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-sm)}
@@ -240,8 +240,6 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .ihead .lead{margin:0;max-width:760px;color:#f5f1ff;font-size:16px}
 .ifresh{margin:12px 0 0;display:inline-flex;gap:9px;align-items:center;font-size:13.5px;background:#00000029;border:1px solid #ffffff2e;border-radius:999px;padding:5px 12px}
 .ifresh .pulse{margin:0;width:8px;height:8px}
-.ih-flag{display:inline-block;margin-inline-end:.4em;vertical-align:.06em}
-.ih-flag .flag{width:36px;height:18px}
 .ihead-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .ihead .follow-btn{box-shadow:none;padding-block:10px}
 .back{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#2b1760;border-radius:12px;padding:10px 16px;font-weight:800;font-size:14.5px;text-decoration:none;white-space:nowrap}
@@ -391,7 +389,9 @@ tbody tr:hover{background:var(--surface-2)}
 .split-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start;margin-top:20px}
 .split-layout>.side{grid-column:2;grid-row:1;position:sticky;top:84px}
 .split-layout>.main-col{grid-column:1;grid-row:1;min-width:0}
-.uae-heads{margin-top:34px}
+/* UAE view: the latest headlines come first, the key facts below them. */
+.uae-heads .main-col>.sec-h:first-child{margin-top:0}
+.uae-facts{margin-top:34px}
 .side .panel{display:flex;flex-direction:column;gap:14px}
 .side-h{margin:0;font-size:16px}
 .side-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;padding-top:12px;border-top:1px solid var(--border)}
@@ -430,6 +430,7 @@ tbody tr:hover{background:var(--surface-2)}
 .xcard.x-news{--c:var(--news);--ink:var(--news-ink)}
 .xcard.x-uae{--c:var(--uae);--ink:var(--uae-ink)}
 .xcard.x-contact{--c:#753aca;--ink:var(--accent-text)}
+.xcard.x-learn{--c:var(--learn);--ink:var(--learn-ink)}
 .xcard .p-icon{width:40px;height:40px;flex:none}
 .xcard b{display:block;font-size:17px;color:var(--strong)}
 .x-sub{display:block;font-size:13px;color:var(--muted)}
@@ -534,8 +535,7 @@ dialog::backdrop{background:#0a0d1a99}
   .jump b{font-size:14.5px;line-height:1.3}
   .jump span{font-size:12px;color:#fff}
   .jump i{display:block;width:22px;height:4px;border-radius:4px;margin-bottom:6px}
-  .j-hw{background:#b9a4ff}.j-news{background:#ff8cc6}
-  .jump .j-flag{width:auto;height:auto;border-radius:0;margin:-4px 0 3px}
+  .j-hw{background:#b9a4ff}.j-news{background:#ff8cc6}.j-uae{background:#5eead4}
   .p-body{gap:18px}
   .foot-in{grid-template-columns:1fr}
   .foot-side{align-items:flex-start}
@@ -543,7 +543,6 @@ dialog::backdrop{background:#0a0d1a99}
 @media (min-width:640px) and (max-width:999px){
   .minis{grid-template-columns:repeat(3,minmax(0,1fr))}
   .mini a{grid-template-columns:1fr;align-items:start}
-  .fminis{grid-template-columns:1fr 1fr}
 }
 @media (max-width:999px){
   :root{--stick:124px}
@@ -632,6 +631,15 @@ dialog::backdrop{background:#0a0d1a99}
   .top .brand{max-width:calc(100% - 124px)}
   .brand-sec{white-space:normal}
 }
+/* The header has six sections (Learn AI added): shorter labels where the row gets tight, so the nav never needs its
+   sideways scroll. Hidden full labels stay for screen readers; the short ones are aria-hidden. */
+@media (min-width:1000px){.n-home .nl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
+@media (min-width:1000px) and (max-width:1239px),(min-width:640px) and (max-width:719px){
+  .nav .nl-full{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .nav .nl-short{display:inline}
+}
+@media (max-width:459px){.nav{gap:0;justify-content:space-between}.nav .dot{display:none}.nav a{padding-inline:7px}}
+@media (max-width:359px){.nav a{padding-inline:5px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* print: the hardware table (Print table) or whatever view is open */
