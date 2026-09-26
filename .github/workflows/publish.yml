@@ -1,0 +1,108 @@
+name: Update hardware and publish
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # UTC 03:15 / 15:15 = Dubai 07:15 / 19:15.
+    - cron: '15 3,15 * * *'
+
+permissions:
+  contents: read
+concurrency:
+  group: hardware-atlas-publish
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -r requirements.txt
+      - name: Check official sources
+        if: github.event_name != 'push'
+        run: python scripts/refresh.py
+      - name: Draft records for new announcements (optional, needs ANTHROPIC_API_KEY)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/draft.py
+      - name: Test catalog and safeguards
+        run: |
+          python -m unittest discover -s tests
+          node tests/test-sort.cjs
+      - name: Record configured schedule
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/catalog.json');d=json.loads(p.read_text(encoding='utf-8'))
+          d['automation_status']='Configured in GitHub Actions'
+          p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+          PY
+      - name: Build website and PDF
+        run: python scripts/build.py
+      - name: Save refreshed data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data ':!data/drafts'
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh official hardware sources [skip ci]'
+            git push
+          fi
+      - name: Open a pull request for AI drafts
+        if: github.event_name != 'push'
+        continue-on-error: true
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: data/drafts/*.json
+          branch: ai-drafts
+          title: 'Review AI-drafted hardware records'
+          commit-message: 'Add AI-drafted hardware records for review'
+          body: |
+            Drafted from newly discovered official announcements. Each file quotes the official page as evidence.
+            Check every value against the source, then run `python scripts/draft.py --promote data/drafts/<file>.json` and commit. Merging this pull request alone does not change the public catalog.
+      - name: Open or update the review issue
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/review_issue.py
+      - name: Upload public website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - name: Save refresh report
+        if: always() && github.event_name != 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-check-report
+          path: data/refresh-report.json
+          if-no-files-found: ignore
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

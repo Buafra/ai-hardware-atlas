@@ -1,0 +1,77 @@
+# AI Hardware Atlas
+
+Public NVIDIA / AMD comparison, static HTML, one-page PDF and an official-source checker.
+
+## Current scope
+
+- 31 GPU, system and rack entries, kept in `data/catalog.json`.
+- Search and filters; numeric memory, bandwidth, power and launch-price sorting; chronological date-window sorting.
+- Separate announcement and availability/target dates; memory scope on every entry.
+- Specs where officially published: memory bandwidth, headline AI compute (precision and sparsity as stated), interconnect, form factor, cooling and launch MSRP. Unknown values show "Not listed".
+- Three views: cards, a sortable table and a timeline of announcement vs availability.
+- Side-by-side comparison of up to 4 products.
+- "What can it run?" estimator: model size x precision + context allowance, with fit badges and a fits-only filter.
+- Shareable links: search, filters, sort, view, comparison, estimator and language are kept in the URL.
+- English / Arabic (RTL) interface, light / dark / auto theme, printable table.
+- Embedded fonts and one-page A3 PDF, generated from the same catalog.
+- Scheduled workflow: 07:15 and 19:15 Dubai time (03:15 and 15:15 UTC).
+
+## Publish
+
+1. Create a public repository called `ai-hardware-atlas` and push this directory to `main`.
+2. Repository Settings > Pages > Source: GitHub Actions.
+   Settings > Actions > General > Workflow permissions: enable **Allow GitHub Actions to create and approve pull requests** (for AI drafts).
+   Optional: add an `ANTHROPIC_API_KEY` repository secret to turn on AI drafts.
+3. Run **Update hardware and publish** under Actions (manual run also checks sources).
+4. Confirm the deployment succeeds; use the URL reported by the deployment job.
+
+No API key is needed for the current source checker. GitHub's scheduled jobs can be delayed. GitHub may disable scheduled workflows in an inactive public repository after 60 days; inspect Actions if checks stop.
+
+## What updates automatically
+
+The workflow fetches official NVIDIA / AMD pages, discovers relevant official headlines, stores check health, and regenerates the website and PDF. Narrow, product-title-checked parsers update explicitly labeled specification fields configured in `data/refresh-rules.json`. Missing, conflicting or blocked source responses preserve existing data.
+
+Parsers exist for 19 products (`data/refresh-rules.json`); each was checked against the live official page. Pages that serve several variants only have the unambiguous fields configured.
+
+When anything needs attention (a changed page, a failed parser, an applied change or a new draft), the workflow opens or comments on a single GitHub issue labelled `source-review`. Fetch errors alone do not open an issue.
+
+**AI drafts (optional).** With an `ANTHROPIC_API_KEY` secret, up to 3 newly discovered official headlines per run are sent to Claude (`claude-opus-5`, structured output). A draft is kept only if every evidence quote appears verbatim on the official page, it is a new product, and dates are well formed. Drafts go to `data/drafts/` in an `ai-drafts` pull request; they never enter the catalog by themselves. After checking a draft against the source:
+
+```bash
+python scripts/draft.py --promote data/drafts/<id>.json
+```
+
+Availability is never promoted to “released” just because a target date passed.
+
+The on-page source-check time means a fetch pass ran. The per-product content review date is separate. The original catalog was reviewed 23 September 2026, with targeted corrections on 26 September. Some broad release windows remain vendor targets.
+
+## Run locally
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests
+node tests/test-sort.cjs
+python scripts/refresh.py
+python scripts/build.py                 # add --standalone ../../AI_Hardware_Atlas_2026.html to refresh the offline copy
+python -m http.server 8080 --directory dist
+```
+
+Open http://localhost:8080. `dist/index.html` is self-contained and can also be opened directly. Keep the generated PDF next to it for the download button.
+
+## Data integrity
+
+- One source of truth for website, CSV and PDF.
+- Source URLs restricted to official HTTPS vendor domains, including redirects.
+- No secrets in HTML or JSON.
+- Source fetch failures never delete products or replace values with zero.
+- A failed build never reaches the deploy job.
+- Changes are committed for rollback; source reports are retained as workflow artifacts.
+- Human-edited fields are not sent to or executed by a model.
+
+## Sources / platform documentation
+
+- https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+- https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule
+- Individual vendor references are stored with each product.
+
+DejaVu font licensing is included in `fonts/LICENSE.txt`.
