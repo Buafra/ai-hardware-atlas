@@ -18,6 +18,7 @@ Public NVIDIA / AMD comparison, static HTML, one-page PDF and an official-source
 - AI news in English and Arabic, refreshed with every scheduled run from 40 vetted feeds (`data/news-sources.json`, `scripts/news.py`). Only headlines, links, source and date are stored; links must stay on the publisher's domain. With `ANTHROPIC_API_KEY`, recent English headlines also get an Arabic translation, marked "ترجمة آلية".
 - UAE AI section: sourced fact cards (`data/uae.json`, reviewed by hand) plus headlines about the UAE or from UAE newsrooms.
 - Link to Qahwa & AI on Instagram (@qahwa.w.ai).
+- "Pick a model" in the estimator: every model listed on OpenRouter (`data/models.json`, refreshed with each scheduled run by `scripts/models.py`). Open-weight sizes come from Hugging Face safetensors metadata (all experts of MoE models counted); only unambiguous dense names are used as a fallback. Closed models are shown as cloud-only.
 - Embedded fonts and one-page A3 PDF, generated from the same catalog.
 - Scheduled workflow: 07:15 and 19:15 Dubai time (03:15 and 15:15 UTC).
 

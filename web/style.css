@@ -46,3 +46,4 @@ html[lang="en"] [data-lang="ar"],html[lang="ar"] [data-lang="en"]{display:none!i
 .cmp-table thead img{display:block;width:120px;height:80px;object-fit:contain;background:#fff;border-radius:8px;margin-bottom:6px}#table-view table{min-width:1100px}.follow{font-size:14px;font-weight:700;margin-top:10px}
 @media(max-width:1100px){.facts-grid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.news-list,.facts-grid{grid-template-columns:1fr}.block{padding:16px}.topnav .ig{margin-inline-start:0}.prices{grid-template-columns:1fr}}
 @media print{.topnav,.block,.shot,.follow{display:none!important}}
+.model-pick{margin-bottom:12px}.model-pick input{width:100%;background:var(--input-bg);border:1px solid var(--input-border);border-radius:9px;padding:10px;margin-top:5px}.model-note{margin:6px 2px 0;font-size:12px;color:var(--muted);min-height:1.5em}.model-note.closed{background:var(--warn-bg);color:var(--text);border-radius:8px;padding:8px 10px}

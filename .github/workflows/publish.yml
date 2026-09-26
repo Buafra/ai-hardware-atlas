@@ -43,6 +43,10 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/news.py
+      - name: Refresh OpenRouter model list and sizes
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/models.py
       - name: Draft records for new announcements (optional, needs ANTHROPIC_API_KEY)
         if: github.event_name != 'push'
         continue-on-error: true

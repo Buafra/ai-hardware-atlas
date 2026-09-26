@@ -40,8 +40,8 @@
       return n * direction || a.model.localeCompare(b.model);
     });
   }
-  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false};
-  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit'};
+  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:''};
+  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m'};
   function encodeState(state) {
     const qs = new URLSearchParams();
     Object.keys(PARAMS).forEach(k => {
@@ -104,7 +104,12 @@
     'Capacity is not speed':'السعة ليست السرعة','Memory capacity determines what can fit. Bandwidth, compute, precision and software influence how quickly it runs. Sorting by memory is not a performance ranking.':'سعة الذاكرة تحدد ما يمكن أن يتسع. أما سرعة التشغيل فتتأثر بعرض النطاق والحوسبة والدقة والبرمجيات. الترتيب حسب الذاكرة ليس ترتيبًا للأداء.',
     'Compare the same scope':'قارن النطاق نفسه','A single GPU, shared CPU/GPU system, and rack total are different measurements. Multiple GPUs do not automatically expose one shared VRAM pool.':'معالج رسوميات واحد، ونظام بذاكرة مشتركة، وإجمالي رف كامل هي قياسات مختلفة. تعدد معالجات الرسوميات لا يعني تلقائيًا ذاكرة واحدة مشتركة.',
     'Dates have different meanings':'للتواريخ معانٍ مختلفة','An announcement does not establish first shipment. Vendor targets remain labeled as targets until a release or availability statement is verified. Unknown values stay blank.':'الإعلان لا يعني بدء الشحن. تبقى أهداف الشركات موسومة كأهداف حتى يتم التحقق من الإصدار أو التوفر. القيم غير المعروفة تبقى فارغة.',
-    'What changed':'ما الذي تغيّر','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات','News sources':'مصادر الأخبار',
+    'What changed':'ما الذي تغيّر','Pick a model from OpenRouter':'اختر نموذجًا من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
+    "{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.":'{name} نموذج مغلق: أوزانه غير منشورة، لذا يعمل فقط في سحابة المزوّد (مثلًا عبر OpenRouter). لا يمكن لأي عتاد في هذه الصفحة تشغيله محليًا.',
+    '{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.':'{name} مفتوح الأوزان، لكن حجمه غير منشور بصيغة يمكننا التحقق منها. أدخل الحجم يدويًا.',
+    '{name}: {b} billion parameters':'{name}: {b} مليار مُعامل','size taken from the model name':'الحجم مأخوذ من اسم النموذج','counted from Hugging Face weights':'محسوب من أوزان Hugging Face',
+    'mixture-of-experts: all experts must fit in memory':'نموذج خبراء متعددين (MoE): يجب أن تتسع الذاكرة لكل الخبراء','context up to {c} tokens':'سياق حتى {c} رمز',
+    'Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.':'اختر من {n} نموذجًا مدرجًا على OpenRouter (آخر تحديث للقائمة {d})، أو أدخل الحجم أدناه.','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات','News sources':'مصادر الأخبار',
     'UAE AI headlines':'عناوين الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
     'Follow Qahwa & AI on Instagram':'تابع قهوة و AI على إنستغرام','Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق','Not publicly priced':'لا يوجد سعر معلن',
     'US retail':'متاجر أمريكية','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Official announcement watch':'رصد الإعلانات الرسمية','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل'
@@ -130,6 +135,24 @@
   const SORTABLE = ['level','model','memory_gb','bandwidth_tbs','power_w','announcement','release','msrp_usd','price_usd'];
   const pv = (p, k) => p.price_view && p.price_view[k] ? p.price_view[k] : null;
 
+  const MODELS = (() => { try { return JSON.parse($('models-data').textContent); } catch (e) { return {models: []}; } })();
+  const modelByName = new Map(MODELS.models.map(m => [m.n.toLowerCase(), m]));
+  const findModel = name => modelByName.get(String(name || '').trim().toLowerCase());
+  function fillModelList() {
+    $('model-list').innerHTML = MODELS.models.map(m => `<option value="${esc(m.n)}">${esc(m.o ? (m.b ? fmt(m.b) + ' B' : T('size not published')) : T('closed · cloud only'))}</option>`).join('');
+  }
+  function modelNote() {
+    const note = $('model-note'), m = findModel(state.model);
+    note.classList.toggle('closed', !!(m && !m.o));
+    if (!m) { note.textContent = MODELS.models.length ? F('Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.', {n: MODELS.models.length, d: String(MODELS.updated_at || '').slice(0, 10)}) : ''; return; }
+    if (!m.o) { note.textContent = F("{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.", {name: m.n}); return; }
+    if (!m.b) { note.textContent = F('{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.', {name: m.n}); return; }
+    const parts = [F('{name}: {b} billion parameters', {name: m.n, b: fmt(m.b)}), T(m.s === 'name' ? 'size taken from the model name' : 'counted from Hugging Face weights')];
+    if (m.moe) parts.push(T('mixture-of-experts: all experts must fit in memory'));
+    if (m.c) parts.push(F('context up to {c} tokens', {c: fmt(m.c)}));
+    const hf = /^[\w.-]+\/[\w.-]+$/.test(m.hf || '') ? ` · <a href="https://huggingface.co/${esc(m.hf)}" target="_blank" rel="noopener noreferrer">Hugging Face</a>` : '';
+    note.innerHTML = esc(parts.join(' · ')) + hf;
+  }
   function need() { return estimateGB(state.params, state.bits, state.extra); }
   function readControls() {
     ['search:q','vendor','level','scope','params','bits','extra'].forEach(x => { const [id,k] = x.split(':'); state[k || id] = $(id).value; });
@@ -139,6 +162,7 @@
     ['search:q','vendor','level','scope','params','bits','extra'].forEach(x => { const [id,k] = x.split(':'); $(id).value = state[k || id]; });
     ['vendor','level','scope'].forEach(id => { state[id] = $(id).value; });
     $('fit-only').checked = state.fit;
+    $('model').value = state.model || '';
     if (!SORTABLE.includes(state.sort)) state.sort = 'level';
     $('sort').value = state.sort;
   }
@@ -185,6 +209,7 @@
     if (state.view === 'table') renderTable(n);
     if (state.view === 'timeline') renderTimeline();
     renderTray();
+    modelNote();
     syncUrl();
   }
 
@@ -280,6 +305,21 @@
   }
 
   ['search','params','extra'].forEach(id => $(id).addEventListener('input', () => { readControls(); render(); }));
+  $('model').addEventListener('input', () => {
+    const value = $('model').value.trim(), m = findModel(value);
+    if (!value) { state.model = ''; render(); return; }
+    if (!m) return;  // still typing
+    state.model = m.n;
+    // Closed or unsized models must not leave an earlier model's size (and fit badges) behind.
+    $('params').value = m.o && m.b ? String(m.b) : '';
+    readControls();
+    render();
+  });
+  $('params').addEventListener('input', () => {
+    // A hand-typed size no longer describes the picked model.
+    const m = findModel(state.model);
+    if (m && Number($('params').value) !== m.b) { state.model = ''; $('model').value = ''; render(); }
+  });
   ['vendor','level','scope','bits','fit-only'].forEach(id => $(id).addEventListener('change', () => { readControls(); render(); }));
   $('sort').addEventListener('change', () => { state.sort = $('sort').value; render(); });
   $('direction').addEventListener('click', () => { state.dir *= -1; render(); });
@@ -298,7 +338,7 @@
   $('compare-open').addEventListener('click', openCompare);
   $('compare-clear').addEventListener('click', () => { state.cmp = []; render(); });
   $('compare-close').addEventListener('click', () => { const d = $('compare-dlg'); if (d.close) d.close(); else d.removeAttribute('open'); });
-  $('lang').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; store.set('atlas-lang', state.lang); applyLang(); render(); });
+  $('lang').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; store.set('atlas-lang', state.lang); applyLang(); fillModelList(); render(); });
   $('theme').addEventListener('click', () => { theme = {auto:'light', light:'dark', dark:'auto'}[theme]; store.set('atlas-theme', theme); applyTheme(); });
   $('share').addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(location.href); flash(T('Link copied')); }
@@ -312,7 +352,9 @@
     const url = URL.createObjectURL(new Blob(['﻿' + csv], {type: 'text/csv;charset=utf-8'}));
     const a = document.createElement('a'); a.href = url; a.download = 'ai-hardware-atlas.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
+  if (state.model && !findModel(state.model)) state.model = '';
   writeControls();
   applyLang();
+  fillModelList();
   render();
 })(typeof window !== 'undefined' ? window : {});
