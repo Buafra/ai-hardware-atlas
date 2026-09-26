@@ -523,10 +523,6 @@
         {
           "label": "NVIDIA DGX Spark product page",
           "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
-        },
-        {
-          "label": "NVIDIA Developer Forums: DGX Spark price change announcement",
-          "url": "https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713"
         }
       ],
       "notes": "15 October 2025 is the NVIDIA order-opening date; 13 October was the shipping press announcement. 128 GB is shared CPU/GPU memory. The 273 GB/s bandwidth is a capacity-versus-speed consideration, not a performance ranking. Launch price was $3,999; NVIDIA announced an increase to $4,699 in February 2026.",
@@ -571,6 +567,10 @@
           {
             "label": "Promise Computer Technology",
             "url": "https://www.promisegulf.com/product/nvidia-dgx-spark/"
+          },
+          {
+            "label": "NVIDIA forum: Feb 2026 price change",
+            "url": "https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713"
           }
         ]
       }
