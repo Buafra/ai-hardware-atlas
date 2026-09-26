@@ -149,7 +149,7 @@
       "title_en": "TII's Falcon-H1 Arabic",
       "text_en": "On 5 January 2026 Abu Dhabi's Technology Innovation Institute released Falcon-H1 Arabic in 3B, 7B and 34B parameter sizes, built on a hybrid Mamba-Transformer architecture with context of up to 256K tokens. TII says it tops the Open Arabic LLM Leaderboard across all model sizes.",
       "title_ar": "نموذج فالكون H1 العربي من TII",
-      "text_ar": "في 5 يناير 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-H1 Arabic بأحجام 3 و7 و34 مليار معامل، وهو مبني على معمارية هجينة تجمع Mamba وTransformer مع سياق يصل إلى 256 ألف رمز. ويقول المعهد إنه يتصدر لوحة Open Arabic LLM Leaderboard في جميع الأحجام.",
+      "text_ar": "في 5 يناير 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-H1 Arabic بأحجام 3 و7 و34 مليار معامل، وهو مبني على معمارية هجينة تجمع Mamba وTransformer مع سياق يصل إلى 256 ألف وحدة لغوية. ويقول المعهد إنه يتصدر لوحة Open Arabic LLM Leaderboard في جميع الأحجام.",
       "as_of": "2026-01-05",
       "hardware": [],
       "sources": [
@@ -164,7 +164,7 @@
       "title_en": "Jais Arabic language model",
       "text_en": "On 30 August 2023 G42's Inception open-sourced Jais, a 13-billion-parameter Arabic–English model developed with MBZUAI and Cerebras Systems. It was trained on 116 billion Arabic and 279 billion English tokens on the Condor Galaxy 1 supercomputer built by G42 and Cerebras.",
       "title_ar": "نموذج جيس للغة العربية",
-      "text_ar": "في 30 أغسطس 2023 أتاحت شركة Inception التابعة لـG42 نموذج جيس مفتوح المصدر، وهو نموذج عربي إنجليزي بحجم 13 مليار معامل طُوّر بالتعاون مع جامعة محمد بن زايد للذكاء الاصطناعي وCerebras Systems. ودُرّب على 116 مليار رمز عربي و279 مليار رمز إنجليزي باستخدام الحاسوب الفائق Condor Galaxy 1 الذي بنته G42 وCerebras.",
+      "text_ar": "في 30 أغسطس 2023 أتاحت شركة Inception التابعة لـG42 نموذج جيس مفتوح المصدر، وهو نموذج عربي إنجليزي بحجم 13 مليار معامل طُوّر بالتعاون مع جامعة محمد بن زايد للذكاء الاصطناعي وCerebras Systems. ودُرّب على 116 مليار وحدة لغوية عربية و279 مليار وحدة لغوية إنجليزية باستخدام الحاسوب الفائق Condor Galaxy 1 الذي بنته G42 وCerebras.",
       "as_of": "2023-08-30",
       "hardware": [],
       "sources": [
