@@ -67,7 +67,9 @@ def price_view(p):
 def price_block(p):
     v = p['price_view']
     if not v:
-        return f'<div class="price-row"><dt data-i18n>Approx. price</dt><dd>{T("Not publicly priced")}</dd></div>'
+        why = (p['price'] or {}).get('basis')
+        why = f'<dd class="price-src" lang="en" dir="auto">{E(why)}</dd>' if why else ''
+        return f'<div class="price-row"><dt data-i18n>Approx. price</dt><dd>{T("Not publicly priced")}</dd>{why}</div>'
     links = ' '.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">{E(s["label"])}</a>' for s in p['price'].get('sources', []))
     part = lambda value, kind: f'<span class="amt">{E(value)}</span><small>{T(kind) if kind else ""}</small>' if value else f'<span class="amt">{T("Not listed")}</span>'
     return f'''<div class="price-row"><dt><span data-i18n>Approx. price</span> <small><span data-i18n>checked</span> {E(v['checked'])}</small></dt><dd class="prices"><span>{part(v['usd'], v['usd_kind'])}</span><span>{part(v['aed'], v['aed_kind'])}</span></dd><dd class="price-src" lang="en" dir="auto">{E(v['basis'] or '')} {links}</dd></div>'''

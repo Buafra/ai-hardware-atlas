@@ -2328,24 +2328,28 @@
         "usd_low": 5349.99,
         "usd_high": 6652.19,
         "usd_kind": "US retail",
-        "aed_low": null,
-        "aed_high": null,
-        "aed_kind": null,
-        "vat_included": null,
-        "basis": "Chip not sold alone; priced HP Z2 Mini G1a (Ryzen AI Max+ PRO 395, 128GB, 2TB, Win 11 Pro) at Staples, single listing, well above earlier deal prices. No UAE 128GB system with a live price found. Also HP Z2 Mini G1a 128GB/1TB: Newegg (sold by Newegg) and Staples, $5,349.99–5,543.92.",
+        "aed_low": 27999,
+        "aed_high": 27999,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "The chip is not sold alone, so this prices a new HP Z2 Mini G1a system (Ryzen AI Max+ PRO 395, 128GB, Win 11 Pro) as listed on 2026-09-26: in the US, Newegg (sold by Newegg) 128GB/1TB $5,349.99, a discounted price and now out of stock (marketplace sellers $6,167–$6,792, in stock), Staples 128GB/1TB $5,543.92 (in stock) and 128GB/2TB $6,652.19 (limited availability). The UAE price is a single Amazon.ae listing of the 128GB/1TB US SKU (C3XE0UT#ABA) at AED 27,999, which the page says includes VAT, from a third-party seller (TinVIA 39) that ships from outside the UAE; no other UAE store listing of a 128GB PRO 395 system with a price was found.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Staples",
+            "label": "Staples – HP Z2 Mini G1a 128GB/2TB, $6,652.19 (2026-09-26)",
             "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-2tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5464"
           },
           {
-            "label": "Newegg (HP Z2 Mini G1a, 1TB)",
+            "label": "Staples – HP Z2 Mini G1a 128GB/1TB, $5,543.92 (2026-09-26)",
+            "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-1tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5467"
+          },
+          {
+            "label": "Newegg – HP Z2 Mini G1a 128GB/1TB, $5,349.99 (out of stock) / marketplace $6,167–$6,792 (2026-09-26)",
             "url": "https://www.newegg.com/p/1VK-001E-4UB66"
           },
           {
-            "label": "Staples (HP Z2 Mini G1a, 1TB)",
-            "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-1tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5467"
+            "label": "Amazon.ae – HP Z2 Mini G1a 128GB/1TB, AED 27,999 (2026-09-26)",
+            "url": "https://www.amazon.ae/HP-Z2-Mini-G1a-Workstation/dp/B0FSS64R69"
           }
         ]
       }
@@ -2543,19 +2547,43 @@
         "file": "images/rtx-pro-5000-blackwell-72gb.webp"
       },
       "price": {
-        "usd_low": 9100,
-        "usd_high": 9100,
+        "usd_low": 8975,
+        "usd_high": 10115.74,
         "usd_kind": "US retail",
-        "aed_low": null,
-        "aed_high": null,
-        "aed_kind": null,
-        "vat_included": null,
-        "basis": "72GB card, single US listing: Viperatech $9,100 (in stock, all sales final). No priced UAE listing (Microless shows unavailable).",
+        "aed_low": 39629,
+        "aed_high": 39629,
+        "aed_kind": "UAE retail",
+        "vat_included": false,
+        "basis": "New RTX PRO 5000 Blackwell 72GB card, per GPU (PNY VCNRTXPRO5000B72-PB or NVIDIA 900-5G153-2270-000); NVIDIA has published no list price. US listings on 2026-09-26: eSaiTech $8,975 (in stock), Viperatech $9,100 (in stock, all sales final), Newegg (sold by Newegg, PNY) $9,999.99 (in stock), SabrePC $9,366.43 (PNY) and $10,115.74 (NVIDIA OEM), both out of stock; Newegg marketplace sellers shipping from China/Hong Kong ask $13,135–$16,999.99 (left out of the range) and CDW is quote-only. The UAE figure is a single price: ServerBasket's 48GB/72GB page lists the 72GB at AED 39,629 in its pricing table (the page's cart price of AED 35,999 is the 48GB; the 72GB is ordered via chat, and the store's structured data marks its prices as excluding VAT), while Microless and PCDubai show the 72GB out of stock with no price.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Viperatech",
+            "label": "eSaiTech – PNY VCNRTXPRO5000B72-PB, $8,975, in stock (2026-09-26)",
+            "url": "https://esaitech.com/products/nvidia-vcnrtxpro5000b72-pb-rtx-pro-5000-72gb-gddr7-gpu"
+          },
+          {
+            "label": "Viperatech – $9,100, in stock (2026-09-26)",
             "url": "https://viperatech.com/product/nvidia-rtx-pro-5000-blackwell-72-gb"
+          },
+          {
+            "label": "Newegg (sold by Newegg) – PNY VCNRTXPRO5000B72-PB, $9,999.99, in stock (2026-09-26)",
+            "url": "https://www.newegg.com/pny-technologies-inc-vcnrtxpro5000b72-pb-rtx-pro-5000-72gb-workstation-video-card/p/N82E16814985057"
+          },
+          {
+            "label": "SabrePC – PNY VCNRTXPRO5000B72-PB, $9,366.43, out of stock (2026-09-26)",
+            "url": "https://www.sabrepc.com/VCNRTXPRO5000B72-PB-PNY-S9635911"
+          },
+          {
+            "label": "SabrePC – NVIDIA 900-5G153-2270-000, $10,115.74, out of stock (2026-09-26)",
+            "url": "https://www.sabrepc.com/900-5G153-2270-000-NVIDIA-S9632514"
+          },
+          {
+            "label": "Newegg marketplace – third-party sellers $13,135–$16,999.99 (2026-09-26)",
+            "url": "https://www.newegg.com/nvidia-pro-5000-blackwell-72-gb-rtx-pro-5000-72gb-video-cards-workstation/p/2VV-000H-000N6"
+          },
+          {
+            "label": "ServerBasket UAE – 72GB AED 39,629 in pricing table, excl. VAT (2026-09-26)",
+            "url": "https://www.serverbasket.ae/p/nvidia-rtx-pro-5000-blackwell-graphics-card"
           }
         ]
       }
@@ -2827,30 +2855,38 @@
       },
       "price": {
         "usd_low": 96250,
-        "usd_high": 129019,
+        "usd_high": 124369,
         "usd_kind": "US retail",
-        "aed_low": null,
-        "aed_high": null,
-        "aed_kind": null,
-        "vat_included": null,
-        "basis": "Per desktop system; Exxact Valence 'starting at' $96,250 (checked 2026-09-26) and MSI GB300 workstation $97,000 at CDW per Computerworld (2026-03-16). Dell Pro Max GB300 reportedly far higher (unverified). No UAE listing. Integrator configurators for the ASUS ExpertCenter Pro ET900N G3 (GB300) list $123,375–129,019; lower ~$97k figures are for other GB300 builds.",
+        "aed_low": 525000,
+        "aed_high": 577500,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Per desktop system, new, OEM builds of the GB300 DGX Station architecture. US: Exxact Valence 'starting price' $96,250 (configurator, quote also offered) up to the ASUS ExpertCenter Pro ET900N G3 at $123,375 (CyberPowerPC, in stock, est. ship 2026-11-19) and $124,369 (AVADirect, TAA-compliant version), checked 2026-09-26; Computerworld reported an MSI GB300 at $97,000 via CDW on 2026-03-16. UAE: Microless lists the ASUS ET900N G3 at AED 525,000 and the Gigabyte W775-V10-L01 at AED 577,500, both inclusive of VAT, with October 2026 delivery dates. The ASUS and Gigabyte listings (US and UAE) state 748 GB coherent memory (252 GB HBM3e + 496 GB LPDDR5X) rather than the 784 GB in the catalog.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Exxact (reseller listing)",
+            "label": "Exxact Valence VWS-158270643 (starting price $96,250, 2026-09-26)",
             "url": "https://www.exxactcorp.com/Exxact-VWS-158270643-E158270643"
+          },
+          {
+            "label": "CyberPowerPC (ASUS ET900N G3, $123,375, 2026-09-26)",
+            "url": "https://www.cyberpowerpc.com/system/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Supercomputer"
+          },
+          {
+            "label": "AVADirect (ASUS ET900N G3 TAA-compliant, $124,369, 2026-09-26)",
+            "url": "https://www.avadirect.com/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Workstation-NVIDIA-DGX-Station-Architecture/Configure/20219650"
           },
           {
             "label": "Computerworld (CDW/MSI price, 2026-03-16)",
             "url": "https://www.computerworld.com/article/4145765/dell-cut-ai-cloud-costs-with-data-center-class-desktops.html"
           },
           {
-            "label": "CyberPowerPC (ASUS ET900N G3)",
-            "url": "https://www.cyberpowerpc.com/system/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Supercomputer"
+            "label": "Microless UAE (ASUS ET900N G3, AED 525,000 incl. VAT, 2026-09-26)",
+            "url": "https://uae.microless.com/product/asus-expertcenter-pro-et900n-g3-ai-workstation-grace-72-core-neoverse-v2-cpu-nvidia-blackwell-ultra-graphics-748gb-coherent-memory-up-to-8tb-nvme-ssd-10gbe-1600w-titanium-psu-et900n-g3/"
           },
           {
-            "label": "AVADirect (ASUS ET900N G3)",
-            "url": "https://www.avadirect.com/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Workstation-NVIDIA-DGX-Station-Architecture/Configure/20219650"
+            "label": "Microless UAE (Gigabyte W775-V10-L01, AED 577,500 incl. VAT, 2026-09-26)",
+            "url": "https://uae.microless.com/product/gigabyte-w775-v10-l01-deskside-ai-supercomputer-nvidia-gb300-grace-blackwell-ultra-496gb-lpddr5x-2x-400gb-connectx-8-4x-m-2-3x-pcie-gen5-1600w-platinum-ubuntu-w775-v10-l01/"
           }
         ]
       }
@@ -2900,19 +2936,39 @@
         "file": "images/rtx-pro-6000-server-edition.webp"
       },
       "price": {
-        "usd_low": 17650,
-        "usd_high": 17650,
+        "usd_low": 15334.1,
+        "usd_high": 30000,
         "usd_kind": "US retail",
-        "aed_low": null,
-        "aed_high": null,
-        "aed_kind": null,
-        "vat_included": null,
-        "basis": "Per card; single reseller listing SabrePC $17,649.85 (out of stock), checked 2026-09-26; no outlet estimate found.",
+        "aed_low": 60375,
+        "aed_high": 60375,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Per card, new (NVIDIA 900-2G153-0000-000 / PNY TCSRTXPRO6000SE-PB). US: Supermicro eStore $15,334.10 (GPU-NVRTXPRO-6K-B-SE, out of stock), SabrePC $17,649.85 (out of stock) and Viperatech $18,500 (pre-order; its delivery note still refers to a July 2025 batch), while the only in-stock US-site offer is a Newegg marketplace listing at $30,000 from third-party seller roboshine shipping from Hong Kong; all checked 2026-09-26. Exxact is quote-only. UAE: Adarc Computer lists the PNY card at AED 60,375 inclusive of VAT with Add to Cart enabled, though its page data marks stock as 0. PC Builder UAE's AED 52,401 listing was left out: out of stock, VAT not stated, and its description text is for the Max-Q Workstation Edition.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "SabrePC (reseller listing)",
+            "label": "Supermicro eStore ($15,334.10, 2026-09-26)",
+            "url": "https://store.supermicro.com/us_en/supermicro-rtx-pro-6000-gpu-nvrtxpro-6k-b-se.html"
+          },
+          {
+            "label": "SabrePC ($17,649.85, 2026-09-26)",
             "url": "https://www.sabrepc.com/900-2G153-0000-000-NVIDIA-S8845543"
+          },
+          {
+            "label": "Viperatech ($18,500 pre-order, 2026-09-26)",
+            "url": "https://viperatech.com/product/nvidia-rtx-pro-6000-blackwell-server-edition"
+          },
+          {
+            "label": "Newegg marketplace, seller roboshine ($30,000, 2026-09-26)",
+            "url": "https://www.newegg.com/nvidia-900-2g153-0000-000-rtx-pro-6000-96gb-graphics-card/p/N82E16814132104"
+          },
+          {
+            "label": "Adarc Computer UAE (AED 60,375 incl. VAT, 2026-09-26)",
+            "url": "https://www.adarccomputer.com/product/nvidia-rtx-pro-6000-blackwell-server-edition-graphics-card-96gb-gddr7-tcsrtxpro6000se-pb"
+          },
+          {
+            "label": "PC Builder UAE (AED 52,401, not used in range)",
+            "url": "https://pcbuilder.ae/product.php?id=1777461462085"
           }
         ]
       }
@@ -2960,7 +3016,31 @@
         "shows": "RTX PRO Server exploded render with eight GPUs lifted out",
         "file": "images/rtx-pro-server-8-gpu-example.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 236374,
+        "usd_high": 236374,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per complete system, new: AVADirect's public configurator prices a Supermicro SYS-522GA-NRT-1 (5U) with 8x PNY RTX PRO 6000 Blackwell Server Edition cards, 2x Xeon 6952P, 16x 32 GB DDR5 and 960 GB M.2 at $236,374 (checked 2026-09-26; single configurator build, other CPU/RAM/storage choices change the total). Viperatech's $126,000 pre-order listing for a Supermicro SYS-522GA-NRT/AS-5126GS-TNRT 8x RTX PRO 6000 system was left out as stale: its page data was last updated 2025-11-21 and it is lower than eight of the same store's current $18,500 Server Edition cards. Dell PowerEdge XE7745, Supermicro eStore and Arc Compute are contact-sales/quote-only; no UAE AED listing of an 8-GPU RTX PRO server was found.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "AVADirect configurator (SYS-522GA-NRT-1 with 8x RTX PRO 6000 Server, $236,374, 2026-09-26)",
+            "url": "https://www.avadirect.com/Supermicro-GPU-SuperServer-SYS-522GA-NRT-1-Custom-5U-Rackmount-Server-Computer/Configure/20205115"
+          },
+          {
+            "label": "Viperatech (8x RTX PRO 6000 system, $126,000, stale, not used in range)",
+            "url": "https://viperatech.com/product/supermicro-superserver-sys-522ga-nrt-as-5126gs-tnrt-rtx-pro-6000-system"
+          },
+          {
+            "label": "Viperatech (RTX PRO 6000 Server Edition card, $18,500, 2026-09-26)",
+            "url": "https://viperatech.com/product/nvidia-rtx-pro-6000-blackwell-server-edition"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -3006,7 +3086,51 @@
         "shows": "Instinct MI350P PCIe card (bare board) render",
         "file": "images/instinct-mi350p-pcie.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 94005.94,
+        "usd_high": 95890.28,
+        "usd_kind": "US retail",
+        "aed_low": 451296,
+        "aed_high": 451296,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Per GPU: new HPE-branded MI350P 144GB PCIe card (HPE SKU S8A40C) listed by US resellers on 2026-09-26 at $94,005.94 (PCNation) and $95,890.28 (Compsource, out of stock, listed 2026-08-09), and by Gear-up.me UAE at AED 451,296 including VAT (out of stock). These look like HPE list-based reseller prices: HPE's own store is quote-only, AMD has published no price (The Register, 2026-05-07), and the AMD channel part 100-300000211H is quote-only at SabrePC, Exxact and Wiredzone; negotiated prices are likely far lower.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "PCNation, HPE S8A40C (2026-09-26)",
+            "url": "https://www.pcnation.com/hpe-bto-server-systems-s8a40c-pna11f5qi"
+          },
+          {
+            "label": "Compsource, HPE S8A40C (out of stock, 2026-09-26)",
+            "url": "https://www.compsource.com/buy/S8A40C/Hp-195/Amd-Instinct-Mi350p-144gb------Ctlr--Accelerator-Plwk-s8a40c/"
+          },
+          {
+            "label": "Gear-up.me UAE, HPE S8A40C (AED, VAT incl., out of stock, 2026-09-26)",
+            "url": "https://gear-up.me/hpe-amd-instinct-mi350p-144gb-accelerator.html"
+          },
+          {
+            "label": "HPE Store US, S8A40C (quote only, 2026-09-26)",
+            "url": "https://buy.hpe.com/us/en/options/server-accelerators/computational-graphics-accelerators-for-servers/amd-instinct-mi350p-144gb-pcie-accelerator-for-hpe/p/s8a40c"
+          },
+          {
+            "label": "The Register (2026-05-07: AMD hasn't shared pricing)",
+            "url": "https://www.theregister.com/ai-and-ml/2026/05/07/amd-takes-aim-at-enterprise-ai-with-pcie-based-instinct-gpus/5231481"
+          },
+          {
+            "label": "SabrePC, AMD 100-300000211H (contact sales, out of stock, 2026-09-26)",
+            "url": "https://www.sabrepc.com/100-300000211H-AMD-S166939080"
+          },
+          {
+            "label": "Exxact, AMD 100-300000211H (quote only, 2026-09-26)",
+            "url": "https://www.exxactcorp.com/AMD-100-300000211H-E166939080"
+          },
+          {
+            "label": "Wiredzone (email for price, out of stock, 2026-09-26)",
+            "url": "https://www.wiredzone.com/shop/product/10034451-amd-instinct-mi350p-data-center-gpu-144gb-hbm3e-600w-pcie-5-0-x16-passive-cooling-17148"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -3052,7 +3176,47 @@
         "shows": "HGX H200 8-GPU baseboard render",
         "file": "images/h200.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 30269.03,
+        "usd_high": 42999,
+        "usd_kind": "US retail",
+        "aed_low": 219185.4,
+        "aed_high": 219185.4,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Priced as the H200 NVL 141GB PCIe card (NVIDIA 900-21010-0040-000), the only H200 sold as a standalone card; the SXM H200 ships only on HGX boards. New-condition US listings checked 2026-09-26, all out of stock that day: SabrePC $30,269.03, Viperatech $33,500 (inquiry to buy), Newegg $42,999; left out are CDW's HPE-branded S3U30C at $94,698.99 (OEM outlier) and NetworkOutlet's $37,000, whose listing does not state condition on a site bannered 'Hardware is Refurbished'. AED is a single iTechDevices.ae listing, new and marked in stock, at AED 219,185.40 incl. VAT (AED 208,748 ex-VAT), far above the US listings; Microless UAE shows the card as discontinued.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "SabrePC (2026-09-26)",
+            "url": "https://www.sabrepc.com/900-21010-0040-000-NVIDIA-S7867394"
+          },
+          {
+            "label": "Viperatech (2026-09-26)",
+            "url": "https://viperatech.com/product/nvidia-h200-nvl-graphic-card-141-gb-passive-pcie-900-21010-0040-000"
+          },
+          {
+            "label": "NetworkOutlet (2026-09-26; excluded, condition not stated)",
+            "url": "https://networkoutlet.com/products/nvidia-h200-nvl-tensor-core-gpu-141gb-hbm3e-pcie-gen-5-0-hopper-architecture-ai-accelerator"
+          },
+          {
+            "label": "Newegg (2026-09-26)",
+            "url": "https://www.newegg.com/p/N82E16888892009"
+          },
+          {
+            "label": "CDW, HPE S3U30C (2026-09-26)",
+            "url": "https://www.cdw.com/product/nvidia-h200-nvl-accelerator-gpu-computing-processor-h200-tensor-core/8299396"
+          },
+          {
+            "label": "iTechDevices UAE (2026-09-26)",
+            "url": "https://www.itechdevices.ae/900-21010-0040-000-1714669.html"
+          },
+          {
+            "label": "Microless UAE (discontinued)",
+            "url": "https://uae.microless.com/product/nvidia-h200-nvl-tensor-core-graphics-card-141gb-memory-4-8-tb-s-memory-bandwidth-7-nvdec-7-jpeg-decoders-up-to-3-341-tflops-pcie-dual-slot-air-cooled-form-factor-90skc000-m9gan0/"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -3109,16 +3273,20 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per GPU; Jensen Huang to CNBC (2024-03-19): $30k-$40k, later clarified that pricing varies as it is sold in systems; old but the only credible figure.",
+        "basis": "Per GPU, reported estimate: Jensen Huang told CNBC (2024-03-19) a Blackwell GPU would cost $30k-$40k (Tom's Hardware notes it assumes he meant the B200), then clarified that pricing varies because Nvidia sells systems, not bare chips; HSBC via Tom's Hardware (2024-05-14) put a GB200 superchip (one Grace CPU plus two B200s) at $60k-$70k. B200 ships only inside HGX/DGX B200 systems and GB200 superchips, and no newer per-GPU figure from a reputable outlet or named analyst, nor any UAE listing of a bare B200, was found as of 2026-09-26, so this figure is dated.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Tom's Hardware (2024-03)",
+            "label": "CNBC (2024-03-19)",
+            "url": "https://www.cnbc.com/2024/03/19/nvidias-blackwell-ai-chip-will-cost-more-than-30000-ceo-says.html"
+          },
+          {
+            "label": "Tom's Hardware (2024-03-19)",
             "url": "https://www.tomshardware.com/pc-components/gpus/nvidias-jensen-huang-says-blackwell-gpu-to-cost-dollar30000-dollar40000-later-clarifies-that-pricing-will-vary-as-they-wont-sell-just-the-chip"
           },
           {
-            "label": "CNBC (2024-03-19)",
-            "url": "https://www.cnbc.com/2024/03/19/nvidias-blackwell-ai-chip-will-cost-more-than-30000-ceo-says.html"
+            "label": "Tom's Hardware, HSBC estimates (2024-05-14)",
+            "url": "https://www.tomshardware.com/pc-components/gpus/nvidias-next-gen-blackwell-ai-gpus-to-cost-up-to-dollar70000-fully-equipped-servers-range-up-to-dollar3000000-report"
           }
         ]
       }
@@ -3166,7 +3334,35 @@
         "shows": "DGX B200 system exploded render",
         "file": "images/dgx-b200-8-gpus.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 562154.09,
+        "usd_high": 580000,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per complete 8-GPU DGX B200 system (8x B200, 1,440 GB total HBM3e), new. Broadberry's US online configurator shows $562,154.09 ex. sales tax (RRP $702,692.62) for its default build (2x Xeon Platinum 8570, 4 TB DDR5, 3-yr NVIDIA Business Standard support, NVIDIA installation; 'Request Quote' only), and Viperatech (Austin, TX office) lists it at $580,000 with 'Inquiry to Buy'/'Add to Cart', no config detail given; both checked 2026-09-26. CDW, Exxact and SabrePC are quote-only and ShopBLT could not be opened. Dubai reseller ITCT Shop lists it at USD 600,000 (pre-order/allocation, priced in USD not AED), so no AED figure. The range is roughly 9-13% above the $515,410 Broadberry listing Wccftech reported in Oct 2024.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Broadberry US configurator ($562,154.09 ex. sales tax, 2026-09-26)",
+            "url": "https://www.broadberry.com/xeon-scalable-processor-gen4-rackmount-servers/nvidia-dgx-b200"
+          },
+          {
+            "label": "Viperatech ($580,000 listing, 2026-09-26)",
+            "url": "https://viperatech.com/product/nvidia-dgx-b200"
+          },
+          {
+            "label": "ITCT Shop, Dubai (USD listing, 2026-09-26)",
+            "url": "https://itctshop.com/product/nvidia-dgx-b200/"
+          },
+          {
+            "label": "Wccftech (Broadberry $515,410 listing, 2024-10-12)",
+            "url": "https://wccftech.com/nvidia-blackwell-dgx-b200-price-half-a-million-dollars-top-of-the-line-ai-hardware/"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -3215,7 +3411,23 @@
         "shows": "DGX B300 system render (8x B300 GPUs); no standalone B300 GPU/board image found",
         "file": "images/b300-blackwell-ultra.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": null,
+        "usd_high": null,
+        "usd_kind": null,
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "No public listing or reputable per-GPU estimate found as of 2026-09-26: B300 ships only inside HGX/DGX B300 and GB300 NVL72 systems, and the ~$40k-$53k per-GPU figures online come from rental and SEO blogs, not a named outlet or analyst. For context, Tom's Hardware (2026-06-24) says a DGX B300 system retails in the US for nearly $400,000, a per-system price that should not be divided into a GPU price.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware (2026-06-24)",
+            "url": "https://www.tomshardware.com/pc-components/gpu-drivers/five-year-old-nvidia-a100-servers-triple-in-price-in-china"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -3258,18 +3470,30 @@
         "file": "images/instinct-mi300x.webp"
       },
       "price": {
-        "usd_low": 10000,
-        "usd_high": 15000,
-        "usd_kind": "Reported estimate",
+        "usd_low": 22000,
+        "usd_high": 34899.99,
+        "usd_kind": "US used market",
         "aed_low": null,
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per GPU; Citi estimate reported by Tom's Hardware (early 2024): $10k-$15k depending on customer.",
+        "basis": "Per GPU: used single MI300X 192GB OAM modules on eBay.com, opened 2026-09-26: $22,000 (seller in China, 10 available, Buy It Now, listing updated 2026-08-18), $34,549 or best offer (Richardson TX, updated 2026-09-25) and $34,899.99 or best offer (Dallas TX, with heatsink, 2 available). These are asking prices, not sold prices, and exclude shipping. Far above Citi's Feb 2024 estimate that AMD sold MI300X to large customers such as Microsoft for about $10k-$15k per unit.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Tom's Hardware (citing Citi, 2024)",
+            "label": "eBay listing 398281129999 (used, China, updated 2026-08-18)",
+            "url": "https://www.ebay.com/itm/398281129999"
+          },
+          {
+            "label": "eBay listing 227465165752 (used, Texas, updated 2026-09-25)",
+            "url": "https://www.ebay.com/itm/227465165752"
+          },
+          {
+            "label": "eBay listing 307172264390 (used, Texas, seen 2026-09-26)",
+            "url": "https://www.ebay.com/itm/307172264390"
+          },
+          {
+            "label": "Tom's Hardware (citing Citi, 2024-02-02)",
             "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-h100-ai-gpus-cost-up-to-four-times-more-than-amds-competing-mi300x-amds-chips-cost-dollar10-to-dollar15k-apiece-nvidias-h100-has-peaked-beyond-dollar40000"
           }
         ]
@@ -3319,7 +3543,23 @@
         "shows": "Instinct MI325X OAM module and heatsink render",
         "file": "images/instinct-mi325x.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": null,
+        "usd_high": null,
+        "usd_kind": null,
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "No public price found as of 2026-09-26: no new or used MI325X listing on eBay.com, US reseller Wiredzone (AMD P/N 100-300000108H) shows no price, and no dated per-GPU estimate from a reputable outlet or named analyst was found; AMD publishes no list price and the part ships mainly inside 8-GPU OEM systems.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Wiredzone MI325X listing (no price shown, 2026-09-26)",
+            "url": "https://www.wiredzone.com/shop/product/10032305-amd-100-300000108h-instinct-mi325x-gpu-graphics-processing-unit-256gb-hbm3e-memory-air-cooling-ac-instinct-mi300-series-15002"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -3377,16 +3617,20 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per GPU; HSBC analyst estimate (July 2025, via Yahoo Finance) of ~$25k average for the MI350 series, not SKU-specific.",
+        "basis": "Per GPU; HSBC estimate reported 2025-07-10 (Investing.com via Yahoo Finance) that MI350-series chips average about $25,000 per unit, up from HSBC's own prior estimate of $15,000; Benzinga and GuruFocus (2025-07-29) repeated $25,000 as an AMD price rise without naming a source. A series-level estimate, not an official MI350X price, and over a year old; no newer public listing or reputable estimate found as of 2026-09-26 (no eBay listings; resellers quote-only).",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Yahoo Finance (HSBC note, 2025-07)",
+            "label": "Yahoo Finance / Investing.com (HSBC note, 2025-07-10)",
             "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
           },
           {
-            "label": "Yahoo Finance/GuruFocus (2025-07-29)",
+            "label": "Yahoo Finance / GuruFocus (2025-07-29, unattributed $25k)",
             "url": "https://finance.yahoo.com/news/amd-hikes-mi350-ai-gpu-205052675.html"
+          },
+          {
+            "label": "Benzinga (2025-07-29, unattributed $25k)",
+            "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46699526/whats-going-on-with-advanced-micro-devices-shares-today"
           }
         ]
       }
@@ -3447,16 +3691,20 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per GPU; HSBC analyst estimate (July 2025) that MI350-series pricing rose to ~$25k; series-level figure, not an official MI355X price.",
+        "basis": "Per GPU; HSBC estimate reported 2025-07-10 (Investing.com via Yahoo Finance) that MI350-series chips average about $25,000 per unit, up from HSBC's own prior estimate of $15,000; Benzinga and GuruFocus (2025-07-29) repeated $25,000 as an AMD price rise without naming a source. A series-level estimate, not an official MI355X price, and over a year old; no newer public listing or reputable estimate found as of 2026-09-26 (no eBay listings; resellers quote-only).",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Yahoo Finance (HSBC note, 2025-07)",
+            "label": "Yahoo Finance / Investing.com (HSBC note, 2025-07-10)",
             "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
           },
           {
-            "label": "Yahoo Finance/GuruFocus (2025-07-29)",
+            "label": "Yahoo Finance / GuruFocus (2025-07-29, unattributed $25k)",
             "url": "https://finance.yahoo.com/news/amd-hikes-mi350-ai-gpu-205052675.html"
+          },
+          {
+            "label": "Benzinga (2025-07-29, unattributed $25k)",
+            "url": "https://www.benzinga.com/trading-ideas/movers/25/07/46699526/whats-going-on-with-advanced-micro-devices-shares-today"
           }
         ]
       }
@@ -3505,19 +3753,31 @@
         "file": "images/gb300-nvl72.webp"
       },
       "price": {
-        "usd_low": 6000000,
+        "usd_low": 4000000,
         "usd_high": 6500000,
         "usd_kind": "Reported estimate",
         "aed_low": null,
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per rack; Tom's Hardware (2026-03-24, syndicated on Yahoo Finance) put GB300 NVL72 at $6.0M-$6.5M.",
+        "basis": "Per GB300 NVL72 rack (72 GPUs): Morgan Stanley put it at about $4M to hyperscalers (Tom's Hardware, 2026-05-21), while a Tom's Hardware industry source quoted $6.0M-$6.5M (2026-03-24); an older Loop Capital note (DCD, March 2025) implied $3.7M-$4M per rack from Apple's reported order. No Nvidia list price exists, estimates vary by buyer and config, and Bloomberg (via CNBC, 2026-08-22) reports Nvidia server prices rising 15%+ for systems shipped in early 2027.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Tom's Hardware via Yahoo Finance (2026-03-24)",
-            "url": "https://finance.yahoo.com/sectors/technology/articles/price-nvidias-vera-rubin-nvl72-100000086.html"
+            "label": "Tom's Hardware (Morgan Stanley estimate, 2026-05-21)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-memory-costs-soar-485-percent-latest-ai-systems-now-cost-usd7-8-million-to-build-memory-now-comprises-25-percent-of-the-total-cost-rubin-gpus-a-mere-usd50-000-apiece"
+          },
+          {
+            "label": "Tom's Hardware (2026-03-24, industry source)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/price-of-nvidias-vera-rubin-nvl72-racks-skyrockets-to-as-much-as-usd8-8-million-apiece-but-server-makers-margins-will-be-tight-nvidia-is-moving-closer-to-shipping-entire-full-scale-systems"
+          },
+          {
+            "label": "DCD (Loop Capital note, March 2025)",
+            "url": "https://www.datacenterdynamics.com/en/news/apple-to-spend-1bn-on-nvidia-gb300-nvl72-systems-report/"
+          },
+          {
+            "label": "CNBC (Bloomberg report on 15%+ server price rises, 2026-08-22)",
+            "url": "https://www.cnbc.com/2026/08/22/nvidia-customers-reportedly-warned-about-ai-related-price-hikes-.html"
           }
         ]
       }
@@ -3577,16 +3837,36 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per rack; Tom's Hardware (2026-03-24) $5M-$7M and Morgan Stanley via PC Gamer (2026-05-22) ~$7.8M; Futurum (July 2026) lower at $3.5-4M, so estimates disagree widely.",
+        "basis": "Per VR200 NVL72 rack: the $5M-$7.8M range Tom's Hardware itself used on 2026-08-27, spanning $5M-$7M quotes from a Tom's Hardware source (2026-03-24; these include ~$1M of NAND storage, and the source warned many quotes circulating online are ODM-only prices without proper warranty) up to Morgan Stanley's ~$7.8M cost to hyperscalers (2026-05-21). Estimates disagree widely: Bernstein says ~$9.1M assuming 2027 HBM4 prices (Investing.com, 2026-06-12), Futurum says only $3.5M-$4M (CNBC, 2026-07-20), and Bloomberg (via CNBC, 2026-08-22) reports 15%+ price rises for systems shipped in early 2027.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "Tom's Hardware via Yahoo Finance (2026-03-24)",
-            "url": "https://finance.yahoo.com/sectors/technology/articles/price-nvidias-vera-rubin-nvl72-100000086.html"
+            "label": "Tom's Hardware (2026-03-24, industry source)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/price-of-nvidias-vera-rubin-nvl72-racks-skyrockets-to-as-much-as-usd8-8-million-apiece-but-server-makers-margins-will-be-tight-nvidia-is-moving-closer-to-shipping-entire-full-scale-systems"
           },
           {
-            "label": "PC Gamer via Yahoo (Morgan Stanley, 2026-05-22)",
-            "url": "https://finance.yahoo.com/sectors/technology/articles/morgan-stanley-estimate-says-single-114101104.html"
+            "label": "Tom's Hardware (Morgan Stanley estimate, 2026-05-21)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-memory-costs-soar-485-percent-latest-ai-systems-now-cost-usd7-8-million-to-build-memory-now-comprises-25-percent-of-the-total-cost-rubin-gpus-a-mere-usd50-000-apiece"
+          },
+          {
+            "label": "Tom's Hardware (Vera Rubin shipments, 2026-08-27)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-expects-to-sell-usd20-billion-worth-of-vera-rubin-hardware-this-quarter-would-account-for-20-percent-of-data-center-revenue-its-fastest-ramp-in-company-history"
+          },
+          {
+            "label": "Investing.com (Bernstein estimate, 2026-06-12)",
+            "url": "https://ca.investing.com/news/technology-news/what-it-costs-to-deploy-1gw-of-nvidia-vera-rubin-infrastructure-4689466"
+          },
+          {
+            "label": "Wccftech (Bernstein estimate, 2026-06-08)",
+            "url": "https://wccftech.com/bernstein-warns-nvidias-vera-rubin-racks-will-hit-9-1-million-as-hbm4-prices-triple-to-53-per-gigabyte/"
+          },
+          {
+            "label": "CNBC (Futurum Group estimate, 2026-07-20)",
+            "url": "https://www.cnbc.com/2026/07/20/amd-helios-microsoft-ai-nvidia.html"
+          },
+          {
+            "label": "CNBC (Bloomberg report on 15%+ server price rises, 2026-08-22)",
+            "url": "https://www.cnbc.com/2026/08/22/nvidia-customers-reportedly-warned-about-ai-related-price-hikes-.html"
           }
         ]
       }
@@ -3614,7 +3894,7 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference"
         }
       ],
-      "notes": "Dates describe the vendor milestone, not current stock. A later date does not imply higher AI performance. System and rack memory should not be compared directly with single-GPU VRAM.",
+      "notes": "Dates describe the vendor milestone, not current stock. A later date does not imply higher AI performance. System and rack memory should not be compared directly with single-GPU VRAM. Roadmap caution: Tom's Hardware reported on 2026-03-17 that NVIDIA dropped Rubin CPX from its roadmap at GTC 2026, and analyst Ming-Chi Kuo (2026-09-01) says a redesigned CPX is planned in a separate rack for 2027. The expected date above comes from NVIDIA's 2025 announcement and may no longer apply.",
       "use_ar": "استدلال بسياق ضخم جدًا",
       "bandwidth_tbs": 1700,
       "bandwidth_note": "Stated as 1.7 PB/s memory bandwidth per rack (converted to TB/s)",
@@ -3630,7 +3910,31 @@
         "shows": "Vera Rubin NVL144 CPX rack render (front view)",
         "file": "images/vera-rubin-nvl144-cpx.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": null,
+        "usd_high": null,
+        "usd_kind": null,
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "No public listing or reputable per-rack estimate for the Vera Rubin NVL144 CPX rack found as of 2026-09-26 (searched Tom's Hardware, SemiAnalysis, Morgan Stanley, Bernstein, DigiTimes, CNBC, Bloomberg coverage); Nvidia dropped Rubin CPX from its roadmap at GTC in March 2026 (Tom's Hardware, 2026-03-17). Ming-Chi Kuo (via Benzinga, 2026-09-01) says a redesigned CPX is revived for 1Q27 production in a separate MGX rack of 64-256 CPX GPUs rather than the original combined NVL144 CPX rack, so Vera Rubin NVL72 estimates should not be used as a stand-in.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware (Rubin CPX removed from roadmap, 2026-03-17)",
+            "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-removes-rubin-cpx-accelerators-from-its-roadmap-groq-3-lpus-take-center-stage-as-cpx-is-removed"
+          },
+          {
+            "label": "Benzinga (Ming-Chi Kuo on CPX revival, 2026-09-01)",
+            "url": "https://www.benzinga.com/markets/tech/26/09/61539040/nvidia-rubin-cpx-revived-ming-chi-kuo-major-redesign"
+          },
+          {
+            "label": "SemiAnalysis (Rubin CPX rack analysis, 2025-09-10; no rack price)",
+            "url": "https://newsletter.semianalysis.com/p/another-giant-leap-the-rubin-cpx-specialized-accelerator-rack"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -3675,7 +3979,27 @@
         "shows": "Instinct MI400-series (MI430X/MI440X/MI455X) GPU package: lidded plus half-lidded die view",
         "file": "images/instinct-mi455x.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 50000,
+        "usd_high": 50000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per GPU; CLSA analyst estimate reported 2026-09-09 (Investing.com, TipRanks): Helios MI455X rack ASP about $5M, of which AMD books about 70% as revenue, with implied pricing of about $50,000 per GPU (CLSA's own per-GPU figure, roughly double its earlier estimate). An analyst estimate for a part sold inside 72-GPU racks, not a list price; AMD publishes none.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Investing.com (CLSA note, 2026-09-09)",
+            "url": "https://www.investing.com/news/analyst-ratings/clsa-raises-amd-stock-price-target-to-710-on-mi455-gpu-outlook-93CH-4892806"
+          },
+          {
+            "label": "TipRanks (CLSA note, 2026-09-09)",
+            "url": "https://www.tipranks.com/news/why-ai-chip-stocks-amd-micron-and-sandisk-are-rising-today-september-9"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -3728,11 +4052,15 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per 72-GPU rack; Futurum Group analyst estimate reported by TheStreet and Wccftech (July 2026, around launch).",
+        "basis": "Per 72-GPU Helios rack (MI455X): Futurum Group estimate reported by CNBC at the Helios launch on 2026-07-20 and repeated by TheStreet and Wccftech on 2026-07-21. AMD declined to comment on cost, this is a single analyst firm's figure, and Helios comes in four customizable configurations, so the priced config is not specified.",
         "checked": "2026-09-26",
         "sources": [
           {
-            "label": "TheStreet (Futurum estimate, 2026-07)",
+            "label": "CNBC (Futurum Group estimate, 2026-07-20)",
+            "url": "https://www.cnbc.com/2026/07/20/amd-helios-microsoft-ai-nvidia.html"
+          },
+          {
+            "label": "TheStreet (Futurum estimate, 2026-07-21)",
             "url": "https://www.thestreet.com/technology/amd-microsoft-deal-defies-price-myths"
           },
           {
@@ -3744,6 +4072,10 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-26",
+      "summary": "Filled or refreshed approximate prices for 19 data-center and workstation products (reseller listings and dated analyst estimates, each independently re-checked); remaining unpriced items explain why."
+    },
     {
       "at": "2026-09-26",
       "summary": "Added 22 GeForce RTX 40 and RTX 30 series cards (official NVIDIA specs, dates and launch prices; current approximate USD/AED prices, used-market where new stock is gone)."
