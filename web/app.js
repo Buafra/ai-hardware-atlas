@@ -104,7 +104,10 @@
     'Capacity is not speed':'السعة ليست السرعة','Memory capacity determines what can fit. Bandwidth, compute, precision and software influence how quickly it runs. Sorting by memory is not a performance ranking.':'سعة الذاكرة تحدد ما يمكن أن يتسع. أما سرعة التشغيل فتتأثر بعرض النطاق والحوسبة والدقة والبرمجيات. الترتيب حسب الذاكرة ليس ترتيبًا للأداء.',
     'Compare the same scope':'قارن النطاق نفسه','A single GPU, shared CPU/GPU system, and rack total are different measurements. Multiple GPUs do not automatically expose one shared VRAM pool.':'معالج رسوميات واحد، ونظام بذاكرة مشتركة، وإجمالي رف كامل هي قياسات مختلفة. تعدد معالجات الرسوميات لا يعني تلقائيًا ذاكرة واحدة مشتركة.',
     'Dates have different meanings':'للتواريخ معانٍ مختلفة','An announcement does not establish first shipment. Vendor targets remain labeled as targets until a release or availability statement is verified. Unknown values stay blank.':'الإعلان لا يعني بدء الشحن. تبقى أهداف الشركات موسومة كأهداف حتى يتم التحقق من الإصدار أو التوفر. القيم غير المعروفة تبقى فارغة.',
-    'What changed':'ما الذي تغيّر','Official announcement watch':'رصد الإعلانات الرسمية','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل'
+    'What changed':'ما الذي تغيّر','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات','News sources':'مصادر الأخبار',
+    'UAE AI headlines':'عناوين الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
+    'Follow Qahwa & AI on Instagram':'تابع قهوة و AI على إنستغرام','Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق','Not publicly priced':'لا يوجد سعر معلن',
+    'US retail':'متاجر أمريكية','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Official announcement watch':'رصد الإعلانات الرسمية','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل'
   };
   const $ = id => document.getElementById(id);
   const data = JSON.parse($('catalog-data').textContent);
@@ -124,7 +127,8 @@
   const price = p => p.msrp_usd == null ? T('Not listed') : '$' + fmt(p.msrp_usd);
   const orNA = v => v == null || v === '' ? T('Not listed') : T(v);
   const FIT = {fits:'Fits', multi:'Fits across GPUs', no:'Too small'};
-  const SORTABLE = ['level','model','memory_gb','bandwidth_tbs','power_w','announcement','release','msrp_usd'];
+  const SORTABLE = ['level','model','memory_gb','bandwidth_tbs','power_w','announcement','release','msrp_usd','price_usd'];
+  const pv = (p, k) => p.price_view && p.price_view[k] ? p.price_view[k] : null;
 
   function need() { return estimateGB(state.params, state.bits, state.extra); }
   function readControls() {
@@ -185,7 +189,7 @@
   }
 
   function renderTable(n) {
-    const cols = [['model','Model'],['level','Level'],['memory_gb','Memory'],['bandwidth_tbs','Bandwidth'],['power_w','Power'],['announcement','Announced / launched'],['release','Availability / target'],['msrp_usd','Launch price']];
+    const cols = [['model','Model'],['level','Level'],['memory_gb','Memory'],['bandwidth_tbs','Bandwidth'],['power_w','Power'],['announcement','Announced / launched'],['release','Availability / target'],['price_usd','Approx. USD'],['price_usd','Approx. AED']];
     const arrow = k => state.sort === k ? (state.dir === 1 ? ' ↑' : ' ↓') : '';
     const head = cols.map(([k,l]) => `<th scope="col" aria-sort="${state.sort === k ? (state.dir === 1 ? 'ascending' : 'descending') : 'none'}"><button type="button" data-sort="${k}">${esc(T(l))}${arrow(k)}</button></th>`).join('') + (n ? `<th scope="col">${esc(T('Fit'))}</th>` : '');
     const rows = visible.map(p => {
@@ -194,7 +198,7 @@
       <td class="t-model"><span class="dot ${p.vendor.toLowerCase()}" aria-hidden="true"></span><a href="${esc(p.sources[0].url)}" target="_blank" rel="noopener noreferrer">${esc(p.model)}</a><small>${esc(p.vendor)} · ${esc(p.architecture)}</small></td>
       <td>${esc(T(p.level))}<small>${esc(T(p.type))}</small></td><td class="num">${esc(p.memory)}<small>${esc(T(p.memory_scope))}</small></td>
       <td class="num">${esc(bw(p))}</td><td class="num">${esc(watts(p))}</td><td class="num">${esc(p.announcement || T('Not established'))}</td>
-      <td class="num">${esc(p.release || T('Not established'))}<small>${esc(T(p.release_kind))}</small></td><td class="num">${esc(price(p))}</td>
+      <td class="num">${esc(p.release || T('Not established'))}<small>${esc(T(p.release_kind))}</small></td><td class="num">${esc(pv(p,'usd') || T('Not listed'))}<small>${esc(T(pv(p,'usd_kind') || ''))}</small></td><td class="num">${esc(pv(p,'aed') || T('Not listed'))}<small>${esc(T(pv(p,'aed_kind') || ''))}</small></td>
       ${n ? `<td><span class="fit ${s}">${esc(T(FIT[s]))}</span></td>` : ''}</tr>`;
     }).join('');
     $('table-view').innerHTML = `<div class="tablewrap"><table><thead><tr><th scope="col"><span class="sr-only">${esc(T('Compare'))}</span></th>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
@@ -263,11 +267,12 @@
       ['AI compute', p => esc(orNA(p.ai_compute))], ['Power', p => esc(watts(p))],
       ['Announced / launched', p => esc(p.announcement || T('Not established'))],
       ['Availability / target', p => `${esc(p.release || T('Not established'))}<small>${esc(T(p.release_kind))}</small>`],
-      ['Launch price', p => esc(price(p))], ['Form factor', p => esc(orNA(p.form_factor))], ['Cooling', p => esc(orNA(p.cooling))], ['Interconnect', p => esc(orNA(p.interconnect))],
+      ['Launch price', p => esc(price(p))],
+      ['Approx. price', p => p.price_view ? `${esc(pv(p,'usd') || T('Not listed'))}<small>${esc(T(pv(p,'usd_kind') || ''))}</small>${esc(pv(p,'aed') || T('Not listed'))}<small>${esc(T(pv(p,'aed_kind') || ''))} · ${esc(T('checked'))} ${esc(pv(p,'checked') || '')}</small>` : esc(T('Not publicly priced'))], ['Form factor', p => esc(orNA(p.form_factor))], ['Cooling', p => esc(orNA(p.cooling))], ['Interconnect', p => esc(orNA(p.interconnect))],
       ['Best fit', p => esc(state.lang === 'ar' && p.use_ar ? p.use_ar : p.use)],
       ['Official source', p => p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a>`).join('<br>')]
     ];
-    $('compare-body').innerHTML = `<div class="tablewrap"><table class="cmp-table"><thead><tr><th scope="col"></th>${ps.map(p => `<th scope="col" class="${p.vendor.toLowerCase()}">${esc(p.model)}</th>`).join('')}</tr></thead>
+    $('compare-body').innerHTML = `<div class="tablewrap"><table class="cmp-table"><thead><tr><th scope="col"></th>${ps.map(p => `<th scope="col" class="${p.vendor.toLowerCase()}">${p.image && p.image.file ? `<img src="${esc(p.image.file)}" alt="" loading="lazy">` : ''}${esc(p.model)}</th>`).join('')}</tr></thead>
       <tbody>${rows.map(([l, f]) => `<tr><th scope="row">${esc(T(l))}</th>${ps.map(p => `<td>${f(p)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
       <p class="tl-note">${esc(T(sameScope ? 'Highlighted: highest value among products with the same memory scope.' : 'Memory scopes differ, so totals are not directly comparable.'))}</p>`;
     const dlg = $('compare-dlg');
@@ -285,6 +290,8 @@
   document.addEventListener('click', e => {
     const s = e.target.closest('[data-sort]');
     if (s) { if (state.sort === s.dataset.sort) state.dir *= -1; else { state.sort = s.dataset.sort; state.dir = 1; } $('sort').value = state.sort; render(); }
+    const chip = e.target.closest('[data-q]');
+    if (chip) { state.q = chip.dataset.q; Object.assign(state, {vendor:'', level:'', scope:'', fit:false}); writeControls(); render(); $('hardware').scrollIntoView({behavior:'smooth'}); }
     const r = e.target.closest('[data-remove]');
     if (r) toggleCompare(r.dataset.remove, false);
   });
@@ -299,9 +306,9 @@
   });
   $('print').addEventListener('click', () => { state.view = 'table'; render(); window.print(); });
   $('csv').addEventListener('click', () => {
-    const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
+    const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
     const cell = v => '"' + String(v ?? '').replaceAll('"', '""') + '"';
-    const csv = [cols.join(','), ...visible.map(p => cols.map(k => cell(p[k])).join(','))].join('\r\n');
+    const csv = [cols.join(','), ...visible.map(p => cols.map(k => cell(k === 'price_usd_range' ? pv(p,'usd') : k === 'price_aed_range' ? pv(p,'aed') : k === 'price_checked' ? pv(p,'checked') : p[k])).join(','))].join('\r\n');
     const url = URL.createObjectURL(new Blob(['﻿' + csv], {type: 'text/csv;charset=utf-8'}));
     const a = document.createElement('a'); a.href = url; a.download = 'ai-hardware-atlas.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   });

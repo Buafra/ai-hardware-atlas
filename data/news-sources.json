@@ -1,0 +1,564 @@
+[
+  {
+    "id": "nvidia-blog",
+    "name": "NVIDIA Blog",
+    "name_ar": "مدونة إنفيديا",
+    "feed": "https://blogs.nvidia.com/feed/",
+    "homepage": "https://blogs.nvidia.com/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "blogs.nvidia.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "nvidia-news",
+    "name": "NVIDIA Newsroom",
+    "name_ar": "غرفة أخبار إنفيديا",
+    "feed": "https://nvidianews.nvidia.com/releases.xml",
+    "homepage": "https://nvidianews.nvidia.com/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "blogs.nvidia.com",
+      "nvidianews.nvidia.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "amd-news",
+    "name": "AMD Newsroom",
+    "name_ar": "أخبار AMD",
+    "feed": "https://ir.amd.com/news-events/press-releases/rss",
+    "homepage": "https://www.amd.com/en/newsroom.html",
+    "lang": "en",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "ir.amd.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "openai-news",
+    "name": "OpenAI News",
+    "name_ar": "أخبار OpenAI",
+    "feed": "https://openai.com/news/rss.xml",
+    "homepage": "https://openai.com/news/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "openai.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "google-ai",
+    "name": "Google AI Blog (The Keyword)",
+    "name_ar": "مدونة Google للذكاء الاصطناعي",
+    "feed": "https://blog.google/technology/ai/rss/",
+    "homepage": "https://blog.google/technology/ai/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "blog.google"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "deepmind",
+    "name": "Google DeepMind Blog",
+    "name_ar": "مدونة Google DeepMind",
+    "feed": "https://deepmind.google/blog/rss.xml",
+    "homepage": "https://deepmind.google/discover/blog/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "deepmind.google"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "google-research",
+    "name": "Google Research Blog",
+    "name_ar": "مدونة أبحاث Google",
+    "feed": "https://research.google/blog/rss/",
+    "homepage": "https://research.google/blog/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "research.google"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face Blog",
+    "name_ar": "مدونة Hugging Face",
+    "feed": "https://huggingface.co/blog/feed.xml",
+    "homepage": "https://huggingface.co/blog",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "huggingface.co"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "ms-cloud",
+    "name": "Microsoft Cloud Blog",
+    "name_ar": "مدونة مايكروسوفت السحابية",
+    "feed": "https://www.microsoft.com/en-us/microsoft-cloud/blog/feed/",
+    "homepage": "https://www.microsoft.com/en-us/microsoft-cloud/blog/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "blogs.microsoft.com",
+      "www.microsoft.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "aws-ml",
+    "name": "AWS Machine Learning Blog",
+    "name_ar": "مدونة AWS للتعلم الآلي",
+    "feed": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "homepage": "https://aws.amazon.com/blogs/machine-learning/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "aws.amazon.com"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "mit-news-ai",
+    "name": "MIT News — Artificial Intelligence",
+    "name_ar": "أخبار MIT — الذكاء الاصطناعي",
+    "feed": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml",
+    "homepage": "https://news.mit.edu/topic/artificial-intelligence2",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "news.mit.edu"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "mittr-ai",
+    "name": "MIT Technology Review — AI",
+    "name_ar": "MIT تكنولوجي ريفيو — الذكاء الاصطناعي",
+    "feed": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    "homepage": "https://www.technologyreview.com/topic/artificial-intelligence/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.technologyreview.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "verge-ai",
+    "name": "The Verge — AI",
+    "name_ar": "ذا فيرج — الذكاء الاصطناعي",
+    "feed": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "homepage": "https://www.theverge.com/ai-artificial-intelligence",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.theverge.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "ars-ai",
+    "name": "Ars Technica — AI",
+    "name_ar": "آرس تكنيكا — الذكاء الاصطناعي",
+    "feed": "https://arstechnica.com/ai/feed/",
+    "homepage": "https://arstechnica.com/ai/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "arstechnica.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "techcrunch-ai",
+    "name": "TechCrunch — AI",
+    "name_ar": "تك كرانش — الذكاء الاصطناعي",
+    "feed": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "homepage": "https://techcrunch.com/category/artificial-intelligence/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "techcrunch.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "guardian-ai",
+    "name": "The Guardian — Artificial intelligence",
+    "name_ar": "الغارديان — الذكاء الاصطناعي",
+    "feed": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+    "homepage": "https://www.theguardian.com/technology/artificialintelligenceai",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.theguardian.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "wired-ai",
+    "name": "WIRED — AI",
+    "name_ar": "وايرد — الذكاء الاصطناعي",
+    "feed": "https://www.wired.com/feed/tag/ai/latest/rss",
+    "homepage": "https://www.wired.com/tag/artificial-intelligence/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.wired.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "register-ai",
+    "name": "The Register — AI",
+    "name_ar": "ذا ريجستر — الذكاء الاصطناعي",
+    "feed": "https://www.theregister.com/software/ai_ml/headlines.atom",
+    "homepage": "https://www.theregister.com/software/ai_ml/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.theregister.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "bbc-tech",
+    "name": "BBC News — Technology",
+    "name_ar": "بي بي سي — التكنولوجيا",
+    "feed": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "homepage": "https://www.bbc.com/news/technology",
+    "lang": "en",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.bbc.co.uk"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "skynews-ar-tech",
+    "name": "Sky News Arabia — Technology",
+    "name_ar": "سكاي نيوز عربية — تكنولوجيا",
+    "feed": "https://www.skynewsarabia.com/rss/technology.xml",
+    "homepage": "https://www.skynewsarabia.com/technology",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.skynewsarabia.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "bbc-ar",
+    "name": "BBC Arabic",
+    "name_ar": "بي بي سي عربي",
+    "feed": "https://feeds.bbci.co.uk/arabic/rss.xml",
+    "homepage": "https://www.bbc.com/arabic",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.bbc.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "aljazeera-ar",
+    "name": "Al Jazeera Arabic",
+    "name_ar": "الجزيرة نت",
+    "feed": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
+    "homepage": "https://www.aljazeera.net/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.aljazeera.net"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "cnn-ar",
+    "name": "CNN Arabic",
+    "name_ar": "سي إن إن بالعربية",
+    "feed": "https://arabic.cnn.com/api/v1/rss/rss.xml",
+    "homepage": "https://arabic.cnn.com/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "arabic.cnn.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "indy-ar-new",
+    "name": "Independent Arabia",
+    "name_ar": "إندبندنت عربية",
+    "feed": "https://www.independentarabia.com/rssnew.xml",
+    "homepage": "https://www.independentarabia.com/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.independentarabia.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "aitnews",
+    "name": "Aitnews (البوابة العربية للأخبار التقنية)",
+    "name_ar": "البوابة العربية للأخبار التقنية",
+    "feed": "https://aitnews.com/feed/",
+    "homepage": "https://aitnews.com/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "aitnews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "dw-ar",
+    "name": "DW Arabic",
+    "name_ar": "دويتشه فيله عربية",
+    "feed": "https://rss.dw.com/rdf/rss-ar-all",
+    "homepage": "https://www.dw.com/ar/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "www.dw.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "euronews-ar",
+    "name": "Euronews Arabic",
+    "name_ar": "يورونيوز عربي",
+    "feed": "https://arabic.euronews.com/rss",
+    "homepage": "https://arabic.euronews.com/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "arabic.euronews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "aawsat",
+    "name": "Asharq Al-Awsat",
+    "name_ar": "الشرق الأوسط",
+    "feed": "https://aawsat.com/feed",
+    "homepage": "https://aawsat.com/",
+    "lang": "ar",
+    "region": "global",
+    "ai_only": false,
+    "link_hosts": [
+      "aawsat.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "mediaoffice-en2",
+    "name": "Dubai Media Office",
+    "name_ar": "المكتب الإعلامي لحكومة دبي",
+    "feed": "https://mediaoffice.ae/en/rss/news",
+    "homepage": "https://www.mediaoffice.ae/en",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "mediaoffice.ae"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "thenational-uae2",
+    "name": "The National — UAE",
+    "name_ar": "ذا ناشيونال — الإمارات",
+    "feed": "https://www.thenationalnews.com/arc/outboundfeeds/rss/category/news/uae/?outputType=xml",
+    "homepage": "https://www.thenationalnews.com/news/uae/",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.thenationalnews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "thenational",
+    "name": "The National",
+    "name_ar": "ذا ناشيونال",
+    "feed": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml",
+    "homepage": "https://www.thenationalnews.com/",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.thenationalnews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "gulfnews-tech",
+    "name": "Gulf News — Technology",
+    "name_ar": "جلف نيوز — التكنولوجيا",
+    "feed": "https://gulfnews.com/api/v1/collections/technology.rss",
+    "homepage": "https://gulfnews.com/technology",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "gulfnews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "gn-uae",
+    "name": "Gulf News — UAE",
+    "name_ar": "جلف نيوز — الإمارات",
+    "feed": "https://gulfnews.com/api/v1/collections/uae.rss",
+    "homepage": "https://gulfnews.com/uae",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "gulfnews.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "kt-uae",
+    "name": "Khaleej Times — UAE",
+    "name_ar": "خليج تايمز — الإمارات",
+    "feed": "https://www.khaleejtimes.com/api/v1/collections/uae.rss",
+    "homepage": "https://www.khaleejtimes.com/uae",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.khaleejtimes.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "kt-business",
+    "name": "Khaleej Times — Business",
+    "name_ar": "خليج تايمز — الأعمال",
+    "feed": "https://www.khaleejtimes.com/api/v1/collections/business.rss",
+    "homepage": "https://www.khaleejtimes.com/business",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.khaleejtimes.com"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "mediaoffice-ar2",
+    "name": "Dubai Media Office (Arabic)",
+    "name_ar": "المكتب الإعلامي لحكومة دبي",
+    "feed": "https://mediaoffice.ae/ar/rss/news",
+    "homepage": "https://www.mediaoffice.ae/ar",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "mediaoffice.ae"
+    ],
+    "kind": "primary"
+  },
+  {
+    "id": "alkhaleej-uae",
+    "name": "Al Khaleej — UAE",
+    "name_ar": "الخليج — الإمارات",
+    "feed": "https://www.alkhaleej.ae/rssFeed/157",
+    "homepage": "https://www.alkhaleej.ae/",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.alkhaleej.ae"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "alkhaleej-scitech",
+    "name": "Al Khaleej — Science & Tech",
+    "name_ar": "الخليج — علوم وتقنية",
+    "feed": "https://www.alkhaleej.ae/rssFeed/160/17",
+    "homepage": "https://www.alkhaleej.ae/",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.alkhaleej.ae"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "alittihad-feed",
+    "name": "Al Ittihad",
+    "name_ar": "الاتحاد",
+    "feed": "https://www.aletihad.ae/feed.rss",
+    "homepage": "https://www.aletihad.ae/",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.aletihad.ae"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "emaratalyoum",
+    "name": "Emarat Al Youm",
+    "name_ar": "الإمارات اليوم",
+    "feed": "https://www.emaratalyoum.com/1.533091?ot=ot.AjaxPageLayout",
+    "homepage": "https://www.emaratalyoum.com/",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.emaratalyoum.com"
+    ],
+    "kind": "news"
+  }
+]

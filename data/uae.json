@@ -1,0 +1,210 @@
+{
+  "checked": "2026-09-26",
+  "facts": [
+    {
+      "id": "national-ai-strategy-2031",
+      "title_en": "AI Strategy 2031 and AI minister",
+      "text_en": "In October 2017 the UAE launched its National Strategy for Artificial Intelligence 2031 and appointed Omar Sultan Al Olama as Minister of State for Artificial Intelligence. The UAE was the first country in the world to create this ministerial post.",
+      "title_ar": "استراتيجية 2031 ووزير الذكاء الاصطناعي",
+      "text_ar": "في أكتوبر 2017 أطلقت دولة الإمارات الاستراتيجية الوطنية للذكاء الاصطناعي 2031، وعيّنت عمر سلطان العلماء وزير دولة للذكاء الاصطناعي. وكانت الإمارات أول دولة في العالم تستحدث هذا المنصب الوزاري.",
+      "as_of": "2017-10",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "UAE Government portal (u.ae): UAE Strategy for AI",
+          "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/Ai/uae-strategy-for-artificial-intelligence"
+        },
+        {
+          "label": "UAE Government portal (u.ae): Chief AI Officer page (minister appointment)",
+          "url": "https://u.ae/en/about-the-uae/digital-uae/whole-of-government-approach/Chief-Artificial-Intelligence-Officer-CAIO"
+        }
+      ]
+    },
+    {
+      "id": "stargate-uae-announcement",
+      "title_en": "Stargate UAE announced",
+      "text_en": "On 22 May 2025 G42, OpenAI, Oracle, NVIDIA, SoftBank Group and Cisco announced Stargate UAE, a 1 GW compute cluster within the planned 5 GW UAE–US AI Campus in Abu Dhabi. NVIDIA is to supply Grace Blackwell GB300 systems, and the first 200 MW was expected to go live in 2026.",
+      "title_ar": "الإعلان عن ستارغيت الإمارات",
+      "text_ar": "في 22 مايو 2025 أعلنت G42 وOpenAI وOracle وNVIDIA ومجموعة SoftBank وCisco عن مشروع ستارغيت الإمارات، وهو مجمّع حوسبة بقدرة 1 غيغاواط ضمن مجمّع الذكاء الاصطناعي الإماراتي الأمريكي المخطط بقدرة 5 غيغاواط في أبوظبي. وستورّد NVIDIA أنظمة Grace Blackwell GB300، وكان من المتوقع تشغيل أول 200 ميغاواط في عام 2026.",
+      "as_of": "2025-05-22",
+      "hardware": [
+        "GB300"
+      ],
+      "sources": [
+        {
+          "label": "G42 newsroom: Global Tech Alliance Launches Stargate UAE",
+          "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+        }
+      ]
+    },
+    {
+      "id": "stargate-uae-first-phase",
+      "title_en": "Stargate UAE first phase",
+      "text_en": "In December 2025 Mubadala's managing director said Stargate UAE's first 200 MW phase would be ready in the third quarter of 2026.",
+      "title_ar": "المرحلة الأولى من ستارغيت الإمارات",
+      "text_ar": "في ديسمبر 2025 قال العضو المنتدب لشركة مبادلة إن المرحلة الأولى من ستارغيت الإمارات بقدرة 200 ميغاواط ستكون جاهزة في الربع الثالث من عام 2026.",
+      "as_of": "2025-12",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "The National: Stargate UAE's first phase to be completed in Q3 2026",
+          "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+        }
+      ]
+    },
+    {
+      "id": "g42-gb300-export-approval",
+      "title_en": "US approves GB300 chips for G42",
+      "text_en": "In November 2025 the US Commerce Department authorised G42 to buy computing power equivalent to up to 35,000 NVIDIA GB300 chips, subject to security and reporting requirements. Saudi Arabia's Humain received the same approval.",
+      "title_ar": "موافقة أمريكية على رقائق GB300 لـG42",
+      "text_ar": "في نوفمبر 2025 أجازت وزارة التجارة الأمريكية لشركة G42 شراء قدرة حوسبة تعادل ما يصل إلى 35,000 شريحة NVIDIA GB300، بشرط الالتزام بمتطلبات الأمن والإبلاغ. وحصلت شركة هيوماين السعودية على الموافقة نفسها.",
+      "as_of": "2025-11-19",
+      "hardware": [
+        "GB300"
+      ],
+      "sources": [
+        {
+          "label": "Gulf News: G42 gets US approval for advanced AI chip exports",
+          "url": "https://gulfnews.com/business/economy/g42-gets-us-approval-for-advanced-ai-chip-exports-1.500353606"
+        },
+        {
+          "label": "The National: Stargate UAE's first phase (GB300 authorisation)",
+          "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-g42-investment",
+      "title_en": "Microsoft invests $1.5B in G42",
+      "text_en": "On 16 April 2024 Microsoft announced a $1.5 billion strategic investment in G42, the Abu Dhabi-based AI technology holding company. The deal expands their collaboration on Microsoft AI services and Azure in the region.",
+      "title_ar": "مايكروسوفت تستثمر 1.5 مليار دولار في G42",
+      "text_ar": "في 16 أبريل 2024 أعلنت مايكروسوفت عن استثمار استراتيجي بقيمة 1.5 مليار دولار في G42، الشركة القابضة للتكنولوجيا والذكاء الاصطناعي ومقرها أبوظبي. ويوسّع الاتفاق تعاونهما في خدمات مايكروسوفت للذكاء الاصطناعي ومنصة Azure في المنطقة.",
+      "as_of": "2024-04-16",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "Microsoft Source: Microsoft invests $1.5 billion in Abu Dhabi's G42",
+          "url": "https://news.microsoft.com/source/2024/04/16/microsoft-invests-1-5-billion-in-abu-dhabis-g42-to-accelerate-ai-development-and-global-expansion/"
+        }
+      ]
+    },
+    {
+      "id": "microsoft-uae-15-2b-gb300",
+      "title_en": "Microsoft's $15.2B and GB300 licences",
+      "text_en": "Microsoft says it will invest $15.2 billion in the UAE from 2023 to 2029. It holds US export licences for NVIDIA A100, H100 and H200 GPUs (equivalent to 21,500 A100s) and, since September 2025, for GB300 GPUs equivalent to 60,400 additional A100s.",
+      "title_ar": "15.2 مليار دولار من مايكروسوفت وتراخيص GB300",
+      "text_ar": "تقول مايكروسوفت إنها ستستثمر 15.2 مليار دولار في دولة الإمارات بين عامي 2023 و2029. وتحمل تراخيص تصدير أمريكية لوحدات NVIDIA A100 وH100 وH200 (ما يعادل 21,500 وحدة A100)، ومنذ سبتمبر 2025 لوحدات GB300 تعادل 60,400 وحدة A100 إضافية.",
+      "as_of": "2025-11-03",
+      "hardware": [
+        "H200",
+        "GB300"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft On the Issues: Microsoft's $15.2 billion investment in the UAE",
+          "url": "https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/"
+        }
+      ]
+    },
+    {
+      "id": "khazna-data-centers",
+      "title_en": "Khazna Data Centers",
+      "text_en": "Khazna, a G42 company, describes itself as the largest data centre platform in the UAE and the Middle East. It is the G42 unit developing Stargate UAE in Abu Dhabi.",
+      "title_ar": "خزنة لمراكز البيانات",
+      "text_ar": "تصف خزنة، إحدى شركات G42، نفسها بأنها أكبر منصة لمراكز البيانات في الإمارات والشرق الأوسط. وهي الوحدة التابعة لـG42 التي تتولى تطوير مشروع ستارغيت الإمارات في أبوظبي.",
+      "as_of": "2025-12",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "G42: Khazna Data Centers",
+          "url": "https://www.g42.ai/companies/khazna-data-centers"
+        },
+        {
+          "label": "The National: Stargate UAE's first phase (Khazna's role)",
+          "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+        }
+      ]
+    },
+    {
+      "id": "mbzuai-k2-think",
+      "title_en": "MBZUAI and K2 Think",
+      "text_en": "MBZUAI, founded in Abu Dhabi in 2019, is described as the world's first graduate AI research university. Its Institute of Foundation Models released the open-source K2 Think reasoning model (32 billion parameters) with G42 in September 2025, and K2 Think V2 (70 billion parameters) in January 2026.",
+      "title_ar": "جامعة محمد بن زايد ونموذج K2 Think",
+      "text_ar": "تأسست جامعة محمد بن زايد للذكاء الاصطناعي في أبوظبي عام 2019، وتوصف بأنها أول جامعة دراسات عليا بحثية في الذكاء الاصطناعي في العالم. وأطلق معهد النماذج التأسيسية التابع لها مع G42 نموذج الاستدلال مفتوح المصدر K2 Think (32 مليار معامل) في سبتمبر 2025، ثم K2 Think V2 (70 مليار معامل) في يناير 2026.",
+      "as_of": "2026-01-28",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "G42 newsroom: MBZUAI and G42 launch K2 Think",
+          "url": "https://www.g42.ai/resources/news/mbzuai-and-g42-launch-k2-think-leading-open-source-system-advanced-ai-reasoning"
+        },
+        {
+          "label": "Times Higher Education: the world's first graduate AI research university",
+          "url": "https://www.timeshighereducation.com/hub/mohamed-bin-zayed-university-artificial-intelligence/p/pioneering-work-pursued-worlds-first"
+        }
+      ]
+    },
+    {
+      "id": "tii-falcon-h1-arabic",
+      "title_en": "TII's Falcon-H1 Arabic",
+      "text_en": "On 5 January 2026 Abu Dhabi's Technology Innovation Institute released Falcon-H1 Arabic in 3B, 7B and 34B parameter sizes, built on a hybrid Mamba-Transformer architecture with context of up to 256K tokens. TII says it tops the Open Arabic LLM Leaderboard across all model sizes.",
+      "title_ar": "نموذج فالكون H1 العربي من TII",
+      "text_ar": "في 5 يناير 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-H1 Arabic بأحجام 3 و7 و34 مليار معامل، وهو مبني على معمارية هجينة تجمع Mamba وTransformer مع سياق يصل إلى 256 ألف رمز. ويقول المعهد إنه يتصدر لوحة Open Arabic LLM Leaderboard في جميع الأحجام.",
+      "as_of": "2026-01-05",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "TII newsroom: TII launches Falcon-H1 Arabic",
+          "url": "https://www.tii.ae/news/abu-dhabis-tii-launches-falcon-h1-arabic-establishing-worlds-leading-arabic-ai-model"
+        }
+      ]
+    },
+    {
+      "id": "jais-arabic-llm",
+      "title_en": "Jais Arabic language model",
+      "text_en": "On 30 August 2023 G42's Inception open-sourced Jais, a 13-billion-parameter Arabic–English model developed with MBZUAI and Cerebras Systems. It was trained on 116 billion Arabic and 279 billion English tokens on the Condor Galaxy 1 supercomputer built by G42 and Cerebras.",
+      "title_ar": "نموذج جيس للغة العربية",
+      "text_ar": "في 30 أغسطس 2023 أتاحت شركة Inception التابعة لـG42 نموذج جيس مفتوح المصدر، وهو نموذج عربي إنجليزي بحجم 13 مليار معامل طُوّر بالتعاون مع جامعة محمد بن زايد للذكاء الاصطناعي وCerebras Systems. ودُرّب على 116 مليار رمز عربي و279 مليار رمز إنجليزي باستخدام الحاسوب الفائق Condor Galaxy 1 الذي بنته G42 وCerebras.",
+      "as_of": "2023-08-30",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "G42 newsroom: Meet Jais",
+          "url": "https://www.g42.ai/resources/news/meet-jais-worlds-most-advanced-arabic-llm-open-sourced-g42s-inception"
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai-government",
+      "title_en": "Agentic AI in government",
+      "text_en": "On 23 April 2026 Sheikh Mohammed bin Rashid announced a framework to move 50% of UAE Government sectors and services to agentic AI within two years. A dedicated taskforce oversees implementation.",
+      "title_ar": "الذكاء الاصطناعي الوكيل في الحكومة",
+      "text_ar": "في 23 أبريل 2026 أعلن الشيخ محمد بن راشد عن إطار لتحويل 50% من قطاعات حكومة الإمارات وخدماتها إلى الذكاء الاصطناعي الوكيل خلال عامين. ويشرف فريق عمل مخصص على التنفيذ.",
+      "as_of": "2026-04-23",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "Dubai Media Office: Mohammed bin Rashid chairs UAE Cabinet meeting",
+          "url": "https://www.mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        }
+      ]
+    },
+    {
+      "id": "g42-cisco-amd-mi350x",
+      "title_en": "G42 and Cisco deploy AMD MI350X",
+      "text_en": "On 28 October 2025 Cisco and G42 announced a large-scale AI cluster in the UAE using AMD Instinct MI350X GPUs, with Cisco supplying the infrastructure.",
+      "title_ar": "G42 وCisco تنشران AMD MI350X",
+      "text_ar": "في 28 أكتوبر 2025 أعلنت Cisco وG42 عن عنقود واسع للذكاء الاصطناعي في الإمارات يعتمد على وحدات AMD Instinct MI350X، على أن توفر Cisco البنية التحتية.",
+      "as_of": "2025-10-28",
+      "hardware": [
+        "Instinct MI350X"
+      ],
+      "sources": [
+        {
+          "label": "G42 newsroom: Cisco and G42 deepen US-UAE technology partnership",
+          "url": "https://www.g42.ai/resources/news/cisco-and-g42-deepen-us-uae-technology-partnership-build-secure-end-end-ai-infrastructure-uae"
+        }
+      ]
+    }
+  ]
+}

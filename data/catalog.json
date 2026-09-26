@@ -50,7 +50,43 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 549,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/rtx-5070-out-now/geforce-rtx-5070-out-now-ogimage.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/rtx-5070-out-now/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 5070 Founders Edition card render (small 'GeForce RTX 5070' title text at left)",
+        "file": "images/geforce-rtx-5070.webp"
+      },
+      "price": {
+        "usd_low": 869.99,
+        "usd_high": 999.64,
+        "usd_kind": "US retail",
+        "aed_low": 3299,
+        "aed_high": 3999,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 12GB partner cards; US = Newegg $869.99 and Amazon $999.64 (MSI Ventus 2X) per videocardprices.com tracker 2026-09-25, far above $549 MSRP; AED across Microless/MindTech partner cards.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg/Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-5070/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rtx+5070"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=rtx+5070&post_type=product"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -96,7 +132,43 @@
       "form_factor": "PCIe card (partner designs; slot width varies by manufacturer)",
       "cooling": null,
       "msrp_usd": 749,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/5070-family/geforce-rtx-5070-ti-og-image.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+        "credit": "NVIDIA",
+        "shows": "RTX 5070 family card render (NVIDIA's og image named for the 5070 Ti; 5070 Ti ships as partner cards, so this is the family reference design)",
+        "file": "images/geforce-rtx-5070-ti.webp"
+      },
+      "price": {
+        "usd_low": 1119.99,
+        "usd_high": 1199.99,
+        "usd_kind": "US retail",
+        "aed_low": 5000.51,
+        "aed_high": 6899,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 16GB partner cards; US = Newegg $1,119.99 and Amazon $1,199.99 (PNY OC) per videocardprices.com tracker 2026-09-25, ~50-60% over $749 MSRP; AED top end is ROG Strix OC.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg/Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-5070-ti/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rtx+5070+ti+graphics+card"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=rtx+5070&post_type=product"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -142,7 +214,43 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 999,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5080/geforce-rtx-5080-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 5080 Founders Edition card render",
+        "file": "images/geforce-rtx-5080.webp"
+      },
+      "price": {
+        "usd_low": 1599.99,
+        "usd_high": 1679.99,
+        "usd_kind": "US retail",
+        "aed_low": 6299,
+        "aed_high": 9027.38,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 16GB partner cards; US = Amazon $1,599.99 (ZOTAC Solid Core OC) and Newegg $1,679.99 per videocardprices.com tracker 2026-09-25, ~60% over $999 MSRP; AED top end is AORUS Master.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg/Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-5080/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rtx+5080"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=rtx+5080&post_type=product"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -192,7 +300,47 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 1999,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 5090 Founders Edition card render",
+        "file": "images/geforce-rtx-5090.webp"
+      },
+      "price": {
+        "usd_low": 6795,
+        "usd_high": 7494.99,
+        "usd_kind": "US retail",
+        "aed_low": 24800,
+        "aed_high": 29000,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 32GB partner cards (ASUS TUF/ROG Astral); Amazon $6,795 (tracker, 2026-09-25) to Best Buy $7,494.99 (Kotaku, 2026-09-15): over 3x the $1,999 MSRP and very volatile.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-5090/"
+          },
+          {
+            "label": "Best Buy via Kotaku (2026-09-15)",
+            "url": "https://kotaku.com/nvidia-rtx-5090-gpu-stock-best-buy-amazon-price-genai-ai-2000734583"
+          },
+          {
+            "label": "GPU Prix tracker (2026-09-26)",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-5090"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/graphic_cards/rtx-5090/326/l/"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/product-category/computer-components/graphics-cards/rtx-5090/"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -230,7 +378,43 @@
       "form_factor": "PCIe card (board-partner designs)",
       "cooling": null,
       "msrp_usd": 549,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/radeon-rx-9070/2922918-radeon-rx-9070.jpg",
+        "page": "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070.html",
+        "credit": "AMD",
+        "shows": "Radeon RX 9070 dual-fan reference card render",
+        "file": "images/radeon-rx-9070.webp"
+      },
+      "price": {
+        "usd_low": 649.99,
+        "usd_high": 689.99,
+        "usd_kind": "US retail",
+        "aed_low": 2887.99,
+        "aed_high": 3856.18,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 16GB partner cards; US = Newegg $649.99 and Amazon $689.99 (XFX Swift OC) per videocardprices.com tracker 2026-09-25, above $549 MSRP.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg/Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/amd-rx-9070/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rx+9070"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=9070&post_type=product"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -268,7 +452,43 @@
       "form_factor": "PCIe card (board-partner designs)",
       "cooling": null,
       "msrp_usd": 599,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/radeon-rx-9070/2922918-radeon-rx-9070xt.jpg",
+        "page": "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html",
+        "credit": "AMD",
+        "shows": "Radeon RX 9070 XT triple-fan reference card render",
+        "file": "images/radeon-rx-9070-xt.webp"
+      },
+      "price": {
+        "usd_low": 799.5,
+        "usd_high": 819.99,
+        "usd_kind": "US retail",
+        "aed_low": 3267.35,
+        "aed_high": 4199,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 16GB partner cards; US = Amazon $799.50 (Gigabyte Gaming OC) and Newegg $819.99 per videocardprices.com tracker 2026-09-25, above $599 MSRP.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg/Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/amd-rx-9070-xt/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rx+9070"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=9070&post_type=product"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -317,7 +537,43 @@
       "interconnect": "NVLink-C2C (CPU-GPU); ConnectX-7 200 Gb/s networking",
       "form_factor": "Desktop system (150 x 150 x 50.5 mm)",
       "cooling": null,
-      "msrp_usd": 3999
+      "msrp_usd": 3999,
+      "image": {
+        "url": "https://blogs.nvidia.com/wp-content/uploads/2025/10/image4.jpg",
+        "page": "https://blogs.nvidia.com/blog/live-dgx-spark-delivery/",
+        "credit": "NVIDIA",
+        "shows": "DGX Spark desktop unit, front view on blurred green background",
+        "file": "images/dgx-spark-gb10.webp"
+      },
+      "price": {
+        "usd_low": 4699,
+        "usd_high": 4999.99,
+        "usd_kind": "US retail",
+        "aed_low": 24999,
+        "aed_high": 30000,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "NVIDIA DGX Spark Founders Edition 128GB/4TB; US = NVIDIA list $4,699 (raised from $3,999 in Feb 2026; NVIDIA store out of stock) to Amazon $4,999.99 sold by Micro Center, per pi3g.com (2026-09-24); partner GB10 boxes excluded.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "NVIDIA list / Amazon (Micro Center) via pi3g.com, 2026-09-24",
+            "url": "https://pi3g.com/nvidia-dgx-spark-price/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=dgx+spark"
+          },
+          {
+            "label": "MindTech (UAE)",
+            "url": "https://mindtech.ae/?s=dgx+spark&post_type=product"
+          },
+          {
+            "label": "Promise Computer Technology",
+            "url": "https://www.promisegulf.com/product/nvidia-dgx-spark/"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -358,7 +614,31 @@
       "interconnect": "PCIe 4.0 (16 lanes, platform I/O)",
       "form_factor": "Laptop / mini-PC APU (SoC)",
       "cooling": null,
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/3025150-ryzen-ai-max-pro-product.jpg",
+        "page": "https://www.amd.com/en/products/processors/laptop/ryzen-pro/ai-max-pro-300-series/amd-ryzen-ai-max-plus-pro-395.html",
+        "credit": "AMD",
+        "shows": "Ryzen AI Max PRO Series chip package render (series image used on the 395 page)",
+        "file": "images/ryzen-ai-max-pro-395.webp"
+      },
+      "price": {
+        "usd_low": 6652.19,
+        "usd_high": 6652.19,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Chip not sold alone; priced HP Z2 Mini G1a (Ryzen AI Max+ PRO 395, 128GB, 2TB, Win 11 Pro) at Staples, single listing, well above earlier deal prices. No UAE 128GB system with a live price found.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Staples",
+            "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-2tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5464"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -400,7 +680,39 @@
       "form_factor": "PCIe dual-slot, full height (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-4500-blackwell/nvidia-workstation-rtx4500-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4500/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO 4500 Blackwell blower-style workstation card render",
+        "file": "images/rtx-pro-4500-blackwell.webp"
+      },
+      "price": {
+        "usd_low": 4999.99,
+        "usd_high": 5875,
+        "usd_kind": "US retail",
+        "aed_low": 12719,
+        "aed_high": 12719,
+        "aed_kind": "UAE retail",
+        "vat_included": null,
+        "basis": "PNY VCNRTXPRO4500B-PB 32GB; Dell.com $5,875 (limited stock) and CPU Solutions $4,999.99 (noted 'reserved for system orders'); AED from a single undated Promise Computer price list.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Dell.com",
+            "url": "https://www.dell.com/en-us/shop/pny-vcx-vcnrtxpro4500b-pb-nvidia-rtx-pro-4500-blackwell-32gb-gddr7-256b/apd/ad528441/graphic-video-cards"
+          },
+          {
+            "label": "CPU Solutions",
+            "url": "https://www.cpusolutions.com/store/pc/PNY-VCX-VCNRTXPRO4500B-PB-NVIDIA-RTX-PRO-4500-Blackwell-32GB-GDDR7-256B-146p7930.htm"
+          },
+          {
+            "label": "Promise Computer Technology price list",
+            "url": "https://www.promisegulf.com/price-list/nvidia-professional-gpu-pricelist/"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -438,7 +750,43 @@
       "form_factor": "PCIe dual-slot (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/nvidia-workstation-rtx-pro-5000-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-5000/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO 5000 Blackwell blower-style workstation card render",
+        "file": "images/rtx-pro-5000-blackwell.webp"
+      },
+      "price": {
+        "usd_low": 8599,
+        "usd_high": 9199,
+        "usd_kind": "US retail",
+        "aed_low": 31943,
+        "aed_high": 37470,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "48GB card; Newegg (sold by Newegg) $8,599 for NVIDIA 900-5G153 and $9,199 from Newegg marketplace seller for PNY. AED: Promise list 31,943 to Microless 37,470 incl. VAT (marked unavailable online).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg",
+            "url": "https://www.newegg.com/nvidia-blackwell-900-5g153-2250-000-rtx-pro-5000-48gb-graphics-card/p/N82E16814132111"
+          },
+          {
+            "label": "Newegg (Tech Trends seller)",
+            "url": "https://www.newegg.com/pny-technologies-inc-blackwell-vcnrtxpro5000b-pb-rtx-pro-5000-48gb-graphics-card/p/N82E16814985049"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/product/nvidia-rtx-pro-5000-blackwell-graphics-card-48gb-gddr7-512-bit-memory-14080-cuda-cores-1344-gb-s-memory-bandwidth-pci-express-5-0-x16-rtx-pro-5000-48/"
+          },
+          {
+            "label": "Promise Computer Technology price list",
+            "url": "https://www.promisegulf.com/price-list/nvidia-professional-gpu-pricelist/"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -476,7 +824,31 @@
       "form_factor": "PCIe dual-slot (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/nvidia-workstation-rtx-pro-5000-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-5000/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO 5000 Blackwell card render (same card design as the 72GB variant)",
+        "file": "images/rtx-pro-5000-blackwell-72gb.webp"
+      },
+      "price": {
+        "usd_low": 9100,
+        "usd_high": 9100,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "72GB card, single US listing: Viperatech $9,100 (in stock, all sales final). No priced UAE listing (Microless shows unavailable).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Viperatech",
+            "url": "https://viperatech.com/product/nvidia-rtx-pro-5000-blackwell-72-gb"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -514,7 +886,47 @@
       "interconnect": "PCIe Gen 5",
       "form_factor": "PCIe dual-slot (5.4 x 12.0 in)",
       "cooling": "Air",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-6000-blackwell-workstation-edition/nvidia-geforce-rtx-pro-6000-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO 6000 Blackwell Workstation Edition double flow-through card render",
+        "file": "images/rtx-pro-6000-blackwell.webp"
+      },
+      "price": {
+        "usd_low": 16999.95,
+        "usd_high": 17986.96,
+        "usd_kind": "US retail",
+        "aed_low": 67000,
+        "aed_high": 77199,
+        "aed_kind": "UAE retail",
+        "vat_included": null,
+        "basis": "Workstation Edition 96GB (PNY VCNRTXPRO6000B-PB), not Max-Q; MITXPC $16,999.95 (contact-sales) and Amazon $17,986.96 (videocardprices.com tracker, 2026-09-25). AED from Promise, GCC Gamers, Overclockers.ae (out of stock); VAT not stated.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "MITXPC",
+            "url": "https://mitxpc.com/products/vcnrtxpro6000b-pb"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-pro-6000-blackwell/"
+          },
+          {
+            "label": "Promise Computer Technology",
+            "url": "https://www.promisegulf.com/product/nvidia-rtx-pro-6000-blackwell-workstation-edition/"
+          },
+          {
+            "label": "GCC Gamers",
+            "url": "https://gccgamers.com/ae/product/nvidia-rtx-pro-6000-blackwell-workstation-edition-900-5g144-2200-000"
+          },
+          {
+            "label": "Overclockers.ae",
+            "url": "https://overclockers.ae/nvidia-rtx-pro-6000-blackwell-workstation-edition-graphics-card-24064-cuda-cores-gddr7-96gb-512-bit-memory-1792-gb-sec-memory-clock-4x-display-port-outputs-pci-express-5-0-4000-ai-tops-1-year-w/"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -552,7 +964,39 @@
       "interconnect": "PCIe 5.0 x16",
       "form_factor": "PCIe dual-slot",
       "cooling": "Air",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/3402302-amd-radeon-ai-pro-r9700.jpg",
+        "page": "https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html",
+        "credit": "AMD",
+        "shows": "Radeon AI PRO R9700 blower-style workstation card render",
+        "file": "images/radeon-ai-pro-r9700.webp"
+      },
+      "price": {
+        "usd_low": 1799.99,
+        "usd_high": 1835.99,
+        "usd_kind": "US retail",
+        "aed_low": 7770,
+        "aed_high": 7770,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "32GB card; Newegg (sold by Newegg) Sapphire $1,799.99 in stock; Amazon PowerColor $1,835.99 on 2026-09-14 per runaihome.com. Above $1,299 MSRP; AED single Microless listing (PowerColor).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg",
+            "url": "https://www.newegg.com/sapphire-tech-32358-01-20g-radeon-ai-pro-r9700-32gb-graphics-card/p/N82E16814202462"
+          },
+          {
+            "label": "Amazon via runaihome.com (2026-09-14)",
+            "url": "https://runaihome.com/blog/amd-radeon-ai-pro-r9700-local-ai-hardware-guide-2026/"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/graphic_cards/radeon-ai-pro-r9700/326/l/"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -590,7 +1034,35 @@
       "form_factor": "PCIe triple-slot, full height, 11 in",
       "cooling": "Air",
       "msrp_usd": 3999,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/2198982-amd-radeon-pro-graphics.jpg",
+        "page": "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w7900.html",
+        "credit": "AMD",
+        "shows": "Radeon PRO W7900 workstation card render (card labeled W7900)",
+        "file": "images/radeon-pro-w7900.webp"
+      },
+      "price": {
+        "usd_low": 4581.52,
+        "usd_high": 4825.52,
+        "usd_kind": "US retail",
+        "aed_low": 22210.91,
+        "aed_high": 22210.91,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "AMD Radeon PRO W7900 48GB (100-300000074); US range is Newegg marketplace sellers only ($4,581.52-$4,825.52); AED single Microless listing.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg (marketplace sellers)",
+            "url": "https://www.newegg.com/amd-100-300000074-radeon-pro-w7900-48gb-graphics-card/p/N82E16814105114"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=w7900"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -627,7 +1099,35 @@
       "interconnect": "NVLink-C2C 900 GB/s (CPU-GPU); ConnectX-8 SuperNIC up to 800 Gb/s",
       "form_factor": "Desktop / deskside workstation system",
       "cooling": null,
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/dgx-station/DGX-station-OG.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/dgx-station/",
+        "credit": "NVIDIA",
+        "shows": "DGX Station render: GB300 Grace Blackwell Ultra desktop motherboard with chassis and add-in card",
+        "file": "images/dgx-station-gb300.webp"
+      },
+      "price": {
+        "usd_low": 96250,
+        "usd_high": 97000,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per desktop system; Exxact Valence 'starting at' $96,250 (checked 2026-09-26) and MSI GB300 workstation $97,000 at CDW per Computerworld (2026-03-16). Dell Pro Max GB300 reportedly far higher (unverified). No UAE listing.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Exxact (reseller listing)",
+            "url": "https://www.exxactcorp.com/Exxact-VWS-158270643-E158270643"
+          },
+          {
+            "label": "Computerworld (CDW/MSI price, 2026-03-16)",
+            "url": "https://www.computerworld.com/article/4145765/dell-cut-ai-cloud-costs-with-data-center-class-desktops.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -665,7 +1165,31 @@
       "form_factor": "PCIe: air dual-slot FHFL or liquid single-slot FHXL",
       "cooling": "Air or liquid",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/rtx-pro-6000-blackwell-server-edition/nvidia-rtx-pro-6000-bw-server-edition-og.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO 6000 Blackwell Server Edition passively cooled card render",
+        "file": "images/rtx-pro-6000-server-edition.webp"
+      },
+      "price": {
+        "usd_low": 17650,
+        "usd_high": 17650,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per card; single reseller listing SabrePC $17,649.85 (out of stock), checked 2026-09-26; no outlet estimate found.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "SabrePC (reseller listing)",
+            "url": "https://www.sabrepc.com/900-2G153-0000-000-NVIDIA-S8845543"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -702,7 +1226,15 @@
       "interconnect": "ConnectX-8 SuperNICs with built-in PCIe Gen 6 switches; up to 800 Gb/s networking",
       "form_factor": "Server (e.g. MGX 4U/6U, 8 PCIe GPUs)",
       "cooling": "Air or liquid",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/products/rtx-pro-server/cptx25-workstation-tech-blog-rtx-pro-full-server-exploded-1920x1080.png",
+        "page": "https://www.nvidia.com/en-us/data-center/products/rtx-pro-server/",
+        "credit": "NVIDIA",
+        "shows": "RTX PRO Server exploded render with eight GPUs lifted out",
+        "file": "images/rtx-pro-server-8-gpu-example.webp"
+      },
+      "price": null
     },
     {
       "vendor": "AMD",
@@ -740,7 +1272,15 @@
       "form_factor": "PCIe dual-slot FHFL (10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/4711051-instinct-accelerator-mi350p-pcle-product.jpg",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350p.html",
+        "credit": "AMD",
+        "shows": "Instinct MI350P PCIe card (bare board) render",
+        "file": "images/instinct-mi350p-pcie.webp"
+      },
+      "price": null
     },
     {
       "vendor": "NVIDIA",
@@ -778,7 +1318,15 @@
       "form_factor": "SXM (H200 NVL variant: PCIe dual-slot air-cooled)",
       "cooling": null,
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/h200/h200-tensor-og.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/h200/",
+        "credit": "NVIDIA",
+        "shows": "HGX H200 8-GPU baseboard render",
+        "file": "images/h200.webp"
+      },
+      "price": null
     },
     {
       "vendor": "NVIDIA",
@@ -819,7 +1367,35 @@
       "interconnect": "NVLink 5 (1.8 TB/s GPU-to-GPU)",
       "form_factor": "SXM",
       "cooling": null,
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/HGX/nvidia-hgx-platform-og-new.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/hgx/",
+        "credit": "NVIDIA",
+        "shows": "NVIDIA HGX Blackwell 8-GPU baseboard render (HGX platform image; page covers HGX B200 and B300)",
+        "file": "images/b200-blackwell.webp"
+      },
+      "price": {
+        "usd_low": 30000,
+        "usd_high": 40000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per GPU; Jensen Huang to CNBC (2024-03-19): $30k-$40k, later clarified that pricing varies as it is sold in systems; old but the only credible figure.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware (2024-03)",
+            "url": "https://www.tomshardware.com/pc-components/gpus/nvidias-jensen-huang-says-blackwell-gpu-to-cost-dollar30000-dollar40000-later-clarifies-that-pricing-will-vary-as-they-wont-sell-just-the-chip"
+          },
+          {
+            "label": "CNBC (2024-03-19)",
+            "url": "https://www.cnbc.com/2024/03/19/nvidias-blackwell-ai-chip-will-cost-more-than-30000-ceo-says.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -856,7 +1432,15 @@
       "interconnect": "NVLink 5 via 2x NVSwitch, 14.4 TB/s aggregate; ConnectX-7 up to 400 Gb/s",
       "form_factor": "10RU server system",
       "cooling": "Air",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/dgx-b200/dgx-b200-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+        "credit": "NVIDIA",
+        "shows": "DGX B200 system exploded render",
+        "file": "images/dgx-b200-8-gpus.webp"
+      },
+      "price": null
     },
     {
       "vendor": "NVIDIA",
@@ -897,7 +1481,15 @@
       "interconnect": "NVLink 5 (1.8 TB/s GPU-to-GPU)",
       "form_factor": "SXM",
       "cooling": null,
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/dgx-b300/dgx-b300-og.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/dgx-b300/",
+        "credit": "NVIDIA",
+        "shows": "DGX B300 system render (8x B300 GPUs); no standalone B300 GPU/board image found",
+        "file": "images/b300-blackwell-ultra.webp"
+      },
+      "price": null
     },
     {
       "vendor": "AMD",
@@ -931,7 +1523,31 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/2325906-amd-instinct-mi300x.jpg",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+        "credit": "AMD",
+        "shows": "Instinct MI300X OAM module and heatsink render",
+        "file": "images/instinct-mi300x.webp"
+      },
+      "price": {
+        "usd_low": 10000,
+        "usd_high": 15000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per GPU; Citi estimate reported by Tom's Hardware (early 2024): $10k-$15k depending on customer.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware (citing Citi, 2024)",
+            "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-h100-ai-gpus-cost-up-to-four-times-more-than-amds-competing-mi300x-amds-chips-cost-dollar10-to-dollar15k-apiece-nvidias-h100-has-peaked-beyond-dollar40000"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -969,7 +1585,15 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/2909102-amd-instinct-mi325x-accelerator.jpg",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html",
+        "credit": "AMD",
+        "shows": "Instinct MI325X OAM module and heatsink render",
+        "file": "images/instinct-mi325x.webp"
+      },
+      "price": null
     },
     {
       "vendor": "AMD",
@@ -1011,7 +1635,35 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/3366850-amd-instinct-mi350x-accelerator.jpg",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html",
+        "credit": "AMD",
+        "shows": "Instinct MI350X OAM module and heatsink render",
+        "file": "images/instinct-mi350x.webp"
+      },
+      "price": {
+        "usd_low": 25000,
+        "usd_high": 25000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per GPU; HSBC analyst estimate (July 2025, via Yahoo Finance) of ~$25k average for the MI350 series, not SKU-specific.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Yahoo Finance (HSBC note, 2025-07)",
+            "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
+          },
+          {
+            "label": "Yahoo Finance/GuruFocus (2025-07-29)",
+            "url": "https://finance.yahoo.com/news/amd-hikes-mi350-ai-gpu-205052675.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "AMD",
@@ -1053,7 +1705,35 @@
       "form_factor": "OAM module",
       "cooling": "Liquid",
       "msrp_usd": null,
-      "spec_checked_at": "2026-09-26T12:31:32+00:00"
+      "spec_checked_at": "2026-09-26T12:31:32+00:00",
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/3366850-amd-instinct-mi350x-accelerator.jpg",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html",
+        "credit": "AMD",
+        "shows": "Instinct MI350-series OAM module render (AMD uses the MI350X image on the MI355X page)",
+        "file": "images/instinct-mi355x.webp"
+      },
+      "price": {
+        "usd_low": 25000,
+        "usd_high": 25000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per GPU; HSBC analyst estimate (July 2025) that MI350-series pricing rose to ~$25k; series-level figure, not an official MI355X price.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Yahoo Finance (HSBC note, 2025-07)",
+            "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
+          },
+          {
+            "label": "Yahoo Finance/GuruFocus (2025-07-29)",
+            "url": "https://finance.yahoo.com/news/amd-hikes-mi350-ai-gpu-205052675.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -1090,7 +1770,31 @@
       "interconnect": "NVLink 5, 130 TB/s rack NVLink bandwidth",
       "form_factor": "Rack (72 GPUs + 36 Grace CPUs)",
       "cooling": "Liquid",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/gb300-nvl72/gb300-nvl72-og.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
+        "credit": "NVIDIA",
+        "shows": "GB300 NVL72 rack render",
+        "file": "images/gb300-nvl72.webp"
+      },
+      "price": {
+        "usd_low": 6000000,
+        "usd_high": 6500000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per rack; Tom's Hardware (2026-03-24, syndicated on Yahoo Finance) put GB300 NVL72 at $6.0M-$6.5M.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware via Yahoo Finance (2026-03-24)",
+            "url": "https://finance.yahoo.com/sectors/technology/articles/price-nvidias-vera-rubin-nvl72-100000086.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -1131,7 +1835,35 @@
       "interconnect": "NVLink 6, 216 TB/s rack NVLink bandwidth (as listed on page)",
       "form_factor": "Rack (72 Rubin GPUs + 36 Vera CPUs)",
       "cooling": "Liquid",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/solutions/data-center/vera-rubin-nvl72/nvidia-vera-rubin-nvl72-og.jpg",
+        "page": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
+        "credit": "NVIDIA",
+        "shows": "Vera Rubin NVL72 rack render",
+        "file": "images/vera-rubin-nvl72.webp"
+      },
+      "price": {
+        "usd_low": 5000000,
+        "usd_high": 7800000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per rack; Tom's Hardware (2026-03-24) $5M-$7M and Morgan Stanley via PC Gamer (2026-05-22) ~$7.8M; Futurum (July 2026) lower at $3.5-4M, so estimates disagree widely.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Tom's Hardware via Yahoo Finance (2026-03-24)",
+            "url": "https://finance.yahoo.com/sectors/technology/articles/price-nvidias-vera-rubin-nvl72-100000086.html"
+          },
+          {
+            "label": "PC Gamer via Yahoo (Morgan Stanley, 2026-05-22)",
+            "url": "https://finance.yahoo.com/sectors/technology/articles/morgan-stanley-estimate-says-single-114101104.html"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -1164,7 +1896,15 @@
       "interconnect": "Scale-out: Quantum-X800 InfiniBand or Spectrum-X Ethernet with ConnectX-9 SuperNICs",
       "form_factor": "Rack (MGX)",
       "cooling": null,
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://blogs.nvidia.com/wp-content/uploads/2025/10/vera-press-rubin-vr-nvl144-cpx-rack-1920x1080-2.jpg",
+        "page": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+        "credit": "NVIDIA",
+        "shows": "Vera Rubin NVL144 CPX rack render (front view)",
+        "file": "images/vera-rubin-nvl144-cpx.webp"
+      },
+      "price": null
     },
     {
       "vendor": "AMD",
@@ -1201,7 +1941,15 @@
       "interconnect": "UALoE scale-up 3.6 TB/s bi-directional; UALink scale-out 600 GB/s",
       "form_factor": "Enhanced Accelerator Module (EAM)",
       "cooling": "Liquid",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/5086250-instinct-mi430X-mi440X-mi455X-die-half-lidded.png",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi400.html",
+        "credit": "AMD",
+        "shows": "Instinct MI400-series (MI430X/MI440X/MI455X) GPU package: lidded plus half-lidded die view",
+        "file": "images/instinct-mi455x.webp"
+      },
+      "price": null
     },
     {
       "vendor": "AMD",
@@ -1238,7 +1986,35 @@
       "interconnect": "UALoE scale-up (page: up to 260 TB/s scale-up bandwidth); Pensando networking",
       "form_factor": "Rack (72 MI455X GPUs + EPYC CPUs)",
       "cooling": "Liquid",
-      "msrp_usd": null
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/4543000-helios-rack.png",
+        "page": "https://www.amd.com/en/products/accelerators/instinct/mi400.html",
+        "credit": "AMD",
+        "shows": "AMD Helios rack render",
+        "file": "images/helios-mi455x.webp"
+      },
+      "price": {
+        "usd_low": 5000000,
+        "usd_high": 5500000,
+        "usd_kind": "Reported estimate",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Per 72-GPU rack; Futurum Group analyst estimate reported by TheStreet and Wccftech (July 2026, around launch).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "TheStreet (Futurum estimate, 2026-07)",
+            "url": "https://www.thestreet.com/technology/amd-microsoft-deal-defies-price-myths"
+          },
+          {
+            "label": "Wccftech (Futurum estimate, 2026-07-21)",
+            "url": "https://wccftech.com/amd-is-reportedly-pricing-its-helios-rack-40-above-nvidias-second-gen-rubin-confident-that-customers-will-pay-the-premium/"
+          }
+        ]
+      }
     }
   ],
   "changes": [

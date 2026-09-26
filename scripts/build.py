@@ -29,12 +29,106 @@ def validate(data):
         for k in ('bandwidth_tbs', 'msrp_usd'):
             assert p.get(k) is None or (isinstance(p[k], (int, float)) and p[k] > 0), f'Invalid {k}'
         assert p.get('cooling') in (None, 'Air', 'Liquid', 'Air or liquid'), 'Unknown cooling'
+        for s in (p.get('price') or {}).get('sources', []):
+            assert urlparse(s['url']).scheme == 'https', 'Price source must be https'
+        if p.get('image'):
+            u = urlparse(p['image']['url'])
+            assert u.scheme == 'https' and any(u.hostname == h or u.hostname.endswith('.'+h) for h in ALLOWED), 'Unofficial image'
         for s in p['sources']:
             u = urlparse(s['url'])
             assert u.scheme == 'https' and any(u.hostname == h or u.hostname.endswith('.'+h) for h in ALLOWED), 'Unofficial source'
     assert len(ids) >= 31, 'Unexpected catalog loss'
 
-OPTIONAL = {'bandwidth_tbs': None, 'bandwidth_note': None, 'ai_compute': None, 'interconnect': None, 'form_factor': None, 'cooling': None, 'msrp_usd': None, 'use_ar': None}
+OPTIONAL = {'bandwidth_tbs': None, 'bandwidth_note': None, 'ai_compute': None, 'interconnect': None, 'form_factor': None, 'cooling': None, 'msrp_usd': None, 'use_ar': None, 'price': None, 'image': None}
+AED_PEG = 3.6725  # UAE dirham is pegged to the US dollar.
+INSTAGRAM = 'https://www.instagram.com/qahwa.w.ai/'
+
+def money(low, high, prefix):
+    if low is None and high is None:
+        return None
+    low, high = low if low is not None else high, high if high is not None else low
+    return f'{prefix}{low:,.0f}' if round(low) == round(high) else f'{prefix}{low:,.0f}–{high:,.0f}'
+
+def price_view(p):
+    """Display strings for the approximate price; AED falls back to the peg conversion."""
+    pr = p['price']
+    if not pr:
+        return None
+    usd = money(pr.get('usd_low'), pr.get('usd_high'), '$')
+    aed, aed_kind = money(pr.get('aed_low'), pr.get('aed_high'), 'AED '), pr.get('aed_kind')
+    if not aed and usd:
+        near10 = lambda v: None if v is None else round(v * AED_PEG, -1)
+        aed, aed_kind = money(near10(pr.get('usd_low')), near10(pr.get('usd_high')), '≈ AED '), 'Converted from USD at 3.6725'
+    if not usd and not aed:
+        return None
+    return {'usd': usd, 'usd_kind': pr.get('usd_kind'), 'aed': aed, 'aed_kind': aed_kind, 'checked': pr.get('checked'), 'basis': pr.get('basis')}
+
+def price_block(p):
+    v = p['price_view']
+    if not v:
+        return f'<div class="price-row"><dt data-i18n>Approx. price</dt><dd>{T("Not publicly priced")}</dd></div>'
+    links = ' '.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">{E(s["label"])}</a>' for s in p['price'].get('sources', []))
+    part = lambda value, kind: f'<span class="amt">{E(value)}</span><small>{T(kind) if kind else ""}</small>' if value else f'<span class="amt">{T("Not listed")}</span>'
+    return f'''<div class="price-row"><dt><span data-i18n>Approx. price</span> <small><span data-i18n>checked</span> {E(v['checked'])}</small></dt><dd class="prices"><span>{part(v['usd'], v['usd_kind'])}</span><span>{part(v['aed'], v['aed_kind'])}</span></dd><dd class="price-src" lang="en" dir="auto">{E(v['basis'] or '')} {links}</dd></div>'''
+
+def image_block(p):
+    img = p['image']
+    if not img or not img.get('file'):
+        return ''
+    return f'<figure class="shot"><img src="{E(img["file"])}" alt="{E(p["model"])}" title="{E(img.get("shows",""))}" loading="lazy" decoding="async"><figcaption><a href="{E(img["page"])}" target="_blank" rel="noopener noreferrer"><span data-i18n>Image:</span> {E(img["credit"])}</a></figcaption></figure>'
+
+AR_MONTHS = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر']
+
+def news_date(iso, lang):
+    d = datetime.fromisoformat(iso)
+    return f'{d.day} {AR_MONTHS[d.month-1]} {d.year}' if lang == 'ar' else f'{d.day} {d.strftime("%b")} {d.year}'
+
+def news_lists(news, sources, uae_only, limit=12):
+    """Return EN and AR <ol> lists. Arabic list = native Arabic + machine-translated English items."""
+    if not news or not news.get('items'):
+        return f'<p class="muted">{T("Headlines appear after the first scheduled update.")}</p>'
+    src = {s['id']: s for s in sources}
+    items = [i for i in news['items'] if i['source'] in src and (i['uae'] if uae_only else src[i['source']]['region'] == 'global')]
+    def li(i, lang):
+        s = src[i['source']]
+        title = i.get('title_ar') if lang == 'ar' and i['lang'] == 'en' else i['title']
+        name = s['name_ar'] if lang == 'ar' else s['name']
+        mt = '<span class="mt">ترجمة آلية</span>' if lang == 'ar' and i['lang'] == 'en' else ''
+        text_dir = 'rtl' if (lang == 'ar') else 'ltr'
+        return f'<li><a href="{E(i["url"])}" target="_blank" rel="noopener noreferrer" dir="{text_dir}">{E(title)}</a><span class="meta">{E(name)} · {news_date(i["published"], lang)}{mt}</span></li>'
+    def varied(pool):
+        # Newest first, at most two headlines per source so one outlet can't fill the list.
+        seen, out = {}, []
+        for i in pool:
+            if seen.get(i['source'], 0) < 2:
+                seen[i['source']] = seen.get(i['source'], 0) + 1
+                out.append(i)
+        return out[:limit]
+    en = varied([i for i in items if i['lang'] == 'en'])
+    ar = varied([i for i in items if i['lang'] == 'ar' or i.get('title_ar')])
+    out = f'<ol class="news-list" data-lang="en">{"".join(li(i, "en") for i in en)}</ol>' if en else '<p class="muted" data-lang="en">No recent English headlines.</p>'
+    out += f'<ol class="news-list" data-lang="ar">{"".join(li(i, "ar") for i in ar)}</ol>' if ar else '<p class="muted" data-lang="ar">لا توجد عناوين عربية حديثة.</p>'
+    return out
+
+def news_section(news, sources):
+    if not sources:
+        return ''
+    updated = news_date(news['updated_at'], 'en') if news else '—'
+    updated_ar = news_date(news['updated_at'], 'ar') if news else '—'
+    feeds = ''.join(f'<li><a href="{E(s["homepage"])}" target="_blank" rel="noopener noreferrer"><span data-lang="en">{E(s["name"])}</span><span data-lang="ar">{E(s["name_ar"])}</span></a> <small>{E(s["lang"].upper())} · {"UAE" if s["region"] == "uae" else "Global"}</small></li>' for s in sources)
+    return f'''<section id="news" class="block"><div class="sec-head"><h2 data-i18n>AI news</h2><p class="muted"><span data-lang="en">Updated {updated} · twice a day (07:15 and 19:15 UAE time) from vetted official and news sources</span><span data-lang="ar">آخر تحديث {updated_ar} · مرتين يوميًا (7:15 و19:15 بتوقيت الإمارات) من مصادر رسمية وإخبارية موثوقة</span></p></div>
+{news_lists(news, sources, False)}<details class="feeds"><summary data-i18n>News sources</summary><ul>{feeds}</ul><p class="muted" data-lang="en">Headlines link to the original publisher. Items marked "ترجمة آلية" were translated by AI and may be imperfect.</p><p class="muted" data-lang="ar">العناوين مرتبطة بالناشر الأصلي. العناصر الموسومة "ترجمة آلية" ترجمها الذكاء الاصطناعي وقد لا تكون دقيقة تمامًا.</p></details></section>'''
+
+def uae_section(uae, news, sources):
+    if not uae:
+        return ''
+    cards = ''
+    for f in uae['facts']:
+        hw = ''.join(f'<button type="button" class="chip" data-q="{E(h)}">{E(h)}</button>' for h in f.get('hardware', []))
+        links = ' '.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">{E(s["label"])}</a>' for s in f['sources'])
+        cards += f'''<article class="fact"><h3><span data-lang="en">{E(f['title_en'])}</span><span data-lang="ar">{E(f['title_ar'])}</span></h3><p data-lang="en">{E(f['text_en'])}</p><p data-lang="ar">{E(f['text_ar'])}</p>{f'<div class="chips">{hw}</div>' if hw else ''}<p class="fact-src"><span data-i18n>As of</span> {E(f['as_of'])} · {links}</p></article>'''
+    return f'''<section id="uae" class="block"><div class="sec-head"><h2 data-i18n>UAE AI</h2><p class="muted"><span data-lang="en">Key facts checked {E(uae['checked'])} against their sources, plus AI headlines about the UAE or from UAE newsrooms, updated twice a day.</span><span data-lang="ar">حقائق رئيسية تم التحقق منها بتاريخ {E(uae['checked'])} من مصادرها، مع عناوين الذكاء الاصطناعي عن الإمارات أو من غرف الأخبار الإماراتية، تُحدَّث مرتين يوميًا.</span></p></div>
+<div class="facts-grid">{cards}</div><h3 class="sub" data-i18n>UAE AI headlines</h3>{news_lists(news, sources, True, 10)}</section>'''
 
 def T(value):
     # English text the page can translate client-side; unknown strings fall back to English.
@@ -52,10 +146,10 @@ def product(p):
     announced = E(p['announcement']) if p['announcement'] else T('Not established')
     cooling = NA(p['cooling'], T)
     use_ar = f' data-ar="{E(p["use_ar"])}"' if p['use_ar'] else ''
-    return f'''<article class="product {p['vendor'].lower()}" data-product="{E(p['id'])}">
+    return f'''<article class="product {p['vendor'].lower()}" data-product="{E(p['id'])}">{image_block(p)}
     <header><div class="eyebrow"><span class="vendor">{p['vendor']}</span><span>{T(p['level'])} / {T(p['type'])}</span></div><h2>{E(p['model'])}</h2><p class="architecture">{E(p['architecture'])}</p></header>
     <div class="memory"><strong>{E(p['memory'])}</strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></div>
-    <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}<small>{T(p['release_kind'])}</small></dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'])}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div></dl>
+    <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}<small>{T(p['release_kind'])}</small></dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'])}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl>
     <p class="use"{use_ar}>{E(p['use'])}</p><details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'])}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'])}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{E(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources">{sources}</div></details>
     <label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label></article>'''
 
@@ -114,21 +208,27 @@ def main():
     validate(data);OUT.mkdir(exist_ok=True)
     for p in data['products']:
         for k,v in OPTIONAL.items():p.setdefault(k,v)
+        p['price_view']=price_view(p)
+        p['price_usd']=(p['price'] or {}).get('usd_low')
+    load=lambda name:json.loads((ROOT/'data'/name).read_text(encoding='utf-8')) if (ROOT/'data'/name).exists() else None
+    feed,sources,uae=load('news.json'),load('news-sources.json') or [],load('uae.json')
     text=(ROOT/'web/template.html').read_text(encoding='utf-8')
     news='<p>No announcement check has run yet.</p>'
     if data.get('announcements'):
         news='<ul>'+''.join(f'<li><a href="{E(n["url"])}" target="_blank" rel="noopener noreferrer">{E(n["title"])}</a> - discovered {E(n["discovered_at"][:10])}</li>' for n in data['announcements'][:12])+'</ul><p>These are official source headlines. Discovery dates are not release dates.</p>'
-    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWS':news,'EDITION':E(data['edition_note']),'JSON':json.dumps(data,ensure_ascii=False).replace('<','\\u003c')}
+    replacements={'CSS':(ROOT/'web/style.css').read_text(encoding='utf-8'),'JS':(ROOT/'web/app.js').read_text(encoding='utf-8'),'PRODUCTS':''.join(product(p) for p in data['products']),'COUNT':str(len(data['products'])),'UPDATED':E(data['updated_at'][:10]),'CHECKED':E(data.get('last_check_at') or 'Not run yet'),'SCHEDULE':E(data['schedule']+' - '+data['automation_status']),'CHANGES':'<ul>'+''.join(f'<li><b>{E(x["at"][:10])}</b> - {E(x["summary"])}</li>' for x in data['changes'][:8])+'</ul>','NEWS':news,'NEWSFEED':news_section(feed,sources),'UAE':uae_section(uae,feed,sources),'INSTAGRAM':INSTAGRAM,'EDITION':E(data['edition_note']),'JSON':json.dumps(data,ensure_ascii=False).replace('<','\\u003c')}
     health=data.get('check_health')
     if health:
         replacements['CHECKED'] += E(f" ({health['successful_sources']}/{health['attempted_sources']} sources reached)")
     for k,v in replacements.items():text=text.replace('__'+k+'__',v)
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
+    if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     pdf(data)
     if args.standalone:
         target=args.standalone.resolve()
         shutil.copyfile(OUT/'index.html',target)
+        if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
     print(f"Built {len(data['products'])} products, self-contained HTML, JSON and one-page PDF")

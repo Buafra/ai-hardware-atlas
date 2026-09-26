@@ -13,6 +13,11 @@ Public NVIDIA / AMD comparison, static HTML, one-page PDF and an official-source
 - "What can it run?" estimator: model size x precision + context allowance, with fit badges and a fits-only filter.
 - Shareable links: search, filters, sort, view, comparison, estimator and language are kept in the URL.
 - English / Arabic (RTL) interface, light / dark / auto theme, printable table.
+- Official product photos (NVIDIA / AMD, credited and linked), stored as small WebP files in `images/` (`python scripts/images.py`).
+- Approximate current prices in USD and AED: dated retail listings or reported estimates, with sources (`price` in the catalog). Without a UAE listing, AED is converted at the 3.6725 peg and labelled. The review issue flags prices older than 45 days.
+- AI news in English and Arabic, refreshed with every scheduled run from 40 vetted feeds (`data/news-sources.json`, `scripts/news.py`). Only headlines, links, source and date are stored; links must stay on the publisher's domain. With `ANTHROPIC_API_KEY`, recent English headlines also get an Arabic translation, marked "ترجمة آلية".
+- UAE AI section: sourced fact cards (`data/uae.json`, reviewed by hand) plus headlines about the UAE or from UAE newsrooms.
+- Link to Qahwa & AI on Instagram (@qahwa.w.ai).
 - Embedded fonts and one-page A3 PDF, generated from the same catalog.
 - Scheduled workflow: 07:15 and 19:15 Dubai time (03:15 and 15:15 UTC).
 

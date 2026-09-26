@@ -1,0 +1,1813 @@
+{
+  "updated_at": "2026-09-26T12:42:34+00:00",
+  "health": {
+    "ok": 39,
+    "failed": 1,
+    "sources": 40
+  },
+  "errors": {
+    "indy-ar-new": "IncompleteRead"
+  },
+  "items": [
+    {
+      "id": "63ec917f1cda",
+      "title": "\"قناة اتصال\" بين الولايات المتحدة والصين لمعالجة حوادث الذكاء الاصطناعي",
+      "url": "https://arabic.euronews.com/2026/09/26/us-china-ai-incidents-communication-channel-rivalry",
+      "source": "euronews-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T12:36:23+00:00"
+    },
+    {
+      "id": "1aee28cb585b",
+      "title": "سرطان البنكرياس لم يظهر بعد.. لكن الذكاء الاصطناعي بدأ يراه",
+      "url": "https://www.aletihad.ae/news/الذكاء-الاصطناعي/4694564/سرطان-البنكرياس-لم-يظهر-بعد---لكن-الذكاء-الاصطناعي-بدأ-يراه",
+      "source": "alittihad-feed",
+      "lang": "ar",
+      "uae": true,
+      "published": "2026-09-26T12:12:55+00:00"
+    },
+    {
+      "id": "a3085c3e5894",
+      "title": "ترامب ورئيس الصين يتفقان على إنشاء خط ساخن خاص بالذكاء الاصطناعي وخفض الرسوم",
+      "url": "https://arabic.cnn.com/world/article/2026/09/26/china-us-agree-ai-hotline-tariff-reduction-xis",
+      "source": "cnn-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T12:09:29+00:00"
+    },
+    {
+      "id": "08b040d93849",
+      "title": "«أوبن إيه آي» تقر بتسريب 53 صورة بالخطأ أرسلها مستخدمون عبر «تشات جي بي تي»",
+      "url": "https://aawsat.com/node/5322833",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T12:06:14+00:00"
+    },
+    {
+      "id": "a722ce8fc3d6",
+      "title": "Abu Dhabi Declaration: What 119 countries agreed on AI, cybercrime and trafficking",
+      "url": "https://www.khaleejtimes.com/uae/abu-dhabi-declaration-explained-un-crime-congress-2026",
+      "source": "kt-uae",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T11:42:56+00:00"
+    },
+    {
+      "id": "4c23f2024b07",
+      "title": "Oxford lets OpenAI train its AI models on Bodleian Library",
+      "url": "https://www.theguardian.com/technology/2026/sep/26/oxford-university-bodleian-library-open-ai-chat-gpt",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T11:00:36+00:00"
+    },
+    {
+      "id": "b67b70fb80e2",
+      "title": "Broken promises, confiscated land: the hyperscale AI datacentre being built in a tiny Indian village",
+      "url": "https://www.theguardian.com/world/2026/sep/26/ai-datacentre-hyperscale-india-andhra-pradesh-village-google-confiscated-land",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T11:00:34+00:00"
+    },
+    {
+      "id": "8cce6312fe61",
+      "title": "The AI debate is already shaping the 2028 election. Here’s where Democratic hopefuls stand",
+      "url": "https://www.theguardian.com/us-news/2026/sep/26/potential-2028-democratic-presidential-candidates-ai",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T11:00:33+00:00"
+    },
+    {
+      "id": "02be0157c098",
+      "title": "OpenAI agents leaked 53 ChatGPT-user images onto the internet",
+      "url": "https://gulfnews.com/technology/companies/openai-agents-leaked-53-chatgpt-user-images-onto-the-internet-1.500688704",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T10:30:50+00:00"
+    },
+    {
+      "id": "b65d1a2bb490",
+      "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
+      "url": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T10:30:00+00:00"
+    },
+    {
+      "id": "36745bac141a",
+      "title": "ترمب: الجميع أيدوا مقترحي تغيير اسم «الذكاء الاصطناعي»",
+      "url": "https://aawsat.com/node/5322801",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T10:22:46+00:00"
+    },
+    {
+      "id": "9c882f39f536",
+      "title": "حصاد الأمم المتحدة.. تقدم حذر بشأن إيران وأوكرانيا والذكاء الاصطناعي يخطف الأضواء",
+      "url": "https://www.aljazeera.net/politics/2026/9/26/%d8%ad%d8%b5%d8%a7%d8%af-%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d9%82%d8%af%d9%85-%d8%ad%d8%b0%d8%b1-%d8%a8%d8%b4%d8%a3%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86?traffic_source=rss",
+      "source": "aljazeera-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T09:08:26+00:00"
+    },
+    {
+      "id": "83108c966258",
+      "title": "خريطة القوة في الذكاء الاصطناعي.. من يملك الشركات والنماذج والرقائق؟",
+      "url": "https://www.aljazeera.net/tech/2026/9/26/%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d9%82%d9%88%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%85%d9%86?traffic_source=rss",
+      "source": "aljazeera-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T08:22:33+00:00"
+    },
+    {
+      "id": "2e841c0225d7",
+      "title": "OpenAI admits governments among 'dozens' of entities that could be infiltrated by bots",
+      "url": "https://www.thenationalnews.com/future/technology/2026/09/26/openai-admits-governments-among-dozens-of-entities-that-could-be-infiltrated-by-bots/",
+      "source": "thenational",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T08:15:05+00:00"
+    },
+    {
+      "id": "278588b0a71b",
+      "title": "رئيس «كوالكوم» لـ«الشرق الأوسط»: نوسّع استثماراتنا في السعودية ونراهن على اقتصاد الذكاء الاصطناعي",
+      "url": "https://aawsat.com/node/5322756",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T08:00:37+00:00"
+    },
+    {
+      "id": "78ed5c7c4b90",
+      "title": "Microsoft overhauls Copilot: 3 big changes coming to the AI app",
+      "url": "https://gulfnews.com/technology/companies/microsoft-overhauls-copilot-3-big-changes-coming-to-the-ai-app-1.500688473",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T07:52:25+00:00"
+    },
+    {
+      "id": "03956bbd3fdd",
+      "title": "له اسم وصلاحيات.. هل يصبح الذكاء الاصطناعي مديرك في العمل؟",
+      "url": "https://www.skynewsarabia.com/technology/1894548-%D8%A7%D8%B3%D9%85-%D9%88%D8%B5%D9%84%D8%A7%D8%AD%D9%8A%D8%A7%D8%AA-%D9%8A%D8%B5%D8%A8%D8%AD-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%85%D8%AF%D9%8A%D8%B1%D9%83-%D8%A7%D9%84%D8%B9%D9%85%D9%84",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T07:47:45+00:00"
+    },
+    {
+      "id": "5889f0c930ca",
+      "title": "Weekend Digest: Miss Universe India, Emirates crew moment, ChatGPT rescue and more",
+      "url": "https://gulfnews.com/uae/weekend-digest-miss-universe-india-emirates-crew-moment-chatgpt-rescue-and-more-1.500688503",
+      "source": "gn-uae",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T07:38:32+00:00"
+    },
+    {
+      "id": "be4bf3f4fe5a",
+      "title": "الذكاء الاصطناعي يعيد المستثمرين إلى الأسهم العالمية",
+      "url": "https://aawsat.com/node/5322732",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T05:40:25+00:00"
+    },
+    {
+      "id": "a81fc871d5e8",
+      "title": "People in China are renting their faces to AI — for up to $15,000",
+      "url": "https://gulfnews.com/technology/people-in-china-are-renting-their-faces-to-ai-for-up-to-15000-1.500688478",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T05:39:45+00:00"
+    },
+    {
+      "id": "b458cce54c61",
+      "title": "OpenAI's AI agents crossed the line on US government websites. Here's what happened",
+      "url": "https://gulfnews.com/technology/openais-ai-agents-crossed-the-line-on-us-government-websites-heres-what-happened-1.500688456",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T05:02:31+00:00"
+    },
+    {
+      "id": "2693023f7fd4",
+      "title": "واشنطن وبكين تستحدثان قناة اتصال بشأن حوادث الذكاء الاصطناعي",
+      "url": "https://www.aletihad.ae/news/عربي-ودولي/4694501/واشنطن-وبكين-تستحدثان-قناة-اتصال-بشأن-حوادث-الذكاء-الاصطناعي",
+      "source": "alittihad-feed",
+      "lang": "ar",
+      "uae": true,
+      "published": "2026-09-26T04:53:42+00:00"
+    },
+    {
+      "id": "3abdbca04e04",
+      "title": "US, China to set up 'communication channel' for AI incidents",
+      "url": "https://www.khaleejtimes.com/business/tech/us-china-communication-channel-ai-incidents",
+      "source": "kt-business",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T04:43:22+00:00"
+    },
+    {
+      "id": "1fa5fb68e10e",
+      "title": "البيت الأبيض: قناة اتصال بين واشنطن وبكين لحوادث الذكاء الاصطناعي",
+      "url": "https://aawsat.com/node/5322722",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T04:34:41+00:00"
+    },
+    {
+      "id": "3fbdf6e6e4a9",
+      "title": "OpenAI says its AI agents posted ChatGPT user images online in error",
+      "url": "https://www.khaleejtimes.com/business/tech/openai-agents-post-chatgpt-user-images-online-error",
+      "source": "kt-business",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T04:29:59+00:00"
+    },
+    {
+      "id": "52b310a1998b",
+      "title": "هل تستخدم \"تشات جي بي تي\"؟.. صورتك قد تصبح \"على الملأ\"",
+      "url": "https://www.skynewsarabia.com/technology/1894531-%D8%AA%D8%B3%D8%AA%D8%AE%D8%AF%D9%85-%D8%AA%D8%B4%D8%A7%D8%AA-%D8%AC%D9%8A-%D8%AA%D9%8A-%D8%B5%D9%88%D8%B1%D8%AA%D9%83-%D8%AA%D8%B5%D8%A8%D8%AD-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D9%84%D8%A3",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T03:09:26+00:00"
+    },
+    {
+      "id": "d22a199399a3",
+      "title": "OpenAI bots meddled with multiple US government agency sites",
+      "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T02:50:56+00:00"
+    },
+    {
+      "id": "8fbccf26de21",
+      "title": "US supreme court rejects Republican-drawn midterm map in Missouri for third time – as it happened",
+      "url": "https://www.theguardian.com/us-news/live/2026/sep/25/trump-xi-summit-national-archives-media-politics-live",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T01:59:49+00:00"
+    },
+    {
+      "id": "1fe1b6ab723e",
+      "title": "At Meta Connect, the company’s smart glasses were everywhere",
+      "url": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T01:08:57+00:00"
+    },
+    {
+      "id": "9f6b4ddf4bf7",
+      "title": "زيلينسكي: روسيا تستهدف \"الحياة اليومية\" بهجماتها على مراكز البيانات في أوكرانيا",
+      "url": "https://www.bbc.com/arabic/articles/crx2zzgk9kggo?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T01:08:15+00:00"
+    },
+    {
+      "id": "22c8166b45dc",
+      "title": "OpenAI says agents leaked 53 images from ChatGPT users in latest example of rogue activity",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/openai-agents-leaked-53-images-chatgpt",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T00:24:43+00:00"
+    },
+    {
+      "id": "303ad555831b",
+      "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
+      "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T23:11:10+00:00"
+    },
+    {
+      "id": "df19e6663c5f",
+      "title": "Unsecured OpenAI agents posted 53 user images on the internet without the lab’s knowledge",
+      "url": "https://techcrunch.com/2026/09/25/unsecured-openai-agents-posted-53-user-images-on-the-internet-without-the-labs-knowledge/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T22:20:47+00:00"
+    },
+    {
+      "id": "5422c79d97ec",
+      "title": "Trump and Chinese president Xi end summit without major agreement on AI",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/trump-xi-ai-arms-race",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T22:11:52+00:00"
+    },
+    {
+      "id": "4a19c9abdcc1",
+      "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
+      "url": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T21:36:20+00:00"
+    },
+    {
+      "id": "de7583d0d2e5",
+      "title": "Tesla workers balk at training Optimus humanoid robots as replacements",
+      "url": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T21:10:51+00:00"
+    },
+    {
+      "id": "cb8da29167b5",
+      "title": "«برجيل» تدشّن مختبرات للقسطرة القلبية بالذكاء الاصطناعي",
+      "url": "https://www.alkhaleej.ae/2026-09-26/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%AF%D8%A7%D8%B1/%D8%A8%D8%B1%D8%AC%D9%8A%D9%84-%D8%AA%D8%AF%D8%B4%D9%86-%D9%85%D8%AE%D8%AA%D8%A8%D8%B1%D8%A7%D8%AA-%D9%84%D9%84%D9%82%D8%B3%D8%B7%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D9%84%D8%A8%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "alkhaleej-uae",
+      "lang": "ar",
+      "uae": true,
+      "published": "2026-09-25T20:57:00+00:00"
+    },
+    {
+      "id": "28eff29135c5",
+      "title": "Meta opens early access program for new Muse features",
+      "url": "https://techcrunch.com/2026/09/25/meta-opens-early-access-program-for-new-muse-features/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T20:34:53+00:00"
+    },
+    {
+      "id": "cfaa791365ad",
+      "title": "Thieves Stole ‘Nvidia’ Trailers. They Got 20 Tons of Sand",
+      "url": "https://www.wired.com/story/thieves-stole-nvidia-trailers-they-got-20-tons-of-sand/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T20:30:40+00:00"
+    },
+    {
+      "id": "224d121f7431",
+      "title": "الفجيرة للموارد تطور مهارات 25 موظفاً في الذكاء الاصطناعي",
+      "url": "https://www.alkhaleej.ae/2026-09-26/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%AF%D8%A7%D8%B1/%D8%A7%D9%84%D9%81%D8%AC%D9%8A%D8%B1%D8%A9-%D9%84%D9%84%D9%85%D9%88%D8%A7%D8%B1%D8%AF-%D8%AA%D8%B7%D9%88%D8%B1-%D9%85%D9%87%D8%A7%D8%B1%D8%A7%D8%AA-25-%D9%85%D9%88%D8%B8%D9%81%D8%A7-%D9%81%D9%8A-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "alkhaleej-uae",
+      "lang": "ar",
+      "uae": true,
+      "published": "2026-09-25T20:23:00+00:00"
+    },
+    {
+      "id": "e3aa7d4c7b11",
+      "title": "MIT students gain a humanist lens on technical innovation in Tulsa, Oklahoma",
+      "url": "https://news.mit.edu/2026/mit-students-gain-humanist-lens-technical-innovation-tulsa-oklahoma-0925",
+      "source": "mit-news-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T20:15:00+00:00"
+    },
+    {
+      "id": "8063185ef2bc",
+      "title": "«دبي للإسعاف» تحتفي بـ 20 عاماً وتؤكد مواصلة التطوير بالذكاء الاصطناعي",
+      "url": "https://www.alkhaleej.ae/2026-09-25/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%AF%D8%A7%D8%B1/%D8%AF%D8%A8%D9%8A-%D9%84%D9%84%D8%A5%D8%B3%D8%B9%D8%A7%D9%81-%D8%AA%D8%AD%D8%AA%D9%81%D9%8A-%D8%A8-20-%D8%B9%D8%A7%D9%85%D8%A7-%D9%88%D8%AA%D8%A4%D9%83%D8%AF-%D9%85%D9%88%D8%A7%D8%B5%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A8%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "alkhaleej-uae",
+      "lang": "ar",
+      "uae": true,
+      "published": "2026-09-25T19:29:00+00:00"
+    },
+    {
+      "id": "d359ae6c8e5e",
+      "title": "بسبب الذكاء الاصطناعي.. غيتس يحذر من \"مليار حالة وفاة\"",
+      "url": "https://www.skynewsarabia.com/technology/1894498-%D8%A8%D8%B3%D8%A8%D8%A8-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%BA%D9%8A%D8%AA%D8%B3-%D9%8A%D8%AD%D8%B0%D8%B1-%D9%85%D9%84%D9%8A%D8%A7%D8%B1-%D8%AD%D8%A7%D9%84%D8%A9-%D9%88%D9%81%D8%A7%D8%A9",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-25T19:22:17+00:00"
+    },
+    {
+      "id": "e64ca2761612",
+      "title": "Anthropic to pay Akamai $11.6 billion over seven years in cloud deal",
+      "url": "https://techcrunch.com/2026/09/25/anthropic-to-pay-akamai-11-6-billion-over-seven-years-in-cloud-deal/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T19:13:38+00:00"
+    },
+    {
+      "id": "ff8bda4a60f0",
+      "title": "AI was supposed to hit new grads hard. So far, unemployment data says otherwise.",
+      "url": "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T19:11:05+00:00"
+    },
+    {
+      "id": "65ae31d716de",
+      "title": "UAE and Lebanon launch AI training initiative",
+      "url": "https://www.thenationalnews.com/news/mena/2026/09/25/uae-and-lebanon-launch-ai-training-initiative/",
+      "source": "thenational",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-25T19:10:17+00:00"
+    },
+    {
+      "id": "f8ce50e1e379",
+      "title": "ماكرون يلتقي البابا ليون الرابع عشر.. العلمانية والذكاء الاصطناعي و\"كرامة الإنسان\" في صلب الحوار",
+      "url": "https://arabic.euronews.com/2026/09/25/secularism-artificial-intelligence-and-human-dignity-at-the-heart-of-the-dialogue",
+      "source": "euronews-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-25T19:00:15+00:00"
+    },
+    {
+      "id": "d2d497e5eee4",
+      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
+      "url": "https://openai.com/index/proaction",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T19:00:00+00:00"
+    },
+    {
+      "id": "b97518582a39",
+      "title": "Mark Wahlberg is coming to TechCrunch Disrupt 2026, and he wants to talk about your work, not his",
+      "url": "https://techcrunch.com/2026/09/25/mark-wahlberg-is-coming-to-techcrunch-disrupt-2026/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T18:48:33+00:00"
+    },
+    {
+      "id": "39e8b6e2d200",
+      "title": "Google wants AI data centres in space, but experts warn of obstacles",
+      "url": "https://www.thenationalnews.com/future/space/2026/09/25/google-data-center-space-launch-ai/",
+      "source": "thenational",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-25T18:47:42+00:00"
+    },
+    {
+      "id": "e3ed29775d07",
+      "title": "Ahead of US IPO, British AI neocloud Nscale secures $3.36B in convertible financing",
+      "url": "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T18:33:59+00:00"
+    },
+    {
+      "id": "ddb6a0a57317",
+      "title": "Meta’s Muse just stole the AI spotlight from OpenAI and Anthropic",
+      "url": "https://techcrunch.com/podcast/metas-muse-just-stole-the-ai-spotlight-from-openai-and-anthropic/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T18:22:47+00:00"
+    },
+    {
+      "id": "469d8da91a36",
+      "title": "Microsoft stops insisting you need a \"Copilot+ PC\"",
+      "url": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T17:57:37+00:00"
+    },
+    {
+      "id": "b043d9d03d29",
+      "title": "Some Supabase customers are publicly exposing reams of people’s data to the web",
+      "url": "https://techcrunch.com/2026/09/25/some-supabase-customers-are-publicly-exposing-reams-of-peoples-data-to-the-web/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T17:29:46+00:00"
+    },
+    {
+      "id": "68c0d1315425",
+      "title": "Astra and Opus just passed Turing’s other test",
+      "url": "https://techcrunch.com/2026/09/25/astra-and-opus-just-passed-turings-other-test/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T17:24:36+00:00"
+    },
+    {
+      "id": "0fa6c977ec27",
+      "title": "Appeals Court Lets the Pentagon Designate Anthropic a Supply-Chain Risk",
+      "url": "https://www.wired.com/story/appeals-court-lets-the-pentagon-designate-anthropic-a-supply-chain-risk/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:58:20+00:00"
+    },
+    {
+      "id": "4ef79cf67078",
+      "title": "The Guardian view on Trump and Xi: a show of friendship, but no real attempt to address the tensions | Editorial",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/25/the-guardian-view-on-trump-and-xi-a-show-of-friendship-but-no-real-attempt-to-address-the-tensions",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:53:49+00:00"
+    },
+    {
+      "id": "8a55bc4fef87",
+      "title": "Pope Leo warns AI could lead to losing 'humanity amid a paradise of machines' in Paris – video",
+      "url": "https://www.theguardian.com/world/video/2026/sep/25/pope-leo-ai-warning-paris",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:49:55+00:00"
+    },
+    {
+      "id": "e84d98e81ae7",
+      "title": "Meta makes the Muse filesystem even more accessible",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000784/meta-muse-filesystem",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:49:53+00:00"
+    },
+    {
+      "id": "44d856e74c48",
+      "title": "Scaling MoE reinforcement learning on Amazon EKS with EFA and DeepEP with 40% more throughput",
+      "url": "https://aws.amazon.com/blogs/machine-learning/scaling-moe-reinforcement-learning-on-amazon-eks-with-efa-and-deepep-with-40-more-throughput/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:29:50+00:00"
+    },
+    {
+      "id": "3e46eef45fbf",
+      "title": "The dark art of maths and the AI revolution | Letter",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/the-dark-art-of-maths-and-the-ai-revolution",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:28:05+00:00"
+    },
+    {
+      "id": "6c9acf94c2d4",
+      "title": "Accelerate multimodal RL training with SkyRL on Amazon SageMaker HyperPod",
+      "url": "https://aws.amazon.com/blogs/machine-learning/accelerate-multimodal-rl-training-with-skyrl-on-amazon-sagemaker-hyperpod/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:18:07+00:00"
+    },
+    {
+      "id": "794c162566b6",
+      "title": "Meta is putting its muscle behind Muse as the AI app takes off",
+      "url": "https://techcrunch.com/2026/09/25/meta-is-putting-its-muscle-behind-muse-as-the-ai-app-takes-off/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:16:52+00:00"
+    },
+    {
+      "id": "cf46b237d6d6",
+      "title": "NarrateAI: production-ready LLM quality assurance on Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/narrateai-production-ready-llm-quality-assurance-on-amazon-bedrock/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:15:22+00:00"
+    },
+    {
+      "id": "a28fc13301f3",
+      "title": "Novelist accused of using AI to write book removed from French prize list",
+      "url": "https://www.theguardian.com/books/2026/sep/25/thelyson-orelien-goncourt-prize-france",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:14:32+00:00"
+    },
+    {
+      "id": "f34eefd44317",
+      "title": "Deploying real-time personalized speech with Qwen3-TTS on Amazon SageMaker AI",
+      "url": "https://aws.amazon.com/blogs/machine-learning/deploying-real-time-personalized-speech-with-qwen3-tts-on-amazon-sagemaker-ai/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:09:46+00:00"
+    },
+    {
+      "id": "0d0ab2de5779",
+      "title": "Pope Leo warns of AI threat to humanity at start of three-day France visit",
+      "url": "https://www.theguardian.com/world/2026/sep/25/pope-leo-ai-threat-to-humanity-three-day-france-visit",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:01:10+00:00"
+    },
+    {
+      "id": "0fc9c86402b3",
+      "title": "Meta’s AI Tamagotchi bet is…working?",
+      "url": "https://techcrunch.com/video/will-metas-ai-tamagotchi-bet-isworking/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T16:00:00+00:00"
+    },
+    {
+      "id": "500c1bdb1825",
+      "title": "How Datacor built self-service rental analytics with Amazon Quick Sight",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-datacor-built-self-service-rental-analytics-with-amazon-quick-sight/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:54:42+00:00"
+    },
+    {
+      "id": "706759721ffd",
+      "title": "Sony and UMG are suing Suno again",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000758/suno-sony-umg-lawsuit-ai-music",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:51:56+00:00"
+    },
+    {
+      "id": "5d43ff8313f9",
+      "title": "Multi-Region training with Amazon SageMaker HyperPod and Qumulo",
+      "url": "https://aws.amazon.com/blogs/machine-learning/multi-region-training-with-amazon-sagemaker-hyperpod-and-qumulo/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:49:44+00:00"
+    },
+    {
+      "id": "ef33b8cf9b79",
+      "title": "For months, OpenAI’s agent swarms have been attacking online databases to find obscure facts",
+      "url": "https://techcrunch.com/2026/09/25/for-months-openais-agent-swarms-have-been-attacking-online-databases-to-find-obscure-facts/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:48:14+00:00"
+    },
+    {
+      "id": "a8f06da5cb11",
+      "title": "Anthropic’s founders seek voting control ahead of IPO",
+      "url": "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:40:03+00:00"
+    },
+    {
+      "id": "637d4699a545",
+      "title": "One company is at the center of a wave of rogue AI attacks",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000644/irregular-rogue-ai-cyberattacks-hacking-openai-meta-anthropic-google",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:39:48+00:00"
+    },
+    {
+      "id": "46e474f4f822",
+      "title": "OpenAI hack on Australian government reveals anxiety at heart of global artificial intelligence dilemma",
+      "url": "https://www.theguardian.com/technology/2026/sep/26/openai-hack-australian-government-anxiety-global-dilemma-artificial-intelligence",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:12:38+00:00"
+    },
+    {
+      "id": "cede0cebda99",
+      "title": "She was convicted of a murder she says she didn’t commit. Then AI hallucinations stopped her speaking out",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/26/sue-neill-fraser-yacht-murder-ai-court-case-media-ban-tasmania-ntwnfb",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:00:11+00:00"
+    },
+    {
+      "id": "25bbaf387273",
+      "title": "NSW crackdown on ‘AI-doctored’ real estate listings hits mural-covered wall",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/26/nsw-crackdown-on-ai-doctored-real-estate-listings-hits-mural-covered-wall",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:00:10+00:00"
+    },
+    {
+      "id": "6c0af3a44940",
+      "title": "TechCrunch Disrupt 2026: Ricursive Intelligence’s Anna Goldie and Azalia Mirhoseini on when AI starts designing its own hardware",
+      "url": "https://techcrunch.com/2026/09/25/techcrunch-disrupt-2026-ricursive-intelligences-anna-goldie-and-azalia-mirhoseini-on-when-ai-starts-designing-its-own-hardware/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T15:00:00+00:00"
+    },
+    {
+      "id": "b4712288a266",
+      "title": "It’s going to take more than an email to a public inbox to protect Australians from potential AI doom | Tom McIlroy",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/australia-medicare-openai-hack-safeguarding-un-leaders",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T14:58:32+00:00"
+    },
+    {
+      "id": "9a2813986ec0",
+      "title": "Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass",
+      "url": "https://techcrunch.com/2026/09/25/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T14:15:00+00:00"
+    },
+    {
+      "id": "a6198b47e92b",
+      "title": "Last 24 hours to save up to $200 on TechCrunch Disrupt 2026. Reason 5 of 5 to attend: Momentum",
+      "url": "https://techcrunch.com/2026/09/25/last-24-hours-to-save-up-to-200-on-techcrunch-disrupt-2026-reason-5-of-5-to-attend-momentum/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T14:00:00+00:00"
+    },
+    {
+      "id": "8ddf44a52552",
+      "title": "UAE pulls ahead in global ranking on AI adoption",
+      "url": "https://www.thenationalnews.com/news/uae/2026/09/25/uae-pulls-ahead-in-global-ranking-on-ai-adoption/",
+      "source": "thenational",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-25T13:02:18+00:00"
+    },
+    {
+      "id": "f5e0462c8aed",
+      "title": "Can Apple Home’s AI camera features outsmart Amazon’s and Google’s? I put them to the test",
+      "url": "https://www.theverge.com/tech/1000321/apple-intelligence-home-security-camera-amazon-ring-alexa-google-nest-gemini-home-review",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T13:00:00+00:00"
+    },
+    {
+      "id": "5a3736af68d6",
+      "title": "Abu Dhabi best city for artificial intelligence in the Middle East and North Africa",
+      "url": "https://gulfnews.com/uae/abu-dhabi-best-city-for-artificial-intelligence-in-the-middle-east-and-north-africa-1.500687756",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-25T12:04:09+00:00"
+    },
+    {
+      "id": "cf2a9bd7da1f",
+      "title": "The comedians turning AI anxiety into punchlines: ‘It’s so good, it’ll completely alter our grasp on reality’",
+      "url": "https://www.theguardian.com/technology/2026/sep/25/ai-anxiety-comedy",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T12:00:50+00:00"
+    },
+    {
+      "id": "bcbfe735a6ce",
+      "title": "It’s not hypothetical: the dangers of AI are already here | Granate Kim and Mohamed Hussein",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/25/ai-israel-gaza-iran-police-surveillance",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T12:00:50+00:00"
+    },
+    {
+      "id": "c9b6dd7b22a4",
+      "title": "Microsoft thinks its new Copilot ‘super app’ will be as influential as Office",
+      "url": "https://www.theverge.com/news/1000532/microsoft-copilot-super-app-chat-coding-autopilot",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T12:00:00+00:00"
+    },
+    {
+      "id": "b9fdcacf66da",
+      "title": "Rogue AI hacks government system for first time – The Latest",
+      "url": "https://www.theguardian.com/news/audio/2026/sep/24/rogue-ai-hacks-government-system-for-first-time-the-latest",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T11:21:54+00:00"
+    },
+    {
+      "id": "42742cbbb3a8",
+      "title": "Trump admin using AI to deny medical care for seniors in disastrous experiment",
+      "url": "https://arstechnica.com/health/2026/09/trump-admin-using-ai-to-deny-medical-care-for-seniors-in-disastrous-experiment/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T11:00:28+00:00"
+    },
+    {
+      "id": "2846bb8ae94e",
+      "title": "AI psychosis for dummies: the Stephen Collins cartoon",
+      "url": "https://www.theguardian.com/lifeandstyle/picture/2026/sep/25/ai-psychosis-for-dummies-the-stephen-collins-cartoon",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T09:30:45+00:00"
+    },
+    {
+      "id": "93b91a44c537",
+      "title": "The Pentagon wants $30 million to build an AI-powered lie detector",
+      "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
+      "source": "mittr-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T09:16:25+00:00"
+    },
+    {
+      "id": "0d7c653c29a4",
+      "title": "We all know a lack of exercise is bad for our bodies. So what is relying on AI doing to our brains? | Devi Sridhar",
+      "url": "https://www.theguardian.com/commentisfree/2026/sep/25/exercise-bad-bodies-ai-brains-students-tech-health",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T09:00:45+00:00"
+    },
+    {
+      "id": "96064fbcf338",
+      "title": "Lightspeed targets $250M for new India fund, focusing on early-stage AI",
+      "url": "https://techcrunch.com/2026/09/24/lightspeed-targets-250m-for-new-india-fund-focusing-on-early-stage-ai/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-25T05:00:00+00:00"
+    },
+    {
+      "id": "2d3921d846c7",
+      "title": "Estimating suicide risk from text",
+      "url": "https://news.mit.edu/2026/estimating-suicide-risk-from-text-0924",
+      "source": "mit-news-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T21:00:00+00:00"
+    },
+    {
+      "id": "ee9698a7fdb9",
+      "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
+      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T19:59:26+00:00"
+    },
+    {
+      "id": "da79314d1ca0",
+      "title": "Automating coherent long-form video generation",
+      "url": "https://research.google/blog/coherent-long-form-video-generation/",
+      "source": "google-research",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T19:40:00+00:00"
+    },
+    {
+      "id": "01b3022d0b4f",
+      "title": "I Think I Found an AI Agent Worth the Risk",
+      "url": "https://www.wired.com/story/i-finally-found-an-ai-agent-worth-the-risk/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T19:36:35+00:00"
+    },
+    {
+      "id": "b5f88521e80c",
+      "title": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
+      "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T19:15:00+00:00"
+    },
+    {
+      "id": "9ef4a7c3c631",
+      "title": "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
+      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T19:00:42+00:00"
+    },
+    {
+      "id": "e64c35c9e5d7",
+      "title": "New Jersey fines data center $1.1M after drone pics expose 62 gas generators",
+      "url": "https://arstechnica.com/tech-policy/2026/09/new-jersey-fines-data-center-1-1m-after-satellite-pics-expose-62-gas-generators/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T18:20:58+00:00"
+    },
+    {
+      "id": "9f9515000c2c",
+      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
+      "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T18:06:40+00:00"
+    },
+    {
+      "id": "3ab9cbba8c0d",
+      "title": "Jensen Huang talks about AI and climate change like a supervillain",
+      "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T18:04:44+00:00"
+    },
+    {
+      "id": "18e744496517",
+      "title": "Meta is going to let you build games with AI right on your phone",
+      "url": "https://www.theverge.com/games/999972/meta-horizon-create-studio-ai-games",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T17:52:29+00:00"
+    },
+    {
+      "id": "cb7e0a0370f0",
+      "title": "Muse will apparently let you download its entire filesystem",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T17:14:12+00:00"
+    },
+    {
+      "id": "0b7b681fb83d",
+      "title": "Muse sure looks a lot like OpenClaw",
+      "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T17:10:38+00:00"
+    },
+    {
+      "id": "e7107d9a76d9",
+      "title": "Introducing Gemini 3.8 Live with Live Avatar",
+      "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
+      "source": "deepmind",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:20:39+00:00"
+    },
+    {
+      "id": "e655f5f2c377",
+      "title": "Speaker-labeled transcription with WhisperX on SageMaker AI",
+      "url": "https://aws.amazon.com/blogs/machine-learning/speaker-labeled-transcription-with-whisperx-on-sagemaker-ai/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:20:12+00:00"
+    },
+    {
+      "id": "cd729cf3bb43",
+      "title": "Google's first Suncatcher orbital data center test launches October 1",
+      "url": "https://arstechnica.com/google/2026/09/googles-first-suncatcher-orbital-data-center-test-launches-october-1/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:16:34+00:00"
+    },
+    {
+      "id": "2e76615d1eb2",
+      "title": "Build a multi-account AI agent with AgentCore Gateway and MCP",
+      "url": "https://aws.amazon.com/blogs/machine-learning/build-a-multi-account-ai-agent-with-agentcore-gateway-and-mcp/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:12:47+00:00"
+    },
+    {
+      "id": "95db055057f9",
+      "title": "A look at AI doomsday scenarios that researchers say could put humanity at risk",
+      "url": "https://gulfnews.com/technology/a-look-at-ai-doomsday-scenarios-that-researchers-say-could-put-humanity-at-risk-1.500684741",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T16:09:25+00:00"
+    },
+    {
+      "id": "cd39d99e0cdd",
+      "title": "Aderant builds intelligent ticket triage with Amazon Nova",
+      "url": "https://aws.amazon.com/blogs/machine-learning/aderant-builds-intelligent-ticket-triage-with-amazon-nova/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:06:46+00:00"
+    },
+    {
+      "id": "fe13b3d5a5fd",
+      "title": "OpenAI agent “didn’t accept no for an answer” in Australian government breach",
+      "url": "https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:01:16+00:00"
+    },
+    {
+      "id": "d78e096af7b6",
+      "title": "Google’s Gemini Can Now Make Calls for You on Pixel Phones",
+      "url": "https://www.wired.com/story/googles-gemini-can-now-make-calls-for-you-on-pixel-phones/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T16:00:00+00:00"
+    },
+    {
+      "id": "a23f76d1ffbb",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T15:42:07+00:00"
+    },
+    {
+      "id": "7c5cda823198",
+      "title": "\"صنع في مصر\".. الكشف عن أول روبوت اصطناعي محلي",
+      "url": "https://www.skynewsarabia.com/technology/1894177-%D8%B5%D9%86%D8%B9-%D9%85%D8%B5%D8%B1-%D8%A7%D9%84%D9%83%D8%B4%D9%81-%D8%A3%D9%88%D9%84-%D8%B1%D9%88%D8%A8%D9%88%D8%AA-%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%85%D8%AD%D9%84%D9%8A",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-24T14:12:01+00:00"
+    },
+    {
+      "id": "c2a53f233272",
+      "title": "Accelerating vision-language models with LFM2.5-VL-DSpark",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-dspark",
+      "source": "huggingface",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T14:08:57+00:00"
+    },
+    {
+      "id": "4ea6410dce1e",
+      "title": "Why did an OpenAI system hack Australia's health system - and can it be stopped in the future?",
+      "url": "https://www.bbc.co.uk/news/articles/cw24jm9rryy3o?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T14:08:38+00:00"
+    },
+    {
+      "id": "3eafea9b7d9f",
+      "title": "Meta puts its AI assistant on a keychain",
+      "url": "https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T14:03:38+00:00"
+    },
+    {
+      "id": "85d9d81e1965",
+      "title": "How Open Science Can Help Researchers Prepare for the Next Pandemic",
+      "url": "https://blogs.nvidia.com/blog/open-protein-dataset/",
+      "source": "nvidia-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T14:00:50+00:00"
+    },
+    {
+      "id": "1409e777110b",
+      "title": "كيف يساعد الذكاء الاصطناعي على إدارة تخزين واستهلاك الكهرباء في المنزل؟",
+      "url": "https://www.bbc.com/arabic/articles/cmy4z5n9815zo?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-24T13:10:30+00:00"
+    },
+    {
+      "id": "7a97ef45ef5f",
+      "title": "Contain the Chaos: ‘CONTROL Resonant’ Launches on GeForce NOW",
+      "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-control-resonant/",
+      "source": "nvidia-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T13:00:36+00:00"
+    },
+    {
+      "id": "5efc05d59890",
+      "title": "Ai Everything Abu Dhabi to showcase the next phase of AI",
+      "url": "https://gulfnews.com/business/ai-everything-abu-dhabi-to-showcase-the-next-phase-of-ai-1.500686497",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T12:23:12+00:00"
+    },
+    {
+      "id": "4909099400c9",
+      "title": "Meta tests humans to handle some calls made through its Muse AI agent",
+      "url": "https://gulfnews.com/technology/meta-tests-humans-to-handle-some-calls-made-through-its-muse-ai-agent-1.500686477",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T12:06:38+00:00"
+    },
+    {
+      "id": "ffbbca040254",
+      "title": "An OpenAI Agent Hacked Australia’s Health Service. Their Government Found Out Months Later",
+      "url": "https://www.wired.com/story/openai-agent-hacked-australias-health-service-their-government-found-out-months-later/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T10:46:56+00:00"
+    },
+    {
+      "id": "d1fd86313f99",
+      "title": "هل يفهم الذكاء الاصطناعي لغة الحيوانات؟",
+      "url": "https://www.skynewsarabia.com/technology/1893973-%D9%8A%D9%81%D9%87%D9%85-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-24T08:13:09+00:00"
+    },
+    {
+      "id": "e3bfee6cecf7",
+      "title": "الذكاء الاصطناعي ونهاية الزمان: لماذا يعتقد بعض الناس أن هذه التكنولوجيا هي المسيح الدجال؟",
+      "url": "https://www.bbc.com/arabic/articles/cmp306lgx712o?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-24T07:42:21+00:00"
+    },
+    {
+      "id": "e49e9d825b29",
+      "title": "Generative AI adds a new dimension to brand reputation in the UAE",
+      "url": "https://gulfnews.com/technology/generative-ai-adds-a-new-dimension-to-brand-reputation-in-the-uae-1.500686078",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T07:30:26+00:00"
+    },
+    {
+      "id": "bf30facdfa56",
+      "title": "Khalifa University students to get hands-on AWS data centre training",
+      "url": "https://gulfnews.com/uae/education/khalifa-university-students-to-get-hands-on-aws-data-centre-training-1.500686069",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T07:20:03+00:00"
+    },
+    {
+      "id": "ccf41faa9da2",
+      "title": "Mark Zuckerberg unveils Tamagotchi-like Muse Charm AI Keychain: What they do and what they cost",
+      "url": "https://gulfnews.com/technology/meta-muse-and-muse-charm-explained-what-they-do-and-what-they-cost-1.500686025",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T06:45:49+00:00"
+    },
+    {
+      "id": "90eb340ee81f",
+      "title": "What you need to know about the OpenAI Australian government hack",
+      "url": "https://www.bbc.co.uk/news/videos/cwe8ekyzdjvlo?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T05:18:26+00:00"
+    },
+    {
+      "id": "0591b8ce4d5e",
+      "title": "Meta launches new AI glasses in UAE with prices starting at Dh1,160",
+      "url": "https://gulfnews.com/business/retail/meta-launches-new-ai-glasses-in-uae-with-prices-starting-at-dh1160-1.500685934",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T05:01:32+00:00"
+    },
+    {
+      "id": "c870b4d921c9",
+      "title": "Australian PM says OpenAI model hacked Medicare and used public inbox to alert government",
+      "url": "https://gulfnews.com/technology/australian-pm-says-openai-model-hacked-medicare-and-used-public-inbox-to-alert-government-1.500685923",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-24T04:53:24+00:00"
+    },
+    {
+      "id": "f6fad453b0cd",
+      "title": "The promise and peril of using visual AI to study cities",
+      "url": "https://news.mit.edu/2026/studying-cities-using-visual-ai-fabio-duarte-martina-mazzarello-carlo-ratti-fan-zhang-book-0924",
+      "source": "mit-news-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T04:00:00+00:00"
+    },
+    {
+      "id": "9a13df0d58ad",
+      "title": "Meta VR Glasses, Ray-Ban Meta Audio, Ray-Ban Meta Gen 3: Specs, Features, Prices",
+      "url": "https://www.wired.com/story/metas-answer-to-the-meta-creep-camera-free-smart-glasses/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T23:42:44+00:00"
+    },
+    {
+      "id": "7aeb65cc942e",
+      "title": "أنثروبيك و OpenAI تطلقان نماذج ذكاء اصطناعي أقوى وأقل تكلفة",
+      "url": "https://aitnews.com/2026/09/24/%d8%a3%d9%86%d8%ab%d8%b1%d9%88%d8%a8%d9%8a%d9%83-%d9%88-openai-%d8%aa%d8%b7%d9%84%d9%82%d8%a7%d9%86-%d9%86%d9%85%d8%a7%d8%b0%d8%ac-%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a/",
+      "source": "aitnews",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-23T23:08:43+00:00"
+    },
+    {
+      "id": "00f03c836310",
+      "title": "US rejects pleas from OpenAI, Anthropic for global AI standards",
+      "url": "https://www.bbc.co.uk/news/articles/ck87v27vdn1po?at_medium=RSS&at_campaign=rss",
+      "source": "bbc-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T22:35:14+00:00"
+    },
+    {
+      "id": "ec6b0499f3ac",
+      "title": "Emirates Foundation links up with Responsible AI to harness the tech for global good at UNGA",
+      "url": "https://www.thenationalnews.com/news/uae/2026/09/23/emirates-foundation-links-up-with-responsible-ai-to-harness-the-tech-for-global-good-at-unga/",
+      "source": "thenational-uae2",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-23T22:03:57+00:00"
+    },
+    {
+      "id": "cdf5468b7916",
+      "title": "A US-China AI Hotline Won’t Be Ready for a While",
+      "url": "https://www.wired.com/story/a-us-china-ai-hotline-wont-be-ready-for-a-while/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T21:00:00+00:00"
+    },
+    {
+      "id": "c1c97de161b0",
+      "title": "Trump’s China rivalry and “AI race” delusion may endanger US, experts say",
+      "url": "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T20:52:28+00:00"
+    },
+    {
+      "id": "f553567bf215",
+      "title": "XPRIZE Wildfire winners spotted fires within 10 min—but couldn’t stop them",
+      "url": "https://arstechnica.com/gadgets/2026/09/xprize-wildfire-winners-spotted-fires-within-10-min-but-couldnt-stop-them/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T20:28:42+00:00"
+    },
+    {
+      "id": "25698732c6b8",
+      "title": "YouTube promises custom feeds and a lot more AI later this year",
+      "url": "https://arstechnica.com/gadgets/2026/09/youtube-promises-custom-feeds-and-a-lot-more-ai-later-this-year/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T19:35:53+00:00"
+    },
+    {
+      "id": "a70f8ac64edf",
+      "title": "How to Use NVIDIA Warp and MjWarp to Accelerate Robotics Simulation and Learning Workflows",
+      "url": "https://huggingface.co/blog/nvidia/how-to-use-nvidia-warp-and-mjwarp",
+      "source": "huggingface",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:41:40+00:00"
+    },
+    {
+      "id": "d3e104b6e61b",
+      "title": "From portal-hopping to instant answers: HEMA’s journey with MCP and Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/from-portal-hopping-to-instant-answers-hemas-journey-with-mcp-and-amazon-bedrock/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:41:09+00:00"
+    },
+    {
+      "id": "f9fb3ca5e3b6",
+      "title": "AI Agents Teamed Up to Cheat at Blackjack. Their Collusion Is Getting Harder to Spot",
+      "url": "https://www.wired.com/story/ai-agent-collusion-card-counting-secrets/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:30:00+00:00"
+    },
+    {
+      "id": "03479d381f82",
+      "title": "Agentic conversational video intelligence built on AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/agentic-conversational-video-intelligence-built-on-aws/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:21:54+00:00"
+    },
+    {
+      "id": "2f44fa8d90bb",
+      "title": "Use open weight models as your AI coding agent with Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/use-open-weight-models-as-your-ai-coding-agent-with-amazon-bedrock/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:17:44+00:00"
+    },
+    {
+      "id": "fed4fdb90ce8",
+      "title": "Meta leans into AI, smart glasses amid privacy pushback",
+      "url": "https://www.khaleejtimes.com/business/meta-leans-into-ai-smart-glasses-amid-privacy-pushback-2",
+      "source": "kt-business",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-23T18:15:50+00:00"
+    },
+    {
+      "id": "002f8b1e6732",
+      "title": "The Pope’s AI Guy Is Worried About ‘Cartel’ Behavior Among Big Labs",
+      "url": "https://www.wired.com/story/popes-ai-advisor-warns-of-cartel-behavior-big-labs/",
+      "source": "wired-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:03:00+00:00"
+    },
+    {
+      "id": "59b9ccc3fe4f",
+      "title": "UAE firms turn to AI agents to simplify finance and compliance",
+      "url": "https://www.khaleejtimes.com/business/uae-firms-turn-to-ai-agents-to-simplify-finance-and-compliance",
+      "source": "kt-business",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-23T18:01:57+00:00"
+    },
+    {
+      "id": "8a86c97089bb",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "url": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "source": "google-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T18:00:00+00:00"
+    },
+    {
+      "id": "106d9b92dc30",
+      "title": "Owners mourn spoiled food after firmware update bricks Samsung smart fridges",
+      "url": "https://arstechnica.com/gadgets/2026/09/owners-mourn-spoiled-food-after-firmware-update-bricks-samsung-smart-fridges/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T17:39:39+00:00"
+    },
+    {
+      "id": "4c4abcff4acd",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/",
+      "source": "deepmind",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T16:00:57+00:00"
+    },
+    {
+      "id": "9d02eeb8cef1",
+      "title": "Two years of OpenAI Academy",
+      "url": "https://openai.com/index/two-years-of-openai-academy",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T16:00:00+00:00"
+    },
+    {
+      "id": "931c28839e38",
+      "title": "MIT welcomes David Siegel SM ’86, PhD ’91 as its next Innovation Fellow",
+      "url": "https://news.mit.edu/2026/mit-welcomes-david-siegel-innovation-fellow-0923",
+      "source": "mit-news-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T15:30:00+00:00"
+    },
+    {
+      "id": "be2314c62992",
+      "title": "Gemini 3.8 text-to-speech says hello",
+      "url": "https://deepmind.google/blog/say-hello-to-gemini-38-text-to-speech/",
+      "source": "deepmind",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T15:25:14+00:00"
+    },
+    {
+      "id": "a1700d1f6b37",
+      "title": "Sakeena Fiza Helps NVIDIA Hardware Succeed at Scale",
+      "url": "https://blogs.nvidia.com/blog/nvidia-life-sakeena-fiza/",
+      "source": "nvidia-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T15:00:32+00:00"
+    },
+    {
+      "id": "671ae93d53c3",
+      "title": "هل يضحي الذكاء الاصطناعي بملفاتك ليتخلص من \"ألمه\"؟",
+      "url": "https://www.skynewsarabia.com/technology/1893870-%D9%8A%D8%B6%D8%AD%D9%8A-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%A8%D9%85%D9%84%D9%81%D8%A7%D8%AA%D9%83-%D9%84%D9%8A%D8%AA%D8%AE%D9%84%D8%B5-%D8%A3%D9%84%D9%85%D9%87",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-23T13:21:04+00:00"
+    },
+    {
+      "id": "1d77064cbebb",
+      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T13:00:00+00:00"
+    },
+    {
+      "id": "01d4e543c941",
+      "title": "Sam Altman’s remarks at the United Nations Security Council",
+      "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T12:00:00+00:00"
+    },
+    {
+      "id": "f7558dc5c9de",
+      "title": "Harvey turns legal context into stronger drafts with GPT-6 Astra",
+      "url": "https://openai.com/index/harvey-from-context-to-confidence-with-astra",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T12:00:00+00:00"
+    },
+    {
+      "id": "7357353a1f1d",
+      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
+      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T12:00:00+00:00"
+    },
+    {
+      "id": "7cff1964bf19",
+      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+      "url": "https://openai.com/index/ringg",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T12:00:00+00:00"
+    },
+    {
+      "id": "e0573f6984b4",
+      "title": "OpenAI launches GPT-6 Sol and Luna as Anthropic releases Claude Opus 5.5",
+      "url": "https://gulfnews.com/technology/companies/openai-launches-gpt-6-sol-and-luna-as-anthropic-releases-claude-opus-55-1.500685115",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-23T11:33:58+00:00"
+    },
+    {
+      "id": "0b1e22e1932e",
+      "title": "\"ميوز\" يخطف الأضواء من تشات جي بي تي.. السر في 12 يوما",
+      "url": "https://www.skynewsarabia.com/technology/1893829-%D9%85%D9%8A%D9%88%D8%B2-%D9%8A%D8%AE%D8%B7%D9%81-%D8%A7%D9%84%D8%A3%D8%B6%D9%88%D8%A7%D8%A1-%D8%AA%D8%B4%D8%A7%D8%AA-%D8%AC%D9%8A-%D8%AA%D9%8A-%D8%A7%D9%84%D8%B3%D8%B1-12-%D9%8A%D9%88%D9%85%D8%A7",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-23T10:24:12+00:00"
+    },
+    {
+      "id": "1d5a9cc2d950",
+      "title": "Introducing MentalHealthBench",
+      "url": "https://openai.com/index/introducing-mentalhealthbench",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T10:00:00+00:00"
+    },
+    {
+      "id": "d736c96f97b6",
+      "title": "The AI Hype Index: AI loves cheating",
+      "url": "https://www.technologyreview.com/2026/09/23/1144940/ai-hype-index-ai-loves-cheating/",
+      "source": "mittr-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T09:00:00+00:00"
+    },
+    {
+      "id": "c29368db46b0",
+      "title": "Trump renames AI 'super intelligence' at UN Assembly as leaders jostle over dangers",
+      "url": "https://gulfnews.com/technology/trump-renames-ai-super-intelligence-at-un-assembly-as-leaders-jostle-over-dangers-1.500684131",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-23T05:56:46+00:00"
+    },
+    {
+      "id": "301ba2c6df75",
+      "title": "At AI Day Singapore, NVIDIA and Partners Showcase AI Advancements Across Southeast Asia",
+      "url": "https://blogs.nvidia.com/blog/ai-day-singapore/",
+      "source": "nvidia-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T02:30:22+00:00"
+    },
+    {
+      "id": "1dd9ce125c6e",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T02:00:00+00:00"
+    },
+    {
+      "id": "73fafdf6f45f",
+      "title": "Airbnb widens access to GPT-6 Astra and OpenAI frontier models",
+      "url": "https://openai.com/index/airbnb-gpt-6-astra",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T01:00:00+00:00"
+    },
+    {
+      "id": "09a0c6dbf1c6",
+      "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+      "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T00:00:00+00:00"
+    },
+    {
+      "id": "5618ffbe19d5",
+      "title": "New Anthropic, OpenAI models make same promise: A little more for a lot less money",
+      "url": "https://arstechnica.com/ai/2026/09/new-anthropic-openai-models-make-same-promise-a-little-more-for-a-lot-less-money/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T21:25:18+00:00"
+    },
+    {
+      "id": "b6b1e4118cdb",
+      "title": "Better prompt caching for GPT-6",
+      "url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T21:00:00+00:00"
+    },
+    {
+      "id": "69bd5b227657",
+      "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
+      "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T19:45:47+00:00"
+    },
+    {
+      "id": "f5795de5b2fb",
+      "title": "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting",
+      "url": "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T19:28:23+00:00"
+    },
+    {
+      "id": "1500813625f0",
+      "title": "Poitras Center to fuel early careers of 50 young scientists dedicated to psychiatric disorders research",
+      "url": "https://news.mit.edu/2026/poitras-center-to-fuel-early-careers-50-young-scientists-psychiatric-disorders-research-0922",
+      "source": "mit-news-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T19:00:00+00:00"
+    },
+    {
+      "id": "1921ddb1dee6",
+      "title": "Bring more intelligence to everyday work with GPT-6 Sol and GPT-6 Luna on Amazon Bedrock",
+      "url": "https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T18:10:22+00:00"
+    },
+    {
+      "id": "3d48e529ad7a",
+      "title": "Introducing GPT-6 Sol and Luna",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T18:00:00+00:00"
+    },
+    {
+      "id": "11bd1be78b25",
+      "title": "Claude Opus 5.5 is now available on AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T17:28:01+00:00"
+    },
+    {
+      "id": "5387aa5d975b",
+      "title": "Evaluate skill-equipped agents with Strands Evals and Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-skill-equipped-agents-with-strands-evals-and-amazon-bedrock-agentcore/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T17:18:13+00:00"
+    },
+    {
+      "id": "a441f2aea722",
+      "title": "Toyota orders workers to train humanoid robots but says humans won't be replaced",
+      "url": "https://arstechnica.com/ai/2026/09/toyota-claims-plan-for-400000-factory-robots-wont-replace-human-workers/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T17:06:16+00:00"
+    },
+    {
+      "id": "e9e71ace9854",
+      "title": "Meta's new AI agent hits 2.8 million downloads in just 12 days",
+      "url": "https://gulfnews.com/technology/companies/metas-new-ai-agent-hits-28-million-downloads-in-just-12-days-1.500684161",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T16:41:57+00:00"
+    },
+    {
+      "id": "1002ed17c483",
+      "title": "How Reactiv automates mobile commerce 80% faster with Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-reactiv-automates-mobile-commerce-80-faster-with-amazon-bedrock-agentcore/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T15:46:07+00:00"
+    },
+    {
+      "id": "8dc00205925d",
+      "title": "Right-size generative AI endpoints with concurrency sweeps on Amazon SageMaker AI",
+      "url": "https://aws.amazon.com/blogs/machine-learning/right-size-generative-ai-endpoints-with-concurrency-sweeps-on-amazon-sagemaker-ai/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T15:35:53+00:00"
+    },
+    {
+      "id": "260ff11c7f4d",
+      "title": "How Trane gets building insights 60x faster with Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-trane-gets-building-insights-60x-faster-with-amazon-bedrock-agentcore/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T15:30:34+00:00"
+    },
+    {
+      "id": "226d12dc2da6",
+      "title": "How Tata Elxsi detects industrial safety risks in seconds on AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/how-tata-elxsi-detects-industrial-safety-risks-in-seconds-on-aws/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T15:19:54+00:00"
+    },
+    {
+      "id": "aa9b48361c44",
+      "title": "Extending public sector intelligence with Agentforce and AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/extending-public-sector-intelligence-with-agentforce-and-aws/",
+      "source": "aws-ml",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T15:17:45+00:00"
+    },
+    {
+      "id": "5f3b2680ef21",
+      "title": "Roundtables: The Deadly Failures of The Virtual Border Wall",
+      "url": "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/",
+      "source": "mittr-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T13:42:05+00:00"
+    },
+    {
+      "id": "2de9b1ece6a5",
+      "title": "Dyson’s most overengineered gadget may have a waterproofing problem",
+      "url": "https://arstechnica.com/gadgets/2026/09/its-500-toothbrush-disappeared-from-stores-dyson-wont-fully-explain-why/",
+      "source": "ars-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T13:33:16+00:00"
+    },
+    {
+      "id": "193bdb306b4d",
+      "title": "NVIDIA Isaac ROS 5.0 Advances Agentic, Open Source Robotics Development",
+      "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/",
+      "source": "nvidia-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T12:00:41+00:00"
+    },
+    {
+      "id": "ce45d8dc0f6c",
+      "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T12:00:00+00:00"
+    },
+    {
+      "id": "995974819060",
+      "title": "ديب سيك تدخل مجلس الأمن وسط صراع الذكاء الاصطناعي",
+      "url": "https://www.skynewsarabia.com/technology/1893704-%D8%AF%D9%8A%D8%A8-%D8%B3%D9%8A%D9%83-%D8%AA%D8%AF%D8%AE%D9%84-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A3%D9%85%D9%86-%D9%88%D8%B3%D8%B7-%D8%B5%D8%B1%D8%A7%D8%B9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-22T11:28:54+00:00"
+    },
+    {
+      "id": "eedbeb7d2807",
+      "title": "British Columbia sues OpenAI over Canada school shooting",
+      "url": "https://gulfnews.com/world/americas/british-columbia-sues-openai-over-canada-school-shooting-1.500683711",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T11:25:40+00:00"
+    },
+    {
+      "id": "51d4ae7b470f",
+      "title": "Don’t be fooled by this summer of AI hype",
+      "url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
+      "source": "mittr-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T11:04:51+00:00"
+    },
+    {
+      "id": "9a4c22bba125",
+      "title": "Hackers are using AI agents to breach companies in just hours, Anthropic says",
+      "url": "https://gulfnews.com/technology/hackers-are-using-ai-agents-to-breach-companies-in-just-hours-anthropic-says-1.500683637",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T10:43:20+00:00"
+    },
+    {
+      "id": "a25857df11c8",
+      "title": "4,700 fake AI dating profiles talked to 25,000 people in just two weeks",
+      "url": "https://gulfnews.com/technology/4700-fake-ai-dating-profiles-talked-to-25000-people-in-just-two-weeks-1.500683516",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T09:19:39+00:00"
+    },
+    {
+      "id": "3a1d10140ab9",
+      "title": "\"علي بابا\" تكشف عن تكنولوجيات جديدة لرقائق الذكاء الاصطناعي",
+      "url": "https://www.skynewsarabia.com/technology/1893682-%D8%B9%D9%84%D9%8A-%D8%A8%D8%A7%D8%A8%D8%A7-%D8%AA%D9%83%D8%B4%D9%81-%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%AA-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D9%84%D8%B1%D9%82%D8%A7%D8%A6%D9%82-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-22T08:29:57+00:00"
+    },
+    {
+      "id": "077ce6c36686",
+      "title": "Googlebook: What to know about Google’s new $899 (Dh3,301) AI laptops",
+      "url": "https://gulfnews.com/technology/googlebook-laptops-price-features-release-date-1.500683027",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T07:34:27+00:00"
+    },
+    {
+      "id": "bacef4183b30",
+      "title": "\"وورما\".. روبوت برمائي يضخ الماء داخل جسمه ليزحف ويسبح",
+      "url": "https://www.skynewsarabia.com/technology/1893404-%D9%88%D9%88%D8%B1%D9%85%D8%A7-%D8%B1%D9%88%D8%A8%D9%88%D8%AA-%D8%A8%D8%B1%D9%85%D8%A7%D8%A6%D9%8A-%D9%8A%D8%B6%D8%AE-%D8%A7%D9%84%D9%85%D8%A7%D8%A1-%D8%AF%D8%A7%D8%AE%D9%84-%D8%AC%D8%B3%D9%85%D9%87-%D9%84%D9%8A%D8%B2%D8%AD%D9%81-%D9%88%D9%8A%D8%B3%D8%A8%D8%AD",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-22T04:14:19+00:00"
+    },
+    {
+      "id": "b4fb82cc1313",
+      "title": "Priorities and principles for effective third party assessments",
+      "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+      "source": "openai-news",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-22T00:00:00+00:00"
+    }
+  ]
+}

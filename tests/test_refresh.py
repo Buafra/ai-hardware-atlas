@@ -34,3 +34,11 @@ class RefreshTests(unittest.TestCase):
             self.assertTrue(rule['fields']);self.assertLessEqual(set(rule['fields']),{'memory_gb','power_w'},pid)
             for pattern in rule['fields'].values():self.assertEqual(re.compile(pattern).groups,1,pid)
 if __name__=='__main__':unittest.main()
+class PriceViewTests(unittest.TestCase):
+    def test_ranges_and_peg_fallback(self):
+        from build import price_view
+        v=price_view({'price':{'usd_low':1999,'usd_high':2499,'usd_kind':'US retail','aed_low':None,'aed_high':None,'checked':'2026-09-26','sources':[]}})
+        self.assertEqual(v['usd'],'$1,999–2,499');self.assertEqual(v['aed'],'≈ AED 7,340–9,180');self.assertEqual(v['aed_kind'],'Converted from USD at 3.6725')
+        v=price_view({'price':{'usd_low':549,'usd_high':549,'aed_low':2199,'aed_high':2599,'aed_kind':'UAE retail','checked':'2026-09-26'}})
+        self.assertEqual(v['usd'],'$549');self.assertEqual(v['aed'],'AED 2,199–2,599')
+        self.assertIsNone(price_view({'price':None}));self.assertIsNone(price_view({'price':{'usd_low':None,'aed_low':None}}))
