@@ -543,7 +543,8 @@ class ReviewRoundTests(unittest.TestCase):
             self.assertIsNone(re.search(r'from \d+ sources?|من \d+ مصدر',card),card)
     def test_hero_quick_links_state_no_count(self):
         self.assertIn('<nav class="jump" aria-label="Quick links" data-i18n-aria="Quick links">',self.home)
-        self.assertNotIn('three areas',self.html)
+        # Only the old label: headlines and summaries on the page may use the words freely.
+        self.assertIsNone(re.search(r'aria-label="[^"]*three areas',self.html))
         self.assertIn("'Quick links':'روابط سريعة'",self.js);self.assertNotIn('The three areas',self.js)
     def test_uae_list_has_a_show_more_step(self):
         btn='<div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>'
