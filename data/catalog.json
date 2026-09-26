@@ -623,19 +623,27 @@
         "file": "images/ryzen-ai-max-pro-395.webp"
       },
       "price": {
-        "usd_low": 6652.19,
+        "usd_low": 5349.99,
         "usd_high": 6652.19,
         "usd_kind": "US retail",
         "aed_low": null,
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Chip not sold alone; priced HP Z2 Mini G1a (Ryzen AI Max+ PRO 395, 128GB, 2TB, Win 11 Pro) at Staples, single listing, well above earlier deal prices. No UAE 128GB system with a live price found.",
+        "basis": "Chip not sold alone; priced HP Z2 Mini G1a (Ryzen AI Max+ PRO 395, 128GB, 2TB, Win 11 Pro) at Staples, single listing, well above earlier deal prices. No UAE 128GB system with a live price found. Also HP Z2 Mini G1a 128GB/1TB: Newegg (sold by Newegg) and Staples, $5,349.99–5,543.92.",
         "checked": "2026-09-26",
         "sources": [
           {
             "label": "Staples",
             "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-2tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5464"
+          },
+          {
+            "label": "Newegg (HP Z2 Mini G1a, 1TB)",
+            "url": "https://www.newegg.com/p/1VK-001E-4UB66"
+          },
+          {
+            "label": "Staples (HP Z2 Mini G1a, 1TB)",
+            "url": "https://www.staples.com/hp-z2-mini-g1a-desktop-computer-ryzen-ai-max-pro-395-128gb-ram-1tb-ssd-windows-11-pro-mouse-keyboard-included/product_IM1YS5467"
           }
         ]
       }
@@ -766,7 +774,7 @@
         "aed_high": 37470,
         "aed_kind": "UAE retail",
         "vat_included": true,
-        "basis": "48GB card; Newegg (sold by Newegg) $8,599 for NVIDIA 900-5G153 and $9,199 from Newegg marketplace seller for PNY. AED: Promise list 31,943 to Microless 37,470 incl. VAT (marked unavailable online).",
+        "basis": "48GB card; Newegg (sold by Newegg) $8,599 for NVIDIA 900-5G153 and $9,199 from Newegg marketplace seller for PNY. AED: Promise list 31,943 to Microless 37,470 incl. VAT (marked unavailable online). Newegg (sold by Newegg) NVIDIA 48GB at $8,599.",
         "checked": "2026-09-26",
         "sources": [
           {
@@ -896,13 +904,13 @@
       },
       "price": {
         "usd_low": 16999.95,
-        "usd_high": 17986.96,
+        "usd_high": 19999.99,
         "usd_kind": "US retail",
         "aed_low": 67000,
         "aed_high": 77199,
         "aed_kind": "UAE retail",
         "vat_included": null,
-        "basis": "Workstation Edition 96GB (PNY VCNRTXPRO6000B-PB), not Max-Q; MITXPC $16,999.95 (contact-sales) and Amazon $17,986.96 (videocardprices.com tracker, 2026-09-25). AED from Promise, GCC Gamers, Overclockers.ae (out of stock); VAT not stated.",
+        "basis": "Workstation Edition 96GB (PNY VCNRTXPRO6000B-PB), not Max-Q; MITXPC $16,999.95 (contact-sales) and Amazon $17,986.96 (videocardprices.com tracker, 2026-09-25). AED from Promise, GCC Gamers, Overclockers.ae (out of stock); VAT not stated. Newegg: PNY $17,999.99 (out of stock), NVIDIA-branded $19,999.99 (sold by Newegg).",
         "checked": "2026-09-26",
         "sources": [
           {
@@ -924,6 +932,14 @@
           {
             "label": "Overclockers.ae",
             "url": "https://overclockers.ae/nvidia-rtx-pro-6000-blackwell-workstation-edition-graphics-card-24064-cuda-cores-gddr7-96gb-512-bit-memory-1792-gb-sec-memory-clock-4x-display-port-outputs-pci-express-5-0-4000-ai-tops-1-year-w/"
+          },
+          {
+            "label": "Newegg (PNY)",
+            "url": "https://www.newegg.com/pny-technologies-inc-vcnrtxpro6000b-pb-rtx-pro-6000-96gb-workstation-graphics/p/N82E16814985014"
+          },
+          {
+            "label": "Newegg (sold by Newegg)",
+            "url": "https://www.newegg.com/nvidia-blackwell-rtx-pro-6000-96gb-graphic-card/p/N82E16814132106"
           }
         ]
       }
@@ -1109,13 +1125,13 @@
       },
       "price": {
         "usd_low": 96250,
-        "usd_high": 97000,
+        "usd_high": 129019,
         "usd_kind": "US retail",
         "aed_low": null,
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "Per desktop system; Exxact Valence 'starting at' $96,250 (checked 2026-09-26) and MSI GB300 workstation $97,000 at CDW per Computerworld (2026-03-16). Dell Pro Max GB300 reportedly far higher (unverified). No UAE listing.",
+        "basis": "Per desktop system; Exxact Valence 'starting at' $96,250 (checked 2026-09-26) and MSI GB300 workstation $97,000 at CDW per Computerworld (2026-03-16). Dell Pro Max GB300 reportedly far higher (unverified). No UAE listing. Integrator configurators for the ASUS ExpertCenter Pro ET900N G3 (GB300) list $123,375–129,019; lower ~$97k figures are for other GB300 builds.",
         "checked": "2026-09-26",
         "sources": [
           {
@@ -1125,6 +1141,14 @@
           {
             "label": "Computerworld (CDW/MSI price, 2026-03-16)",
             "url": "https://www.computerworld.com/article/4145765/dell-cut-ai-cloud-costs-with-data-center-class-desktops.html"
+          },
+          {
+            "label": "CyberPowerPC (ASUS ET900N G3)",
+            "url": "https://www.cyberpowerpc.com/system/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Supercomputer"
+          },
+          {
+            "label": "AVADirect (ASUS ET900N G3)",
+            "url": "https://www.avadirect.com/ASUS-ExpertCenter-Pro-ET900N-G3-AI-Workstation-NVIDIA-DGX-Station-Architecture/Configure/20219650"
           }
         ]
       }
