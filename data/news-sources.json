@@ -209,7 +209,8 @@
     "link_hosts": [
       "techcrunch.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "drop_titles": "\\bDisrupt\\b.*(?:\\bpass(?:es)?\\b|\\bsave\\b|\\bdeals?\\b|\\btickets?\\b|\\d+% off|\\$\\d)|(?:\\bpass(?:es)?\\b|\\bsave\\b|\\bdeals?\\b|\\btickets?\\b|\\d+% off|\\$\\d).*\\bDisrupt\\b"
   },
   {
     "id": "guardian-ai",
@@ -405,7 +406,8 @@
     "link_hosts": [
       "mediaoffice.ae"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "prefer_ai_summary": true
   },
   {
     "id": "thenational-uae2",
@@ -447,7 +449,8 @@
     "link_hosts": [
       "gulfnews.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "feed_excerpt": false
   },
   {
     "id": "gn-uae",
@@ -461,7 +464,8 @@
     "link_hosts": [
       "gulfnews.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "feed_excerpt": false
   },
   {
     "id": "kt-uae",
@@ -475,7 +479,8 @@
     "link_hosts": [
       "www.khaleejtimes.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "feed_excerpt": false
   },
   {
     "id": "kt-business",
@@ -489,7 +494,8 @@
     "link_hosts": [
       "www.khaleejtimes.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "feed_excerpt": false
   },
   {
     "id": "mediaoffice-ar2",
@@ -503,7 +509,8 @@
     "link_hosts": [
       "mediaoffice.ae"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "prefer_ai_summary": true
   },
   {
     "id": "alkhaleej-uae",
@@ -559,6 +566,8 @@
     "link_hosts": [
       "www.emaratalyoum.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "excerpt_full_sentences": true,
+    "prefer_ai_summary": true
   }
 ]

@@ -4,7 +4,7 @@ The site is branded **Cipher Lacuna**. The hardware area keeps its own name, **A
 
 - Tagline (shown under the wordmark, switches with the language toggle; hidden below 1000 px inside a section, where the section name takes its line; at 480 px and below the header has no room for it, so the home hero shows it under the name instead):
   - EN: Decoding the gaps in AI knowledge
-  - AR: فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي
+  - AR: كشف المجهول في عالم الذكاء الاصطناعي
 - Palette: deep purple #42208D, violet #753ACA, magenta #D52F89, cyan #22D4D6; dark background #0E1222, light background #F5F8FF.
 
 The artwork is the owner's own design (source: the Cipher_Lacuna_Brand_Pack folder beside this project). The files here are unchanged copies; don't redraw them.

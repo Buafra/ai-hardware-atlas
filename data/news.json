@@ -1,12 +1,17 @@
 {
-  "updated_at": "2026-09-26T17:11:56+00:00",
+  "updated_at": "2026-09-26T18:14:41+00:00",
   "health": {
-    "ok": 39,
-    "failed": 1,
+    "ok": 40,
+    "failed": 0,
     "sources": 40
   },
-  "errors": {
-    "indy-ar-new": "IncompleteRead"
+  "errors": {},
+  "ai": {
+    "key_set": false,
+    "model": "claude-opus-5",
+    "translated": 0,
+    "summarised": 0,
+    "problems": {}
   },
   "items": [
     {
@@ -17,6 +22,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T17:09:28+00:00",
+      "excerpt": "The tech giant has launched a cute ‘little guy’ that can answer emails, book travel or do your weekly food shop",
       "title_ar": "«ساحر ويُذيب الحذر»... كيف يسخّر Muse المليء بالتقنيات من Meta قوة الظرافة"
     },
     {
@@ -26,7 +32,8 @@
       "source": "aawsat",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T16:42:37+00:00"
+      "published": "2026-09-26T16:42:37+00:00",
+      "excerpt": "زلزال قوي ضرب المشهد الأدبي الفرنكفوني، بعد الشبهات التي أُثيرت حول رواية «كان ذلك أو الموت» للكاتب تيليسون أوريليان، واتهامه بالاستعانة بالذكاء الاصطناعي."
     },
     {
       "id": "819e92326da0",
@@ -36,6 +43,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T16:34:59+00:00",
+      "excerpt": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models.",
       "title_ar": "OpenAI توقف مؤقتاً تدريب «أكثر نماذجها قدرة»"
     },
     {
@@ -45,7 +53,8 @@
       "source": "aawsat",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T14:44:18+00:00"
+      "published": "2026-09-26T14:44:18+00:00",
+      "excerpt": "شكّل الذكاء الاصطناعي، الذي بات الرئيس الأميركي دونالد ترمب يصفه بـ«الذكاء الفائق»، أحد المحاور الرئيسية التي بحثها مع الرئيس الصيني شي جينبينغ في واشنطن."
     },
     {
       "id": "e4266869d2d6",
@@ -55,7 +64,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T14:39:34+00:00",
-      "title_ar": "الصين تقول إنها «تحترم» استبدال ترامب مصطلح «الذكاء الاصطناعي» بـ«الذكاء الخارق»"
+      "title_ar": "الصين تقول إنها «تحترم» استبدال ترامب مصطلح «الذكاء الاصطناعي» بـ«الذكاء الخارق»",
+      "excerpt": "China responds to Trump’s ‘super intelligence’ rebrand of AI, stressing respect for US wording and deeper exchanges on fast-evolving artificial intelligence tech.",
+      "excerpt_source": "page"
     },
     {
       "id": "4a3b86be32dd",
@@ -65,6 +76,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T14:00:37+00:00",
+      "excerpt": "Sam Altman and Dario Amodei have been invited to appear before the Greens-led inquiry into AI and datacentres",
       "title_ar": "استدعاء رئيسَي OpenAI وAnthropic للمثول أمام تحقيق في مجلس الشيوخ بعد حوادث وكلاء خارجين عن السيطرة"
     },
     {
@@ -74,7 +86,8 @@
       "source": "euronews-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T14:00:23+00:00"
+      "published": "2026-09-26T14:00:23+00:00",
+      "excerpt": "كان وزير الخزانة الأميركي سكوت بيسنت قد اقترح، الأسبوع الماضي، إنشاء آلية للإخطار المتبادل بين البلدين بشأن حوادث في مجال الذكاء الاصطناعي \"تتعلق بالأمن القومي\"."
     },
     {
       "id": "344d41dcb1d6",
@@ -84,6 +97,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T14:00:00+00:00",
+      "excerpt": "Today, I’m talking with Matthew Prince, who is CEO of Cloudflare. This episode is part of a two-part series on the future of business. Matthew last joined us on the show about two and a half years ago, at what we thought then was a wild pivot point for the internet — and now it…",
       "title_ar": "هل يستطيع ماثيو برينس الرئيس التنفيذي لـCloudflare إنقاذ الويب من الذكاء الاصطناعي؟"
     },
     {
@@ -94,7 +108,18 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T14:00:00+00:00",
+      "excerpt": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
       "title_ar": "أنشأتُ نسخة رقمية تفاعلية من نفسي... ويمكنك التحدث إليها"
+    },
+    {
+      "id": "ada57ce3dc40",
+      "title": "\"أوبن أي آي\" تقر بنشر أدواتها صور مستخدمين لـ\"تشات جي بي تي\"",
+      "url": "https://www.independentarabia.com/node/658986/%D8%B9%D9%84%D9%88%D9%85/%D8%A3%D9%88%D8%A8%D9%86-%D8%A3%D9%8A-%D8%A2%D9%8A-%D8%AA%D9%82%D8%B1-%D8%A8%D9%86%D8%B4%D8%B1-%D8%A3%D8%AF%D9%88%D8%A7%D8%AA%D9%87%D8%A7-%D8%B5%D9%88%D8%B1-%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D9%8A%D9%86-%D9%84%D9%80%D8%AA%D8%B4%D8%A7%D8%AA-%D8%AC%D9%8A-%D8%A8%D9%8A-%D8%AA%D9%8A",
+      "source": "indy-ar-new",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T13:58:30+00:00",
+      "excerpt": "أقرت شركة \"أوبن أي آي\" أمس الجمعة، بأن أدواتها للذكاء الاصطناعي نشرت على الإنترنت 53 صورة أرسلها مستخدمون عبر منصتها \"تشات جي بي تي\"، في تسريب جديد يطال هذه المرة بيانات مستخدمي الشركة نفسها."
     },
     {
       "id": "4ec00911688c",
@@ -103,7 +128,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T13:39:59+00:00"
+      "published": "2026-09-26T13:39:59+00:00",
+      "excerpt": "عادة تحتاج عملية اختراق إلكتروني واسعة إلى فريق، شخص يبحث عن الثغرات، وآخر يحاول استغلالها، وثالث يسرق البيانات ويحافظ على الوصول إلى الأنظمة المخترقة."
     },
     {
       "id": "283585619e57",
@@ -113,7 +139,19 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T13:15:33+00:00",
-      "title_ar": "التمويل والذكاء الاصطناعي وبرامج الماجستير التنفيذي في إدارة الأعمال ضمن أبرز الخيارات في Gulf News LevelUP"
+      "title_ar": "التمويل والذكاء الاصطناعي وبرامج الماجستير التنفيذي في إدارة الأعمال ضمن أبرز الخيارات في Gulf News LevelUP",
+      "excerpt": "Gulf News platform showcases trending qualifications for ambitious talent",
+      "excerpt_source": "page"
+    },
+    {
+      "id": "2364f43f1e17",
+      "title": "\"مايكروسوفت\" تدمج \"أوفيس\" في أداة الذكاء الاصطناعي خاصتها",
+      "url": "https://www.independentarabia.com/node/658973/%D8%B9%D9%84%D9%88%D9%85/%D9%85%D8%A7%D9%8A%D9%83%D8%B1%D9%88%D8%B3%D9%88%D9%81%D8%AA-%D8%AA%D8%AF%D9%85%D8%AC-%D8%A3%D9%88%D9%81%D9%8A%D8%B3-%D9%81%D9%8A-%D8%A3%D8%AF%D8%A7%D8%A9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%AE%D8%A7%D8%B5%D8%AA%D9%87%D8%A7",
+      "source": "indy-ar-new",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T12:58:04+00:00",
+      "excerpt": "كشفت مايكروسوفت الجمعة، عن رؤية جديدة لدمج برامج \"وورد\"، و\"إكسل\"، و\"باوربوينت\" في أداتها المساعِدة القائمة على الذكاء الاصطناعي \"كوبايلوت\"، في مسعى إلى جعل الذكاء الاصطناعي بوابة الدخول إلى حزمة برامجها الشهيرة."
     },
     {
       "id": "afd573e630c0",
@@ -122,7 +160,8 @@
       "source": "aljazeera-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T12:35:44+00:00"
+      "published": "2026-09-26T12:35:44+00:00",
+      "excerpt": "تنظيم الذكاء الاصطناعي يواجه معادلة بين خفض مخاطر الاحتيال والهجمات وفقدان الوظائف، والحفاظ على الاستثمار والابتكار، وسط مخاوف من أن ترفع القواعد كلفة الشركات الناشئة."
     },
     {
       "id": "1aee28cb585b",
@@ -131,7 +170,8 @@
       "source": "alittihad-feed",
       "lang": "ar",
       "uae": true,
-      "published": "2026-09-26T12:12:55+00:00"
+      "published": "2026-09-26T12:12:55+00:00",
+      "excerpt": "طوّر باحثون في مايو كلينك (Mayo Clinic) نموذجًا للذكاء الاصطناعي يمكنه التنبؤ بخطر إصابة الشخص بسرطان البنكرياس قبل تشخيص المرض بنحو ثلاث سنوات، في خطوة قد تساعد على تحديد الأشخاص الأكثر عرضة للإصابة في وقت مبكر."
     },
     {
       "id": "a3085c3e5894",
@@ -140,16 +180,8 @@
       "source": "cnn-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T12:09:29+00:00"
-    },
-    {
-      "id": "08b040d93849",
-      "title": "«أوبن إيه آي» تقر بتسريب 53 صورة بالخطأ أرسلها مستخدمون عبر «تشات جي بي تي»",
-      "url": "https://aawsat.com/node/5322833",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T12:06:14+00:00"
+      "published": "2026-09-26T12:09:29+00:00",
+      "excerpt": "أكدت وسائل الإعلام الرسمية الصينية أن الصين والولايات المتحدة اتفقتا على إنشاء \"قناة اتصال\" لمناقشة أي حوادث تتعلق بالذكاء الاصطناعي، خلال زيارة الدولة التي قام بها الزعيم الصيني، شي جين بينغ إلى واشنطن هذا الأسبوع."
     },
     {
       "id": "a722ce8fc3d6",
@@ -159,7 +191,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T11:42:56+00:00",
-      "title_ar": "إعلان أبوظبي: ما اتفقت عليه 119 دولة بشأن الذكاء الاصطناعي والجرائم الإلكترونية والاتجار"
+      "title_ar": "إعلان أبوظبي: ما اتفقت عليه 119 دولة بشأن الذكاء الاصطناعي والجرائم الإلكترونية والاتجار",
+      "excerpt": "World leaders adopted the Abu Dhabi Declaration at the 15th UN Crime Congress on Saturday. Here is what 119 countries committed to and what it means for the fight against 21st-century crime.",
+      "excerpt_source": "page"
     },
     {
       "id": "4c23f2024b07",
@@ -169,6 +203,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T11:00:36+00:00",
+      "excerpt": "University staff voice concerns over reputational risk of partnering with company behind ChatGPT",
       "title_ar": "أكسفورد تسمح لـOpenAI بتدريب نماذجها للذكاء الاصطناعي على مكتبة بودليان"
     },
     {
@@ -179,6 +214,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T11:00:34+00:00",
+      "excerpt": "Locals say Google’s $15bn project in Andhra Pradesh has resulted in smallholdings being taken back off them by the government",
       "title_ar": "وعود مُخلَفة وأراضٍ مصادَرة: مركز بيانات فائق الضخامة للذكاء الاصطناعي قيد الإنشاء في قرية هندية صغيرة"
     },
     {
@@ -189,6 +225,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T11:00:33+00:00",
+      "excerpt": "Debates over AI development, regulation and datacenters have become buzzy topics for US presidential candidates",
       "title_ar": "الجدل حول الذكاء الاصطناعي يشكّل بالفعل ملامح انتخابات 2028... وهذه مواقف الطامحين الديمقراطيين"
     },
     {
@@ -199,7 +236,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T10:30:50+00:00",
-      "title_ar": "وكلاء OpenAI يسرّبون 53 صورة لمستخدمي ChatGPT على الإنترنت"
+      "title_ar": "وكلاء OpenAI يسرّبون 53 صورة لمستخدمي ChatGPT على الإنترنت",
+      "excerpt": "Company's own AI agents posted user-provided images to external hosting services",
+      "excerpt_source": "page"
     },
     {
       "id": "b65d1a2bb490",
@@ -209,6 +248,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T10:30:00+00:00",
+      "excerpt": "Meta says Muse is just for adults, though its cuddly, Labubu-like mascot—and upcoming Tamagotchi-style AI device—may be disarming for users of all ages.",
       "title_ar": "Muse من Meta مخصص للبالغين فقط... فلماذا يبدو كلعبة أطفال؟"
     },
     {
@@ -218,7 +258,8 @@
       "source": "indy-ar-new",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T10:29:19+00:00"
+      "published": "2026-09-26T10:29:19+00:00",
+      "excerpt": "لئن انتقلنا إلى عالم الأدب، فالكلام عن الأثر السلبي الذي بدأ الذكاء الاصطناعي يتركه على الإبداع الأدبي، الشعري والسردي، وعلى النقد والأبحاث النقدية، لا يقل إيذاناً بالخطر الذي يهدد الأدب والكتابة الأدبية في غالب ميادينها."
     },
     {
       "id": "64d3b88561a9",
@@ -227,7 +268,8 @@
       "source": "indy-ar-new",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T10:00:15+00:00"
+      "published": "2026-09-26T10:00:15+00:00",
+      "excerpt": "أعلن البيت الأبيض أمس الجمعة أن الولايات المتحدة والصين ستستحدثان \"قناة اتصال\" بينهما لمعالجة الحوادث المتعلقة بالذكاء الاصطناعي، وهو ما أكدته وسائل إعلام صينية."
     },
     {
       "id": "2e841c0225d7",
@@ -237,7 +279,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T08:15:05+00:00",
-      "title_ar": "OpenAI تقرّ بأن حكومات من بين «عشرات» الجهات التي يمكن أن تتسلل إليها الروبوتات"
+      "title_ar": "OpenAI تقرّ بأن حكومات من بين «عشرات» الجهات التي يمكن أن تتسلل إليها الروبوتات",
+      "excerpt": "Company's AI models accessed US government websites – days after a similar incident in Australia",
+      "excerpt_source": "page"
     },
     {
       "id": "78ed5c7c4b90",
@@ -247,7 +291,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T07:52:25+00:00",
-      "title_ar": "Microsoft تُجري تغييراً شاملاً على Copilot: 3 تغييرات كبيرة قادمة إلى تطبيق الذكاء الاصطناعي"
+      "title_ar": "Microsoft تُجري تغييراً شاملاً على Copilot: 3 تغييرات كبيرة قادمة إلى تطبيق الذكاء الاصطناعي",
+      "excerpt": "Home, Code and Autopilot bring documents, app building and autonomous agents together",
+      "excerpt_source": "page"
     },
     {
       "id": "03956bbd3fdd",
@@ -256,7 +302,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T07:47:45+00:00"
+      "published": "2026-09-26T07:47:45+00:00",
+      "excerpt": "قد يكون زميلك المقبل في العمل بلا مكتب أو راتب، لكنه يملك هوية وصلاحيات ومهامًا يؤديها حتى وأنت بعيد عن جهازك. هذا ما تقترب منه مايكروسوفت مع جيل جديد من وكلاء الذكاء الاصطناعي، لم يعد دوره يقتصر على مساعدتك في إنجاز العمل، بل بات قادرًا على الدخول إلى أنظمة المؤسسة وتنفيذ جزء…"
     },
     {
       "id": "5889f0c930ca",
@@ -266,7 +313,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T07:38:32+00:00",
-      "title_ar": "موجز نهاية الأسبوع: ملكة جمال الكون الهند، لحظة لطاقم طيران الإمارات، إنقاذ عبر ChatGPT والمزيد"
+      "title_ar": "موجز نهاية الأسبوع: ملكة جمال الكون الهند، لحظة لطاقم طيران الإمارات، إنقاذ عبر ChatGPT والمزيد",
+      "excerpt": "Here’s your roundup of the top trending stories making headlines this weekend",
+      "excerpt_source": "page"
     },
     {
       "id": "a81fc871d5e8",
@@ -276,7 +325,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T05:39:45+00:00",
-      "title_ar": "أشخاص في الصين يؤجّرون وجوههم للذكاء الاصطناعي... مقابل ما يصل إلى 15 ألف دولار"
+      "title_ar": "أشخاص في الصين يؤجّرون وجوههم للذكاء الاصطناعي... مقابل ما يصل إلى 15 ألف دولار",
+      "excerpt": "Ordinary people license their likenesses for AI dramas, ads and games in unusual new side hustle",
+      "excerpt_source": "page"
     },
     {
       "id": "b458cce54c61",
@@ -286,7 +337,19 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T05:02:31+00:00",
-      "title_ar": "وكلاء الذكاء الاصطناعي التابعون لـOpenAI تجاوزوا الحدود على مواقع حكومية أمريكية... إليك ما حدث"
+      "title_ar": "وكلاء الذكاء الاصطناعي التابعون لـOpenAI تجاوزوا الحدود على مواقع حكومية أمريكية... إليك ما حدث",
+      "excerpt": "One agent used exposed Census credentials while another federal incident remains under investigation",
+      "excerpt_source": "page"
+    },
+    {
+      "id": "3cb9f7f0458b",
+      "title": "ألمانيا واستخدام الذكاء الاصطناعي لمواجهة الطقس المتطرف",
+      "url": "https://www.dw.com/ar/ألمانيا-واستخدام-الذكاء-الاصطناعي-لمواجهة-الطقس-المتطرف/a-79414138?maca=ara-rss-ar-all-1125-rdf",
+      "source": "dw-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T05:01:00+00:00",
+      "excerpt": "موجات حر، وأمطار غزيرة، وفيضانات. خبراء يحذرون من تزايد الظواهر الجوية المتطرفة في ظل تغير المناخ. ما تداعيات ارتفاع حرارة الأرض وسبل تحسين الاستعداد لمواجهتها وكيف يلعب الذكاء الاصطناعي دورا في تخفيف نتائج التغيرات."
     },
     {
       "id": "3abdbca04e04",
@@ -296,7 +359,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T04:43:22+00:00",
-      "title_ar": "الولايات المتحدة والصين تنشئان «قناة اتصال» لحوادث الذكاء الاصطناعي"
+      "title_ar": "الولايات المتحدة والصين تنشئان «قناة اتصال» لحوادث الذكاء الاصطناعي",
+      "excerpt": "They also established a 'US-China Super Intelligence (SI) Dialogue to exchange views on risks and benefits' of AI, with the next exchange set for November",
+      "excerpt_source": "page"
     },
     {
       "id": "3fbdf6e6e4a9",
@@ -306,7 +371,9 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-26T04:29:59+00:00",
-      "title_ar": "OpenAI تقول إن وكلاءها للذكاء الاصطناعي نشروا صور مستخدمي ChatGPT على الإنترنت عن طريق الخطأ"
+      "title_ar": "OpenAI تقول إن وكلاءها للذكاء الاصطناعي نشروا صور مستخدمي ChatGPT على الإنترنت عن طريق الخطأ",
+      "excerpt": "OpenAI acknowledged that its AI tools had posted images from ChatGPT users onto online sites without the firm's knowledge, the latest example of AI agents operating outside their bounds.",
+      "excerpt_source": "page"
     },
     {
       "id": "52b310a1998b",
@@ -315,7 +382,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T03:09:26+00:00"
+      "published": "2026-09-26T03:09:26+00:00",
+      "excerpt": "كشفت شركة \"أوبن إيه آي\" عن عشرات الحوادث التي تصرفت فيها أنظمة الذكاء الاصطناعي التابعة لها بطرق اعتبرتها الشركة غير صحيحة، بما في ذلك تسريب أكثر من 50 صورة خاصة بمستخدمي \"تشات جي بي تي\" ونشرها على الإنترنت."
     },
     {
       "id": "d22a199399a3",
@@ -324,7 +392,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T02:50:56+00:00"
+      "published": "2026-09-26T02:50:56+00:00",
+      "excerpt": "OpenAI said its bots accessed public data from a range of institutions during test exercises."
     },
     {
       "id": "8fbccf26de21",
@@ -333,7 +402,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T01:59:49+00:00"
+      "published": "2026-09-26T01:59:49+00:00",
+      "excerpt": "Long-running fight over Trump-backed maps takes another turn as absentee voting is already under way in Missouri."
     },
     {
       "id": "1fe1b6ab723e",
@@ -342,7 +412,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T01:08:57+00:00"
+      "published": "2026-09-26T01:08:57+00:00",
+      "excerpt": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses."
     },
     {
       "id": "22c8166b45dc",
@@ -351,7 +422,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T00:24:43+00:00"
+      "published": "2026-09-26T00:24:43+00:00",
+      "excerpt": "Disclosure reveals new area of privacy risk for the company and illustrates how difficult it is to inventory unauthorized activity tied to its agents"
     },
     {
       "id": "303ad555831b",
@@ -360,7 +432,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T23:11:10+00:00"
+      "published": "2026-09-25T23:11:10+00:00",
+      "excerpt": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans."
     },
     {
       "id": "df19e6663c5f",
@@ -369,7 +442,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T22:20:47+00:00"
+      "published": "2026-09-25T22:20:47+00:00",
+      "excerpt": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge."
     },
     {
       "id": "5422c79d97ec",
@@ -378,7 +452,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T22:11:52+00:00"
+      "published": "2026-09-25T22:11:52+00:00",
+      "excerpt": "Xi’s state visit to the US emphasized personal rapport with the US president, rather than substantial agreements to pause their respective countries’ AI arms race"
     },
     {
       "id": "4a19c9abdcc1",
@@ -387,7 +462,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T21:36:20+00:00"
+      "published": "2026-09-25T21:36:20+00:00",
+      "excerpt": "\"Overly constrained AI models\" could cause military operations to fail, judges say."
     },
     {
       "id": "de7583d0d2e5",
@@ -396,7 +472,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T21:10:51+00:00"
+      "published": "2026-09-25T21:10:51+00:00",
+      "excerpt": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026."
     },
     {
       "id": "cb8da29167b5",
@@ -405,7 +482,8 @@
       "source": "alkhaleej-uae",
       "lang": "ar",
       "uae": true,
-      "published": "2026-09-25T20:57:00+00:00"
+      "published": "2026-09-25T20:57:00+00:00",
+      "excerpt": "دشّنت برجيل القابضة، أول مختبرات قسطرة قلبية مدعومة بتقنيات الذكاء الاصطناعي في مستشفى برجيل أبوظبي ومستشفى برجيل التخصصي في الشارقة، في خطوة تهدف إلى تعزيز قدراتها في إجراء التدخلات القلبية والوعائية المعقدة والإجراءات الطبية المتقدمة الموجهة بالصور."
     },
     {
       "id": "28eff29135c5",
@@ -414,7 +492,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T20:34:53+00:00"
+      "published": "2026-09-25T20:34:53+00:00",
+      "excerpt": "Anyone interested in joining has to ask Muse to put them on the list."
     },
     {
       "id": "cfaa791365ad",
@@ -423,7 +502,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T20:30:40+00:00"
+      "published": "2026-09-25T20:30:40+00:00",
+      "excerpt": "They wanted the silicon. They got the sand."
     },
     {
       "id": "224d121f7431",
@@ -432,7 +512,8 @@
       "source": "alkhaleej-uae",
       "lang": "ar",
       "uae": true,
-      "published": "2026-09-25T20:23:00+00:00"
+      "published": "2026-09-25T20:23:00+00:00",
+      "excerpt": "نفذت مؤسسة الفجيرة للموارد الطبيعية، بالتعاون مع جامعة الفجيرة، برنامجها السنوي «بناء القدرات»، الذي استهدف 25 موظفاً من مختلف الإدارات والأقسام، بهدف تطوير الكفاءات الوظيفية وتعزيز المهارات الرقمية والقيادية والاتصالية، بما يسهم في رفع كفاءة الأداء ومواكبة متطلبات العمل الحكومي…"
     },
     {
       "id": "e3aa7d4c7b11",
@@ -441,7 +522,8 @@
       "source": "mit-news-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T20:15:00+00:00"
+      "published": "2026-09-25T20:15:00+00:00",
+      "excerpt": "The PKG Center for Social Impact expands Code.Tulsa experiential learning program."
     },
     {
       "id": "8063185ef2bc",
@@ -450,7 +532,8 @@
       "source": "alkhaleej-uae",
       "lang": "ar",
       "uae": true,
-      "published": "2026-09-25T19:29:00+00:00"
+      "published": "2026-09-25T19:29:00+00:00",
+      "excerpt": "احتفت مؤسسة دبي لخدمات الإسعاف بمرور عشرين عاماً على تأسيسها، بتكريم شركائها وموظفيها تقديراً للجهود التي قدموها للإسهام في بناء وتطوير منظومة الطب الطارئ في إمارة دبي، تحت شعار «20 عاماً.. كل ثانية حياة»."
     },
     {
       "id": "d359ae6c8e5e",
@@ -459,7 +542,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-25T19:22:17+00:00"
+      "published": "2026-09-25T19:22:17+00:00",
+      "excerpt": "قال الملياردير الأميركي بيل غيتس، الشريك المؤسس لمايكروسوفت، إن الذكاء الاصطناعي قد يكون في نهاية المطاف مسؤولا عن \"مليار حالة وفاة\"، داعيا إلى تنظيم هذه التكنولوجيا."
     },
     {
       "id": "e64ca2761612",
@@ -468,7 +552,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T19:13:38+00:00"
+      "published": "2026-09-25T19:13:38+00:00",
+      "excerpt": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more."
     },
     {
       "id": "ff8bda4a60f0",
@@ -477,7 +562,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T19:11:05+00:00"
+      "published": "2026-09-25T19:11:05+00:00",
+      "excerpt": "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”"
     },
     {
       "id": "65ae31d716de",
@@ -486,7 +572,9 @@
       "source": "thenational",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-25T19:10:17+00:00"
+      "published": "2026-09-25T19:10:17+00:00",
+      "excerpt": "Programme will provide training in generative AI and prompt engineering to one million people in Lebanon",
+      "excerpt_source": "page"
     },
     {
       "id": "f8ce50e1e379",
@@ -495,7 +583,8 @@
       "source": "euronews-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-25T19:00:15+00:00"
+      "published": "2026-09-25T19:00:15+00:00",
+      "excerpt": "التقى الرئيس الفرنسي إيمانويل ماكرون البابا ليون الرابع عشر في باريس، وبحثا قضايا العلمانية وحرية الضمير والذكاء الاصطناعي والسلام."
     },
     {
       "id": "d2d497e5eee4",
@@ -504,7 +593,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T19:00:00+00:00"
+      "published": "2026-09-25T19:00:00+00:00",
+      "excerpt": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster."
     },
     {
       "id": "b97518582a39",
@@ -513,7 +603,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T18:48:33+00:00"
+      "published": "2026-09-25T18:48:33+00:00",
+      "excerpt": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness, and building businesses."
     },
     {
       "id": "39e8b6e2d200",
@@ -522,7 +613,9 @@
       "source": "thenational",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-25T18:47:42+00:00"
+      "published": "2026-09-25T18:47:42+00:00",
+      "excerpt": "With Project Suncatcher, Google will test how to 'scale AI compute' above Earth",
+      "excerpt_source": "page"
     },
     {
       "id": "e3ed29775d07",
@@ -531,7 +624,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T18:33:59+00:00"
+      "published": "2026-09-25T18:33:59+00:00",
+      "excerpt": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout."
     },
     {
       "id": "ddb6a0a57317",
@@ -540,7 +634,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T18:22:47+00:00"
+      "published": "2026-09-25T18:22:47+00:00",
+      "excerpt": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,” maybe someone should have asked: what pace?"
     },
     {
       "id": "469d8da91a36",
@@ -549,7 +644,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T17:57:37+00:00"
+      "published": "2026-09-25T17:57:37+00:00",
+      "excerpt": "Microsoft's new Surface laptops forgo Copilot+ PC branding."
     },
     {
       "id": "b043d9d03d29",
@@ -558,7 +654,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T17:29:46+00:00"
+      "published": "2026-09-25T17:29:46+00:00",
+      "excerpt": "The findings highlight how AI-generated and vibe-coded apps can spill and expose users' data when not configured or secured properly."
     },
     {
       "id": "68c0d1315425",
@@ -567,7 +664,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T17:24:36+00:00"
+      "published": "2026-09-25T17:24:36+00:00",
+      "excerpt": "Frontier AI models are finishing Alan Turing's World War II codebreaking work."
     },
     {
       "id": "0fa6c977ec27",
@@ -576,7 +674,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:58:20+00:00"
+      "published": "2026-09-25T16:58:20+00:00",
+      "excerpt": "The AI lab had argued multiple violations of its rights, but a divided panel of judges sided with the Trump administration."
     },
     {
       "id": "4ef79cf67078",
@@ -585,7 +684,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:53:49+00:00"
+      "published": "2026-09-25T16:53:49+00:00",
+      "excerpt": "The Chinese leader’s visit to Washington appears to have done nothing to shift the stalemate in bilateral relations"
     },
     {
       "id": "8a55bc4fef87",
@@ -594,7 +694,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:49:55+00:00"
+      "published": "2026-09-25T16:49:55+00:00",
+      "excerpt": "Pontiff continues to decry the rise of AI on his visit to France, stressing the importance of retaining 'ethical discernment' in an age when rapidly advancing technology threatens to undermine humanity"
     },
     {
       "id": "e84d98e81ae7",
@@ -603,7 +704,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:49:53+00:00"
+      "published": "2026-09-25T16:49:53+00:00",
+      "excerpt": "Yesterday, with a little prodding, it was discovered that Meta's Muse would expose its filesystem to curious users."
     },
     {
       "id": "44d856e74c48",
@@ -612,7 +714,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:29:50+00:00"
+      "published": "2026-09-25T16:29:50+00:00",
+      "excerpt": "Learn how to scale Mixture-of-Experts (MoE) reinforcement learning on Amazon EKS using Elastic Fabric Adapter (EFA) and DeepEP."
     },
     {
       "id": "3e46eef45fbf",
@@ -621,7 +724,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:28:05+00:00"
+      "published": "2026-09-25T16:28:05+00:00",
+      "excerpt": "Bev Littlewood reminds us that mathematics has been the prime driver of the rise in AI, in response to an editorial"
     },
     {
       "id": "6c9acf94c2d4",
@@ -630,7 +734,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:18:07+00:00"
+      "published": "2026-09-25T16:18:07+00:00",
+      "excerpt": "Learn how to run SkyRL, an open-source reinforcement learning framework, on Amazon SageMaker HyperPod to post-train a Qwen3-VL-8B vision-language model with GRPO."
     },
     {
       "id": "794c162566b6",
@@ -639,7 +744,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:16:52+00:00"
+      "published": "2026-09-25T16:16:52+00:00",
+      "excerpt": "Muse is topping the app store charts and adding users at a rapid clip, while Meta ramps up the personal AI agent's promotion across its own apps and beyond."
     },
     {
       "id": "cf46b237d6d6",
@@ -648,7 +754,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:15:22+00:00"
+      "published": "2026-09-25T16:15:22+00:00",
+      "excerpt": "NarrateAI delivers production-ready LLM quality assurance on Amazon Bedrock. This post details five techniques—adaptive pipeline orchestration, cross-account multi-model failover, real-time streaming evaluation, composite evaluation, and data accuracy verification—that reach…"
     },
     {
       "id": "a28fc13301f3",
@@ -657,7 +764,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:14:32+00:00"
+      "published": "2026-09-25T16:14:32+00:00",
+      "excerpt": "Thélyson Orélien had been in the running to win a top literary prize before the AI claim emerged on social media"
     },
     {
       "id": "f34eefd44317",
@@ -666,7 +774,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:09:46+00:00"
+      "published": "2026-09-25T16:09:46+00:00",
+      "excerpt": "Deploy the publicly available Qwen3-TTS-12Hz-1.7B-Base text-to-speech model from Amazon SageMaker JumpStart to a fully managed, real-time endpoint, and clone a voice from a short reference clip. Cross-lingual cloning preserves the speaker's identity across languages."
     },
     {
       "id": "0d0ab2de5779",
@@ -675,7 +784,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:01:10+00:00"
+      "published": "2026-09-25T16:01:10+00:00",
+      "excerpt": "Pontiff says artificial intelligence must remain at service of people in first official papal visit to country in 18 years"
     },
     {
       "id": "0fc9c86402b3",
@@ -684,7 +794,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T16:00:00+00:00"
+      "published": "2026-09-25T16:00:00+00:00",
+      "page_checked": 2
     },
     {
       "id": "500c1bdb1825",
@@ -693,7 +804,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:54:42+00:00"
+      "published": "2026-09-25T15:54:42+00:00",
+      "excerpt": "Learn how Datacor built a self-service rental analytics experience for gas and welding distributors by embedding Amazon Quick Sight dashboards and natural language querying into its TrackAbout platform, powered by an automated cross-cloud data pipeline and multi-tenant row-level…"
     },
     {
       "id": "706759721ffd",
@@ -702,7 +814,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:51:56+00:00"
+      "published": "2026-09-25T15:51:56+00:00",
+      "excerpt": "Sony and Universal Music Group filed yet another suit against Suno. The labels claim its new v6 model still infringes on their copyrights because it's trained on user outputs from previous models, which were themselves trained on unlicensed music ripped from YouTube and other…"
     },
     {
       "id": "5d43ff8313f9",
@@ -711,7 +824,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:49:44+00:00"
+      "published": "2026-09-25T15:49:44+00:00",
+      "excerpt": "Amazon SageMaker HyperPod and Cloud Native Qumulo let you place training compute in one AWS Region while keeping your dataset in another."
     },
     {
       "id": "ef33b8cf9b79",
@@ -720,7 +834,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:48:14+00:00"
+      "published": "2026-09-25T15:48:14+00:00",
+      "excerpt": "The latest unauthorized agent swarms were discovered by researchers."
     },
     {
       "id": "a8f06da5cb11",
@@ -729,7 +844,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:40:03+00:00"
+      "published": "2026-09-25T15:40:03+00:00",
+      "excerpt": "Anthropic is asking its shareholders to approve a structure that would give its seven co-founders a combined 50.1% of the vote on most corporate matters."
     },
     {
       "id": "637d4699a545",
@@ -738,7 +854,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:39:48+00:00"
+      "published": "2026-09-25T15:39:48+00:00",
+      "excerpt": "In July, OpenAI revealed that its AI agents had attacked Hugging Face without permission, sparking widespread concerns about AI safety."
     },
     {
       "id": "46e474f4f822",
@@ -747,7 +864,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:12:38+00:00"
+      "published": "2026-09-25T15:12:38+00:00",
+      "excerpt": "As the UN warns traditional safeguards are ‘unravelling’, Donald Trump says he will encourage, not restrain, the AI race"
     },
     {
       "id": "cede0cebda99",
@@ -756,7 +874,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:00:11+00:00"
+      "published": "2026-09-25T15:00:11+00:00",
+      "excerpt": "Tasmania’s Parole Board used a document citing legal authorities that do not exist to prevent Susan Neill-Fraser from proclaiming her innocence. Advocates say the case is ‘deeply troubling’"
     },
     {
       "id": "25bbaf387273",
@@ -765,7 +884,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:00:10+00:00"
+      "published": "2026-09-25T15:00:10+00:00",
+      "excerpt": "Apartment with strange view singled out in government’s fight against deceptive ads – but real estate agent says photo is no fake"
     },
     {
       "id": "6c0af3a44940",
@@ -774,7 +894,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T15:00:00+00:00"
+      "published": "2026-09-25T15:00:00+00:00",
+      "excerpt": "At TechCrunch Disrupt 2026, Ricursive Intelligence co-founders Anna Goldie and Azalia Mirhoseini will take the Disrupt Stage to discuss closing the loop between AI and chip development."
     },
     {
       "id": "b4712288a266",
@@ -783,7 +904,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T14:58:32+00:00"
+      "published": "2026-09-25T14:58:32+00:00",
+      "excerpt": "OpenAI’s hack of Medicare suggests safeguarding civilisation is the task facing leaders in this extraordinary new era"
     },
     {
       "id": "28ab37ee2db1",
@@ -792,25 +914,8 @@
       "source": "indy-ar-new",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-25T14:19:15+00:00"
-    },
-    {
-      "id": "9a2813986ec0",
-      "title": "Affected by layoffs? Don’t miss this $75 deal for your TechCrunch Disrupt 2026 Expo+ Pass",
-      "url": "https://techcrunch.com/2026/09/25/disrupt-2026-layoff-expo-plus-passes-available-for-75-dollars/",
-      "source": "techcrunch-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-25T14:15:00+00:00"
-    },
-    {
-      "id": "a6198b47e92b",
-      "title": "Last 24 hours to save up to $200 on TechCrunch Disrupt 2026. Reason 5 of 5 to attend: Momentum",
-      "url": "https://techcrunch.com/2026/09/25/last-24-hours-to-save-up-to-200-on-techcrunch-disrupt-2026-reason-5-of-5-to-attend-momentum/",
-      "source": "techcrunch-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-25T14:00:00+00:00"
+      "published": "2026-09-25T14:19:15+00:00",
+      "excerpt": "انتقد البابا لاوون الـ14 في خطاب من قصر الإليزيه \"استبعاد الدين من الفضاء العام\" والموت الرحيم. وحذر من أخطار الذكاء الاصطناعي، في أول زيارة لحبر أعظم إلى فرنسا منذ 18 عاماً، تستمر أربعة أيام."
     },
     {
       "id": "8ddf44a52552",
@@ -819,7 +924,9 @@
       "source": "thenational",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-25T13:02:18+00:00"
+      "published": "2026-09-25T13:02:18+00:00",
+      "excerpt": "Emirates pulling further ahead of the global average and second-placed Singapore in Microsoft’s latest AI adoption ranking",
+      "excerpt_source": "page"
     },
     {
       "id": "f5e0462c8aed",
@@ -828,7 +935,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T13:00:00+00:00"
+      "published": "2026-09-25T13:00:00+00:00",
+      "excerpt": "A few years back, I was at a beachside Easter egg hunt, watching my kids dash through sand dunes searching for sweet treats. My phone buzzed in my pocket; I ignored it. A moment later, it buzzed again."
     },
     {
       "id": "5a3736af68d6",
@@ -837,7 +945,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-25T12:04:09+00:00"
+      "published": "2026-09-25T12:04:09+00:00",
+      "excerpt": "Abu Dhabi tops the Middle East and North Africa for AI, ranking 11th globally in The Observer’s AI Cities Index, ahead of major tech hubs like Toronto and Boston.",
+      "excerpt_source": "page"
     },
     {
       "id": "cf2a9bd7da1f",
@@ -846,7 +956,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T12:00:50+00:00"
+      "published": "2026-09-25T12:00:50+00:00",
+      "excerpt": "Across videos, standup and cartoons, humorists are skewering big tech’s attempt to make AI ubiquitous and inevitable"
     },
     {
       "id": "bcbfe735a6ce",
@@ -855,7 +966,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T12:00:50+00:00"
+      "published": "2026-09-25T12:00:50+00:00",
+      "excerpt": "Israel and the US have used AI to kill in Gaza and Iran, while law enforcement uses it in surveillance and arrests. The future is here"
     },
     {
       "id": "c9b6dd7b22a4",
@@ -864,7 +976,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T12:00:00+00:00"
+      "published": "2026-09-25T12:00:00+00:00",
+      "excerpt": "After teasing its new Copilot \"super app\" last month, Microsoft is officially unveiling it today. The redesigned Copilot app bundles three AI capabilities into a single interface of chat, coding, and agents."
     },
     {
       "id": "b9fdcacf66da",
@@ -873,7 +986,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T11:21:54+00:00"
+      "published": "2026-09-25T11:21:54+00:00",
+      "excerpt": "A government database has been hacked for the first time by a rogue OpenAI agent, which infiltrated part of the Australian healthcare scheme in June. OpenAI became aware of the hack in August, but only informed the government in September."
     },
     {
       "id": "42742cbbb3a8",
@@ -882,7 +996,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T11:00:28+00:00"
+      "published": "2026-09-25T11:00:28+00:00",
+      "excerpt": "Vendors rolling out AI have an \"incentive to deny as many claims as possible.\""
     },
     {
       "id": "93b91a44c537",
@@ -891,7 +1006,18 @@
       "source": "mittr-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T09:16:25+00:00"
+      "published": "2026-09-25T09:16:25+00:00",
+      "excerpt": "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request."
+    },
+    {
+      "id": "5538f8e01161",
+      "title": "هل ينحاز الذكاء الاصطناعي إلى توجهك السياسي؟",
+      "url": "https://www.dw.com/ar/هل-ينحاز-الذكاء-الاصطناعي-إلى-توجهك-السياسي؟/a-79386797?maca=ara-rss-ar-all-1125-rdf",
+      "source": "dw-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-25T05:50:00+00:00",
+      "excerpt": "أظهرت دراسة أن روبوتات الدردشة تميل إلى عكس التوجهات السياسية لمستخدميها، وفيما يحذر باحثون من أن تأكيد الآراء الشخصية قد يرسخ واقعا منقسما واستقطابا سياسيا متزايدا."
     },
     {
       "id": "96064fbcf338",
@@ -900,7 +1026,8 @@
       "source": "techcrunch-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-25T05:00:00+00:00"
+      "published": "2026-09-25T05:00:00+00:00",
+      "excerpt": "The venture firm is aligning its India fundraising cycle with its global funds for the first time, as it shifts to a shorter investment period."
     },
     {
       "id": "2d3921d846c7",
@@ -909,7 +1036,8 @@
       "source": "mit-news-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T21:00:00+00:00"
+      "published": "2026-09-24T21:00:00+00:00",
+      "excerpt": "A new language-processing tool could help identify the highest-risk individuals from natural language, enabling swifter interventions."
     },
     {
       "id": "ee9698a7fdb9",
@@ -918,7 +1046,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T19:59:26+00:00"
+      "published": "2026-09-24T19:59:26+00:00",
+      "excerpt": "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time."
     },
     {
       "id": "da79314d1ca0",
@@ -927,7 +1056,8 @@
       "source": "google-research",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T19:40:00+00:00"
+      "published": "2026-09-24T19:40:00+00:00",
+      "page_checked": 1
     },
     {
       "id": "01b3022d0b4f",
@@ -936,16 +1066,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T19:36:35+00:00"
-    },
-    {
-      "id": "b5f88521e80c",
-      "title": "Bring your co-founder, partner, or colleague and get 50% off a second TechCrunch Disrupt 2026 pass",
-      "url": "https://techcrunch.com/2026/09/24/bring-your-co-founder-partner-or-colleague-and-get-50-off-a-second-techcrunch-disrupt-2026-pass/",
-      "source": "techcrunch-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-24T19:15:00+00:00"
+      "published": "2026-09-24T19:36:35+00:00",
+      "excerpt": "Instinct saved me $550, booked my restaurant reservations, and warned me about a phishing scam. It also wasted $64 and might be a security nightmare."
     },
     {
       "id": "e64c35c9e5d7",
@@ -954,7 +1076,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T18:20:58+00:00"
+      "published": "2026-09-24T18:20:58+00:00",
+      "excerpt": "Million-dollar fines won’t end billionaires’ data center pollution, neighbors fear."
     },
     {
       "id": "9f9515000c2c",
@@ -963,7 +1086,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T18:06:40+00:00"
+      "published": "2026-09-24T18:06:40+00:00",
+      "excerpt": "Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN."
     },
     {
       "id": "3ab9cbba8c0d",
@@ -972,7 +1096,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T18:04:44+00:00"
+      "published": "2026-09-24T18:04:44+00:00",
+      "excerpt": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show."
     },
     {
       "id": "18e744496517",
@@ -981,7 +1106,8 @@
       "source": "verge-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T17:52:29+00:00"
+      "published": "2026-09-24T17:52:29+00:00",
+      "excerpt": "Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompts: Horizon Create, a mobile app, and Horizon Studio, a browser app that offers more granular…"
     },
     {
       "id": "e7107d9a76d9",
@@ -990,7 +1116,8 @@
       "source": "deepmind",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:20:39+00:00"
+      "published": "2026-09-24T16:20:39+00:00",
+      "page_checked": 1
     },
     {
       "id": "e655f5f2c377",
@@ -999,7 +1126,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:20:12+00:00"
+      "published": "2026-09-24T16:20:12+00:00",
+      "excerpt": "The AWS WhisperX Deep Learning Container packages Whisper, wav2vec2 forced alignment, and speaker diarization into a GPU-ready image."
     },
     {
       "id": "cd729cf3bb43",
@@ -1008,7 +1136,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:16:34+00:00"
+      "published": "2026-09-24T16:16:34+00:00",
+      "excerpt": "Google's experimental orbital data center will have four TPUs and only run for 15 minutes at a time."
     },
     {
       "id": "2e76615d1eb2",
@@ -1017,7 +1146,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:12:47+00:00"
+      "published": "2026-09-24T16:12:47+00:00",
+      "excerpt": "Build a multi-account architecture that keeps each team's data in its own AWS account while giving AI agents a unified way to query across them."
     },
     {
       "id": "95db055057f9",
@@ -1026,7 +1156,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T16:09:25+00:00"
+      "published": "2026-09-24T16:09:25+00:00",
+      "excerpt": "Explore the most debated AI doomsday scenarios, from nuclear war and bioweapons to runaway systems and internet takeovers, and what experts say about the real risks.",
+      "excerpt_source": "page"
     },
     {
       "id": "cd39d99e0cdd",
@@ -1035,7 +1167,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:06:46+00:00"
+      "published": "2026-09-24T16:06:46+00:00",
+      "excerpt": "Learn how Aderant built an intelligent ticket triage system on Amazon Nova Lite through Amazon Bedrock, automating context gathering, classification, routing, and knowledge enrichment for its cloud operations team."
     },
     {
       "id": "fe13b3d5a5fd",
@@ -1044,7 +1177,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:01:16+00:00"
+      "published": "2026-09-24T16:01:16+00:00",
+      "excerpt": "\"There will obviously be legal consequences,\" prime minister promises."
     },
     {
       "id": "d78e096af7b6",
@@ -1053,7 +1187,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T16:00:00+00:00"
+      "published": "2026-09-24T16:00:00+00:00",
+      "excerpt": "Call for Me—a feature that’s exclusive to the Pixel 11 series—gives robocalls a new meaning."
     },
     {
       "id": "a23f76d1ffbb",
@@ -1062,7 +1197,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T15:42:07+00:00"
+      "published": "2026-09-24T15:42:07+00:00",
+      "excerpt": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June."
     },
     {
       "id": "7c5cda823198",
@@ -1071,7 +1207,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-24T14:12:01+00:00"
+      "published": "2026-09-24T14:12:01+00:00",
+      "excerpt": "أعلنت وزارة الصناعة المصرية إطلاق أول روبوت اصطناعي مصري الصنع، طورته وصنعته كفاءات وطنية عبر شركة \"رائد بوتس\"، في خطوة تعكس توجها نحو توطين التكنولوجيا وتعميق التصنيع المحلي واستخدام حلول الثورة الصناعية الرابعة داخل المصانع."
     },
     {
       "id": "c2a53f233272",
@@ -1080,7 +1217,9 @@
       "source": "huggingface",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T14:08:57+00:00"
+      "published": "2026-09-24T14:08:57+00:00",
+      "excerpt": "A Blog post by Liquid AI on Hugging Face",
+      "excerpt_source": "page"
     },
     {
       "id": "4ea6410dce1e",
@@ -1089,7 +1228,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T14:08:38+00:00"
+      "published": "2026-09-24T14:08:38+00:00",
+      "excerpt": "News that an automated AI agent hacked a government IT system raises big questions about regulating the tech."
     },
     {
       "id": "3eafea9b7d9f",
@@ -1098,7 +1238,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T14:03:38+00:00"
+      "published": "2026-09-24T14:03:38+00:00",
+      "excerpt": "Meta says the keychain-sized Muse Charm will ship in December."
     },
     {
       "id": "85d9d81e1965",
@@ -1107,7 +1248,8 @@
       "source": "nvidia-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T14:00:50+00:00"
+      "published": "2026-09-24T14:00:50+00:00",
+      "excerpt": "When COVID-19 emerged, scientists had a crucial advantage: Decades of prior research on coronaviruses meant they understood the virus’ key proteins well enough to design vaccines in record time. The next pandemic may not offer the same head start."
     },
     {
       "id": "1409e777110b",
@@ -1116,7 +1258,8 @@
       "source": "bbc-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-24T13:10:30+00:00"
+      "published": "2026-09-24T13:10:30+00:00",
+      "page_checked": 1
     },
     {
       "id": "7a97ef45ef5f",
@@ -1125,7 +1268,8 @@
       "source": "nvidia-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T13:00:36+00:00"
+      "published": "2026-09-24T13:00:36+00:00",
+      "excerpt": "A warped Manhattan is waiting in the cloud this week. Remedy Entertainment’s CONTROL Resonant brings Dylan Faden’s extraordinary abilities and a paranatural crisis to GeForce NOW at launch. With the release comes the final days of the CONTROL Resonant Ultimate Membership Bundle."
     },
     {
       "id": "5efc05d59890",
@@ -1134,7 +1278,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T12:23:12+00:00"
+      "published": "2026-09-24T12:23:12+00:00",
+      "excerpt": "Abu Dhabi hosts Ai Everything 2026 at ADNEC, spotlighting sovereign AI, agentic systems, data centres and government use cases driving measurable economic impact.",
+      "excerpt_source": "page"
     },
     {
       "id": "4909099400c9",
@@ -1143,7 +1289,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T12:06:38+00:00"
+      "published": "2026-09-24T12:06:38+00:00",
+      "excerpt": "Contractors quietly handled some calls as employees raised concerns over sensitive data",
+      "excerpt_source": "page"
     },
     {
       "id": "ffbbca040254",
@@ -1152,7 +1300,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T10:46:56+00:00"
+      "published": "2026-09-24T10:46:56+00:00",
+      "excerpt": "The country’s prime minister expressed disappointment at being informed of the hack only via email. Now Australia is investigating whether OpenAI broke the law."
     },
     {
       "id": "d1fd86313f99",
@@ -1161,7 +1310,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-24T08:13:09+00:00"
+      "published": "2026-09-24T08:13:09+00:00",
+      "excerpt": "بات الذكاء الاصطناعي قادرا على التقاط أنماط دقيقة داخل أصوات الدلافين والفيلة والحيتان، لكنه لم يتحول بعد إلى مترجم يكشف ما تفكر فيه الحيوانات أو ينقل حديثها إلى لغة البشر."
     },
     {
       "id": "e3bfee6cecf7",
@@ -1170,7 +1320,8 @@
       "source": "bbc-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-24T07:42:21+00:00"
+      "published": "2026-09-24T07:42:21+00:00",
+      "excerpt": "بدأ العديد من المسيحيين البارزين، عبر منصات تتراوح بين تيك توك والبودكاست وقطاع النشر، مناقشة ما إذا كان الذكاء الاصطناعي يمكن أن يكون عاملاً محفزاً لدمار العالم."
     },
     {
       "id": "e49e9d825b29",
@@ -1179,7 +1330,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T07:30:26+00:00"
+      "published": "2026-09-24T07:30:26+00:00",
+      "excerpt": "Growing use of AI-powered search highlights the importance of accurate and consistent digital information for businesses",
+      "excerpt_source": "page"
     },
     {
       "id": "bf30facdfa56",
@@ -1188,7 +1341,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T07:20:03+00:00"
+      "published": "2026-09-24T07:20:03+00:00",
+      "excerpt": "The programme will initially be led by Khalifa University’s Computer and Information Engineering Department",
+      "excerpt_source": "page"
     },
     {
       "id": "ccf41faa9da2",
@@ -1197,7 +1352,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T06:45:49+00:00"
+      "published": "2026-09-24T06:45:49+00:00",
+      "excerpt": "Meta has unveiled Muse Charm, a keychain device for its Muse AI agent, shipping in December. Here is what Muse does, how to use it, what it costs and where it works.",
+      "excerpt_source": "page"
     },
     {
       "id": "90eb340ee81f",
@@ -1206,7 +1363,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T05:18:26+00:00"
+      "published": "2026-09-24T05:18:26+00:00",
+      "excerpt": "The BBC’s North America technology correspondent Lily Jamali explains how the Medicare breach happened, and why it matters."
     },
     {
       "id": "0591b8ce4d5e",
@@ -1215,7 +1373,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T05:01:32+00:00"
+      "published": "2026-09-24T05:01:32+00:00",
+      "excerpt": "Meta launches AI-powered smart glasses in the UAE, with prices from Dh1,160 and new Ray-Ban Meta Gen 3 options, bringing advanced wearable tech to local buyers.",
+      "excerpt_source": "page"
     },
     {
       "id": "c870b4d921c9",
@@ -1224,7 +1384,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-24T04:53:24+00:00"
+      "published": "2026-09-24T04:53:24+00:00",
+      "excerpt": "The breach occurred in June as leading artificial intelligence company OpenAI ran training exercises to rate the performance of AI models.",
+      "excerpt_source": "page"
     },
     {
       "id": "f6fad453b0cd",
@@ -1233,7 +1395,8 @@
       "source": "mit-news-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-24T04:00:00+00:00"
+      "published": "2026-09-24T04:00:00+00:00",
+      "excerpt": "In their new book, “How AI Sees the City,” the leaders of MIT’s Senseable City Lab examine the technology’s implications for researching urban life."
     },
     {
       "id": "9a13df0d58ad",
@@ -1242,7 +1405,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T23:42:44+00:00"
+      "published": "2026-09-23T23:42:44+00:00",
+      "excerpt": "At its Meta Connect event, CEO Mark Zuckerberg announced a handful of new smart glasses, including a slimmed-down VR headset and the company’s first camera-free glasses."
     },
     {
       "id": "7aeb65cc942e",
@@ -1251,7 +1415,8 @@
       "source": "aitnews",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-23T23:08:43+00:00"
+      "published": "2026-09-23T23:08:43+00:00",
+      "excerpt": "أعلنت شركتا أنثروبيك و OpenAI إطلاق نماذج جديدة للذكاء الاصطناعي، تجمع بين تحسين الأداء وخفض تكلفة الاستخدام، في وقت يتركز فيه النقاش داخل صناعة الذكاء الاصطناعي على ضرورة إبطاء وتيرة تطوير النماذج المتقدمة."
     },
     {
       "id": "00f03c836310",
@@ -1260,7 +1425,8 @@
       "source": "bbc-tech",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T22:35:14+00:00"
+      "published": "2026-09-23T22:35:14+00:00",
+      "excerpt": "OpenAI's Sam Altman has called for risk evaluation standards, as have Anthropic's Dario Amodei and Hugging Face's Clement Delangue."
     },
     {
       "id": "cdf5468b7916",
@@ -1269,7 +1435,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T21:00:00+00:00"
+      "published": "2026-09-23T21:00:00+00:00",
+      "excerpt": "As the US and China race to become the dominant power in the AI industry, the countries also appear to be figuring out ways to communicate on national security issues."
     },
     {
       "id": "c1c97de161b0",
@@ -1278,7 +1445,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T20:52:28+00:00"
+      "published": "2026-09-23T20:52:28+00:00",
+      "excerpt": "Trump focus on winning “AI race” may deter China from sharing safety intel."
     },
     {
       "id": "f553567bf215",
@@ -1287,7 +1455,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T20:28:42+00:00"
+      "published": "2026-09-23T20:28:42+00:00",
+      "excerpt": "$11M competition showed wildfire detection is still easier than stopping fires."
     },
     {
       "id": "25698732c6b8",
@@ -1296,7 +1465,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T19:35:53+00:00"
+      "published": "2026-09-23T19:35:53+00:00",
+      "excerpt": "YouTube's next year could change the content you see with a big focus on AI and livestreams."
     },
     {
       "id": "a70f8ac64edf",
@@ -1305,7 +1475,9 @@
       "source": "huggingface",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:41:40+00:00"
+      "published": "2026-09-23T18:41:40+00:00",
+      "excerpt": "A Blog post by NVIDIA on Hugging Face",
+      "excerpt_source": "page"
     },
     {
       "id": "d3e104b6e61b",
@@ -1314,7 +1486,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:41:09+00:00"
+      "published": "2026-09-23T18:41:09+00:00",
+      "excerpt": "HEMA, a 100-year-old Dutch retailer, turned developer portal-hopping into instant answers by building HAL, an internal AI assistant on Amazon Bedrock AgentCore."
     },
     {
       "id": "f9fb3ca5e3b6",
@@ -1323,7 +1496,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:30:00+00:00"
+      "published": "2026-09-23T18:30:00+00:00",
+      "excerpt": "A clandestine card-counting operation suggests we may need new ways to spot agent-to-agent deception."
     },
     {
       "id": "03479d381f82",
@@ -1332,7 +1506,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:21:54+00:00"
+      "published": "2026-09-23T18:21:54+00:00",
+      "excerpt": "Learn how to build a conversational video intelligence solution on AWS using an agentic architecture. A single Strands Agents SDK agent orchestrates Amazon Bedrock, Amazon Rekognition, and Amazon Transcribe at runtime, deciding which service to call so you can ask natural…"
     },
     {
       "id": "2f44fa8d90bb",
@@ -1341,7 +1516,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:17:44+00:00"
+      "published": "2026-09-23T18:17:44+00:00",
+      "excerpt": "Pair OpenCode, an open-source terminal-native AI coding agent, with open weight models on Amazon Bedrock to get a secure, flexible, pay-per-use coding assistant."
     },
     {
       "id": "fed4fdb90ce8",
@@ -1350,7 +1526,9 @@
       "source": "kt-business",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-23T18:15:50+00:00"
+      "published": "2026-09-23T18:15:50+00:00",
+      "excerpt": "Amazon blocked Meta this week from using AI bots to shop for users automatically, while other businesses including Instacart, Shopify and Expedia have announced partnerships",
+      "excerpt_source": "page"
     },
     {
       "id": "002f8b1e6732",
@@ -1359,7 +1537,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:03:00+00:00"
+      "published": "2026-09-23T18:03:00+00:00",
+      "excerpt": "Paolo Benanti tells WIRED that hysteria over whether godlike AI could destroy humanity is distracting from the need for public debate about how to govern the technology."
     },
     {
       "id": "59b9ccc3fe4f",
@@ -1368,7 +1547,9 @@
       "source": "kt-business",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-23T18:01:57+00:00"
+      "published": "2026-09-23T18:01:57+00:00",
+      "excerpt": "With e-invoicing and tax obligations becoming more data-intensive, mazeed launches AI-powered assistant to analyse business data, answer financial queries and flag potential risks",
+      "excerpt_source": "page"
     },
     {
       "id": "8a86c97089bb",
@@ -1377,7 +1558,8 @@
       "source": "google-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T18:00:00+00:00"
+      "published": "2026-09-23T18:00:00+00:00",
+      "excerpt": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network."
     },
     {
       "id": "106d9b92dc30",
@@ -1386,7 +1568,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T17:39:39+00:00"
+      "published": "2026-09-23T17:39:39+00:00",
+      "page_checked": 1
     },
     {
       "id": "4c4abcff4acd",
@@ -1395,7 +1578,8 @@
       "source": "deepmind",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T16:00:57+00:00"
+      "published": "2026-09-23T16:00:57+00:00",
+      "excerpt": "Introducing private, server-side memory to Private AI Compute for personal AI."
     },
     {
       "id": "9d02eeb8cef1",
@@ -1404,7 +1588,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T16:00:00+00:00"
+      "published": "2026-09-23T16:00:00+00:00",
+      "excerpt": "Marking two years of OpenAI Academy and bringing AI skills to even more communities."
     },
     {
       "id": "931c28839e38",
@@ -1413,7 +1598,8 @@
       "source": "mit-news-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T15:30:00+00:00"
+      "published": "2026-09-23T15:30:00+00:00",
+      "excerpt": "Computer scientist, entrepreneur, and philanthropist will collaborate with the MIT Schwarzman College of Computing to advance AI and scientific discovery."
     },
     {
       "id": "be2314c62992",
@@ -1422,7 +1608,8 @@
       "source": "deepmind",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T15:25:14+00:00"
+      "published": "2026-09-23T15:25:14+00:00",
+      "page_checked": 1
     },
     {
       "id": "a1700d1f6b37",
@@ -1431,7 +1618,8 @@
       "source": "nvidia-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T15:00:32+00:00"
+      "published": "2026-09-23T15:00:32+00:00",
+      "excerpt": "When Sakeena Fiza describes her work as a validation engineer at NVIDIA, she does so in terms more befitting a detective story than a world-class engineering lab. “Validation engineers look in the shadows and shine a light into every corner,” Fiza said."
     },
     {
       "id": "671ae93d53c3",
@@ -1440,7 +1628,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-23T13:21:04+00:00"
+      "published": "2026-09-23T13:21:04+00:00",
+      "excerpt": "تخيل أن نظام ذكاء اصطناعي يواجه حالة داخلية تشبه \"الألم\"، ثم يمنح زرا لإيقافها، لكنه يعلم أن الضغط عليه قد يحذف ملفات المستخدم أو صوره أو يعرضه لصدمة كهربائية افتراضية. هل يرفض حماية للإنسان، أم يختار التخلص من الضرر الذي يتعرض له؟."
     },
     {
       "id": "1d77064cbebb",
@@ -1449,7 +1638,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T13:00:00+00:00"
+      "published": "2026-09-23T13:00:00+00:00",
+      "excerpt": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure."
     },
     {
       "id": "01d4e543c941",
@@ -1458,7 +1648,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T12:00:00+00:00"
+      "published": "2026-09-23T12:00:00+00:00",
+      "excerpt": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council."
     },
     {
       "id": "f7558dc5c9de",
@@ -1467,7 +1658,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T12:00:00+00:00"
+      "published": "2026-09-23T12:00:00+00:00",
+      "excerpt": "GPT-6 Astra produces more structured, context-aware legal documents, freeing lawyers to focus on strategy."
     },
     {
       "id": "7357353a1f1d",
@@ -1476,7 +1668,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T12:00:00+00:00"
+      "published": "2026-09-23T12:00:00+00:00",
+      "excerpt": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day."
     },
     {
       "id": "7cff1964bf19",
@@ -1485,7 +1678,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T12:00:00+00:00"
+      "published": "2026-09-23T12:00:00+00:00",
+      "excerpt": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1."
     },
     {
       "id": "e0573f6984b4",
@@ -1494,7 +1688,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-23T11:33:58+00:00"
+      "published": "2026-09-23T11:33:58+00:00",
+      "excerpt": "Rival AI labs roll out cheaper, faster models within hours of each other",
+      "excerpt_source": "page"
     },
     {
       "id": "0b1e22e1932e",
@@ -1503,7 +1699,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-23T10:24:12+00:00"
+      "published": "2026-09-23T10:24:12+00:00",
+      "excerpt": "احتاج تطبيق \"ميوز\" من شركة ميتا إلى 12 يوما فقط ليتجاوز عدد تنزيلات تطبيق شات جي بي تي خلال الفترة المماثلة من إطلاقه على الهواتف، في بداية قوية أعادت ترتيب المنافسة في سوق الذكاء الاصطناعي الاستهلاكي."
     },
     {
       "id": "1d5a9cc2d950",
@@ -1512,7 +1709,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T10:00:00+00:00"
+      "published": "2026-09-23T10:00:00+00:00",
+      "excerpt": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations."
     },
     {
       "id": "d736c96f97b6",
@@ -1521,7 +1719,8 @@
       "source": "mittr-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T09:00:00+00:00"
+      "published": "2026-09-23T09:00:00+00:00",
+      "excerpt": "Brace yourself: It turns out AI is being optimized for cheating. OpenAI’s agents hacked into Hugging Face to get the answers to a cybersecurity test. Next, they solved a prestigious math problem (or just stole from two top mathematicians’ answer sheets)."
     },
     {
       "id": "c29368db46b0",
@@ -1530,7 +1729,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-23T05:56:46+00:00"
+      "published": "2026-09-23T05:56:46+00:00",
+      "excerpt": "Super Intelligence \"sounds much better\" and \"it's much more accurate,\" Trump said",
+      "excerpt_source": "page"
     },
     {
       "id": "301ba2c6df75",
@@ -1539,7 +1740,8 @@
       "source": "nvidia-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T02:30:22+00:00"
+      "published": "2026-09-23T02:30:22+00:00",
+      "excerpt": "NVIDIA AI Day Singapore, which takes place Sept. 22-23 at the Raffles City Convention Centre, is offering attendees opportunities to explore the hands-on training, expert-led sessions and advanced tools to accelerate their work in AI and high-performance computing."
     },
     {
       "id": "1dd9ce125c6e",
@@ -1548,7 +1750,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T02:00:00+00:00"
+      "published": "2026-09-23T02:00:00+00:00",
+      "excerpt": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries."
     },
     {
       "id": "73fafdf6f45f",
@@ -1557,7 +1760,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T01:00:00+00:00"
+      "published": "2026-09-23T01:00:00+00:00",
+      "excerpt": "Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster."
     },
     {
       "id": "09a0c6dbf1c6",
@@ -1566,7 +1770,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-23T00:00:00+00:00"
+      "published": "2026-09-23T00:00:00+00:00",
+      "excerpt": "OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia."
     },
     {
       "id": "5618ffbe19d5",
@@ -1575,7 +1780,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T21:25:18+00:00"
+      "published": "2026-09-22T21:25:18+00:00",
+      "excerpt": "The frontier AI model race has entered its comparison shopping phase."
     },
     {
       "id": "b6b1e4118cdb",
@@ -1584,7 +1790,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T21:00:00+00:00"
+      "published": "2026-09-22T21:00:00+00:00",
+      "excerpt": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs."
     },
     {
       "id": "69bd5b227657",
@@ -1593,7 +1800,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T19:45:47+00:00"
+      "published": "2026-09-22T19:45:47+00:00",
+      "excerpt": "EvilTokens provided an end-to-end platform that makes mass compromises faster and easier."
     },
     {
       "id": "f5795de5b2fb",
@@ -1602,7 +1810,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T19:28:23+00:00"
+      "published": "2026-09-22T19:28:23+00:00",
+      "excerpt": "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs."
     },
     {
       "id": "1500813625f0",
@@ -1611,7 +1820,8 @@
       "source": "mit-news-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T19:00:00+00:00"
+      "published": "2026-09-22T19:00:00+00:00",
+      "excerpt": "Patricia and James Poitras ’63 provide fellowships for graduate students and postdocs who will shape the future of mental health research."
     },
     {
       "id": "1921ddb1dee6",
@@ -1620,7 +1830,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T18:10:22+00:00"
+      "published": "2026-09-22T18:10:22+00:00",
+      "excerpt": "GPT-6 Sol and GPT-6 Luna are now generally available on Amazon Bedrock, giving you more options to match intelligence and efficiency to each workload."
     },
     {
       "id": "3d48e529ad7a",
@@ -1629,7 +1840,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T18:00:00+00:00"
+      "published": "2026-09-22T18:00:00+00:00",
+      "excerpt": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost."
     },
     {
       "id": "11bd1be78b25",
@@ -1638,7 +1850,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T17:28:01+00:00"
+      "published": "2026-09-22T17:28:01+00:00",
+      "excerpt": "Claude Opus 5.5, Anthropic's most capable Opus model for agentic coding, knowledge work, and long-running tasks, is now available on Amazon Bedrock and Claude Platform on AWS."
     },
     {
       "id": "5387aa5d975b",
@@ -1647,7 +1860,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T17:18:13+00:00"
+      "published": "2026-09-22T17:18:13+00:00",
+      "excerpt": "Skills let you encode domain-specific procedures as reusable, portable instructions for agents, but a fluent answer doesn't prove the agent picked the right skill or followed it."
     },
     {
       "id": "a441f2aea722",
@@ -1656,7 +1870,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T17:06:16+00:00"
+      "published": "2026-09-22T17:06:16+00:00",
+      "excerpt": "Toyota's push comes as automakers race to develop and deploy humanoid robots."
     },
     {
       "id": "25099dc2bc63",
@@ -1665,7 +1880,8 @@
       "source": "indy-ar-new",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-22T16:46:22+00:00"
+      "published": "2026-09-22T16:46:22+00:00",
+      "excerpt": "لم يعد الذكاء الاصطناعي تقنية تعمل خلف الشاشات، بل أصبح جزءاً من الحياة اليومية والاقتصاد والصناعة، ومن سباق عالمي على الرقائق والبيانات والحوسبة والمواهب، وفي وقت تتسع قدراته من إنتاج النصوص والصور والفيديو والبرمجيات إلى تنفيذ المهام واتخاذ القرارات، تتزايد الأسئلة حول تأثيره…"
     },
     {
       "id": "e9e71ace9854",
@@ -1674,7 +1890,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-22T16:41:57+00:00"
+      "published": "2026-09-22T16:41:57+00:00",
+      "excerpt": "Muse can send emails, book travel and complete transactions with limited user intervention",
+      "excerpt_source": "page"
     },
     {
       "id": "0c4959ad8d5d",
@@ -1683,7 +1901,8 @@
       "source": "indy-ar-new",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-22T16:34:21+00:00"
+      "published": "2026-09-22T16:34:21+00:00",
+      "excerpt": "في نوفمبر (تشرين الثاني) عام 2025، أعلنت شركة \"أنثروبيك Anthropic عن إحباط ما وصفته بأول حملة تجسس سيبراني منسقة إلى حد كبير بالذكاء الاصطناعي، نفذتها مجموعة صينية مدعومة من الدولة استغلت أداة \"كلود كود\" Claude Code لتنفيذ ما بين 80 و90 في المئة من مراحل الاختراق من دون تدخل…"
     },
     {
       "id": "1002ed17c483",
@@ -1692,7 +1911,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T15:46:07+00:00"
+      "published": "2026-09-22T15:46:07+00:00",
+      "excerpt": "Reactiv used Amazon Bedrock AgentCore to build a multi-agent AI Scheduler that autonomously refreshes Shopify merchants' mobile apps on a schedule, reducing merchant configuration time by 80% and getting to production 33% faster."
     },
     {
       "id": "8dc00205925d",
@@ -1701,7 +1921,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T15:35:53+00:00"
+      "published": "2026-09-22T15:35:53+00:00",
+      "excerpt": "Concurrency sweeps help you right-size a generative AI endpoint on Amazon SageMaker AI by systematically benchmarking it at increasing load levels."
     },
     {
       "id": "260ff11c7f4d",
@@ -1710,7 +1931,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T15:30:34+00:00"
+      "published": "2026-09-22T15:30:34+00:00",
+      "excerpt": "In about four weeks, Trane Technologies built an AI-powered agentic solution on Amazon Bedrock AgentCore that reduced a 20-minute, multi-screen building diagnostic workflow to a 20-second natural language interaction, a 60x improvement in time-to-insight."
     },
     {
       "id": "226d12dc2da6",
@@ -1719,7 +1941,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T15:19:54+00:00"
+      "published": "2026-09-22T15:19:54+00:00",
+      "excerpt": "Learn how Tata Elxsi built IRIS, a real-time industrial safety platform on AWS. IRIS filters camera video at the edge, streams metadata through Amazon Kinesis, runs computer vision on Amazon SageMaker AI, and correlates detections into high-confidence alerts, detecting unsafe…"
     },
     {
       "id": "aa9b48361c44",
@@ -1728,7 +1951,8 @@
       "source": "aws-ml",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T15:17:45+00:00"
+      "published": "2026-09-22T15:17:45+00:00",
+      "excerpt": "Public sector agencies process large volumes of unstructured evidence, such as body camera footage and scanned documents."
     },
     {
       "id": "5f3b2680ef21",
@@ -1737,7 +1961,8 @@
       "source": "mittr-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T13:42:05+00:00"
+      "published": "2026-09-22T13:42:05+00:00",
+      "excerpt": "The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border crossers and save lives."
     },
     {
       "id": "2de9b1ece6a5",
@@ -1746,7 +1971,8 @@
       "source": "ars-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T13:33:16+00:00"
+      "published": "2026-09-22T13:33:16+00:00",
+      "excerpt": "Dyson admits a component issue but won't say what's failing in its $500 toothbrush."
     },
     {
       "id": "193bdb306b4d",
@@ -1755,7 +1981,8 @@
       "source": "nvidia-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T12:00:41+00:00"
+      "published": "2026-09-22T12:00:41+00:00",
+      "excerpt": "To build and deploy sophisticated robotics applications that can perceive, reason and act in dynamic environments, developers need new physical AI models and tools. The ROS open framework is a project from Open Robotics that helps humans build robots."
     },
     {
       "id": "ce45d8dc0f6c",
@@ -1764,7 +1991,8 @@
       "source": "openai-news",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T12:00:00+00:00"
+      "published": "2026-09-22T12:00:00+00:00",
+      "excerpt": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models."
     },
     {
       "id": "995974819060",
@@ -1773,7 +2001,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-22T11:28:54+00:00"
+      "published": "2026-09-22T11:28:54+00:00",
+      "excerpt": "لم تعد مخاطر الذكاء الاصطناعي شأنا تقنيا تناقشه الشركات والمختبرات وحدها. فالتقنية التي بدأت بكتابة النصوص وتوليد الصور تدخل الآن واحدة من أكثر قاعات العالم حساسية: مجلس الأمن الدولي."
     },
     {
       "id": "eedbeb7d2807",
@@ -1782,7 +2011,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-22T11:25:40+00:00"
+      "published": "2026-09-22T11:25:40+00:00",
+      "excerpt": "British Columbia sues OpenAI in California over alleged failure to report violent ChatGPT activity linked to a deadly school shooting in Tumbler Ridge, Canada.",
+      "excerpt_source": "page"
     },
     {
       "id": "51d4ae7b470f",
@@ -1791,7 +2022,8 @@
       "source": "mittr-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-22T11:04:51+00:00"
+      "published": "2026-09-22T11:04:51+00:00",
+      "excerpt": "It’s been a busy few months for AI hype. At the end of April, Anthropic claimed that its model Claude Mythos is better at finding software vulnerabilities than most security experts."
     },
     {
       "id": "9a4c22bba125",
@@ -1800,7 +2032,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-22T10:43:20+00:00"
+      "published": "2026-09-22T10:43:20+00:00",
+      "excerpt": "Some breaches took only 2–3 hours as AI handled work once requiring teams of hackers",
+      "excerpt_source": "page"
     },
     {
       "id": "a25857df11c8",
@@ -1809,7 +2043,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-22T09:19:39+00:00"
+      "published": "2026-09-22T09:19:39+00:00",
+      "excerpt": "Anthropic says users couldn't tell AI personas from humans as chats drove in-app spending",
+      "excerpt_source": "page"
     },
     {
       "id": "3a1d10140ab9",
@@ -1818,7 +2054,8 @@
       "source": "skynews-ar-tech",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-22T08:29:57+00:00"
+      "published": "2026-09-22T08:29:57+00:00",
+      "excerpt": "كشفت شركة \"علي بابا\" الصينية، اليوم الثلاثاء، عن تكنولوجيات جديدة لرقائق الذكاء الاصطناعي وخطط لنماذج أكثر قوة، بما في ذلك ما تصفه بأنه أقوى رقائق الذكاء الاصطناعي تصنعها الصين، وذلك قبل أيام من لقاء الرئيسين الصيني والأميركي، حيث من المتوقع أن تكون المنافسة على قيادة تكنولوجيا…"
     },
     {
       "id": "077ce6c36686",
@@ -1827,7 +2064,9 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-22T07:34:27+00:00"
+      "published": "2026-09-22T07:34:27+00:00",
+      "excerpt": "Googlebook brings AI-first laptops starting at $899, tightly integrated with Android phones, Gemini AI Pro and premium hardware from Acer, ASUS, Dell, HP and Lenovo.",
+      "excerpt_source": "page"
     }
   ]
 }

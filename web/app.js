@@ -117,9 +117,9 @@
   // An empty view keeps the URL without a hash.
   function pageUrl(path, qs, view) { return (path || '') + (qs ? '?' + qs : '') + (view ? '#' + view : ''); }
   const NOUNS = {
-    product: {en: ['product', 'products'], ar: ['منتج واحد', 'منتجان', 'منتجات', 'منتجًا', 'منتج']},
-    headline: {en: ['headline', 'headlines'], ar: ['عنوان واحد', 'عنوانان', 'عناوين', 'عنوانًا', 'عنوان']},
-    token: {en: ['token', 'tokens'], ar: ['رمز واحد', 'رمزان', 'رموز', 'رمزًا', 'رمز']}
+    product: {en: ['product', 'products'], ar: ['منتج واحد', 'منتجان', 'منتجات', 'منتجاً', 'منتج']},
+    headline: {en: ['headline', 'headlines'], ar: ['عنوان واحد', 'عنوانان', 'عناوين', 'عنواناً', 'عنوان']},
+    token: {en: ['token', 'tokens'], ar: ['رمز واحد', 'رمزان', 'رموز', 'رمزاً', 'رمز']}
   };
   // Number + noun: English plural, Arabic number agreement (1, 2, 3-10, 11-99, 100+). Same rules as cnt() in build.py.
   // `show` formats the number for display (for example 131,072) without changing the agreement.
@@ -158,8 +158,7 @@
     'Compare GPUs, desktop systems, servers and racks.':'قارن معالجات الرسوميات والأجهزة المكتبية والخوادم والرفوف.',
     'One-page PDF':'ملف PDF من صفحة واحدة','Export CSV':'تصدير CSV','Copy link':'نسخ الرابط','Link copied':'تم نسخ الرابط','Print table':'طباعة الجدول',
     'Theme: Auto':'المظهر: تلقائي','Theme: Light':'المظهر: فاتح','Theme: Dark':'المظهر: داكن','Auto':'تلقائي','Light':'فاتح','Dark':'داكن',
-    'Content updated:':'آخر تحديث للمحتوى:','Source check:':'آخر فحص للمصادر:','Schedule:':'الجدولة:','Prices checked:':'آخر تحقق من الأسعار:','Not run yet':'لم يُشغَّل بعد',
-    '07:15 and 19:15 Asia/Dubai':'7:15 و19:15 بتوقيت الإمارات','Configured in GitHub Actions':'مُجدولة عبر GitHub Actions',
+    'Content updated:':'آخر تحديث للمحتوى:','Prices checked:':'آخر تحقق من الأسعار:',
     'Search':'بحث','Vendor':'الشركة','Level':'المستوى','Memory scope':'نطاق الذاكرة','Model, memory, architecture…':'الطراز، الذاكرة، المعمارية…',
     'All levels':'كل المستويات','All memory scopes':'كل نطاقات الذاكرة',
     'Personal':'شخصي','Workstation':'محطة عمل','Enterprise':'مؤسسات','Data center':'مراكز البيانات','Rack scale':'على مستوى الرف',
@@ -172,65 +171,65 @@
     'Sort by':'ترتيب حسب','Hardware level':'مستوى العتاد','Model name':'اسم الطراز','Memory capacity':'سعة الذاكرة','Memory bandwidth':'عرض نطاق الذاكرة',
     'Launch price':'سعر الإطلاق','Availability date':'تاريخ التوفر','Announcement date':'تاريخ الإعلان','Power rating':'استهلاك الطاقة',
     'Ascending ↑':'تصاعدي ↑','Descending ↓':'تنازلي ↓','Reset':'إعادة ضبط','Cards':'بطاقات','Table':'جدول','Timeline':'خط زمني','View':'العرض',
-    '{n} of {m}':'{n} من أصل {m}','No matches. Try another search or reset the filters.':'لا توجد نتائج. جرّب بحثًا آخر أو أعد ضبط الفلاتر.',
+    '{n} of {m}':'{n} من أصل {m}','No matches. Try another search or reset the filters.':'لا توجد نتائج. جرّب بحثاً آخر أو أعد ضبط الفلاتر.',
     'Availability / target':'التوفر / الهدف','Announced / launched':'الإعلان / الإطلاق','Power':'الطاقة','Bandwidth':'عرض النطاق','AI compute':'حوسبة الذكاء الاصطناعي',
     'Form factor':'الشكل','Cooling':'التبريد','Interconnect':'الربط','Content reviewed':'تاريخ مراجعة المحتوى','Notes and official sources':'ملاحظات ومصادر رسمية',
     'Not listed':'غير مذكور','Not documented in this edition':'غير موثق في هذه النسخة','Compare':'قارن','Model':'الطراز','Memory':'الذاكرة','Type':'النوع',
     'Architecture':'المعمارية','Best fit':'الاستخدام الأنسب','Official source':'المصدر الرسمي','Fit':'الملاءمة',
     'What can it run?':'ما النماذج التي يشغّلها؟','Model size (billions of parameters)':'حجم النموذج (مليار مُعامل)','Precision':'الدقة',
     '16-bit (FP16 / BF16)':'16 بت (FP16 / BF16)','8-bit (FP8 / INT8)':'8 بت (FP8 / INT8)','4-bit (quantized)':'4 بت (مضغوط)',
-    'Extra for context and runtime (%)':'إضافة للسياق والتشغيل (%)','Only show hardware that fits':'اعرض العتاد الذي يتسع فقط','Presets':'قيم جاهزة',
-    'Needs about {x} GB':'يحتاج تقريبًا {x} جيجابايت','Enter a model size to highlight hardware that fits.':'أدخل حجم النموذج لتمييز العتاد الذي يتسع له.',
-    'Rough guide: weights at the chosen precision plus the extra you set. Long contexts, batching and training need much more. Shared memory also serves the operating system, and multi-GPU totals need software that splits the model.':'تقدير تقريبي: الأوزان بالدقة المختارة مع النسبة الإضافية المحددة. السياقات الطويلة والدفعات والتدريب تحتاج أكثر بكثير. الذاكرة المشتركة يستخدمها نظام التشغيل أيضًا، والإجماليات متعددة المعالجات تحتاج برمجيات تقسّم النموذج.',
+    'Extra memory\u00a0(%)':'ذاكرة إضافية\u00a0(%)',
+    'Besides the model itself, memory is needed for the conversation it holds and the software running it. 20% suits a normal chat; long documents need more.':'إلى جانب النموذج نفسه، يلزم قدرٌ إضافي من الذاكرة للمحادثة التي يحتفظ بها وللبرمجيات التي تشغّله. نسبة 20% تناسب محادثة عادية، أما المستندات الطويلة فتحتاج أكثر.','Only show hardware that fits':'اعرض العتاد الذي يتسع فقط','Presets':'قيم جاهزة',
+    'Needs about {x} GB':'يحتاج تقريباً {x} جيجابايت','Enter a model size to highlight hardware that fits.':'أدخل حجم النموذج لتمييز العتاد الذي يتسع له.',
+    'Rough guide: weights at the chosen precision plus the extra you set. Long contexts, batching and training need much more. Shared memory also serves the operating system, and multi-GPU totals need software that splits the model.':'تقدير تقريبي: الأوزان بالدقة المختارة مع النسبة الإضافية المحددة. السياقات الطويلة والدفعات والتدريب تحتاج أكثر بكثير. الذاكرة المشتركة يستخدمها نظام التشغيل أيضاً، والإجماليات متعددة المعالجات تحتاج برمجيات تقسّم النموذج.',
     'Fits':'يتسع','Fits across GPUs':'يتسع عبر عدة معالجات','Too small':'لا يتسع',
     '{n} selected':'المحدد: {n}','Clear':'مسح','Close':'إغلاق','Compare up to 4 products':'يمكن مقارنة 4 منتجات كحد أقصى','Remove':'إزالة',
-    'Tick "Compare" on 2 to 4 products to compare them side by side.':'اختر «قارن» في منتجين إلى 4 منتجات لمقارنتها جنبًا إلى جنب.',
-    'Side-by-side comparison':'مقارنة جنبًا إلى جنب','Memory scopes differ, so totals are not directly comparable.':'نطاقات الذاكرة مختلفة، لذا لا تُقارن الإجماليات مباشرة.',
+    'Tick "Compare" on 2 to 4 products to compare them side by side.':'اختر «قارن» في منتجين إلى 4 منتجات لمقارنتها جنباً إلى جنب.',
+    'Side-by-side comparison':'مقارنة جنباً إلى جنب','Memory scopes differ, so totals are not directly comparable.':'نطاقات الذاكرة مختلفة، لذا لا تُقارن الإجماليات مباشرة.',
     'Highlighted: highest value among products with the same memory scope.':'المميَّز: أعلى قيمة بين منتجات لها نطاق الذاكرة نفسه.',
     'Announced':'أُعلن','Today':'اليوم','No dated milestones for these products.':'لا توجد تواريخ لهذه المنتجات.',
     'Hollow circle: announcement. Solid mark: availability or vendor target. Bars show quarter, half-year or seasonal windows.':'الدائرة المفرغة: الإعلان. العلامة المصمتة: التوفر أو هدف الشركة. الأشرطة تمثل فترات ربع سنوية أو نصف سنوية أو موسمية.',
     'Without a dated milestone: {p}.':'بلا تاريخ محدد: {p}.',
     'How to read this':'كيف تقرأ هذه البيانات','Products':'المنتجات','Hardware catalog':'كتالوج العتاد','Filter hardware':'تصفية العتاد','Download and share':'التنزيل والمشاركة',
-    'Capacity is not speed':'السعة ليست السرعة','Memory capacity determines what can fit. Bandwidth, compute, precision and software influence how quickly it runs. Sorting by memory is not a performance ranking.':'سعة الذاكرة تحدد ما يمكن أن يتسع. أما سرعة التشغيل فتتأثر بعرض النطاق والحوسبة والدقة والبرمجيات. الترتيب حسب الذاكرة ليس ترتيبًا للأداء.',
-    'Compare the same scope':'قارن النطاق نفسه','A single GPU, shared CPU/GPU system, and rack total are different measurements. Multiple GPUs do not automatically expose one shared VRAM pool.':'معالج رسوميات واحد، ونظام بذاكرة مشتركة، وإجمالي رف كامل هي قياسات مختلفة. تعدد معالجات الرسوميات لا يعني تلقائيًا ذاكرة واحدة مشتركة.',
+    'Capacity is not speed':'السعة ليست السرعة','Memory capacity determines what can fit. Bandwidth, compute, precision and software influence how quickly it runs. Sorting by memory is not a performance ranking.':'سعة الذاكرة تحدد ما يمكن أن يتسع. أما سرعة التشغيل فتتأثر بعرض النطاق والحوسبة والدقة والبرمجيات. الترتيب حسب الذاكرة ليس ترتيباً للأداء.',
+    'Compare the same scope':'قارن النطاق نفسه','A single GPU, shared CPU/GPU system, and rack total are different measurements. Multiple GPUs do not automatically expose one shared VRAM pool.':'معالج رسوميات واحد، ونظام بذاكرة مشتركة، وإجمالي رف كامل هي قياسات مختلفة. تعدد معالجات الرسوميات لا يعني تلقائياً ذاكرة واحدة مشتركة.',
     'Dates have different meanings':'للتواريخ معانٍ مختلفة','An announcement does not establish first shipment. Vendor targets remain labeled as targets until a release or availability statement is verified. Unknown values stay blank.':'الإعلان لا يعني بدء الشحن. تبقى أهداف الشركات موسومة كأهداف حتى يتم التحقق من الإصدار أو التوفر. القيم غير المعروفة تبقى فارغة.',
-    'What changed':'ما الذي تغيّر','Contact':'تواصل معنا','Questions, corrections or partnership ideas? Send a message.':'أسئلة أو تصحيحات أو أفكار للتعاون؟ أرسل رسالة.',
-    'Your name (optional)':'اسمك (اختياري)','Your email (optional)':'بريدك الإلكتروني (اختياري)','Subject':'الموضوع','Message':'الرسالة','Send message':'إرسال الرسالة',
-    'Opens your email app with the message ready to send, or write to':'يفتح تطبيق البريد لديك والرسالة جاهزة للإرسال، أو راسلنا على',
-    'Please add a subject and a message.':'يرجى إضافة الموضوع والرسالة.','Opening your email app…':'جارٍ فتح تطبيق البريد…',
-    'All rights reserved.':'جميع الحقوق محفوظة.','Product images © NVIDIA and AMD. Headlines © their publishers and link to the original articles.':'صور المنتجات © NVIDIA وAMD. العناوين © لناشريها وترتبط بالمقالات الأصلية.','Pick a model from OpenRouter':'اختر نموذجًا من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
-    "{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.":'{name} نموذج مغلق: أوزانه غير منشورة، لذا يعمل فقط في سحابة المزوّد (مثلًا عبر OpenRouter). لا يمكن لأي عتاد في هذه الصفحة تشغيله محليًا.',
-    '{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.':'{name} مفتوح الأوزان، لكن حجمه غير منشور بصيغة يمكننا التحقق منها. أدخل الحجم يدويًا.',
+    'What changed':'ما الذي تغيّر','Contact':'تواصل معنا','Questions, corrections or partnership ideas? Email us.':'أسئلة أو تصحيحات أو أفكار للتعاون؟ راسلنا عبر البريد الإلكتروني.',
+    'Email us':'راسلنا عبر البريد الإلكتروني',
+    'All rights reserved.':'جميع الحقوق محفوظة.',
+    'Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.':'صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.','Pick a model from OpenRouter':'اختر نموذجاً من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
+    "{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.":'{name} نموذج مغلق: أوزانه غير منشورة، لذا يعمل فقط في سحابة المزوّد (مثلاً عبر OpenRouter). لا يمكن لأي عتاد في هذه الصفحة تشغيله محلياً.',
+    '{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.':'{name} مفتوح الأوزان، لكن حجمه غير منشور بصيغة يمكننا التحقق منها. أدخل الحجم يدوياً.',
     '{name}: {b} billion parameters':'{name}: {b} مليار مُعامل','size taken from the model name':'الحجم مأخوذ من اسم النموذج','counted from Hugging Face weights':'محسوب من أوزان Hugging Face',
     'mixture-of-experts: all experts must fit in memory':'نموذج خبراء متعددين (MoE): يجب أن تتسع الذاكرة لكل الخبراء','context up to {c}':'سياق حتى {c}',
-    'Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.':'اختر من {n} نموذجًا مدرجًا على OpenRouter (آخر تحديث للقائمة {d})، أو أدخل الحجم أدناه.','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات','News sources':'مصادر الأخبار',
+    'Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.':'اختر من {n} نموذجاً مدرجاً على OpenRouter (آخر تحديث للقائمة {d})، أو أدخل الحجم أدناه.','Hardware':'العتاد','AI news':'أخبار الذكاء الاصطناعي','UAE AI':'الذكاء الاصطناعي في الإمارات',
     'UAE AI headlines':'عناوين الذكاء الاصطناعي في الإمارات','As of':'بتاريخ','Headlines appear after the first scheduled update.':'تظهر العناوين بعد أول تحديث مجدول.',
-    'Follow Qahwa & AI on Instagram':'تابع قهوة و AI على إنستغرام','Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق في','Not publicly priced':'لا يوجد سعر معلن',
+    'Image:':'الصورة:','Approx. price':'السعر التقريبي','checked':'تم التحقق في','Not publicly priced':'لا يوجد سعر معلن',
     'US retail':'متاجر أمريكية','US used market':'سوق المستعمل الأمريكي','UAE used market':'سوق المستعمل في الإمارات','Ada Lovelace':'Ada Lovelace','UAE retail':'متاجر الإمارات','Reported estimate':'تقدير منشور','Converted from USD at 3.6725':'محوّل من الدولار بسعر 3.6725','Approx. USD':'تقريبي بالدولار','Approx. AED':'تقريبي بالدرهم','Air':'هوائي','Liquid':'سائل','Air or liquid':'هوائي أو سائل',
-    'Reference total graphics power':'الطاقة الإجمالية المرجعية للرسوميات','Official specification, checked automatically':'مواصفة رسمية يُتحقق منها تلقائيًا','Accelerator rating; excludes host':'تصنيف المسرّع، دون النظام المضيف','Total board power':'إجمالي طاقة البطاقة','Workstation Edition maximum':'الحد الأقصى لإصدار محطة العمل',
+    'Reference total graphics power':'الطاقة الإجمالية المرجعية للرسوميات','Official specification, checked automatically':'مواصفة رسمية يُتحقق منها تلقائياً','Accelerator rating; excludes host':'تصنيف المسرّع، دون النظام المضيف','Total board power':'إجمالي طاقة البطاقة','Workstation Edition maximum':'الحد الأقصى لإصدار محطة العمل',
     // Site shell and the three-pillar hub
     'Skip to content':'انتقل إلى المحتوى','Main sections':'الأقسام الرئيسية','Overview':'الرئيسية','News':'الأخبار','UAE':'الإمارات',
     'Breadcrumb':'مسار التنقل','Back to overview':'العودة إلى الرئيسية','Other areas':'الأقسام الأخرى','Footer':'تذييل الصفحة',
-    'AI hardware, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات','Decoding the gaps in AI knowledge':'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي',
+    'AI hardware, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات','Decoding the gaps in AI knowledge':'كشف المجهول في عالم الذكاء الاصطناعي',
     'Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.':'قارن عتاد الذكاء الاصطناعي من NVIDIA وAMD، وتابع آخر أخبار الذكاء الاصطناعي، واطّلع على ما تبنيه الإمارات، مع ذكر المصادر والتواريخ في كل قسم.',
     'Follow Qahwa & AI':'تابع قهوة و AI','AI lessons and news from Qahwa & AI, in English and Arabic.':'دروس وأخبار الذكاء الاصطناعي من قهوة و AI، بالعربية والإنجليزية.',
     'The three areas':'الأقسام الثلاثة','The three areas of the site':'أقسام الموقع الثلاثة',
-    'NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.':'معالجات رسوميات وأجهزة مكتبية وخوادم ورفوف من NVIDIA وAMD، جنبًا إلى جنب.',
+    'NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.':'معالجات رسوميات وأجهزة مكتبية وخوادم ورفوف من NVIDIA وAMD، جنباً إلى جنب.',
     'products':'المنتجات','levels':'المستويات','with approx. price':'بسعر تقريبي','Featured':'مختارات','Prices approximate':'الأسعار تقريبية',
     'Browse by level':'تصفّح حسب المستوى','Browse':'تصفّح','Approx.':'حوالي','Open hardware':'افتح قسم العتاد',
     'headlines':'العناوين','English · Arabic':'إنجليزي · عربي','sources':'المصادر','Latest headlines':'أحدث العناوين','Times in UAE time':'الأوقات بتوقيت الإمارات',
     'Global':'عالمي','Open AI news':'افتح قسم الأخبار',
     'What the UAE is building in AI: strategy, compute and models, each fact with its source.':'ما تبنيه الإمارات في الذكاء الاصطناعي: الاستراتيجية والحوسبة والنماذج، ولكل معلومة مصدرها.',
-    'key facts':'المعلومات الرئيسية','UAE headlines':'عناوين الإمارات','UAE newsrooms':'غرف الأخبار الإماراتية','Highlights':'أبرز المعلومات',
-    'Latest UAE headlines':'أحدث عناوين الإمارات','Twice a day':'مرتين يوميًا','Open UAE AI':'افتح قسم الإمارات',
+    'key facts':'المعلومات الرئيسية','UAE headlines':'عناوين الإمارات','Highlights':'أبرز المعلومات',
+    'Latest UAE headlines':'أحدث عناوين الإمارات','Twice a day':'مرتين يومياً','Open UAE AI':'افتح قسم الإمارات',
     'Why trust this':'لماذا تثق بهذه البيانات؟','Official sources':'مصادر رسمية','Dated prices':'أسعار مؤرّخة',
     'Prices are approximate, labelled by kind, with the date they were checked.':'الأسعار تقريبية، ويظهر مع كل سعر نوعه وتاريخ التحقق منه.',
-    'News twice a day':'الأخبار مرتين يوميًا','Official sources checked':'فحص المصادر الرسمية','Hardware sources are checked twice a day.':'تُفحص مصادر العتاد مرتين يوميًا.',
-    'Every headline links to its publisher.':'كل عنوان يقود إلى ناشره الأصلي.',
-    'Headlines at a glance':'العناوين في لمحة','Region':'النطاق','All':'الكل','English':'الإنجليزية','Arabic':'العربية','feeds responded':'مصادر استجابت',
+    'News twice a day':'الأخبار مرتين يومياً','Official sources checked':'فحص المصادر الرسمية','Hardware sources are checked twice a day.':'تُفحص مصادر العتاد مرتين يومياً.',
+    'Each summary says whether AI or the publisher wrote it, and every headline has a source link to the original article.':'يوضح كل ملخص إن كان من كتابة الذكاء الاصطناعي أو من الناشر، ولكل عنوان رابط إلى المقال الأصلي.',
+    'Headlines at a glance':'العناوين في لمحة','Region':'النطاق','All':'الكل','English':'الإنجليزية','Arabic':'العربية',
     'Headlines':'العناوين','Show more':'عرض المزيد','Showing {n} of {m}':'المعروض {n} من أصل {m}',
-    'Key facts':'معلومات رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولًا. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
-    'Each product links to its evidence. Uses are editorial guidance. Power figures apply to the listed component or edition, not the whole server. Launch prices are vendor MSRPs at launch, not current street prices. Timing and stock vary by manufacturer and region. Approximate prices are dated snapshots of retail listings or reported estimates, not offers; UAE retail prices normally include 5% VAT. Product images belong to NVIDIA and AMD and link to their source pages.':'كل منتج مرتبط بمصدره. الاستخدامات المقترحة إرشاد تحريري. أرقام الطاقة تخص المكوّن أو الإصدار المذكور، لا الخادم كاملًا. أسعار الإطلاق هي الأسعار المقترحة من الشركة عند الإطلاق، وليست أسعار السوق الحالية. المواعيد والتوفر يختلفان حسب الشركة المصنّعة والمنطقة. الأسعار التقريبية لقطات مؤرّخة من قوائم المتاجر أو تقديرات منشورة، وليست عروض بيع، وأسعار متاجر الإمارات تشمل عادةً ضريبة القيمة المضافة 5%. صور المنتجات مملوكة لـ NVIDIA وAMD وترتبط بصفحات مصادرها.',
+    'Key facts':'معلومات رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولاً. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
+    'Each product links to its evidence. Uses are editorial guidance. Power figures apply to the listed component or edition, not the whole server. Launch prices are vendor MSRPs at launch, not current street prices. Timing and stock vary by manufacturer and region. Approximate prices are dated snapshots of retail listings or reported estimates, not offers; UAE retail prices normally include 5% VAT. Product images belong to NVIDIA and AMD and link to their source pages.':'كل منتج مرتبط بمصدره. الاستخدامات المقترحة إرشاد تحريري. أرقام الطاقة تخص المكوّن أو الإصدار المذكور، لا الخادم كاملاً. أسعار الإطلاق هي الأسعار المقترحة من الشركة عند الإطلاق، وليست أسعار السوق الحالية. المواعيد والتوفر يختلفان حسب الشركة المصنّعة والمنطقة. الأسعار التقريبية لقطات مؤرّخة من قوائم المتاجر أو تقديرات منشورة، وليست عروض بيع، وأسعار متاجر الإمارات تشمل عادةً ضريبة القيمة المضافة 5%. صور المنتجات مملوكة لـ NVIDIA وAMD وترتبط بصفحات مصادرها.',
     'Llama, Qwen, DeepSeek, gpt-oss…':'مثل Llama وQwen وDeepSeek وgpt-oss…','Specification':'المواصفة','Selected for comparison':'المنتجات المختارة للمقارنة'
   };
   const $ = id => document.getElementById(id);
@@ -616,22 +615,11 @@
     catch (e) { window.prompt(T('Copy link'), link); }
   });
   $('print').addEventListener('click', () => { state.view = 'table'; render(); window.print(); });
-  // Contact: the address is assembled here so it isn't sitting in the page source for scrapers.
+  // Contact: the address is assembled here so it isn't sitting in the page source for scrapers
+  // (without JavaScript the page shows "buafra [at] gmail [dot] com").
   const contactAddress = ['buafra', 'gmail.com'].join('@');
   $('c-mail').href = 'mailto:' + contactAddress;
   $('c-mail').textContent = contactAddress;
-  $('contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    const v = id => $(id).value.trim(), required = ['c-subject', 'c-message'], empty = required.filter(id => !v(id));
-    required.forEach(id => { if (empty.includes(id)) $(id).setAttribute('aria-invalid', 'true'); else $(id).removeAttribute('aria-invalid'); });
-    if (empty.length) { $('c-error').textContent = T('Please add a subject and a message.'); $('c-error').hidden = false; $(empty[0]).focus(); return; }
-    $('c-error').hidden = true;
-    $('c-error').textContent = '';
-    const from = [v('c-name'), v('c-email')].filter(Boolean).join(' · ');
-    const body = (from ? from + '\n\n' : '') + v('c-message') + '\n\n— ' + location.href;
-    flash(T('Opening your email app…'));
-    location.href = `mailto:${contactAddress}?subject=${encodeURIComponent('[Cipher Lacuna] ' + v('c-subject'))}&body=${encodeURIComponent(body)}`;
-  });
   $('csv').addEventListener('click', () => {
     const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
     const cell = v => '"' + String(v ?? '').replaceAll('"', '""') + '"';

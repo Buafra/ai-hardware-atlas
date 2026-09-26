@@ -29,6 +29,19 @@ def body(report, drafts):
         lines += ['<details><summary>Fetch errors</summary>', ''] + [f'- {u}: {e}' for u, e in report['errors'].items()] + ['', '</details>']
     return '\n'.join(lines)
 
+def ai_status(path=ROOT / 'data/news.json'):
+    """One line on the optional AI news steps when they did not run cleanly (from news.json "ai"), else ''."""
+    try:
+        ai = json.loads(Path(path).read_text(encoding='utf-8')).get('ai') or {}
+    except (OSError, ValueError):
+        return ''
+    if ai and not ai.get('key_set'):
+        return '**AI news steps:** ANTHROPIC_API_KEY is not set, so no Arabic headline translations or AI summaries were written.'
+    if ai.get('problems'):
+        problems = ', '.join(f'{k} x{v}' for k, v in ai['problems'].items())
+        return f"**AI news steps:** {ai.get('translated', 0)} translated, {ai.get('summarised', 0)} summarised; problems: {problems}."
+    return ''
+
 def main():
     report = json.loads((ROOT / 'data/refresh-report.json').read_text(encoding='utf-8'))
     drafts_path = ROOT / 'data/draft-report.json'
@@ -40,6 +53,8 @@ def main():
         print('Nothing needs review.')
         return 0
     text = body(report, drafts)
+    if ai_status():
+        text += '\n\n' + ai_status()
     if stale:
         text += f'\n\n**Approximate prices older than {STALE_PRICE_DAYS} days** (re-check and update `price` in data/catalog.json)\n' + '\n'.join(f'- {m}' for m in stale)
     gh('label', 'create', LABEL, '--color', '6537d7', '--description', 'Official source changes to review', '--force')

@@ -17,7 +17,7 @@ OUT = BRAND / 'og.png'
 W, H = 1200, 630
 NAME = ('Cipher', 'Lacuna')
 TAGLINE_EN = 'Decoding the gaps in AI knowledge'
-TAGLINE_AR = 'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي'
+TAGLINE_AR = 'كشف المجهول في عالم الذكاء الاصطناعي'
 
 def page_html():
     logo = 'data:image/svg+xml;base64,' + base64.b64encode((BRAND / 'logo.svg').read_bytes()).decode('ascii')

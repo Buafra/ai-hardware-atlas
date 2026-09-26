@@ -24,6 +24,9 @@ rows=select(data.products,{need:42,fitOnly:true},'memory_gb',1);assert.ok(rows.l
 const st={...decodeState(''),q:'mi3',vendor:'AMD',sort:'memory_gb',dir:-1,view:'table',cmp:['h200','b200-blackwell'],lang:'ar',params:'70',fit:true};
 const back=decodeState(encodeState(st));for(const k of Object.keys(st))assert.deepEqual(back[k],st[k],k);
 assert.equal(encodeState(decodeState('')),'');assert.equal(decodeState('?view=evil&lang=xx').view,'cards');assert.equal(decodeState('?cmp=a,b,c,d,e,a').cmp.length,4);
+// The renamed "Extra memory for chat length and software" field keeps its behaviour, default and URL parameter.
+assert.equal(decodeState('').extra,'20');assert.equal(decodeState('?extra=35').extra,'35');
+assert.equal(encodeState({...decodeState(''),extra:'35'}),'extra=35');assert.equal(encodeState({...decodeState(''),extra:'20'}),'');
 console.log('PASS: sort, date windows, nulls, undated CPX, filters, Spark date, estimator, fit, URL state');
 // Hash routes: views in the hash, deep links applied once, unknown hashes fall back to #home.
 const {parseRoute,routePatch,pageUrl,countLabel}=require('../web/app.js');
@@ -66,7 +69,7 @@ assert.deepEqual(decodeState(encodeState(st2)),{...st2});
 // Counts: English plural, Arabic number agreement.
 assert.equal(countLabel(1,'product','en'),'1 product');assert.equal(countLabel(53,'product','en'),'53 products');
 assert.equal(countLabel(1,'headline','ar'),'عنوان واحد');assert.equal(countLabel(2,'product','ar'),'منتجان');
-assert.equal(countLabel(5,'product','ar'),'5 منتجات');assert.equal(countLabel(53,'product','ar'),'53 منتجًا');
+assert.equal(countLabel(5,'product','ar'),'5 منتجات');assert.equal(countLabel(53,'product','ar'),'53 منتجاً');
 assert.equal(countLabel(100,'headline','ar'),'100 عنوان');assert.equal(countLabel(103,'headline','ar'),'103 عناوين');assert.equal(countLabel(0,'headline','ar'),'0 عنوان');
 // Legacy links (query string, no hash) open the hardware atlas; a lone region opens the news; lang alone stays home.
 const {when,HW_KEYS}=require('../web/app.js');
@@ -82,7 +85,7 @@ const keys=/\[\?&\]\(([a-z|]+)\)\(=\|&\|\$\)/.exec(tpl);assert.ok(keys,'head scr
 assert.deepEqual(keys[1].split('|').sort(),[...HW_KEYS].sort());
 assert.equal(pageUrl('/','q=4090',''),'/?q=4090');assert.equal(pageUrl('/','',''),'/');
 // Arabic agreement with formatted numbers; dates for people (same cases as tests/test_build.py).
-assert.equal(countLabel(131072,'token','ar',n=>n.toLocaleString('en-US')),'131,072 رمزًا');assert.equal(countLabel(8192,'token','en',n=>n.toLocaleString('en-US')),'8,192 tokens');
+assert.equal(countLabel(131072,'token','ar',n=>n.toLocaleString('en-US')),'131,072 رمزاً');assert.equal(countLabel(8192,'token','en',n=>n.toLocaleString('en-US')),'8,192 tokens');
 assert.equal(countLabel(100,'token','ar'),'100 رمز');
 const cases={'2025-Q3|en':'Q3 2025','2025-Q3|ar':'الربع الثالث 2025','2026-H2|ar':'النصف الثاني 2026','2025-Summer|en':'Summer 2025','2025-Summer|ar':'صيف 2025',
   '2026-end|en':'End of 2026','2026-end|ar':'نهاية 2026','2025-03-05|en':'5 Mar 2025','2025-03-05|ar':'5 مارس 2025','2023-07|en':'Jul 2023','2026-09-26T22:30:00+00:00|ar':'27 سبتمبر 2026'};

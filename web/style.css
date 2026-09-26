@@ -41,7 +41,9 @@
 /* base */
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;font-synthesis:none}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+body>main{flex:1 0 auto}
+body>.top,body>.foot{flex:none}
 html[lang="ar"] body{font-family:"Segoe UI",Tahoma,"Geeza Pro","Noto Sans Arabic","Noto Naskh Arabic",Arial,sans-serif;line-height:1.7}
 a{color:var(--accent-text)}
 button,input,select,textarea{font:inherit;color:inherit}
@@ -96,6 +98,11 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .nav a[aria-current="page"]{color:var(--strong);background:var(--surface-2);border-color:var(--border)}
 .nav .dot{width:8px;height:8px;border-radius:50%;background:var(--c);flex:none}
 .n-hw{--c:var(--hw)}.n-news{--c:var(--news)}.n-uae{--c:var(--uae)}
+/* UAE flag (inline SVG from build.py): never mirrored, so the red band stays at the hoist (left) in Arabic too.
+   Sizes keep the red band (width/4) and the stripes (height/3) on whole pixels: 24x12 or 36x18. The thin frame sits
+   outside the flag, so it keeps the white stripe visible on light backgrounds and the black one on dark ones without
+   dulling the colours. */
+.flag{display:block;flex:none;width:24px;height:12px;box-shadow:0 0 0 1px #7a839899}
 .nl-short{display:none}
 [lang="ar"] .nav .nl-full{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 [lang="ar"] .nav .nl-short{display:inline}
@@ -106,6 +113,7 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .l-short{display:none}
 .ig-mini{color:#fff;border:0;background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce)}
 .ig-mini:hover{filter:brightness(1.1);background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce)}
+.ig-mini bdi{font-size:13.5px}
 
 /* hero */
 .hero{position:relative;overflow:hidden;margin-top:20px;border-radius:var(--r-xl);background:linear-gradient(105deg,#42208d,#753aca 60%,#d52f89);color:#fff;border-top:5px solid #22d4d6;padding:26px 34px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:18px 32px;align-items:center;box-shadow:var(--shadow)}
@@ -125,6 +133,10 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .ig{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#fff;color:#5a1d8f;font-weight:800;font-size:14.5px;text-decoration:none;box-shadow:0 6px 18px #2a0b5a40}
 .ig:hover{background:#f7f0ff}
 .ig .handle{font-weight:650;padding-inline-start:9px;border-inline-start:1px solid color-mix(in srgb,currentColor 40%,transparent)}
+.ig svg{flex:none}
+/* On light surfaces (contact card, footer) the follow button takes the Instagram colours. */
+.contact-card .follow-btn,.foot .follow-btn{background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce);color:#fff;box-shadow:none}
+.contact-card .follow-btn:hover,.foot .follow-btn:hover{filter:brightness(1.07)}
 .hero :focus-visible{outline-color:#22d4d6}
 .jump{display:none}
 
@@ -141,6 +153,9 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .p-head .p-lead{grid-column:1/-1;margin-top:10px}
 .p-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--c);color:#fff;box-shadow:0 6px 14px color-mix(in srgb,var(--c) 35%,transparent)}
 .p-icon svg{width:21px;height:21px}
+.p-icon .flag{width:24px;height:12px}
+.p-icon.p-flag{background:var(--surface);border:1px solid var(--border-strong);box-shadow:var(--shadow-sm)}
+.kick>.p-flag .flag{width:32px;height:16px}
 .pillar h2{grid-column:2;grid-row:2;align-self:start;font-size:25px;line-height:1.2;letter-spacing:-.02em;margin:2px 0 0}
 .pillar h2 a{color:inherit;text-decoration:none}
 .pillar h2 a:hover{color:var(--ink)}
@@ -182,12 +197,13 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .live{display:flex;align-items:center;gap:9px;margin:-4px 0 0;font-size:13px;font-weight:700;color:var(--ink)}
 .live .pulse{margin:0;width:8px;height:8px;background:var(--c);animation:none;box-shadow:0 0 0 4px var(--soft)}
 .heads{list-style:none;margin:0;padding:0}
-.heads li{padding:10px 0;border-top:1px solid var(--border)}
+.heads li{padding:11px 0;border-top:1px solid var(--border)}
 .heads li:first-child{border-top:0;padding-top:2px}
-.heads a{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--text);font-weight:650;font-size:14.5px;line-height:1.42;text-decoration:none}
-.heads a:hover{color:var(--ink);text-decoration:underline}
-.meta{display:block;margin-top:3px;font-size:12px;color:var(--muted)}
-.meta b{font-weight:700;color:var(--text)}
+.heads .n-title{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--strong);font-weight:700;font-size:14.5px;line-height:1.42}
+.heads .n-sum{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:3px;font-size:13px;line-height:1.5}
+.heads .n-by{font-size:11px}
+.heads .n-meta{margin-top:5px;font-size:12px}
+.heads .n-src{color:var(--ink)}
 .fminis{display:grid;gap:8px}
 .fmini{display:block;text-decoration:none;color:inherit;background:var(--soft);border:1px solid color-mix(in srgb,var(--c) 22%,var(--border));border-radius:13px;padding:12px 14px;transition:border-color .15s}
 .fmini:hover{border-color:var(--c)}
@@ -224,6 +240,10 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .ihead .lead{margin:0;max-width:760px;color:#f5f1ff;font-size:16px}
 .ifresh{margin:12px 0 0;display:inline-flex;gap:9px;align-items:center;font-size:13.5px;background:#00000029;border:1px solid #ffffff2e;border-radius:999px;padding:5px 12px}
 .ifresh .pulse{margin:0;width:8px;height:8px}
+.ih-flag{display:inline-block;margin-inline-end:.4em;vertical-align:.06em}
+.ih-flag .flag{width:36px;height:18px}
+.ihead-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ihead .follow-btn{box-shadow:none;padding-block:10px}
 .back{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#2b1760;border-radius:12px;padding:10px 16px;font-weight:800;font-size:14.5px;text-decoration:none;white-space:nowrap}
 .back:hover{background:#f3eeff}
 .ihead :focus-visible{outline-color:#22d4d6}
@@ -255,6 +275,8 @@ label{display:block}
 .check input{width:18px;height:18px;accent-color:var(--hw);flex:none}
 .need{margin:12px 0 2px;font-weight:750;color:var(--hw-ink)}
 .caveat{margin:6px 0 0;font-size:12.5px;color:var(--muted)}
+.hint{margin:0;font-size:12.5px;line-height:1.45;color:var(--muted)}
+.est-hint{grid-column:4/-1;grid-row:2;margin-top:-6px}
 .sorting{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 14px}
 .sorting .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .sorting select{width:190px}
@@ -347,7 +369,6 @@ tbody tr:hover{background:var(--surface-2)}
 .changes ul{padding-inline-start:20px;margin:0}
 .changes li{font-size:14px;color:var(--muted);margin-bottom:8px}
 .footnote{font-size:12px;color:var(--muted);margin-top:20px}
-.follow{font-size:14px;font-weight:700;margin-top:10px}
 
 /* chips, tags, buttons */
 .chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -373,31 +394,25 @@ tbody tr:hover{background:var(--surface-2)}
 .uae-heads{margin-top:34px}
 .side .panel{display:flex;flex-direction:column;gap:14px}
 .side-h{margin:0;font-size:16px}
-.side-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0;padding-top:12px;border-top:1px solid var(--border)}
+.side-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0;padding-top:12px;border-top:1px solid var(--border)}
 .side-stats .stat{background:none;border:0;padding:0}
 .side-stats .stat dd{font-size:19px}
-.nr-list{list-style:none;margin:0;padding:0;display:grid;gap:7px;font-size:13.5px}
-.nr-list li{display:flex;align-items:center;gap:8px}
-.nr-list a{font-weight:650;text-decoration:none;min-width:0}
-.nr-list a:hover{text-decoration:underline}
-.nr-list .n{margin-inline-start:auto;font-weight:750;color:var(--muted);font-variant-numeric:tabular-nums}
 .nday h3{margin:22px 0 10px;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .nday:first-child h3{margin-top:2px}
 .nday ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.nitem{display:grid;grid-template-columns:58px minmax(0,1fr);gap:14px;align-items:start;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:13px 16px;transition:border-color .15s}
+/* Headline card: title (plain text), summary, who wrote the summary, then the source link and the date. */
+.nitem{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 18px;transition:border-color .15s}
 .nitem:hover{border-color:var(--c,var(--news))}
-.n-time{font-size:13px;font-weight:800;color:var(--strong);font-variant-numeric:tabular-nums;padding-top:2px}
-.n-title{color:var(--strong);font-weight:700;font-size:16px;line-height:1.45;text-decoration:none;overflow-wrap:anywhere}
-.n-title:hover{text-decoration:underline;color:var(--c,var(--news-ink))}
-.n-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:5px 0 0;font-size:12.5px;color:var(--muted)}
-.n-src{font-weight:700;color:var(--text);text-decoration:none}
-.n-src:hover{text-decoration:underline;color:var(--accent-text)}
+.n-title{margin:0;color:var(--strong);font-weight:700;font-size:16px;line-height:1.45;overflow-wrap:anywhere;text-wrap:pretty}
+.n-sum{margin:6px 0 0;font-size:14.5px;line-height:1.6;color:var(--text);overflow-wrap:anywhere}
+.n-by{margin:4px 0 0;font-size:11.5px;line-height:1.4;color:var(--muted)}
+.n-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin:8px 0 0;font-size:12.5px;color:var(--muted)}
+.n-meta time{font-variant-numeric:tabular-nums}
+.n-src{font-weight:700;color:var(--accent-text);text-decoration:none}
+.n-src:hover{text-decoration:underline}
+.n-ext{font-weight:400}
+.n-note{margin-top:14px}
 .more-row{display:flex;justify-content:center;margin-top:16px}
-.srcs{margin-top:22px}
-.srcs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px 18px;list-style:none;margin:12px 0;padding:0;font-size:13.5px}
-.srcs-grid li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;min-width:0}
-.srcs-grid a{text-decoration:none;font-weight:650}
-.srcs-grid a:hover{text-decoration:underline}
 .sec-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin:26px 0 12px}
 .sec-h h2{margin:0;font-size:22px}
 .sec-h p{margin:0;font-size:13.5px;color:var(--muted)}
@@ -420,15 +435,12 @@ tbody tr:hover{background:var(--surface-2)}
 .x-sub{display:block;font-size:13px;color:var(--muted)}
 .x-arr{margin-inline-start:auto;color:var(--ink);flex:none}
 
-/* contact */
-.contact-panel{margin-top:20px}
-.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.contact-form .wide{grid-column:1/-1}
-.contact-form textarea{resize:vertical;min-height:140px}
-.contact-actions{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
-.contact-actions .primary{background:var(--hw);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:750}
-.contact-actions p{margin:0}
-.form-error{grid-column:1/-1;margin:0;color:var(--bad);font-weight:700;font-size:14px}
+/* contact: the email address (assembled by app.js) and the follow button */
+.contact-card{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 32px;padding:22px 24px}
+.cc-row{display:flex;align-items:center;gap:14px;min-width:0}
+.cc-ic{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent-text)}
+.contact-card h2{margin:0;font-size:18px;line-height:1.3}
+.contact-card p{margin:2px 0 0;font-size:16px;font-weight:700;overflow-wrap:anywhere}
 
 /* footer */
 .foot{margin-top:48px;border-top:1px solid var(--border);background:var(--surface)}
@@ -437,8 +449,6 @@ tbody tr:hover{background:var(--surface-2)}
 .foot .foot-brand{margin-bottom:2px}
 .foot .foot-tag{margin-bottom:10px;font-weight:600}
 .foot-side{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.foot-side .ig{background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce);color:#fff;box-shadow:none}
-.foot-side .ig:hover{filter:brightness(1.07)}
 .foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;font-weight:700}
 .foot-links a{color:var(--accent-text);text-decoration:none}
 .foot-links a:hover{text-decoration:underline}
@@ -483,22 +493,37 @@ dialog::backdrop{background:#0a0d1a99}
   .split-layout>.side{grid-column:auto;grid-row:auto;position:static}
   .split-layout>.main-col{grid-column:auto;grid-row:auto}
   .side .panel{flex-direction:row;flex-wrap:wrap;gap:14px 24px}
-  .side-h,.side-stats,.nr-list,.side .panel>div{flex-basis:100%}
-  .side-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .side-h,.side-stats,.side .panel>div{flex-basis:100%}
   #products{grid-template-columns:repeat(2,minmax(0,1fr))}
   .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .filters{grid-template-columns:1fr 1fr}
   .est-grid{grid-template-columns:1fr 1fr}
+  .est-hint{grid-column:2;grid-row:3;margin-top:0}
   .trust{grid-template-columns:repeat(2,minmax(0,1fr))}
   .trust>div:nth-child(odd){border-inline-start:0}
   .trust>div:nth-child(n+3){border-top:1px solid var(--border)}
 }
-@media (max-width:1139px){.ig-mini{display:none}}
 /* One-row header with the tagline: a little less air, so the nav never needs its sideways scroll. */
 @media (min-width:1000px) and (max-width:1239px){
   .top-in{column-gap:12px}
   .nav a{padding-inline:10px}
 }
+/* The @qahwa.w.ai pill stays at every width. In the one-row header below 1140px it drops its icon and the language
+   and theme buttons go compact; on phones it shrinks to the Instagram icon (its aria-label still names the account). */
+@media (min-width:1000px) and (max-width:1139px){
+  .ig-mini svg{display:none}
+  .l-long{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .l-short{display:inline}
+  .top-in{column-gap:10px}
+  .nav a{padding-inline:8px}
+  .ctrl{gap:6px}
+  .btn-ghost{padding-inline:9px}
+}
+@media (max-width:639px){
+  .ig-mini bdi{display:none}
+  .ig-mini{padding-inline:10px}
+}
+@media (max-width:767px),(min-width:1000px) and (max-width:1139px){.theme-label{display:none}}
 @media (max-width:999px){
   .pillars{grid-template-columns:1fr}
   .hero{grid-template-columns:1fr}
@@ -509,7 +534,8 @@ dialog::backdrop{background:#0a0d1a99}
   .jump b{font-size:14.5px;line-height:1.3}
   .jump span{font-size:12px;color:#fff}
   .jump i{display:block;width:22px;height:4px;border-radius:4px;margin-bottom:6px}
-  .j-hw{background:#b9a4ff}.j-news{background:#ff8cc6}.j-uae{background:#5eead4}
+  .j-hw{background:#b9a4ff}.j-news{background:#ff8cc6}
+  .jump .j-flag{width:auto;height:auto;border-radius:0;margin:-4px 0 3px}
   .p-body{gap:18px}
   .foot-in{grid-template-columns:1fr}
   .foot-side{align-items:flex-start}
@@ -529,7 +555,6 @@ dialog::backdrop{background:#0a0d1a99}
 }
 @media (max-width:639px){
   .wrap{padding-inline:16px}
-  .side-stats{grid-template-columns:1fr 1fr}
   .hero{padding:22px 18px;margin-top:16px;border-radius:20px}
   .hero h1{font-size:32px}
   .promise{font-size:16px}
@@ -553,11 +578,12 @@ dialog::backdrop{background:#0a0d1a99}
   .filters{grid-template-columns:1fr 1fr;gap:10px}
   .filters .f-search{grid-column:1/-1}
   .est-grid{grid-template-columns:1fr}
+  .est-hint{grid-column:auto;grid-row:auto;margin-top:-6px}
   .sorting .controls{gap:6px}
   .sorting select{width:auto;flex:1;min-width:10.5em}
-  .nitem{grid-template-columns:1fr;gap:4px;padding:12px 14px}
+  .nitem{padding:12px 14px}
+  .contact-card{padding:18px}
   .prices{grid-template-columns:1fr}
-  .contact-form{grid-template-columns:1fr}
   .theme-label{display:none}
   /* The short label is aria-hidden, so the full name stays for screen readers. */
   .l-long{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
@@ -595,12 +621,23 @@ dialog::backdrop{background:#0a0d1a99}
   .nav .dot{display:none}
   .nav a{padding-inline:7px}
 }
+/* 320-359px: brand and the three header buttons still share one row. */
+@media (max-width:359px){
+  .top-in{column-gap:6px}
+  .brand{gap:8px}
+  .wordmark{font-size:14.5px}
+  .ctrl{gap:5px}
+  .btn-ghost,.ig-mini{padding-inline:8px}
+  /* A long section name (in Arabic) wraps under the wordmark instead of pushing the buttons to a second row. */
+  .top .brand{max-width:calc(100% - 124px)}
+  .brand-sec{white-space:normal}
+}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* print: the hardware table (Print table) or whatever view is open */
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-2:#f5f5f8;--surface-3:#eef0f6;--border:#cfd5e2;--text:#111;--strong:#000;--muted:#444}
-  .top,.skip,.filters,.estimator,.sorting,.downloads,.back,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow{display:none!important}
+  .top,.skip,.filters,.estimator,.sorting,.downloads,.ihead-acts,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow-btn{display:none!important}
   .wrap{padding:0;max-width:none}
   .ihead,[dir="rtl"] .ihead{color:#111;background:none;border:0;box-shadow:none;padding:0 0 8px;margin:0}
   .ihead h1,.ihead .lead,.statusbar,.statusbar b{color:#111}

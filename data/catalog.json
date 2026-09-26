@@ -3925,7 +3925,7 @@
         }
       ],
       "notes": "Dates describe the vendor milestone, not current stock. A later date does not imply higher AI performance. System and rack memory should not be compared directly with single-GPU VRAM. NVIDIA announced Rubin CPX on 2025-09-09 with availability expected at the end of 2026. NVIDIA's own Vera Rubin announcements at GTC 2026 (2026-03-16) and at full production (2026-05-31) list five rack types without CPX, and its Rubin CPX product and technical blog pages now return 404. NVIDIA has not announced a cancellation or a new date; an analyst report (Ming-Chi Kuo, 2026-09-01) of a redesigned CPX for 2027 is unconfirmed by NVIDIA.",
-      "use_ar": "استدلال بسياق ضخم جدًا",
+      "use_ar": "استدلال بسياق ضخم جداً",
       "bandwidth_tbs": 1700,
       "bandwidth_note": "Stated as 1.7 PB/s memory bandwidth per rack (converted to TB/s)",
       "ai_compute": "8 exaflops of AI compute per rack (precision and sparsity not stated; NVFP4 context)",

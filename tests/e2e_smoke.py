@@ -9,24 +9,37 @@ Clicks through every view in English and Arabic at 375, 768 and 1280 px and chec
 errors, no horizontal page scroll, one visible h1 per view, nav state, key elements, deep links,
 query string + hash together, legacy query-only links, deep links on a fresh page, focus after a
 view change, Back closing the comparison, Arabic direction, filters, compare, theme, language, no-JavaScript fallback,
-no requests to other hosts, and that the contact address is not in the page source.
+no requests to other hosts, and that the contact address is not in the page source. Also the owner's requests of
+26 Sep 2026: headline cards with a summary and a small source link to the original article, no public source list or
+fetch statistics, schedule or newsroom list, the UAE flag (not mirrored in Arabic, whole-pixel size), the contact card
+instead of a form with the footer at the bottom of the window, the estimator wording, and the Qahwa & AI follow button
+in every view, the footer and the top bar at every width.
 """
+import json
 import re
 import sys
+from pathlib import Path
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
 
 BASE = (sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8791/').rstrip('/') + '/'
 ORIGIN = '{0.scheme}://{0.netloc}'.format(urlparse(BASE))
+DATA = Path(__file__).resolve().parents[1] / 'data'
+ITEM_URLS = {i['url'] for i in json.loads((DATA / 'news.json').read_text(encoding='utf-8'))['items']}
+HOMEPAGES = {s['homepage'] for s in json.loads((DATA / 'news-sources.json').read_text(encoding='utf-8'))}
+# The site's own phrases for what was removed; checked only in the site's own text, never in headlines or summaries.
+BACKEND_WORDS = ('feeds responded', 'sources responded', 'responded in the latest run', 'sources reached', 'News sources', 'مصادر الأخبار',
+                 'Checked at 07:15', 'Schedule:', 'Source check:', 'GitHub Actions', 'Asia/Dubai', 'الجدولة:', 'آخر فحص للمصادر')
+LABELS = {'en': ('AI summary', 'From the publisher'), 'ar': ('ملخص بالذكاء الاصطناعي', 'من الناشر')}
 ROUTES = ['home', 'hardware', 'news', 'uae', 'contact']
 KEY = {
-    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li', '.pillar.p-uae .fmini', '.pillar .cta', '.trust'],
-    'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort'],
-    'news': ['#news-title', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .srcs-grid a.n-src, #news .srcs-grid a'],
-    'uae': ['#uae-title', '#uae .fact', '#uae .nr-list a', '#uae .nlist .nitem'],
-    'contact': ['#contact-title', '#contact-form', '#c-subject', '#c-message', '#c-mail'],
+    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-flag .flag', '.pillar .cta', '.trust', '#home .follow-btn'],
+    'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort', '#extra-hint', '#hardware .ihead .follow-btn'],
+    'news': ['#news-title', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
+    'uae': ['#uae-title', '#uae-title .flag', '#uae .fact', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
+    'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .contact-card .follow-btn', '#contact .xcard.x-uae .flag'],
 }
-LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|GitHub Actions|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
+LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
 failures, checks = [], 0
 
 def check(ok, msg):
@@ -74,6 +87,52 @@ def route_checks(page, route, lang, width, hash=None):
         check(page.locator(f'{sel} >> visible=true').count() > 0, f'{tag} missing or hidden: {sel}')
     if route != 'home':
         check(page.locator(f'[data-view="{route}"] a.back[href="#home"]').is_visible(), f'{tag} no visible back link to #home')
+    # Qahwa & AI: a follow button in the view, the @qahwa.w.ai pill in the top bar at every width, one in the footer.
+    check(page.locator(f'[data-view="{route}"] .follow-btn >> visible=true').count() >= 1, f'{tag} no visible follow button in the view')
+    check(page.locator('.top .ig-mini').is_visible(), f'{tag} top-bar @qahwa.w.ai pill hidden')
+    check(page.locator('.foot .follow-btn').count() == 1, f'{tag} footer follow button missing')
+    # UAE flag in the nav, red band on the left in both directions (flags are not mirrored).
+    check(page.locator('.nav .n-uae .flag').is_visible(), f'{tag} UAE flag not visible in the nav')
+    red = page.evaluate("""() => { const f = document.querySelector('.nav .n-uae .flag'), r = f.querySelector('rect[fill="#EF3340"]').getBoundingClientRect(), b = f.getBoundingClientRect();
+        return [Math.round(r.left - b.left), Math.round(r.width * 4 - b.width)]; }""")
+    check(abs(red[0]) <= 1 and abs(red[1]) <= 2, f'{tag} UAE flag red band not a quarter-width band at the left: {red}')
+    # Whole-pixel sizes: the red band (width/4) and the stripes (height/3) do not land on half pixels.
+    sizes = page.evaluate("[...document.querySelectorAll('.flag')].filter(f => f.getClientRects().length).map(f => { const r = f.getBoundingClientRect(); return [r.width, r.height]; })")
+    check(all(w == 2 * h and w % 4 == 0 and (h % 3 == 0 or (w, h) == (32, 16)) for w, h in sizes), f'{tag} UAE flag sizes {sizes}')
+    # The site's own text only: headlines and summaries may well say "reached".
+    text = page.evaluate("[...document.querySelectorAll('.hero, .trust, .ihead, .side, .p-head, .stats, .live, .xnav, .sec-h, .n-note, .foot, .main-col > h2')].map(e => e.innerText).join(' ')")
+    left = [w for w in BACKEND_WORDS if w in text]
+    check(not left, f'{tag} public page still shows fetch statistics or the source list: {left}')
+    if route in ('news', 'uae'):
+        cards = page.evaluate(f"""[...document.querySelectorAll('[data-view="{route}"] .nlist[data-lang="{lang}"] .nitem')].filter(li => li.getClientRects().length).map(li => ({{
+            linkInTitle: !!li.querySelector('.n-title a'), href: li.querySelector('.n-src') ? li.querySelector('.n-src').getAttribute('href') : '',
+            sum: !!li.querySelector('.n-sum'), label: (li.querySelector('.n-by') || {{}}).textContent || ''}}))""")
+        check(cards and not any(c['linkInTitle'] for c in cards), f'{tag} headline titles should be plain text')
+        bad = [c['href'] for c in cards if c['href'] not in ITEM_URLS or c['href'] in HOMEPAGES]
+        check(not bad, f'{tag} source links must open the original article: {bad[:3]}')
+        check(all((c['label'] in LABELS[lang]) == c['sum'] for c in cards), f'{tag} every summary needs its label, and only summaries')
+        check(any(c['sum'] for c in cards), f'{tag} no summaries shown')
+        if route == 'uae':
+            check(page.locator('#uae .nr-list').count() == 0, f'{tag} UAE newsroom list still rendered')
+            if lang == 'en':
+                share = sum(c['sum'] for c in cards) / len(cards)
+                check(share >= 0.8, f'{tag} only {share:.0%} of UAE headlines have a summary')
+    if route == 'hardware':
+        want = ('Extra memory\u00a0(%)', 'ذاكرة إضافية\u00a0(%)')[lang == 'ar']
+        check(page.text_content('label:has(#extra) .fl') == want, f'{tag} estimator label: {page.text_content("label:has(#extra) .fl")}')
+        check(page.get_attribute('#extra', 'aria-describedby') == 'extra-hint' and page.locator('#extra-hint').is_visible(), f'{tag} estimator help text')
+        hint, field = page.evaluate("['#extra-hint', '#extra'].map(s => document.querySelector(s).getBoundingClientRect()).map(r => [r.top, r.left, r.right])")
+        check(hint[0] >= field[0] and hint[1] < field[2] and hint[2] > field[1], f'{tag} help text not under the Extra memory field')
+        # The label fits on one line, so the field lines up with the others in its row.
+        lines = page.evaluate("(f => Math.round(f.getBoundingClientRect().height / parseFloat(getComputedStyle(f).lineHeight)))(document.querySelector('label:has(#extra) .fl'))")
+        check(lines == 1, f'{tag} Extra memory label takes {lines} lines')
+        bar = page.evaluate("[...document.querySelectorAll('#hardware .statusbar b')].map(b => b.textContent)")
+        check(len(bar) == 2, f'{tag} hardware status bar items {bar}')
+    if route == 'contact':
+        check(page.locator('#contact form, #contact textarea').count() == 0, f'{tag} contact form still present')
+        # A short view still ends with the footer at the bottom of the window, not a band of page background.
+        page_h, foot_bottom = page.evaluate("[document.documentElement.scrollHeight, document.querySelector('.foot').getBoundingClientRect().bottom + scrollY]")
+        check(abs(page_h - foot_bottom) <= 1, f'{tag} footer ends {page_h - foot_bottom:.0f}px above the end of the page')
     check(page.evaluate('document.documentElement.lang') == lang and page.evaluate('document.documentElement.dir') == ('rtl' if lang == 'ar' else 'ltr'), f'{tag} lang/dir not applied')
 
 def go(page, url, view):
@@ -108,7 +167,7 @@ def main():
                     left = [t for t in untranslated(page) if not LATIN_OK.match(t)]
                     check(not left, f'[ar {width}px] untranslated labels: {sorted(set(left))[:10]}')
                     check('Cipher Lacuna' in page.title() and re.search(r'[؀-ۿ]', page.title()), f'[ar] document title not translated: {page.title()}')
-                    check(page.text_content('.top .tagline') == 'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي', f'[ar {width}px] tagline not in Arabic')
+                    check(page.text_content('.top .tagline') == 'كشف المجهول في عالم الذكاء الاصطناعي', f'[ar {width}px] tagline not in Arabic')
                     check(page.text_content('.top .wordmark') == 'Cipher Lacuna', f'[ar {width}px] brand name should stay Latin')
                 else:
                     check(page.title() == 'Cipher Lacuna | AI hardware, AI news and UAE AI', f'[en] home title: {page.title()}')
@@ -169,7 +228,8 @@ def main():
         check(regs and all('uae' in r.split() for r in regs) and 'region=uae' in page.url, f'UAE region filter: {len(regs)} items, {page.url}')
         go(page, '#news/global', 'news')
         check(all('global' in r.split() for r in shown()) and page.url.endswith('region=global#news'), f'#news/global deep link: {page.url}')
-        check(page.locator('#news .n-src[href^="https://"]').count() > 0, 'news source names are not linked to publishers')
+        check(page.locator('#news .n-src[href^="https://"]').count() > 0, 'news cards have no source link')
+        check(page.locator('#news .srcs, #news .srcs-grid').count() == 0, 'public news source list still rendered')
 
         # 6. UAE hardware tags open #hardware filtered.
         go(page, '#uae', 'uae')
