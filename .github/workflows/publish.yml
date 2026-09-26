@@ -22,12 +22,15 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with:
+          # Always start from the latest main: a queued run must not work on the SHA that triggered it.
+          ref: main
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           cache: pip
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '22'
       - run: pip install -r requirements.txt
@@ -68,12 +71,17 @@ jobs:
           git add data ':!data/drafts'
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh official hardware sources [skip ci]'
-            git push
+            # Another run or a manual push may have landed meanwhile; replay on top of it.
+            for attempt in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              sleep $((attempt * 5))
+            done
+            test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
           fi
       - name: Open a pull request for AI drafts
         if: github.event_name != 'push'
         continue-on-error: true
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           add-paths: data/drafts/*.json
           branch: ai-drafts
@@ -89,12 +97,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: python scripts/review_issue.py
       - name: Upload public website
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
       - name: Save refresh report
         if: always() && github.event_name != 'push'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: source-check-report
           path: data/refresh-report.json
@@ -111,4 +119,4 @@ jobs:
     steps:
       - name: Publish GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
