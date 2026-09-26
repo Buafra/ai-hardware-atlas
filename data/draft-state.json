@@ -10,5 +10,17 @@
   "https://newsroom.amd.com/news/aai-2026-cisco-client-partnership-update/": {
     "at": "2026-09-26T17:12:50+00:00",
     "result": "not a new product"
+  },
+  "https://newsroom.amd.com/news/amd-gives-consumers-and-businesses-more-ai-pc-opti/": {
+    "at": "2026-09-26T18:19:28+00:00",
+    "result": "evidence not found on page: AMD announced an expanded Ryzen\u2122 AI portfolio with the launch of the AMD Ryzen\u2122 "
+  },
+  "https://newsroom.amd.com/news/amd-expands-ai-leadership-across-client-graphics/": {
+    "at": "2026-09-26T18:19:28+00:00",
+    "result": "drafted"
+  },
+  "https://newsroom.amd.com/news/amd-introduces-new-radeon-graphics-cards-and-ryzen/": {
+    "at": "2026-09-26T18:19:28+00:00",
+    "result": "already in catalog"
   }
 }

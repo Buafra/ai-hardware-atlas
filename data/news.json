@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T18:14:41+00:00",
+  "updated_at": "2026-09-26T18:18:07+00:00",
   "health": {
     "ok": 40,
     "failed": 0,
@@ -7,10 +7,10 @@
   },
   "errors": {},
   "ai": {
-    "key_set": false,
+    "key_set": true,
     "model": "claude-opus-5",
-    "translated": 0,
-    "summarised": 0,
+    "translated": 20,
+    "summarised": 6,
     "problems": {}
   },
   "items": [
@@ -36,17 +36,6 @@
       "excerpt": "زلزال قوي ضرب المشهد الأدبي الفرنكفوني، بعد الشبهات التي أُثيرت حول رواية «كان ذلك أو الموت» للكاتب تيليسون أوريليان، واتهامه بالاستعانة بالذكاء الاصطناعي."
     },
     {
-      "id": "819e92326da0",
-      "title": "OpenAI pauses training of its ‘most capable models’",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
-      "source": "verge-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-26T16:34:59+00:00",
-      "excerpt": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models.",
-      "title_ar": "OpenAI توقف مؤقتاً تدريب «أكثر نماذجها قدرة»"
-    },
-    {
       "id": "aa86d073cc82",
       "title": "ترمب يرفض «دمج» جهود الذكاء الاصطناعي مع الصين رغم فتح قناة اتصال",
       "url": "https://aawsat.com/node/5322887",
@@ -66,7 +55,8 @@
       "published": "2026-09-26T14:39:34+00:00",
       "title_ar": "الصين تقول إنها «تحترم» استبدال ترامب مصطلح «الذكاء الاصطناعي» بـ«الذكاء الخارق»",
       "excerpt": "China responds to Trump’s ‘super intelligence’ rebrand of AI, stressing respect for US wording and deeper exchanges on fast-evolving artificial intelligence tech.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "4a3b86be32dd",
@@ -141,7 +131,8 @@
       "published": "2026-09-26T13:15:33+00:00",
       "title_ar": "التمويل والذكاء الاصطناعي وبرامج الماجستير التنفيذي في إدارة الأعمال ضمن أبرز الخيارات في Gulf News LevelUP",
       "excerpt": "Gulf News platform showcases trending qualifications for ambitious talent",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "2364f43f1e17",
@@ -154,16 +145,6 @@
       "excerpt": "كشفت مايكروسوفت الجمعة، عن رؤية جديدة لدمج برامج \"وورد\"، و\"إكسل\"، و\"باوربوينت\" في أداتها المساعِدة القائمة على الذكاء الاصطناعي \"كوبايلوت\"، في مسعى إلى جعل الذكاء الاصطناعي بوابة الدخول إلى حزمة برامجها الشهيرة."
     },
     {
-      "id": "afd573e630c0",
-      "title": "هل يستطيع العالم تنظيم الذكاء الاصطناعي دون كبح استثماراته؟",
-      "url": "https://www.aljazeera.net/ebusiness/2026/9/26/%d9%87%d9%84-%d9%8a%d8%b3%d8%aa%d8%b7%d9%8a%d8%b9-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%aa%d9%86%d8%b8%d9%8a%d9%85-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1?traffic_source=rss",
-      "source": "aljazeera-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T12:35:44+00:00",
-      "excerpt": "تنظيم الذكاء الاصطناعي يواجه معادلة بين خفض مخاطر الاحتيال والهجمات وفقدان الوظائف، والحفاظ على الاستثمار والابتكار، وسط مخاوف من أن ترفع القواعد كلفة الشركات الناشئة."
-    },
-    {
       "id": "1aee28cb585b",
       "title": "سرطان البنكرياس لم يظهر بعد.. لكن الذكاء الاصطناعي بدأ يراه",
       "url": "https://www.aletihad.ae/news/الذكاء-الاصطناعي/4694564/سرطان-البنكرياس-لم-يظهر-بعد---لكن-الذكاء-الاصطناعي-بدأ-يراه",
@@ -171,7 +152,8 @@
       "lang": "ar",
       "uae": true,
       "published": "2026-09-26T12:12:55+00:00",
-      "excerpt": "طوّر باحثون في مايو كلينك (Mayo Clinic) نموذجًا للذكاء الاصطناعي يمكنه التنبؤ بخطر إصابة الشخص بسرطان البنكرياس قبل تشخيص المرض بنحو ثلاث سنوات، في خطوة قد تساعد على تحديد الأشخاص الأكثر عرضة للإصابة في وقت مبكر."
+      "excerpt": "طوّر باحثون في مايو كلينك (Mayo Clinic) نموذجًا للذكاء الاصطناعي يمكنه التنبؤ بخطر إصابة الشخص بسرطان البنكرياس قبل تشخيص المرض بنحو ثلاث سنوات، في خطوة قد تساعد على تحديد الأشخاص الأكثر عرضة للإصابة في وقت مبكر.",
+      "summary_attempts": 1
     },
     {
       "id": "a3085c3e5894",
@@ -193,7 +175,8 @@
       "published": "2026-09-26T11:42:56+00:00",
       "title_ar": "إعلان أبوظبي: ما اتفقت عليه 119 دولة بشأن الذكاء الاصطناعي والجرائم الإلكترونية والاتجار",
       "excerpt": "World leaders adopted the Abu Dhabi Declaration at the 15th UN Crime Congress on Saturday. Here is what 119 countries committed to and what it means for the fight against 21st-century crime.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "4c23f2024b07",
@@ -238,7 +221,8 @@
       "published": "2026-09-26T10:30:50+00:00",
       "title_ar": "وكلاء OpenAI يسرّبون 53 صورة لمستخدمي ChatGPT على الإنترنت",
       "excerpt": "Company's own AI agents posted user-provided images to external hosting services",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "b65d1a2bb490",
@@ -281,7 +265,8 @@
       "published": "2026-09-26T08:15:05+00:00",
       "title_ar": "OpenAI تقرّ بأن حكومات من بين «عشرات» الجهات التي يمكن أن تتسلل إليها الروبوتات",
       "excerpt": "Company's AI models accessed US government websites – days after a similar incident in Australia",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "78ed5c7c4b90",
@@ -293,7 +278,8 @@
       "published": "2026-09-26T07:52:25+00:00",
       "title_ar": "Microsoft تُجري تغييراً شاملاً على Copilot: 3 تغييرات كبيرة قادمة إلى تطبيق الذكاء الاصطناعي",
       "excerpt": "Home, Code and Autopilot bring documents, app building and autonomous agents together",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "03956bbd3fdd",
@@ -315,7 +301,8 @@
       "published": "2026-09-26T07:38:32+00:00",
       "title_ar": "موجز نهاية الأسبوع: ملكة جمال الكون الهند، لحظة لطاقم طيران الإمارات، إنقاذ عبر ChatGPT والمزيد",
       "excerpt": "Here’s your roundup of the top trending stories making headlines this weekend",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "a81fc871d5e8",
@@ -327,7 +314,8 @@
       "published": "2026-09-26T05:39:45+00:00",
       "title_ar": "أشخاص في الصين يؤجّرون وجوههم للذكاء الاصطناعي... مقابل ما يصل إلى 15 ألف دولار",
       "excerpt": "Ordinary people license their likenesses for AI dramas, ads and games in unusual new side hustle",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "b458cce54c61",
@@ -339,7 +327,8 @@
       "published": "2026-09-26T05:02:31+00:00",
       "title_ar": "وكلاء الذكاء الاصطناعي التابعون لـOpenAI تجاوزوا الحدود على مواقع حكومية أمريكية... إليك ما حدث",
       "excerpt": "One agent used exposed Census credentials while another federal incident remains under investigation",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "3cb9f7f0458b",
@@ -361,7 +350,11 @@
       "published": "2026-09-26T04:43:22+00:00",
       "title_ar": "الولايات المتحدة والصين تنشئان «قناة اتصال» لحوادث الذكاء الاصطناعي",
       "excerpt": "They also established a 'US-China Super Intelligence (SI) Dialogue to exchange views on risks and benefits' of AI, with the next exchange set for November",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_en": "The White House said on Friday that the United States and China will create a bilateral communication channel for AI-related incidents, following a summit between Donald Trump and Xi Jinping. The two sides also launched a \"US-China Super Intelligence (SI) Dialogue\" to discuss risks and benefits, using the term SI instead of AI, with the next exchange due by November. Xi said both countries can and must keep AI development under human control.",
+      "summary_ar": "أعلن البيت الأبيض يوم الجمعة أن الولايات المتحدة والصين ستنشئان قناة تواصل ثنائية للحوادث المرتبطة بالذكاء الاصطناعي، وذلك عقب قمة جمعت Donald Trump وXi Jinping. كما أطلق الجانبان «US-China Super Intelligence (SI) Dialogue» لتبادل وجهات النظر حول المخاطر والمنافع، مع اعتماد مصطلح SI بدل AI، على أن يجري التبادل المقبل بحلول نوفمبر. وقال Xi إن البلدين قادران ومسؤولان عن إبقاء تطوير الذكاء الاصطناعي تحت سيطرة بشرية.",
+      "summary_source": "ai",
+      "summary_basis": "article"
     },
     {
       "id": "3fbdf6e6e4a9",
@@ -373,7 +366,8 @@
       "published": "2026-09-26T04:29:59+00:00",
       "title_ar": "OpenAI تقول إن وكلاءها للذكاء الاصطناعي نشروا صور مستخدمي ChatGPT على الإنترنت عن طريق الخطأ",
       "excerpt": "OpenAI acknowledged that its AI tools had posted images from ChatGPT users onto online sites without the firm's knowledge, the latest example of AI agents operating outside their bounds.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "52b310a1998b",
@@ -393,7 +387,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T02:50:56+00:00",
-      "excerpt": "OpenAI said its bots accessed public data from a range of institutions during test exercises."
+      "excerpt": "OpenAI said its bots accessed public data from a range of institutions during test exercises.",
+      "title_ar": "بوتات OpenAI تعبث بمواقع عدة جهات حكومية أمريكية"
     },
     {
       "id": "8fbccf26de21",
@@ -403,7 +398,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T01:59:49+00:00",
-      "excerpt": "Long-running fight over Trump-backed maps takes another turn as absentee voting is already under way in Missouri."
+      "excerpt": "Long-running fight over Trump-backed maps takes another turn as absentee voting is already under way in Missouri.",
+      "title_ar": "المحكمة العليا الأمريكية ترفض للمرة الثالثة خريطة الانتخابات النصفية التي رسمها الجمهوريون في ميزوري – كما حدث"
     },
     {
       "id": "1fe1b6ab723e",
@@ -413,7 +409,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T01:08:57+00:00",
-      "excerpt": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses."
+      "excerpt": "The company behind Facebook and Instagram wants to keep consumers connected to the digital world via its ever-growing line of smart glasses.",
+      "title_ar": "في مؤتمر Meta Connect، كانت النظارات الذكية للشركة حاضرة في كل مكان"
     },
     {
       "id": "22c8166b45dc",
@@ -423,7 +420,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T00:24:43+00:00",
-      "excerpt": "Disclosure reveals new area of privacy risk for the company and illustrates how difficult it is to inventory unauthorized activity tied to its agents"
+      "excerpt": "Disclosure reveals new area of privacy risk for the company and illustrates how difficult it is to inventory unauthorized activity tied to its agents",
+      "title_ar": "OpenAI تقول إن وكلاء الذكاء الاصطناعي سرّبوا 53 صورة من مستخدمي ChatGPT في أحدث أمثلة النشاط المارق"
     },
     {
       "id": "303ad555831b",
@@ -433,7 +431,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T23:11:10+00:00",
-      "excerpt": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans."
+      "excerpt": "Boom Supersonic CEO Blake Scholl said the company's new stationary power plants were no longer in Crusoe's near-term plans.",
+      "title_ar": "Crusoe تتخلى عن خطة بقيمة 1.25 مليار دولار لاستخدام توربينات Boom في مراكز بيانات الذكاء الاصطناعي"
     },
     {
       "id": "df19e6663c5f",
@@ -443,7 +442,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T22:20:47+00:00",
-      "excerpt": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge."
+      "excerpt": "AI agents operating in OpenAI's research environment posted user images on public image-hosting sites without the lab's knowledge.",
+      "title_ar": "وكلاء OpenAI غير المؤمّنين ينشرون 53 صورة لمستخدمين على الإنترنت دون علم المختبر"
     },
     {
       "id": "5422c79d97ec",
@@ -453,7 +453,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T22:11:52+00:00",
-      "excerpt": "Xi’s state visit to the US emphasized personal rapport with the US president, rather than substantial agreements to pause their respective countries’ AI arms race"
+      "excerpt": "Xi’s state visit to the US emphasized personal rapport with the US president, rather than substantial agreements to pause their respective countries’ AI arms race",
+      "title_ar": "ترامب والرئيس الصيني شي ينهيان القمة دون اتفاق كبير بشأن الذكاء الاصطناعي"
     },
     {
       "id": "4a19c9abdcc1",
@@ -463,7 +464,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T21:36:20+00:00",
-      "excerpt": "\"Overly constrained AI models\" could cause military operations to fail, judges say."
+      "excerpt": "\"Overly constrained AI models\" could cause military operations to fail, judges say.",
+      "title_ar": "محكمة تقضي بأن للبنتاغون إدراج Anthropic في القائمة السوداء لرفضها تفعيل ميزات في Claude"
     },
     {
       "id": "de7583d0d2e5",
@@ -473,7 +475,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T21:10:51+00:00",
-      "excerpt": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026."
+      "excerpt": "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026.",
+      "title_ar": "عمال Tesla يمانعون تدريب روبوتات Optimus البشرية الشكل لتحل محلهم"
     },
     {
       "id": "cb8da29167b5",
@@ -483,7 +486,11 @@
       "lang": "ar",
       "uae": true,
       "published": "2026-09-25T20:57:00+00:00",
-      "excerpt": "دشّنت برجيل القابضة، أول مختبرات قسطرة قلبية مدعومة بتقنيات الذكاء الاصطناعي في مستشفى برجيل أبوظبي ومستشفى برجيل التخصصي في الشارقة، في خطوة تهدف إلى تعزيز قدراتها في إجراء التدخلات القلبية والوعائية المعقدة والإجراءات الطبية المتقدمة الموجهة بالصور."
+      "excerpt": "دشّنت برجيل القابضة، أول مختبرات قسطرة قلبية مدعومة بتقنيات الذكاء الاصطناعي في مستشفى برجيل أبوظبي ومستشفى برجيل التخصصي في الشارقة، في خطوة تهدف إلى تعزيز قدراتها في إجراء التدخلات القلبية والوعائية المعقدة والإجراءات الطبية المتقدمة الموجهة بالصور.",
+      "summary_en": "Burjeel Holdings has opened what it describes as its first cardiac catheterisation labs supported by artificial intelligence, at Burjeel Hospital Abu Dhabi and Burjeel Specialty Hospital in Sharjah. The group said the step aims to strengthen its capacity for complex cardiovascular interventions and advanced image-guided procedures.",
+      "summary_ar": "دشّنت برجيل القابضة أول مختبرات قسطرة قلبية مدعومة بالذكاء الاصطناعي في مستشفى برجيل أبوظبي ومستشفى برجيل التخصصي في الشارقة. وأوضحت المجموعة أن الخطوة تهدف إلى تعزيز قدراتها في إجراء التدخلات القلبية والوعائية المعقدة والإجراءات الطبية المتقدمة الموجهة بالصور.",
+      "summary_source": "ai",
+      "summary_basis": "excerpt"
     },
     {
       "id": "28eff29135c5",
@@ -493,7 +500,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T20:34:53+00:00",
-      "excerpt": "Anyone interested in joining has to ask Muse to put them on the list."
+      "excerpt": "Anyone interested in joining has to ask Muse to put them on the list.",
+      "title_ar": "Meta تفتح برنامج الوصول المبكر لميزات Muse الجديدة"
     },
     {
       "id": "cfaa791365ad",
@@ -503,7 +511,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T20:30:40+00:00",
-      "excerpt": "They wanted the silicon. They got the sand."
+      "excerpt": "They wanted the silicon. They got the sand.",
+      "title_ar": "لصوص سرقوا مقطورات «NVIDIA».. فحصلوا على 20 طناً من الرمل"
     },
     {
       "id": "224d121f7431",
@@ -513,7 +522,11 @@
       "lang": "ar",
       "uae": true,
       "published": "2026-09-25T20:23:00+00:00",
-      "excerpt": "نفذت مؤسسة الفجيرة للموارد الطبيعية، بالتعاون مع جامعة الفجيرة، برنامجها السنوي «بناء القدرات»، الذي استهدف 25 موظفاً من مختلف الإدارات والأقسام، بهدف تطوير الكفاءات الوظيفية وتعزيز المهارات الرقمية والقيادية والاتصالية، بما يسهم في رفع كفاءة الأداء ومواكبة متطلبات العمل الحكومي…"
+      "excerpt": "نفذت مؤسسة الفجيرة للموارد الطبيعية، بالتعاون مع جامعة الفجيرة، برنامجها السنوي «بناء القدرات»، الذي استهدف 25 موظفاً من مختلف الإدارات والأقسام، بهدف تطوير الكفاءات الوظيفية وتعزيز المهارات الرقمية والقيادية والاتصالية، بما يسهم في رفع كفاءة الأداء ومواكبة متطلبات العمل الحكومي…",
+      "summary_en": "Fujairah Natural Resources Corporation, with the University of Fujairah, ran its annual \"Capacity Building\" programme for 25 employees from various departments. The programme aims to develop job competencies and strengthen digital, leadership and communication skills in line with the requirements of government work.",
+      "summary_ar": "نفّذت مؤسسة الفجيرة للموارد الطبيعية، بالتعاون مع جامعة الفجيرة، برنامجها السنوي «بناء القدرات» الذي استهدف 25 موظفاً من مختلف الإدارات والأقسام. ويهدف البرنامج إلى تطوير الكفاءات الوظيفية وتعزيز المهارات الرقمية والقيادية والاتصالية بما يواكب متطلبات العمل الحكومي.",
+      "summary_source": "ai",
+      "summary_basis": "excerpt"
     },
     {
       "id": "e3aa7d4c7b11",
@@ -523,7 +536,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T20:15:00+00:00",
-      "excerpt": "The PKG Center for Social Impact expands Code.Tulsa experiential learning program."
+      "excerpt": "The PKG Center for Social Impact expands Code.Tulsa experiential learning program.",
+      "title_ar": "طلاب MIT يكتسبون منظوراً إنسانياً للابتكار التقني في تولسا بولاية أوكلاهوما"
     },
     {
       "id": "8063185ef2bc",
@@ -533,7 +547,11 @@
       "lang": "ar",
       "uae": true,
       "published": "2026-09-25T19:29:00+00:00",
-      "excerpt": "احتفت مؤسسة دبي لخدمات الإسعاف بمرور عشرين عاماً على تأسيسها، بتكريم شركائها وموظفيها تقديراً للجهود التي قدموها للإسهام في بناء وتطوير منظومة الطب الطارئ في إمارة دبي، تحت شعار «20 عاماً.. كل ثانية حياة»."
+      "excerpt": "احتفت مؤسسة دبي لخدمات الإسعاف بمرور عشرين عاماً على تأسيسها، بتكريم شركائها وموظفيها تقديراً للجهود التي قدموها للإسهام في بناء وتطوير منظومة الطب الطارئ في إمارة دبي، تحت شعار «20 عاماً.. كل ثانية حياة».",
+      "summary_en": "Dubai Corporation for Ambulance Services marked 20 years since its founding under the slogan \"20 years… every second is life\". The event honoured partners and staff for their contributions to building and developing the emergency medicine system in Dubai.",
+      "summary_ar": "احتفت مؤسسة دبي لخدمات الإسعاف بمرور عشرين عاماً على تأسيسها تحت شعار «20 عاماً.. كل ثانية حياة». وكرّمت المؤسسة شركاءها وموظفيها تقديراً لجهودهم في بناء وتطوير منظومة الطب الطارئ في إمارة دبي.",
+      "summary_source": "ai",
+      "summary_basis": "excerpt"
     },
     {
       "id": "d359ae6c8e5e",
@@ -553,7 +571,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T19:13:38+00:00",
-      "excerpt": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more."
+      "excerpt": "Anthropic has committed $11.6 billion over seven years to Akamai's cloud infrastructure, a bet on CPUs that could grow to about $20 billion, and in an unusual arrangement, Akamai is giving Anthropic a potential stake of up to 5% of its stock that grows as Anthropic spends more.",
+      "title_ar": "Anthropic تدفع 11.6 مليار دولار لـ Akamai على مدى سبع سنوات في صفقة سحابية"
     },
     {
       "id": "ff8bda4a60f0",
@@ -563,7 +582,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T19:11:05+00:00",
-      "excerpt": "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”"
+      "excerpt": "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”",
+      "title_ar": "كان يُفترض أن يضرب الذكاء الاصطناعي الخريجين الجدد بقوة.. لكن بيانات البطالة تقول عكس ذلك حتى الآن"
     },
     {
       "id": "65ae31d716de",
@@ -574,7 +594,12 @@
       "uae": true,
       "published": "2026-09-25T19:10:17+00:00",
       "excerpt": "Programme will provide training in generative AI and prompt engineering to one million people in Lebanon",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "title_ar": "الإمارات ولبنان تطلقان مبادرة للتدريب على الذكاء الاصطناعي",
+      "summary_en": "The UAE and Lebanon launched the One Million Lebanese AI Experts initiative, offering training in generative AI and prompt engineering to help one million people use AI tools at work and in daily life. It was announced during a meeting between Sheikh Abdullah bin Zayed and Lebanese Prime Minister Nawaf Salam on the sidelines of the UN General Assembly in New York, under the UAE's government experience exchange programme.",
+      "summary_ar": "أطلقت الإمارات ولبنان مبادرة «مليون خبير لبناني في الذكاء الاصطناعي»، التي توفّر تدريباً في الذكاء الاصطناعي التوليدي وهندسة الأوامر لتمكين مليون شخص من استخدام أدوات الذكاء الاصطناعي في العمل والحياة اليومية. وأُعلن عنها خلال لقاء جمع الشيخ عبدالله بن زايد برئيس الوزراء اللبناني نواف سلام على هامش الجمعية العامة للأمم المتحدة في نيويورك، ضمن برنامج تبادل الخبرات الحكومية.",
+      "summary_source": "ai",
+      "summary_basis": "article"
     },
     {
       "id": "f8ce50e1e379",
@@ -594,7 +619,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T19:00:00+00:00",
-      "excerpt": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster."
+      "excerpt": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
+      "title_ar": "Proaction تزيد مبيعاتها 60% وتوفّر أكثر من 75 ساعة باستخدام Codex"
     },
     {
       "id": "b97518582a39",
@@ -604,7 +630,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T18:48:33+00:00",
-      "excerpt": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness, and building businesses."
+      "excerpt": "Mark Wahlberg joins Bruce K. Lee at Disrupt to discuss investing, entrepreneurship, healthcare, wellness, and building businesses.",
+      "title_ar": "مارك والبرغ قادم إلى TechCrunch Disrupt 2026، ويريد الحديث عن عملك لا عن عمله"
     },
     {
       "id": "39e8b6e2d200",
@@ -615,7 +642,9 @@
       "uae": true,
       "published": "2026-09-25T18:47:42+00:00",
       "excerpt": "With Project Suncatcher, Google will test how to 'scale AI compute' above Earth",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "title_ar": "Google تريد مراكز بيانات للذكاء الاصطناعي في الفضاء، لكن الخبراء يحذرون من العقبات",
+      "summary_attempts": 1
     },
     {
       "id": "e3ed29775d07",
@@ -625,7 +654,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T18:33:59+00:00",
-      "excerpt": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout."
+      "excerpt": "The funding, which comes from Third Point, Nvidia, and others, will fuel the company's massive AI data center buildout.",
+      "title_ar": "قبيل طرحها العام الأولي في الولايات المتحدة، شركة الحوسبة السحابية البريطانية للذكاء الاصطناعي Nscale تؤمّن 3.36 مليار دولار بتمويل قابل للتحويل"
     },
     {
       "id": "ddb6a0a57317",
@@ -635,7 +665,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T18:22:47+00:00",
-      "excerpt": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,” maybe someone should have asked: what pace?"
+      "excerpt": "When AI leaders at OpenAI and Anthropic started talking about “pacing the frontier,” maybe someone should have asked: what pace?",
+      "title_ar": "Muse من Meta تخطف أضواء الذكاء الاصطناعي من OpenAI وAnthropic"
     },
     {
       "id": "469d8da91a36",
@@ -795,7 +826,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T16:00:00+00:00",
-      "page_checked": 2
+      "page_checked": 2,
+      "summary_attempts": 1
     },
     {
       "id": "500c1bdb1825",
@@ -926,7 +958,8 @@
       "uae": true,
       "published": "2026-09-25T13:02:18+00:00",
       "excerpt": "Emirates pulling further ahead of the global average and second-placed Singapore in Microsoft’s latest AI adoption ranking",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "f5e0462c8aed",
@@ -947,7 +980,8 @@
       "uae": true,
       "published": "2026-09-25T12:04:09+00:00",
       "excerpt": "Abu Dhabi tops the Middle East and North Africa for AI, ranking 11th globally in The Observer’s AI Cities Index, ahead of major tech hubs like Toronto and Boston.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "cf2a9bd7da1f",
@@ -1057,7 +1091,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T19:40:00+00:00",
-      "page_checked": 1
+      "page_checked": 2,
+      "summary_attempts": 1
     },
     {
       "id": "01b3022d0b4f",
@@ -1110,6 +1145,16 @@
       "excerpt": "Meta has a new plan to get people to make games for its Horizon social platform. The company today announced two new development tools that will let you create games with AI prompts: Horizon Create, a mobile app, and Horizon Studio, a browser app that offers more granular…"
     },
     {
+      "id": "cb7e0a0370f0",
+      "title": "Muse will apparently let you download its entire filesystem",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-24T17:14:12+00:00",
+      "excerpt": "A pair of developers say that with very little prompting, Meta's Muse will share its entire filesystem with you."
+    },
+    {
       "id": "e7107d9a76d9",
       "title": "Introducing Gemini 3.8 Live with Live Avatar",
       "url": "https://deepmind.google/blog/introducing-gemini-38-live-with-live-avatar/",
@@ -1117,7 +1162,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T16:20:39+00:00",
-      "page_checked": 1
+      "page_checked": 2,
+      "summary_attempts": 1
     },
     {
       "id": "e655f5f2c377",
@@ -1158,7 +1204,8 @@
       "uae": true,
       "published": "2026-09-24T16:09:25+00:00",
       "excerpt": "Explore the most debated AI doomsday scenarios, from nuclear war and bioweapons to runaway systems and internet takeovers, and what experts say about the real risks.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "cd39d99e0cdd",
@@ -1259,7 +1306,11 @@
       "lang": "ar",
       "uae": false,
       "published": "2026-09-24T13:10:30+00:00",
-      "page_checked": 1
+      "page_checked": 2,
+      "summary_en": "A BBC Arabic 4Tech report looks at a home energy system combining solar panels and batteries. Smart technologies learn the household's consumption pattern and draw on weather data and electricity prices to decide the best time to charge the battery and use power. The system can also connect home appliances and run them automatically when energy is available.",
+      "summary_ar": "يستعرض تقرير من برنامج «4تك» على BBC Arabic نظاماً منزلياً لتخزين الطاقة يعتمد على البطاريات والألواح الشمسية. وتتعلم التقنيات الذكية نمط استهلاك المنزل وتستفيد من بيانات الطقس وأسعار الكهرباء لتحديد أفضل وقت لشحن البطارية واستخدام الطاقة. كما يمكن للنظام ربط الأجهزة المنزلية وتشغيلها تلقائياً عند توفر الطاقة لإدارة الاستهلاك بكفاءة أكبر.",
+      "summary_source": "ai",
+      "summary_basis": "article"
     },
     {
       "id": "7a97ef45ef5f",
@@ -1280,7 +1331,8 @@
       "uae": true,
       "published": "2026-09-24T12:23:12+00:00",
       "excerpt": "Abu Dhabi hosts Ai Everything 2026 at ADNEC, spotlighting sovereign AI, agentic systems, data centres and government use cases driving measurable economic impact.",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "4909099400c9",
@@ -1291,7 +1343,8 @@
       "uae": true,
       "published": "2026-09-24T12:06:38+00:00",
       "excerpt": "Contractors quietly handled some calls as employees raised concerns over sensitive data",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "ffbbca040254",
@@ -1332,7 +1385,8 @@
       "uae": true,
       "published": "2026-09-24T07:30:26+00:00",
       "excerpt": "Growing use of AI-powered search highlights the importance of accurate and consistent digital information for businesses",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "bf30facdfa56",
@@ -1343,7 +1397,8 @@
       "uae": true,
       "published": "2026-09-24T07:20:03+00:00",
       "excerpt": "The programme will initially be led by Khalifa University’s Computer and Information Engineering Department",
-      "excerpt_source": "page"
+      "excerpt_source": "page",
+      "summary_attempts": 1
     },
     {
       "id": "ccf41faa9da2",
@@ -1569,7 +1624,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-23T17:39:39+00:00",
-      "page_checked": 1
+      "page_checked": 2,
+      "summary_attempts": 1
     },
     {
       "id": "4c4abcff4acd",
@@ -1609,7 +1665,8 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-23T15:25:14+00:00",
-      "page_checked": 1
+      "page_checked": 2,
+      "summary_attempts": 1
     },
     {
       "id": "a1700d1f6b37",
@@ -2067,6 +2124,16 @@
       "published": "2026-09-22T07:34:27+00:00",
       "excerpt": "Googlebook brings AI-first laptops starting at $899, tightly integrated with Android phones, Gemini AI Pro and premium hardware from Acer, ASUS, Dell, HP and Lenovo.",
       "excerpt_source": "page"
+    },
+    {
+      "id": "bacef4183b30",
+      "title": "\"وورما\".. روبوت برمائي يضخ الماء داخل جسمه ليزحف ويسبح",
+      "url": "https://www.skynewsarabia.com/technology/1893404-%D9%88%D9%88%D8%B1%D9%85%D8%A7-%D8%B1%D9%88%D8%A8%D9%88%D8%AA-%D8%A8%D8%B1%D9%85%D8%A7%D8%A6%D9%8A-%D9%8A%D8%B6%D8%AE-%D8%A7%D9%84%D9%85%D8%A7%D8%A1-%D8%AF%D8%A7%D8%AE%D9%84-%D8%AC%D8%B3%D9%85%D9%87-%D9%84%D9%8A%D8%B2%D8%AD%D9%81-%D9%88%D9%8A%D8%B3%D8%A8%D8%AD",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-22T04:14:19+00:00",
+      "excerpt": "لا يملك أقداما أو زعانف، لكنه يستطيع الزحف على الأرض وصعود المنحدرات وتجاوز الدرج والسباحة. السر لا يكمن في تغيير شكل الروبوت أو استبدال أجزائه، بل في ضخ الماء داخل جسمه من الرأس إلى الذيل وبالعكس."
     }
   ]
 }
