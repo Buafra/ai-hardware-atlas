@@ -1,14 +1,72 @@
 {
-  "updated_at": "2026-09-26T13:09:30+00:00",
+  "updated_at": "2026-09-26T17:11:56+00:00",
   "health": {
     "ok": 39,
     "failed": 1,
     "sources": 40
   },
   "errors": {
-    "mediaoffice-ar2": "TimeoutError"
+    "indy-ar-new": "IncompleteRead"
   },
   "items": [
+    {
+      "id": "4b3470dfb19f",
+      "title": "‘Charming and disarming’ … how Meta’s technology-packed Muse harnesses the power of cuteness",
+      "url": "https://www.theguardian.com/fashion/2026/sep/26/charming-and-disarming-how-metas-technology-packed-muse-harnesses-the-power-of-cuteness",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T17:09:28+00:00",
+      "title_ar": "«ساحر ويُذيب الحذر»... كيف يسخّر Muse المليء بالتقنيات من Meta قوة الظرافة"
+    },
+    {
+      "id": "2095b998a972",
+      "title": "رواية مرشحة لـ«غونكور» قد يكون مؤلفها الذكاء الاصطناعي",
+      "url": "https://aawsat.com/node/5322934",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T16:42:37+00:00"
+    },
+    {
+      "id": "819e92326da0",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T16:34:59+00:00",
+      "title_ar": "OpenAI توقف مؤقتاً تدريب «أكثر نماذجها قدرة»"
+    },
+    {
+      "id": "aa86d073cc82",
+      "title": "ترمب يرفض «دمج» جهود الذكاء الاصطناعي مع الصين رغم فتح قناة اتصال",
+      "url": "https://aawsat.com/node/5322887",
+      "source": "aawsat",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T14:44:18+00:00"
+    },
+    {
+      "id": "e4266869d2d6",
+      "title": "China says it 'respects' Trump's 'super intelligence' switch from AI",
+      "url": "https://gulfnews.com/world/asia/china/china-says-it-respects-trumps-super-intelligence-switch-from-ai-1.500688763",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T14:39:34+00:00",
+      "title_ar": "الصين تقول إنها «تحترم» استبدال ترامب مصطلح «الذكاء الاصطناعي» بـ«الذكاء الخارق»"
+    },
+    {
+      "id": "4a3b86be32dd",
+      "title": "Heads of OpenAI and Anthropic called to face Senate inquiry after rogue agent incidents",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/27/sam-altman-openai-dario-amodei-anthropic-senate-inquiry-medicare-hack-rogue-ai-agent-leak",
+      "source": "guardian-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T14:00:37+00:00",
+      "title_ar": "استدعاء رئيسَي OpenAI وAnthropic للمثول أمام تحقيق في مجلس الشيوخ بعد حوادث وكلاء خارجين عن السيطرة"
+    },
     {
       "id": "63ec917f1cda",
       "title": "\"قناة اتصال\" بين الولايات المتحدة والصين لمعالجة حوادث الذكاء الاصطناعي",
@@ -16,7 +74,55 @@
       "source": "euronews-ar",
       "lang": "ar",
       "uae": false,
-      "published": "2026-09-26T12:36:23+00:00"
+      "published": "2026-09-26T14:00:23+00:00"
+    },
+    {
+      "id": "344d41dcb1d6",
+      "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
+      "url": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising",
+      "source": "verge-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T14:00:00+00:00",
+      "title_ar": "هل يستطيع ماثيو برينس الرئيس التنفيذي لـCloudflare إنقاذ الويب من الذكاء الاصطناعي؟"
+    },
+    {
+      "id": "c6fb97f6187a",
+      "title": "I created an interactive digital avatar of myself — and you can talk to it",
+      "url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+      "source": "techcrunch-ai",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-26T14:00:00+00:00",
+      "title_ar": "أنشأتُ نسخة رقمية تفاعلية من نفسي... ويمكنك التحدث إليها"
+    },
+    {
+      "id": "4ec00911688c",
+      "title": "هاكر واحد يقود جيشًا من الوكلاء.. هل بدأ عصر عصابات AI؟",
+      "url": "https://www.skynewsarabia.com/technology/1894566-%D9%87%D8%A7%D9%83%D8%B1-%D9%88%D8%A7%D8%AD%D8%AF-%D9%8A%D9%82%D9%88%D8%AF-%D8%AC%D9%8A%D8%B4%D8%A7-%D8%A7%D9%84%D9%88%D9%83%D9%84%D8%A7%D8%A1-%D8%A8%D8%AF%D8%A3-%D8%B9%D8%B5%D8%B1-%D8%B9%D8%B5%D8%A7%D8%A8%D8%A7%D8%AA-ai",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T13:39:59+00:00"
+    },
+    {
+      "id": "283585619e57",
+      "title": "Finance, AI and Executive MBAs among top choices at Gulf News LevelUP",
+      "url": "https://gulfnews.com/uae/finance-ai-and-executive-mbas-among-top-choices-at-gulf-news-levelup-1.500688866",
+      "source": "gn-uae",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-26T13:15:33+00:00",
+      "title_ar": "التمويل والذكاء الاصطناعي وبرامج الماجستير التنفيذي في إدارة الأعمال ضمن أبرز الخيارات في Gulf News LevelUP"
+    },
+    {
+      "id": "afd573e630c0",
+      "title": "هل يستطيع العالم تنظيم الذكاء الاصطناعي دون كبح استثماراته؟",
+      "url": "https://www.aljazeera.net/ebusiness/2026/9/26/%d9%87%d9%84-%d9%8a%d8%b3%d8%aa%d8%b7%d9%8a%d8%b9-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%aa%d9%86%d8%b8%d9%8a%d9%85-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1?traffic_source=rss",
+      "source": "aljazeera-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-26T12:35:44+00:00"
     },
     {
       "id": "1aee28cb585b",
@@ -52,7 +158,8 @@
       "source": "kt-uae",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T11:42:56+00:00"
+      "published": "2026-09-26T11:42:56+00:00",
+      "title_ar": "إعلان أبوظبي: ما اتفقت عليه 119 دولة بشأن الذكاء الاصطناعي والجرائم الإلكترونية والاتجار"
     },
     {
       "id": "4c23f2024b07",
@@ -61,7 +168,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T11:00:36+00:00"
+      "published": "2026-09-26T11:00:36+00:00",
+      "title_ar": "أكسفورد تسمح لـOpenAI بتدريب نماذجها للذكاء الاصطناعي على مكتبة بودليان"
     },
     {
       "id": "b67b70fb80e2",
@@ -70,7 +178,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T11:00:34+00:00"
+      "published": "2026-09-26T11:00:34+00:00",
+      "title_ar": "وعود مُخلَفة وأراضٍ مصادَرة: مركز بيانات فائق الضخامة للذكاء الاصطناعي قيد الإنشاء في قرية هندية صغيرة"
     },
     {
       "id": "8cce6312fe61",
@@ -79,7 +188,8 @@
       "source": "guardian-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T11:00:33+00:00"
+      "published": "2026-09-26T11:00:33+00:00",
+      "title_ar": "الجدل حول الذكاء الاصطناعي يشكّل بالفعل ملامح انتخابات 2028... وهذه مواقف الطامحين الديمقراطيين"
     },
     {
       "id": "02be0157c098",
@@ -88,7 +198,8 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T10:30:50+00:00"
+      "published": "2026-09-26T10:30:50+00:00",
+      "title_ar": "وكلاء OpenAI يسرّبون 53 صورة لمستخدمي ChatGPT على الإنترنت"
     },
     {
       "id": "b65d1a2bb490",
@@ -97,7 +208,8 @@
       "source": "wired-ai",
       "lang": "en",
       "uae": false,
-      "published": "2026-09-26T10:30:00+00:00"
+      "published": "2026-09-26T10:30:00+00:00",
+      "title_ar": "Muse من Meta مخصص للبالغين فقط... فلماذا يبدو كلعبة أطفال؟"
     },
     {
       "id": "ceddef0fd1bc",
@@ -109,15 +221,6 @@
       "published": "2026-09-26T10:29:19+00:00"
     },
     {
-      "id": "36745bac141a",
-      "title": "ترمب: الجميع أيدوا مقترحي تغيير اسم «الذكاء الاصطناعي»",
-      "url": "https://aawsat.com/node/5322801",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T10:22:46+00:00"
-    },
-    {
       "id": "64d3b88561a9",
       "title": "\"قناة اتصال\" بين أميركا والصين لمعالجة حوادث الذكاء الاصطناعي",
       "url": "https://www.independentarabia.com/node/658946/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D9%88%D9%84%D9%8A%D8%A7%D8%AA/%D9%82%D9%86%D8%A7%D8%A9-%D8%A7%D8%AA%D8%B5%D8%A7%D9%84-%D8%A8%D9%8A%D9%86-%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D8%A7-%D9%88%D8%A7%D9%84%D8%B5%D9%8A%D9%86-%D9%84%D9%85%D8%B9%D8%A7%D9%84%D8%AC%D8%A9-%D8%AD%D9%88%D8%A7%D8%AF%D8%AB-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
@@ -127,49 +230,14 @@
       "published": "2026-09-26T10:00:15+00:00"
     },
     {
-      "id": "3128864dbcb6",
-      "title": "وكلاء أوبن إيه آي يخترقون مواقع حكومية أمريكية وعشرات المؤسسات الأخرى",
-      "url": "https://www.aljazeera.net/tech/2026/9/26/%d9%88%d9%83%d9%84%d8%a7%d8%a1-%d8%a3%d9%88%d8%a8%d9%86-%d8%a5%d9%8a%d9%87-%d8%a2%d9%8a-%d9%8a%d8%ae%d8%aa%d8%b1%d9%82%d9%88%d9%86-%d9%85%d9%88%d8%a7%d9%82%d8%b9-%d8%ad%d9%83%d9%88%d9%85%d9%8a%d8%a9?traffic_source=rss",
-      "source": "aljazeera-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T09:56:25+00:00"
-    },
-    {
-      "id": "9c882f39f536",
-      "title": "حصاد الأمم المتحدة.. تقدم حذر بشأن إيران وأوكرانيا والذكاء الاصطناعي يخطف الأضواء",
-      "url": "https://www.aljazeera.net/politics/2026/9/26/%d8%ad%d8%b5%d8%a7%d8%af-%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d9%82%d8%af%d9%85-%d8%ad%d8%b0%d8%b1-%d8%a8%d8%b4%d8%a3%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86?traffic_source=rss",
-      "source": "aljazeera-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T09:08:26+00:00"
-    },
-    {
-      "id": "83108c966258",
-      "title": "خريطة القوة في الذكاء الاصطناعي.. من يملك الشركات والنماذج والرقائق؟",
-      "url": "https://www.aljazeera.net/tech/2026/9/26/%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d9%82%d9%88%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d9%84%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d9%85%d9%86?traffic_source=rss",
-      "source": "aljazeera-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T08:22:33+00:00"
-    },
-    {
       "id": "2e841c0225d7",
       "title": "OpenAI admits governments among 'dozens' of entities that could be infiltrated by bots",
       "url": "https://www.thenationalnews.com/future/technology/2026/09/26/openai-admits-governments-among-dozens-of-entities-that-could-be-infiltrated-by-bots/",
       "source": "thenational",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T08:15:05+00:00"
-    },
-    {
-      "id": "278588b0a71b",
-      "title": "رئيس «كوالكوم» لـ«الشرق الأوسط»: نوسّع استثماراتنا في السعودية ونراهن على اقتصاد الذكاء الاصطناعي",
-      "url": "https://aawsat.com/node/5322756",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T08:00:37+00:00"
+      "published": "2026-09-26T08:15:05+00:00",
+      "title_ar": "OpenAI تقرّ بأن حكومات من بين «عشرات» الجهات التي يمكن أن تتسلل إليها الروبوتات"
     },
     {
       "id": "78ed5c7c4b90",
@@ -178,7 +246,8 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T07:52:25+00:00"
+      "published": "2026-09-26T07:52:25+00:00",
+      "title_ar": "Microsoft تُجري تغييراً شاملاً على Copilot: 3 تغييرات كبيرة قادمة إلى تطبيق الذكاء الاصطناعي"
     },
     {
       "id": "03956bbd3fdd",
@@ -196,16 +265,8 @@
       "source": "gn-uae",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T07:38:32+00:00"
-    },
-    {
-      "id": "be4bf3f4fe5a",
-      "title": "الذكاء الاصطناعي يعيد المستثمرين إلى الأسهم العالمية",
-      "url": "https://aawsat.com/node/5322732",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T05:40:25+00:00"
+      "published": "2026-09-26T07:38:32+00:00",
+      "title_ar": "موجز نهاية الأسبوع: ملكة جمال الكون الهند، لحظة لطاقم طيران الإمارات، إنقاذ عبر ChatGPT والمزيد"
     },
     {
       "id": "a81fc871d5e8",
@@ -214,7 +275,8 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T05:39:45+00:00"
+      "published": "2026-09-26T05:39:45+00:00",
+      "title_ar": "أشخاص في الصين يؤجّرون وجوههم للذكاء الاصطناعي... مقابل ما يصل إلى 15 ألف دولار"
     },
     {
       "id": "b458cce54c61",
@@ -223,16 +285,8 @@
       "source": "gulfnews-tech",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T05:02:31+00:00"
-    },
-    {
-      "id": "2693023f7fd4",
-      "title": "واشنطن وبكين تستحدثان قناة اتصال بشأن حوادث الذكاء الاصطناعي",
-      "url": "https://www.aletihad.ae/news/عربي-ودولي/4694501/واشنطن-وبكين-تستحدثان-قناة-اتصال-بشأن-حوادث-الذكاء-الاصطناعي",
-      "source": "alittihad-feed",
-      "lang": "ar",
-      "uae": true,
-      "published": "2026-09-26T04:53:42+00:00"
+      "published": "2026-09-26T05:02:31+00:00",
+      "title_ar": "وكلاء الذكاء الاصطناعي التابعون لـOpenAI تجاوزوا الحدود على مواقع حكومية أمريكية... إليك ما حدث"
     },
     {
       "id": "3abdbca04e04",
@@ -241,16 +295,8 @@
       "source": "kt-business",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T04:43:22+00:00"
-    },
-    {
-      "id": "1fa5fb68e10e",
-      "title": "البيت الأبيض: قناة اتصال بين واشنطن وبكين لحوادث الذكاء الاصطناعي",
-      "url": "https://aawsat.com/node/5322722",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T04:34:41+00:00"
+      "published": "2026-09-26T04:43:22+00:00",
+      "title_ar": "الولايات المتحدة والصين تنشئان «قناة اتصال» لحوادث الذكاء الاصطناعي"
     },
     {
       "id": "3fbdf6e6e4a9",
@@ -259,7 +305,8 @@
       "source": "kt-business",
       "lang": "en",
       "uae": true,
-      "published": "2026-09-26T04:29:59+00:00"
+      "published": "2026-09-26T04:29:59+00:00",
+      "title_ar": "OpenAI تقول إن وكلاءها للذكاء الاصطناعي نشروا صور مستخدمي ChatGPT على الإنترنت عن طريق الخطأ"
     },
     {
       "id": "52b310a1998b",
@@ -296,15 +343,6 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-26T01:08:57+00:00"
-    },
-    {
-      "id": "9f6b4ddf4bf7",
-      "title": "زيلينسكي: روسيا تستهدف \"الحياة اليومية\" بهجماتها على مراكز البيانات في أوكرانيا",
-      "url": "https://www.bbc.com/arabic/articles/crx2zzgk9kggo?at_medium=RSS&at_campaign=rss",
-      "source": "bbc-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-26T01:08:15+00:00"
     },
     {
       "id": "22c8166b45dc",
@@ -847,15 +885,6 @@
       "published": "2026-09-25T11:00:28+00:00"
     },
     {
-      "id": "2846bb8ae94e",
-      "title": "AI psychosis for dummies: the Stephen Collins cartoon",
-      "url": "https://www.theguardian.com/lifeandstyle/picture/2026/sep/25/ai-psychosis-for-dummies-the-stephen-collins-cartoon",
-      "source": "guardian-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-25T09:30:45+00:00"
-    },
-    {
       "id": "93b91a44c537",
       "title": "The Pentagon wants $30 million to build an AI-powered lie detector",
       "url": "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/",
@@ -863,15 +892,6 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-25T09:16:25+00:00"
-    },
-    {
-      "id": "0d7c653c29a4",
-      "title": "We all know a lack of exercise is bad for our bodies. So what is relying on AI doing to our brains? | Devi Sridhar",
-      "url": "https://www.theguardian.com/commentisfree/2026/sep/25/exercise-bad-bodies-ai-brains-students-tech-health",
-      "source": "guardian-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-25T09:00:45+00:00"
     },
     {
       "id": "96064fbcf338",
@@ -928,15 +948,6 @@
       "published": "2026-09-24T19:15:00+00:00"
     },
     {
-      "id": "9ef4a7c3c631",
-      "title": "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
-      "url": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
-      "source": "techcrunch-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-24T19:00:42+00:00"
-    },
-    {
       "id": "e64c35c9e5d7",
       "title": "New Jersey fines data center $1.1M after drone pics expose 62 gas generators",
       "url": "https://arstechnica.com/tech-policy/2026/09/new-jersey-fines-data-center-1-1m-after-satellite-pics-expose-62-gas-generators/",
@@ -971,24 +982,6 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T17:52:29+00:00"
-    },
-    {
-      "id": "cb7e0a0370f0",
-      "title": "Muse will apparently let you download its entire filesystem",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem",
-      "source": "verge-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-24T17:14:12+00:00"
-    },
-    {
-      "id": "0b7b681fb83d",
-      "title": "Muse sure looks a lot like OpenClaw",
-      "url": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
-      "source": "verge-ai",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-24T17:10:38+00:00"
     },
     {
       "id": "e7107d9a76d9",
@@ -1268,15 +1261,6 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-23T22:35:14+00:00"
-    },
-    {
-      "id": "ec6b0499f3ac",
-      "title": "Emirates Foundation links up with Responsible AI to harness the tech for global good at UNGA",
-      "url": "https://www.thenationalnews.com/news/uae/2026/09/23/emirates-foundation-links-up-with-responsible-ai-to-harness-the-tech-for-global-good-at-unga/",
-      "source": "thenational-uae2",
-      "lang": "en",
-      "uae": true,
-      "published": "2026-09-23T22:03:57+00:00"
     },
     {
       "id": "cdf5468b7916",
@@ -1808,6 +1792,42 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-22T11:04:51+00:00"
+    },
+    {
+      "id": "9a4c22bba125",
+      "title": "Hackers are using AI agents to breach companies in just hours, Anthropic says",
+      "url": "https://gulfnews.com/technology/hackers-are-using-ai-agents-to-breach-companies-in-just-hours-anthropic-says-1.500683637",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T10:43:20+00:00"
+    },
+    {
+      "id": "a25857df11c8",
+      "title": "4,700 fake AI dating profiles talked to 25,000 people in just two weeks",
+      "url": "https://gulfnews.com/technology/4700-fake-ai-dating-profiles-talked-to-25000-people-in-just-two-weeks-1.500683516",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T09:19:39+00:00"
+    },
+    {
+      "id": "3a1d10140ab9",
+      "title": "\"علي بابا\" تكشف عن تكنولوجيات جديدة لرقائق الذكاء الاصطناعي",
+      "url": "https://www.skynewsarabia.com/technology/1893682-%D8%B9%D9%84%D9%8A-%D8%A8%D8%A7%D8%A8%D8%A7-%D8%AA%D9%83%D8%B4%D9%81-%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%AA-%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9-%D9%84%D8%B1%D9%82%D8%A7%D8%A6%D9%82-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+      "source": "skynews-ar-tech",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-22T08:29:57+00:00"
+    },
+    {
+      "id": "077ce6c36686",
+      "title": "Googlebook: What to know about Google’s new $899 (Dh3,301) AI laptops",
+      "url": "https://gulfnews.com/technology/googlebook-laptops-price-features-release-date-1.500683027",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": true,
+      "published": "2026-09-22T07:34:27+00:00"
     }
   ]
 }
