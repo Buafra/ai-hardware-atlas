@@ -146,5 +146,181 @@
       "memory_gb": "Dedicated Memory Size\\s+(\\d+)\\s*GB",
       "power_w": "Typical Board Power\\s*\\(TBP\\)\\s+(\\d+)\\s*W"
     }
+  },
+  "geforce-rtx-4090": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/",
+    "title": "GeForce RTX 4090",
+    "fields": {
+      "memory_gb": "Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "Total Graphics Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4080-super": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/",
+    "title": "RTX 4080 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4080 SUPER GeForce RTX 4080 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB",
+      "power_w": "GeForce RTX 4080 SUPER GeForce RTX 4080 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+(\\d+)\\s+\\d+"
+    }
+  },
+  "geforce-rtx-4080": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/",
+    "title": "RTX 4080 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4080 SUPER GeForce RTX 4080 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4080 SUPER GeForce RTX 4080 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4070-ti-super": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
+    "title": "GeForce RTX 4070 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4070-ti": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
+    "title": "GeForce RTX 4070 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4070-super": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
+    "title": "GeForce RTX 4070 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4070": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
+    "title": "GeForce RTX 4070 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4070 Family GeForce RTX 4070 Ti SUPER GeForce RTX 4070 Ti GeForce RTX 4070 SUPER GeForce RTX 4070 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+\\d+\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-4060-ti-16gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
+    "title": "GeForce RTX 4060 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB\\s+GDDR6\\s+or\\s+\\d+\\s*GB\\s+GDDR6\\s+\\d+\\s*GB",
+      "power_w": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+(\\d+)\\s+or\\s+\\d+\\s+\\d+"
+    }
+  },
+  "geforce-rtx-4060-ti-8gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
+    "title": "GeForce RTX 4060 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6\\s+or\\s+(\\d+)\\s*GB\\s+GDDR6\\s+\\d+\\s*GB",
+      "power_w": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+or\\s+(\\d+)\\s+\\d+"
+    }
+  },
+  "geforce-rtx-4060": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
+    "title": "GeForce RTX 4060 Family",
+    "fields": {
+      "memory_gb": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6\\s+or\\s+\\d+\\s*GB\\s+GDDR6\\s+(\\d+)\\s*GB",
+      "power_w": "GeForce RTX 4060 Family GeForce RTX 4060 Ti GeForce RTX 4060 GPU Engine Specs:.*?Total Graphics Power\\s*\\(W\\)\\s+\\d+\\s+or\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3090-ti": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+    "title": "RTX 3090 Family",
+    "fields": {
+      "memory_gb": "RTX 3090 Ti\\s+G\\s?eForce RTX 3090 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "RTX 3090 Ti\\s+G\\s?eForce RTX 3090 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3090": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+    "title": "RTX 3090 Family",
+    "fields": {
+      "memory_gb": "RTX 3090 Ti\\s+G\\s?eForce RTX 3090 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB",
+      "power_w": "RTX 3090 Ti\\s+G\\s?eForce RTX 3090 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3080-ti": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
+    "title": "RTX 3080 Family",
+    "fields": {
+      "memory_gb": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3080-12gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
+    "title": "RTX 3080 Family",
+    "fields": {
+      "memory_gb": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB\\s+GDDR6X\\s*/\\s*\\d+\\s*GB\\s+GDDR6X",
+      "power_w": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)\\s*/\\s*\\d+"
+    }
+  },
+  "geforce-rtx-3080-10gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
+    "title": "RTX 3080 Family",
+    "fields": {
+      "memory_gb": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6X\\s*/\\s*(\\d+)\\s*GB\\s+GDDR6X",
+      "power_w": "RTX 3080 Ti\\s+G\\s?eForce RTX 3080 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+\\d+\\s*/\\s*(\\d+)"
+    }
+  },
+  "geforce-rtx-3070-ti": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/",
+    "title": "RTX 3070 Family",
+    "fields": {
+      "memory_gb": "RTX 3070 Ti\\s+G\\s?eForce RTX 3070 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6\\b",
+      "power_w": "RTX 3070 Ti\\s+G\\s?eForce RTX 3070 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+(\\d+)\\s+\\d+\\s+Required"
+    }
+  },
+  "geforce-rtx-3070": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/",
+    "title": "RTX 3070 Family",
+    "fields": {
+      "memory_gb": "RTX 3070 Ti\\s+G\\s?eForce RTX 3070 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB\\s+GDDR6\\b",
+      "power_w": "RTX 3070 Ti\\s+G\\s?eForce RTX 3070 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)\\s+Required"
+    }
+  },
+  "geforce-rtx-3060-ti": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/",
+    "title": "RTX 3060 Family",
+    "fields": {
+      "memory_gb": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3060-12gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/",
+    "title": "RTX 3060 Family",
+    "fields": {
+      "memory_gb": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6\\s*/\\s*\\d+\\s*GB\\s+GDDR6X\\s+(\\d+)\\s*GB\\s+GDDR6",
+      "power_w": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3060-8gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/",
+    "title": "RTX 3060 Family",
+    "fields": {
+      "memory_gb": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6\\s*/\\s*\\d+\\s*GB\\s+GDDR6X\\s+\\d+\\s*GB\\s+GDDR6\\s*/\\s*(\\d+)\\s*GB",
+      "power_w": "RTX 3060 Family G\\s*eForce RTX 3060 Ti G\\s*eForce RTX 3060 GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3050-8gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/",
+    "title": "RTX 3050",
+    "fields": {
+      "memory_gb": "G\\s*eForce RTX 3050 G\\s*eForce RTX 3050 \\(8 GB\\) G\\s*eForce RTX 3050 \\(6 GB\\) GPU Engine Specs:.*?Standard Memory Config\\s+(\\d+)\\s*GB",
+      "power_w": "G\\s*eForce RTX 3050 G\\s*eForce RTX 3050 \\(8 GB\\) G\\s*eForce RTX 3050 \\(6 GB\\) GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+(\\d+)"
+    }
+  },
+  "geforce-rtx-3050-6gb": {
+    "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/",
+    "title": "RTX 3050",
+    "fields": {
+      "memory_gb": "G\\s*eForce RTX 3050 G\\s*eForce RTX 3050 \\(8 GB\\) G\\s*eForce RTX 3050 \\(6 GB\\) GPU Engine Specs:.*?Standard Memory Config\\s+\\d+\\s*GB\\s+GDDR6\\s+(\\d+)\\s*GB",
+      "power_w": "G\\s*eForce RTX 3050 G\\s*eForce RTX 3050 \\(8 GB\\) G\\s*eForce RTX 3050 \\(6 GB\\) GPU Engine Specs:.*?Graphics Card Power\\s*\\(W\\)\\s+\\d+\\s+(\\d+)"
+    }
   }
 }

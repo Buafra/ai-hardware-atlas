@@ -168,32 +168,37 @@ def pdf(data):
     c.setFont('Atlas',12);c.drawString(44,h-95,f"NVIDIA + AMD / {len(data['products'])} products / Updated {data['updated_at'][:10]}")
     c.setFillColor(HexColor('#42516e'));c.setFont('Atlas',9)
     c.drawString(30,h-144,'A = announced / launched. R = availability or vendor target. Blank dates are not established.')
-    products=data['products'];split=math.ceil(len(products)/2)
-    row_h=min(54,850/split)
+    products=data['products']
+    # Two columns up to 36 products, then three so rows keep room for three text lines.
+    cols=2 if len(products)<=36 else 3
+    per=math.ceil(len(products)/cols);gap=18 if cols==2 else 12
+    cw=(w-60-gap*(cols-1))/cols
+    row_h=min(54,850/per)
     def fit(text,width,size=9,font='Atlas'):
         text=str(text)
         while pdfmetrics.stringWidth(text,font,size)>width:
             size-=.2
             if size<7:break
         c.setFont(font,size);return text
-    for col,part in enumerate([products[:split],products[split:]]):
-        x=30+col*400;y=h-165
+    for col in range(cols):
+        part=products[col*per:(col+1)*per]
+        x=30+col*(cw+gap);y=h-165
         for i,p in enumerate(part):
             top=y-i*row_h
             c.setFillColor(HexColor('#ffffff') if i%2==0 else HexColor('#eaf0ff'))
-            c.rect(x,top-row_h,382,row_h,fill=1,stroke=0)
+            c.rect(x,top-row_h,cw,row_h,fill=1,stroke=0)
             c.setFillColor(HexColor('#00a7aa') if p['vendor']=='NVIDIA' else HexColor('#f2803c'));c.roundRect(x+10,top-31,4,18,2,fill=1,stroke=0)
             c.setFillColor(HexColor('#182642'))
-            c.drawString(x+23,top-17,fit(p['model'],292,10,'Atlas-Bold'))
-            c.setFont('Atlas-Bold',7.7);c.drawRightString(x+370,top-17,p['vendor'])
+            c.drawString(x+23,top-17,fit(p['model'],cw-90,10,'Atlas-Bold'))
+            c.setFont('Atlas-Bold',7.7);c.drawRightString(x+cw-12,top-17,p['vendor'])
             c.setFillColor(HexColor('#51627f'))
             line=p['memory'].replace('×','x').replace('·','/')+' / '+p['memory_scope']
             if p['bandwidth_tbs']:line+=f" / {p['bandwidth_tbs']:g} TB/s"
-            c.drawString(x+23,top-32,fit(line,350,8))
+            c.drawString(x+23,top-32,fit(line,cw-33,8))
             dates=f"A: {p['announcement'] or '-'}  |  R: {p['release'] or '-'}"
             if p['release']:dates+=' ('+p['release_kind']+')'
-            c.drawString(x+23,top-45,fit(dates,350,7.5))
-            c.linkURL(p['sources'][0]['url'],(x,top-row_h,x+382,top))
+            c.drawString(x+23,top-45,fit(dates,cw-33,7.5))
+            c.linkURL(p['sources'][0]['url'],(x,top-row_h,x+cw,top))
     c.setFillColor(HexColor('#e9e3fc'));c.roundRect(30,49,w-60,69,11,fill=1,stroke=0)
     c.setFillColor(HexColor('#39236f'));c.setFont('Atlas-Bold',10);c.drawString(45,97,'COMPARE LIKE FOR LIKE')
     c.setFont('Atlas',8.4);c.drawString(45,80,'Dedicated GPU VRAM, shared system memory and rack totals have different meanings. Capacity is not speed.')

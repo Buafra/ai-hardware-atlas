@@ -343,6 +343,1708 @@
       }
     },
     {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4090",
+      "memory": "24 GB GDDR6X",
+      "use": "High-end local inference (24 GB)",
+      "use_ar": "استدلال محلي عالي المستوى (24 جيجابايت)",
+      "id": "geforce-rtx-4090",
+      "announcement": "2022-09-20",
+      "release": "2022-10-12",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 450,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 24.0,
+      "sources": [
+        {
+          "label": "Timeline source: NVIDIA newsroom RTX 40 Series announcement (launch date, price)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series"
+        },
+        {
+          "label": "GeForce News: GeForce RTX 4090 out now",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4090-out-now/"
+        },
+        {
+          "label": "GeForce News: RTX 40 Series announcement (Founders Edition)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-40-series-graphics-cards-announcements/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/"
+        },
+        {
+          "label": "NVIDIA Ada GPU architecture whitepaper (memory bandwidth, FP8 dense/sparse)",
+          "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf"
+        }
+      ],
+      "notes": "24 GB dedicated VRAM on a 384-bit bus. Reference graphics-card power is 450 W with an 850 W minimum system PSU per NVIDIA; partner designs and full-system power differ.",
+      "bandwidth_tbs": 1.008,
+      "bandwidth_note": null,
+      "ai_compute": "1,321 AI TOPS (NVIDIA 'AI TOPS'; Ada whitepaper lists peak FP8 Tensor with FP16 accumulate 660.6 dense / 1,321.2 sparse TFLOPS)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 3-slot)",
+      "cooling": "Air",
+      "msrp_usd": 1599,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4090/geforce-ada-4090-web-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4090 Founders Edition card render",
+        "file": "images/geforce-rtx-4090.webp"
+      },
+      "price": {
+        "usd_low": 2604,
+        "usd_high": 3000,
+        "usd_kind": "US used market",
+        "aed_low": 16999,
+        "aed_high": 20333,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "US range is used 24GB cards (GetPCParts eBay-sold value $2,604 to ResalePrices' $3,000 median ask; DealHunter median ask $2,850), far above the $1,599 MSRP, while the AED range is new Amazon.ae partner cards (MSI Suprim Liquid X to ASUS ROG Strix White), mostly shipped from outside the UAE, with a renewed Gigabyte card at AED 11,500.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-4090"
+          },
+          {
+            "label": "ResalePrices",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-4090"
+          },
+          {
+            "label": "DealHunter",
+            "url": "https://dealhunter.io/prices/rtx-4090"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+4090+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4080 SUPER",
+      "memory": "16 GB GDDR6X",
+      "use": "Fast local inference (16 GB)",
+      "use_ar": "استدلال محلي سريع (16 جيجابايت)",
+      "id": "geforce-rtx-4080-super",
+      "announcement": "2024-01-08",
+      "release": "2024-01-31",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 320,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 16.0,
+      "sources": [
+        {
+          "label": "Timeline source: NVIDIA newsroom RTX 40 SUPER Series announcement (date, price, AI TOPS)",
+          "url": "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series"
+        },
+        {
+          "label": "GeForce News: RTX 40 SUPER Series announcement (23 Gbps memory, Founders Edition)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/"
+        },
+        {
+          "label": "GeForce News: RTX 4080 SUPER now available worldwide",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-super-game-ready-driver/"
+        },
+        {
+          "label": "Hardware specification (RTX 4080 Family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/"
+        }
+      ],
+      "notes": "16 GB GDDR6X at 23 Gbps on a 256-bit bus; the bandwidth figure is calculated, not published by NVIDIA. Reference graphics-card power is 320 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.736,
+      "bandwidth_note": "Calculated from official 256-bit × 23 Gbps",
+      "ai_compute": "836 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 3-slot)",
+      "cooling": "Air",
+      "msrp_usd": 999,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4080/geforce-rtx-4080-super-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4080 SUPER Founders Edition card render",
+        "file": "images/geforce-rtx-4080-super.webp"
+      },
+      "price": {
+        "usd_low": 1003,
+        "usd_high": 1160,
+        "usd_kind": "US used market",
+        "aed_low": 7414.24,
+        "aed_high": 9518.3,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "US range is used 16GB cards (GetPCParts eBay-sold value $1,003 to the top of ResalePrices' $1,040-$1,160 fair-asking range), around the $999 MSRP, while the AED range is new Amazon.ae partner cards (Gigabyte Gaming OC to ASUS ProArt), several shipped from outside the UAE.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-4080-super"
+          },
+          {
+            "label": "ResalePrices",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-4080-super"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+4080+super"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4080",
+      "memory": "16 GB GDDR6X",
+      "use": "Mid-size local models (16 GB)",
+      "use_ar": "نماذج محلية متوسطة الحجم (16 جيجابايت)",
+      "id": "geforce-rtx-4080",
+      "announcement": "2022-09-20",
+      "release": "2022-11-16",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 320,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 16.0,
+      "sources": [
+        {
+          "label": "Timeline source: NVIDIA newsroom RTX 40 Series announcement (16GB price)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series"
+        },
+        {
+          "label": "GeForce News: RTX 40 Series announcement (Founders Edition)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-40-series-graphics-cards-announcements/"
+        },
+        {
+          "label": "GeForce News: GeForce RTX 4080 out now",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-out-now/"
+        },
+        {
+          "label": "GeForce News: Unlaunching the 12GB 4080",
+          "url": "https://www.nvidia.com/en-us/geforce/news/12gb-4080-unlaunch/"
+        },
+        {
+          "label": "Hardware specification (RTX 4080 Family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/"
+        },
+        {
+          "label": "NVIDIA Ada GPU architecture whitepaper (memory bandwidth, FP8 dense/sparse)",
+          "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/ada/nvidia-ada-gpu-architecture.pdf"
+        }
+      ],
+      "notes": "This is the 16 GB RTX 4080; NVIDIA unlaunched the announced 12 GB RTX 4080 before release. Reference graphics-card power is 320 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.7168,
+      "bandwidth_note": null,
+      "ai_compute": "780 AI TOPS (NVIDIA 'AI TOPS'; Ada whitepaper lists peak FP8 Tensor with FP16 accumulate 389.9 dense / 779.8 sparse TFLOPS)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 3-slot)",
+      "cooling": "Air",
+      "msrp_usd": 1199,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-4080-out-now/geforce-rtx-4080-out-now-gfe-grd-ogimage.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-out-now/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4080 Founders Edition card render (GeForce News launch article image)",
+        "file": "images/geforce-rtx-4080.webp"
+      },
+      "price": {
+        "usd_low": 910,
+        "usd_high": 1070,
+        "usd_kind": "US used market",
+        "aed_low": 5120,
+        "aed_high": 6550,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "US range is used 16GB RTX 4080 (non-SUPER) cards (GetPCParts eBay-sold value $910 to the top of ResalePrices' $930-$1,070 fair-asking range), below the $1,199 MSRP, while the AED range is new, locally stocked Amazon.ae partner cards (ASUS ROG Strix OC to MSI Gaming X Trio) with only 1-2 units each.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-4080"
+          },
+          {
+            "label": "ResalePrices",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-4080"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+4080"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4070 Ti SUPER",
+      "memory": "16 GB GDDR6X",
+      "use": "Mid-size local models (16 GB)",
+      "use_ar": "نماذج محلية متوسطة الحجم (16 جيجابايت)",
+      "id": "geforce-rtx-4070-ti-super",
+      "announcement": "2024-01-08",
+      "release": "2024-01-24",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 285,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 16.0,
+      "sources": [
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/"
+        },
+        {
+          "label": "Timeline source (announcement, $799, Jan 24 launch)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/"
+        },
+        {
+          "label": "Launch confirmation (available now worldwide)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-super-rtx-video-hdr-game-ready-driver/"
+        },
+        {
+          "label": "Memory bandwidth (672 GB/sec)",
+          "url": "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series"
+        }
+      ],
+      "notes": "16 GB GDDR6X on a 256-bit bus; NVIDIA announced no Founders Edition, so cards are partner designs. Reference total graphics power is 285 W; partner cards and full-system power differ.",
+      "bandwidth_tbs": 0.672,
+      "bandwidth_note": null,
+      "ai_compute": "706 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs; slot width varies by manufacturer)",
+      "cooling": null,
+      "msrp_usd": 799,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/nvidia-geforce-rtx-4070-ti-super.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/",
+        "credit": "NVIDIA",
+        "shows": "NVIDIA launch key art: a generic GeForce RTX card installed in a PC, captioned GeForce RTX 4070 Ti SUPER (no Founders Edition exists)",
+        "file": "images/geforce-rtx-4070-ti-super.webp"
+      },
+      "price": {
+        "usd_low": 1200,
+        "usd_high": 1455,
+        "usd_kind": "US retail",
+        "aed_low": 5560,
+        "aed_high": 7927.78,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New partner cards: Newegg ZOTAC Trinity OC White $1,200 to Amazon Gigabyte Windforce OC $1,455 (used from about $900); every Amazon.ae listing ships from outside the UAE, from AED 5,560 (MSI Ventus 2X OC) to AED 7,927.78 (MSI Ventus 3X Black OC) with a few higher, and Microless shows the card as currently unavailable.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg and Amazon listings via gpuprix.com",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4070-ti-super"
+          },
+          {
+            "label": "Amazon.ae search",
+            "url": "https://www.amazon.ae/s?k=rtx+4070+ti+super"
+          },
+          {
+            "label": "Microless UAE search",
+            "url": "https://uae.microless.com/search/?query=rtx+4070+ti+super"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4070 Ti",
+      "memory": "12 GB GDDR6X",
+      "use": "Small local models (12 GB)",
+      "use_ar": "نماذج محلية صغيرة (12 جيجابايت)",
+      "id": "geforce-rtx-4070-ti",
+      "announcement": "2023-01-03",
+      "release": "2023-01-05",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 285,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/"
+        },
+        {
+          "label": "Timeline source (announcement, $799, Jan 5 availability)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti/"
+        },
+        {
+          "label": "Launch confirmation (on shelves today)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-game-ready-driver/"
+        },
+        {
+          "label": "Memory bandwidth (504 GB/sec, quoted in RTX 50 announcement)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/"
+        }
+      ],
+      "notes": "12 GB GDDR6X on a 192-bit bus; NVIDIA announced it only as partner designs (no Founders Edition). Reference total graphics power is 285 W; partner cards and full-system power differ.",
+      "bandwidth_tbs": 0.504,
+      "bandwidth_note": null,
+      "ai_compute": "641 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs; slot width varies by manufacturer)",
+      "cooling": null,
+      "msrp_usd": 799,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/ces-2023/news/geforce-rtx-4070-ti/geforce-rtx-4070-ti-partner-photography-850px.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti/",
+        "credit": "NVIDIA",
+        "shows": "Group photo of partner-designed GeForce RTX 4070 Ti cards from NVIDIA's launch article (no Founders Edition exists)",
+        "file": "images/geforce-rtx-4070-ti.webp"
+      },
+      "price": {
+        "usd_low": 849.99,
+        "usd_high": 1116,
+        "usd_kind": "US retail",
+        "aed_low": 2950,
+        "aed_high": 3496,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Remaining new partner stock: Amazon ZOTAC Trinity OC $849.99 to Newegg ASUS TUF OC $1,116 (refurbished from about $600); Amazon.ae has a few units from AED 2,950 (ZOTAC AMP AIRO bundle) to AED 3,496 (ASUS ROG Strix OC); stock is thin and some imports list far higher.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg and Amazon listings via gpuprix.com",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4070-ti"
+          },
+          {
+            "label": "Amazon.ae search (results include RTX 4070 Ti listings)",
+            "url": "https://www.amazon.ae/s?k=rtx+4070+super+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4070 SUPER",
+      "memory": "12 GB GDDR6X",
+      "use": "Small local models (12 GB)",
+      "use_ar": "نماذج محلية صغيرة (12 جيجابايت)",
+      "id": "geforce-rtx-4070-super",
+      "announcement": "2024-01-08",
+      "release": "2024-01-17",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 220,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/"
+        },
+        {
+          "label": "Timeline source (announcement, $599, Jan 17 launch; 504 GB/sec in the article's RTX 4070 SUPER spec graphic)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/"
+        },
+        {
+          "label": "Launch confirmation (available now worldwide)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-super-game-ready-driver/"
+        }
+      ],
+      "notes": "12 GB GDDR6X on a 192-bit bus; the Founders Edition is a 2-slot, 244 mm card. Reference total graphics power is 220 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.504,
+      "bandwidth_note": null,
+      "ai_compute": "568 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 599,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/40-series/rtx-4070-4070ti/geforce-rtx-4070-super-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4070 SUPER Founders Edition card render",
+        "file": "images/geforce-rtx-4070-super.webp"
+      },
+      "price": {
+        "usd_low": 918,
+        "usd_high": 969,
+        "usd_kind": "US retail",
+        "aed_low": 3358,
+        "aed_high": 5922.24,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New partner cards: Newegg Gigabyte Windforce OC $918 to Amazon Gigabyte Windforce OC $969, about 53-62% over the $599 MSRP (used about $650-$800); Amazon.ae new listings run AED 3,358 (INNO3D X3 OC, last local unit) to AED 5,922.24 (MSI Ventus 3X OC, shipped from outside the UAE); most listings in between are imports and a few imports list higher.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg and Amazon listings via gpuprix.com",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4070-super"
+          },
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-4070-super/"
+          },
+          {
+            "label": "Amazon.ae search",
+            "url": "https://www.amazon.ae/s?k=rtx+4070+super+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4070",
+      "memory": "12 GB GDDR6 / 12 GB GDDR6X",
+      "use": "Budget local AI (12 GB)",
+      "use_ar": "ذكاء اصطناعي محلي اقتصادي (12 جيجابايت)",
+      "id": "geforce-rtx-4070",
+      "announcement": "2023-04-12",
+      "release": "2023-04-13",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 200,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/"
+        },
+        {
+          "label": "Timeline source (announcement, $599, Apr 13 availability)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070/"
+        },
+        {
+          "label": "NVIDIA Newsroom announcement",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-geforce-rtx-4070-brings-power-of-ada-lovelace-architecture-and-dlss-3-to-millions-more-gamers-and-creators-starting-at-599"
+        },
+        {
+          "label": "Launch confirmation (available now worldwide)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-game-ready-driver/"
+        },
+        {
+          "label": "Memory bandwidth (504 GB/sec, quoted in RTX 50 announcement)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/"
+        }
+      ],
+      "notes": "NVIDIA lists two memory versions (12 GB GDDR6 and 12 GB GDDR6X); its 504 GB/s figure is not split by version, so GDDR6 cards may differ. Reference total graphics power is 200 W; partner designs differ.",
+      "bandwidth_tbs": 0.504,
+      "bandwidth_note": null,
+      "ai_compute": "466 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 599,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-4070/geforce-rtx-4070-newsfeed.png",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4070 Founders Edition card render",
+        "file": "images/geforce-rtx-4070.webp"
+      },
+      "price": {
+        "usd_low": 759,
+        "usd_high": 849,
+        "usd_kind": "US retail",
+        "aed_low": 2600,
+        "aed_high": 3200,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New partner cards, mixed GDDR6 and GDDR6X: Newegg ASUS Dual (GDDR6) $759 to Amazon Gigabyte Windforce OC $849 (open-box/refurbished about $600-$760); Amazon.ae has a few units from AED 2,600 (ZOTAC Twin Edge OC bundle) to AED 3,200 (Gigabyte Aero OC), with imports listed far higher.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Newegg and Amazon listings via gpuprix.com",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4070"
+          },
+          {
+            "label": "Amazon.ae search (results include RTX 4070 listings)",
+            "url": "https://www.amazon.ae/s?k=rtx+4070+super+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4060 Ti 16GB",
+      "memory": "16 GB GDDR6",
+      "use": "Budget local inference (16 GB)",
+      "use_ar": "استدلال محلي اقتصادي (16 غيغابايت)",
+      "id": "geforce-rtx-4060-ti-16gb",
+      "announcement": "2023-05-18",
+      "release": "2023-07",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 165,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 16.0,
+      "sources": [
+        {
+          "label": "Timeline source (announcement: 16GB in July, $499)",
+          "url": "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299"
+        },
+        {
+          "label": "Timeline source (July 2023: partners begin offering 16GB cards)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/portal-prelude-rtx-game-ready-driver/"
+        },
+        {
+          "label": "Hardware specification (RTX 4060 Family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/"
+        },
+        {
+          "label": "Announcement article with spec table (288 GB/s)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti/"
+        }
+      ],
+      "notes": "Two memory variants exist; this is the 16 GB model. NVIDIA announced a Founders Edition only for the 8 GB model, so 16 GB cards are partner designs, with specs NVIDIA says are otherwise identical to the 8 GB model. NVIDIA lists total graphics power as \"165 or 160\" W in the same order as \"16 GB or 8 GB\" (165 W for this model); partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.288,
+      "bandwidth_note": null,
+      "ai_compute": "353 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": 499,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4060-4060ti/geforce-rtx-4060-ti-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4060 Ti Founders Edition render (family render reused; NVIDIA announced no Founders Edition for the 16 GB model)",
+        "file": "images/geforce-rtx-4060-ti-16gb.webp"
+      },
+      "price": {
+        "usd_low": 852.63,
+        "usd_high": 899,
+        "usd_kind": "US retail",
+        "aed_low": 3175.03,
+        "aed_high": 3200,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 16GB partner cards: Newegg listings from $852.63 (ASUS ProArt) to $899 (PNY Verto / MSI Ventus 2X) per tracker, and Amazon.ae AED 3,175.03 (MSI Ventus 2X) to AED 3,200 (ASUS ProArt), each with only 1 left; about 70-80% above the $499 MSRP with thin stock, while refurbished units sell from about $650-$700 (Amazon Renewed, Best Buy).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GPU PRIX tracker (Newegg/Amazon US listings)",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-16gb"
+          },
+          {
+            "label": "Best Buy US search listing (refurbished)",
+            "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=rtx+4060+ti+16gb"
+          },
+          {
+            "label": "Amazon.ae MSI Ventus 2X 16G",
+            "url": "https://www.amazon.ae/dp/B0CBK7BRL9"
+          },
+          {
+            "label": "Amazon.ae ASUS ProArt 16GB",
+            "url": "https://www.amazon.ae/dp/B0CCC7MP3H"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4060 Ti 8GB",
+      "memory": "8 GB GDDR6",
+      "use": "Small-model local inference (8 GB)",
+      "use_ar": "استدلال محلي للنماذج الصغيرة (8 غيغابايت)",
+      "id": "geforce-rtx-4060-ti-8gb",
+      "announcement": "2023-05-18",
+      "release": "2023-05-24",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 160,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Timeline source (announcement: available May 24, $399)",
+          "url": "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299"
+        },
+        {
+          "label": "Timeline source (launch-day driver article, May 24, 2023)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti-game-ready-driver/"
+        },
+        {
+          "label": "Hardware specification (RTX 4060 Family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/"
+        },
+        {
+          "label": "Announcement article with spec table (288 GB/s, 160 W TGP)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti/"
+        }
+      ],
+      "notes": "Two memory variants exist; this is the 8 GB model, the only RTX 4060-family card with an NVIDIA Founders Edition. Reference graphics-card power is 160 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.288,
+      "bandwidth_note": null,
+      "ai_compute": "353 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 399,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/rtx-4060-4060ti/geforce-rtx-4060-ti-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 4060 Ti Founders Edition card render",
+        "file": "images/geforce-rtx-4060-ti-8gb.webp"
+      },
+      "price": {
+        "usd_low": 499,
+        "usd_high": 557.75,
+        "usd_kind": "US retail",
+        "aed_low": 1800,
+        "aed_high": 2500,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 8GB partner cards: $499 at Amazon (Gigabyte Eagle) and Newegg (PNY Verto) up to $557.75 (ASUS Dual OC at Newegg) per tracker, about 25-40% above the $399 MSRP; Amazon.ae AED 1,800 (Gigabyte Gaming OC) to AED 2,500 (Gigabyte Eagle OC, 1 left). Refurbished units sell from about $430-$450 (Amazon Renewed, Best Buy Refurbished Excellent).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GPU PRIX tracker (Newegg/Amazon US listings)",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4060-ti-8gb"
+          },
+          {
+            "label": "Best Buy US search listing (refurbished)",
+            "url": "https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&st=geforce+rtx+4060+ti"
+          },
+          {
+            "label": "Amazon.ae Gigabyte RTX 4060 Ti Gaming OC 8G",
+            "url": "https://www.amazon.ae/dp/B0C5B9M9JY"
+          },
+          {
+            "label": "Amazon.ae Gigabyte RTX 4060 Ti Eagle OC 8G",
+            "url": "https://www.amazon.ae/dp/B0C5BZZQBG"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 4060",
+      "memory": "8 GB GDDR6",
+      "use": "Entry-level local inference (8 GB)",
+      "use_ar": "استدلال محلي للفئة المبتدئة (8 غيغابايت)",
+      "id": "geforce-rtx-4060",
+      "announcement": "2023-05-18",
+      "release": "2023-06-29",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ada Lovelace",
+      "power_w": 115,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Timeline source (announcement, $299)",
+          "url": "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299"
+        },
+        {
+          "label": "Timeline source (on sale June 29, 2023)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-4060-stranded-alien-dawn-dlss-released/"
+        },
+        {
+          "label": "Hardware specification (RTX 4060 Family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/"
+        },
+        {
+          "label": "Launch article with spec table (272 GB/s, 115 W TGP)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-available-june-29/"
+        },
+        {
+          "label": "Image source (launch-day driver article)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-game-ready-driver/"
+        }
+      ],
+      "notes": "NVIDIA announced a Founders Edition only for the RTX 4060 Ti 8GB, so RTX 4060 cards are partner designs. Reference graphics-card power is 115 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.272,
+      "bandwidth_note": null,
+      "ai_compute": "242 AI TOPS (NVIDIA 'AI TOPS'; precision/sparsity not stated on page)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": 299,
+      "image": {
+        "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/news/geforce-rtx-4060-game-ready-driver/nvidia-geforce-rtx-4060-partner-custom-graphics-cards.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-game-ready-driver/",
+        "credit": "NVIDIA",
+        "shows": "Lineup of ten partner-designed GeForce RTX 4060 cards (e.g. MSI, Gigabyte, ASUS ROG, PNY, Zotac, Inno3D, Palit); no Founders Edition exists",
+        "file": "images/geforce-rtx-4060.webp"
+      },
+      "price": {
+        "usd_low": 530,
+        "usd_high": 551.93,
+        "usd_kind": "US retail",
+        "aed_low": 1750,
+        "aed_high": 2604,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New partner cards: Amazon $530 (Gigabyte Windforce OC), Newegg $536.75 (PNY Verto) to $551.93 (MSI Ventus 2X), about 77-85% over the $299 MSRP; Amazon.ae AED 1,750 (MSI Gaming X) and AED 1,950 (ASUS Dual White) to AED 2,604 (Gigabyte Gaming OC, third-party seller); used/refurbished cards go for roughly $280-$300 (eBay, Newegg refurbished).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Amazon via videocardprices.com",
+            "url": "https://videocardprices.com/card/nvidia-rtx-4060/"
+          },
+          {
+            "label": "GPU PRIX tracker (Newegg/Amazon US listings)",
+            "url": "https://gpuprix.com/us/gpus/geforce-rtx-4060"
+          },
+          {
+            "label": "Amazon.ae MSI Gaming RTX 4060 8GB",
+            "url": "https://www.amazon.ae/dp/B0C8T81QNN"
+          },
+          {
+            "label": "Amazon.ae Gigabyte RTX 4060 Gaming OC 8GB",
+            "url": "https://www.amazon.ae/dp/B0C8ZS7N73"
+          },
+          {
+            "label": "Amazon.ae ASUS Dual RTX 4060 OC White 8GB",
+            "url": "https://www.amazon.ae/dp/B0CD14QQXH"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3090 Ti",
+      "memory": "24 GB GDDR6X",
+      "use": "Large local models (24 GB)",
+      "use_ar": "تشغيل نماذج محلية كبيرة (24 غيغابايت)",
+      "id": "geforce-rtx-3090-ti",
+      "announcement": "2022-01-04",
+      "release": "2022-03-29",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 450,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 24.0,
+      "sources": [
+        {
+          "label": "Announcement (CES 2022 reveal)",
+          "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/"
+        },
+        {
+          "label": "Timeline source and launch price",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3090-ti-out-now/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/"
+        }
+      ],
+      "notes": "Reference graphics-card power is 450 W (850 W required system power); partner designs differ. NVIDIA quotes '320 Tensor-TFLOPs' without stating precision or sparsity, so no AI compute figure is listed.",
+      "bandwidth_tbs": 1.008,
+      "bandwidth_note": "Calculated from official 384-bit × 21 Gbps",
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 3-slot)",
+      "cooling": "Air",
+      "msrp_usd": 1999,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-3090-ti-og.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3090 Ti Founders Edition card render (page share image titled 'GeForce RTX 3090 Ti The BFGPU')",
+        "file": "images/geforce-rtx-3090-ti.webp"
+      },
+      "price": {
+        "usd_low": 1559,
+        "usd_high": 1639,
+        "usd_kind": "US used market",
+        "aed_low": 10549.63,
+        "aed_high": 12118.18,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is used eBay US pricing (ResalePrices fair asking range $1,559-$1,639 from 40 listings; GPUDojo lowest used $1,598); AED is new third-party Amazon.ae listings (MSI Gaming X Trio AED 10,549.63 to Founders Edition AED 12,118.18), both shipped from outside the UAE and far above used prices.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "ResalePrices (eBay US used)",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-3090-ti"
+          },
+          {
+            "label": "GPUDojo",
+            "url": "https://gpudojo.com/rtx-3090-ti"
+          },
+          {
+            "label": "Amazon.ae MSI RTX 3090 Ti Gaming X Trio",
+            "url": "https://www.amazon.ae/dp/B09R9G57GK"
+          },
+          {
+            "label": "Amazon.ae RTX 3090 Ti Founders Edition",
+            "url": "https://www.amazon.ae/dp/B09X4JVZB5"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3090",
+      "memory": "24 GB GDDR6X",
+      "use": "24 GB local inference (used market)",
+      "use_ar": "استدلال محلي بذاكرة 24 غيغابايت (سوق المستعمل)",
+      "id": "geforce-rtx-3090",
+      "announcement": "2020-09-01",
+      "release": "2020-09-24",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 350,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 24.0,
+      "sources": [
+        {
+          "label": "Announcement and launch price",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-greatest-ever-generational-leap-in-performance-with-geforce-rtx-30-series-gpus"
+        },
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/introducing-rtx-30-series-graphics-cards/"
+        },
+        {
+          "label": "Launch confirmation (Sept 23, 2020: launches Thursday)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3090-out-september-24/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/"
+        },
+        {
+          "label": "Memory bandwidth and AI compute (GA102 whitepaper)",
+          "url": "https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf"
+        }
+      ],
+      "notes": "Reference graphics-card power is 350 W; partner designs differ. AI compute figures are NVIDIA's whitepaper peak rates for the Founders Edition at its 1695 MHz boost clock, and NVLink (SLI-Ready) is listed on the spec page.",
+      "bandwidth_tbs": 0.936,
+      "bandwidth_note": null,
+      "ai_compute": "142 FP16 Tensor TFLOPS dense / 284 sparse (FP16 accumulate; 71/142 with FP32 accumulate); 284/568 INT8 Tensor TOPS dense/sparse (GA102 whitepaper)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 3-slot)",
+      "cooling": "Air",
+      "msrp_usd": 1499,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3090/geforce-rtx-3090-shop-630-d@2x.png",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3090 Founders Edition card render, front view on transparent background",
+        "file": "images/geforce-rtx-3090.webp"
+      },
+      "price": {
+        "usd_low": 1425,
+        "usd_high": 1530,
+        "usd_kind": "US used market",
+        "aed_low": 7500.0,
+        "aed_high": 10689.84,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is used eBay US pricing (ResalePrices fair asking range $1,425-$1,530 from 294 listings; GPUDojo lowest used $1,450); AED is new partner cards in the UAE (Amazon.ae EVGA FTW3 Ultra AED 7,500, one left, to Microless Gigabyte Vision OC AED 10,689.84), well above used prices.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "ResalePrices (eBay US used)",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-3090"
+          },
+          {
+            "label": "GPUDojo",
+            "url": "https://gpudojo.com/rtx-3090"
+          },
+          {
+            "label": "Amazon.ae EVGA RTX 3090 FTW3 Ultra",
+            "url": "https://www.amazon.ae/dp/B08J5F3G18"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/graphic_cards/rtx-3090/326/l/"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3080 Ti",
+      "memory": "12 GB GDDR6X",
+      "use": "Mid-size local models (12 GB)",
+      "use_ar": "نماذج محلية متوسطة الحجم (12 غيغابايت)",
+      "id": "geforce-rtx-3080-ti",
+      "announcement": "2021-05-31",
+      "release": "2021-06-03",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 350,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Announcement and launch price",
+          "url": "https://nvidianews.nvidia.com/news/its-time-for-ti-nvidia-introduces-gaming-flagship-the-geforce-rtx-3080-ti"
+        },
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-ti-out-now/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/"
+        }
+      ],
+      "notes": "NVIDIA's pages give a 384-bit memory bus but no memory data rate, so bandwidth is left blank. Reference graphics-card power is 350 W; partner designs differ.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 1199,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080-3080ti/geforce-rtx-3080-ti-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3080 Ti Founders Edition card render",
+        "file": "images/geforce-rtx-3080-ti.webp"
+      },
+      "price": {
+        "usd_low": 490,
+        "usd_high": 558,
+        "usd_kind": "US used market",
+        "aed_low": 4040.0,
+        "aed_high": 4853.01,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is used eBay US pricing (GPUDojo lowest used $490; ResalePrices fair asking range $502-$558 from 104 listings); AED is new third-party Amazon.ae partner cards (EVGA FTW3 Ultra AED 4,040, one left, to ZOTAC Trinity OC AED 4,853.01 shipped from outside the UAE), far above used prices.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "ResalePrices (eBay US used)",
+            "url": "https://resaleprices.com/gpu/nvidia-rtx-3080-ti"
+          },
+          {
+            "label": "GPUDojo",
+            "url": "https://gpudojo.com/rtx-3080-ti"
+          },
+          {
+            "label": "Amazon.ae EVGA RTX 3080 Ti FTW3 Ultra",
+            "url": "https://www.amazon.ae/dp/B09622N253"
+          },
+          {
+            "label": "Amazon.ae ZOTAC RTX 3080 Ti Trinity OC",
+            "url": "https://www.amazon.ae/dp/B097DTK1F6"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3080 12GB",
+      "memory": "12 GB GDDR6X",
+      "use": "Mid-size local models (12 GB)",
+      "use_ar": "نماذج محلية متوسطة الحجم (12 جيجابايت)",
+      "id": "geforce-rtx-3080-12gb",
+      "announcement": "2022-01",
+      "release": "2022-01",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 350,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Announcement (GeForce News, Jan 14, 2022)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/god-of-war-game-ready-driver/"
+        },
+        {
+          "label": "Hardware specification (RTX 3080 family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/"
+        }
+      ],
+      "notes": "Later 12 GB version of the RTX 3080 (8,960 CUDA cores, 384-bit bus vs 8,704 and 320-bit on the 10 GB model), offered by NVIDIA's board partners; the official NVIDIA pages reviewed give no US launch price, memory speed or bandwidth for it. Reference graphics-card power is 350 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/images/design/geforce-rtx-3080-1-1920.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3080 Founders Edition render from the RTX 3080 family page (family image reused; 12 GB cards are partner designs and look different)",
+        "file": "images/geforce-rtx-3080-12gb.webp"
+      },
+      "price": {
+        "usd_low": 425,
+        "usd_high": 500,
+        "usd_kind": "US used market",
+        "aed_low": 3574.27,
+        "aed_high": 5107.73,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is eBay Buy-It-Now asking prices for the 12 GB model (thin sample of 7 mostly used/refurbished listings that can include open-box and new: lowest $425, median $500), while AED is new 12 GB partner cards in the UAE from a PNY XLR8 on Amazon.ae at AED 3,574.27 through Microless at AED 4,298.55 (ASUS TUF, MSI Gaming Z Trio, Palit GamingPro) to an imported EVGA FTW3 Ultra on Amazon.ae at AED 5,107.73 (other imports list higher); the few new US listings run $799 to $995.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Silicon Comps (eBay asks, 12 GB)",
+            "url": "https://siliconcomps.com/gpu/rtx-3080-12gb/"
+          },
+          {
+            "label": "GPU Price History US (new listings)",
+            "url": "https://gpupricehistory.com/us/rtx-3080"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rtx+3080"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+3080+12gb"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3080 10GB",
+      "memory": "10 GB GDDR6X",
+      "use": "Fast small local models (10 GB)",
+      "use_ar": "نماذج محلية صغيرة وسريعة (10 جيجابايت)",
+      "id": "geforce-rtx-3080-10gb",
+      "announcement": "2020-09-01",
+      "release": "2020-09-17",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 320,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 10.0,
+      "sources": [
+        {
+          "label": "Announcement (NVIDIA Newsroom)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-greatest-ever-generational-leap-in-performance-with-geforce-rtx-30-series-gpus"
+        },
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-out-now/"
+        },
+        {
+          "label": "Hardware specification (RTX 3080 family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/"
+        },
+        {
+          "label": "GA102 architecture whitepaper (bandwidth, Tensor throughput)",
+          "url": "https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf"
+        }
+      ],
+      "notes": "Two memory variants exist; this is the original 10 GB model (8,704 CUDA cores, 320-bit bus, 19 Gbps GDDR6X). Reference graphics-card power is 320 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.76,
+      "bandwidth_note": null,
+      "ai_compute": "INT8 476 TOPS (sparsity); INT8 238 TOPS dense; FP16 Tensor 238 TFLOPS sparse / 119 dense (FP16 accumulate); peak at boost clock per NVIDIA GA102 whitepaper",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 699,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3080/geforce-ampere-rtx-3080-og-image-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3080 Founders Edition card render",
+        "file": "images/geforce-rtx-3080-10gb.webp"
+      },
+      "price": {
+        "usd_low": 358,
+        "usd_high": 483,
+        "usd_kind": "US used market",
+        "aed_low": 2890.0,
+        "aed_high": 3787.5,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is the used market, from a $358 typical eBay sold value for the RTX 3080 (that tracker does not separate 10 GB from 12 GB) to a $483 median eBay Buy-It-Now ask for the 10 GB model (147 mostly used listings that can include open-box and new), while AED is new 10 GB partner cards on Amazon.ae from a Zotac Trinity OC at AED 2,890 to an MSI Ventus 3X Plus at AED 3,787.50 (most ship from outside the UAE; some other imports list above AED 4,000); new US stock such as the ASUS TUF V2 still lists around $720.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-3080"
+          },
+          {
+            "label": "Silicon Comps (eBay asks, 10 GB)",
+            "url": "https://siliconcomps.com/gpu/rtx-3080/"
+          },
+          {
+            "label": "Amazon via videocardprices.com (new)",
+            "url": "https://videocardprices.com/card/nvidia-rtx-3080/"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+3080+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3070 Ti",
+      "memory": "8 GB GDDR6X",
+      "use": "Small local models (8 GB)",
+      "use_ar": "نماذج محلية صغيرة (8 جيجابايت)",
+      "id": "geforce-rtx-3070-ti",
+      "announcement": "2021-05-31",
+      "release": "2021-06-10",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 290,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Announcement (NVIDIA Newsroom)",
+          "url": "https://nvidianews.nvidia.com/news/its-time-for-ti-nvidia-introduces-gaming-flagship-the-geforce-rtx-3080-ti"
+        },
+        {
+          "label": "Announcement (GeForce News)",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3080-ti-3070-ti-graphics-cards/"
+        },
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-ti-out-now/"
+        },
+        {
+          "label": "Hardware specification (RTX 3070 family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/"
+        }
+      ],
+      "notes": "8 GB GDDR6X on a 256-bit bus; the official pages reviewed give no memory speed, bandwidth or Tensor throughput for this card. Reference graphics-card power is 290 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 599,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3070-3070ti/geforce-3070-ti-gpu-gf-article-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3070 Ti Founders Edition card render",
+        "file": "images/geforce-rtx-3070-ti.webp"
+      },
+      "price": {
+        "usd_low": 279,
+        "usd_high": 450,
+        "usd_kind": "US used market",
+        "aed_low": 2818.57,
+        "aed_high": 3503.32,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is the used market, from a $279 typical eBay sold value to about $450 for used Founders Edition and partner cards listed on eBay US (asks start near $290), while AED is new partner cards on Amazon.ae from an ASUS TUF OC at AED 2,818.57 to a Zotac Trinity OC at AED 3,503.32, mostly shipped from outside the UAE (several other imported 3070 Ti listings run AED 3,800 to 5,700).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-3070-ti"
+          },
+          {
+            "label": "GPU Poet (eBay/Amazon listings)",
+            "url": "https://gpupoet.com/gpu/shop/nvidia-geforce-rtx-3070-ti"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+3070+ti+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3070",
+      "memory": "8 GB GDDR6",
+      "use": "Budget small local models (8 GB)",
+      "use_ar": "نماذج محلية صغيرة بتكلفة منخفضة (8 جيجابايت)",
+      "id": "geforce-rtx-3070",
+      "announcement": "2020-09-01",
+      "release": "2020-10-29",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 220,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Announcement (NVIDIA Newsroom)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-greatest-ever-generational-leap-in-performance-with-geforce-rtx-30-series-gpus"
+        },
+        {
+          "label": "Availability date update",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-available-october-29/"
+        },
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-out-now/"
+        },
+        {
+          "label": "Hardware specification (RTX 3070 family page)",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/"
+        },
+        {
+          "label": "GA102 architecture whitepaper, Appendix A (bandwidth, Tensor throughput)",
+          "url": "https://www.nvidia.com/content/PDF/nvidia-ampere-ga-102-gpu-architecture-whitepaper-v2.1.pdf"
+        }
+      ],
+      "notes": "8 GB GDDR6 (not GDDR6X) on a 256-bit bus at 14 Gbps. Reference graphics-card power is 220 W; partner designs and full-system power differ.",
+      "bandwidth_tbs": 0.448,
+      "bandwidth_note": null,
+      "ai_compute": "INT8 325.2 TOPS (sparsity); INT8 162.6 TOPS dense; FP16 Tensor 162.6 TFLOPS sparse / 81.3 dense (FP16 accumulate); peak at boost clock per NVIDIA GA102 whitepaper",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 499,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3070/geforce-ampere-rtx-3070-og-image-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3070 Founders Edition card render (dual-fan)",
+        "file": "images/geforce-rtx-3070.webp"
+      },
+      "price": {
+        "usd_low": 205,
+        "usd_high": 307,
+        "usd_kind": "US used market",
+        "aed_low": 2200.0,
+        "aed_high": 3110.8,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "USD is the used market, from a $205 typical eBay sold value to a $307 median eBay Buy-It-Now ask (158 mostly used listings that can include open-box and new), while AED is new cards in the UAE from a Palit GameRock (OEM, marketplace seller) on Amazon.ae at AED 2,200 to a Zotac AMP Holo at Microless for AED 3,110.80, far above US used prices.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GetPCParts (eBay sold)",
+            "url": "https://www.getpcparts.com/market-prices/gpu-graphics-cards/rtx-3070"
+          },
+          {
+            "label": "Silicon Comps (eBay asks)",
+            "url": "https://siliconcomps.com/gpu/rtx-3070/"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+3070+8gb+graphics+card"
+          },
+          {
+            "label": "Microless UAE",
+            "url": "https://uae.microless.com/search/?query=rtx+3070"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3060 Ti",
+      "memory": "8 GB GDDR6 / 8 GB GDDR6X",
+      "use": "Fast small-model inference (8 GB)",
+      "use_ar": "استدلال سريع للنماذج الصغيرة (8 جيجابايت)",
+      "id": "geforce-rtx-3060-ti",
+      "announcement": "2020-12-01",
+      "release": "2020-12-02",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 200,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Timeline source",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-debuts-geforce-rtx-3060-family-for-the-holidays"
+        },
+        {
+          "label": "Launch article",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-ti-out-december-2/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/"
+        }
+      ],
+      "notes": "NVIDIA lists two 8 GB versions of this card, GDDR6 and GDDR6X, on a 256-bit bus. Reference graphics-card power is 200 W; partner designs differ.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (Founders Edition 2-slot)",
+      "cooling": "Air",
+      "msrp_usd": 399,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-3060-ti-out-december-2/nvidia-geforce-rtx-3060-ti-announcement-article-ogimage.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-ti-out-december-2/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3060 Ti Founders Edition card render (launch article artwork)",
+        "file": "images/geforce-rtx-3060-ti.webp"
+      },
+      "price": {
+        "usd_low": 239,
+        "usd_high": 300,
+        "usd_kind": "US used market",
+        "aed_low": 1500,
+        "aed_high": 2097.5,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Used 8 GB cards in the US: $239 eBay low (Best Value GPU, Sep 26) and used/renewed asks of $250 to $300 on eBay and Amazon (GPU Poet); new partner cards (ASUS Dual OC, ASUS TUF V2, Gigabyte Eagle D6X, ZOTAC Twin Edge) list for AED 1,500 to 2,097.50 from Amazon.ae marketplace sellers. Launch MSRP was $399.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Best Value GPU (eBay used)",
+            "url": "https://bestvaluegpu.com/history/new-and-used-rtx-3060-ti-price-history-and-specs/"
+          },
+          {
+            "label": "GPU Poet used listings",
+            "url": "https://gpupoet.com/gpu/shop/nvidia-geforce-rtx-3060-ti"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=geforce+rtx+3060+ti+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3060 12GB",
+      "memory": "12 GB GDDR6",
+      "use": "Budget local AI (12 GB)",
+      "use_ar": "ذكاء اصطناعي محلي اقتصادي (12 جيجابايت)",
+      "id": "geforce-rtx-3060-12gb",
+      "announcement": "2021-01-12",
+      "release": "2021-02-25",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 170,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 12.0,
+      "sources": [
+        {
+          "label": "Timeline source",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-geforce-rtx-3060-next-generation-of-the-worlds-most-popular-gpu"
+        },
+        {
+          "label": "Launch article",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060/"
+        },
+        {
+          "label": "Availability",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-out-now/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/"
+        }
+      ],
+      "notes": "Two RTX 3060 memory versions exist; this is the 12 GB, 192-bit model, launched as partner (custom) boards only. Reference graphics-card power is 170 W; partner designs differ.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": "101 tensor-TFLOPs (NVIDIA launch figure; precision/sparsity not stated)",
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": 329,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-3060/nvidia-geforce-rtx-3060-ogimage.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060/",
+        "credit": "NVIDIA",
+        "shows": "NVIDIA RTX 3060 launch artwork: a GeForce RTX-branded card installed in a PC (the card is not labelled with the model number)",
+        "file": "images/geforce-rtx-3060-12gb.webp"
+      },
+      "price": {
+        "usd_low": 459,
+        "usd_high": 479,
+        "usd_kind": "US retail",
+        "aed_low": 1519,
+        "aed_high": 1950,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 12 GB partner cards: $459 at Amazon/Newegg to $479 (Best Value GPU, Sep 26; used about $300 on eBay), consistent with GPU Price History listings of MSI Ventus 2X 12G OC at $457 and Gigabyte Eagle OC 12G at $479; Amazon.ae marketplace sellers list ZOTAC Twin Edge OC, ASUS Dual V2 and MSI Ventus 2X for AED 1,519 to 1,950. About 40% above the $329 MSRP.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Best Value GPU (Amazon/Newegg/Best Buy)",
+            "url": "https://bestvaluegpu.com/history/new-and-used-rtx-3060-price-history-and-specs/"
+          },
+          {
+            "label": "GPU Price History (US listings)",
+            "url": "https://gpupricehistory.com/us/rtx-3060"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=rtx+3060+12gb+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3060 8GB",
+      "memory": "8 GB GDDR6",
+      "use": "Entry local AI (8 GB)",
+      "use_ar": "ذكاء اصطناعي محلي للمبتدئين (8 جيجابايت)",
+      "id": "geforce-rtx-3060-8gb",
+      "announcement": null,
+      "release": null,
+      "release_kind": "Not established",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 170,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/"
+        }
+      ],
+      "notes": "Two RTX 3060 memory versions exist; this is the 8 GB, 128-bit model, and NVIDIA published no separate launch date or price for it. The 170 W figure is the single value NVIDIA lists for the RTX 3060 column covering both versions.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ampere/rtx-3060/geforce-rtx-3060-og-image-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/",
+        "credit": "NVIDIA",
+        "shows": "RTX 3060 family page artwork: a GeForce RTX-branded card installed in a PC (family render reused; not specific to the 8 GB model)",
+        "file": "images/geforce-rtx-3060-8gb.webp"
+      },
+      "price": {
+        "usd_low": null,
+        "usd_high": null,
+        "usd_kind": null,
+        "aed_low": 1349,
+        "aed_high": 1350,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "Thin market: the only US listing found was a new MSI Ventus 2X 8G OC at $400 (GPU Price History, Sep 21), with no US-located used listings on eBay; Amazon.ae marketplace sellers list Gigabyte Gaming OC 8G rev2 at AED 1,349 and Galax 1-Click OC 8GB at AED 1,350 (one MSI listing at AED 2,227.88). US price left blank: only a single $400 asking price was found, which is not a reliable market figure.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=geforce+rtx+3060+8gb+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3050 8GB",
+      "memory": "8 GB GDDR6",
+      "use": "Light local AI (8 GB)",
+      "use_ar": "ذكاء اصطناعي محلي خفيف (8 جيجابايت)",
+      "id": "geforce-rtx-3050-8gb",
+      "announcement": "2022-01-04",
+      "release": "2022-01-27",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 130,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 8.0,
+      "sources": [
+        {
+          "label": "Timeline source",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-expands-reach-with-new-geforce-laptops-and-desktops-geforce-now-partners-and-omniverse-for-creators"
+        },
+        {
+          "label": "Launch article",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-graphics-cards/"
+        },
+        {
+          "label": "Availability",
+          "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-out-now/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/"
+        }
+      ],
+      "notes": "Two desktop RTX 3050 memory versions exist; this is the 8 GB, 128-bit model (NVIDIA notes an OEM variant with 2304 CUDA cores). Partner cards only; reference graphics-card power is 130 W.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": 249,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/geforce-rtx-3050-out-now/geforce-3050-availablity-og-1200x630.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-out-now/",
+        "credit": "NVIDIA",
+        "shows": "Line-up of partner-designed GeForce RTX 3050 graphics cards from NVIDIA's January 2022 availability article",
+        "file": "images/geforce-rtx-3050-8gb.webp"
+      },
+      "price": {
+        "usd_low": 259,
+        "usd_high": 369,
+        "usd_kind": "US retail",
+        "aed_low": 995,
+        "aed_high": 1399,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 8 GB cards: MSI Ventus 2X XS 8G OC at $259 on Newegg (Best Value GPU, Sep 26; $260 on GPU Price History) to MSI Ventus 2X OC 8GB at $369 (GPU Price History, flagged overpriced); Amazon.ae marketplace sellers list ZOTAC Twin Edge OC, ZOTAC ECO, Palit, ASUS Dual OC and Gigabyte AORUS Elite 8 GB cards at AED 995 to 1,399. Used RTX 3050s sell for about $179 on eBay (tracker figure may mix 6 GB and 8 GB cards).",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "Best Value GPU (Newegg)",
+            "url": "https://bestvaluegpu.com/history/new-and-used-rtx-3050-price-history-and-specs/"
+          },
+          {
+            "label": "GPU Price History (US listings)",
+            "url": "https://gpupricehistory.com/us/rtx-3050"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=geforce+rtx+3050+graphics+card"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "GPU",
+      "model": "GeForce RTX 3050 6GB",
+      "memory": "6 GB GDDR6",
+      "use": "Tiny local models (6 GB)",
+      "use_ar": "نماذج محلية صغيرة جداً (6 جيجابايت)",
+      "id": "geforce-rtx-3050-6gb",
+      "announcement": "2024-02-02",
+      "release": "2024-02-02",
+      "release_kind": "Released",
+      "source_reviewed": "2026-09-26",
+      "architecture": "Ampere",
+      "power_w": 70,
+      "power_note": "Reference total graphics power",
+      "memory_scope": "Per GPU",
+      "memory_gb": 6.0,
+      "sources": [
+        {
+          "label": "Timeline source",
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3050-6gb-out-now/"
+        },
+        {
+          "label": "Hardware specification",
+          "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/"
+        }
+      ],
+      "notes": "Lower-power 6 GB, 96-bit RTX 3050 with fewer CUDA cores than the 8 GB model; at 70 W NVIDIA says all partner models can run from the PCIe slot alone. NVIDIA published no US launch price for this version.",
+      "bandwidth_tbs": null,
+      "bandwidth_note": null,
+      "ai_compute": null,
+      "interconnect": "PCIe 4.0 (Gen 4)",
+      "form_factor": "PCIe card (partner designs)",
+      "cooling": null,
+      "msrp_usd": null,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/rtx-3050-6gb-out-now/geforce-rtx-3050-ogimage.jpg",
+        "page": "https://www.nvidia.com/en-us/geforce/news/rtx-3050-6gb-out-now/",
+        "credit": "NVIDIA",
+        "shows": "GeForce RTX 3050 'The Ultimate Play' artwork with a GeForce RTX-branded card in a PC (RTX 3050 family artwork reused for the 6 GB model)",
+        "file": "images/geforce-rtx-3050-6gb.webp"
+      },
+      "price": {
+        "usd_low": 257,
+        "usd_high": 279.99,
+        "usd_kind": "US retail",
+        "aed_low": 899,
+        "aed_high": 1099,
+        "aed_kind": "UAE retail",
+        "vat_included": true,
+        "basis": "New 6 GB cards: ASUS Dual OC 6GB at $257 and MSI Gaming X 6G / LP 6G OC at $279.99 (GPU Price History, Sep 21); Amazon.ae marketplace sellers list Biostar, ASUS Dual OC, MSI Ventus 2X, ZOTAC and Gigabyte WINDFORCE 6 GB cards at AED 899 to 1,099.",
+        "checked": "2026-09-26",
+        "sources": [
+          {
+            "label": "GPU Price History (US listings)",
+            "url": "https://gpupricehistory.com/us/rtx-3050"
+          },
+          {
+            "label": "Amazon.ae",
+            "url": "https://www.amazon.ae/s?k=geforce+rtx+3050+6gb+graphics+card"
+          }
+        ]
+      }
+    },
+    {
       "vendor": "AMD",
       "level": "Personal",
       "type": "GPU",
@@ -2042,6 +3744,10 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-26",
+      "summary": "Added 22 GeForce RTX 40 and RTX 30 series cards (official NVIDIA specs, dates and launch prices; current approximate USD/AED prices, used-market where new stock is gone)."
+    },
     {
       "at": "2026-09-26T12:31:03+00:00",
       "summary": "GeForce RTX 5070: power_w changed from None to 250"

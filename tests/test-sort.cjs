@@ -2,7 +2,7 @@ const assert=require('node:assert/strict');
 const {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState}=require('../web/app.js');
 const data=require('../data/catalog.json');
 let rows=select(data.products,{},'memory_gb',1);
-assert.equal(rows[0].memory_gb,12);
+assert.equal(rows[0].memory_gb,Math.min(...data.products.map(p=>p.memory_gb)));
 assert.ok(rows.findIndex(x=>x.memory_gb===128)<rows.findIndex(x=>x.memory_gb===1440));
 rows=select(data.products,{vendor:'AMD',q:'R9700'},'model',1);
 assert.equal(rows.length,1);assert.equal(rows[0].vendor,'AMD');
