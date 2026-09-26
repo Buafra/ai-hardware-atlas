@@ -12,6 +12,10 @@ assert.ok(dateNumber('2025-Q1')<dateNumber('2025-10-15'));
 assert.ok(dateNumber('2026-H2')<dateNumber('2026-end'));
 assert.equal(dateNumber(null),null);
 assert.equal(data.products.find(x=>x.id==='dgx-spark-gb10').release,'2025-10-15');
+// Rubin CPX has no availability date any more: it sorts with the other undated products, last in both directions.
+const cpx=data.products.find(x=>x.id==='vera-rubin-nvl144-cpx');assert.equal(cpx.release,null);assert.equal(cpx.release_kind,"Not on NVIDIA's current roadmap");
+const {releaseKind}=require('../web/app.js');assert.equal(releaseKind('Not established'),'');assert.equal(releaseKind(null),'');assert.equal(releaseKind(cpx.release_kind),cpx.release_kind);
+for(const dir of [1,-1]){const r=select(data.products,{},'release',dir),i=r.findIndex(x=>x.release==null);assert.ok(i>0&&r.slice(i).every(x=>x.release==null)&&r.slice(i).includes(cpx),'release sort '+dir);}
 const [q3s,q3e]=dateRange('2025-Q3');assert.equal(new Date(q3s).toISOString().slice(0,10),'2025-07-01');assert.equal(new Date(q3e).toISOString().slice(0,10),'2025-09-30');
 assert.equal(new Date(dateRange('2025-Summer')[1]).toISOString().slice(0,10),'2025-08-31');assert.equal(dateRange('soon'),null);
 assert.equal(estimateGB(70,4,20),42);assert.equal(estimateGB('',4,20),null);assert.equal(estimateGB(8,16,0),16);
@@ -20,7 +24,7 @@ rows=select(data.products,{need:42,fitOnly:true},'memory_gb',1);assert.ok(rows.l
 const st={...decodeState(''),q:'mi3',vendor:'AMD',sort:'memory_gb',dir:-1,view:'table',cmp:['h200','b200-blackwell'],lang:'ar',params:'70',fit:true};
 const back=decodeState(encodeState(st));for(const k of Object.keys(st))assert.deepEqual(back[k],st[k],k);
 assert.equal(encodeState(decodeState('')),'');assert.equal(decodeState('?view=evil&lang=xx').view,'cards');assert.equal(decodeState('?cmp=a,b,c,d,e,a').cmp.length,4);
-console.log('PASS: sort, date windows, nulls, filters, Spark date, estimator, fit, URL state');
+console.log('PASS: sort, date windows, nulls, undated CPX, filters, Spark date, estimator, fit, URL state');
 // Hash routes: views in the hash, deep links applied once, unknown hashes fall back to #home.
 const {parseRoute,routePatch,pageUrl,countLabel}=require('../web/app.js');
 const home={view:'home',sub:'',arg:''};

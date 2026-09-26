@@ -1,12 +1,12 @@
 # AI Hardware Atlas
 
-Cipher AI Knowledge: public NVIDIA / AMD comparison, AI news and UAE AI, as one static bilingual page, plus a one-page PDF and an official-source checker.
+Cipher Lacuna ("Decoding the gaps in AI knowledge"): public NVIDIA / AMD comparison, AI news and UAE AI, as one static bilingual page, plus a one-page PDF and an official-source checker. AI Hardware Atlas is the name of the hardware area.
 
 ## Current scope
 
 - Three-pillar hub. `#home` is a short hero plus three equal pillars (Hardware, AI news, UAE AI), each a mini-dashboard with stats computed from the data and an "Open …" button. Inner views: `#hardware` (the full tool below), `#news`, `#uae` and `#contact`, each with a top nav, breadcrumb and "Back to overview". Unknown hashes open `#home`. Deep links such as `#hardware/level/Personal`, `#hardware/p/<id>`, `#news/uae` or `#uae/f/<id>` are applied and then reduced to the view. Filters stay in the query string next to the hash, so Copy link shares both. Without JavaScript all views render one after another.
 - Featured products and the two UAE highlights on `#home` are chosen in `data/site.json` (unknown ids are skipped and filled from the data).
-- Brand: text wordmark "Cipher AI Knowledge". Logo slot: drop `web/brand/logo.svg` (shown before the wordmark) and `web/brand/favicon.svg`, then rebuild; both are sanitised and embedded as images, so they cannot run script. Until then the favicon is a neutral gradient square. See `web/brand/README.md`.
+- Brand: Cipher Lacuna, with the owner's logo (`web/brand/logo.svg`) before the wordmark and the tagline under it in English or Arabic (the name stays Latin). Logo and favicon are sanitised and embedded as images, so they cannot run script; the PNG icons and the 1200 x 630 share preview (`web/brand/og.png`, made by `python scripts/make_og.py`) are copied to `dist/brand/`. Open Graph and X card tags point to https://buafra.github.io/ai-hardware-atlas/. See `web/brand/README.md`.
 - GPU, system and rack entries, kept in `data/catalog.json`.
 - Search and filters; numeric memory, bandwidth, power and launch-price sorting; chronological date-window sorting.
 - Separate announcement and availability/target dates; memory scope on every entry.

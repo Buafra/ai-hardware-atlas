@@ -76,9 +76,17 @@ html[lang="en"] [data-lang="ar"],html[lang="ar"] [data-lang="en"]{display:none!i
 .top{position:sticky;top:0;z-index:40;background:var(--surface);background:color-mix(in srgb,var(--surface) 92%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--border)}
 .top-in{display:flex;align-items:center;gap:10px 18px;min-height:62px}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--strong);flex:none;max-width:100%}
-.brand-logo{flex:none;height:30px;width:auto;max-width:30px}
+/* The owner's logo.svg has 10 units of air on each side of its 64-unit viewBox: the box is pulled out by that much so the
+   visible cube lines up with the content edge below (the file itself is untouched). Change it if the logo file changes. */
+.brand-logo{flex:none;height:34px;width:auto;max-width:34px;margin-inline-start:calc(-34px * 10 / 64)}
 .brand-text{display:flex;flex-direction:column;line-height:1.15;min-width:0}
 .wordmark{font-weight:800;font-size:16.5px;letter-spacing:-.01em;white-space:nowrap}
+/* The Latin wordmark (dir=ltr) sits in a column as wide as the Arabic tagline: keep it on the logo's side. */
+html[dir="rtl"] .top .wordmark{text-align:right}
+.wm-2{color:var(--accent-text)}
+/* Tagline under the wordmark; the brand name itself stays Latin in both languages. */
+.tagline{font-size:11.5px;font-weight:600;color:var(--muted);white-space:nowrap;margin-top:1px}
+[lang="ar"] .tagline{font-size:12px;margin-top:2px}
 .brand-sec{display:none;font-size:11.5px;font-weight:700;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 /* Safety net: if a row ever gets too tight, the nav scrolls sideways instead of overlapping the wordmark. */
 .nav{display:flex;gap:2px;align-items:center;min-width:0;overflow-x:auto;scrollbar-width:none}
@@ -108,6 +116,8 @@ html[lang="en"] [data-lang="ar"],html[lang="ar"] [data-lang="en"]{display:none!i
 .eyebrow{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:#b9fff4}
 .hero h1{color:#fff;font-size:40px;line-height:1.08;letter-spacing:-.03em;margin:8px 0}
 .promise{margin:0;font-size:17.5px;line-height:1.55;max-width:620px;color:#f6f1ff}
+/* The tagline, repeated here only on phones, where the header has no room for it. */
+.hero-tag{display:none;margin:-2px 0 10px;font-size:15px;font-weight:700;line-height:1.35;color:#b9fff4}
 .hero-side{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
 .fresh{display:flex;gap:10px;align-items:flex-start;margin:0;background:#1a0a3d66;border:1px solid #ffffff38;border-radius:14px;padding:11px 15px;font-size:14px;line-height:1.45;max-width:380px;color:#fff}
 .pulse{flex:none;width:10px;height:10px;margin-top:5px;border-radius:50%;background:#22d4d6;box-shadow:0 0 0 0 #22d4d680;animation:pulse 2.4s infinite}
@@ -424,7 +434,8 @@ tbody tr:hover{background:var(--surface-2)}
 .foot{margin-top:48px;border-top:1px solid var(--border);background:var(--surface)}
 .foot-in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px 40px;padding-block:28px 96px}
 .foot p{margin:0 0 8px;font-size:13px;color:var(--muted);max-width:720px}
-.foot .foot-brand{margin-bottom:10px}
+.foot .foot-brand{margin-bottom:2px}
+.foot .foot-tag{margin-bottom:10px;font-weight:600}
 .foot-side{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 .foot-side .ig{background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce);color:#fff;box-shadow:none}
 .foot-side .ig:hover{filter:brightness(1.07)}
@@ -483,6 +494,11 @@ dialog::backdrop{background:#0a0d1a99}
   .trust>div:nth-child(n+3){border-top:1px solid var(--border)}
 }
 @media (max-width:1139px){.ig-mini{display:none}}
+/* One-row header with the tagline: a little less air, so the nav never needs its sideways scroll. */
+@media (min-width:1000px) and (max-width:1239px){
+  .top-in{column-gap:12px}
+  .nav a{padding-inline:10px}
+}
 @media (max-width:999px){
   .pillars{grid-template-columns:1fr}
   .hero{grid-template-columns:1fr}
@@ -508,6 +524,8 @@ dialog::backdrop{background:#0a0d1a99}
   .top-in{flex-wrap:wrap;padding-top:8px}
   .nav{order:3;width:100%;padding-bottom:8px}
   .brand-sec:not(:empty){display:block}
+  /* Inside a section the section name takes the tagline's line, so the brand stays two lines. */
+  .brand-sec:not(:empty)+.tagline{display:none}
 }
 @media (max-width:639px){
   .wrap{padding-inline:16px}
@@ -565,6 +583,11 @@ dialog::backdrop{background:#0a0d1a99}
   .f-src a{padding-block:10.5px}
   .credit{bottom:12px}
   .credit::after{inset:-11px -6px}
+}
+@media (max-width:480px){
+  .tagline{display:none}
+  .hero-tag{display:block}
+  .brand-logo{height:30px;max-width:30px;margin-inline-start:calc(-30px * 10 / 64)}
 }
 /* The narrowest phones: the whole nav fits without sideways scrolling. */
 @media (max-width:389px){

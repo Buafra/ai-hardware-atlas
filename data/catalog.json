@@ -3879,9 +3879,9 @@
       "memory": "100 TB fast memory / rack",
       "use": "Massive-context inference",
       "id": "vera-rubin-nvl144-cpx",
-      "announcement": null,
-      "release": "2026-end",
-      "release_kind": "Expected",
+      "announcement": "2025-09-09",
+      "release": null,
+      "release_kind": "Not on NVIDIA's current roadmap",
       "source_reviewed": "2026-09-26",
       "architecture": "Rubin",
       "power_w": null,
@@ -3892,9 +3892,17 @@
         {
           "label": "Timeline source",
           "url": "https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference"
+        },
+        {
+          "label": "NVIDIA newsroom: Vera Rubin platform (GTC 2026)",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform"
+        },
+        {
+          "label": "NVIDIA newsroom: Vera Rubin in full production (2026-05-31)",
+          "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory"
         }
       ],
-      "notes": "Dates describe the vendor milestone, not current stock. A later date does not imply higher AI performance. System and rack memory should not be compared directly with single-GPU VRAM. Roadmap caution: Tom's Hardware reported on 2026-03-17 that NVIDIA dropped Rubin CPX from its roadmap at GTC 2026, and analyst Ming-Chi Kuo (2026-09-01) says a redesigned CPX is planned in a separate rack for 2027. The expected date above comes from NVIDIA's 2025 announcement and may no longer apply.",
+      "notes": "Dates describe the vendor milestone, not current stock. A later date does not imply higher AI performance. System and rack memory should not be compared directly with single-GPU VRAM. NVIDIA announced Rubin CPX on 2025-09-09 with availability expected at the end of 2026. NVIDIA's own Vera Rubin announcements at GTC 2026 (2026-03-16) and at full production (2026-05-31) list five rack types without CPX, and its Rubin CPX product and technical blog pages now return 404. NVIDIA has not announced a cancellation or a new date; an analyst report (Ming-Chi Kuo, 2026-09-01) of a redesigned CPX for 2027 is unconfirmed by NVIDIA.",
       "use_ar": "استدلال بسياق ضخم جدًا",
       "bandwidth_tbs": 1700,
       "bandwidth_note": "Stated as 1.7 PB/s memory bandwidth per rack (converted to TB/s)",
@@ -3918,7 +3926,7 @@
         "aed_high": null,
         "aed_kind": null,
         "vat_included": null,
-        "basis": "No public listing or reputable per-rack estimate for the Vera Rubin NVL144 CPX rack found as of 2026-09-26 (searched Tom's Hardware, SemiAnalysis, Morgan Stanley, Bernstein, DigiTimes, CNBC, Bloomberg coverage); Nvidia dropped Rubin CPX from its roadmap at GTC in March 2026 (Tom's Hardware, 2026-03-17). Ming-Chi Kuo (via Benzinga, 2026-09-01) says a redesigned CPX is revived for 1Q27 production in a separate MGX rack of 64-256 CPX GPUs rather than the original combined NVL144 CPX rack, so Vera Rubin NVL72 estimates should not be used as a stand-in.",
+        "basis": "No public listing or reputable per-rack estimate for the Vera Rubin NVL144 CPX rack found as of 2026-09-26 (searched Tom's Hardware, SemiAnalysis, Morgan Stanley, Bernstein, DigiTimes, CNBC, Bloomberg coverage); Tom's Hardware reported (2026-03-17) that NVIDIA dropped Rubin CPX from its roadmap at GTC 2026. An analyst report, unconfirmed by NVIDIA (Ming-Chi Kuo via Benzinga, 2026-09-01), says a redesigned CPX would enter production in 1Q27 in a separate MGX rack of 64-256 CPX GPUs rather than the original combined NVL144 CPX rack. Either way, Vera Rubin NVL72 estimates should not be used as a stand-in.",
         "checked": "2026-09-26",
         "sources": [
           {
@@ -4072,6 +4080,10 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-26",
+      "summary": "Vera Rubin NVL144 CPX: the end-of-2026 date is no longer shown as expected; marked \"Not on NVIDIA's current roadmap\" because NVIDIA's GTC 2026 and full-production Vera Rubin announcements list no CPX rack (NVIDIA has announced neither a cancellation nor a new date). Added the 2025-09-09 announcement date and two NVIDIA newsroom sources."
+    },
     {
       "at": "2026-09-26",
       "summary": "Filled or refreshed approximate prices for 19 data-center and workstation products (reseller listings and dated analyst estimates, each independently re-checked); remaining unpriced items explain why."

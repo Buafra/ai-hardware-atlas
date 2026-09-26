@@ -56,6 +56,47 @@ class BrandSlotTests(unittest.TestCase):
         self.assertNotIn('onclick',svg)
         self.assertIn('<rect',unquote(icon));self.assertNotIn('script',unquote(icon));self.assertIn('xmlns=',unquote(icon))
 
+class BrandTests(unittest.TestCase):
+    """The owner's Cipher Lacuna brand files, the page head and the share preview."""
+    @classmethod
+    def setUpClass(cls):
+        cls.html,_=build.render_page(*build.load_all())
+        cls.head=cls.html[:cls.html.index('<style>')]
+    def meta(self,attr,name):
+        m=re.search(r'<meta %s="%s" content="([^"]*)">'%(attr,re.escape(name)),self.head)
+        self.assertTrue(m,name);return m.group(1)
+    def test_owner_logo_and_favicon_are_shipped(self):
+        logo,icon=build.brand_assets()
+        self.assertRegex(logo,BrandSlotTests.INERT)
+        self.assertIn(logo,self.html[self.html.index('<header'):self.html.index('</header>')])
+        self.assertIn('<path',unquote(icon));self.assertNotIn('<rect width="32"',unquote(icon))  # not the placeholder square
+    def test_head_title_description_and_share_preview(self):
+        self.assertIn('<title>Cipher Lacuna | AI hardware, AI news and UAE AI</title>',self.head)
+        self.assertIn('Cipher Lacuna',self.meta('name','description'))
+        self.assertIn('<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">',self.head)
+        # PNG tab icon for browsers without SVG favicons, listed before the SVG one so the others keep using the SVG.
+        png_icon='<link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png">'
+        self.assertIn(png_icon+'<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,',self.head)
+        url='https://buafra.github.io/ai-hardware-atlas/'
+        want={'og:type':'website','og:url':url,'og:image':url+'brand/og.png','og:image:width':'1200','og:image:height':'630','og:locale':'en_US','og:locale:alternate':'ar_AE'}
+        for k,v in want.items():self.assertEqual(self.meta('property',k),v,k)
+        self.assertTrue(self.meta('property','og:title').startswith('Cipher Lacuna'));self.assertIn('Cipher Lacuna',self.meta('property','og:description'))
+        self.assertEqual(self.meta('name','twitter:card'),'summary_large_image');self.assertEqual(self.meta('name','twitter:image'),url+'brand/og.png')
+        png=(ROOT/'web/brand/og.png').read_bytes()
+        self.assertEqual((png[1:4],png[12:16]),(b'PNG',b'IHDR'));self.assertEqual((int.from_bytes(png[16:20],'big'),int.from_bytes(png[20:24],'big')),(1200,630))
+        for f in ('apple-touch-icon.png','icon-512.png','icon-32.png'):self.assertTrue((ROOT/'web/brand'/f).exists(),f)
+    def test_brand_pngs_are_copied_next_to_the_page(self):
+        with tempfile.TemporaryDirectory() as d:
+            names=build.copy_brand_images(Path(d)/'brand')
+            self.assertEqual(sorted(names),sorted(f.name for f in (Path(d)/'brand').iterdir()))
+        self.assertTrue({'og.png','apple-touch-icon.png','icon-512.png','icon-32.png'}<=set(names))
+    def test_old_name_is_gone_and_taglines_translate(self):
+        for f in ('web/template.html','web/app.js','scripts/build.py','README.md','web/brand/README.md'):
+            self.assertNotIn('Cipher AI Knowledge',(ROOT/f).read_text(encoding='utf-8'),f)
+        js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+        self.assertIn("'Decoding the gaps in AI knowledge':'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي'",js)
+        self.assertIn("'[Cipher Lacuna] '",js)
+
 class SiteChoicesTests(unittest.TestCase):
     def setUp(self):
         self.data,self.feed,self.sources,self.uae,self.models=build.load_all()
@@ -132,7 +173,29 @@ class PageTests(unittest.TestCase):
         self.assertIsNone(re.search(r'<script[^>]+src=|<link[^>]+stylesheet|<img[^>]+src="(?:https?:)?//|url\((?:["\'])?(?:https?:)?//|@import',self.html))
         self.assertIsNone(re.search(r'__[A-Z][A-Z0-9_]*__',self.html))
         self.assertNotIn('brand-logo',self.html.split('<style>')[0]+self.html.split('</style>')[1])
-        self.assertIn('<span class="wordmark" lang="en" dir="ltr">Cipher AI Knowledge</span>',self.html)
+        self.assertIn('<span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span>',self.html)
+        self.assertIn('<span class="tagline" data-i18n>Decoding the gaps in AI knowledge</span>',self.html)
+        # On phones the header has no room for the tagline, so the hero repeats it under the name (CSS shows it there only).
+        self.assertIn('</h1><p class="hero-tag" data-i18n>Decoding the gaps in AI knowledge</p>',self.html)
+    def test_release_without_a_date(self):
+        # A product with no availability date shows "Not established" plus its kind when the kind explains something (for
+        # example "Not on NVIDIA's current roadmap"), never "Not established" twice and never a leftover "Expected"; every
+        # kind used in the catalog has an Arabic translation in app.js.
+        js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+        for kind in {p['release_kind'] for p in self.data['products']}:
+            self.assertTrue(f"'{kind}':" in js or f'"{kind}":' in js,kind)
+        for p in self.data['products']:
+            if p['release'] is None:
+                card=re.search(r'<article class="product [^"]*" id="p-%s".*?</article>'%re.escape(p['id']),self.html,re.S).group(0)
+                cell=card[card.index('Availability / target'):card.index('Announced / launched')]
+                self.assertIn('<span data-i18n>Not established</span>',cell,p['id'])
+                if p['release_kind'] in (None,'','Not established'):
+                    self.assertEqual(cell.count('Not established'),1,p['id']);self.assertNotIn('<small>',cell,p['id'])
+                else:
+                    self.assertIn(f"<small>{build.T(p['release_kind'])}</small>",cell,p['id'])
+                self.assertNotIn('>Expected<',cell,p['id'])
+        self.assertEqual(build.release_kind('Not established'),'');self.assertEqual(build.release_kind(None),'')
+        self.assertEqual(build.release_kind('Released'),'<small><span data-i18n>Released</span></small>')
     def test_counts_are_honest(self):
         # UAE headline counts per language (the list a reader can open), newsrooms counted once per outlet,
         # and "from N sources" counts the sources that actually supplied headlines.

@@ -55,7 +55,7 @@ OPTIONAL = {'bandwidth_tbs': None, 'bandwidth_note': None, 'ai_compute': None, '
 AED_PEG = 3.6725  # UAE dirham is pegged to the US dollar.
 INSTAGRAM = 'https://www.instagram.com/qahwa.w.ai/'
 BACKEND_ONLY = ('announcements',)
-SITE_NAME = 'Cipher AI Knowledge'
+SITE_NAME = 'Cipher Lacuna'
 UAE_TZ = timezone(timedelta(hours=4))
 LEVELS = ['Personal', 'Workstation', 'Enterprise', 'Data center', 'Rack scale']
 BRAND_DIR = ROOT / 'web' / 'brand'
@@ -145,6 +145,10 @@ def when(value, lang):
 def dated(value):
     return L(when(value, 'en'), when(value, 'ar')) if value else T('Not established')
 
+def release_kind(kind):
+    """The kind under an availability date; left out when it would only repeat "Not established" (same rule as releaseKind in app.js)."""
+    return '' if kind in (None, '', 'Not established') else f'<small>{T(kind)}</small>'
+
 def day_label(d, lang):
     return f'{AR_DAYS[d.weekday()]} {d.day} {AR_MONTHS[d.month-1]} {d.year}' if lang == 'ar' else f'{EN_DAYS[d.weekday()]} {d.day} {EN_MONTHS[d.month-1]} {d.year}'
 
@@ -209,7 +213,7 @@ def product(p):
     return f'''<article class="product {p['vendor'].lower()}" id="p-{E(p['id'])}" data-product="{E(p['id'])}">{shot}
     <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}</p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
     <p class="memory"><strong><bdi lang="en">{E(p['memory'])}</bdi></strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></p>
-    <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}<small>{T(p['release_kind'])}</small></dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
+    <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}{release_kind(p['release_kind'])}</dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
     <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div></details>
     <label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label></article>'''
 
@@ -265,6 +269,16 @@ def brand_assets(brand_dir=BRAND_DIR):
     if fp.exists():
         icon = sanitize_svg(fp.read_text(encoding='utf-8'), prefix='') or PLACEHOLDER_FAVICON
     return logo, svg_uri(icon)
+
+def copy_brand_images(dest, brand_dir=BRAND_DIR):
+    """Raster brand files (apple-touch-icon.png, icon-32.png, icon-512.png, og.png) are served as files next to the page:
+    the home-screen icon, the PNG tab icon and the share preview are fetched by URL, so they can't be data URIs."""
+    pngs = sorted(brand_dir.glob('*.png'))
+    if pngs:
+        dest.mkdir(parents=True, exist_ok=True)
+        for f in pngs:
+            shutil.copyfile(f, dest / f.name)
+    return [f.name for f in pngs]
 
 # ---------- owner choices (data/site.json) ----------
 
@@ -474,7 +488,7 @@ def home_view(c):
     cta = lambda href, label: f'<div class="p-foot"><a class="cta" href="#{href}"><span data-i18n>{label}</span><span class="arr">{ICON["arrow"]}</span></a></div>'
     en_ar = L(f'{len(en_items)} · {len(ar_items)}', f'{len(ar_items)} · {len(en_items)}')
     return f'''<div id="home" class="view" data-view="home">
-<section class="hero" aria-labelledby="home-title"><div class="hero-main"><p class="eyebrow"><bdi>NVIDIA + AMD</bdi> · <span data-i18n>AI news</span> · <span data-i18n>UAE</span></p><h1 id="home-title" tabindex="-1"><bdi lang="en">{SITE_NAME}</bdi></h1><p class="promise" data-i18n>Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.</p></div>
+<section class="hero" aria-labelledby="home-title"><div class="hero-main"><p class="eyebrow"><bdi>NVIDIA + AMD</bdi> · <span data-i18n>AI news</span> · <span data-i18n>UAE</span></p><h1 id="home-title" tabindex="-1"><bdi lang="en">{SITE_NAME}</bdi></h1><p class="hero-tag" data-i18n>Decoding the gaps in AI knowledge</p><p class="promise" data-i18n>Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.</p></div>
 <div class="hero-side"><p class="fresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(c['feed'], c['data'])}</span></p><a class="ig" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON['ig']}<span data-i18n>Follow Qahwa &amp; AI</span> <bdi class="handle" lang="en">@qahwa.w.ai</bdi></a></div>
 <nav class="jump" aria-label="The three areas" data-i18n-aria="The three areas"><a href="#hardware"><i class="j-hw" aria-hidden="true"></i><b data-i18n>Hardware</b><span>{L(cnt(len(ps), "product", "en"), cnt(len(ps), "product", "ar"))}</span></a><a href="#news"><i class="j-news" aria-hidden="true"></i><b data-i18n>News</b><span>{L(cnt(c["n_headlines"], "headline", "en"), cnt(c["n_headlines"], "headline", "ar"))}</span></a><a href="#uae"><i class="j-uae" aria-hidden="true"></i><b data-i18n>UAE</b><span>{L(cnt(c["n_facts"], "fact", "en"), cnt(c["n_facts"], "fact", "ar"))}</span></a></nav></section>
 <section class="pillars" aria-label="The three areas of the site" data-i18n-aria="The three areas of the site">
@@ -673,10 +687,10 @@ def pdf(data):
     pdfmetrics.registerFont(TTFont('Atlas-Bold', str(fontdir/'DejaVuSans-Bold.ttf')))
     w,h = A3
     c=canvas.Canvas(str(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf'),pagesize=A3,invariant=1)
-    c.setTitle('AI Hardware Atlas - NVIDIA and AMD | Cipher AI Knowledge');c.setAuthor('Cipher AI Knowledge')
+    c.setTitle(f'AI Hardware Atlas - NVIDIA and AMD | {SITE_NAME}');c.setAuthor(SITE_NAME)
     c.setFillColor(HexColor('#f5f8ff'));c.rect(0,0,w,h,fill=1,stroke=0)
     c.setFillColor(HexColor('#4d2899'));c.roundRect(24,h-117,w-48,93,16,fill=1,stroke=0)
-    c.setFillColor(HexColor('#ffffff'));c.setFont('Atlas-Bold',27);c.drawString(43,h-66,'AI HARDWARE ATLAS');c.setFont('Atlas-Bold',10);c.drawRightString(w-43,h-58,'CIPHER AI KNOWLEDGE')
+    c.setFillColor(HexColor('#ffffff'));c.setFont('Atlas-Bold',27);c.drawString(43,h-66,'AI HARDWARE ATLAS');c.setFont('Atlas-Bold',10);c.drawRightString(w-43,h-58,SITE_NAME.upper())
     c.setFont('Atlas',12);c.drawString(44,h-95,f"NVIDIA + AMD / {len(data['products'])} products / Updated {data['updated_at'][:10]}")
     c.setFillColor(HexColor('#42516e'));c.setFont('Atlas',9)
     c.drawString(30,h-144,'A = announced / launched. R = availability or vendor target. Blank dates are not established.')
@@ -708,14 +722,15 @@ def pdf(data):
             if p['bandwidth_tbs']:line+=f" / {p['bandwidth_tbs']:g} TB/s"
             c.drawString(x+23,top-32,fit(line,cw-33,8))
             dates=f"A: {p['announcement'] or '-'}  |  R: {p['release'] or '-'}"
-            if p['release']:dates+=' ('+p['release_kind']+')'
+            # The kind also explains a missing date (for example "Not on NVIDIA's current roadmap").
+            if p['release'] or p['release_kind'] not in (None,'','Not established'):dates+=' ('+p['release_kind']+')'
             c.drawString(x+23,top-45,fit(dates,cw-33,7.5))
             c.linkURL(p['sources'][0]['url'],(x,top-row_h,x+cw,top))
     c.setFillColor(HexColor('#e9e3fc'));c.roundRect(30,49,w-60,69,11,fill=1,stroke=0)
     c.setFillColor(HexColor('#39236f'));c.setFont('Atlas-Bold',10);c.drawString(45,97,'COMPARE LIKE FOR LIKE')
     c.setFont('Atlas',8.4);c.drawString(45,80,'Dedicated GPU VRAM, shared system memory and rack totals have different meanings. Capacity is not speed.')
     c.drawString(45,65,'Each row links to an official source. The website includes power, architecture, detailed notes and all sources.')
-    c.setFillColor(HexColor('#65758f'));c.setFont('Atlas',8);c.drawString(30,28,'One-page overview. Precise dates are shown only where established; availability varies by partner and region.');c.drawRightString(w-30,28,f"© {str(data['updated_at'])[:4]} Cipher AI Knowledge")
+    c.setFillColor(HexColor('#65758f'));c.setFont('Atlas',8);c.drawString(30,28,'One-page overview. Precise dates are shown only where established; availability varies by partner and region.');c.drawRightString(w-30,28,f"© {str(data['updated_at'])[:4]} {SITE_NAME}")
     c.showPage();c.save()
 
 def main():
@@ -728,11 +743,13 @@ def main():
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
+    copy_brand_images(OUT/'brand')
     pdf(data)
     if args.standalone:
         target=args.standalone.resolve()
         shutil.copyfile(OUT/'index.html',target)
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
+        copy_brand_images(target.parent/'brand')
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
     print(f"Built {len(data['products'])} products, self-contained HTML, JSON and one-page PDF")

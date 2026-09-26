@@ -148,7 +148,9 @@
     if (m && +m[2] >= 1 && +m[2] <= 12) return (m[3] ? +m[3] + ' ' : '') + MONTHS[L][+m[2] - 1] + ' ' + m[1];
     return s;
   }
-  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,HW_KEYS};
+  // The kind under an availability date, or '' when it would only repeat "Not established" (same rule as release_kind in build.py).
+  const releaseKind = k => k && k !== 'Not established' ? k : '';
+  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS};
   if (!root.document) return;
 
   const AR = {
@@ -166,6 +168,7 @@
     'Expected':'متوقع','Generally available':'متاح للجميع','Not established':'غير محدد','Orders opened':'فُتح باب الطلب','Partner rollout':'طرح عبر الشركاء',
     'Partner rollout expected':'طرح متوقع عبر الشركاء','Released':'صدر','Standalone cards':'بطاقات منفصلة','Vendor availability window':'فترة توفر معلنة',
     'Vendor distribution window':'فترة توزيع معلنة','Vendor target (summer 2025)':'هدف الشركة (صيف 2025)','Volume expected':'إنتاج كمي متوقع',
+    "Not on NVIDIA's current roadmap":'ليس ضمن خارطة طريق NVIDIA الحالية',
     'Sort by':'ترتيب حسب','Hardware level':'مستوى العتاد','Model name':'اسم الطراز','Memory capacity':'سعة الذاكرة','Memory bandwidth':'عرض نطاق الذاكرة',
     'Launch price':'سعر الإطلاق','Availability date':'تاريخ التوفر','Announcement date':'تاريخ الإعلان','Power rating':'استهلاك الطاقة',
     'Ascending ↑':'تصاعدي ↑','Descending ↓':'تنازلي ↓','Reset':'إعادة ضبط','Cards':'بطاقات','Table':'جدول','Timeline':'خط زمني','View':'العرض',
@@ -208,7 +211,7 @@
     // Site shell and the three-pillar hub
     'Skip to content':'انتقل إلى المحتوى','Main sections':'الأقسام الرئيسية','Overview':'الرئيسية','News':'الأخبار','UAE':'الإمارات',
     'Breadcrumb':'مسار التنقل','Back to overview':'العودة إلى الرئيسية','Other areas':'الأقسام الأخرى','Footer':'تذييل الصفحة',
-    'AI Hardware Atlas, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات',
+    'AI hardware, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات','Decoding the gaps in AI knowledge':'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي',
     'Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.':'قارن عتاد الذكاء الاصطناعي من NVIDIA وAMD، وتابع آخر أخبار الذكاء الاصطناعي، واطّلع على ما تبنيه الإمارات، مع ذكر المصادر والتواريخ في كل قسم.',
     'Follow Qahwa & AI':'تابع قهوة و AI','AI lessons and news from Qahwa & AI, in English and Arabic.':'دروس وأخبار الذكاء الاصطناعي من قهوة و AI، بالعربية والإنجليزية.',
     'The three areas':'الأقسام الثلاثة','The three areas of the site':'أقسام الموقع الثلاثة',
@@ -253,6 +256,7 @@
   const watts = p => p.power_w == null ? T('Not listed') : fmt(p.power_w) + ' W';
   const price = p => p.msrp_usd == null ? T('Not listed') : '$' + fmt(p.msrp_usd);
   const orNA = v => v == null || v === '' ? T('Not listed') : T(v);
+  const kindSmall = p => releaseKind(p.release_kind) ? `<small>${esc(T(p.release_kind))}</small>` : '';
   const FIT = {fits:'Fits', multi:'Fits across GPUs', no:'Too small'};
   const SORTABLE = ['level','model','memory_gb','bandwidth_tbs','power_w','announcement','release','msrp_usd','price_usd'];
   const pv = (p, k) => p.price_view && p.price_view[k] ? p.price_view[k] : null;
@@ -323,7 +327,7 @@
     $('theme').setAttribute('aria-label', T('Theme: ' + name));
   }
   function setTitle() {
-    document.title = currentView === 'home' ? 'Cipher AI Knowledge | ' + T('AI Hardware Atlas, AI news and UAE AI') : T(VIEW_TITLE[currentView]) + ' · Cipher AI Knowledge';
+    document.title = currentView === 'home' ? 'Cipher Lacuna | ' + T('AI hardware, AI news and UAE AI') : T(VIEW_TITLE[currentView]) + ' · Cipher Lacuna';
     $('brand-sec').textContent = currentView === 'home' ? '' : T(VIEW_NAME[currentView]);
   }
   function syncUrl() {
@@ -396,7 +400,7 @@
       <td class="t-model"><span class="dot ${p.vendor.toLowerCase()}" aria-hidden="true"></span><a href="${esc(p.sources[0].url)}" target="_blank" rel="noopener noreferrer" lang="en">${esc(p.model)}</a><small lang="en">${esc(p.vendor)} · ${esc(p.architecture)}</small></td>
       <td>${esc(T(p.level))}<small>${esc(T(p.type))}</small></td><td class="num">${en(p.memory)}<small>${esc(T(p.memory_scope))}</small></td>
       <td class="num">${esc(bw(p))}</td><td class="num">${esc(watts(p))}</td><td class="num">${esc(p.announcement ? day(p.announcement) : T('Not established'))}</td>
-      <td class="num">${esc(p.release ? day(p.release) : T('Not established'))}<small>${esc(T(p.release_kind))}</small></td><td class="num">${esc(pv(p,'usd') || T('Not listed'))}<small>${esc(T(pv(p,'usd_kind') || ''))}</small></td><td class="num">${esc(pv(p,'aed') || T('Not listed'))}<small>${esc(T(pv(p,'aed_kind') || ''))}</small></td>
+      <td class="num">${esc(p.release ? day(p.release) : T('Not established'))}${kindSmall(p)}</td><td class="num">${esc(pv(p,'usd') || T('Not listed'))}<small>${esc(T(pv(p,'usd_kind') || ''))}</small></td><td class="num">${esc(pv(p,'aed') || T('Not listed'))}<small>${esc(T(pv(p,'aed_kind') || ''))}</small></td>
       ${n ? `<td><span class="fit ${s}">${esc(T(FIT[s]))}</span></td>` : ''}</tr>`;
     }).join('');
     // Focusable so the sideways scroll works from the keyboard.
@@ -424,7 +428,7 @@
       const cy = top + i * rowH + rowH / 2, v = p.vendor.toLowerCase();
       // Tooltips are plain text: in Arabic the Latin model name is isolated (U+2068 … U+2069) so the sentence stays right to left.
       const name = state.lang === 'ar' ? '\u2068' + p.model + '\u2069' : p.model;
-      const tip = `${name} · ${T('Announced')}: ${p.announcement ? day(p.announcement) : T('Not established')} · ${T('Availability / target')}: ${p.release ? day(p.release) : T('Not established')} (${T(p.release_kind)})`;
+      const tip = `${name} · ${T('Announced')}: ${p.announcement ? day(p.announcement) : T('Not established')} · ${T('Availability / target')}: ${p.release ? day(p.release) : T('Not established')}${releaseKind(p.release_kind) ? ` (${T(p.release_kind)})` : ''}`;
       svg += `<g class="row ${v}"><title>${esc(tip)}</title><rect class="hit" x="0" y="${cy - rowH / 2}" width="${W}" height="${rowH}"/>`;
       svg += `<text class="label" x="${L - 12}" y="${cy + 4}" text-anchor="end">${esc(p.model.length > 32 ? p.model.slice(0, 31) + '…' : p.model)}</text>`;
       if (a && r) svg += `<line class="conn" x1="${x(a[0])}" x2="${x(r[0])}" y1="${cy}" y2="${cy}"/>`;
@@ -475,7 +479,7 @@
       ['Bandwidth', p => `<span class="${p.bandwidth_tbs != null && p.bandwidth_tbs === bestBw ? 'best' : ''}">${esc(bw(p))}</span>${p.bandwidth_note ? `<small lang="en">${esc(p.bandwidth_note)}</small>` : ''}`],
       ['AI compute', p => value(p.ai_compute)], ['Power', p => esc(watts(p))],
       ['Announced / launched', p => esc(p.announcement ? day(p.announcement) : T('Not established'))],
-      ['Availability / target', p => `${esc(p.release ? day(p.release) : T('Not established'))}<small>${esc(T(p.release_kind))}</small>`],
+      ['Availability / target', p => `${esc(p.release ? day(p.release) : T('Not established'))}${kindSmall(p)}`],
       ['Launch price', p => esc(price(p))],
       ['Approx. price', p => p.price_view ? `${esc(pv(p,'usd') || T('Not listed'))}<small>${esc(T(pv(p,'usd_kind') || ''))}</small>${esc(pv(p,'aed') || T('Not listed'))}<small>${esc(T(pv(p,'aed_kind') || ''))} · ${esc(T('checked'))} ${esc(day(pv(p,'checked') || ''))}</small>` : esc(T('Not publicly priced'))], ['Form factor', p => value(p.form_factor)], ['Cooling', p => esc(orNA(p.cooling))], ['Interconnect', p => value(p.interconnect)],
       ['Best fit', p => esc(state.lang === 'ar' && p.use_ar ? p.use_ar : p.use)],
@@ -626,7 +630,7 @@
     const from = [v('c-name'), v('c-email')].filter(Boolean).join(' · ');
     const body = (from ? from + '\n\n' : '') + v('c-message') + '\n\n— ' + location.href;
     flash(T('Opening your email app…'));
-    location.href = `mailto:${contactAddress}?subject=${encodeURIComponent('[Cipher AI Knowledge] ' + v('c-subject'))}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:${contactAddress}?subject=${encodeURIComponent('[Cipher Lacuna] ' + v('c-subject'))}&body=${encodeURIComponent(body)}`;
   });
   $('csv').addEventListener('click', () => {
     const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];

@@ -57,6 +57,19 @@ def route_checks(page, route, lang, width, hash=None):
     current = page.evaluate("[...document.querySelectorAll('.nav a[aria-current=page]')].map(a => a.dataset.nav)")
     check(current == [route], f'{tag} aria-current on {current}')
     check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')
+    check(page.evaluate("(n => n.scrollWidth - n.clientWidth)(document.querySelector('.top .nav'))") <= 0, f'{tag} header nav needs sideways scrolling')
+    check(page.locator('.top .brand-logo').is_visible(), f'{tag} logo not visible in the header')
+    # Tagline under the wordmark: hidden on the narrowest phones and, below 1000px, inside a section (the section name takes its line).
+    want_tag = width > 480 and (route == 'home' or width >= 1000)
+    check(page.locator('.top .tagline').is_visible() == want_tag, f'{tag} tagline visible should be {want_tag}')
+    # On phones the hero carries the tagline instead.
+    if route == 'home':
+        check(page.locator('#home .hero-tag').is_visible() == (width <= 480), f'{tag} hero tagline visible should be {width <= 480}')
+    # The wordmark text sits next to the logo in both directions (in Arabic its column is as wide as the Arabic tagline).
+    gap = page.evaluate("""() => { const l = document.querySelector('.top .brand-logo').getBoundingClientRect(), r = document.createRange();
+        r.selectNodeContents(document.querySelector('.top .wordmark')); const t = r.getBoundingClientRect();
+        return document.documentElement.dir === 'rtl' ? l.left - t.right : t.left - l.right; }""")
+    check(0 <= gap <= 12, f'{tag} wordmark is {gap:.0f}px from the logo')
     for sel in KEY[route]:
         check(page.locator(f'{sel} >> visible=true').count() > 0, f'{tag} missing or hidden: {sel}')
     if route != 'home':
@@ -94,7 +107,11 @@ def main():
                 if lang == 'ar':
                     left = [t for t in untranslated(page) if not LATIN_OK.match(t)]
                     check(not left, f'[ar {width}px] untranslated labels: {sorted(set(left))[:10]}')
-                    check('Cipher AI Knowledge' in page.title() and re.search(r'[؀-ۿ]', page.title()), f'[ar] document title not translated: {page.title()}')
+                    check('Cipher Lacuna' in page.title() and re.search(r'[؀-ۿ]', page.title()), f'[ar] document title not translated: {page.title()}')
+                    check(page.text_content('.top .tagline') == 'فكّ شيفرة الفجوات في معرفة الذكاء الاصطناعي', f'[ar {width}px] tagline not in Arabic')
+                    check(page.text_content('.top .wordmark') == 'Cipher Lacuna', f'[ar {width}px] brand name should stay Latin')
+                else:
+                    check(page.title() == 'Cipher Lacuna | AI hardware, AI news and UAE AI', f'[en] home title: {page.title()}')
                 check(not errors, f'[{lang} {width}px] console errors: {errors[:5]}')
                 check(not foreign, f'[{lang} {width}px] requests to other hosts: {foreign[:5]}')
                 ctx.close()
@@ -196,6 +213,13 @@ def main():
         bad = page.evaluate("[...document.querySelectorAll('a[target=_blank]')].filter(a => !/noopener/.test(a.rel) || !/noreferrer/.test(a.rel)).map(a => a.href)")
         check(not bad, f'target=_blank links without rel=noopener noreferrer: {bad[:3]}')
         check('"announcements"' not in src, 'backend-only announcements published in the page')
+        # Share preview and home-screen icon: absolute og:image on the live site, the files themselves served next to the page.
+        og = page.get_attribute('meta[property="og:image"]', 'content')
+        check(og == 'https://buafra.github.io/ai-hardware-atlas/brand/og.png', f'og:image is {og}')
+        check(page.get_attribute('meta[name="twitter:card"]', 'content') == 'summary_large_image', 'twitter:card')
+        for f in ('brand/og.png', page.get_attribute('link[rel="apple-touch-icon"]', 'href'), page.get_attribute('link[rel="icon"][type="image/png"]', 'href')):
+            r = page.request.get(BASE + f)
+            check(r.status == 200 and r.headers.get('content-type', '').startswith('image/png'), f'{f}: {r.status} {r.headers.get("content-type")}')
         check(not errors, f'console errors: {errors[:5]}')
         check(not foreign, f'requests to other hosts: {foreign[:5]}')
         ctx.close()
