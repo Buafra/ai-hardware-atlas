@@ -43,6 +43,7 @@ Optional per-source settings in news-sources.json:
   raw_limit: <n>                 how many of the feed's newest entries are scanned (default RAW_LIMIT, or
                                  SITEMAP_RAW_LIMIT for a news sitemap, whose busy publishers list hundreds a day)
   timeout: <seconds>             for the feed request (default FEED_TIMEOUT), for slow official feeds
+  max_bytes: <n>                 largest feed body accepted (default FEED_BYTES), for a feed that carries whole posts
   page_stop: "<regex>"           the article text read from a page ends at the first paragraph or heading that
                                  matches (page furniture: related stories, browser notices); besides PAGE_STOP
   page_drop: "<regex>"           paragraphs of the article page that are left out (e.g. a "follow us" line)
@@ -56,6 +57,8 @@ Optional per-source settings in news-sources.json:
       "anthropic_listing"        anthropic.com's server-rendered listing page (it has no feed): the post list embedded
                                  in the page's Next.js data (title, summary, publishedOn, slug), or else the rendered
                                  links; with listing_directory "news" (the default) or "research"
+      "qwen_articles"            the JSON article list behind qwen.ai/research (it has no feed): title, path, date and
+                                 the post's introduction, cut back to whole sentences; links are qwen.ai/blog?id=<path>
 Sources that share a feed URL (Sharjah24's one sitemap for both languages) share one fetch per run.
 One story is kept once per language: the same link from two sources, or headlines that share most of their words
 (published within DUPLICATE_HOURS of each other), keep the copy from an official or primary source first, then one
@@ -103,11 +106,13 @@ RAW_LIMIT = 80  # some feeds (OpenAI, Hugging Face) return their whole archive
 # headlines are kept and PER_FEED still applies, so scanning more costs nothing but parsing.
 SITEMAP_RAW_LIMIT = 600
 FEED_TIMEOUT = 25
+FEED_BYTES = 8_000_000
 # What each feed type asks for: a CDN that honours Accept could refuse a page asked for as RSS (406).
 ACCEPT = {
     'rss': 'application/rss+xml, application/atom+xml, application/xml, text/xml',
     'news_sitemap': 'application/xml, text/xml;q=0.9, */*;q=0.1',
     'anthropic_listing': 'text/html, application/xhtml+xml;q=0.9, */*;q=0.1',
+    'qwen_articles': 'application/json, */*;q=0.1',
 }
 DUPLICATE_HOURS = 48   # copies of one story are published within this many hours of each other ...
 DUPLICATE_SHARE = 0.7  # ... and the shorter headline shares at least this share of its words with the other ...
@@ -422,6 +427,42 @@ def parse_anthropic(raw, directory='news', base='https://www.anthropic.com'):
             out.append(Entry(title, f'{base}/{directory}/{slug}', _listed_date(date.group(1)), ''))
     return _newest_first(out)
 
+def _whole_sentences(text):
+    """The text up to its last full sentence when it stops mid-sentence (a list that cuts every post's introduction
+    at a fixed length), or '' when it holds no full sentence."""
+    if not text or re.search(r'[.!?؟…]["”’»)\]]?$', text):
+        return text
+    ends = list(sentence_ends(text))
+    return text[:ends[-1]] if ends else ''
+
+def parse_qwen(raw, base='https://qwen.ai'):
+    """Entry(title, link, published, introduction, authors, tags) for each post of qwen.ai's article list
+    (/api/v2/article/retrieval?type=qwen_ai&language=en-US, the JSON the client-rendered qwen.ai/research page loads),
+    newest first. Each article has a title, a path (its slug), extra.date (ISO time) and extra.introduction, the
+    post's opening cut at a fixed length: it is kept up to its last full sentence. Posts in another language, with an
+    odd path or listed twice are left out. The link is the post's page, <base>/blog?id=<path>."""
+    data = json.loads(raw)
+    body = data.get('data') if isinstance(data, dict) else None
+    articles = body.get('articles') if isinstance(body, dict) else None
+    out, seen = [], set()
+    for a in articles if isinstance(articles, list) else []:
+        if not isinstance(a, dict):
+            continue
+        path = str(a.get('path') or '').strip()
+        extra = a['extra'] if isinstance(a.get('extra'), dict) else {}
+        if not _SLUG.fullmatch(path) or path in seen or not str(a.get('language') or 'en').startswith('en'):
+            continue
+        seen.add(path)
+        intro = next((v for v in (extra.get('description'), extra.get('introduction')) if isinstance(v, str) and v.strip()), '')
+        tags = extra.get('tags') if isinstance(extra.get('tags'), list) else []
+        out.append(Entry(clean(str(a.get('title') or '')), f'{base}/blog?id={path}', parse_date(str(extra.get('date') or '')),
+                         _whole_sentences(plain(intro)), _names(*(v for v in (extra.get('author'),) if isinstance(v, str))),
+                         _names(*(t for t in tags if isinstance(t, str)))))
+    return _newest_first(out)
+
+def _base(source):
+    return '{0.scheme}://{0.netloc}'.format(urlparse(source['feed']))
+
 def entries(source, raw):
     """The Entry items of a fetched feed, read as its feed_type says (FEED_TYPES)."""
     kind = source.get('feed_type', 'rss')
@@ -432,22 +473,22 @@ def entries(source, raw):
 FEED_TYPES = {
     'rss': lambda raw, source: parse_feed(raw),
     'news_sitemap': lambda raw, source: parse_news_sitemap(raw),
-    'anthropic_listing': lambda raw, source: parse_anthropic(
-        raw, source.get('listing_directory', 'news'), '{0.scheme}://{0.netloc}'.format(urlparse(source['feed']))),
+    'anthropic_listing': lambda raw, source: parse_anthropic(raw, source.get('listing_directory', 'news'), _base(source)),
+    'qwen_articles': lambda raw, source: parse_qwen(raw, _base(source)),
 }
 
 class EmptyFeed(ValueError):
     """The feed parsed but held no items: treated like a failed fetch, so the source keeps its earlier headlines."""
 
-def fetch(url, accept=ACCEPT['rss'], timeout=FEED_TIMEOUT):
+def fetch(url, accept=ACCEPT['rss'], timeout=FEED_TIMEOUT, max_bytes=FEED_BYTES):
     req = Request(url, headers={'User-Agent': UA, 'Accept': accept})
     with urlopen(req, timeout=timeout) as r:
-        raw = r.read(8_000_001)
-    if len(raw) > 8_000_000:
+        raw = r.read(max_bytes + 1)
+    if len(raw) > max_bytes:
         raise ValueError('Feed exceeded size limit')
     if raw[:2] == b'\x1f\x8b':  # gzip body sent without being asked for (DeepMind)
         raw = gzip.decompress(raw)
-        if len(raw) > 8_000_000:
+        if len(raw) > max_bytes:
             raise ValueError('Feed exceeded size limit')
     return raw
 
@@ -531,7 +572,7 @@ def collect(source, now, blocked=None, cache=None):
     prefix, limit = source.get('link_prefix'), raw_limit(source)
     kind = source.get('feed_type', 'rss')
     feed = entries(source, fetch_once(source['feed'], cache, accept=ACCEPT.get(kind, ACCEPT['rss']),
-                                      timeout=source.get('timeout', FEED_TIMEOUT)))
+                                      timeout=source.get('timeout', FEED_TIMEOUT), max_bytes=source.get('max_bytes', FEED_BYTES)))
     # A mixed-language sitemap: only this source's language counts, also towards the scan limit.
     feed = (e for e in feed if e[1].startswith(prefix)) if prefix else feed
     n = -1
@@ -614,16 +655,23 @@ def translate(items):
 class _Page(HTMLParser):
     """The publisher's description from the page's <meta> tags, and the visible paragraph text of the page: <p>
     elements outside scripts, navigation, headers, footers and forms. Headings (<h1>-<h6>) are recorded in `blocks`
-    beside the paragraphs, in page order, so the article text can end where "Related content" starts."""
+    beside the paragraphs, in page order, so the article text can end where "Related content" starts. A block element
+    that opens inside a paragraph ends it, as in a browser (The Decoder puts its ad box, labelled "Ad", inside the last
+    <p> before the ad: its text is not article text)."""
     SKIP = {'script', 'style', 'noscript', 'template', 'svg', 'nav', 'header', 'footer', 'aside', 'form', 'button', 'figure', 'figcaption', 'iframe', 'select', 'textarea'}
     META = ('description', 'og:description', 'twitter:description')
     HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
+    # Elements that close an open <p> in HTML (besides SKIP, whose text is left out anyway).
+    ENDS_P = HEADINGS | {'address', 'article', 'blockquote', 'details', 'dialog', 'div', 'dl', 'fieldset', 'hgroup', 'hr',
+                         'main', 'menu', 'ol', 'pre', 'section', 'table', 'ul'}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.skip, self.cur, self.head, self.paras, self.blocks, self.meta = 0, None, None, [], [], {}
 
     def handle_starttag(self, tag, attrs):
+        if tag in self.ENDS_P:
+            self._flush()
         if tag == 'meta':
             a = {k.lower(): v for k, v in attrs if k and v}
             name = (a.get('name') or a.get('property') or '').strip().lower()

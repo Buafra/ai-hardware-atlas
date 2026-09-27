@@ -158,6 +158,24 @@
     "kind": "primary"
   },
   {
+    "id": "qwen-blog",
+    "name": "Qwen Blog (Alibaba)",
+    "name_ar": "مدونة Qwen من Alibaba",
+    "feed": "https://qwen.ai/api/v2/article/retrieval?type=qwen_ai&language=en-US",
+    "homepage": "https://qwen.ai/research",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "qwen.ai"
+    ],
+    "kind": "primary",
+    "feed_type": "qwen_articles",
+    "read_pages": false,
+    "timeout": 45,
+    "max_bytes": 24000000
+  },
+  {
     "id": "mittr-ai",
     "name": "MIT Technology Review — AI",
     "name_ar": "MIT تكنولوجي ريفيو — الذكاء الاصطناعي",
@@ -244,6 +262,22 @@
     "kind": "news",
     "drop_links": "/sponsored/|/partner-content-",
     "weak_ai_terms": "data ?cent(?:er|re)s?"
+  },
+  {
+    "id": "the-decoder",
+    "name": "The Decoder",
+    "name_ar": "ذا ديكودر",
+    "feed": "https://the-decoder.com/news-sitemap.xml",
+    "homepage": "https://the-decoder.com/",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "the-decoder.com"
+    ],
+    "kind": "news",
+    "feed_type": "news_sitemap",
+    "page_stop": "^(?:AI News Without the Hype\\b|Subscribe to THE DECODER\\b)"
   },
   {
     "id": "skynews-ar-tech",

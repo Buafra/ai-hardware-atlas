@@ -1,5 +1,5 @@
-"""The news source list and the non-RSS feed types (news sitemaps, the Anthropic listing page), tested on trimmed
-copies of the real feeds saved in tests/fixtures/news (fetched 2026-09-27)."""
+"""The news source list and the non-RSS feed types (news sitemaps, the Anthropic listing page, the Qwen article list),
+tested on trimmed copies of the real feeds saved in tests/fixtures/news (fetched 2026-09-27)."""
 import json,re,sys,unittest
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
@@ -409,7 +409,7 @@ class SourceListTests(unittest.TestCase):
             if s.get('link_prefix'):self.assertTrue(news.allowed(s['link_prefix'],s),sid)
             for k in ('drop_titles','drop_links','drop_authors','weak_ai_terms','page_stop','page_drop'):
                 if k in s:self.assertTrue(s[k],sid);re.compile(s[k])
-            for k in ('timeout','raw_limit'):
+            for k in ('timeout','raw_limit','max_bytes'):
                 if k in s:self.assertTrue(isinstance(s[k],int) and s[k]>0,sid)
             if 'uae_by_content' in s:self.assertIs(s['uae_by_content'],True,sid);self.assertEqual(s['region'],'uae',sid)
         # Sources that share a feed split it by language.
@@ -419,5 +419,117 @@ class SourceListTests(unittest.TestCase):
             if len(group)>1:
                 self.assertEqual(len({s['link_prefix'] for s in group}),len(group),feed)
                 for s in group:self.assertTrue(s['link_prefix'].rstrip('/').endswith('/'+s['lang']),s['id'])
+
+NEW_GLOBAL={'qwen-blog':'primary','the-decoder':'news'}
+
+def qwen(*posts):
+    """A qwen.ai article list with (path, title, ISO date, introduction[, language]) posts."""
+    arts=[{'id':str(n),'type':'qwen_ai','title':p[1],'content':'<html></html>','path':p[0],'language':p[4] if len(p)>4 else 'en-US',
+           'extra':{'description':'','introduction':p[3],'tags':['Release'],'date':p[2],'author':'QwenTeam'}} for n,p in enumerate(posts)]
+    return json.dumps({'success':True,'request_id':'x','data':{'articles':arts}}).encode('utf-8')
+
+class TheDecoderTests(unittest.TestCase):
+    def test_news_sitemap(self):
+        items=collect('the-decoder',fixture('the-decoder-sitemap.xml'))
+        self.assertEqual(len(items),5)
+        self.assertEqual(items[0]['title'],'AI agents do more of the work in model development, but humans still make the decisions')
+        self.assertEqual(items[1]['title'],'Some Anthropic veterans are reportedly buying remote land in case "AI goes awry"')  # CDATA
+        self.assertTrue(all(i['url'].startswith('https://the-decoder.com/') and not i['uae'] and 'excerpt' not in i for i in items))
+        self.assertEqual(news.raw_limit(SRC['the-decoder']),news.SITEMAP_RAW_LIMIT)
+    def test_subscription_promo_is_not_article_text(self):
+        # The end of a live article page (2026-09-27): the promo heading and paragraph after the last paragraph.
+        P=PageFurnitureTests.P
+        page=('<article><h1>AI agents do more of the work in model development</h1>'+P('A research team documented how humans and AI agents worked together.',
+              'Over a thousand employees at leading AI companies recently warned about automating AI research.')+
+              '<h2>AI News Without the Hype – Curated by Humans</h2>'+P('Subscribe to THE DECODER for ad-free reading, a weekly AI newsletter and full archive access.')+
+              '<h3>Read on for the full picture.Subscribe for hype-free coverage.</h3></article>')
+        self.assertEqual(news.article_text(page,None,SRC['the-decoder']),'A research team documented how humans and AI agents worked together.\n\n'
+                         'Over a thousand employees at leading AI companies recently warned about automating AI research.')
+    def test_ad_box_inside_a_paragraph_is_not_article_text(self):
+        # A live article page (2026-09-27) puts its in-content ad, labelled "Ad" twice, inside the paragraph before it,
+        # which a browser closes at the first <div>; read as one paragraph the text ended "supervolcanoes.AdAd".
+        ad=('<div class="desktop-view decoder-ad-wrapper"><div class="ad-notice">Ad</div><div class="ad-row"><div class="ad-container"></div></div></div>'
+            '<div class="mobile-view" style="display:none"><div class="ad-padding-wrapper"><div class="ad-notice">Ad</div></div></div>')
+        page=('<article><p>The report traces how closely the earliest hires are tied to one subculture.</p>'
+              '<p>Before AI rose to the top of the threat list, the group obsessed over supervolcanoes.'+ad+'</p>'
+              '<p>A later paragraph of the article that follows the ad box.</p></article>')
+        self.assertEqual(news.article_text(page,None,SRC['the-decoder']),'The report traces how closely the earliest hires are tied to one subculture.\n\n'
+                         'Before AI rose to the top of the threat list, the group obsessed over supervolcanoes.\n\n'
+                         'A later paragraph of the article that follows the ad box.')
+
+class QwenTests(unittest.TestCase):
+    def test_article_list(self):
+        rows=news.parse_qwen(fixture('qwen-articles.json'))
+        self.assertEqual([r.link.split('=',1)[1] for r in rows],['qwen-image-2.1','qwen3.8-livetranslate','qwen3.8-omni-flash','e-commerce-bench','qwen3-tts-1128','qwen-deepresearch'])
+        self.assertTrue(all(r.link.startswith('https://qwen.ai/blog?id=') and r.authors==('QwenTeam',) for r in rows))
+        self.assertEqual(rows[0].published,datetime(2026,9,20,12,tzinfo=timezone.utc))  # 20:00 +08:00
+        self.assertEqual(rows[0].categories,('Open-Source',))
+        # The list cuts every introduction at a fixed length: only whole sentences are kept.
+        raw=json.loads(fixture('qwen-articles.json'))['data']['articles'][0]['extra']['introduction']
+        self.assertTrue(raw.endswith('four key improvements'))
+        self.assertTrue(rows[0].description.endswith('native support for generating and editing transparent images.'))
+        self.assertTrue(all(re.search(r'[.!?…]["”’]?$',r.description) for r in rows))
+    def test_collect(self):
+        items=collect('qwen-blog',fixture('qwen-articles.json'))
+        self.assertEqual([i['url'] for i in items],['https://qwen.ai/blog?id=qwen-image-2.1','https://qwen.ai/blog?id=qwen3.8-livetranslate','https://qwen.ai/blog?id=qwen3.8-omni-flash'])
+        self.assertEqual(items[0]['excerpt'],'We are excited to open-source Qwen-Image-2.1, an image model in the Qwen family that balances generation quality, inference efficiency, and cost.')
+        self.assertTrue(all(i['excerpt'] and len(i['excerpt'])<=news.EXCERPT_MAX and not i['uae'] for i in items))
+        # The article pages are an app shell with a generic description: never read.
+        self.assertEqual(news.read_page(items[0],SRC['qwen-blog']),([],''))
+    def test_odd_posts_are_skipped(self):
+        raw=qwen(('good-post','Qwen model one','2026-09-26T10:00:00+08:00','A new model. It is fast and small and its intro is cut'),
+                 ('good-post','Qwen model one again','2026-09-26T10:00:00+08:00','Listed twice.'),
+                 ('../evil','Qwen evil','2026-09-26T10:00:00+08:00',''),('','Qwen no path','2026-09-26T10:00:00+08:00',''),
+                 ('zh-post','Qwen 中文','2026-09-26T10:00:00+08:00','中文。','zh-CN'),
+                 ('no-date','Qwen no date','','An intro with no full stop'))
+        rows=news.parse_qwen(raw)
+        self.assertEqual([(r.link.rsplit('=',1)[1],r.description) for r in rows],[('good-post','A new model.'),('no-date','')])
+        self.assertEqual([i['url'] for i in collect('qwen-blog',raw)],['https://qwen.ai/blog?id=good-post'])  # no date: skipped
+        for bad in (b'{}',b'{"success":false,"data":null}',b'[]',json.dumps({'data':{'articles':['x',None]}}).encode()):
+            with self.assertRaises(news.EmptyFeed):collect('qwen-blog',bad)  # the source keeps its earlier items
+        with self.assertRaises(ValueError):collect('qwen-blog',b'<html>not json</html>')
+
+class NewGlobalSourceTests(unittest.TestCase):
+    def test_records(self):
+        self.assertEqual(len(SOURCES),41)
+        self.assertEqual({sid:SRC[sid]['kind'] for sid in NEW_GLOBAL},NEW_GLOBAL)
+        for sid in NEW_GLOBAL:
+            s=SRC[sid]
+            self.assertEqual((s['region'],s['lang']),('global','en'),sid)
+            self.assertFalse(s.get('regional_outlet') or s.get('official_region') or s.get('uae_by_content'),sid)
+            self.assertFalse(policy.may_cover_region(s),sid)
+        self.assertEqual({sid:(SRC[sid]['ai_only'],SRC[sid].get('feed_type','rss')) for sid in NEW_GLOBAL},
+                         {'qwen-blog':(True,'qwen_articles'),'the-decoder':(True,'news_sitemap')})
+        self.assertIs(SRC['qwen-blog']['read_pages'],False)
+        self.assertGreater(SRC['qwen-blog']['max_bytes'],len(fixture('qwen-articles.json'))*1000)  # the live list was 4.78 MB and grows with every post
+    def test_they_cannot_carry_uae_or_gcc_stories(self):
+        news.STATS.clear()
+        raw=sitemap(('https://the-decoder.com/g42-model/','G42 releases a new Arabic AI model','2026-09-27T10:00:00Z'),
+                    ('https://the-decoder.com/agents/','AI agents learn to use spreadsheets','2026-09-27T09:00:00Z'))
+        self.assertEqual([i['url'] for i in collect('the-decoder',raw)],['https://the-decoder.com/agents/'])
+        raw=qwen(('qwen-riyadh','Qwen at an event','2026-09-26T10:00:00+08:00','We showed Qwen3.8 to developers in Riyadh this week.'),
+                 ('qwen-next','Qwen3.9 released','2026-09-26T09:00:00+08:00','Our newest model is out.'))
+        self.assertEqual([i['url'] for i in collect('qwen-blog',raw)],['https://qwen.ai/blog?id=qwen-next'])  # the excerpt counts too
+        self.assertEqual(news.STATS['m1_dropped'],2)
+    def test_request_options(self):
+        def options(sid):
+            with mock.patch.object(news,'fetch',return_value=b'{}') as f:
+                try:news.collect(SRC[sid],NOW)
+                except Exception:pass
+            return f.call_args.kwargs
+        q=options('qwen-blog')
+        self.assertEqual((q['accept'],q['timeout'],q['max_bytes']),(news.ACCEPT['qwen_articles'],45,SRC['qwen-blog']['max_bytes']))
+        self.assertTrue(q['accept'].startswith('application/json'))
+        d=options('the-decoder')
+        self.assertEqual((d['accept'],d['timeout'],d['max_bytes']),(news.ACCEPT['news_sitemap'],news.FEED_TIMEOUT,news.FEED_BYTES))
+    def test_fetch_size_limit(self):
+        class Resp:
+            def __init__(self,body):self.body=body
+            def read(self,n):return self.body[:n]
+            def __enter__(self):return self
+            def __exit__(self,*a):return False
+        with mock.patch.object(news,'urlopen',return_value=Resp(b'x'*11)):
+            self.assertEqual(news.fetch('https://qwen.ai/api',max_bytes=11),b'x'*11)
+            with self.assertRaises(ValueError):news.fetch('https://qwen.ai/api',max_bytes=10)
 
 if __name__=='__main__':unittest.main()

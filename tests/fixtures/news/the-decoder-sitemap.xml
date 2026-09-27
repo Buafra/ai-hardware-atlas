@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://the-decoder.com/wp-content/plugins/wpseo-news/assets/xml-news-sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<url>
+	<loc>https://the-decoder.com/ai-agents-do-more-of-the-work-in-model-development-but-humans-still-make-the-decisions/</loc>
+	<news:news>
+		<news:publication>
+			<news:name>THE DECODER</news:name>
+			<news:language>en</news:language>
+		</news:publication>
+		<news:publication_date>2026-09-27T15:18:39+00:00</news:publication_date>
+		<news:title><![CDATA[AI agents do more of the work in model development, but humans still make the decisions]]></news:title>
+	</news:news>
+</url>
+<url>
+	<loc>https://the-decoder.com/some-anthropic-veterans-are-reportedly-buying-remote-land-in-case-ai-goes-awry/</loc>
+	<news:news>
+		<news:publication>
+			<news:name>THE DECODER</news:name>
+			<news:language>en</news:language>
+		</news:publication>
+		<news:publication_date>2026-09-27T13:03:05+00:00</news:publication_date>
+		<news:title><![CDATA[Some Anthropic veterans are reportedly buying remote land in case "AI goes awry"]]></news:title>
+	</news:news>
+</url>
+<url>
+	<loc>https://the-decoder.com/nvidia-drops-a-free-100m-parameter-model-that-identifies-up-to-eight-speakers-in-real-time/</loc>
+	<news:news>
+		<news:publication>
+			<news:name>THE DECODER</news:name>
+			<news:language>en</news:language>
+		</news:publication>
+		<news:publication_date>2026-09-27T11:01:13+00:00</news:publication_date>
+		<news:title><![CDATA[Nvidia drops a free 100M-parameter model that identifies up to eight speakers in real time]]></news:title>
+	</news:news>
+</url>
+<url>
+	<loc>https://the-decoder.com/researchers-plug-gpt-6-astra-directly-into-a-robot-and-let-it-clean-up-an-unfamiliar-kitchen/</loc>
+	<news:news>
+		<news:publication>
+			<news:name>THE DECODER</news:name>
+			<news:language>en</news:language>
+		</news:publication>
+		<news:publication_date>2026-09-27T10:59:11+00:00</news:publication_date>
+		<news:title><![CDATA[Researchers plug GPT-6 Astra directly into a robot and let it clean up an unfamiliar kitchen]]></news:title>
+	</news:news>
+</url>
+<url>
+	<loc>https://the-decoder.com/openai-says-80-to-90-percent-of-its-research-already-targets-gpt-7-and-beyond/</loc>
+	<news:news>
+		<news:publication>
+			<news:name>THE DECODER</news:name>
+			<news:language>en</news:language>
+		</news:publication>
+		<news:publication_date>2026-09-27T10:36:29+00:00</news:publication_date>
+		<news:title><![CDATA[OpenAI says 80 to 90 percent of its research already targets GPT 7 and beyond]]></news:title>
+	</news:news>
+</url>
+</urlset>
