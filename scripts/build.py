@@ -621,7 +621,6 @@ def home_view(c):
               T('Official sources checked'), T('Hardware sources are checked automatically.'))
     trust4 = T('Each summary says whether AI or the publisher wrote it, and every headline has a source link to the original article.')
     cta = lambda href, label: f'<div class="p-foot"><a class="cta" href="#{href}"><span data-i18n>{label}</span><span class="arr">{ICON["arrow"]}</span></a></div>'
-    en_ar = L(f'{len(en_items)} · {len(ar_items)}', f'{len(ar_items)} · {len(en_items)}')
     lc, page = c['learn'], learn.PAGE
     lmini = lambda kind, x: (f'<li><a href="{page}#{kind}/{E(x["id"])}"><span class="lp-t">{L(E(x["title_en"]), E(x["title_ar"]))}</span>'
                              f'<span class="lp-s">{L(E(x["summary_en"]), E(x["summary_ar"]))}</span></a></li>')
@@ -639,7 +638,7 @@ def home_view(c):
 <div class="quick"><a href="#hardware" data-route="hardware/compare">{ICON['compare']}<span data-i18n>Compare</span></a><a href="#estimator" data-route="hardware/run">{ICON['run']}<span data-i18n>What can it run?</span></a><a href="#hardware" data-route="hardware/timeline">{ICON['timeline']}<span data-i18n>Timeline</span></a></div></div>
 {cta('hardware', 'Open hardware')}</article>
 <article class="pillar p-news" aria-labelledby="p2-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['news']}</span><span>02</span></div><h2 id="p2-title"><a href="#news" data-i18n>AI news</a></h2><p class="p-lead">{L(E(f"The latest AI headlines in English and Arabic, from the {cnt(c['n_sources'], 'vetted', 'en')} we follow."), f"أحدث عناوين الذكاء الاصطناعي بالعربية والإنجليزية، من {cnt(c['n_sources'], 'vetted', 'ar')} نتابعها.")}</p></div>
-<div class="p-body"><dl class="stats">{stat(c['n_headlines'], 'headlines')}{stat(en_ar, 'English · Arabic')}{stat(c['n_sources'], 'sources')}</dl>
+<div class="p-body"><dl class="stats">{stat(c['n_headlines'], 'headlines')}{stat(len(en_items), 'English')}{stat(len(ar_items), 'Arabic')}</dl>
 <div><h3 class="p-sub"><span data-i18n>Latest headlines</span><small data-i18n>Times in UAE time</small></h3>{heads([i for i in items if 'global' in regions(i, src)], src, 1, NEWS_PICKS)}</div>
 <div><h3 class="p-sub"><span data-i18n>Browse</span></h3><div class="lvl">{browse}</div></div></div>
 {cta('news', 'Open AI news')}</article>
