@@ -299,21 +299,6 @@
     "kind": "news"
   },
   {
-    "id": "aawsat",
-    "name": "Asharq Al-Awsat",
-    "name_ar": "الشرق الأوسط",
-    "feed": "https://aawsat.com/feed",
-    "homepage": "https://aawsat.com/",
-    "lang": "ar",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "aawsat.com"
-    ],
-    "kind": "news",
-    "regional_outlet": true
-  },
-  {
     "id": "mediaoffice-en2",
     "name": "Dubai Media Office",
     "name_ar": "المكتب الإعلامي لحكومة دبي",

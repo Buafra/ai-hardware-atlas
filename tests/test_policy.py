@@ -56,7 +56,7 @@ class SourceTests(unittest.TestCase):
         self.assertFalse(REMOVED_SOURCES&{i['source'] for i in feed['items']})
     def test_regional_outlets(self):
         regional={s['id'] for s in self.sources if policy.regional_outlet(s)}
-        self.assertEqual(regional-{s['id'] for s in self.sources if s['region']=='uae'},{'skynews-ar-tech','aawsat','indy-ar-new'})
+        self.assertEqual(regional-{s['id'] for s in self.sources if s['region']=='uae'},{'skynews-ar-tech','indy-ar-new'})
         # M1: regional outlets and official sources of the region (the Dubai Media Office feeds are region "uae");
         # global vendor newsrooms (kind "primary") are not official sources of the region.
         for s in self.sources:

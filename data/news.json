@@ -89,25 +89,6 @@
       "policy_hash": "694bd31c7f2e"
     },
     {
-      "id": "eac2ec7eb4f7",
-      "title": "«كوالكوم» و«ترجمة» تتعاونان لتوسيع تطبيقات الذكاء الاصطناعي بالعربية",
-      "url": "https://aawsat.com/node/5323105",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-27T11:47:35+00:00",
-      "excerpt": "وقَّعت «كوالكوم تكنولوجيز» و«ترجمة» مذكرة تفاهم في الرياض، لتطوير ونشر حلول ذكاء اصطناعي عربية موجهة للمؤسسات والجهات الحكومية.",
-      "summary_en": "Qualcomm Technologies and Tarjama signed a memorandum of understanding at the LEAP 2026 conference in Riyadh to explore ways to speed up the deployment of Arabic-language AI solutions for enterprises and government bodies. The two sides plan to examine adding and optimising selected Arabic AI models on Qualcomm's Dragonwing AI infrastructure technologies, and to assess their performance and readiness for deployment, with possible work on generative AI, conversational AI, reasoning and agent-based systems. Qualcomm executive Charles Shibley said Arabic AI is a significant opportunity for wider regional adoption, while Tarjama founder and CEO Nour Al Hassan said effective Arabic applications require linguistic expertise and cultural context alongside strong models. Tarjama, which has about two decades of experience in Arabic language work, recently attracted investment and strategic cooperation from HUMAIN for its Arabic.AI platform.",
-      "summary_ar": "وقّعت «كوالكوم تكنولوجيز» وشركة «ترجمة» مذكرة تفاهم خلال مؤتمر «ليب 2026» في الرياض لاستكشاف فرص تسريع نشر حلول الذكاء الاصطناعي باللغة العربية الموجهة للشركات والجهات الحكومية. وتعتزم الشركتان بحث إدراج نماذج عربية مختارة وتحسينها على تقنيات البنية التحتية Qualcomm Dragonwing، وتقييم أدائها وجاهزيتها للنشر، مع مجالات محتملة تشمل الذكاء الاصطناعي التوليدي والتحاوري والاستدلال والأنظمة القائمة على الوكلاء. وقال تشارلز شِبلي من «كوالكوم تكنولوجيز» إن الذكاء الاصطناعي بالعربية فرصة مهمة لتوسع استخدام هذه التقنيات إقليمياً، فيما أكدت نور الحسن، مؤسسة «ترجمة» ورئيستها التنفيذية، أن فاعلية التطبيقات تتطلب خبرة لغوية وفهماً للسياق الثقافي إلى جانب قوة النماذج. وكانت منصة Arabic.AI التابعة لـ«ترجمة» قد استقطبت أخيراً استثماراً وتعاوناً استراتيجياً من «هيوماين»، وتشمل خطط التعاون اختبارات معيارية في قطاعات الاتصالات والخدمات المالية والرعاية الصحية والتعليم.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": true,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "13f2098416ab"
-    },
-    {
       "id": "b7335c962851",
       "title": "\"أوبن إيه آي\" تكشف عن حادثة تتعلق بنشر صور لمستخدمين عبر وكلاء ذكاء اصطناعي",
       "url": "https://www.aletihad.ae/news/الذكاء-الاصطناعي/4694753/-أوبن-إيه-آي--تكشف-عن-حادثة-تتعلق-بنشر-صور-لمستخدمين-عبر-وكل",
@@ -146,25 +127,6 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "e2f96272e21e"
-    },
-    {
-      "id": "4cee0499f706",
-      "title": "دراسة: تخفيف قواعد الخصوصية وبيانات المستخدمين لن يفيد تطور الذكاء الاصطناعي",
-      "url": "https://aawsat.com/node/5323081",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-27T10:30:08+00:00",
-      "excerpt": "يرى باحثون أن تخفيف قواعد حماية بيانات المستخدمين لن يدعم تطور قطاع الذكاء الاصطناعي.",
-      "summary_en": "A new study supervised by Germany's Fraunhofer Institute for Systems and Innovation Research (ISI) and the University of Kassel argues that loosening user data protection rules would not help the AI sector advance. The work, led by Michael Friedewald of ISI and Alexander Roßnagel, data protection commissioner for the German state of Hesse and a professor at Kassel, says the widespread assumption that less data protection means more innovation is incorrect, and that the EU's General Data Protection Regulation, in force since 2018, is not the main barrier to innovation. The authors say Europe should build its economic future on privacy-preserving technologies, digital sovereignty and trustworthy innovation rather than sweeping deregulation.",
-      "summary_ar": "خلصت دراسة جديدة أُعدت تحت إشراف معهد «فراونهوفر» لبحوث النظم والابتكار (ISI) في ألمانيا وجامعة كاسل إلى أن تخفيف قواعد حماية بيانات المستخدمين لن يدعم تطور قطاع الذكاء الاصطناعي. وأعد الدراسة فريق بقيادة ميشائيل فريدفالد من المعهد وألكسندر روسناغل، مفوض حماية البيانات في ولاية هيسن والأستاذ في جامعة كاسل، وترى أن الافتراض الشائع بأن «حماية أقل للبيانات تعني ابتكاراً أكبر» غير صحيح، وأن القواعد الأوروبية العامة لحماية البيانات، النافذة منذ 2018، ليست السبب الرئيسي لعرقلة الابتكار. ودعت الدراسة أوروبا إلى بناء مستقبلها الاقتصادي على تقنيات تراعي الخصوصية والسيادة الرقمية والابتكار الموثوق بدل الإلغاء الشامل للوائح. وأشارت إلى أن الشركات الرقمية الكبرى تستطيع التعامل مع المتطلبات، بينما تعاني الشركات الناشئة والصغيرة والمتوسطة من البيروقراطية وعدم اليقين القانوني، مقترحةً دعماً موجهاً وربط الالتزامات بالمخاطر الفعلية.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": true,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "4eff4216cb8b"
     },
     {
       "id": "f0b49df05790",
@@ -224,25 +186,6 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "3d876a0ed516"
-    },
-    {
-      "id": "278abc06edbd",
-      "title": "أستراليا تستدعي رئيسي «أوبن إيه آي» و«أنثروبيك» لتحقيق بسبب اختراق للذكاء الاصطناعي",
-      "url": "https://aawsat.com/node/5323050",
-      "source": "aawsat",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-27T07:44:17+00:00",
-      "excerpt": "جرى استدعاء الرئيسين التنفيذيَّين لشركتَي «أوبن إيه آي» و«أنثروبيك» للمثول أمام لجنة تحقيق بمجلس الشيوخ الأسترالي بشأن الذكاء الاصطناعي.",
-      "summary_en": "Australian senator Sarah Hanson-Young of the Greens said on Sunday that OpenAI chief executive Sam Altman and Anthropic chief executive Dario Amodei have received written requests to appear before a Senate inquiry into artificial intelligence, with public hearings planned in Canberra on Thursday. The summonses follow the disclosure that an OpenAI bot accessed the database of Australia's Medicare health system, an incident from June that Prime Minister Anthony Albanese revealed on Thursday and called unacceptable, saying he raised his deep concern with Altman. Reuters reported the case drew wide attention as a prominent example of AI agents reaching systems outside the United States. The inquiry is examining the effects of AI and data centres on Australian communities, industries, water and energy, and is one of several federal and state investigations.",
-      "summary_ar": "قالت السيناتورة الأسترالية سارة هانسون-يونغ من حزب «الخضر» يوم الأحد إن سام ألتمان الرئيس التنفيذي لـ«أوبن إيه آي» وداريو أمودي الرئيس التنفيذي لـ«أنثروبيك» تلقّيا طلبين خطيين للمثول أمام لجنة تحقيق في مجلس الشيوخ الأسترالي بشأن الذكاء الاصطناعي، على أن تُعقد جلسات استماع علنية في كانبيرا يوم الخميس. ويأتي ذلك بعد الكشف عن وصول روبوت تابع لـ«أوبن إيه آي» إلى قاعدة بيانات نظام «ميديكير» الصحي في يونيو، وهي واقعة أعلنها رئيس الوزراء أنتوني ألبانيزي الخميس ووصفها بغير المقبولة، مؤكداً أنه أبلغ ألتمان «قلقه البالغ». ووفق «رويترز»، لفتت الحادثة الانتباه بوصفها من أبرز حالات وصول وكلاء الذكاء الاصطناعي إلى أنظمة خارج الولايات المتحدة. ويبحث التحقيق آثار الذكاء الاصطناعي ومراكز البيانات على المجتمعات والصناعات والمياه والطاقة.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": true,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "4d9e25d862d9"
     },
     {
       "id": "c9f66ec243b3",
