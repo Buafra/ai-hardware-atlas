@@ -153,6 +153,29 @@ AR_TERMS = '|'.join((
     r'(?<![\w])جي ?42', r'(?<![\w])كور ?42', r'خزنه (?:داتا|للبيانات)',
 ))
 
+# The UAE alone (the UAE AI view): places, emirates, ruling families, leaders and state-linked entities of the UAE only.
+# No generic titles ("Sheikh", "Crown Prince", "Emir") and no other GCC names, so a Saudi or Qatari story is not UAE news.
+UAE_EN_TERMS = _en(
+    r'U\.?A\.?E\.?', r'United' + _SEP + r'Arab' + _SEP + r'Emirates', r'Emirates', r'Emirati(?:s)?', r'Emirati[sz]ation',
+    r"Abu[\s\-']*Dhabi", r'Dubai', r'Sharjah', r'Ajman', r'Ras' + _SEP + r'al' + _SEP + r'Khaimah?', r'Fujairah',
+    r'Umm' + _SEP + r'al' + _SEP + r'Qu?aiwain', r'Umm' + _SEP + r'al' + _SEP + r'Quwain', r'Al' + _SEP + r'Ain', r'Khor' + _SEP + r'Fakkan',
+    r'Masdar', r'Jebel' + _SEP + r'Ali', r'Saadiyat', r'Yas' + _SEP + r'(?:Island|Marina)', r'Burj' + _SEP + r'Khalifa', r'Expo' + _SEP + r'City', r'Hub[\s\-]?71',
+    r'Al' + _SEP + r'(?:Nahyan|Nahayan|Maktoum|Qasimi|Qassimi|Nuaimi|Sharqi|Mualla)', r'Nahyan', r'Maktoum',
+    r'bin' + _SEP + r'(?:Zayed|Rashid|Tahnoun|Tahnoon|Saqr|Humaid)', r'Tahn(?:o|ou|oo)n', r'Hamdan' + _SEP + r'bin' + _SEP + r'M[ou]h?am+[ae]d',
+    r'G[\s\-]?42', r'Mubadala', r'ADNOC', r'Core[\s\-]?42', r'Khazna', r'Etisalat', r'Space[\s\-]?42', r'Presight',
+    r'Technology' + _SEP + r'Innovation' + _SEP + r'Institute', r'MBZUAI', r'Jais', r'Falcon' + _SEP + r'(?:LLM|H1R?|E|Arabic|Mamba|40B|180B|7B|2|3)',
+    r'ADIA', r'Etihad', r'DEWA', r'e&', r'DP' + _SEP + r'World', r'Emaar', r'Aldar', r'TAQA', r'flydubai',
+)
+UAE_EN_CASED = _en(r'MGX', r'ADQ', r'TII', r'RAK', r'UAQ', r'WAM', r'M[bB][ZR]')
+UAE_AR_TERMS = '|'.join((
+    _ar('optional', r'امارات' + _NISBA + '?', r'دوله الامارات'),
+    _ar('required', r'شارقه', r'فجيره'),
+    _ar('none', r'ابو ?ظبي', r'دبي', r'عجمان', r'راس الخيمه', r'ام القيوين', r'مبادله', r'ادنوك'),
+    r'(?<![\w])ال (?:نهيان|مكتوم|قاسمي|نعيمي|شرقي|معلا)' + _POST, _CONJ + r'(?:ل|ب)?(?:نهيان|مكتوم)' + _POST,
+    r'(?<![\w])ا?بن (?:زايد|راشد|طحنون|صقر|حميد)' + _POST, _CONJ + r'(?:[بل])?طحنون' + _POST, r'(?<![\w])[وبل]?حمدان بن محمد' + _POST,
+    r'معهد الابتكار التكنولوجي', r'(?<![\w])جي ?42', r'(?<![\w])كور ?42', r'خزنه (?:داتا|للبيانات)',
+))
+
 _EN = re.compile(EN_TERMS, re.I)
 _EN_CASED = re.compile(EN_CASED)
 _AR = re.compile(AR_TERMS)
@@ -174,6 +197,22 @@ def mentions_region(*texts):
         n = normalize(t)
         if _EN.search(n) or _EN_CASED.search(n) or _AR.search(n):
             return True
+    return False
+
+_UAE = (re.compile(UAE_EN_TERMS, re.I), re.compile(UAE_EN_CASED), re.compile(UAE_AR_TERMS))
+
+def mentions_uae(*texts, ignore=()):
+    """True when any of the texts is about the UAE (UAE places, rulers or entities; see UAE_EN_TERMS/UAE_AR_TERMS).
+    `ignore` lists names to blank out first - publishers' own names such as «الإمارات اليوم» or "Sharjah24", which name
+    the outlet, not the story's subject."""
+    names = sorted({normalize(x).casefold() for x in ignore if x}, key=len, reverse=True)
+    for t in texts:
+        if t:
+            n = normalize(t)
+            for name in names:
+                n = re.sub(re.escape(name), ' ', n, flags=re.I)
+            if any(rx.search(n) for rx in _UAE):
+                return True
     return False
 
 def item_texts(item):

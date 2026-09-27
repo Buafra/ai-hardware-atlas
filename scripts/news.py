@@ -38,8 +38,6 @@ Optional per-source settings in news-sources.json:
                                  same links as the news, e.g. Khaleej Times' "Partner Content" / "KT Engage")
   weak_ai_terms: "<regex>"       for a general feed: a headline whose only AI keyword matches this is not kept
                                  (The Register: "datacenter" alone)
-  uae_by_content: true           a UAE source that carries much global wire copy: its items count as UAE news only
-                                 when the headline or the excerpt names the UAE (the source may still carry them)
   raw_limit: <n>                 how many of the feed's newest entries are scanned (default RAW_LIMIT, or
                                  SITEMAP_RAW_LIMIT for a news sitemap, whose busy publishers list hundreds a day)
   timeout: <seconds>             for the feed request (default FEED_TIMEOUT), for slow official feeds
@@ -148,7 +146,6 @@ UA = 'AI-Hardware-Atlas/1.1 (news monitor; +https://cipherlacuna.ae/)'
 ARABIC = re.compile(r'[؀-ۿ]')
 AI_EN = re.compile(r"\b(AI|A\.I\.|artificial intelligence|machine learning|deep learning|LLMs?|large language models?|generative|chatbots?|GPUs?|data ?cent(?:er|re)s?|supercomput\w*|OpenAI|Anthropic|Claude|ChatGPT|Gemini|DeepMind|Copilot|NVIDIA|AMD Instinct|G42|MBZUAI|Falcon LLM|Stargate|neural|robot\w*)\b", re.I)
 AI_AR = re.compile(r'الذكاء الاصطناعي|للذكاء الاصطناعي|الذكاء الإصطناعي|ذكاء اصطناعي|تعلم الآلة|التعلم الآلي|التعلم العميق|نماذج لغوية|النماذج اللغوية|روبوت|الرقائق|أشباه الموصلات|مراكز البيانات|مركز بيانات|إنفيديا|انفيديا|أوبن إيه آي|شات ?جي ?بي ?تي|جيميني|\bAI\b|G42')
-UAE = re.compile(r'\b(UAE|U\.A\.E\.|Emirat\w*|Abu Dhabi|Dubai|Sharjah|MBZUAI|G42|Khazna|Stargate UAE)\b|الإمارات|الامارات|أبوظبي|أبو ظبي|دبي|الشارقة|إماراتي', re.I)
 
 # What went wrong in the optional AI steps this run (kind -> count); saved in news.json, not shown on the site.
 PROBLEMS = collections.Counter()
@@ -550,15 +547,19 @@ def mentions_ai(title, source):
         found = [f for f in found if not re.fullmatch(weak, f, re.I)]
     return bool(found)
 
-def names_uae(*texts):
-    return any(t and UAE.search(t) for t in texts)
+# Publishers' own names are not what a story is about: "according to Sharjah24", «الإمارات اليوم», "(WAM)".
+OUTLET_NAMES = ('Emirates News Agency', 'WAM', 'وام', 'وكالة أنباء الإمارات', 'Sharjah24', 'Sharjah 24', 'الشارقة 24', 'الشارقة24',
+                'Gulf News', 'Khaleej Times', 'Gulf Today', 'The National', 'Al Bayan', 'البيان', 'Emarat Al Youm', 'الإمارات اليوم',
+                'Al Khaleej', 'Al Ittihad', 'Dubai Media Office', 'المكتب الإعلامي لحكومة دبي', 'Sky News Arabia', 'سكاي نيوز عربية')
+
+def names_uae(*texts, sources=()):
+    names = list(OUTLET_NAMES) + [n for s in sources for n in (s.get('name', '').split(' — ')[0], (s.get('name_ar') or '').split(' — ')[0]) if n]
+    return policy.mentions_uae(*texts, ignore=names)
 
 def uae_item(source, title, text=''):
-    """Is this UAE news? Every item of a UAE newsroom, and any headline that names the UAE; for a source marked
-    uae_by_content (wire-heavy UAE sources), only when the headline or the excerpt names the UAE."""
-    if source.get('uae_by_content'):
-        return names_uae(title, text)
-    return source['region'] == 'uae' or names_uae(title)
+    """Is this UAE news? Only when the story itself is about the UAE (its headline or text names a UAE place, ruler or
+    entity), whoever publishes it: a UAE newsroom's story about OpenAI is world news, not UAE news."""
+    return names_uae(title, text, sources=(source,))
 
 def collect(source, now, blocked=None, cache=None):
     """This run's items of one feed. Blocked stories are skipped (see block_keys), and so (rule M1) are items that
@@ -1358,16 +1359,13 @@ def dedupe_stories(items, sources):
     return [i for n, i in enumerate(items) if n in keep], len(items) - len(keep)
 
 def flag_uae(items, sources):
-    """For sources marked uae_by_content, the UAE flag follows the texts as they are now (a page excerpt read this
-    run can name the UAE; a stored item from before the setting may not). Returns the number of items changed."""
-    src = {s['id']: s for s in sources}
+    """The UAE flag follows each story's texts as they are now (headline, Arabic headline, excerpt and summaries; a page
+    excerpt or summary written this run can name the UAE). Returns the number of items changed."""
     changed = 0
     for item in items:
-        s = src.get(item.get('source'))
-        if s and s.get('uae_by_content'):
-            flag = uae_item(s, item.get('title', ''), item.get('excerpt', ''))
-            changed += flag != item.get('uae')
-            item['uae'] = flag
+        flag = names_uae(*(item.get(k) or '' for k in ('title', 'title_ar', 'excerpt', 'summary_en', 'summary_ar')), sources=sources)
+        changed += flag != item.get('uae')
+        item['uae'] = flag
     return changed
 
 def recheck(items, sources):
@@ -1482,6 +1480,7 @@ def main():
     # Summaries first: their ai_focus verdict keeps items that are never shown out of the translation budget.
     summarized = _optional(summarize, items, sources)
     translated = _optional(translate, items)
+    flag_uae(items, sources)  # summaries and Arabic headlines written this run can name the UAE too
     for item in items:  # working fields of this run
         for k in [k for k in item if k.startswith('_')]:
             del item[k]

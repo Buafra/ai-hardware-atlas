@@ -446,8 +446,7 @@
     "kind": "news",
     "feed_excerpt": false,
     "drop_authors": "\\bPartner Content\\b|\\bKT Engage\\b",
-    "page_drop": "Follow KT on WhatsApp|^[A-Z][\\w'’. -]{2,40} is (?:an? |the )?(?:[\\w-]+ ){0,3}(?:editor|reporter|correspondent|journalist|writer|columnist)\\b",
-    "uae_by_content": true
+    "page_drop": "Follow KT on WhatsApp|^[A-Z][\\w'’. -]{2,40} is (?:an? |the )?(?:[\\w-]+ ){0,3}(?:editor|reporter|correspondent|journalist|writer|columnist)\\b"
   },
   {
     "id": "gulftoday-business",
@@ -477,8 +476,7 @@
     ],
     "kind": "primary",
     "feed_type": "news_sitemap",
-    "read_pages": false,
-    "uae_by_content": true
+    "read_pages": false
   },
   {
     "id": "sharjah24-en",
@@ -495,7 +493,6 @@
     "kind": "primary",
     "feed_type": "news_sitemap",
     "link_prefix": "https://sharjah24.ae/en/",
-    "uae_by_content": true,
     "page_stop": "^(?:Related News|أخبار ذات صلة|مواضيع ذات صلة|More News|المزيد من الأخبار)$|Your web browser is not fully supported"
   },
   {
@@ -586,8 +583,7 @@
     ],
     "kind": "primary",
     "feed_type": "news_sitemap",
-    "read_pages": false,
-    "uae_by_content": true
+    "read_pages": false
   },
   {
     "id": "albayan",
@@ -603,7 +599,6 @@
     ],
     "kind": "news",
     "feed_type": "news_sitemap",
-    "uae_by_content": true,
     "drop_links": "/opinions/"
   },
   {
@@ -621,7 +616,6 @@
     "kind": "primary",
     "feed_type": "news_sitemap",
     "link_prefix": "https://sharjah24.ae/ar/",
-    "uae_by_content": true,
     "page_stop": "^(?:Related News|أخبار ذات صلة|مواضيع ذات صلة|More News|المزيد من الأخبار)$|Your web browser is not fully supported"
   }
 ]

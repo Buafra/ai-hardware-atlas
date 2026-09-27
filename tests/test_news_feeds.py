@@ -239,22 +239,45 @@ class FetchOptionTests(unittest.TestCase):
         self.assertEqual(seen,{'accept':news.ACCEPT['anthropic_listing'],'ua':news.UA,'timeout':45})
 
 class UaeFlagTests(unittest.TestCase):
-    def test_wire_heavy_sources_flag_uae_by_content(self):
+    """UAE news = stories about the UAE, whoever publishes them (owner, 27 Sep 2026): a UAE newsroom's story about
+    OpenAI or Hong Kong is world news; a story that names a UAE place, ruler or entity is UAE news."""
+    def test_uae_sources_flag_by_content(self):
         raw=sitemap(('https://www.wam.ae/en/article/a','Hong Kong AI exports drive growth','2026-09-27T10:00:00Z'),
                     ('https://www.wam.ae/en/article/b','Abu Dhabi launches AI academy for civil servants','2026-09-27T09:00:00Z'))
         self.assertEqual([i['uae'] for i in collect('wam-en',raw)],[False,True])
         ar=sitemap(('https://www.albayan.ae/technology/1','الذكاء الاصطناعي يعزز صادرات هونغ كونغ','2026-09-27T10:00:00Z'),
                    ('https://www.albayan.ae/technology/2','الإمارات تطلق منصة للذكاء الاصطناعي','2026-09-27T09:00:00Z'))
         self.assertEqual([i['uae'] for i in collect('albayan',ar)],[False,True])
-        # A UAE newsroom without the setting still flags every item.
-        self.assertTrue(all(i['uae'] for i in collect('kt-uae',fixture('kt-tech.xml'))))
-        for sid in ('wam-en','wam-ar','albayan','sharjah24-en','sharjah24-ar','kt-tech'):self.assertTrue(SRC[sid].get('uae_by_content'),sid)
-    def test_an_excerpt_that_names_the_uae_counts(self):
+        # Every UAE newsroom now follows the content: Khaleej Times' global tech stories are not UAE news.
+        kt=collect('kt-uae',fixture('kt-tech.xml'))
+        self.assertEqual([i['uae'] for i in kt],[news.names_uae(i['title'],i.get('excerpt','')) for i in kt])
+        self.assertFalse(any(s.get('uae_by_content') for s in SOURCES))  # the old per-source option is gone
+    def test_every_text_counts_and_stored_flags_are_corrected(self):
         items=[{'source':'sharjah24-en','title':'New AI skills programme opens','excerpt':'The Sharjah programme trains 500 students.','uae':False},
-               {'source':'wam-en','title':'US stocks rise on AI optimism','uae':True},  # stored before the setting
-               {'source':'kt-business','title':'US stocks rise on AI optimism','uae':True}]
-        self.assertEqual(news.flag_uae(items,SOURCES),2)
-        self.assertEqual([i['uae'] for i in items],[True,False,True])
+               {'source':'wam-en','title':'US stocks rise on AI optimism','uae':True},  # stored under the old rule
+               {'source':'kt-business','title':'US stocks rise on AI optimism','uae':True},  # a UAE newsroom, not about the UAE
+               {'source':'gulfnews-tech','title':'New model tops benchmark','summary_en':'Built by G42 in Abu Dhabi.','uae':False},
+               {'source':'albayan','title':'AI tool launched','title_ar':'إطلاق أداة ذكاء اصطناعي في دبي','uae':False}]
+        self.assertEqual(news.flag_uae(items,SOURCES),5)
+        self.assertEqual([i['uae'] for i in items],[True,False,False,True,True])
+    def test_uae_only_not_other_gulf_states(self):
+        for text,want in (('Saudi Arabia HUMAIN signs chip deal',False),('Crown Prince of Saudi Arabia visits AI lab',False),
+                          ('Qatar Airways adopts AI',False),('Emirates airline adopts AI',True),('MBZUAI releases K2 Think',True),
+                          ('Hamdan bin Mohammed launches AI programme',True),('Hamdan Ballal wins award',False),
+                          ('نادٍ أدبي يناقش الذكاء الاصطناعي',False),('جائزة الشارقة للإبداع',True),('حمدان بن محمد يطلق برنامجاً',True)):
+            self.assertEqual(news.names_uae(text),want,text)
+
+class UaeOutletNameTests(unittest.TestCase):
+    """A publisher's own name ("according to Sharjah24", «الإمارات اليوم», "(WAM)") is not what the story is about."""
+    def test_outlet_names_do_not_make_uae_news(self):
+        for text in ('Google tests AI chips in orbit, according to Sharjah24.','وفق ما نقلته «الشارقة 24» عن Google.',
+                     'نشرت «الإمارات اليوم» تقريراً عن OpenAI.','NEW YORK, 27th September (WAM) -- Researchers released a model.',
+                     'Emirates News Agency reports a new chip from NVIDIA.'):
+            self.assertFalse(news.names_uae(text,sources=SOURCES),text)
+    def test_real_uae_mentions_still_count(self):
+        for text in ('Sharjah launches an AI academy, Sharjah24 reports.','الإمارات تطلق منصة للذكاء الاصطناعي',
+                     'Emarat Al Youm: Dubai adopts AI in courts'):
+            self.assertTrue(news.names_uae(text,sources=SOURCES),text)
 
 class DuplicateTests(unittest.TestCase):
     def it(self,source,title,hours,**kw):
