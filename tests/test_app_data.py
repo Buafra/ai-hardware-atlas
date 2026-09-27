@@ -56,6 +56,20 @@ class AppDataTests(unittest.TestCase):
         self.assertEqual(len(models),len(self.models['models']))
         self.assertTrue(all(set(m)==set(app_data.MODEL_KEYS) for m in models))
 
+    def test_learn_carries_the_reports(self):
+        # Additive: the same reports as learn.html, newest first, each with the source group its filter uses.
+        doc=build.learn.load_reports()
+        got=self.out['learn.json']['reports']
+        self.assertEqual([r['id'] for r in got],[r['id'] for r in build.learn.sorted_reports(doc)])
+        by_id={r['id']:r for r in doc['reports']}
+        for r in got:
+            self.assertEqual({k:v for k,v in r.items() if k!='group'},by_id[r['id']])
+            self.assertIn(r['group'],{g for g,_,_ in build.learn.REPORT_GROUPS})
+            self.assertNotIn('evidence',r)
+        self.assertTrue({'groups','concepts','stacks'}<=set(self.out['learn.json']))
+        out=app_data.payloads(self.data,self.feed,self.sources,self.uae,self.models,*self.docs,reports_doc={'reports':[]})
+        self.assertEqual(out['learn.json']['reports'],[])
+
     def test_learn_lists_only_published_lessons(self):
         # A lesson not published on qahwa.html yet must not reach the app (its title would spoil the schedule).
         planned=sorted({les['lesson'] for c in self.docs[0]['concepts'] for les in c.get('related_lessons') or []})

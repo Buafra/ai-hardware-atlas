@@ -449,5 +449,210 @@ class BuildTests(Quiet, unittest.TestCase):
         for name, closing in (('learn.js', '</script'), ('learn.css', '</style'), ('style.css', '</style')):
             self.lacks(closing, (ROOT / "web" / name).read_text(encoding="utf-8").lower())
 
+class ReportDataTests(Quiet, unittest.TestCase):
+    """data/learn/reports.json: free AI reports summarised in our own words, each linking to the publisher's own page."""
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = learn.load_reports()
+        cls.reports = cls.doc['reports']
+    def test_repository_reports_pass(self):
+        self.assertEqual(learn.report_problems(self.doc), [])
+        self.assertGreaterEqual(len(self.reports), 3)
+        # Kept newest first in the file too, so a diff reads in page order.
+        self.assertEqual([r['id'] for r in self.reports], [r['id'] for r in learn.sorted_reports(self.doc)])
+    def test_links_stay_on_the_publishers_own_domains(self):
+        for r in self.reports:
+            name, group, domains = learn.report_org(r)
+            for k in ('url', 'arabic_version_url'):
+                if k in r:
+                    host = learn.urlparse(r[k]).hostname
+                    self.assertTrue(r[k].startswith('https://') and any(host == d or host.endswith('.' + d) for d in domains), (r['id'], r[k]))
+        # Every allow-listed publisher points at a known organisation, and every organisation has a group.
+        self.assertTrue(set(learn.REPORT_PUBLISHERS.values()) <= set(learn.REPORT_ORGS))
+        self.assertTrue({g for _, g, _ in learn.REPORT_ORGS.values()} <= {g for g, _, _ in learn.REPORT_GROUPS})
+    def test_text_and_links_only(self):
+        # No images, logos, charts, page references or private evidence notes in the published data.
+        for r in self.reports:
+            self.assertTrue(set(r) <= set(learn.REPORT_KEYS), r['id'])
+            self.assertTrue(3 <= len(r['findings_en']) == len(r['findings_ar']) <= 5, r['id'])
+        raw = json.dumps(self.doc, ensure_ascii=False).lower()
+        for word in ('evidence', '.png', '.jpg', '.svg', 'logo', 'pdftotext'):
+            self.assertNotIn(word, raw)
+    def broken(self, mutate, i=0):
+        doc = copy.deepcopy(self.doc)
+        mutate(doc['reports'][i])
+        return '\n'.join(learn.report_problems(doc))
+    def test_validation_catches_each_rule(self):
+        gcc = next(i for i, r in enumerate(self.reports) if 'arabic_version_url' in r)
+        cases = {
+            'is not on the allow-list': lambda r: r.update(publisher='Gartner'),
+            "is not on the publisher's own domain (mckinsey.com)": lambda r: r.update(publisher='McKinsey & Company', url='https://example.com/state-of-ai.pdf'),
+            "'https://mckinsey.com.example.net/x' is not on the publisher's own domain": lambda r: r.update(publisher='McKinsey & Company', url='https://mckinsey.com.example.net/x'),
+            'must be an https URL': lambda r: r.update(url='http://www.mckinsey.com/x'),
+            'findings_en has 2 findings; give 3 to 5': lambda r: (r['findings_en'].__delitem__(slice(2, None)), r['findings_ar'].__delitem__(slice(2, None))),
+            'findings_ar has 6 findings': lambda r: (r['findings_en'].extend(['One more.'] * (6 - len(r['findings_en']))),
+                                                     r['findings_ar'].extend(['نتيجة أخرى.'] * (6 - len(r['findings_ar'])))),
+            'items but findings_ar has': lambda r: r['findings_ar'].pop(),
+            'access must be one of': lambda r: r.update(access='paid'),
+            'region must be one of': lambda r: r.update(region='europe'),
+            'topics must be a non-empty list of distinct topics': lambda r: r.update(topics=['agents', 'agents']),
+            "topics must be a non-empty list": lambda r: r.update(topics=[]),
+            "published must be a real date as YYYY-MM-DD or YYYY-MM, not '2026-02-30'": lambda r: r.update(published='2026-02-30'),
+            "not 'September 2026'": lambda r: r.update(published='September 2026'),
+            'is in the future': lambda r: r.update(published='2999-01'),
+            "unknown field(s) ['image']": lambda r: r.update(image='https://www.mckinsey.com/chart.png'),
+            "unknown field(s) ['evidence']": lambda r: r.update(evidence='page 3'),
+            'why_ar is empty': lambda r: r.update(why_ar=' '),
+            'why_ar is not Arabic text': lambda r: r.update(why_ar='An English sentence where the Arabic should be.'),
+            'title_ar has no Arabic letters': lambda r: r.update(title_ar='English title'),
+            'characters; keep it under 320': lambda r: r['findings_en'].__setitem__(0, 'x' * 321),
+            'quotes 9 words': lambda r: r['findings_en'].__setitem__(0, 'The report says "AI will change every part of how we work" today.'),
+            'title_en missing': lambda r: r.pop('title_en'),
+            'publisher is empty': lambda r: r.update(publisher=''),
+        }
+        for want, mutate in cases.items():
+            self.assertIn(want, self.broken(mutate), want)
+        self.assertIn('arabic_version_url', self.broken(lambda r: r.update(arabic_version_url='https://example.com/ar'), gcc))
+        doc = copy.deepcopy(self.doc)
+        doc['reports'][1]['id'] = doc['reports'][0]['id']
+        doc['reports'][2]['url'] = doc['reports'][0]['url']
+        msg = '\n'.join(learn.report_problems(doc))
+        self.assertIn('duplicate report id', msg)
+        self.assertIn('url is the same as report', msg)
+        self.assertEqual(learn.report_problems({'items': []}), ['reports.json must be {"reports": [...]}'])
+        # A short quoted term is fine; a date a report gives as a month only is fine.
+        self.assertEqual(self.broken(lambda r: r.update(published='2026-01')), '')
+        self.assertEqual(self.broken(lambda r: r['findings_en'].__setitem__(0, "Only 5% ('future-built') firms get value.")), '')
+    def test_content_policy_guard_covers_reports(self):
+        for lang, text in (('en', 'Saudi firms face sanctions over chips.'), ('ar', 'فرضت واشنطن عقوبات على شركات في الإمارات.')):
+            msg = self.broken(lambda r: r[f'findings_{lang}'].__setitem__(0, text))
+            self.assertIn(f'reports.reports[0].findings_{lang}[0] breaks the content policy', msg, lang)
+        self.assertIn('why_en breaks the content policy', self.broken(lambda r: r.update(why_en='Critics accused the UAE of a crackdown.')))
+    def test_validate_includes_the_reports(self):
+        concepts, stacks = learn.load()
+        products = catalog()['products']
+        learn.validate(concepts, stacks, products)  # the repository reports, read by default
+        bad = copy.deepcopy(self.doc)
+        bad['reports'][0]['url'] = 'https://example.com/copy.pdf'
+        with self.assertRaises(learn.LearnDataError) as cm:
+            learn.validate(concepts, stacks, products, reports_doc=bad)
+        self.assertIn("is not on the publisher's own domain", str(cm.exception))
+        learn.validate(concepts, stacks, products, reports_doc={'reports': []})
+    def test_group_follows_the_region(self):
+        by_id = {r['id']: r for r in self.reports}
+        for r in self.reports:
+            want = 'gcc' if r['region'] in ('uae', 'gcc') else learn.report_org(r)[1]
+            self.assertEqual(learn.report_group(r), want, r['id'])
+        self.assertTrue(all(learn.report_group(r) in {g for g, _, _ in learn.REPORT_GROUPS} for r in by_id.values()))
+    def test_dates(self):
+        self.assertEqual(learn.report_date('2026-08-25', 'en'), '25 August 2026')
+        self.assertEqual(learn.report_date('2026-08-25', 'ar'), '25 أغسطس 2026')
+        self.assertEqual(learn.report_date('2026-01', 'en'), 'January 2026')
+        self.assertEqual(learn.report_date('2026-01', 'ar'), 'يناير 2026')
+        self.assertEqual(learn.cnt(29, 'report', 'ar'), '29 تقريراً')
+        self.assertEqual(learn.cnt(1, 'report', 'en'), '1 report')
+
+class ReportPageTests(Quiet, unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.concepts, cls.stacks = learn.load()
+        cls.doc = learn.load_reports()
+        cls.reports = learn.sorted_reports(cls.doc)
+        cls.html = learn.render(cls.concepts, cls.stacks, catalog())
+        cls.panel = cls.html[cls.html.index('<section id="reports"'):]
+        cls.panel = cls.panel[:cls.panel.index('</section>\n')]
+        cls.page = Page()
+        cls.page.feed(cls.html)
+    def test_third_tab_and_status(self):
+        n = len(self.reports)
+        self.has(f'<a class="l-tab" href="#reports" data-tab="reports"><span data-lang="en">Reports</span><span data-lang="ar">التقارير</span> '
+                 f'<span class="n" data-count="reports">{n}</span></a></nav>', self.html)
+        status = self.html[self.html.index('<p class="statusbar">'):]
+        self.has(f'<span data-lang="en">{learn.cnt(n, "report", "en")}</span><span data-lang="ar">{learn.cnt(n, "report", "ar")}</span>',
+                 status[:status.index('</p>')])
+        # Tabs, then the three panels in order, then the editorial note: the existing tabs keep their place.
+        i = [self.html.index(f'<section id="{p}" class="l-panel" data-panel="{p}"') for p in ('concepts', 'stacks', 'reports')]
+        self.assertEqual(i, sorted(i))
+        self.assertLess(i[2], self.html.index('<p class="muted l-note">'))
+        self.has("/^#report/.test(location.hash)?'reports'", self.html)
+        self.has('placeholder="Search concepts, stacks and reports…"', self.html)
+    def test_every_report_is_in_the_html_newest_first(self):
+        ids = [a['id'][len('report/'):] for a in self.page.items if a.get('id', '').startswith('report/')]
+        self.assertEqual(ids, [r['id'] for r in self.reports])
+        import html as h
+        for r in self.reports:
+            item = self.panel[self.panel.index(f'id="report/{r["id"]}"'):]
+            item = item[:item.index('</details>')]
+            for text in (r['title_en'], r['title_ar'], r['why_en'], r['why_ar'], r['findings_en'][-1], r['findings_ar'][0], r['publisher']):
+                self.has(h.escape(text), item)
+            self.has(f'data-group="{learn.report_group(r)}" data-topics="{" ".join(r["topics"])}" data-year="{r["published"][:4]}"', item)
+            self.has(f'<time datetime="{r["published"]}">', item)
+            self.has(f'<a class="r-link" href="{h.escape(r["url"])}" target="_blank" rel="noopener noreferrer">', item)
+            self.has(f'Read the report on <bdi lang="en" dir="ltr">{h.escape(learn.report_org(r)[0])}</bdi>', item)
+            self.has(learn.L(*learn.REPORT_REGIONS[r['region']]), item)
+            self.has(learn.L(*learn.REPORT_ACCESS[r['access']]), item)
+            if r.get('arabic_version_url'):
+                self.has(f'href="{h.escape(r["arabic_version_url"])}" hreflang="ar" target="_blank" rel="noopener noreferrer"', item)
+            self.assertEqual('r-reg' in item, r['access'] == 'free-registration', r['id'])
+    def test_filters_and_note(self):
+        groups = {g: sum(learn.report_group(r) == g for r in self.reports) for g, _, _ in learn.REPORT_GROUPS}
+        self.has(f'data-filter="" data-dim="group" aria-pressed="true"><span data-lang="en">All sources</span><span data-lang="ar">كل المصادر</span> <span class="n">{len(self.reports)}</span>', self.panel)
+        for g, n in groups.items():
+            self.has(f'data-filter="{g}" data-dim="group" aria-pressed="false">', self.panel)
+        self.assertEqual(sum(groups.values()), len(self.reports))
+        for y in {r['published'][:4] for r in self.reports}:
+            self.has(f'<option value="{y}" data-en="{y}" data-ar="{y}">{y} ({sum(r["published"][:4] == y for r in self.reports)})</option>', self.panel)
+        for t in {t for r in self.reports for t in r['topics']}:
+            self.has(f'<option value="{t}"', self.panel)
+        self.has('class="r-selects js-only"', self.panel)
+        self.has('These summaries are ours and may simplify.', self.panel)
+        self.has('هذه الملخصات من إعدادنا وقد تبسّط بعض التفاصيل.', self.panel)
+        # Owner-approved notes: AI-written label, no affiliation, and a way for publishers to ask for a fix (the Contact page).
+        self.has('Summaries were written with AI and checked against each report.', self.panel)
+        self.has('is not affiliated with or endorsed by', self.panel)
+        self.has('كُتبت الملخصات بالذكاء الاصطناعي وروجعت على نص كل تقرير.', self.panel)
+        self.has('#contact">contact page</a>', self.panel)
+        self.has('#contact">صفحة التواصل</a>', self.panel)
+        self.assertGreater(self.panel.index('class="muted r-note"'), self.panel.rindex('</details>'))
+    def test_no_images_and_no_other_hosts(self):
+        self.lacks('<img', self.panel)
+        self.lacks('<iframe', self.panel)
+        self.assertEqual(self.page.external, [])
+        hosts = {learn.urlparse(a['href']).hostname for a in self.page.links if a.get('class', '').startswith('r-link')}
+        allowed = [d for _, _, ds in learn.REPORT_ORGS.values() for d in ds]
+        self.assertTrue(hosts and all(any(h == d or h.endswith('.' + d) for d in allowed) for h in hosts), hosts)
+    def test_render_takes_the_reports_it_is_given(self):
+        one = {'reports': [copy.deepcopy(self.doc['reports'][0])]}
+        page = learn.render(self.concepts, self.stacks, catalog(), reports_doc=one)
+        self.has('<span class="n" data-count="reports">1</span>', page)
+        self.assertEqual(page.count('class="l-item l-report"'), 1)
+        empty = learn.render(self.concepts, self.stacks, catalog(), reports_doc={'reports': []})
+        self.has('No reports yet.', empty)
+        self.lacks('class="l-item l-report"', empty)
+    def test_report_text_is_escaped(self):
+        doc = copy.deepcopy(self.doc)
+        doc['reports'][0]['title_en'] = '<script>alert(1)</script>'
+        doc['reports'][0]['findings_ar'][0] = '"><img src=x onerror=alert(2)>'
+        page = learn.render(self.concepts, self.stacks, catalog(), reports_doc=doc)
+        self.lacks('<script>alert(1)', page)
+        self.lacks('<img src=x', page)
+
+class ReportBuildTests(Quiet, unittest.TestCase):
+    def test_build_refuses_bad_reports(self):
+        with tempfile.TemporaryDirectory() as d:
+            c, s = learn.load()
+            doc = learn.load_reports()
+            doc['reports'][0]['url'] = 'https://mirror.example.org/report.pdf'
+            for name, obj in (('concepts.json', c), ('stacks.json', s), ('reports.json', doc)):
+                (Path(d) / name).write_text(json.dumps(obj, ensure_ascii=False), encoding='utf-8')
+            with self.assertRaises(learn.LearnDataError) as cm:
+                learn.build(Path(d) / 'out', data_dir=Path(d))
+            self.assertIn("is not on the publisher's own domain", str(cm.exception))
+            self.assertFalse((Path(d) / 'out' / 'learn.html').exists())
+    def test_build_writes_the_reports_tab(self):
+        with tempfile.TemporaryDirectory() as d:
+            text = learn.build(Path(d)).read_text(encoding='utf-8')
+            self.has('id="report/' + learn.load_reports()['reports'][0]['id'] + '"', text)
+
 if __name__ == '__main__':
     unittest.main()

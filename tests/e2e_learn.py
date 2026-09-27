@@ -18,7 +18,11 @@ Qahwa & AI lessons (qahwa.html): the card near the top and the footer link (afte
 Arabic; a concept's lesson chips show only the lessons published on that page (data/qahwa.json as the page shows it),
 checked on the real data and on a copy of the page where a concept lists a published lesson (served by the test itself),
 whose chip opens that lesson on qahwa.html. The footer stays tidy from 320 to 1920 px.
-Counts come from data/learn, so adding or removing a concept or stack does not break this test.
+Reports tab (#reports, data/learn/reports.json): the tab and its badge, the source chips, topic and year menus (alone and
+combined, with live counts in the page language), search in English and Arabic (letter variants), "No matches" under
+the menus, #report/<id> deep links (also while filters hide the card), links that open the publisher's own page in a
+new tab, right-to-left layout, no horizontal scroll from 320 to 1920 px with a card open, and no requests to other hosts.
+Counts come from data/learn, so adding or removing a concept, stack or report does not break this test.
 """
 import gzip
 import json
@@ -50,6 +54,10 @@ CHIPS = {c['id']: [f'qahwa.html#lesson-{x["lesson"]:02d}' for x in c.get('relate
          for c in CONCEPTS['concepts']}
 PUBLISHED = sorted(p['lesson'] for p in QDOC['posts'] if p.get('kind') == 'lesson')
 FIXTURE = 'learn-lessons-fixture.html'  # served by page.route (never written to dist/)
+REPORTS = learn.sorted_reports(learn.load_reports())
+N_R = len(REPORTS)
+R_GROUP = {g: [r['id'] for r in REPORTS if learn.report_group(r) == g] for g, _, _ in learn.REPORT_GROUPS}
+R_DOMAINS = [d for _, _, ds in learn.REPORT_ORGS.values() for d in ds]
 
 def fixture_page():
     """learn.html with the llm concept listing the first published lesson (next to its unpublished ones)."""
@@ -153,7 +161,8 @@ def run(pw):
             first = page.evaluate("document.querySelector('#concepts .l-item .it-t').innerText")
             check(any('؀' <= ch <= 'ۿ' for ch in first) == rtl, f'{tag} first title in the wrong language: {first!r}')
             # Tabs
-            check(shown(page, 'concepts') == N_C and shown(page, 'stacks') == 0, f'{tag} concepts tab shows {shown(page, "concepts")}, stacks {shown(page, "stacks")}')
+            check(shown(page, 'concepts') == N_C and shown(page, 'stacks') == 0 and shown(page, 'reports') == 0,
+                  f'{tag} concepts tab shows {shown(page, "concepts")}, stacks {shown(page, "stacks")}, reports {shown(page, "reports")}')
             check(page.locator('.l-tab[data-tab="concepts"][aria-current="true"]').count() == 1, f'{tag} concepts tab not current')
             # The AI stacks badge counts the AI stacks, like the status bar; foundations are counted on their own chip.
             badge = page.locator('.l-tab [data-count="stacks"]').inner_text()
@@ -195,7 +204,7 @@ def run(pw):
                 page.fill('#lq', '')
             # Stacks tab, open a stack, the options table and the flow arrows
             page.click('.l-tab[data-tab="stacks"]')
-            check(shown(page, 'stacks') == N_S and shown(page, 'concepts') == 0, f'{tag} stacks tab shows {shown(page, "stacks")}')
+            check(shown(page, 'stacks') == N_S and shown(page, 'concepts') == 0 and shown(page, 'reports') == 0, f'{tag} stacks tab shows {shown(page, "stacks")}')
             check(page.evaluate('location.hash') == '#stacks', f'{tag} stacks tab hash {page.evaluate("location.hash")}')
             # A stack's icon stays on its title's first line, never alone above it.
             lonely = page.evaluate("""[...document.querySelectorAll('#stacks .l-item')].filter(el => {
@@ -378,14 +387,144 @@ def run(pw):
         page.on('request', lambda r: foreign.append(r.url) if not (r.url.startswith(ORIGIN) or r.url.startswith(('data:', 'blob:'))) else None)
         page.goto(URL)
         tag = f'[no JS {width}px]'
-        check(shown(page, 'concepts') == N_C and shown(page, 'stacks') == N_S, f'{tag} items shown {shown(page, "concepts")}/{shown(page, "stacks")}')
+        check(shown(page, 'concepts') == N_C and shown(page, 'stacks') == N_S and shown(page, 'reports') == N_R,
+              f'{tag} items shown {shown(page, "concepts")}/{shown(page, "stacks")}/{shown(page, "reports")}')
+        check(page.locator('.r-selects').is_hidden(), f'{tag} report menus visible without JavaScript')
         check(page.locator('#lq').is_hidden() and page.locator('#lang').is_hidden(), f'{tag} JS-only controls visible')
         page.click('[id="stack/arabic-first"] > summary')
         check(is_open(page, 'stack/arabic-first'), f'{tag} details do not open without JavaScript')
         check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')
         check(not foreign, f'{tag} requests to other hosts {foreign[:3]}')
         ctx.close()
+    reports_run(browser)
     browser.close()
+
+def visible_ids(page):
+    return page.evaluate("[...document.querySelectorAll('#reports .l-item')].filter(e => e.getClientRects().length).map(e => e.id.slice(7))")
+
+def on_domain(url):
+    host = urlparse(url).hostname or ''
+    return any(host == d or host.endswith('.' + d) for d in R_DOMAINS)
+
+def reports_run(browser):
+    """The Reports tab in both languages at phone and desktop widths, then no horizontal scroll from 320 to 1920 px."""
+    for lang in ('en', 'ar'):
+        rtl = lang == 'ar'
+        for width in (375, 1280):
+            tag = f'[reports {lang} {width}px]'
+            ctx = browser.new_context(viewport={'width': width, 'height': 900})
+            ctx.add_init_script(f"try{{if(!sessionStorage.getItem('seeded')){{localStorage.setItem('atlas-lang','{lang}');sessionStorage.setItem('seeded','1')}}}}catch(e){{}}")
+            page = ctx.new_page()
+            errors, foreign = [], []
+            watch(page, errors, foreign)
+            page.goto(URL)
+            # The tab: its badge, then a click opens it (#reports) with every report shown, newest first.
+            check(page.locator('.l-tab [data-count="reports"]').inner_text() == str(N_R), f'{tag} reports badge')
+            page.click('.l-tab[data-tab="reports"]')
+            check(page.evaluate('[location.hash, document.documentElement.dataset.ltab]') == ['#reports', 'reports'], f'{tag} reports tab hash/tab')
+            check(page.locator('.l-tab[data-tab="reports"][aria-current="true"]').count() == 1, f'{tag} reports tab not current')
+            check(visible_ids(page) == [r['id'] for r in REPORTS], f'{tag} reports shown in order: {len(visible_ids(page))} of {N_R}')
+            check(shown(page, 'concepts') == 0 and shown(page, 'stacks') == 0, f'{tag} other panels shown with reports')
+            check(page.evaluate('[document.documentElement.lang, document.documentElement.dir]') == [lang, 'rtl' if rtl else 'ltr'], f'{tag} lang/dir')
+            intro = page.evaluate("document.querySelector('#reports .p-intro p').innerText")
+            check(('تقارير مجانية' in intro) if rtl else intro.startswith('Free reports on AI'), f'{tag} intro line {intro[:40]!r}')
+            first = page.evaluate("document.querySelector('#reports .l-item .it-t').innerText")
+            check(any('؀' <= ch <= 'ۿ' for ch in first) == rtl, f'{tag} first report title in the wrong language: {first!r}')
+            check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')
+            check(page.evaluate("(n => n.scrollWidth - n.clientWidth)(document.querySelector('.l-tabs'))") <= 0, f'{tag} tabs overflow')
+            # Source chips
+            for g, ids in R_GROUP.items():
+                page.click(f'#reports .fchip[data-filter="{g}"]')
+                check(visible_ids(page) == ids, f'{tag} source {g} shows {len(visible_ids(page))}, want {len(ids)}')
+            page.click('#reports .fchip[data-filter="gcc"]')
+            count = page.locator('#l-count').inner_text()
+            n_gcc = len(R_GROUP['gcc'])
+            want = f'عدد النتائج {n_gcc} من أصل {learn.cnt(N_R, "report", "ar")}' if rtl else f'Showing {n_gcc} of {N_R} reports'
+            check(count == want, f'{tag} count line {count!r}, want {want!r}')
+            # Topic menu on top of the source chip: both apply, and each chip counts what it would show.
+            topic = 'agents'
+            page.select_option('#r-topic', topic)
+            both = [r['id'] for r in REPORTS if learn.report_group(r) == 'gcc' and topic in r['topics']]
+            check(visible_ids(page) == both, f'{tag} gcc + {topic} shows {visible_ids(page)}')
+            chips = page.evaluate("Object.fromEntries([...document.querySelectorAll('#reports .fchip')].map(b => [b.dataset.filter, +b.querySelector('.n').textContent]))")
+            want_chips = {'': sum(topic in r['topics'] for r in REPORTS),
+                          **{g: sum(topic in r['topics'] for r in REPORTS if learn.report_group(r) == g) for g in R_GROUP}}
+            check(chips == want_chips, f'{tag} source chip counts with topic {topic}: {chips} vs {want_chips}')
+            label = page.evaluate("document.querySelector('#r-topic option[value=agents]').textContent")
+            n_label = sum(topic in r['topics'] for r in REPORTS if learn.report_group(r) == 'gcc')
+            want_label = f'{"الوكلاء الذكيون" if rtl else "AI agents"} ({n_label})'
+            check(label == want_label, f'{tag} topic option label {label!r}, want {want_label!r}')
+            # Year menu: all three filters together, then back to everything.
+            year = REPORTS[-1]['published'][:4]
+            page.click('#reports .fchip[data-filter=""]')
+            page.select_option('#r-year', year)
+            want_ids = [r['id'] for r in REPORTS if topic in r['topics'] and r['published'][:4] == year]
+            check(visible_ids(page) == want_ids, f'{tag} {topic} + {year} shows {len(visible_ids(page))}, want {len(want_ids)}')
+            page.select_option('#r-topic', '')
+            page.select_option('#r-year', '')
+            check(len(visible_ids(page)) == N_R and page.locator('#l-count').inner_text() == '', f'{tag} filters cleared')
+            # Search: English publisher names, Arabic with letter variants (a bare alef finds «الإمارات»).
+            word, must = ('الامارات', 'pwc-uae-ai-jobs-barometer-2026') if rtl else ('McKinsey', 'mckinsey-state-of-ai-2026')
+            page.fill('#lq', word)
+            ids = visible_ids(page)
+            check(must in ids and 1 <= len(ids) < N_R, f'{tag} search {word!r} shows {len(ids)} (must include {must})')
+            badge = page.locator('.l-tab [data-count="reports"]').inner_text()
+            check(badge == str(len(ids)), f'{tag} reports badge during search {badge!r} vs {len(ids)} shown')
+            page.fill('#lq', 'zzqqxxyy')
+            where = page.evaluate("(e => [e.hidden, e.closest('[data-panel]') && e.closest('[data-panel]').id, !!e.previousElementSibling && e.previousElementSibling.classList.contains('r-selects')])(document.getElementById('l-empty'))")
+            check(where == [False, 'reports', True] and not visible_ids(page), f'{tag} "No matches" under the report menus: {where}')
+            page.press('#lq', 'Escape')
+            check(len(visible_ids(page)) == N_R, f'{tag} Escape clears the search')
+            # Open a card: its findings, the links to the publisher's own page (a new tab, no referrer), the address bar.
+            rid = REPORTS[0]['id']
+            page.click(f'[id="report/{rid}"] > summary')
+            page.wait_for_timeout(50)  # the address bar follows the toggle event
+            check(is_open(page, f'report/{rid}') and page.evaluate('location.hash') == f'#report/{rid}', f'{tag} opening a report')
+            lis = page.locator(f'[id="report/{rid}"] .it-list[data-lang="{lang}"] li').count()
+            check(lis == len(REPORTS[0][f'findings_{lang}']), f'{tag} findings shown {lis}')
+            links = page.evaluate("[...document.querySelectorAll('#reports a.r-link')].map(a => [a.href, a.target, a.rel])")
+            bad = [l for l in links if not (l[0].startswith('https://') and l[1] == '_blank' and l[2] == 'noopener noreferrer' and on_domain(l[0]))]
+            check(len(links) >= N_R and not bad, f'{tag} report links {bad[:2]}')
+            check(overflow(page) <= 0, f'{tag} overflow with a report open {overflow(page)}px')
+            # Deep links: a fresh page, and a card the current filters hide (they are cleared so it shows).
+            last = REPORTS[-1]['id']
+            page.goto(f'{URL}#report/{last}')
+            page.wait_for_timeout(100)
+            check(page.evaluate('document.documentElement.dataset.ltab') == 'reports' and is_open(page, f'report/{last}')
+                  and in_view(page, f'report/{last}'), f'{tag} deep link to a report')
+            page.click('#reports .fchip[data-filter="gcc"]')
+            hidden = next(r['id'] for r in REPORTS if learn.report_group(r) != 'gcc' and r['id'] != last)
+            page.evaluate(f"location.hash = '#report/{hidden}'")
+            page.wait_for_timeout(100)
+            check(is_open(page, f'report/{hidden}') and in_view(page, f'report/{hidden}') and len(visible_ids(page)) == N_R,
+                  f'{tag} deep link to a filtered-out report')
+            # The language button turns the menus into the other language.
+            page.click('#lang')
+            other = page.evaluate("document.querySelector('#r-year option').textContent")
+            check(other == ('All years' if rtl else 'كل السنوات'), f'{tag} year menu after the language button {other!r}')
+            page.click('#lang')
+            check(not errors, f'{tag} console errors {errors[:3]}')
+            check(not foreign, f'{tag} requests to other hosts {foreign[:3]}')
+            ctx.close()
+    # No horizontal scroll from 320 to 1920 px, in both languages, with the report with the longest title open.
+    longest = max(REPORTS, key=lambda r: len(r['title_en']) + len(r['publisher']))['id']
+    for lang in ('en', 'ar'):
+        for width in (320, 375, 414, 768, 1024, 1280, 1440, 1920):
+            tag = f'[reports {lang} {width}px]'
+            ctx = browser.new_context(viewport={'width': width, 'height': 900})
+            page = ctx.new_page()
+            foreign = []
+            page.on('request', lambda r: foreign.append(r.url) if not (r.url.startswith(ORIGIN) or r.url.startswith(('data:', 'blob:'))) else None)
+            page.goto(URL + ('?lang=ar' if lang == 'ar' else '') + f'#report/{longest}')
+            page.wait_for_timeout(80)
+            check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')
+            wide = page.evaluate("""[...document.querySelectorAll('#reports .l-item, #reports .r-selects, #reports .l-filter, .l-tabs, .l-tab')].filter(e => {
+                const r = e.getBoundingClientRect(); return r.width && (r.left < -1 || r.right > innerWidth + 1); }).map(e => e.id || e.className)""")
+            check(not wide, f'{tag} parts outside the screen {wide[:3]}')
+            tabs = page.evaluate("(n => n.scrollWidth - n.clientWidth)(document.querySelector('.l-tabs'))")
+            check(tabs <= 0, f'{tag} tabs need {tabs}px more')
+            check(not foreign, f'{tag} requests to other hosts {foreign[:3]}')
+            ctx.close()
 
 def main():
     if '--no-build' not in sys.argv:

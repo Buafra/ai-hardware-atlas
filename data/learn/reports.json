@@ -1,0 +1,924 @@
+{
+  "reports": [
+    {
+      "id": "kpmg-global-ai-pulse-q3-2026",
+      "publisher": "KPMG International",
+      "title_en": "Global AI Pulse Q3 2026: AI at scale — accountability, resilience and economics",
+      "title_ar": "نبض KPMG العالمي للذكاء الاصطناعي، الربع الثالث 2026: الذكاء الاصطناعي على نطاق واسع",
+      "url": "https://kpmg.com/xx/en/our-insights/ai-and-technology/ai-pulse.html",
+      "published": "2026-09",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "agents",
+        "governance",
+        "investment"
+      ],
+      "findings_en": [
+        "KPMG surveyed 2,131 senior leaders in 20 countries and jurisdictions between 23 July and 26 August 2026. On average they plan to put US$210 million into AI over the coming year, more than in earlier waves.",
+        "55% of organisations now have a formal layer for managing and controlling AI, and among those already seeing returns the figure is 86%.",
+        "The share reporting wide staff use of AI agents climbed from 25% in Q1 to 34%, and 38% are building or rolling out systems where several agents work together.",
+        "Most firms track AI spending (61% check costs before approving projects and 59% while systems run), yet just 12% regularly compare what AI delivers with what it costs."
+      ],
+      "findings_ar": [
+        "استطلعت KPMG آراء 2,131 من كبار القادة في 20 دولة ومنطقة بين 23 يوليو و26 أغسطس 2026، ويخططون في المتوسط لاستثمار 210 ملايين دولار في الذكاء الاصطناعي خلال العام المقبل، وهو مستوى أعلى من الموجات السابقة.",
+        "تمتلك 55% من المؤسسات طبقة رسمية لإدارة الذكاء الاصطناعي وضبطه، وتصل النسبة إلى 86% لدى المؤسسات التي تجني عوائد بالفعل.",
+        "ارتفعت نسبة المؤسسات التي يستخدم موظفوها وكلاء الذكاء الاصطناعي على نطاق واسع من 25% في الربع الأول إلى 34%، وتعمل 38% على بناء أنظمة يتعاون فيها عدة وكلاء أو تطبيقها.",
+        "تتابع معظم المؤسسات إنفاقها على الذكاء الاصطناعي، إذ تراجع 61% التكاليف قبل اعتماد المشاريع و59% أثناء التشغيل، لكن 12% فقط تقارن بانتظام بين ما يحققه الذكاء الاصطناعي وما يكلّفه."
+      ],
+      "why_en": "This is a very recent global snapshot showing the focus moving from adopting AI to running it well: governance, agents and cost control.",
+      "why_ar": "لقطة عالمية حديثة جداً تُظهر انتقال التركيز من تبني الذكاء الاصطناعي إلى إدارته بكفاءة عبر الحوكمة والوكلاء وضبط التكاليف."
+    },
+    {
+      "id": "mckinsey-state-of-ai-2026",
+      "publisher": "McKinsey & Company (QuantumBlack, AI by McKinsey)",
+      "title_en": "The state of AI in 2026: On the road to ROI",
+      "title_ar": "حالة الذكاء الاصطناعي في 2026: على طريق العائد على الاستثمار",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
+      "published": "2026-08-25",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "agents",
+        "investment",
+        "strategy",
+        "generative-ai"
+      ],
+      "findings_en": [
+        "Among 1,719 respondents in 97 countries, 37% report that AI has made a positive contribution to their organisation's EBIT, essentially unchanged from 2025; so-called AI high performers remain at about 6%.",
+        "80% say AI has raised their own productivity and 50% say it helps them make better decisions, so personal gains are running ahead of company-level returns.",
+        "At firms with more than $1 billion in revenue, the share scaling AI agents rose from 27% to 40%; at smaller firms it stayed flat at 22%.",
+        "32% say agentic coding tools let their organisation build in-house at least one piece of software it would otherwise have bought.",
+        "About one in five say AI operating costs, including token costs, are limiting their use, yet 60% expect AI investment to rise over the next year."
+      ],
+      "findings_ar": [
+        "شمل الاستطلاع 1,719 مشاركاً في 97 دولة، وأفاد 37% منهم بأن الذكاء الاصطناعي أسهم إيجابياً في الأرباح التشغيلية (EBIT) لمؤسساتهم، وهي نسبة شبه ثابتة مقارنةً بعام 2025، فيما بقيت المؤسسات «عالية الأداء» عند نحو 6%.",
+        "قال 80% إن الذكاء الاصطناعي رفع إنتاجيتهم الشخصية، وقال 50% إنه يساعدهم على اتخاذ قرارات أفضل؛ أي أن المكاسب الفردية تسبق العائد على مستوى المؤسسة.",
+        "في الشركات التي تتجاوز إيراداتها مليار دولار، ارتفعت نسبة من يوسّعون استخدام وكلاء الذكاء الاصطناعي من 27% إلى 40%، بينما بقيت عند 22% في الشركات الأصغر.",
+        "أفاد 32% بأن أدوات البرمجة الوكيلة مكّنت مؤسساتهم من بناء برنامج أو خاصية واحدة على الأقل داخلياً بدلاً من شرائها.",
+        "قال نحو واحد من كل خمسة إن تكاليف التشغيل، ومنها تكلفة الوحدات اللغوية، تحدّ من استخدامهم للذكاء الاصطناعي، ومع ذلك يتوقع 60% زيادة الاستثمار خلال العام المقبل."
+      ],
+      "why_en": "McKinsey's annual survey shows AI adoption and agent use growing while bottom-line returns stay flat, so the gap now lies in how firms reorganise work, not in access to tools.",
+      "why_ar": "يُظهر استطلاع McKinsey السنوي أن انتشار الذكاء الاصطناعي واستخدام الوكلاء في ازدياد بينما العائد المالي ثابت، ما يعني أن الفارق اليوم في إعادة تنظيم العمل لا في توفّر الأدوات."
+    },
+    {
+      "id": "ey-us-ai-pulse-wave5-2026",
+      "publisher": "EY",
+      "title_en": "EY US AI Pulse Survey (Wave 5): The reckoning over AI cost and value has begun",
+      "title_ar": "مسح EY الأمريكي لنبض الذكاء الاصطناعي (الموجة الخامسة): بدء الموازنة بين تكلفة الذكاء الاصطناعي وقيمته",
+      "url": "https://www.ey.com/en_us/insights/emerging-technologies/pulse-ai-survey",
+      "published": "2026-07-28",
+      "access": "free-registration",
+      "region": "global",
+      "topics": [
+        "investment",
+        "agents",
+        "governance",
+        "strategy"
+      ],
+      "findings_en": [
+        "In a survey of 534 US senior leaders (SVP and above), 82% of those investing in AI worry about AI token (language-unit) usage and costs, but only 64% say they track token use against a clear budget with limits.",
+        "98% of those using token-based tools say these costs made them rethink their approach. Still, more say it led them to widen their AI rollout (37%) than to narrow it (15%).",
+        "87% have deployed or are piloting in-house software built with AI, and 76% say ready-made software no longer fits what they need.",
+        "72% face challenges slowing their in-house AI software work. Top barriers are the risk of 'shadow IT' (tools used outside IT oversight, 34%) and regulatory compliance and governance concerns (33%)."
+      ],
+      "findings_ar": [
+        "في مسح شمل 534 من كبار القادة في الشركات الأمريكية، يبدي 82% من المستثمرين في الذكاء الاصطناعي قلقاً من استهلاك الوحدات اللغوية وتكلفتها، بينما تراقب 64% فقط هذا الاستهلاك وفق ميزانية واضحة وحدود مضبوطة.",
+        "يقول 98% ممن يستخدمون أدوات قائمة على الوحدات اللغوية إن التكاليف دفعتهم إلى مراجعة نهجهم، ومع ذلك اتجه عدد أكبر إلى توسيع نطاق الاستخدام (37%) لا تقليصه (15%).",
+        "تطبّق 87% من هذه الشركات أو تجرّب برمجيات داخلية مبنية بالذكاء الاصطناعي، ويرى 76% أن البرمجيات الجاهزة لم تعد تناسب احتياجاتهم.",
+        "تواجه 72% تحديات تبطئ تطوير هذه البرمجيات، وأبرزها مخاطر «تقنية الظل»، أي الأدوات المستخدمة خارج إشراف إدارة التقنية (34%)، ومخاوف الامتثال التنظيمي والحوكمة (33%)."
+      ],
+      "why_en": "It shows that as AI use grows, running costs such as tokens are becoming a real boardroom issue.",
+      "why_ar": "يوضح أن تكاليف التشغيل، مثل استهلاك الوحدات اللغوية، أصبحت قضية حقيقية على طاولة الإدارات العليا مع توسع استخدام الذكاء الاصطناعي."
+    },
+    {
+      "id": "accenture-pulse-of-change-2026",
+      "publisher": "Accenture",
+      "title_en": "Pulse of Change (2026)",
+      "title_ar": "نبض التغيير (2026)",
+      "url": "https://www.accenture.com/en/insights/pulse-of-change",
+      "published": "2026-07-26",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "investment",
+        "agents",
+        "workforce"
+      ],
+      "findings_en": [
+        "The report draws on two surveys fielded April-June 2026: 3,000 C-suite leaders at companies with revenue above $500 million in 20 countries, and 3,000 employees at organisations of the same size.",
+        "Most leaders (82%) are putting more money into AI, yet just 23% see broad, lasting business value from it, down from 32% earlier in 2026.",
+        "Nearly half of companies (49%) are testing or rolling out AI agents, and 7 in 10 leaders say agentic AI lifted employee productivity more than they had expected.",
+        "81% of employees say AI tools have raised their productivity, and 71% report higher job satisfaction since the tools arrived.",
+        "73% of leaders say their organisation is likely to add new junior roles centred on AI in the next two years."
+      ],
+      "findings_ar": [
+        "يستند التقرير إلى استطلاعين أُجريا بين أبريل ويونيو 2026: الأول شمل 3,000 من كبار التنفيذيين في شركات تتجاوز إيراداتها 500 مليون دولار في 20 دولة، والثاني شمل 3,000 موظف في مؤسسات بالحجم نفسه.",
+        "يضخّ 82% من كبار التنفيذيين مزيداً من الاستثمار في الذكاء الاصطناعي، لكن 23% فقط يحققون منه قيمة واسعة ومستدامة، انخفاضاً من 32% في وقت سابق من العام.",
+        "تجرّب قرابة نصف الشركات (49%) وكلاء الذكاء الاصطناعي أو تنشرهم، ويقول 7 من كل 10 قادة إن أثر الذكاء الاصطناعي الوكيل على إنتاجية الموظفين فاق توقعاتهم.",
+        "قال 81% من الموظفين إن أدوات الذكاء الاصطناعي رفعت إنتاجيتهم، وأفاد 71% بارتفاع رضاهم الوظيفي منذ اعتمادها.",
+        "يتوقع 73% من القادة أن تستحدث مؤسساتهم وظائف جديدة للمبتدئين تتمحور حول الذكاء الاصطناعي خلال العامين المقبلين."
+      ],
+      "why_en": "AI investment is holding steady, but turning it into company-wide value depends on redesigning roles and ways of working.",
+      "why_ar": "الاستثمار في الذكاء الاصطناعي مستمر، لكن تحويله إلى قيمة على مستوى المؤسسة يتطلب إعادة تصميم الأدوار وطريقة العمل."
+    },
+    {
+      "id": "oecd-skills-ai-age-2026",
+      "publisher": "OECD",
+      "title_en": "Skills in the AI age (OECD Artificial Intelligence Papers, No. 60)",
+      "title_ar": "المهارات في عصر الذكاء الاصطناعي (أوراق OECD حول الذكاء الاصطناعي، العدد 60)",
+      "url": "https://www.oecd.org/en/publications/skills-in-the-ai-age_972bd15e-en.html",
+      "published": "2026-07-08",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "skills",
+        "workforce",
+        "adoption",
+        "economy"
+      ],
+      "findings_en": [
+        "The share of firms using AI in OECD countries climbed from about 7% in 2021 to 20% in 2025, helped partly by the spread of generative AI tools.",
+        "Firms rank skills shortages among the biggest obstacles to adopting AI, and smaller firms also struggle with costs and missing infrastructure.",
+        "About a quarter of workers already had jobs exposed to generative AI during 2022-2024, and the paper expects this share to rise considerably.",
+        "Managers, professionals and engineers face the most exposure to AI but the lowest risk of automation. The automation risk is higher for low- and middle-skill work built on routine tasks.",
+        "Employers badly want advanced AI skills such as machine learning or data science, yet only about 1% of workers have them."
+      ],
+      "findings_ar": [
+        "ارتفعت نسبة الشركات التي تستخدم الذكاء الاصطناعي في دول OECD من نحو 7% في 2021 إلى 20% في 2025، مدفوعةً جزئياً بانتشار أدوات الذكاء الاصطناعي التوليدي.",
+        "تضع الشركات نقص المهارات بين أكبر عوائق تبنّي الذكاء الاصطناعي، وتعاني الشركات الصغيرة والمتوسطة أيضاً من التكاليف وضعف البنية التحتية.",
+        "كان نحو ربع العاملين يشغلون خلال 2022-2024 وظائف معرّضة للذكاء الاصطناعي التوليدي، وتتوقع الورقة أن ترتفع هذه النسبة بشكل ملحوظ.",
+        "المديرون والمتخصصون والمهندسون هم الأكثر تعرضاً للذكاء الاصطناعي لكنهم الأقل عرضة للأتمتة، بينما ترتفع مخاطر الأتمتة في الوظائف الروتينية منخفضة ومتوسطة المهارة.",
+        "يشتد الطلب على المهارات المتقدمة في الذكاء الاصطناعي، مثل تعلم الآلة وعلم البيانات، لكن أصحابها لا يتجاوزون نحو 1% من القوى العاملة."
+      ],
+      "why_en": "It explains which skills people and countries need to benefit from AI, and which policies can help them build those skills.",
+      "why_ar": "تشرح الورقة المهارات التي يحتاجها الأفراد والدول للاستفادة من الذكاء الاصطناعي، والسياسات التي تساعد على تطويرها."
+    },
+    {
+      "id": "wef-entry-level-work-2026",
+      "publisher": "World Economic Forum (with PwC)",
+      "title_en": "Artificial Intelligence and the Future of Entry-Level Work: A Framework for Safeguarding and Reinventing Early Career Pathways",
+      "title_ar": "الذكاء الاصطناعي ومستقبل الوظائف للمبتدئين: إطار لحماية مسارات بداية المسيرة المهنية وإعادة ابتكارها",
+      "url": "https://www.weforum.org/publications/artificial-intelligence-and-the-future-of-entry-level-work-a-framework-for-safeguarding-and-reinventing-early-career-pathways/",
+      "published": "2026-06-22",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "workforce",
+        "skills",
+        "adoption"
+      ],
+      "findings_en": [
+        "Worldwide, 37% of young workers hold jobs where AI is likely to change tasks to a medium or high degree. The share reaches 75% in Eastern Asia, 69% in Northern America and 63% in Europe.",
+        "68% of entry-level workers report higher productivity thanks to AI, yet 45% say it has also added to their overall working time.",
+        "The firms with the best AI-driven financial results are twice as likely to have reworked their workflows.",
+        "Leaders expect AI to restructure entry-level roles almost twice as much as middle and senior roles, and about three in four foresee a major realignment.",
+        "28% of entry-level workers expect no more than half of today's skills to still be useful in three years. The survey data covers more than 9,000 entry-level workers in 48 countries."
+      ],
+      "findings_ar": [
+        "على مستوى العالم، يشغل 37% من العاملين الشباب وظائف يُرجَّح أن يغيّر الذكاء الاصطناعي مهامها بدرجة متوسطة أو عالية، وترتفع النسبة إلى 75% في شرق آسيا و69% في أمريكا الشمالية و63% في أوروبا.",
+        "يقول 68% من العاملين المبتدئين إن الذكاء الاصطناعي رفع إنتاجيتهم، لكن 45% منهم يرون أنه زاد أيضاً من إجمالي وقت عملهم.",
+        "الشركات صاحبة أفضل النتائج المالية من الذكاء الاصطناعي أكثر ميلاً بمقدار الضعف لإعادة تصميم سير العمل لديها.",
+        "يتوقع القادة أن تشهد وظائف المبتدئين إعادة هيكلة بفعل الذكاء الاصطناعي تقارب ضعف ما ينتظر الوظائف المتوسطة والعليا، ويرجّح نحو ثلاثة من كل أربعة منهم إعادة تنظيم كبيرة.",
+        "يتوقع 28% من العاملين المبتدئين ألّا يبقى من مهاراتهم الحالية بعد ثلاث سنوات إلا النصف أو أقل، وتشمل بيانات المسح أكثر من 9,000 عامل مبتدئ في 48 دولة."
+      ],
+      "why_en": "Entry-level jobs are where young people start their careers, so this is a timely guide for employers, universities and policy-makers.",
+      "why_ar": "وظائف المبتدئين هي بوابة الشباب إلى سوق العمل، لذلك يُعد التقرير دليلاً مهماً في هذا التوقيت لأصحاب العمل والجامعات وصنّاع السياسات."
+    },
+    {
+      "id": "pwc-uae-ai-jobs-barometer-2026",
+      "publisher": "PwC Middle East",
+      "title_en": "2026 AI Jobs Barometer: UAE analysis",
+      "title_ar": "مؤشر وظائف الذكاء الاصطناعي 2026: تحليل دولة الإمارات",
+      "url": "https://www.pwc.com/m1/en/publications/ai-jobs-barometer-uae-2026.html",
+      "published": "2026-06-17",
+      "access": "free",
+      "region": "uae",
+      "topics": [
+        "workforce",
+        "skills",
+        "economy",
+        "adoption"
+      ],
+      "findings_en": [
+        "AI-related job ads rose from 1.0% of all UAE postings in 2021 to 3.2% in 2025, more than a threefold increase.",
+        "About 2,700 more UAE job ads asked for AI skills in 2025 than in 2024 (roughly 9,500 to 12,200).",
+        "AI skills appear in close to 10% of technology, media and telecoms job ads, the highest of any sector, and the AI share of postings grew in every sector between 2024 and 2025.",
+        "Occupations in the top quarter for AI exposure added 77 newly required skills on average between 2021 and 2025, against 22 for the least exposed quarter.",
+        "Measured by growth in the AI share of job ads since 2021, the UAE outpaced the US, UK, Germany and France, and it climbed from 21st to 13th place globally on that share."
+      ],
+      "findings_ar": [
+        "ارتفعت حصة إعلانات الوظائف المرتبطة بالذكاء الاصطناعي في الإمارات من 1.0% من إجمالي الإعلانات في 2021 إلى 3.2% في 2025، أي أكثر من ثلاثة أضعاف.",
+        "زاد عدد إعلانات الوظائف في الإمارات التي تطلب مهارات الذكاء الاصطناعي بنحو 2,700 إعلان في 2025 مقارنةً بـ2024 (من نحو 9,500 إلى نحو 12,200).",
+        "تظهر مهارات الذكاء الاصطناعي في قرابة 10% من إعلانات وظائف قطاع التكنولوجيا والإعلام والاتصالات، وهي النسبة الأعلى بين القطاعات، كما ارتفعت حصتها في جميع القطاعات بين 2024 و2025.",
+        "اكتسبت الوظائف الأكثر تعرّضاً للذكاء الاصطناعي 77 مهارة جديدة في المتوسط بين 2021 و2025، مقابل 22 مهارة للوظائف الأقل تعرّضاً.",
+        "من حيث نمو حصة وظائف الذكاء الاصطناعي منذ 2021، تقدّمت الإمارات على الولايات المتحدة والمملكة المتحدة وألمانيا وفرنسا، وارتقت من المركز 21 إلى المركز 13 عالمياً في هذه الحصة."
+      ],
+      "why_en": "The report measures how UAE investment in AI is turning into real demand for AI skills across every sector.",
+      "why_ar": "يقيس التقرير كيف تتحوّل استثمارات الإمارات في الذكاء الاصطناعي إلى طلب فعلي على مهاراته في جميع القطاعات."
+    },
+    {
+      "id": "pwc-ai-jobs-barometer-2026",
+      "publisher": "PwC",
+      "title_en": "2026 Global AI Jobs Barometer: Two futures for jobs in an AI era",
+      "title_ar": "مؤشر PwC العالمي لوظائف الذكاء الاصطناعي 2026: مساران لمستقبل الوظائف",
+      "url": "https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html",
+      "published": "2026-06-15",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "workforce",
+        "skills",
+        "economy",
+        "adoption"
+      ],
+      "findings_en": [
+        "The study analysed more than one billion job ads in 27 countries and territories.",
+        "Roles where AI raises the value of expert work ('professionalised' jobs) are expanding at double the rate of roles AI opens up to non-experts, and their wages have grown 42% faster since 2021.",
+        "The top fifth of the most AI-exposed companies reached average labour productivity growth of 163% (relative to 2018).",
+        "Jobs requiring specific AI skills grew 69% versus 9% for all jobs, and the average wage premium for AI skills rose to 62% (from 57% the year before).",
+        "In US data, the most AI-exposed entry-level roles are 7 times more likely to ask for senior-type skills such as leadership. These roles grew 35% since 2019 while other entry-level roles fell 10%."
+      ],
+      "findings_ar": [
+        "حلّلت الدراسة أكثر من مليار إعلان وظيفي في 27 دولة ومنطقة.",
+        "تتوسع الوظائف التي يرفع فيها الذكاء الاصطناعي قيمة عمل الخبراء بضعف وتيرة الوظائف التي يتيحها لغير المتخصصين، وقد نمت أجورها أسرع بنسبة 42% منذ 2021.",
+        "حقق الخُمس الأعلى من الشركات الأكثر تأثراً بالذكاء الاصطناعي نمواً متوسطاً في إنتاجية العمل بلغ 163% مقارنة بعام 2018.",
+        "نمت الوظائف التي تتطلب مهارات ذكاء اصطناعي محددة بنسبة 69% مقابل 9% لسوق العمل عموماً، وارتفعت علاوة الأجر لهذه المهارات إلى 62% بعد أن كانت 57%.",
+        "في البيانات الأمريكية، تزيد احتمالية أن تطلب وظائف المبتدئين الأكثر تأثراً بالذكاء الاصطناعي مهارات من مستوى الوظائف العليا، كالقيادة، بسبعة أضعاف، وقد نمت هذه الوظائف 35% منذ 2019 بينما تراجعت وظائف المبتدئين الأخرى 10%."
+      ],
+      "why_en": "It is one of the largest data-based looks at how AI is changing jobs, wages and the skills employers want.",
+      "why_ar": "يُعد من أوسع الدراسات المبنية على البيانات حول أثر الذكاء الاصطناعي في الوظائف والأجور والمهارات المطلوبة."
+    },
+    {
+      "id": "oecd-ai-in-government-2026",
+      "publisher": "OECD",
+      "title_en": "Digital Government Outlook 2026: From Foundations to Transformational Impact, Chapter 4: Adopting and governing AI in government",
+      "title_ar": "آفاق الحكومة الرقمية 2026، الفصل الرابع: تبنّي الذكاء الاصطناعي وحوكمته في الحكومات",
+      "url": "https://www.oecd.org/en/publications/digital-government-outlook_0496b2bc-en/full-report/adopting-and-governing-ai-in-government_7ef312a9.html",
+      "published": "2026-06-15",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "public-sector",
+        "governance",
+        "adoption",
+        "generative-ai",
+        "skills"
+      ],
+      "findings_en": [
+        "Almost every OECD government has put AI to work somewhere: 35 of 36 countries (97%), led by internal operations and public services.",
+        "AI use for internal processes went from 70% of measured countries in 2023 to 86% in 2025, and for public services from 67% to 75%. Just 36% use it to support policymaking.",
+        "64% of OECD countries use generative AI for at least one purpose. The most common use is helping public servants with tasks such as drafting and search (20 of 36 countries, 56%).",
+        "32 of 36 countries (89%) train staff to back AI work in government, yet just 13 of 36 (36%) cover AI use in public services, and the same 13 cover its use in policymaking.",
+        "Only 14 of 36 countries (39%) require a risk assessment before deploying AI, and just 6 of 36 (17%) keep an open register of government algorithms."
+      ],
+      "findings_ar": [
+        "وظّفت كل حكومات OECD تقريباً الذكاء الاصطناعي في مجال واحد على الأقل، أي 35 من 36 دولة (97%)، وتتصدر ذلك العمليات الداخلية والخدمات العامة.",
+        "ارتفع استخدامه في العمليات الداخلية من 70% من الدول المشمولة بالقياس في 2023 إلى 86% في 2025، وفي الخدمات العامة من 67% إلى 75%، في حين لا يتجاوز استخدامه لدعم صنع السياسات 36%.",
+        "تستخدم 64% من دول OECD الذكاء الاصطناعي التوليدي لغرض واحد على الأقل، وأكثر استخداماته شيوعاً مساعدة الموظفين الحكوميين في الصياغة والبحث (20 من 36 دولة، أي 56%).",
+        "تدرّب 32 من 36 دولة (89%) موظفيها لدعم الذكاء الاصطناعي في العمل الحكومي، لكن 13 دولة فقط (36%) تغطي استخدامه في الخدمات العامة، والعدد نفسه يغطي استخدامه في صنع السياسات.",
+        "تشترط 14 دولة فقط من 36 (39%) تقييم المخاطر قبل نشر أنظمة الذكاء الاصطناعي، ولدى 6 دول فقط (17%) سجل مفتوح للخوارزميات الحكومية."
+      ],
+      "why_en": "It shows how far governments have got with AI and which safeguards and skills still need work.",
+      "why_ar": "يوضح التقرير المدى الذي بلغته الحكومات في توظيف الذكاء الاصطناعي، وأين لا تزال الضمانات والمهارات بحاجة إلى تطوير."
+    },
+    {
+      "id": "bcg-ai-at-work-2026",
+      "publisher": "Boston Consulting Group (BCG)",
+      "title_en": "AI at Work: Why Strategy Matters More Than Tools",
+      "title_ar": "الذكاء الاصطناعي في العمل: لماذا تتقدّم الاستراتيجية على الأدوات",
+      "url": "https://www.bcg.com/publications/2026/ai-at-work-why-strategy-matters-more-than-tools",
+      "published": "2026-06-03",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "workforce",
+        "adoption",
+        "skills",
+        "agents"
+      ],
+      "findings_en": [
+        "The 2026 survey reached nearly 12,000 people, from frontline staff to managers and leaders. Among frontline staff, the share using AI at least several times a week jumped to 74%, after holding around 50% in earlier years.",
+        "42% of frontline regular users say AI saves them about a full workday (8 hours) a week, but 66% get limited or no guidance on how to use that time.",
+        "72% say the skills their job demands have shifted, but just 36% think their training has kept up.",
+        "30% say their organisation has built AI agents into workflows, up from 13% last year, yet half say there are no clear rules yet for managing mixed human-AI teams.",
+        "Among the markets surveyed, India, the Middle East and Australia have the highest shares of frontline staff using AI regularly."
+      ],
+      "findings_ar": [
+        "شمل استطلاع 2026 قرابة 12,000 شخص من موظفي الخطوط الأمامية والمديرين والقادة، وارتفعت نسبة من يستخدمون الذكاء الاصطناعي عدة مرات أسبوعياً على الأقل بين موظفي الخطوط الأمامية إلى 74%، بعد أن ظلت قرابة 50% في الأعوام السابقة.",
+        "قال 42% من المستخدمين المنتظمين في الخطوط الأمامية إن الذكاء الاصطناعي يوفّر لهم نحو يوم عمل كامل (8 ساعات) أسبوعياً، لكن 66% يتلقّون توجيهاً محدوداً أو لا يتلقّون أي توجيه حول استثمار هذا الوقت.",
+        "أفاد 72% بأن المهارات المطلوبة في وظائفهم تغيّرت، في حين يرى 36% فقط أن تدريبهم واكب هذا التغيّر.",
+        "قال 30% إن مؤسساتهم دمجت وكلاء الذكاء الاصطناعي في مسارات العمل مقابل 13% في العام السابق، ويقول النصف إنه لا توجد بعد قواعد واضحة لإدارة الفرق التي تجمع البشر والذكاء الاصطناعي.",
+        "تتصدّر الهند والشرق الأوسط وأستراليا الأسواق المشمولة من حيث نسبة موظفي الخطوط الأمامية الذين يستخدمون الذكاء الاصطناعي بانتظام."
+      ],
+      "why_en": "Getting people to adopt AI is no longer the hard part; the value now depends on clear strategy and on redesigning how work gets done.",
+      "why_ar": "لم يعد التبنّي هو التحدي، فالقيمة الحقيقية باتت مرهونة بوضوح الاستراتيجية وإعادة تصميم طريقة العمل."
+    },
+    {
+      "id": "uae-ai-office-genai-applications-2026",
+      "publisher": "UAE Artificial Intelligence, Digital Economy & Remote Work Applications Office (UAE AI Office)",
+      "title_en": "Leading Generative AI Applications 2026",
+      "title_ar": "أكثر تطبيقات الذكاء الاصطناعي التوليدي تأثيراً 2026",
+      "url": "https://ai.gov.ae/wp-content/uploads/2026/05/Leading-Generative-AI-Applications-EN.pdf",
+      "published": "2026-05",
+      "access": "free",
+      "region": "uae",
+      "topics": [
+        "generative-ai",
+        "public-sector",
+        "skills",
+        "risk"
+      ],
+      "findings_en": [
+        "A hands-on guide to 19 generative AI tools, covering image, video, music and voice generation, AI assistants, research tools, language models, automation and app builders.",
+        "Each entry gives a short description of the tool plus a sample prompt readers can try.",
+        "It features Jais, a large language model built for Arabic and English, and the Falcon model family developed by the UAE's Technology Innovation Institute (TII).",
+        "On privacy, it tells users to handle anything they upload to an AI tool as open (public) data until their organisation's security or data governance team has fully reviewed and cleared that platform.",
+        "The guide notes that it takes no side between the companies and platforms it lists."
+      ],
+      "findings_ar": [
+        "دليل عملي يستعرض 19 أداة للذكاء الاصطناعي التوليدي، تشمل توليد الصور والفيديو والموسيقى والصوت، والمساعدات الذكية، وأدوات البحث، والنماذج اللغوية، والأتمتة، وبناء التطبيقات.",
+        "يتضمّن كل مدخل وصفاً موجزاً للأداة وأمراً نموذجياً يمكن للقارئ تجربته.",
+        "يعرض الدليل نموذج Jais اللغوي الكبير المصمَّم للعربية والإنجليزية، وعائلة نماذج Falcon التي طوّرها معهد الابتكار التكنولوجي TII في الإمارات.",
+        "في جانب الخصوصية، يطلب الدليل من المستخدمين اعتبار كل ما يرفعونه إلى أدوات الذكاء الاصطناعي بيانات مفتوحة، إلى أن يراجع فريق الأمن السيبراني أو حوكمة البيانات في جهتهم المنصة مراجعة شاملة ويعتمدها.",
+        "يوضح الدليل أنه لا ينحاز إلى أي من الشركات أو المنصات التي يستعرضها."
+      ],
+      "why_en": "This official UAE guide helps government staff, businesses and the public start using generative AI tools practically and responsibly.",
+      "why_ar": "يمثّل هذا الدليل الرسمي الإماراتي مدخلاً عملياً لموظفي الحكومة والشركات والجمهور لاستخدام أدوات الذكاء الاصطناعي التوليدي بمسؤولية."
+    },
+    {
+      "id": "dff-ibm-ai-governance-2026",
+      "publisher": "Dubai Future Foundation with IBM Institute for Business Value",
+      "title_en": "AI in motion: Orchestrating AI at scale for sovereignty and resilience",
+      "title_ar": "الذكاء الاصطناعي في حراك: تنسيق الذكاء الاصطناعي على نطاق واسع لتعزيز السيادة والمرونة",
+      "url": "https://www.dubaifuture.ae/ai-in-motion/",
+      "published": "2026-04-24",
+      "access": "free",
+      "region": "uae",
+      "topics": [
+        "governance",
+        "risk",
+        "strategy",
+        "agents"
+      ],
+      "findings_en": [
+        "IBM IBV and Dubai Future Foundation base the report on a global survey of 1,006 senior executives, spanning 20 geographies and 23 industries.",
+        "Roughly one in five UAE organisations (about 20%) are rolling out AI governance platforms, against 12% worldwide.",
+        "98% of UAE executives say sovereignty must now shape their business strategy (93% globally).",
+        "Organisations that coordinate their AI governance through a single 'orchestration' layer are 13 times as likely to be scaling AI, and see roughly six times the productivity gains of those that treat governance as compliance only.",
+        "Two-thirds of organisations expect to run AI at scale by 2030 (68% in the UAE, 67% globally), and average AI investment is expected to rise 138%."
+      ],
+      "findings_ar": [
+        "استطلعت الدراسة آراء 1,006 من كبار التنفيذيين في 20 دولة و23 قطاعاً، وأعدّها IBM Institute for Business Value بالتعاون مع Dubai Future Foundation.",
+        "تعمل مؤسسة من كل خمس مؤسسات تقريباً في الإمارات (نحو 20%) على تطبيق منصات لحوكمة الذكاء الاصطناعي، مقابل 12% عالمياً.",
+        "أكّد 98% من التنفيذيين في الإمارات أن اعتبارات السيادة باتت جزءاً من استراتيجيات أعمالهم (93% عالمياً).",
+        "المؤسسات التي تنسّق حوكمة الذكاء الاصطناعي عبر طبقة «تنسيق» موحّدة أكثر احتمالاً بـ13 مرة للتوسّع في استخدامه، وتحقق مكاسب إنتاجية تقارب ستة أضعاف ما تحققه المؤسسات التي تكتفي بالامتثال.",
+        "يتوقّع ثلثا المؤسسات تشغيل الذكاء الاصطناعي على نطاق واسع بحلول 2030 (68% في الإمارات و67% عالمياً)، مع زيادة متوقعة في متوسط الاستثمار بنسبة 138%."
+      ],
+      "why_en": "The study makes the case that well-run AI governance helps organisations scale AI rather than slowing them down, and it shows the UAE ahead of the global average in adopting governance platforms.",
+      "why_ar": "تُبيّن الدراسة أن الحوكمة الجيدة للذكاء الاصطناعي تُعين المؤسسات على التوسّع في استخدامه بدل أن تُبطئها، وتُظهر تقدّم الإمارات على المتوسط العالمي في تبنّي منصات الحوكمة."
+    },
+    {
+      "id": "stanford-ai-index-2026",
+      "publisher": "Stanford HAI (Stanford Institute for Human-Centered Artificial Intelligence)",
+      "title_en": "The 2026 AI Index Report",
+      "title_ar": "تقرير مؤشر الذكاء الاصطناعي 2026",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "published": "2026-04-13",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "research",
+        "investment",
+        "adoption",
+        "generative-ai",
+        "risk"
+      ],
+      "findings_en": [
+        "In 2025, 88% of the organizations surveyed said they use AI, while AI agents are still only starting to be used.",
+        "Generative AI was used by 53% of the population within three years, a faster uptake than the PC or the internet. The UAE, at 64%, is one of the countries where use is higher than its income level would predict.",
+        "Global corporate AI investment reached $581.69 billion in 2025, a 129.9% rise on the year before. Private investment accounted for $344.66 billion of it, up 127.5%.",
+        "On the SWE-bench Verified coding test, top performance moved from 60% to close to 100% of the human baseline within one year.",
+        "The AI Incident Database logged 362 incidents in 2025, up from 233 in 2024, and the average Foundation Model Transparency Index score dropped from 58 to 40."
+      ],
+      "findings_ar": [
+        "أفادت 88% من المؤسسات المشمولة بالمسح في 2025 بأنها تستخدم الذكاء الاصطناعي، في حين لا يزال استخدام وكلاء الذكاء الاصطناعي في مراحله الأولى.",
+        "وصل استخدام الذكاء الاصطناعي التوليدي إلى 53% من السكان خلال ثلاث سنوات، وهو انتشار أسرع من الحاسوب الشخصي والإنترنت، وتُعد الإمارات (64%) من الدول التي يتجاوز فيها الاستخدام ما يتوقعه مستوى دخلها.",
+        "بلغ إجمالي استثمارات الشركات في الذكاء الاصطناعي عالمياً 581.69 مليار دولار في 2025 بارتفاع 129.9% عن العام السابق، منها 344.66 مليار دولار استثمارات خاصة نمت بنسبة 127.5%.",
+        "في اختبار البرمجة SWE-bench Verified، ارتفع أفضل أداء من 60% إلى ما يقارب 100% من المستوى البشري المرجعي خلال عام واحد.",
+        "سجّلت قاعدة بيانات حوادث الذكاء الاصطناعي 362 حادثة في 2025 مقابل 233 في 2024، وانخفض متوسط درجات مؤشر شفافية النماذج الأساسية من 58 إلى 40."
+      ],
+      "why_en": "This is the most widely cited yearly scorecard of AI progress, and one place to track capability, money and risk together.",
+      "why_ar": "هذا أكثر تقرير سنوي يُستشهد به لقياس تقدم الذكاء الاصطناعي، ويجمع القدرات والاستثمار والمخاطر في مرجع واحد."
+    },
+    {
+      "id": "pwc-ai-performance-study-2026",
+      "publisher": "PwC",
+      "title_en": "PwC AI Performance Study: Want ROI from AI? Go for growth",
+      "title_ar": "دراسة PwC لأداء الذكاء الاصطناعي: للعائد من الذكاء الاصطناعي، استهدف النمو",
+      "url": "https://www.pwc.com/gx/en/issues/technology/ai-performance/want-ai-roi-go-for-growth.html",
+      "published": "2026-04-13",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "strategy",
+        "investment",
+        "governance",
+        "adoption"
+      ],
+      "findings_en": [
+        "Across 1,217 companies in 25 sectors, 20% of companies capture 74% of AI-driven financial returns.",
+        "Companies rated most 'AI fit' earn AI-driven revenue and efficiency gains 7.2 times those of the rest.",
+        "Leaders are 2.6 times likelier than others to say AI has made them better at reinventing their business model. Capturing growth as industries converge was the single strongest factor in AI returns.",
+        "Firms with solid foundations (data, governance, skills) get close to twice the performance lift from each increase in AI use that firms with weaker foundations get.",
+        "Leaders are 1.7 times likelier to follow a documented Responsible AI framework, and 1.5 times likelier to run an AI governance board that spans several functions."
+      ],
+      "findings_ar": [
+        "من بين 1,217 شركة في 25 قطاعاً، تستحوذ 20% من الشركات على 74% من العوائد المالية المرتبطة بالذكاء الاصطناعي.",
+        "تحقق الشركات الأكثر جاهزية للذكاء الاصطناعي مكاسب في الإيرادات والكفاءة تفوق غيرها بـ 7.2 مرة.",
+        "الشركات الرائدة أكثر ميلاً من غيرها بمقدار 2.6 مرة للقول إن الذكاء الاصطناعي عزّز قدرتها على إعادة ابتكار نموذج أعمالها، وكان اغتنام فرص النمو الناتجة عن تقارب القطاعات أقوى عامل مؤثر في العائد.",
+        "عندما تزيد الشركات ذات الأسس القوية في البيانات والحوكمة والمهارات استخدامها للذكاء الاصطناعي، تحقق تحسناً يقارب ضعف ما تحققه الشركات ذات الأسس الأضعف.",
+        "الشركات الرائدة أكثر ميلاً بمقدار 1.7 مرة لاتباع إطار موثّق للذكاء الاصطناعي المسؤول، وبمقدار 1.5 مرة لامتلاك مجلس لحوكمة الذكاء الاصطناعي يضم عدة إدارات."
+      ],
+      "why_en": "It shows that returns from AI are concentrated in a small group of companies and explains what separates them from the rest.",
+      "why_ar": "يبيّن أن عوائد الذكاء الاصطناعي تتركز في مجموعة صغيرة من الشركات، ويوضح ما يميزها عن غيرها."
+    },
+    {
+      "id": "mckinsey-ai-trust-2026",
+      "publisher": "McKinsey & Company",
+      "title_en": "State of AI trust in 2026: Shifting to the agentic era",
+      "title_ar": "حالة الثقة في الذكاء الاصطناعي 2026: الانتقال إلى عصر الوكلاء",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
+      "published": "2026-03-25",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "governance",
+        "risk",
+        "agents"
+      ],
+      "findings_en": [
+        "About 500 organisations were surveyed from December 2025 to January 2026; the average responsible-AI maturity score rose to 2.3 from 2.0 in 2025, but only around a third reach level 3 or higher in strategy, governance and agent controls.",
+        "Security and risk worries are the biggest thing holding back full-scale agentic AI for nearly two-thirds of respondents, cited far more often than regulatory uncertainty or technical limits.",
+        "Inaccuracy (74%) and cybersecurity (72%) are the risks most often rated as highly relevant.",
+        "Lack of know-how and training is now the top obstacle to adopting responsible-AI practices, named by nearly 60% (about 50% a year earlier).",
+        "Where responsible AI has a clearly accountable owner (such as a dedicated AI-governance role or an audit/ethics team), average maturity reaches 2.6, against 1.8 where no function is accountable."
+      ],
+      "findings_ar": [
+        "شمل المسح نحو 500 مؤسسة بين ديسمبر 2025 ويناير 2026، وارتفع متوسط نضج الذكاء الاصطناعي المسؤول إلى 2.3 مقابل 2.0 في 2025، لكن نحو الثلث فقط بلغ المستوى الثالث أو أعلى في الاستراتيجية والحوكمة وضوابط الوكلاء.",
+        "يرى قرابة الثلثين أن مخاوف الأمن والمخاطر هي أكبر ما يعيق التوسع الكامل في الذكاء الاصطناعي الوكيل، بفارق واضح عن الغموض التنظيمي والقيود التقنية.",
+        "عدم الدقة (74%) والأمن السيبراني (72%) هما أكثر المخاطر التي يصنّفها المشاركون عالية الأهمية.",
+        "أصبح نقص المعرفة والتدريب العائق الأول أمام تطبيق ممارسات الذكاء الاصطناعي المسؤول، إذ ذكره قرابة 60% مقابل نحو 50% في العام السابق.",
+        "في المؤسسات التي حدّدت جهة مسؤولة بوضوح عن الذكاء الاصطناعي المسؤول، كدور مخصص لحوكمة الذكاء الاصطناعي أو فريق تدقيق وأخلاقيات، بلغ متوسط النضج 2.6، مقابل 1.8 حيث لا توجد جهة مسؤولة."
+      ],
+      "why_en": "As AI systems start taking actions rather than only producing text, governance and skills, not technology, are becoming the limit on scaling safely.",
+      "why_ar": "مع انتقال أنظمة الذكاء الاصطناعي من إنتاج النصوص إلى تنفيذ الإجراءات، أصبحت الحوكمة والمهارات، لا التقنية، هي ما يحدّد القدرة على التوسع الآمن."
+    },
+    {
+      "id": "wef-organizational-transformation-2026",
+      "publisher": "World Economic Forum (with Accenture)",
+      "title_en": "Organizational Transformation in the Age of AI: How Organizations Maximize AI's Potential",
+      "title_ar": "التحول المؤسسي في عصر الذكاء الاصطناعي: كيف تحقق المؤسسات أقصى استفادة منه",
+      "url": "https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/",
+      "published": "2026-03-16",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "strategy",
+        "agents",
+        "workforce"
+      ],
+      "findings_en": [
+        "The paper draws on a WEF community of more than 450 executives. It argues that the open question for companies has shifted from proving that AI delivers to reshaping themselves so they capture that value.",
+        "Roughly 15% of organizations have gone as far as using AI to rebuild their way of working from the ground up.",
+        "Citing an Accenture study, the paper says companies running AI-enabled 'intelligent operations' see 2.4x the productivity and 2.5x the revenue growth.",
+        "Close to 40% of senior executives place R&D among the areas that gain most from AI spending.",
+        "It names five principles for scaling AI: human accountability, redesigning the operating model end to end, talent systems that can scale, trust built on transparency, and disciplined experimentation."
+      ],
+      "findings_ar": [
+        "تستند الورقة إلى مجتمع يضم أكثر من 450 مسؤولاً تنفيذياً في المنتدى، وترى أن السؤال أمام الشركات انتقل من إثبات جدوى الذكاء الاصطناعي إلى إعادة تشكيل المؤسسة نفسها لجني قيمته.",
+        "نحو 15% فقط من المؤسسات ذهبت إلى حد توظيف الذكاء الاصطناعي لإعادة بناء أسلوب عملها من الأساس.",
+        "استناداً إلى دراسة من Accenture، تذكر الورقة أن الشركات التي تدير «عمليات ذكية» مدعومة بالذكاء الاصطناعي تحقق إنتاجية أعلى بمقدار 2.4 مرة ونمواً في الإيرادات أعلى بمقدار 2.5 مرة.",
+        "يضع قرابة 40% من كبار التنفيذيين البحث والتطوير بين أكثر المجالات استفادة من الإنفاق على الذكاء الاصطناعي.",
+        "تحدد الورقة خمسة مبادئ للتوسع: مساءلة بشرية واضحة، وإعادة تصميم نموذج التشغيل من البداية إلى النهاية، وأنظمة مواهب قابلة للتوسع، وثقة قائمة على الشفافية، وتجريب منضبط."
+      ],
+      "why_en": "It moves the discussion from pilot projects to redesigning how organizations work, which is where the paper says most of AI's value lies.",
+      "why_ar": "تنقل الورقة النقاش من المشاريع التجريبية إلى إعادة تصميم طريقة عمل المؤسسات، حيث ترى الورقة أن معظم قيمة الذكاء الاصطناعي تكمن هناك."
+    },
+    {
+      "id": "deloitte-gcc-genai-tax-finance-2026",
+      "publisher": "Deloitte Middle East",
+      "title_en": "GenAI Adoption in the GCC: 2026 Survey Insights for Tax & Finance Leaders",
+      "title_ar": "تبنّي الذكاء الاصطناعي التوليدي في دول الخليج: رؤى استبيان 2026 لقادة الضرائب والمالية",
+      "url": "https://www.deloitte.com/middle-east/en/services/tax/research/genai-adoption-in-the-gcc-2026.html",
+      "published": "2026-02-09",
+      "access": "free",
+      "region": "gcc",
+      "topics": [
+        "generative-ai",
+        "adoption",
+        "strategy"
+      ],
+      "findings_en": [
+        "Deloitte gathered 649 responses from tax and finance leaders in the UAE, Saudi Arabia, Qatar and Kuwait through live polls at regional leadership sessions, up from 442 in the previous edition. Deloitte describes the results as directional.",
+        "The share of organisations not using GenAI fell from 52% in 2024 to 29% in 2025.",
+        "The top use case moved from email drafting (48% in 2024) to research and analysis (41% in 2025).",
+        "38% say their main goal for AI in tax and finance is better accuracy and quality, ahead of automating compliance tasks (23%).",
+        "Among the 307 who answered the question, the manual tasks most wanted for automation were data recording and validation (29%) and reconciliations (22%)."
+      ],
+      "findings_ar": [
+        "جمعت Deloitte 649 إجابة من قادة الضرائب والمالية في الإمارات والسعودية وقطر والكويت عبر استطلاعات مباشرة خلال لقاءات قيادية إقليمية، ارتفاعاً من 442 في الإصدار السابق، وتصف Deloitte النتائج بأنها استرشادية.",
+        "انخفضت نسبة المؤسسات التي لا تستخدم الذكاء الاصطناعي التوليدي من 52% في 2024 إلى 29% في 2025.",
+        "انتقل الاستخدام الأبرز من صياغة الرسائل الإلكترونية (48% في 2024) إلى البحث والتحليل (41% في 2025).",
+        "يرى 38% أن هدفهم الأول من الذكاء الاصطناعي في الضرائب والمالية هو رفع الدقة والجودة، متقدّماً على أتمتة مهام الامتثال (23%).",
+        "من بين 307 مشاركين أجابوا عن السؤال، كانت أكثر المهام اليدوية المرغوب في أتمتتها تسجيل البيانات والتحقق منها (29%) ومطابقة الحسابات (22%)."
+      ],
+      "why_en": "This survey is a regional benchmark for how generative AI is moving from routine productivity tasks into analysis work in GCC finance functions.",
+      "why_ar": "يقدّم الاستبيان مقياساً إقليمياً لانتقال الذكاء الاصطناعي التوليدي من المهام الروتينية إلى أعمال التحليل في الإدارات المالية الخليجية."
+    },
+    {
+      "id": "wef-ai-sovereignty-2026",
+      "publisher": "World Economic Forum (with Bain & Company)",
+      "title_en": "Rethinking AI Sovereignty: Pathways to Competitiveness through Strategic Investments",
+      "title_ar": "إعادة النظر في سيادة الذكاء الاصطناعي: مسارات نحو التنافسية عبر الاستثمارات الاستراتيجية",
+      "url": "https://www.weforum.org/publications/rethinking-ai-sovereignty/",
+      "published": "2026-01-20",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "strategy",
+        "investment",
+        "infrastructure"
+      ],
+      "findings_en": [
+        "Investment in AI grew by roughly 33% a year on average between 2010 and 2024.",
+        "Data centres and other infrastructure built for AI drew more than $600 billion of investment over 2010-2024. The paper expects hyperscale data centres to approach 2,000 by 2030, up from 1,136 today.",
+        "Together, the US and China account for more than 60% of all global AI investment.",
+        "Spending on AI applications is projected to reach about $1.5 trillion a year by 2030, and investment in foundation models no less than $300 billion a year.",
+        "Instead of owning every layer of AI, the paper urges 'strategic interdependence', which means building on national strengths and trusted partners. It points to Singapore and the UAE as AI hubs that have drawn global investment."
+      ],
+      "findings_ar": [
+        "نما الاستثمار في الذكاء الاصطناعي بمعدل سنوي يقارب 33% في المتوسط بين 2010 و2024.",
+        "استقطبت مراكز البيانات وغيرها من البنى التحتية المخصصة للذكاء الاصطناعي أكثر من 600 مليار دولار خلال 2010-2024، وتتوقع الورقة أن يقترب عدد مراكز البيانات فائقة الحجم من 2,000 مركز بحلول 2030 مقابل 1,136 حالياً.",
+        "تستحوذ الولايات المتحدة والصين معاً على أكثر من 60% من إجمالي الاستثمار العالمي في الذكاء الاصطناعي.",
+        "يُتوقع أن يصل الإنفاق على تطبيقات الذكاء الاصطناعي إلى نحو 1.5 تريليون دولار سنوياً بحلول 2030، وألّا يقل الاستثمار في النماذج الأساسية عن 300 مليار دولار سنوياً.",
+        "بدلاً من امتلاك كل طبقات الذكاء الاصطناعي، تدعو الورقة إلى «ترابط استراتيجي» يقوم على مواطن القوة الوطنية والشركاء الموثوقين، وتشير إلى سنغافورة والإمارات بوصفهما مركزين للذكاء الاصطناعي نجحا في جذب الاستثمار العالمي."
+      ],
+      "why_en": "It gives governments a practical way to compete in AI through targeted investment and partnerships, instead of trying to build everything at home.",
+      "why_ar": "تقدم الورقة للحكومات طريقاً عملياً للمنافسة في الذكاء الاصطناعي عبر استثمار موجّه وشراكات موثوقة، بدلاً من محاولة بناء كل شيء محلياً."
+    },
+    {
+      "id": "deloitte-state-of-ai-enterprise-2026",
+      "publisher": "Deloitte AI Institute",
+      "title_en": "State of AI in the Enterprise 2026: The untapped edge",
+      "title_ar": "حالة الذكاء الاصطناعي في المؤسسات 2026: الميزة غير المستغلة",
+      "url": "https://www.deloitte.com/global/en/issues/generative-ai/state-of-ai-in-enterprise.html",
+      "published": "2026-01",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "agents",
+        "governance",
+        "workforce",
+        "strategy"
+      ],
+      "findings_en": [
+        "Worker access to company-approved AI tools grew by about 50% in one year, from under 40% of workers to around 60%.",
+        "A quarter of companies (25%) have moved 40% or more of their AI experiments into production, and 54% expect to reach that level within the next 3 to 6 months.",
+        "25% of leaders now say AI is transforming their company, more than double the 12% a year earlier. Yet only 20% of organisations are already growing revenue with AI, while 74% hope to.",
+        "Agentic AI use is set to jump from 23% of companies (at least moderate use) today to 74% within two years, but only 21% say they have a mature way to govern autonomous agents.",
+        "84% of companies have not yet redesigned jobs around what AI can do."
+      ],
+      "findings_ar": [
+        "اتسع وصول الموظفين إلى أدوات الذكاء الاصطناعي المعتمدة بنحو 50% خلال عام واحد، من أقل من 40% من الموظفين إلى قرابة 60%.",
+        "نقلت 25% من الشركات 40% أو أكثر من تجاربها في الذكاء الاصطناعي إلى التشغيل الفعلي، وتتوقع 54% بلوغ هذا المستوى خلال 3 إلى 6 أشهر.",
+        "يرى 25% من القادة أن الذكاء الاصطناعي يُحدث تحولاً جذرياً في شركاتهم، أي أكثر من ضعف نسبة 12% قبل عام، لكن 20% فقط من المؤسسات تحقق نمواً فعلياً في الإيرادات بفضله مقابل 74% تطمح إلى ذلك.",
+        "يُتوقع أن يرتفع استخدام وكلاء الذكاء الاصطناعي من 23% من الشركات حالياً إلى 74% خلال عامين، بينما تملك 21% فقط نموذجاً ناضجاً لحوكمة الوكلاء المستقلين.",
+        "لم تُعِد 84% من الشركات بعدُ تصميم الوظائف بما يتناسب مع قدرات الذكاء الاصطناعي."
+      ],
+      "why_en": "This large global survey shows that access to AI has spread quickly but turning it into real business change is still in its early stages.",
+      "why_ar": "يكشف هذا المسح العالمي الواسع أن إتاحة أدوات الذكاء الاصطناعي انتشرت بسرعة، في حين لا يزال تحويلها إلى تغيير فعلي في طريقة العمل في مراحله الأولى."
+    },
+    {
+      "id": "pwc-me-hopes-fears-2025",
+      "publisher": "PwC Middle East",
+      "title_en": "Middle East Workforce Hopes and Fears Survey 2025",
+      "title_ar": "استبيان آمال ومخاوف القوى العاملة في الشرق الأوسط 2025",
+      "url": "https://www.pwc.com/m1/en/issues/upskilling/hopes-and-fears-2025.html",
+      "published": "2025-12-15",
+      "access": "free",
+      "region": "gcc",
+      "topics": [
+        "workforce",
+        "skills",
+        "adoption",
+        "generative-ai"
+      ],
+      "findings_en": [
+        "The survey gathered views from 1,286 employees in public- and private-sector organisations across the Middle East.",
+        "75% of regional respondents used AI at work in the past 12 months, above the global average, and 32% use generative AI tools daily (28% globally).",
+        "82% credit AI with lifting their productivity (77% globally); 87% see better work quality and 84% more creativity.",
+        "69% picked up new skills in the past year (56% globally), and 81% would prefer a job that builds transferable skills (69% globally).",
+        "49% think technology such as AI, robotics and automation will change their jobs to a large or very large extent within three years (45% globally), down from 63% in the previous year's survey."
+      ],
+      "findings_ar": [
+        "استطلع الاستبيان آراء 1,286 موظفاً في مؤسسات القطاعين الحكومي والخاص بمنطقة الشرق الأوسط.",
+        "استخدم 75% من المشاركين في المنطقة الذكاء الاصطناعي في عملهم خلال الأشهر الاثني عشر الماضية، بما يفوق المتوسط العالمي، ويستخدم 32% أدوات الذكاء الاصطناعي التوليدي يومياً (28% عالمياً).",
+        "يرى 82% أن الذكاء الاصطناعي رفع إنتاجيتهم (77% عالمياً)، ولمس 87% تحسّناً في جودة عملهم و84% زيادةً في إبداعهم.",
+        "اكتسب 69% مهارات جديدة خلال العام الماضي (56% عالمياً)، ويفضّل 81% وظيفةً تتيح بناء مهارات قابلة للنقل (69% عالمياً).",
+        "يتوقّع 49% أن تُحدث التقنيات، ومنها الذكاء الاصطناعي والروبوتات والأتمتة، تغييراً كبيراً أو كبيراً جداً في وظائفهم خلال ثلاث سنوات (45% عالمياً)، مقارنةً بـ63% في استبيان العام السابق."
+      ],
+      "why_en": "This survey shows how quickly employees in the region are adopting AI at work, and it points to the skills and support they expect from their employers.",
+      "why_ar": "يوضّح الاستبيان سرعة تبنّي موظفي المنطقة للذكاء الاصطناعي في عملهم، ويبيّن المهارات والدعم الذي ينتظرونه من جهات العمل."
+    },
+    {
+      "id": "deloitte-tech-trends-2026",
+      "publisher": "Deloitte Insights",
+      "title_en": "Tech Trends 2026",
+      "title_ar": "اتجاهات التقنية 2026",
+      "url": "https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html",
+      "published": "2025-12-10",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "agents",
+        "infrastructure",
+        "strategy",
+        "risk",
+        "research"
+      ],
+      "findings_en": [
+        "The report, now in its 17th year, names five linked trends: AI moving into physical machines and robots, a reality check on AI agents, rethinking AI computing infrastructure, rebuilding IT organisations around AI, and AI in cybersecurity.",
+        "In a Deloitte survey of 500 US technology leaders, only 11% had AI agents in production while 38% were piloting them. 42% were still working on an agent strategy and 35% had none.",
+        "Citing the Stanford AI Index, the report notes token (language-unit) costs fell about 280-fold in two years, yet usage has grown so fast that some large firms now pay tens of millions a month for AI.",
+        "Only 1% of IT leaders in a separate Deloitte survey said no major change to their IT operating model was underway.",
+        "It argues that companies should redesign whole processes for agents rather than automate existing broken ones."
+      ],
+      "findings_ar": [
+        "يحدد التقرير في عامه السابع عشر خمسة اتجاهات مترابطة: انتقال الذكاء الاصطناعي إلى الآلات والروبوتات، ومراجعة واقعية لوكلاء الذكاء الاصطناعي، وإعادة التفكير في بنية الحوسبة، وإعادة بناء إدارات التقنية، والذكاء الاصطناعي في الأمن السيبراني.",
+        "في مسح أجرته Deloitte على 500 من قادة التقنية في الولايات المتحدة، شغّلت 11% فقط وكلاء ذكاء اصطناعي فعلياً مقابل 38% في مرحلة التجربة، بينما كانت 42% لا تزال تُعدّ استراتيجيتها و35% بلا استراتيجية.",
+        "يستشهد التقرير بمؤشر Stanford AI Index ليوضح أن تكلفة الوحدات اللغوية انخفضت نحو 280 ضعفاً خلال عامين، ومع ذلك نما الاستخدام بسرعة جعلت بعض الشركات الكبرى تدفع عشرات الملايين شهرياً.",
+        "أفاد 1% فقط من قادة تقنية المعلومات في مسح آخر لـ Deloitte بعدم وجود تغييرات كبرى جارية في نموذج تشغيل إداراتهم.",
+        "يدعو التقرير إلى إعادة تصميم العمليات بالكامل عند إدخال الوكلاء بدلاً من أتمتة عمليات قائمة غير فعالة."
+      ],
+      "why_en": "It gives a clear map of where enterprise AI is heading next and why moving from pilots to real use is now the main challenge.",
+      "why_ar": "يقدّم خريطة واضحة لاتجاه الذكاء الاصطناعي في المؤسسات، ويبيّن لماذا أصبح الانتقال من التجارب إلى التشغيل الفعلي التحدي الأبرز."
+    },
+    {
+      "id": "mgi-agents-robots-us-2025",
+      "publisher": "McKinsey Global Institute",
+      "title_en": "Agents, robots, and us: Skill partnerships in the age of AI",
+      "title_ar": "الوكلاء والروبوتات ونحن: شراكة المهارات في عصر الذكاء الاصطناعي",
+      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
+      "published": "2025-11-25",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "workforce",
+        "skills",
+        "economy",
+        "agents"
+      ],
+      "findings_en": [
+        "In theory, about 57% of US work hours involve activities that today's proven technologies could automate (44% via agents, 13% via robots); MGI says this measures technical potential, not expected job losses.",
+        "Over 70% of the skills in demand today apply both to work machines could take on and to work they cannot, so most skills keep their value even as the way they are used shifts.",
+        "US job postings asking for AI fluency (skill in using and overseeing AI tools) rose roughly sevenfold over two years, the fastest growth of any skill tracked.",
+        "Under MGI's midpoint adoption scenario, the US could gain roughly $2.9 trillion in economic value a year by 2030, but only if companies rebuild whole workflows around people, agents and robots.",
+        "Nonphysical work makes up about two-thirds of US work hours, and roughly a third of that time draws on social and emotional abilities that AI largely cannot take over."
+      ],
+      "findings_ar": [
+        "نظرياً، تشمل نحو 57% من ساعات العمل في الولايات المتحدة أنشطة يمكن للتقنيات المُثبتة حالياً أتمتتها (44% عبر الوكلاء و13% عبر الروبوتات)، ويؤكد التقرير أن هذا يقيس الإمكان التقني وليس توقعاً لفقدان الوظائف.",
+        "أكثر من 70% من المهارات المطلوبة اليوم تُستخدم في أعمال قابلة للأتمتة وأخرى غير قابلة لها، لذا تحتفظ معظم المهارات بقيمتها مع تغيّر طريقة توظيفها.",
+        "تضاعف طلب إعلانات الوظائف الأمريكية على الطلاقة في استخدام الذكاء الاصطناعي، أي القدرة على استخدام أدواته وإدارتها، نحو سبع مرات خلال عامين، وهو أسرع نمو بين المهارات المرصودة.",
+        "في سيناريو التبنّي المتوسط، قد تكسب الولايات المتحدة نحو 2.9 تريليون دولار سنوياً من القيمة الاقتصادية بحلول 2030، بشرط أن تعيد الشركات بناء مسارات العمل كاملةً حول البشر والوكلاء والروبوتات.",
+        "يمثّل العمل غير البدني نحو ثلثي ساعات العمل في الولايات المتحدة، ويعتمد قرابة ثلث هذه الساعات على مهارات اجتماعية وعاطفية تظل في معظمها خارج قدرات الذكاء الاصطناعي."
+      ],
+      "why_en": "It moves the jobs debate from which jobs disappear to how human skills combine with AI, which gives a practical frame for training and hiring plans.",
+      "why_ar": "ينقل النقاش من سؤال «أي الوظائف ستختفي؟» إلى «كيف تتكامل المهارات البشرية مع الذكاء الاصطناعي؟»، ما يقدّم إطاراً عملياً لخطط التدريب والتوظيف."
+    },
+    {
+      "id": "mckinsey-gcc-state-of-ai-2025",
+      "publisher": "McKinsey & Company",
+      "title_en": "The state of AI in GCC countries: In pursuit of scale and value",
+      "title_ar": "الذكاء الاصطناعي في دول الخليج: سباقٌ نحو التوسّع في الاستخدام وتعظيم القيمة الاقتصادية",
+      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-gcc-countries-in-pursuit-of-scale-and-value",
+      "arabic_version_url": "https://www.mckinsey.com/featured-insights/highlights-in-arabic/the-state-of-ai-in-gcc-countries-in-pursuit-of-scale-and-value-arabic/ar",
+      "published": "2025-11-13",
+      "access": "free",
+      "region": "gcc",
+      "topics": [
+        "adoption",
+        "agents",
+        "strategy",
+        "investment"
+      ],
+      "findings_en": [
+        "84% of surveyed GCC executives say their organisation uses AI in at least one business function, up from 62% in McKinsey's 2023 GCC survey.",
+        "60% report that their organisation already uses AI agents to some degree.",
+        "89% expect their organisation's AI budget to grow in the coming year.",
+        "31% say AI is being scaled or fully deployed across their organisation, and 11% qualify as 'value realizers' that attribute at least 5% of earnings to AI.",
+        "Product and service development saw the largest rise in AI use over the past two years."
+      ],
+      "findings_ar": [
+        "أفاد 84% من التنفيذيين المشاركين في دول الخليج بأن مؤسساتهم تستخدم الذكاء الاصطناعي في وظيفة واحدة على الأقل، مقارنةً بـ62% في استبيان McKinsey لعام 2023.",
+        "ذكر 60% أن مؤسساتهم تستخدم وكلاء الذكاء الاصطناعي بدرجةٍ ما.",
+        "يتوقّع 89% زيادة ميزانية الذكاء الاصطناعي في مؤسساتهم خلال العام المقبل.",
+        "أفاد 31% بأن الذكاء الاصطناعي بلغ في مؤسساتهم مرحلة التوسّع أو النشر الكامل، فيما صُنِّفت 11% من المؤسسات ضمن فئة «محقّقي القيمة» التي تَنسب 5% على الأقل من أرباحها إلى الذكاء الاصطناعي.",
+        "سجّل مجال تطوير المنتجات والخدمات أكبر ارتفاع في استخدام الذكاء الاصطناعي خلال العامين الماضيين."
+      ],
+      "why_en": "This survey tracks how GCC organisations are moving from AI pilots to wider use, and it names the capabilities shared by the organisations that get the most value.",
+      "why_ar": "يرصد التقرير انتقال المؤسسات الخليجية من التجارب الأولية إلى الاستخدام الأوسع للذكاء الاصطناعي، ويحدّد القدرات المشتركة لدى المؤسسات الأكثر استفادةً منه."
+    },
+    {
+      "id": "ey-responsible-ai-pulse-2025",
+      "publisher": "EY",
+      "title_en": "EY Global Responsible AI Pulse survey: How can responsible AI bridge the gap between investment and impact?",
+      "title_ar": "مسح EY العالمي لنبض الذكاء الاصطناعي المسؤول: كيف يسدّ الذكاء الاصطناعي المسؤول الفجوة بين الاستثمار والأثر؟",
+      "url": "https://www.ey.com/en_gl/insights/ai/how-can-responsible-ai-bridge-the-gap-between-investment-and-impact",
+      "published": "2025-10-08",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "governance",
+        "risk",
+        "agents",
+        "strategy"
+      ],
+      "findings_en": [
+        "The survey covered 975 C-suite leaders at companies with over US$1 billion revenue in 21 countries (July–August 2025). On average they had put 7 of 10 responsible-AI measures in place.",
+        "Nearly all firms (99%) said AI-related risks had already cost them money. For 64% the losses topped US$1 million, and the average was conservatively put at about US$4.4 million.",
+        "Firms that watch AI systems in real time and have oversight committees reported better revenue growth, cost savings and staff satisfaction far more often than others.",
+        "Asked to match the right controls to five AI risks, only 12% of leaders got all of them right. Only 32% said HR is planning for teams that mix people and AI agents."
+      ],
+      "findings_ar": [
+        "شمل المسح 975 من كبار التنفيذيين في شركات تتجاوز إيراداتها مليار دولار في 21 دولة خلال يوليو وأغسطس 2025، وطبّقت الشركات في المتوسط 7 من أصل 10 إجراءات للذكاء الاصطناعي المسؤول.",
+        "أفادت جميع الشركات تقريباً (99%) بأن مخاطر الذكاء الاصطناعي كلّفتها خسائر مالية، وتجاوزت الخسائر مليون دولار لدى 64% منها، بمتوسط يُقدَّر بتحفظ بنحو 4.4 مليون دولار.",
+        "الشركات التي تراقب أنظمة الذكاء الاصطناعي آنياً وتعتمد لجان إشراف أفادت بتحسن في نمو الإيرادات وخفض التكاليف ورضا الموظفين بنسبة أعلى بكثير من غيرها.",
+        "عند مطابقة الضوابط المناسبة مع خمسة مخاطر للذكاء الاصطناعي، أصاب 12% فقط من القادة فيها جميعاً، وأفاد 32% فقط بأن إدارات الموارد البشرية تُعدّ خططاً لفرق عمل تجمع البشر ووكلاء الذكاء الاصطناعي."
+      ],
+      "why_en": "It links good AI governance directly to better financial results, not just to compliance.",
+      "why_ar": "يربط الحوكمة الجيدة للذكاء الاصطناعي بتحسن النتائج المالية مباشرة، لا بمجرد الامتثال."
+    },
+    {
+      "id": "bcg-ai-value-gap-2025",
+      "publisher": "Boston Consulting Group (BCG)",
+      "title_en": "The Widening AI Value Gap (Build for the Future 2025)",
+      "title_ar": "اتساع فجوة القيمة من الذكاء الاصطناعي (دراسة «البناء للمستقبل» 2025)",
+      "url": "https://www.bcg.com/publications/2025/are-you-generating-value-from-ai-the-widening-gap",
+      "published": "2025-09-30",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "strategy",
+        "adoption",
+        "agents",
+        "investment",
+        "risk"
+      ],
+      "findings_en": [
+        "Of more than 1,250 firms studied, only 5% ('future-built') get AI value at scale, 35% are scaling with some returns, and 60% report little material value despite investing.",
+        "Future-built firms show 1.7 times the revenue growth and 1.6 times the EBIT margin of the lagging 60%.",
+        "Agents already deliver roughly 17% of the value firms get from AI (2025), a share BCG expects to climb to 29% by 2028. A third of future-built firms use agents, against 12% of firms that are scaling.",
+        "Core business areas (sales and marketing, manufacturing, supply chain, pricing) hold about 70% of the value AI could create.",
+        "72% of companies say they already have AI security risks that are not being managed."
+      ],
+      "findings_ar": [
+        "من بين أكثر من 1,250 شركة شملتها الدراسة، تحقق 5% فقط قيمة واسعة من الذكاء الاصطناعي، و35% في مرحلة التوسع مع عوائد أولية، بينما لا تحقق 60% قيمة تُذكر رغم استثماراتها.",
+        "حققت الشركات الرائدة («المستعدة للمستقبل») نمواً في الإيرادات أعلى بـ1.7 مرة وهامش ربح تشغيلي أعلى بـ1.6 مرة مقارنةً بالشركات المتأخرة.",
+        "شكّل وكلاء الذكاء الاصطناعي نحو 17% من إجمالي قيمة الذكاء الاصطناعي في 2025، ويُتوقع أن تصل النسبة إلى 29% بحلول 2028، ويستخدمهم ثلث الشركات الرائدة مقابل 12% من الشركات في مرحلة التوسع.",
+        "يتركز نحو 70% من القيمة المحتملة للذكاء الاصطناعي في الوظائف الأساسية مثل المبيعات والتسويق والتصنيع وسلاسل الإمداد والتسعير.",
+        "أفادت 72% من الشركات بوجود مخاطر أمنية مرتبطة بالذكاء الاصطناعي لا تُدار حالياً."
+      ],
+      "why_en": "It shows AI returns are concentrating in a small group of firms that reinvest their gains, which makes waiting expensive for everyone else.",
+      "why_ar": "تكشف الدراسة أن عوائد الذكاء الاصطناعي تتركز في قلة من الشركات تعيد استثمار مكاسبها، ما يجعل التأخر مكلفاً لبقية الشركات."
+    },
+    {
+      "id": "bain-ai-compute-2025",
+      "publisher": "Bain & Company",
+      "title_en": "How Can We Meet AI's Insatiable Demand for Compute Power? (Technology Report 2025)",
+      "title_ar": "كيف نلبّي الطلب المتزايد للذكاء الاصطناعي على قدرة الحوسبة؟ (تقرير التكنولوجيا 2025)",
+      "url": "https://www.bain.com/insights/how-can-we-meet-ais-insatiable-demand-for-compute-power-technology-report-2025/",
+      "published": "2025-09-23",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "infrastructure",
+        "investment",
+        "economy"
+      ],
+      "findings_en": [
+        "Bain estimates that AI's demand for compute is growing at more than twice the pace of Moore's law.",
+        "By 2030 the world's AI compute needs could hit 200 gigawatts, with the US accounting for about 100 gigawatts.",
+        "Building enough data centres would take about $500 billion of capital spending a year, which Bain ties to roughly $2 trillion in annual revenue.",
+        "Even if companies moved all on-premise IT budgets to the cloud and reinvested their expected AI savings, the revenue needed would still be about $800 billion short.",
+        "Electricity supply is a major bottleneck: adding generation, transmission and distribution capacity in a tightly regulated sector can need four or more years."
+      ],
+      "findings_ar": [
+        "تقدّر Bain أن الطلب على قدرة الحوسبة للذكاء الاصطناعي ينمو بأكثر من ضعف وتيرة قانون مور.",
+        "قد تبلغ احتياجات الحوسبة للذكاء الاصطناعي عالمياً 200 غيغاواط بحلول 2030، منها نحو 100 غيغاواط في الولايات المتحدة.",
+        "يتطلب بناء مراكز البيانات اللازمة نحو 500 مليار دولار من الإنفاق الرأسمالي سنوياً، وهو ما يقابله، وفق تحليل Bain، نحو 2 تريليون دولار من الإيرادات السنوية.",
+        "حتى مع نقل كل ميزانيات تقنية المعلومات المحلية إلى السحابة وإعادة استثمار الوفورات المتوقعة من الذكاء الاصطناعي، تبقى فجوة في الإيرادات المطلوبة تُقدَّر بنحو 800 مليار دولار.",
+        "تمثّل الطاقة عنق زجاجة رئيسياً في الإمداد، إذ قد يستغرق تشغيل قدرات جديدة للتوليد والنقل والتوزيع في قطاع شديد التنظيم أربع سنوات أو أكثر."
+      ],
+      "why_en": "It puts numbers on the physical and financial limits of AI growth, from power to capital, that sit behind every AI model.",
+      "why_ar": "يضع أرقاماً واضحة للحدود المادية والمالية لنمو الذكاء الاصطناعي، من الطاقة إلى رأس المال، وهي حدود تقف خلف كل نموذج."
+    },
+    {
+      "id": "unesco-resource-efficient-genai-2025",
+      "publisher": "UNESCO (with University College London)",
+      "title_en": "Smarter, Smaller, Stronger: Resource-Efficient Generative AI & the Future of Digital Transformation",
+      "title_ar": "أذكى وأصغر وأقوى: ذكاء اصطناعي توليدي موفّر للموارد ومستقبل التحول الرقمي",
+      "url": "https://www.unesco.org/en/articles/ai-large-language-models-new-report-shows-small-changes-can-reduce-energy-use-90",
+      "published": "2025-07-08",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "generative-ai",
+        "infrastructure",
+        "research"
+      ],
+      "findings_en": [
+        "In tests on open-source language models, UCL researchers found that switching to smaller models built for specific tasks, such as translation or summarization, cut energy use by up to 90% with little loss in quality.",
+        "Trimming both the prompt and the length of the answer saved more than half of the energy.",
+        "Compressing a model with quantization saved up to 44% of energy, and combining techniques cut consumption by up to 75% without hurting accuracy.",
+        "Citing published estimates, the report puts a ChatGPT query at about 0.34 Wh, with roughly 1 billion queries a day. That totals about 310 GWh a year, similar to the yearly electricity use of more than 3 million people in a low-income country."
+      ],
+      "findings_ar": [
+        "في اختبارات على نماذج لغوية مفتوحة المصدر، وجد باحثو UCL أن الانتقال إلى نماذج أصغر مصممة لمهام محددة، كالترجمة أو التلخيص، يخفض استهلاك الطاقة بنسبة تصل إلى 90% دون تراجع يُذكر في الجودة.",
+        "أدى تقصير الأمر وطول الإجابة معاً إلى توفير أكثر من نصف الطاقة المستهلكة.",
+        "وفّر ضغط النموذج بتقنية التكميم (quantization) ما يصل إلى 44% من الطاقة، وخفّض الجمع بين الأساليب الاستهلاك بنسبة تصل إلى 75% دون المساس بالدقة.",
+        "استناداً إلى تقديرات منشورة، يذكر التقرير أن كل طلب في ChatGPT يستهلك نحو 0.34 واط ساعة، مع قرابة مليار طلب يومياً، أي ما يقارب 310 غيغاواط ساعة سنوياً، وهو ما يعادل الاستهلاك السنوي للكهرباء لأكثر من 3 ملايين شخص في دولة منخفضة الدخل."
+      ],
+      "why_en": "It shows practical, low-cost ways to make AI use more energy-efficient, which counts most in places short of energy and water.",
+      "why_ar": "يقدم التقرير طرقاً عملية منخفضة التكلفة لجعل استخدام الذكاء الاصطناعي أكثر كفاءة في الطاقة، وهذا مهم خصوصاً حيث تشح الطاقة والمياه."
+    },
+    {
+      "id": "kpmg-trust-attitudes-use-ai-2025",
+      "publisher": "KPMG International and The University of Melbourne",
+      "title_en": "Trust, attitudes and use of artificial intelligence: A global study 2025",
+      "title_ar": "الثقة والمواقف واستخدام الذكاء الاصطناعي: دراسة عالمية 2025",
+      "url": "https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html",
+      "published": "2025-04",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "adoption",
+        "governance",
+        "skills",
+        "risk"
+      ],
+      "findings_en": [
+        "The survey covered more than 48,000 people in 47 countries. 66% use AI on purpose regularly, but only 46% are willing to trust AI systems.",
+        "58% of employees use AI at work regularly, yet 61% of people have had no AI training.",
+        "70% say AI regulation is needed, and 87% want laws and fact-checking against AI-generated misinformation.",
+        "Emerging economies lead on AI use, trust and literacy. The report names the UAE and Saudi Arabia among six countries where this lead is clearest."
+      ],
+      "findings_ar": [
+        "شمل المسح أكثر من 48,000 شخص في 47 دولة؛ يستخدم 66% منهم الذكاء الاصطناعي بانتظام وعن قصد، لكن 46% فقط مستعدون للثقة في أنظمته.",
+        "يستخدم 58% من الموظفين الذكاء الاصطناعي في العمل بانتظام، بينما لم يتلقَّ 61% من المشاركين أي تدريب عليه.",
+        "يرى 70% أن تنظيم الذكاء الاصطناعي ضروري، ويطالب 87% بقوانين وآليات تحقق لمكافحة المعلومات المضللة المولَّدة بالذكاء الاصطناعي.",
+        "تتصدر الاقتصادات الناشئة في استخدام الذكاء الاصطناعي والثقة به والإلمام بأدواته، ويذكر التقرير الإمارات والسعودية ضمن ست دول يبرز فيها هذا التقدم بوضوح."
+      ],
+      "why_en": "It is one of the largest studies of how the public views and uses AI. It also shows a clear gap between AI adoption and trust or training.",
+      "why_ar": "تُعد من أكبر الدراسات حول نظرة الناس إلى الذكاء الاصطناعي واستخدامهم له، وتكشف فجوة واضحة بين انتشار الاستخدام ومستوى الثقة والتدريب."
+    },
+    {
+      "id": "accenture-tech-vision-2025",
+      "publisher": "Accenture",
+      "title_en": "Technology Vision 2025: AI: A Declaration of Autonomy",
+      "title_ar": "رؤية Accenture للتكنولوجيا 2025: الذكاء الاصطناعي وإعلان الاستقلالية",
+      "url": "https://www.accenture.com/en/insights/technology/technology-trends-2025",
+      "published": "2025-01-07",
+      "access": "free",
+      "region": "global",
+      "topics": [
+        "strategy",
+        "agents",
+        "governance",
+        "adoption",
+        "generative-ai"
+      ],
+      "findings_en": [
+        "The report is based on a survey of 4,021 executives in 28 countries and 21 industries, fielded October-December 2024; the sample includes respondents from the UAE and Saudi Arabia.",
+        "77% of executives believe trust has to come first for AI to deliver its real benefits.",
+        "Only about a third (36%) have scaled generative AI across their organisation, and just 13% see major impact at enterprise level.",
+        "47% expect to make generative AI tools significantly or fully available to employees for automating tasks within three years; another 49% plan partial access.",
+        "The report groups its outlook into four trends: generative AI reshaping enterprise systems, brands standing out in AI-driven interactions, robots powered by foundation models, and a shared learning cycle between people and AI."
+      ],
+      "findings_ar": [
+        "يستند التقرير إلى استطلاع شمل 4,021 تنفيذياً في 28 دولة و21 قطاعاً بين أكتوبر وديسمبر 2024، ومن بينهم مشاركون من الإمارات والسعودية.",
+        "يرى 77% من التنفيذيين أن الثقة شرط أساسي كي يحقق الذكاء الاصطناعي فوائده الحقيقية.",
+        "لم يوسّع استخدام الذكاء الاصطناعي التوليدي على نطاق المؤسسة سوى نحو الثلث (36%)، ولم يلمس أثراً كبيراً على مستوى المؤسسة ككل إلا 13%.",
+        "يتوقع 47% إتاحة أدوات الذكاء الاصطناعي التوليدي للموظفين بشكل واسع أو كامل لأتمتة المهام خلال ثلاث سنوات، ويخطط 49% لإتاحة جزئية.",
+        "يجمع التقرير رؤيته في أربعة اتجاهات: تحوّل الأنظمة المؤسسية بفعل الذكاء الاصطناعي التوليدي، وتمايز العلامات التجارية في تفاعلاتها الذكية، والروبوتات المدعومة بالنماذج الأساسية، ودورة تعلّم مشتركة بين البشر والذكاء الاصطناعي."
+      ],
+      "why_en": "It presents trust (accuracy, predictability, traceability) as the real limit on how much autonomy organisations will hand to AI.",
+      "why_ar": "يطرح الثقة، بما تشمله من دقة وقابلية للتنبؤ وإمكانية للتتبّع، بوصفها الحد الفعلي لمقدار الاستقلالية التي ستمنحها المؤسسات للذكاء الاصطناعي."
+    }
+  ]
+}

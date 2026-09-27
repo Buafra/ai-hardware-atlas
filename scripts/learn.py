@@ -12,6 +12,12 @@ buttons (same localStorage keys as the overview: atlas-lang, atlas-theme).
 Qahwa & AI lessons (qahwa.html, scripts/qahwa.py): a card near the top and a footer link open that page, and a concept's
 lesson chips show only the lessons already published there (qahwa.page_doc()), each linking to qahwa.html#lesson-NN. A
 lesson that is not published yet is never named, and a concept with none published has no lessons block at all.
+
+Reports (data/learn/reports.json, the third tab «التقارير»): free AI reports from consultancies, research bodies and
+UAE/GCC sources, summarised in our own words (3 to 5 findings and a "why it matters" line in English and Arabic), each
+linking to the publisher's own official page. Only publishers on REPORT_PUBLISHERS are accepted, and a report's links
+must be https on that publisher's domains; reports carry text and links only (no images, logos, charts or private
+notes: the evidence for each report is kept outside this repository). The content policy guard covers them too.
 """
 import argparse
 import ast
@@ -20,6 +26,7 @@ import json
 import re
 import sys
 import types
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -69,6 +76,15 @@ def site():
 def load(data_dir=DATA):
     read = lambda name: json.loads((Path(data_dir) / name).read_text(encoding='utf-8'))
     return read('concepts.json'), read('stacks.json')
+
+REPORTS = 'reports.json'
+
+def load_reports(data_dir=DATA):
+    """data/learn/reports.json ({"reports": [...]}); no file means no reports yet."""
+    try:
+        return json.loads((Path(data_dir) / REPORTS).read_text(encoding='utf-8'))
+    except FileNotFoundError:
+        return {'reports': []}
 
 LEVELS = {'beginner': ('Beginner', 'مبتدئ'), 'intermediate': ('Intermediate', 'متوسط'), 'advanced': ('Advanced', 'متقدم')}
 KINDS = ('stack', 'foundation')
@@ -300,11 +316,12 @@ def _sources(x, where, errs):
         if not (isinstance(s, dict) and _filled(s.get('label')) and _https(s.get('url'))):
             errs.append(f'{where}.sources[{j}] needs a label and an https url')
 
-def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXED_CONTENT):
+def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXED_CONTENT, reports_doc=None):
     """Raise LearnDataError listing every problem: ids, bilingual text, cross references, links, hardware and UAE fact
-    ids, and the content policy guard (policy_problems) over the Learn text and the fixed pages in fixed_paths.
-    fact_ids defaults to the facts in data/uae.json."""
+    ids, the reports (report_problems) and the content policy guard (policy_problems) over the Learn text and the fixed
+    pages in fixed_paths. fact_ids defaults to the facts in data/uae.json, reports_doc to data/learn/reports.json."""
     errs = policy_problems(concepts_doc, 'concepts') + policy_problems(stacks_doc, 'stacks') + fixed_content_problems(fixed_paths)
+    errs += report_problems(load_reports() if reports_doc is None else reports_doc)
     fact_ids = uae_fact_ids() if fact_ids is None else set(fact_ids)
     groups, concepts = concepts_doc.get('groups') or [], concepts_doc.get('concepts') or []
     stacks = stacks_doc.get('stacks') or []
@@ -454,6 +471,7 @@ NOUNS = {
     'concept': (('concept', 'concepts'), ('مفهوم واحد', 'مفهومان', 'مفاهيم', 'مفهوماً', 'مفهوم')),
     'stack': (('AI stack', 'AI stacks'), ('تركيبة واحدة', 'تركيبتان', 'تركيبات', 'تركيبة', 'تركيبة')),
     'foundation': (('foundation', 'foundations'), ('أساس واحد', 'أساسان', 'أسس', 'أساساً', 'أساس')),
+    'report': (('report', 'reports'), ('تقرير واحد', 'تقريران', 'تقارير', 'تقريراً', 'تقرير')),
 }
 
 def cnt(n, kind, lang):
@@ -571,10 +589,272 @@ def stack_item(s, by_stack, by_concept, home):
             f'<span class="it-sum">{T(s, "summary")}</span></summary>'
             f'<div class="it-body">{body}</div></details>')
 
+# ---------- reports ----------
+# Publishers whose reports may be listed, and the domains their official pages live on. A report's url (and its
+# arabic_version_url) must be https on one of these domains or a subdomain of one: the publisher's own page, never a
+# copy hosted elsewhere. To add a publisher, add it here first: (link name, publisher group, own domains).
+REPORT_ORGS = {
+    'mckinsey': ('McKinsey', 'consultancies', ('mckinsey.com',)),
+    'bcg': ('BCG', 'consultancies', ('bcg.com',)),
+    'bain': ('Bain & Company', 'consultancies', ('bain.com',)),
+    'accenture': ('Accenture', 'consultancies', ('accenture.com',)),
+    'deloitte': ('Deloitte', 'consultancies', ('deloitte.com',)),
+    'pwc': ('PwC', 'consultancies', ('pwc.com',)),
+    'kpmg': ('KPMG', 'consultancies', ('kpmg.com',)),
+    'ey': ('EY', 'consultancies', ('ey.com',)),
+    'stanford-hai': ('Stanford HAI', 'research', ('hai.stanford.edu',)),
+    'wef': ('World Economic Forum', 'research', ('weforum.org',)),
+    'oecd': ('OECD', 'research', ('oecd.org',)),
+    'unesco': ('UNESCO', 'research', ('unesco.org',)),
+    'dff': ('Dubai Future Foundation', 'gcc', ('dubaifuture.ae',)),
+    'uae-ai-office': ('UAE AI Office', 'gcc', ('ai.gov.ae',)),
+}
+# The publisher line exactly as a report states it -> its organisation in REPORT_ORGS.
+REPORT_PUBLISHERS = {
+    'McKinsey & Company': 'mckinsey',
+    'McKinsey & Company (QuantumBlack, AI by McKinsey)': 'mckinsey',
+    'McKinsey Global Institute': 'mckinsey',
+    'Boston Consulting Group (BCG)': 'bcg',
+    'Bain & Company': 'bain',
+    'Accenture': 'accenture',
+    'Deloitte AI Institute': 'deloitte',
+    'Deloitte Insights': 'deloitte',
+    'Deloitte Middle East': 'deloitte',
+    'PwC': 'pwc',
+    'PwC Middle East': 'pwc',
+    'KPMG International': 'kpmg',
+    'KPMG International and The University of Melbourne': 'kpmg',
+    'EY': 'ey',
+    'Stanford HAI (Stanford Institute for Human-Centered Artificial Intelligence)': 'stanford-hai',
+    'World Economic Forum (with Bain & Company)': 'wef',
+    'World Economic Forum (with Accenture)': 'wef',
+    'World Economic Forum (with PwC)': 'wef',
+    'OECD': 'oecd',
+    'UNESCO (with University College London)': 'unesco',
+    'Dubai Future Foundation with IBM Institute for Business Value': 'dff',
+    'UAE Artificial Intelligence, Digital Economy & Remote Work Applications Office (UAE AI Office)': 'uae-ai-office',
+}
+# The source filter. A report about the UAE or the GCC goes under "UAE & GCC" whoever published it.
+REPORT_GROUPS = (('consultancies', 'Consultancies', 'الشركات الاستشارية'),
+                 ('research', 'Research &amp; global bodies', 'جهات بحثية ودولية'),
+                 ('gcc', 'UAE &amp; GCC', 'الإمارات ودول الخليج'))
+REPORT_ACCESS = {'free': ('Free', 'مجاني'), 'free-registration': ('Free, registration required', 'مجاني، يتطلب التسجيل')}
+REPORT_REGIONS = {'global': ('Global', 'عالمي'), 'gcc': ('GCC', 'دول الخليج'), 'uae': ('UAE', 'الإمارات')}
+REPORT_TOPICS = {
+    'adoption': ('Adoption', 'التبنّي'),
+    'agents': ('AI agents', 'الوكلاء الذكيون'),
+    'strategy': ('Strategy', 'الاستراتيجية'),
+    'investment': ('Investment', 'الاستثمار'),
+    'governance': ('Governance', 'الحوكمة'),
+    'risk': ('Risk', 'المخاطر'),
+    'workforce': ('Workforce', 'القوى العاملة'),
+    'skills': ('Skills', 'المهارات'),
+    'economy': ('Economy', 'الاقتصاد'),
+    'generative-ai': ('Generative AI', 'الذكاء الاصطناعي التوليدي'),
+    'infrastructure': ('Infrastructure', 'البنية التحتية'),
+    'public-sector': ('Public sector', 'القطاع الحكومي'),
+    'research': ('Research', 'البحث العلمي'),
+}
+REPORT_KEYS = ('id', 'publisher', 'title_en', 'title_ar', 'url', 'arabic_version_url', 'published', 'access', 'region', 'topics',
+               'findings_en', 'findings_ar', 'why_en', 'why_ar')
+REPORT_REQUIRED = tuple(k for k in REPORT_KEYS if k != 'arabic_version_url')
+PUBLISHED = re.compile(r'^(\d{4})-(0[1-9]|1[0-2])(?:-(\d{2}))?$')  # as the publisher states it: a day, or the month alone
+FINDINGS_MIN, FINDINGS_MAX = 3, 5
+TEXT_MAX = 320  # characters per finding or "why it matters" line: short summaries, not excerpts
+QUOTE_MAX_WORDS = 6  # a quoted phrase in the English text stays a few words long; everything else is in our own words
+QUOTED = re.compile(r'"([^"]+)"|“([^”]+)”|‘([^’]+)’|(?<!\w)\'([^\']+)\'(?!\w)')
+
+def report_org(r):
+    """(link name, publisher group, domains) of a report's publisher; None when it is not on the allow-list."""
+    key = REPORT_PUBLISHERS.get(r.get('publisher')) if isinstance(r, dict) else None
+    return REPORT_ORGS.get(key)
+
+def report_group(r):
+    """The source filter a report belongs to: 'gcc' for a report about the UAE or the GCC, else its publisher's group."""
+    return 'gcc' if r.get('region') in ('uae', 'gcc') else report_org(r)[1]
+
+def _on_domain(url, domains):
+    host = (urlparse(str(url or '')).hostname or '').lower().rstrip('.')
+    return any(host == d or host.endswith('.' + d) for d in domains)
+
+def _published_date(value):
+    """(date, has_day) for YYYY-MM-DD or YYYY-MM; None when it is not a real date in one of those forms."""
+    m = PUBLISHED.match(str(value or ''))
+    if not m:
+        return None
+    try:
+        return date(int(m.group(1)), int(m.group(2)), int(m.group(3) or 1)), bool(m.group(3))
+    except ValueError:
+        return None
+
+def report_sort_key(r):
+    """Newest first sorts on this (reverse); a month-only date counts as the first of that month."""
+    d = _published_date(r.get('published'))
+    return (d[0] if d else date.min, r.get('id') or '')
+
+def sorted_reports(reports_doc):
+    return sorted((reports_doc or {}).get('reports') or [], key=report_sort_key, reverse=True)
+
+def _quotes(text, where, errs):
+    for m in QUOTED.finditer(str(text or '')):
+        q = next(g for g in m.groups() if g is not None)
+        if len(q.split()) > QUOTE_MAX_WORDS:
+            errs.append(f'{where} quotes {len(q.split())} words ({q[:40]!r}); put it in our own words or quote at most {QUOTE_MAX_WORDS}')
+
+def report_problems(doc, today=None):
+    """Every problem in the reports document (empty when it is fine): fields, ids, bilingual text, 3 to 5 findings, the
+    access/region/topic values, dates, the publisher allow-list and its own domains, text length, short quotes only,
+    and the content policy guard."""
+    if not isinstance(doc, dict) or not isinstance(doc.get('reports'), list):
+        return ['reports.json must be {"reports": [...]}']
+    reports = doc['reports']
+    if not all(isinstance(r, dict) for r in reports):
+        return ['every report must be an object']
+    today = today or date.today()
+    errs = policy_problems(doc, 'reports')
+    _ids(reports, 'report', errs)
+    _walk(doc, 'reports', errs)
+    seen_urls = {}
+    for r in reports:
+        at = f'report {r.get("id")}'
+        extra = sorted(set(r) - set(REPORT_KEYS))
+        if extra:
+            errs.append(f'{at}: unknown field(s) {extra}; a report carries text and links only '
+                        '(no images, logos, charts, page references or private notes)')
+        for k in REPORT_REQUIRED:
+            if k not in r:
+                errs.append(f'{at}: {k} missing')
+        org = report_org(r)
+        if not _filled(r.get('publisher')):
+            errs.append(f'{at}: publisher is empty')
+        elif org is None:
+            errs.append(f'{at}: publisher {r["publisher"]!r} is not on the allow-list (REPORT_PUBLISHERS in scripts/learn.py)')
+        for k in ('url', 'arabic_version_url'):
+            if k not in r:
+                continue
+            if not _https(r[k]):
+                if k != 'url':  # _walk already reports a url that is not https
+                    errs.append(f'{at}: {k} must be an https URL: {r[k]!r}')
+            elif org and not _on_domain(r[k], org[2]):
+                errs.append(f'{at}: {k} {r[k]!r} is not on the publisher\'s own domain ({", ".join(org[2])})')
+        if _filled(r.get('url')):
+            if r['url'] in seen_urls:
+                errs.append(f'{at}: url is the same as report {seen_urls[r["url"]]}\'s')
+            seen_urls.setdefault(r['url'], r.get('id'))
+        d = _published_date(r.get('published'))
+        if d is None:
+            errs.append(f'{at}: published must be a real date as YYYY-MM-DD or YYYY-MM, not {r.get("published")!r}')
+        elif d[0] > today:
+            errs.append(f'{at}: published {r["published"]} is in the future')
+        if r.get('access') not in REPORT_ACCESS:
+            errs.append(f'{at}: access must be one of {tuple(REPORT_ACCESS)}')
+        if r.get('region') not in REPORT_REGIONS:
+            errs.append(f'{at}: region must be one of {tuple(REPORT_REGIONS)}')
+        topics = r.get('topics')
+        if not (isinstance(topics, list) and topics and all(isinstance(t, str) and t in REPORT_TOPICS for t in topics)
+                and len(set(topics)) == len(topics)):
+            errs.append(f'{at}: topics must be a non-empty list of distinct topics from {tuple(REPORT_TOPICS)}')
+        for lang in ('en', 'ar'):
+            f = r.get(f'findings_{lang}')
+            if not isinstance(f, list):
+                if f is not None:
+                    errs.append(f'{at}: findings_{lang} must be a list')
+                f = []
+            elif not FINDINGS_MIN <= len(f) <= FINDINGS_MAX:
+                errs.append(f'{at}: findings_{lang} has {len(f)} findings; give {FINDINGS_MIN} to {FINDINGS_MAX}')
+            for j, x in enumerate(f):
+                if isinstance(x, str) and len(x) > TEXT_MAX:
+                    errs.append(f'{at}: findings_{lang}[{j}] is {len(x)} characters; keep it under {TEXT_MAX}')
+            w = r.get(f'why_{lang}')
+            if not isinstance(w, str):
+                if w is not None:
+                    errs.append(f'{at}: why_{lang} must be text')
+            elif len(w) > TEXT_MAX:
+                errs.append(f'{at}: why_{lang} is {len(w)} characters; keep it under {TEXT_MAX}')
+        for k in ('title_en', 'why_en'):
+            _quotes(r.get(k), f'{at}: {k}', errs)
+        for j, x in enumerate(r.get('findings_en') if isinstance(r.get('findings_en'), list) else []):
+            _quotes(x, f'{at}: findings_en[{j}]', errs)
+        _arabic_prose(r, ('findings', 'why'), at, errs)
+    return errs
+
+def report_date(value, lang):
+    """'25 August 2026' / '25 أغسطس 2026', or the month alone when the publisher gives no day."""
+    d = _published_date(value)
+    if not d:
+        return ''
+    day, has_day = d
+    text = f'{(AR_MONTHS if lang == "ar" else EN_MONTHS_FULL)[day.month - 1]} {day.year}'
+    return f'{day.day} {text}' if has_day else text
+
+def report_item(r):
+    name = f'<bdi lang="en" dir="ltr">{esc(report_org(r)[0])}</bdi>'
+    region, access = r['region'], r['access']
+    badges = (f'<span class="rb rb-{esc(region)}">{L(*REPORT_REGIONS[region])}</span>'
+              f'<span class="rb rb-{esc(access)}">{L(*REPORT_ACCESS[access])}</span>')
+    meta = (f'<span class="r-meta"><bdi class="r-pub" lang="en" dir="ltr">{esc(r["publisher"])}</bdi>'
+            f'<span class="r-dot" aria-hidden="true">·</span><time datetime="{esc(r["published"])}">'
+            f'{L(report_date(r["published"], "en"), report_date(r["published"], "ar"))}</time></span>')
+    why = L(f'<b>Why it matters:</b> {esc(r["why_en"])}', f'<b>لماذا يهمّ:</b> {esc(r["why_ar"])}')
+    topics = ''.join(f'<li>{L(*REPORT_TOPICS[t])}</li>' for t in r['topics'])
+    links = f'<a class="r-link" href="{esc(r["url"])}" {OUT_LINK}>{L(f"Read the report on {name}", f"اقرأ التقرير على موقع {name}")}</a>'
+    if r.get('arabic_version_url'):
+        links += (f'<a class="r-link r-alt" href="{esc(r["arabic_version_url"])}" hreflang="ar" {OUT_LINK}>'
+                  f'{L(f"Arabic version on {name}", f"النسخة العربية على موقع {name}")}</a>')
+    reg = B('p', 'The summary page is free to read; the full download asks you to fill in a form.',
+            'صفحة الملخص متاحة مجاناً، أما تنزيل التقرير كاملاً فيتطلب تعبئة نموذج.', 'it-p r-reg') if access == 'free-registration' else ''
+    body = (sec('Key findings', 'أبرز النتائج', bullets(r, 'findings'))
+            + sec('Topics', 'المواضيع', f'<ul class="r-topics">{topics}</ul>')
+            + f'<div class="r-links">{links}</div>{reg}')
+    return (f'<details class="l-item l-report" id="report/{esc(r["id"])}" data-group="{esc(report_group(r))}" '
+            f'data-topics="{esc(" ".join(r["topics"]))}" data-year="{esc(r["published"][:4])}">'
+            f'<summary><span class="it-head"><h4 class="it-t">{T(r, "title")}</h4>{badges}</span>{meta}'
+            f'<span class="it-sum">{why}</span></summary>'
+            f'<div class="it-body">{body}</div></details>')
+
+def report_select(dim, label, all_label, options):
+    """A <select> for one report filter. learn.js rewrites the option texts in the page language with live counts."""
+    opt = lambda v, en, ar, n: f'<option value="{esc(v)}" data-en="{en}" data-ar="{ar}">{en} ({n})</option>'
+    return (f'<label class="r-sel"><span class="r-sel-l">{L(*label)}</span><select class="inp" id="r-{dim}" data-dim="{dim}">'
+            f'<option value="" data-en="{all_label[0]}" data-ar="{all_label[1]}">{all_label[0]}</option>'
+            + ''.join(opt(*o) for o in options) + '</select></label>')
+
+def reports_panel(reports, home='index.html'):
+    chip_row = filter_chip('', L('All sources', 'كل المصادر'), len(reports), 'group') + ''.join(
+        filter_chip(g, L(en, ar), sum(report_group(r) == g for r in reports), 'group') for g, en, ar in REPORT_GROUPS)
+    topics = sorted(((t, en, ar, sum(t in r['topics'] for r in reports)) for t, (en, ar) in REPORT_TOPICS.items()), key=lambda o: -o[3])
+    years = sorted({r['published'][:4] for r in reports}, reverse=True)
+    selects = (f'<div class="r-selects js-only">'
+               + report_select('topic', ('Topic', 'الموضوع'), ('All topics', 'كل المواضيع'), [o for o in topics if o[3]])
+               + report_select('year', ('Year', 'السنة'), ('All years', 'كل السنوات'),
+                               [(y, y, y, sum(r['published'][:4] == y for r in reports)) for y in years]) + '</div>')
+    lead = L('Free reports on AI from consultancies, research bodies and UAE and GCC sources, summarised in our own words, '
+             'each with a link to its official page.',
+             'تقارير مجانية عن الذكاء الاصطناعي من شركات استشارية وجهات بحثية ومصادر إماراتية وخليجية، نلخّصها بأسلوبنا، '
+             'مع رابط إلى الصفحة الرسمية لكل تقرير.')
+    contact = esc(home) + '#contact'
+    note = L('These summaries are ours and may simplify. Each report and its findings belong to its publisher, and figures are '
+             'given as the report states them. Read the full report on the publisher&#x27;s site before you rely on it. '
+             'Summaries were written with AI and checked against each report. Cipher Lacuna is not affiliated with or endorsed by '
+             'these publishers; their names are used only to identify the reports. Publishers can ask us to correct or remove a '
+             f'summary through our <a href="{contact}">contact page</a>.',
+             'هذه الملخصات من إعدادنا وقد تبسّط بعض التفاصيل. كل تقرير ونتائجه ملك لناشره، والأرقام كما وردت فيه. '
+             'راجع التقرير كاملاً على موقع الناشر قبل الاعتماد عليه. '
+             'كُتبت الملخصات بالذكاء الاصطناعي وروجعت على نص كل تقرير. لا يرتبط Cipher Lacuna بهذه الجهات ولا يحظى بتأييدها، '
+             'ونذكر أسماءها للتعريف بالتقارير فقط. ويمكن للناشرين طلب تصحيح ملخص أو حذفه عبر '
+             f'<a href="{contact}">صفحة التواصل</a>.')
+    empty = '' if reports else f'<p class="l-empty">{L("No reports yet.", "لا توجد تقارير بعد.")}</p>'
+    return (f'<section id="reports" class="l-panel" data-panel="reports" aria-labelledby="reports-h">'
+            f'<div class="p-intro"><h2 id="reports-h">{L("Reports", "التقارير")}</h2><p>{lead}</p></div>'
+            f'{filters("Filter reports by source", "تصفية التقارير حسب المصدر", chip_row)}{selects}'
+            f'<div class="l-items r-items">{"".join(report_item(r) for r in reports)}</div>{empty}'
+            f'<p class="muted r-note">{note}</p></section>')
+
 # ---------- page ----------
 
-def filter_chip(value, label, n):
-    return (f'<button type="button" class="fchip" data-filter="{esc(value)}" aria-pressed="{"true" if not value else "false"}">'
+def filter_chip(value, label, n, dim=''):
+    d = f' data-dim="{esc(dim)}"' if dim else ''
+    return (f'<button type="button" class="fchip" data-filter="{esc(value)}"{d} aria-pressed="{"true" if not value else "false"}">'
             f'{label} <span class="n">{n}</span></button>')
 
 def filters(aria_en, aria_ar, chips_html):
@@ -620,7 +900,7 @@ TAGLINE = ('Decoding the gaps in AI knowledge', 'كشف المجهول في عا
 # Before first paint: theme, language (same keys and ?lang= rule as the overview) and the open tab, so nothing flashes.
 HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null,l=null,q=null;try{t=localStorage.getItem('atlas-theme');l=localStorage.getItem('atlas-lang')}catch(e){}"
                "if(t==='light'||t==='dark')d.dataset.theme=t;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}if(q)l=q;"
-               "if(l==='ar'){d.lang='ar';d.dir='rtl'}d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':'concepts'})(document.documentElement)")
+               "if(l==='ar'){d.lang='ar';d.dir='rtl'}d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':/^#report/.test(location.hash)?'reports':'concepts'})(document.documentElement)")
 
 QAHWA_PAGE = qahwa.PAGE
 
@@ -633,10 +913,13 @@ def lessons_doc_safe():
         print(f'learn: Qahwa & AI data unreadable, no lesson chips ({type(e).__name__}: {e})', file=sys.stderr)
         return qahwa.empty_doc()
 
-def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None):
+def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None):
     """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to.
-    lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips)."""
+    lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips).
+    reports_doc: the Reports tab's data (default: data/learn/reports.json), shown newest first."""
     lessons_doc = lessons_doc if lessons_doc is not None else qahwa.empty_doc()
+    reports = sorted_reports(load_reports() if reports_doc is None else reports_doc)
+    n_r = len(reports)
     any_lesson = any(published_lessons(c, lessons_doc) for c in concepts_doc['concepts'])
     s = site()
     icon = lambda k: s.ICON.get(k, '')
@@ -654,7 +937,8 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
               '<bdi class="handle" lang="en">@qahwa.w.ai</bdi></a>')
     learn_name = L('Learn AI', 'تعلّم الذكاء الاصطناعي')
     desc = (f'Learn AI with Cipher Lacuna: {n_c} key AI concepts in plain language with best practices, and {n_core} recommended AI stacks '
-            f'with local, cloud and UAE-hosted options, plus {cnt(n_found, "foundation", "en")} that apply to every stack, in English and Arabic.')
+            f'with local, cloud and UAE-hosted options, plus {cnt(n_found, "foundation", "en")} that apply to every stack, and '
+            f'{cnt(n_r, "report", "en")} on AI from consultancies and research bodies summarised in our own words, in English and Arabic.')
     og_alt = 'Cipher Lacuna cube logo with the tagline Decoding the gaps in AI knowledge, in English and Arabic'
     head = (f'<!doctype html>\n<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7"><title>{esc(TITLE["en"])}</title>'
@@ -686,7 +970,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     lead = L('Plain-language guides to the ideas behind today\'s AI, and recommended stacks for building with it: local, cloud and UAE-hosted options, each with its sources.',
              'شروح واضحة للأفكار التي يقوم عليها الذكاء الاصطناعي اليوم، وتركيبات تقنية موصى بها للبناء به: خيارات محلية وسحابية ومستضافة في الإمارات، ولكل منها مصادرها.')
     status = (f'<p class="statusbar"><span>{L(esc(cnt(n_c, "concept", "en")), cnt(n_c, "concept", "ar"))} · {L(esc(cnt(n_core, "stack", "en")), cnt(n_core, "stack", "ar"))} · '
-              f'{L(esc(cnt(n_found, "foundation", "en")), cnt(n_found, "foundation", "ar"))}</span>'
+              f'{L(esc(cnt(n_found, "foundation", "en")), cnt(n_found, "foundation", "ar"))} · {L(esc(cnt(n_r, "report", "en")), cnt(n_r, "report", "ar"))}</span>'
               + (f'<span><b>{L("Content as of", "المحتوى وفق معلومات")}</b> {L(month(latest, "en"), month(latest, "ar"))}</span>' if latest else '') + '</p>')
     ihead = (f'<div class="ihead ih-learn"><nav class="crumbs" aria-label="Breadcrumb" data-aria-ar="مسار التنقل"><a href="{h}">{L("Overview", "الرئيسية")}</a>'
              f'<span aria-hidden="true">/</span><span aria-current="page">{learn_name}</span></nav>'
@@ -694,9 +978,11 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
              f'<div class="ihead-acts"><a class="back" href="{h}">{icon("back")}<span>{L("Back to overview", "العودة إلى الرئيسية")}</span></a>{follow}</div></div>{status}</div>')
     tools = (f'<div class="l-tools"><nav class="l-tabs" aria-label="Learn AI sections" data-aria-ar="أقسام تعلّم الذكاء الاصطناعي">'
              f'<a class="l-tab" href="#concepts" data-tab="concepts">{L("Concepts", "المفاهيم")} <span class="n" data-count="concepts">{n_c}</span></a>'
-             f'<a class="l-tab" href="#stacks" data-tab="stacks">{L("AI stacks", "التركيبات التقنية")} <span class="n" data-count="stacks">{n_core}</span></a></nav>'
-             f'<label class="l-search js-only"><span class="sr-only">{L("Search concepts and stacks", "ابحث في المفاهيم والتركيبات")}</span>'
-             f'<input id="lq" class="inp" type="search" autocomplete="off" spellcheck="false" placeholder="Search concepts and stacks…" data-ph-ar="ابحث في المفاهيم والتركيبات…"></label></div>'
+             f'<a class="l-tab" href="#stacks" data-tab="stacks"><span class="t-full">{L("AI stacks", "التركيبات التقنية")}</span>'
+             f'<span class="t-short" aria-hidden="true">{L("Stacks", "التركيبات")}</span> <span class="n" data-count="stacks">{n_core}</span></a>'
+             f'<a class="l-tab" href="#reports" data-tab="reports">{L("Reports", "التقارير")} <span class="n" data-count="reports">{n_r}</span></a></nav>'
+             f'<label class="l-search js-only"><span class="sr-only">{L("Search concepts, stacks and reports", "ابحث في المفاهيم والتركيبات والتقارير")}</span>'
+             f'<input id="lq" class="inp" type="search" autocomplete="off" spellcheck="false" placeholder="Search concepts, stacks and reports…" data-ph-ar="ابحث في المفاهيم والتركيبات والتقارير…"></label></div>'
              f'<p class="l-count js-only" id="l-count" aria-live="polite"></p>'
              f'<p class="l-empty" id="l-empty" hidden>{L("No matches. Try another word or clear the search.", "لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.")}</p>')
     lesson_note = (('Qahwa &amp; AI lesson links open the lesson on the Qahwa &amp; AI lessons page.',
@@ -716,7 +1002,8 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
         f'<a class="xcard{cls}" href="{h}#{v}"><span class="p-icon" aria-hidden="true">{ic}</span><span><b>{name}</b><span class="x-sub">{sub}</span></span><span class="x-arr">{arrow}</span></a>'
         for v, cls, ic, name, sub in cards) + '</nav>')
     main = (f'<main id="main" tabindex="-1"><div class="wrap">\n{ihead}\n{qcard}\n{tools}\n'
-            f'{concepts_panel(groups, concepts, home, lessons_doc)}\n{stacks_panel(stacks, concepts, home)}\n{note}\n{xnav}\n</div></main>\n')
+            f'{concepts_panel(groups, concepts, home, lessons_doc)}\n{stacks_panel(stacks, concepts, home)}\n{reports_panel(reports, home)}\n'
+            f'{note}\n{xnav}\n</div></main>\n')
     footer = (f'<footer class="foot"><div class="wrap foot-in"><div><p class="foot-brand"><a class="brand" href="{h}"><span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span></a></p>'
               f'<p class="foot-tag">{L(*TAGLINE)}</p><p><bdi lang="en">© {esc(year)} Cipher Lacuna.</bdi> {L("All rights reserved.", "جميع الحقوق محفوظة.")}</p>'
               f'<p>{L("Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.", "صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.")}</p></div>\n'
@@ -749,9 +1036,11 @@ def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, u
     """Validate the learn data and write <out_dir>/learn.html plus the brand PNGs it links (brand/). Returns the page path.
     lessons_doc: the published Qahwa & AI posts (default: lessons_doc_safe(), from data/qahwa.json)."""
     concepts_doc, stacks_doc = load(data_dir)
+    reports_doc = load_reports(data_dir)
     catalog = json.loads(Path(catalog_path).read_text(encoding='utf-8'))
-    validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path))
-    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc_safe() if lessons_doc is None else lessons_doc)
+    validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path), reports_doc=reports_doc)
+    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc_safe() if lessons_doc is None else lessons_doc,
+                  reports_doc=reports_doc)
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     target = out_dir / PAGE
@@ -769,7 +1058,7 @@ def main():
     st = stacks_doc['stacks']
     core = sum(s['kind'] != 'foundation' for s in st)
     print(f'Built {path.name}: {len(concepts_doc["concepts"])} concepts in {len(concepts_doc["groups"])} groups, '
-          f'{core} stacks + {len(st) - core} foundations, {path.stat().st_size / 1024:.0f} KB')
+          f'{core} stacks + {len(st) - core} foundations, {len(load_reports()["reports"])} reports, {path.stat().st_size / 1024:.0f} KB')
 
 if __name__ == '__main__':
     main()

@@ -1,8 +1,9 @@
 (function () {
   'use strict';
   // Learn AI page. Everything is already in the HTML in both languages; this adds the tabs, topic filters, search,
-  // deep links (#concept/<id>, #stack/<id>, #group/<id>, #concepts, #stacks) and the language and theme buttons, which share their
-  // localStorage keys with the overview page (atlas-lang, atlas-theme).
+  // deep links (#concept/<id>, #stack/<id>, #report/<id>, #group/<id>, #concepts, #stacks, #reports) and the language and
+  // theme buttons, which share their localStorage keys with the overview page (atlas-lang, atlas-theme).
+  // Reports have three filters at once (source chips, topic and year menus); each choice counts what it would show.
   const d = document.documentElement;
   const $ = id => document.getElementById(id);
   const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}}, set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
@@ -13,7 +14,8 @@
   const NOUN = {
     concepts: {en: ['concept', 'concepts'], ar: ['مفهوم واحد', 'مفهومان', 'مفاهيم', 'مفهوماً', 'مفهوم']},
     stacks: {en: ['AI stack', 'AI stacks'], ar: ['تركيبة واحدة', 'تركيبتان', 'تركيبات', 'تركيبة', 'تركيبة']},
-    foundations: {en: ['foundation', 'foundations'], ar: ['أساس واحد', 'أساسان', 'أسس', 'أساساً', 'أساس']}
+    foundations: {en: ['foundation', 'foundations'], ar: ['أساس واحد', 'أساسان', 'أسس', 'أساساً', 'أساس']},
+    reports: {en: ['report', 'reports'], ar: ['تقرير واحد', 'تقريران', 'تقارير', 'تقريراً', 'تقرير']}
   };
   // Number + noun with English plurals and Arabic number agreement (same rule as cnt() in scripts/learn.py).
   function count(n, kind) {
@@ -26,10 +28,14 @@
   }
   let lang = d.lang === 'ar' ? 'ar' : 'en';
   let theme = store.get('atlas-theme') || 'auto';
-  let tab = d.dataset.ltab === 'stacks' ? 'stacks' : 'concepts';
-  const filter = {concepts: '', stacks: ''};
-  const panels = {concepts: $('concepts'), stacks: $('stacks')};
-  const items = {concepts: [...panels.concepts.querySelectorAll('.l-item')], stacks: [...panels.stacks.querySelectorAll('.l-item')]};
+  const TABS = ['concepts', 'stacks', 'reports'];
+  let tab = TABS.includes(d.dataset.ltab) ? d.dataset.ltab : 'concepts';
+  const noReportFilter = () => ({group: '', topic: '', year: ''});
+  const filter = {concepts: '', stacks: '', reports: noReportFilter()};
+  const panels = {}, items = {};
+  TABS.forEach(p => { panels[p] = $(p); items[p] = panels[p] ? [...panels[p].querySelectorAll('.l-item')] : []; });
+  // What each report filter reads from a report card: its source group, its topics and its year.
+  const DIMS = {group: el => [el.dataset.group], topic: el => (el.dataset.topics || '').split(' '), year: el => [el.dataset.year]};
   const search = $('lq');
   const empty = $('l-empty');
   // The stacks tab holds the AI stacks (data-group="core") and the foundations; its badge counts the AI stacks, as the
@@ -61,7 +67,7 @@
   }
 
   function setTab(t) {
-    tab = t === 'stacks' ? 'stacks' : 'concepts';
+    tab = TABS.includes(t) && panels[t] ? t : 'concepts';
     d.dataset.ltab = tab;
     document.querySelectorAll('.l-tab').forEach(a => { if (a.dataset.tab === tab) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
     apply();
@@ -95,15 +101,53 @@
       const badge = document.querySelector(`.l-tab [data-count="${p}"]`);
       if (badge) badge.textContent = String(matches);
     }
+    if (panels.reports) shown.reports = applyReports(found);
     const total = items[tab].length, n = shown[tab];
     const narrowed = n !== total;
     // Only while a search or topic filter narrows the list (the tab badge already shows the total).
     $('l-count').textContent = !narrowed ? ''
       : lang === 'ar' ? `عدد النتائج ${n} من أصل ${ofTotal(tab)}` : `Showing ${n} of ${ofTotal(tab)}`;
-    // "No matches" sits where the items would be: under the open tab's topic chips.
-    const chips = panels[tab].querySelector('.l-filter');
+    // "No matches" sits where the items would be: under the open tab's topic chips (or the report menus).
+    const chips = [...panels[tab].querySelectorAll('.l-filter, .r-selects')].pop();
     if (chips && chips.nextElementSibling !== empty) chips.after(empty);
     empty.hidden = n > 0;
+  }
+  // Reports: a card shows when it matches the search and all three filters. Each chip and menu option counts the cards
+  // it would show with the search and the other two filters as they are.
+  function applyReports(found) {
+    const f = filter.reports, keys = Object.keys(DIMS);
+    const pass = (el, skip) => keys.every(k => k === skip || !f[k] || DIMS[k](el).includes(f[k]));
+    const hits = {group: {}, topic: {}, year: {}};
+    let n = 0, matches = 0;
+    for (const el of items.reports) {
+      const hit = found(el), ok = hit && pass(el);
+      el.hidden = !ok;
+      if (ok) n++;
+      if (!hit) continue;
+      matches++;
+      for (const k of keys) {
+        if (!pass(el, k)) continue;
+        hits[k][''] = (hits[k][''] || 0) + 1;
+        DIMS[k](el).forEach(v => { hits[k][v] = (hits[k][v] || 0) + 1; });
+      }
+    }
+    panels.reports.querySelectorAll('.fchip').forEach(b => {
+      const k = b.dataset.dim || 'group';
+      b.setAttribute('aria-pressed', String(b.dataset.filter === f[k]));
+      const c = b.querySelector('.n');
+      if (c) c.textContent = String(hits[k][b.dataset.filter] || 0);
+    });
+    panels.reports.querySelectorAll('select[data-dim]').forEach(s => {
+      const k = s.dataset.dim;
+      if (s.value !== f[k]) s.value = f[k];
+      [...s.options].forEach(o => {
+        const label = (lang === 'ar' ? o.dataset.ar : o.dataset.en) || o.value;
+        o.textContent = o.value ? `${label} (${hits[k][o.value] || 0})` : label;
+      });
+    });
+    const badge = document.querySelector('.l-tab [data-count="reports"]');
+    if (badge) badge.textContent = String(matches);
+    return n;
   }
 
   // Links back to the overview (the brand link's page: index.html, or the standalone file's name) and their original hrefs.
@@ -149,7 +193,7 @@
   function go(hash, userAction) {
     let h = String(hash || '').replace(/^#/, '');
     try { h = decodeURIComponent(h); } catch (e) {}
-    if (h === 'concepts' || h === 'stacks') {
+    if (TABS.includes(h) && panels[h]) {
       setTab(h);
       if (userAction) panels[h].scrollIntoView({block: 'start'});
       return true;
@@ -164,12 +208,12 @@
       g.scrollIntoView({block: 'start'});
       return true;
     }
-    const m = /^(concept|stack)\/([a-z0-9-]+)$/.exec(h);
+    const m = /^(concept|stack|report)\/([a-z0-9-]+)$/.exec(h);
     const el = m && document.getElementById(h);
     if (!el || !el.classList.contains('l-item')) return false;
-    const p = m[1] === 'concept' ? 'concepts' : 'stacks';
+    const p = m[1] + 's';
     setTab(p);
-    if (el.hidden) { filter[p] = ''; search.value = ''; apply(); }
+    if (el.hidden) { filter[p] = p === 'reports' ? noReportFilter() : ''; search.value = ''; apply(); }
     el.open = true;
     el.scrollIntoView({block: 'start'});
     el.querySelector('summary').focus({preventScroll: true});
@@ -184,14 +228,15 @@
     const chip = e.target.closest('.fchip');
     if (chip) {
       const p = chip.closest('[data-panel]').dataset.panel;
-      filter[p] = chip.dataset.filter;
+      if (p === 'reports') filter.reports[chip.dataset.dim || 'group'] = chip.dataset.filter;
+      else filter[p] = chip.dataset.filter;
       apply();
       return;
     }
     const a = e.target.closest('a[href^="#"]');
     if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const href = a.getAttribute('href');
-    if (!/^#(concepts|stacks|concept\/|stack\/|group\/)/.test(href)) return;
+    if (!/^#(concepts|stacks|reports|concept\/|stack\/|report\/|group\/)/.test(href)) return;
     e.preventDefault();
     if (location.hash !== href) { try { history.pushState(null, '', href); } catch (err) { location.hash = href; return; } }
     go(href, true);
@@ -206,6 +251,10 @@
   window.addEventListener('popstate', () => go(location.hash));
   window.addEventListener('hashchange', () => go(location.hash));
   search.addEventListener('input', apply);
+  document.addEventListener('change', e => {
+    const s = e.target.closest && e.target.closest('select[data-dim]');
+    if (s && s.dataset.dim in filter.reports) { filter.reports[s.dataset.dim] = s.value; apply(); }
+  });
   search.addEventListener('keydown', e => { if (e.key === 'Escape' && search.value) { search.value = ''; apply(); } });
   $('lang').addEventListener('click', () => {
     lang = lang === 'ar' ? 'en' : 'ar';
