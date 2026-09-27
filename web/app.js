@@ -226,6 +226,8 @@
     'Latest UAE headlines':'أحدث عناوين الإمارات','Open UAE AI':'افتح قسم الإمارات',
     // Learn AI: its nav item and the fourth pillar (the page itself, learn.html, carries both languages in its HTML)
     'Learn AI':'تعلّم الذكاء الاصطناعي','Learn':'تعلّم','Open Learn AI':'افتح صفحة تعلّم الذكاء الاصطناعي',
+    // Qahwa & AI lessons (qahwa.html, a separate page): the footer and About links
+    'Qahwa & AI lessons':'دروس قهوة و AI',
     "Plain-language guides to the ideas behind today's AI, and recommended stacks for building with it.":'شروح واضحة للأفكار التي يقوم عليها الذكاء الاصطناعي اليوم، وتركيبات تقنية موصى بها للبناء به.',
     'concepts':'المفاهيم','AI stacks':'التركيبات التقنية','foundations':'الأسس','Start here':'ابدأ من هنا','Beginner concepts':'مفاهيم للمبتدئين',
     'Local, cloud and UAE-hosted options':'خيارات محلية وسحابية ومستضافة في الإمارات','Browse by topic':'تصفّح حسب الموضوع',
@@ -330,10 +332,10 @@
     document.documentElement.classList.remove('i18n-wait');
   }
   function learnLinks() {
-    // learn.html is a separate page that takes its language from ?lang= or the saved choice. A ?lang=ar visit (every
-    // Arabic link copied from this page has one) saves nothing, so the links to it carry the language shown here.
+    // learn.html and qahwa.html are separate pages that take their language from ?lang= or the saved choice. A ?lang=ar
+    // visit (every Arabic link copied from this page has one) saves nothing, so the links to them carry the language shown here.
     const want = state.lang === 'ar' ? 'ar' : store.get('atlas-lang') === 'ar' ? 'en' : '';
-    document.querySelectorAll('a[href^="learn.html"]').forEach(a => {
+    document.querySelectorAll('a[href^="learn.html"], a[href^="qahwa.html"]').forEach(a => {
       if (a.dataset.baseHref == null) a.dataset.baseHref = a.getAttribute('href');
       const h = a.dataset.baseHref, i = h.indexOf('#'), path = i < 0 ? h : h.slice(0, i), frag = i < 0 ? '' : h.slice(i);
       a.setAttribute('href', want ? path + '?lang=' + want + frag : h);

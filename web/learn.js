@@ -112,14 +112,21 @@
   const homeLinks = !home || home[0] === '#' ? [] : [...document.querySelectorAll('a[href]')]
     .filter(a => { const h = a.getAttribute('href'); return h === home || h.startsWith(home + '#'); })
     .map(a => [a, a.getAttribute('href')]);
+  // Links to the Qahwa & AI lessons page (the card, the footer and the lesson chips: qahwa.html#lesson-NN).
+  const qahwaLinks = [...document.querySelectorAll('a[href^="qahwa.html"]')].map(a => [a, a.getAttribute('href')]);
+  const withLang = (h, want) => {
+    const i = h.indexOf('#');
+    return want ? (i < 0 ? h : h.slice(0, i)) + '?lang=' + want + (i < 0 ? '' : h.slice(i)) : h;
+  };
   function langLinks() {
     // The overview takes its language from ?lang= or the saved choice. A ?lang=ar visit saves nothing, so while the
     // language shown here differs from the saved one, the links back carry it (app.js does the same for learn.html links).
-    const want = lang !== (store.get('atlas-lang') === 'ar' ? 'ar' : 'en') ? lang : '';
-    homeLinks.forEach(([a, h]) => {
-      const i = h.indexOf('#');
-      a.setAttribute('href', want ? (i < 0 ? h : h.slice(0, i)) + '?lang=' + want + (i < 0 ? '' : h.slice(i)) : h);
-    });
+    const saved = store.get('atlas-lang') === 'ar' ? 'ar' : 'en';
+    const want = lang !== saved ? lang : '';
+    homeLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, want)));
+    // qahwa.html: an Arabic visit always carries ?lang=ar, exactly like the overview's links to learn.html (app.js).
+    const wantQ = lang === 'ar' ? 'ar' : saved === 'ar' ? 'en' : '';
+    qahwaLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, wantQ)));
   }
 
   function applyLang() {

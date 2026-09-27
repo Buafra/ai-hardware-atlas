@@ -18,6 +18,15 @@ SITE = 'https://cipherlacuna.ae/'
 def catalog():
     return json.loads((ROOT / 'data' / 'catalog.json').read_text(encoding='utf-8'))
 
+def published(*numbers, **flags):
+    """A Qahwa & AI document (the shape of data/qahwa.json, only what lesson_url reads) with these lessons published.
+    flags (e.g. status='waiting') mark every post as not published."""
+    return {'schema': 1, 'posts': [dict({'id': f'week-01-day-{n:02d}--1-learn-lesson-{n:02d}', 'kind': 'lesson', 'lesson': n}, **flags)
+                                   for n in numbers]}
+
+def concept(doc, cid):
+    return next(c for c in doc['concepts'] if c['id'] == cid)
+
 def counts(concepts_doc, stacks_doc):
     """(concepts, AI stacks, foundations) from the data, so adding or removing an item never breaks these tests."""
     kinds = [s['kind'] for s in stacks_doc['stacks']]
@@ -121,6 +130,12 @@ class DataTests(unittest.TestCase):
             "'#news/nowhere' is not a page of this site": (lambda c: c['concepts'][0]['site_links'].append({'label_en': 'x', 'label_ar': 'س', 'href': '#news/nowhere'}), 'concepts'),
             'summary_ar is not Arabic text': (lambda c: c['concepts'][0].update(summary_ar='An English sentence where the Arabic should be.'), 'concepts'),
             'title_ar has no Arabic letters': (lambda s: s['stacks'][0].update(title_ar='English title'), 'stacks'),
+            # Lesson chips link to qahwa.html#lesson-NN: a real lesson number and both titles.
+            'related_lessons[0] needs a lesson number (1 to 999)': (lambda c: concept(c, 'llm')['related_lessons'][0].update(lesson=0), 'concepts'),
+            "related_lessons[1] needs a lesson number (1 to 999)": (lambda c: concept(c, 'llm')['related_lessons'][1].update(lesson=1000), 'concepts'),
+            'related_lessons[2] needs a lesson number': (lambda c: concept(c, 'llm')['related_lessons'][2].update(lesson='6'), 'concepts'),
+            'titles in both languages': (lambda c: concept(c, 'llm')['related_lessons'][0].pop('title_ar'), 'concepts'),
+            'repeats lesson 4': (lambda c: concept(c, 'llm')['related_lessons'].append(dict(concept(c, 'llm')['related_lessons'][0])), 'concepts'),
         }
         for want, (mutate, where) in cases.items():
             self.assertIn(want, self.broken(mutate, where), want)
@@ -196,7 +211,8 @@ class PageTests(Quiet, unittest.TestCase):
     def setUpClass(cls):
         cls.concepts, cls.stacks = learn.load()
         cls.catalog = catalog()
-        cls.html = learn.render(cls.concepts, cls.stacks, cls.catalog)
+        # Qahwa & AI lesson 4 is published; the other lessons the concepts name are not (yet).
+        cls.html = learn.render(cls.concepts, cls.stacks, cls.catalog, lessons_doc=published(4))
         cls.page = Page()
         cls.page.feed(cls.html)
         cls.head = cls.html[:cls.html.index('<style>')]
@@ -283,7 +299,7 @@ class PageTests(Quiet, unittest.TestCase):
         # Every Arabic «قهوة و AI» on the page is inside the no-wrap span.
         self.assertEqual(self.html.count('قهوة و AI'), self.html.count('<span class="l-nw">قهوة و AI</span>'))
         self.assertGreaterEqual(self.html.count('<span class="l-nw">قهوة و AI</span>'), 4)
-        self.has('روابط دروس قهوة و AI تفتح حساب', ''.join(self.page.text_by_lang['ar']))
+        self.has('روابط دروس قهوة و AI تفتح الدرس في صفحة دروس قهوة و AI.', ''.join(self.page.text_by_lang['ar']))
     def test_stack_icon_sits_in_the_title_row(self):
         for s in self.stacks['stacks']:
             if s.get('icon'):
@@ -291,10 +307,47 @@ class PageTests(Quiet, unittest.TestCase):
     def test_lessons_and_as_of_notes(self):
         self.has('Qahwa &amp; AI lesson 04: What is a large language model?', self.html)
         self.has('<span class="l-nw">قهوة و AI</span>، الدرس 04: ما هو النموذج اللغوي الكبير؟', self.html)
+        # Published lessons only, each opening its lesson on qahwa.html (same tab: a page of this site).
         lessons = [a for a in self.page.links if 'lesson' in (a.get('class') or '')]
-        self.assertTrue(lessons and all(a['href'] == 'https://www.instagram.com/qahwa.w.ai/' for a in lessons))
+        with_4 = [c['id'] for c in self.concepts['concepts'] if any(x['lesson'] == 4 for x in c.get('related_lessons') or [])]
+        self.assertEqual(len(lessons), len(with_4))
+        self.assertTrue(all(a['href'] == 'qahwa.html#lesson-04' and not a.get('target') for a in lessons))
+        self.has('Qahwa &amp; AI lesson links open the lesson on the Qahwa &amp; AI lessons page.', self.html)
         self.has('As of September 2026', self.html)
         self.has('وفق معلومات سبتمبر 2026', self.html)
+    def test_unpublished_lessons_are_never_named(self):
+        # Titles of lessons that are not published yet stay off the page (no spoilers), in both languages.
+        for c in self.concepts['concepts']:
+            for les in c.get('related_lessons') or []:
+                if les['lesson'] != 4:
+                    self.lacks(f'lesson {les["lesson"]:02d}:', self.html)
+                    self.lacks(f'الدرس {les["lesson"]:02d}:', self.html)
+                    self.lacks(learn.esc(learn.lesson_title(les['title_en'])), self.html)
+        # A concept with no published lesson has no lessons block at all; one with lesson 4 has it.
+        for c in self.concepts['concepts']:
+            item = self.html[self.html.index(f'id="concept/{c["id"]}"'):]
+            item = item[:item.index('</details>')]
+            has_4 = any(x['lesson'] == 4 for x in c.get('related_lessons') or [])
+            self.assertEqual('<h5><span data-lang="en">Qahwa &amp; AI lessons</span>' in item, has_4, c['id'])
+    def test_no_published_lesson_hides_every_block(self):
+        for doc in (None, published(), published(4, status='waiting'), published(4, draft=True), published(999)):
+            page = learn.render(self.concepts, self.stacks, self.catalog, lessons_doc=doc)
+            self.lacks('class="lchip lesson"', page)
+            self.lacks('<h5><span data-lang="en">Qahwa &amp; AI lessons</span>', page)
+            self.lacks('lesson links open', page)
+            self.lacks('What is a large language model?', page)
+            # The card and the footer link to the lessons page stay.
+            self.has('<a class="xcard x-qahwa l-qahwa" href="qahwa.html">', page)
+    def test_qahwa_card_near_the_top(self):
+        card = self.html[self.html.index('<a class="xcard x-qahwa l-qahwa" href="qahwa.html">'):]
+        card = card[:card.index('</a>')]
+        self.has('<span data-lang="en">Daily lessons from Qahwa &amp; AI</span><span data-lang="ar">دروس يومية من <span class="l-nw">قهوة و AI</span></span>', card)
+        # Right under the page header, before the tabs.
+        i = self.html.index('class="xcard x-qahwa')
+        self.assertLess(self.html.index('<div class="ihead ih-learn">'), i)
+        self.assertLess(i, self.html.index('<div class="l-tools">'))
+        self.lacks('target=', card)
+        self.lacks('Updated', card)
     def test_no_external_assets_and_no_contact_address(self):
         self.assertEqual(self.page.external, [])
         self.assertFalse(any(s.get('src') for s in self.page.scripts))
@@ -315,6 +368,20 @@ class PageTests(Quiet, unittest.TestCase):
         footer = self.html[self.html.index('<footer'):self.html.index('</footer>')]
         self.assertEqual(footer.count('follow-btn'), 1)
         self.has('© 2026 Cipher Lacuna.', footer)
+        # The footer links, in the overview's order, with the Qahwa & AI lessons page after Learn AI.
+        nav = footer[footer.index('<nav class="foot-links"'):]
+        self.assertEqual(re.findall(r'<a href="([^"]+)"', nav), ['index.html', 'index.html#hardware', 'index.html#news', 'index.html#uae',
+                                                                 'learn.html', 'qahwa.html', 'index.html#contact', 'index.html#contact/about'])
+        self.has('<a href="qahwa.html"><span data-lang="en">Qahwa &amp; AI lessons</span><span data-lang="ar">دروس <span class="l-nw">قهوة و AI</span></span></a>', nav)
+        # The header keeps its six items (the lessons page is not a seventh).
+        header_nav = header[header.index('<nav class="nav"'):]
+        self.assertEqual(len(re.findall(r'<a href=', header_nav[:header_nav.index('</nav>')])), 6)
+        self.lacks('qahwa.html', header)
+    def test_qahwa_links_carry_the_language(self):
+        # learn.js adds ?lang= to every qahwa.html link (card, footer, lesson chips) like app.js does for learn.html.
+        js = (ROOT / 'web' / 'learn.js').read_text(encoding='utf-8')
+        self.assertIn('a[href^="qahwa.html"]', js)
+        self.assertIn("const wantQ = lang === 'ar' ? 'ar' : saved === 'ar' ? 'en' : '';", js)
     def test_data_is_escaped(self):
         c, s = copy.deepcopy(self.concepts), copy.deepcopy(self.stacks)
         c['concepts'][0]['title_en'] = '<script>alert(1)</script>'
@@ -344,6 +411,16 @@ class BuildTests(Quiet, unittest.TestCase):
             self.has('id="concept/rag"', text)
             for f in ('og.png', 'apple-touch-icon.png', 'icon-32.png'):
                 self.assertTrue((Path(d) / 'brand' / f).exists(), f)
+    def test_build_uses_the_published_lessons_and_survives_bad_qahwa_data(self):
+        from unittest import mock
+        with tempfile.TemporaryDirectory() as d:
+            with mock.patch.object(learn.qahwa, 'page_doc', return_value=(published(4), [])):
+                text = learn.build(Path(d)).read_text(encoding='utf-8')
+            self.has('href="qahwa.html#lesson-04"', text)
+            with mock.patch.object(learn.qahwa, 'page_doc', side_effect=ValueError('broken')):
+                text = learn.build(Path(d)).read_text(encoding='utf-8')
+            self.lacks('class="lchip lesson"', text)
+            self.has('href="qahwa.html"', text)
     def test_build_refuses_bad_data(self):
         with tempfile.TemporaryDirectory() as d:
             c, s = learn.load()

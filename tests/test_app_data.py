@@ -56,6 +56,40 @@ class AppDataTests(unittest.TestCase):
         self.assertEqual(len(models),len(self.models['models']))
         self.assertTrue(all(set(m)==set(app_data.MODEL_KEYS) for m in models))
 
+    def test_learn_lists_only_published_lessons(self):
+        # A lesson not published on qahwa.html yet must not reach the app (its title would spoil the schedule).
+        planned=sorted({les['lesson'] for c in self.docs[0]['concepts'] for les in c.get('related_lessons') or []})
+        self.assertIn(4,planned)
+        for c in self.out['learn.json']['concepts']:self.assertEqual(c['related_lessons'],[],c['id'])
+        empty={'schema':1,'posts':[]}
+        out=app_data.payloads(self.data,self.feed,self.sources,self.uae,self.models,*self.docs,lessons_doc=empty)
+        self.assertFalse([c['id'] for c in out['learn.json']['concepts'] if c['related_lessons']])
+        four={'schema':1,'posts':[{'id':'week-01-day-04--1-learn-lesson-04','kind':'lesson','lesson':4}]}
+        out=app_data.payloads(self.data,self.feed,self.sources,self.uae,self.models,*self.docs,lessons_doc=four)
+        got=[(c['id'],les['lesson'],les['url']) for c in out['learn.json']['concepts'] for les in c['related_lessons']]
+        want=[(c['id'],4,'qahwa.html#lesson-04') for c in self.docs[0]['concepts'] if 4 in [les['lesson'] for les in c.get('related_lessons') or []]]
+        self.assertTrue(want)
+        self.assertEqual(got,want)
+        raw=app_data.encode(out['learn.json']).decode('utf-8')
+        for c in self.docs[0]['concepts']:
+            for les in c.get('related_lessons') or []:
+                if les['lesson']!=4:
+                    self.assertNotIn(les['title_en'],raw)
+                    self.assertNotIn(les['title_ar'],raw)
+        waiting={'schema':1,'posts':[{**four['posts'][0],'status':'waiting'}]}
+        out=app_data.payloads(self.data,self.feed,self.sources,self.uae,self.models,*self.docs,lessons_doc=waiting)
+        self.assertFalse([c['id'] for c in out['learn.json']['concepts'] if c['related_lessons']])
+        # The concepts' other fields pass through untouched.
+        for a,b in zip(out['learn.json']['concepts'],self.docs[0]['concepts']):
+            self.assertEqual({k:v for k,v in a.items() if k!='related_lessons'},{k:v for k,v in b.items() if k!='related_lessons'})
+
+    def test_write_uses_the_published_lessons(self):
+        four={'schema':1,'posts':[{'id':'week-01-day-04--1-learn-lesson-04','kind':'lesson','lesson':4}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            app_data.write(tmp,self.data,self.feed,self.sources,self.uae,self.models,*self.docs,lessons_doc=four)
+            doc=json.loads((Path(tmp)/app_data.APP_DIR/'learn.json').read_text(encoding='utf-8'))
+        self.assertEqual({les['lesson'] for c in doc['concepts'] for les in c['related_lessons']},{4})
+
     def test_about_is_the_shared_file(self):
         about=self.out['about.json']
         self.assertEqual({k:v for k,v in about.items() if k!='schema'},app_data.load_about())

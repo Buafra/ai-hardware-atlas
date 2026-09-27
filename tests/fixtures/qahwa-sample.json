@@ -1,0 +1,375 @@
+{
+  "schema": 1,
+  "generated_at": "2026-09-27T18:00:00+04:00",
+  "profile": "https://www.instagram.com/qahwa.w.ai/",
+  "posts": [
+    {
+      "id": "intro-welcome--1-welcome-carousel",
+      "kind": "welcome",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "welcome",
+      "title": {
+        "en": "Welcome to Qahwa & AI",
+        "ar": "أهلاً بك في قهوة و AI"
+      },
+      "summary": {
+        "en": "We explain AI simply, for everyone, in Arabic and English. No technical background needed.",
+        "ar": "نشرح الذكاء الاصطناعي ببساطة، ولكل الناس، بالعربية والإنجليزية. لا تحتاج أي خبرة تقنية."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "أهلاً بك في ==قهوة و AI==",
+            "body": "درس مجاني في الذكاء الاصطناعي مع قهوة الصباح."
+          },
+          "en": {
+            "title": "Welcome to ==Qahwa & AI==",
+            "body": "A free AI lesson with your morning coffee."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما هذا الحساب؟",
+            "body": "نشرح الذكاء الاصطناعي ==ببساطة، ولكل الناس==، بالعربية والإنجليزية. لا تحتاج أي خبرة تقنية."
+          },
+          "en": {
+            "title": "What is this account?",
+            "body": "We explain AI ==simply, for everyone==, in Arabic and English. No technical background needed."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "كل يوم",
+            "items": [
+              "08:00 · تعلّم: درس قصير في شرائح",
+              "13:00 · جرّب: فيديو قصير تطبّقه بنفسك",
+              "20:30 · تحقّق: خرافة أم حقيقة؟ في الستوري"
+            ]
+          },
+          "en": {
+            "title": "Every day",
+            "items": [
+              "08:00 · Learn: a short lesson in slides",
+              "13:00 · Try: a quick video you can follow",
+              "20:30 · Check: myth or fact? in stories"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا ستتعلّم؟",
+            "items": [
+              "الأساسيات: ما هو الذكاء الاصطناعي، وكيف يجيب",
+              "الأدوات: ChatGPT وClaude وGemini ومولّدات الصور",
+              "في عملك ودراستك: مهام وتلخيص ومذاكرة",
+              "الأمان: ما لا تشاركه، وكيف تتحقق من إجابة",
+              "حياتك ومالك: رحلات وميزانية وقرارات",
+              "العتاد: كيف تشغّل الذكاء الاصطناعي على جهازك"
+            ]
+          },
+          "en": {
+            "title": "What you'll learn",
+            "items": [
+              "Basics: what AI is, and how it answers",
+              "Tools: ChatGPT, Claude, Gemini and image generators",
+              "Work and study: tasks, summaries, revision",
+              "Safety: what not to share, and how to check an answer",
+              "Life and money: trips, budgets, decisions",
+              "Hardware: how to run AI on your own machine"
+            ]
+          },
+          "note": {
+            "ar": "وفي نهاية كل أسبوع: تحدٍّ صغير، ثم ملخص واختبار.",
+            "en": "At the end of each week: a small challenge, then a recap and a quiz."
+          }
+        },
+        {
+          "type": "coffee",
+          "drink": "cappuccino",
+          "ar": {
+            "title": "درس صغير ==مثل فنجان قهوة==",
+            "body": "دقيقتان كل صباح، وخلال أسابيع تفهم ما يتحدث عنه الجميع."
+          },
+          "en": {
+            "title": "A small lesson, ==like a cup of coffee==",
+            "body": "Two minutes each morning, and in a few weeks you'll understand what everyone is talking about."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الذكاء الاصطناعي للمبرمجين والخبراء فقط.",
+            "fact": "أي شخص يستطيع استخدامه ليكتب ويلخّص ويتعلّم ويخطّط، دون أي خبرة تقنية."
+          },
+          "en": {
+            "myth": "AI is only for programmers and experts.",
+            "fact": "Anyone can use it to write, summarize, learn and plan, with no technical background."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "تابع ==@qahwa.w.ai== وفعّل التنبيهات"
+          },
+          "en": {
+            "title": "Follow ==@qahwa.w.ai== and turn on notifications"
+          },
+          "next": {
+            "ar": "الدرس 01: ما هو الذكاء الاصطناعي؟",
+            "en": "Lesson 01: What is AI?"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DdyZnVJkZp7/",
+      "published_at": "2026-09-27T14:31:00+04:00",
+      "cover": "images/qahwa/intro-welcome--1-welcome-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-01--1-learn-lesson-01",
+      "kind": "lesson",
+      "lesson": 1,
+      "code": "L01",
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "What is AI?",
+        "ar": "ما هو الذكاء الاصطناعي؟"
+      },
+      "summary": {
+        "en": "Computer systems that do tasks that normally need human intelligence: working with language, recognizing images, predicting and creating.",
+        "ar": "أنظمة حاسوبية تؤدي مهام تحتاج عادةً إلى ذكاء بشري: معالجة اللغة، وتمييز الصور، والتوقّع، وصناعة المحتوى."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ما هو ==الذكاء الاصطناعي==؟",
+            "body": "ببساطة، ومع قهوة الصباح."
+          },
+          "en": {
+            "title": "What is ==AI==, really?",
+            "body": "Explained simply, with your morning coffee."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "أنظمة حاسوبية تؤدي مهام تحتاج عادةً إلى ==ذكاء بشري==: معالجة اللغة، وتمييز الصور، والتوقّع، وصناعة المحتوى."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "Computer systems that do tasks that normally need ==human intelligence==: working with language, recognizing images, predicting and creating."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أنت تستخدمه كل يوم",
+            "items": [
+              "الخرائط: تتوقّع الزحمة وتقترح أسرع طريق",
+              "البريد: ينقل الرسائل المزعجة إلى مجلد السبام",
+              "الموبايل: يُفتح بالتعرّف على وجهك"
+            ]
+          },
+          "en": {
+            "title": "You already use it",
+            "items": [
+              "Maps predict traffic and find the fastest route",
+              "Email moves junk to your spam folder",
+              "Your phone unlocks by recognizing your face"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ليس شيئاً واحداً",
+            "body": "الذكاء الاصطناعي مجال واسع، وأغلبه اليوم ==متخصّص==: ممتاز في مهمة محددة، دون فهم أو مشاعر."
+          },
+          "en": {
+            "title": "It's not one single thing",
+            "body": "AI is a broad field. Most of it today is ==“narrow”==: great at one specific task, with no understanding or feelings."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "الذكاء الاصطناعي هو ==المقهى كله==",
+            "body": "آلات كثيرة، ولكل آلة مهمة مختلفة."
+          },
+          "en": {
+            "title": "AI is ==the whole café==",
+            "body": "Many different machines, each built for a different job."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الذكاء الاصطناعي يفكّر ويشعر مثل الإنسان.",
+            "fact": "يكتشف الذكاء الاصطناعي الأنماط في البيانات ويُنتج مخرجات. ولا يملك مشاعر بشرية أو رغبات شخصية أو وعياً ذاتياً."
+          },
+          "en": {
+            "myth": "AI thinks and feels like a person.",
+            "fact": "AI finds patterns in data and produces outputs. It does not have human feelings, personal desires or self-awareness."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أعطني 5 أمثلة على ذكاء اصطناعي استخدمته اليوم على الأرجح دون أن أنتبه."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Give me 5 examples of AI I probably used today without noticing."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، وأرسله لشخص ==يسمع عن الذكاء الاصطناعي كل يوم=="
+          },
+          "en": {
+            "title": "Save this and send it to someone who ==hears about AI every day=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Give me 5 examples of AI I probably used today without noticing.",
+        "ar": "أعطني 5 أمثلة على ذكاء اصطناعي استخدمته اليوم على الأرجح دون أن أنتبه.",
+        "code": "L01"
+      },
+      "permalink": "https://www.instagram.com/p/DdydDamEbUD/",
+      "published_at": "2026-09-27T15:01:00+04:00",
+      "cover": "images/qahwa/week-01-day-01--1-learn-lesson-01.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-01--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "A language-model AI assistant understands every answer exactly like a human.",
+        "ar": "المساعد الذكي المبني على نموذج لغوي يفهم كل إجابة بالطريقة نفسها التي يفهم بها الإنسان."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي المبني على نموذج لغوي يفهم كل إجابة ==بالطريقة نفسها التي يفهم بها الإنسان==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "A language-model AI assistant understands every answer ==exactly like a human==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-27T15:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-01--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-01--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "tools",
+      "title": {
+        "en": "Messy note → to-do list",
+        "ar": "ملاحظة فوضوية ← قائمة مهام"
+      },
+      "summary": {
+        "en": "Messy note → to-do list in 10 seconds",
+        "ar": "ملاحظة فوضوية ← قائمة مهام في 10 ثوانٍ"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:35",
+          "ar": {
+            "title": "ملاحظة فوضوية ← ==قائمة مهام== في 10 ثوانٍ"
+          },
+          "en": {
+            "title": "Messy note → ==to-do list== in 10 seconds"
+          },
+          "chat": {
+            "user": "حليب، اتصل بالبنك عن البطاقة، الدكتور الثلاثاء؟؟ التقرير، النادي",
+            "bot": [
+              "الاتصال بالبنك بخصوص البطاقة",
+              "إنهاء التقرير",
+              "موعد الطبيب (الثلاثاء)",
+              "شراء حليب · النادي"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Turn these notes into a clear to-do list, sorted by priority:\n[paste your notes here]",
+        "ar": "رتّب هذه الملاحظات في قائمة مهام واضحة، حسب الأهمية:\n[الصق ملاحظاتك هنا]",
+        "code": "R1"
+      },
+      "permalink": "https://www.instagram.com/reel/Ddylj6-Cb4T/",
+      "published_at": "2026-09-27T16:15:00+04:00",
+      "cover": "images/qahwa/week-01-day-01--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-02--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "More data always makes AI more accurate.",
+        "ar": "كلما زادت البيانات، أصبح الذكاء الاصطناعي أدقّ دائماً"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "كلما زادت البيانات، أصبح الذكاء الاصطناعي ==أدقّ دائماً==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "More data always makes AI ==more accurate==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-27T18:00:00+04:00",
+      "cover": "images/qahwa/week-01-day-02--3-check-story.webp",
+      "related_concepts": []
+    }
+  ]
+}

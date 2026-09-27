@@ -14,6 +14,10 @@ in Arabic), and the page without JavaScript. Also: the AI
 stacks badge agrees with the status bar, topic chips count search matches, "No matches" sits under the chips, a stack's
 icon stays beside its title, #group/<id> links open their tab with the chip pressed, a UAE chip opens the fact it
 names on the overview, and the Arabic series name never breaks across lines.
+Qahwa & AI lessons (qahwa.html): the card near the top and the footer link (after Learn AI) open it, carrying ?lang=ar in
+Arabic; a concept's lesson chips show only the lessons published on that page (data/qahwa.json as the page shows it),
+checked on the real data and on a copy of the page where a concept lists a published lesson (served by the test itself),
+whose chip opens that lesson on qahwa.html. The footer stays tidy from 320 to 1920 px.
 Counts come from data/learn, so adding or removing a concept or stack does not break this test.
 """
 import gzip
@@ -25,6 +29,9 @@ from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / 'scripts'))
+import learn  # noqa: E402  (renders the chip fixture page; works without reportlab)
+import qahwa  # noqa: E402
 ARGS = [a for a in sys.argv[1:] if not a.startswith('--')]
 BASE = (ARGS[0] if ARGS else 'http://localhost:8791/').rstrip('/') + '/'
 URL = BASE + 'learn.html'
@@ -37,6 +44,41 @@ N_FOUND = len(STACKS['stacks']) - N_CORE
 N_S = N_CORE + N_FOUND
 BY_GROUP = {g['id']: sum(c['group'] == g['id'] for c in CONCEPTS['concepts']) for g in CONCEPTS['groups']}
 G_FILTER = 'g3' if 'g3' in BY_GROUP else CONCEPTS['groups'][-1]['id']
+# Qahwa & AI: the posts qahwa.html shows, the lesson chips learn.html should have, and a chip fixture.
+QDOC = qahwa.page_doc()[0]
+CHIPS = {c['id']: [f'qahwa.html#lesson-{x["lesson"]:02d}' for x in c.get('related_lessons') or [] if qahwa.lesson_url(x['lesson'], QDOC)]
+         for c in CONCEPTS['concepts']}
+PUBLISHED = sorted(p['lesson'] for p in QDOC['posts'] if p.get('kind') == 'lesson')
+FIXTURE = 'learn-lessons-fixture.html'  # served by page.route (never written to dist/)
+
+def fixture_page():
+    """learn.html with the llm concept listing the first published lesson (next to its unpublished ones)."""
+    import copy
+    c = copy.deepcopy(CONCEPTS)
+    n = PUBLISHED[0]
+    post = next(p for p in QDOC['posts'] if p.get('kind') == 'lesson' and p['lesson'] == n)
+    llm = next(x for x in c['concepts'] if x['id'] == 'llm')
+    llm['related_lessons'] = [x for x in llm['related_lessons'] if x['lesson'] != n] + [{'lesson': n, 'title_en': post['title']['en'], 'title_ar': post['title']['ar']}]
+    catalog = json.loads((ROOT / 'data' / 'catalog.json').read_text(encoding='utf-8'))
+    return learn.render(c, STACKS, catalog, lessons_doc=QDOC), n, [x['lesson'] for x in llm['related_lessons'] if x['lesson'] != n]
+
+def footer_tidy(page, tag):
+    """Every footer link on one line, at least 24 px tall (WCAG 2.2 SC 2.5.8) and inside the footer, the follow button's
+    "Follow Qahwa & AI" on one line, and no horizontal page scroll."""
+    got = page.evaluate("""() => { const f = document.querySelector('.foot'), fr = f.getBoundingClientRect();
+        const links = [...f.querySelectorAll('.foot-links a')];
+        return {broken: links.filter(a => { const r = [...a.getClientRects()]; return r.length !== 1 || r[0].height > 2 * parseFloat(getComputedStyle(a).fontSize) + 22; }).map(a => a.textContent),
+                outside: links.filter(a => { const r = a.getBoundingClientRect(); return r.left < fr.left - 1 || r.right > fr.right + 1; }).map(a => a.textContent),
+                small: links.filter(a => a.getClientRects().length && a.getBoundingClientRect().height < 24).map(a => a.textContent),
+                label: [...f.querySelectorAll('.follow-btn > span')].filter(s => s.getClientRects().length).map(s => {
+                    const rg = document.createRange(); rg.selectNodeContents(s);
+                    return new Set([...rg.getClientRects()].map(r => Math.round(r.top))).size; }),
+                over: document.documentElement.scrollWidth - document.documentElement.clientWidth}; }""")
+    check(not got['broken'], f'{tag} footer links break across lines: {got["broken"]}')
+    check(not got['small'], f'{tag} footer links under 24 px tall: {got["small"]}')
+    check(got['label'] and all(n == 1 for n in got['label']), f'{tag} follow button label lines: {got["label"]}')
+    check(not got['outside'], f'{tag} footer links outside the footer: {got["outside"]}')
+    check(got['over'] <= 0, f'{tag} horizontal overflow {got["over"]}px')
 
 def check(ok, msg):
     global checks
@@ -89,6 +131,24 @@ def run(pw):
             check(page.locator('.nav a.n-learn[aria-current="page"]').is_visible(), f'{tag} Learn AI not marked current in the nav')
             nav = page.evaluate("[...document.querySelectorAll('.top .nav a')].map(a => a.getAttribute('href'))")
             check(nav == ['index.html', 'index.html#hardware', 'index.html#news', 'index.html#uae', 'learn.html', 'index.html#contact'], f'{tag} nav links {nav}')
+            # Qahwa & AI lessons: the card under the page header and the footer link after Learn AI, in the page language
+            # (an Arabic visit always carries ?lang=ar to qahwa.html).
+            q = '?lang=ar' if rtl else ''
+            card = page.evaluate("""(a => a && [a.getAttribute('href'), a.querySelector('b').innerText.trim(), a.getClientRects().length > 0,
+                a.getBoundingClientRect().top < document.querySelector('.l-tools').getBoundingClientRect().top,
+                a.getBoundingClientRect().top > document.querySelector('.ihead').getBoundingClientRect().bottom - 1])(document.querySelector('a.l-qahwa'))""")
+            check(card == ['qahwa.html' + q, 'دروس يومية من قهوة و AI' if rtl else 'Daily lessons from Qahwa & AI', True, True, True], f'{tag} Qahwa & AI card {card}')
+            foot = page.evaluate("[...document.querySelectorAll('.foot-links a')].map(a => a.getAttribute('href'))")
+            check(foot == ['index.html', 'index.html#hardware', 'index.html#news', 'index.html#uae', 'learn.html', 'qahwa.html' + q, 'index.html#contact', 'index.html#contact/about'], f'{tag} footer links {foot}')
+            foot_q = page.evaluate("(a => a.innerText.trim())(document.querySelector('.foot-links a[href^=\"qahwa.html\"]'))")
+            check(foot_q == ('دروس قهوة و AI' if rtl else 'Qahwa & AI lessons'), f'{tag} footer lessons link text {foot_q!r}')
+            # Lesson chips: only the lessons already on qahwa.html; a concept with none has no lessons block.
+            chips = page.evaluate("""Object.fromEntries([...document.querySelectorAll('#concepts .l-item')].map(d => [d.id.slice(8),
+                [...d.querySelectorAll('a.lchip.lesson')].map(a => a.getAttribute('href'))]))""")
+            want = {k: [h.replace('qahwa.html', 'qahwa.html' + q) for h in v] for k, v in CHIPS.items()}
+            check(chips == want, f'{tag} lesson chips {[(k, v) for k, v in chips.items() if v != want[k]][:3]}')
+            blocks = page.evaluate("[...document.querySelectorAll('#concepts .l-item')].filter(d => [...d.querySelectorAll('h5')].some(h => /Qahwa & AI lessons|دروس قهوة و AI/.test(h.textContent))).map(d => d.id.slice(8))")
+            check(sorted(blocks) == sorted(k for k, v in CHIPS.items() if v), f'{tag} lessons blocks on {blocks}')
             # Visible text is in the page language.
             first = page.evaluate("document.querySelector('#concepts .l-item .it-t').innerText")
             check(any('؀' <= ch <= 'ۿ' for ch in first) == rtl, f'{tag} first title in the wrong language: {first!r}')
@@ -204,9 +264,10 @@ def run(pw):
             page.goto(URL)
             # The Arabic series name stays on one line in the editorial note.
             if rtl:
-                # Its Arabic and Latin runs are separate boxes; on one line they share a top.
-                lines = page.evaluate("new Set([...document.querySelector('.l-note [data-lang=\"ar\"] .l-nw').getClientRects()].map(r => Math.round(r.top))).size")
-                check(lines == 1, f'{tag} series name in the note breaks across {lines} lines')
+                # Its Arabic and Latin runs are separate boxes; on one line they share a top. Every visible one: the card,
+                # the header's follow button, the footer, and the note and chips when a lesson is published.
+                lines = page.evaluate("[...document.querySelectorAll('.l-nw')].filter(e => e.getClientRects().length).map(e => new Set([...e.getClientRects()].map(r => Math.round(r.top))).size)")
+                check(len(lines) >= 3 and set(lines) == {1}, f'{tag} series name breaks across lines: {lines}')
             # Language and theme buttons share the overview's keys.
             page.click('#lang')
             other = 'en' if rtl else 'ar'
@@ -224,6 +285,42 @@ def run(pw):
             check(page.evaluate('document.documentElement.dataset.theme') == 'dark', f'{tag} theme not kept on reload')
             check(not errors, f'{tag} console errors {errors[:3]}')
             check(not foreign, f'{tag} requests to other hosts {foreign[:3]}')
+            ctx.close()
+    # A copy of the page where the llm concept lists a published lesson: its chip (and no unpublished one) opens that
+    # lesson on qahwa.html, in the page language.
+    if PUBLISHED:
+        html, n, hidden = fixture_page()
+        for lang in ('en', 'ar'):
+            for width in (375, 1280):
+                tag = f'[chip fixture {lang} {width}px]'
+                ctx = browser.new_context(viewport={'width': width, 'height': 900})
+                ctx.route(BASE + FIXTURE + '*', lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=html))
+                page = ctx.new_page()
+                errors, foreign = [], []
+                watch(page, errors, foreign)
+                page.goto(BASE + FIXTURE + ('?lang=ar' if lang == 'ar' else '') + '#concept/llm')
+                page.wait_for_timeout(150)
+                hrefs = page.evaluate("[...document.getElementById('concept/llm').querySelectorAll('a.lchip.lesson')].map(a => a.getAttribute('href'))")
+                want = f'qahwa.html{"?lang=ar" if lang == "ar" else ""}#lesson-{n:02d}'
+                check(hrefs == [want], f'{tag} llm lesson chips {hrefs}')
+                text = page.evaluate("document.getElementById('concept/llm').innerText")
+                check(not any(f'{k:02d}:' in text for k in hidden), f'{tag} an unpublished lesson is named: {[k for k in hidden if f"{k:02d}:" in text]}')
+                page.click('[id="concept/llm"] a.lchip.lesson >> visible=true')
+                page.wait_for_url(lambda u: '/qahwa.html' in u)
+                page.wait_for_function('document.getElementById("detail") && document.getElementById("detail").open', timeout=5000)
+                got = page.evaluate("[document.documentElement.lang, location.hash, localStorage.getItem('atlas-lang')]")
+                check(got == [lang, f'#lesson-{n:02d}', None], f'{tag} chip opened qahwa.html as {got}')
+                check(not errors and not foreign, f'{tag} errors {errors[:3]} foreign {foreign[:3]}')
+                ctx.close()
+    else:
+        print('note: no Qahwa & AI lesson is published yet; the chip fixture is skipped')
+    # The footer stays tidy from 320 to 1920 px in both languages.
+    for lang in ('en', 'ar'):
+        for width in (320, 375, 414, 768, 1024, 1280, 1440, 1920):
+            ctx = browser.new_context(viewport={'width': width, 'height': 900})
+            page = ctx.new_page()
+            page.goto(URL + ('?lang=ar' if lang == 'ar' else ''))
+            footer_tidy(page, f'[{lang} {width}px footer]')
             ctx.close()
     # ?lang=ar wins over the stored language, as on the overview.
     ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
@@ -255,8 +352,19 @@ def run(pw):
             got = page.evaluate('[document.documentElement.lang, document.documentElement.dir, location.search, location.hash]')
             check(got[:2] == ['ar', 'rtl'] and 'lang=ar' in got[2] and got[3].startswith(want_hash), f'{tag} {sel} opened the overview as {got}')
             check(page.evaluate("localStorage.getItem('atlas-lang')") is None, f'{tag} following {sel} saved a language')
+        # The Qahwa & AI card and footer link open qahwa.html in Arabic too, without saving a language.
+        for sel in ('a.l-qahwa', '.foot-links a[href^="qahwa.html"]'):
+            page.goto(URL + '?lang=ar')
+            href = page.get_attribute(sel, 'href')
+            page.click(sel)
+            page.wait_for_url(lambda u: '/qahwa.html' in u)
+            page.wait_for_load_state('load')
+            got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
+            check(href == 'qahwa.html?lang=ar' and got == ['ar', 'rtl', None], f'{tag} {sel} ({href}) opened the lessons page as {got}')
         page.goto(URL + '?lang=ar')
         page.click('#lang')
+        q_links = page.evaluate("[...document.querySelectorAll('a[href^=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
+        check(q_links and not any('?lang=' in h for h in q_links), f'{tag} lessons links after switching to English {q_links[:3]}')
         hrefs = page.evaluate(home_links)
         check(hrefs and not any('?lang=' in h for h in hrefs), f'{tag} links back still carry a language after the language button {[h for h in hrefs if "?lang=" in h][:3]}')
         check(not errors, f'{tag} console errors {errors[:3]}')

@@ -479,7 +479,22 @@ class LearnIntegrationTests(unittest.TestCase):
         nav=self.header[self.header.index('<nav class="nav"'):]
         self.assertEqual(re.findall(r'<a href="([^"]+)"',nav[:nav.index('</nav>')]),['#home','#hardware','#news','#uae','learn.html','#contact'])
         self.assertIn(self.NAV_LINK,self.header)
-        self.assertIn('<a href="#uae" data-i18n>UAE AI</a><a href="learn.html" data-i18n>Learn AI</a><a href="#contact" data-i18n>Contact</a>',self.foot)
+        self.assertIn('<a href="#uae" data-i18n>UAE AI</a><a href="learn.html" data-i18n>Learn AI</a><a href="qahwa.html" data-i18n>Qahwa &amp; AI lessons</a><a href="#contact" data-i18n>Contact</a>',self.foot)
+    def test_footer_links_to_the_qahwa_lessons_page(self):
+        # Footer order: the overview's views, Learn AI, the Qahwa & AI lessons page, Contact and About. The header keeps
+        # its six items: the lessons page is a footer (and About, Learn AI) link, not a seventh header item.
+        nav=self.foot[self.foot.index('<nav class="foot-links"'):]
+        self.assertEqual(re.findall(r'<a href="([^"]+)"',nav),['#home','#hardware','#news','#uae','learn.html','qahwa.html','#contact','#about'])
+        self.assertNotIn('qahwa.html',self.header)
+        js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+        self.assertIn("'Qahwa & AI lessons':'دروس قهوة و AI'",js)
+        # Arabic visits carry ?lang=ar to it exactly like the links to learn.html (one selector, one rule).
+        self.assertIn('document.querySelectorAll(\'a[href^="learn.html"], a[href^="qahwa.html"]\')',js)
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        rule=re.search(r'^\.foot-links a\{([^}]*)\}',css,re.M).group(1)
+        # Each footer link stays on one line and is at least 24 px tall (WCAG 2.2 SC 2.5.8).
+        self.assertIn('white-space:nowrap',rule)
+        self.assertIn('min-height:24px',rule)
     def test_fourth_pillar(self):
         self.assertEqual(self.home.count('<article class="pillar '),4)
         self.assertIn('<section class="pillars" aria-label="The four areas of the site" data-i18n-aria="The four areas of the site">',self.home)
@@ -526,6 +541,10 @@ class LearnIntegrationTests(unittest.TestCase):
             self.assertIn('<a href="index.html" class="n-home">',(out/'learn.html').read_text(encoding='utf-8'))
             # Beside the standalone copy, learn.html links back to that file's name.
             self.assertIn('<a href="Atlas.html" class="n-home">',(target.parent/'learn.html').read_text(encoding='utf-8'))
+            # The Qahwa & AI lessons page is built beside both copies too, its links back going to each one's overview.
+            self.assertIn('<a class="cl" data-home href="index.html">',(out/'qahwa.html').read_text(encoding='utf-8'))
+            self.assertIn('<a class="cl" data-home href="Atlas.html">',(target.parent/'qahwa.html').read_text(encoding='utf-8'))
+            for d_ in (out,target.parent):self.assertTrue((d_/'brand'/'qahwa'/'bot-badge.webp').exists())
             self.assertTrue((target.parent/'brand'/'og.png').exists())
 
 class ReviewRoundTests(unittest.TestCase):
@@ -683,7 +702,12 @@ class AboutTests(unittest.TestCase):
         heads=[('About Cipher Lacuna','عن Cipher Lacuna'),('The name','معنى الاسم'),("What you'll find",'ماذا ستجد هنا'),('How we keep it honest','كيف نحافظ على الدقة')]
         # In DOM order: heading, the two paragraphs, the name, what you'll find with the four areas, trust, the Qahwa & AI line.
         self.assertEqual(pairs,[heads[0]]+want[:2]+[heads[1],want[2],heads[2]]+want[3:7]+[heads[3],want[7],want[8]])
-        self.assertIn('<div class="ab-qahwa"><p>'+build.about_L(a['qahwa'])+'</p>'+build.follow_btn()+'</div>',self.section)
+        self.assertIn('<div class="ab-qahwa"><p>'+build.about_L(a['qahwa'])+'</p><div class="ab-acts">'+build.follow_btn()+build.lessons_link('btn-ghost ab-lessons')+'</div></div>',self.section)
+    def test_about_links_to_the_qahwa_lessons_page(self):
+        # Beside the follow button under the Qahwa & AI line: the lessons page (same tab, a page of this site).
+        self.assertEqual(build.lessons_link('btn-ghost ab-lessons'),'<a class="btn-ghost ab-lessons" href="qahwa.html">'+build.ICON['cup']+'<span data-i18n>Qahwa &amp; AI lessons</span></a>')
+        self.assertEqual(self.section.count('href="qahwa.html"'),1)
+        self.assertIn("'Qahwa & AI lessons':'دروس قهوة و AI'",self.js)
         # Cipher Lacuna and every other Latin name inside the Arabic text are bidi-isolated.
         for ar in re.findall(r'<span data-lang="ar">(.*?)</span>',self.section):
             bare=re.sub(r'<bdi lang="en" dir="ltr">[^<]*</bdi>','',ar)

@@ -131,6 +131,8 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .ig:hover{background:#f7f0ff}
 .ig .handle{font-weight:650;padding-inline-start:9px;border-inline-start:1px solid color-mix(in srgb,currentColor 40%,transparent)}
 .ig svg{flex:none}
+.ig>[data-i18n],.ig>[data-lang]{white-space:nowrap} /* "Follow Qahwa & AI" never breaks mid-name */
+@media (max-width:340px){.ig .handle{display:none}} /* very narrow phones: the handle drops out so the name fits on one line */
 /* On light surfaces (About section, footer) the follow button takes the Instagram colours. */
 .about .follow-btn,.foot .follow-btn{background:linear-gradient(90deg,#c2410c,#be185d 50%,#7e22ce);color:#fff;box-shadow:none}
 .about .follow-btn:hover,.foot .follow-btn:hover{filter:brightness(1.07)}
@@ -472,6 +474,9 @@ tbody tr:hover{background:var(--surface-2)}
 .ab-trust{display:flex;gap:14px;align-items:flex-start}
 .ab-qahwa{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-top:18px;border-top:1px solid var(--border)}
 .ab-qahwa p{flex:1 1 320px;min-width:0;color:var(--muted);font-size:14.5px}
+.ab-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ab-lessons{padding-block:9px;border-radius:999px;color:var(--accent-text)}
+.ab-lessons svg{flex:none}
 html[lang="ar"] .ab-intro{font-size:16.5px;line-height:1.85}
 
 /* footer */
@@ -481,8 +486,8 @@ html[lang="ar"] .ab-intro{font-size:16.5px;line-height:1.85}
 .foot .foot-brand{margin-bottom:2px}
 .foot .foot-tag{margin-bottom:10px;font-weight:600}
 .foot-side{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;font-weight:700}
-.foot-links a{color:var(--accent-text);text-decoration:none}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px 16px;font-size:13px;font-weight:700}
+.foot-links a{color:var(--accent-text);text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;min-height:24px} /* 24 px targets (WCAG 2.2 SC 2.5.8) */
 .foot-links a:hover{text-decoration:underline}
 
 /* compare tray, toast, dialog */
@@ -570,6 +575,7 @@ dialog::backdrop{background:#0a0d1a99}
   .p-body{gap:18px}
   .foot-in{grid-template-columns:1fr}
   .foot-side{align-items:flex-start}
+  .foot-links{justify-content:flex-start}
   .ab-top{grid-template-columns:1fr}
 }
 @media (max-width:767px){.ab-areas{grid-template-columns:1fr}}

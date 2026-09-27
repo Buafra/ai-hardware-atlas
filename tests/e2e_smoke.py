@@ -22,6 +22,9 @@ opening the page and its deep links.
 Review of that round: the UAE list in steps of 8 ("Show more"), and Arabic carried across to learn.html by its links.
 About Cipher Lacuna (data/about.json): the section under the contact card in both languages, its area links, no update
 schedule in it, the #contact/about deep link and the footer's About link landing on it, and no overflow at 375 and 1280 px.
+Qahwa & AI lessons page (qahwa.html, a separate page): the footer link after Learn AI in every view and the About link
+beside the follow button, both carrying ?lang=ar in Arabic like the links to learn.html (and opening the page in Arabic
+without saving a language), and a tidy footer (every link on one line, no overflow) from 320 to 1920 px.
 """
 import json
 import re
@@ -55,6 +58,31 @@ KEY = {
 }
 LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
 failures, checks = [], 0
+FOOT_LABELS = {'en': ['Overview', 'Hardware', 'AI news', 'UAE AI', 'Learn AI', 'Qahwa & AI lessons', 'Contact', 'About'],
+               'ar': ['الرئيسية', 'العتاد', 'أخبار الذكاء الاصطناعي', 'الذكاء الاصطناعي في الإمارات', 'تعلّم الذكاء الاصطناعي', 'دروس قهوة و AI', 'تواصل معنا', 'عن الموقع']}
+
+def foot_hrefs(lang):
+    """The footer links after app.js has run: the separate pages carry ?lang=ar in an Arabic visit."""
+    q = '?lang=ar' if lang == 'ar' else ''
+    return ['#home', '#hardware', '#news', '#uae', 'learn.html' + q, 'qahwa.html' + q, '#contact', '#contact/about']
+
+def footer_tidy(page, tag):
+    """Every footer link on one line, at least 24 px tall (WCAG 2.2 SC 2.5.8) and inside the footer, the follow button's
+    "Follow Qahwa & AI" on one line, and no horizontal page scroll."""
+    got = page.evaluate("""() => { const f = document.querySelector('.foot'), fr = f.getBoundingClientRect();
+        const links = [...f.querySelectorAll('.foot-links a')];
+        return {broken: links.filter(a => { const r = [...a.getClientRects()]; return r.length !== 1 || r[0].height > 2 * parseFloat(getComputedStyle(a).fontSize) + 22; }).map(a => a.textContent),
+                outside: links.filter(a => { const r = a.getBoundingClientRect(); return r.left < fr.left - 1 || r.right > fr.right + 1; }).map(a => a.textContent),
+                small: links.filter(a => a.getClientRects().length && a.getBoundingClientRect().height < 24).map(a => a.textContent),
+                label: [...f.querySelectorAll('.follow-btn > span')].filter(s => s.getClientRects().length).map(s => {
+                    const rg = document.createRange(); rg.selectNodeContents(s);
+                    return new Set([...rg.getClientRects()].map(r => Math.round(r.top))).size; }),
+                over: document.documentElement.scrollWidth - document.documentElement.clientWidth}; }""")
+    check(not got['broken'], f'{tag} footer links break across lines: {got["broken"]}')
+    check(not got['small'], f'{tag} footer links under 24 px tall: {got["small"]}')
+    check(got['label'] and all(n == 1 for n in got['label']), f'{tag} follow button label lines: {got["label"]}')
+    check(not got['outside'], f'{tag} footer links outside the footer: {got["outside"]}')
+    check(got['over'] <= 0, f'{tag} horizontal overflow {got["over"]}px')
 
 def check(ok, msg):
     global checks
@@ -105,6 +133,9 @@ def route_checks(page, route, lang, width, hash=None):
     check(page.locator(f'[data-view="{route}"] .follow-btn >> visible=true').count() >= 1, f'{tag} no visible follow button in the view')
     check(page.locator('.top .ig-mini').is_visible(), f'{tag} top-bar @qahwa.w.ai pill hidden')
     check(page.locator('.foot .follow-btn').count() == 1, f'{tag} footer follow button missing')
+    # Footer links: the views, Learn AI, the Qahwa & AI lessons page, Contact and About, in the page language.
+    foot = page.evaluate("[...document.querySelectorAll('.foot-links a')].map(a => [a.getAttribute('href'), a.textContent.trim()])")
+    check(foot == [list(x) for x in zip(foot_hrefs(lang), FOOT_LABELS[lang])], f'{tag} footer links {foot}')
     # The UAE flag is gone again: the nav has the same coloured dot as Hardware and AI news, the pillars the generic icon.
     check(page.locator('.flag, .p-flag, .ih-flag, .j-flag').count() == 0, f'{tag} UAE flag still rendered')
     check(page.locator('.nav .n-uae > i.dot').count() == 1, f'{tag} UAE nav marker missing')
@@ -202,7 +233,9 @@ def about_checks(page, tag, lang):
             areas: [...s.querySelectorAll('.ab-area')].filter(vis).map(a => [a.getAttribute('href'), a.querySelector('.x-sub').innerText.trim(), !!a.querySelector('.p-icon svg')]),
             text: s.innerText, over: s.scrollWidth - s.clientWidth,
             after: document.querySelector('#contact .contact-card').getBoundingClientRect().bottom <= s.getBoundingClientRect().top,
-            follows: document.querySelectorAll('#contact .follow-btn').length}; }""")
+            follows: document.querySelectorAll('#contact .follow-btn').length,
+            lessons: [...s.querySelectorAll('.ab-qahwa a.ab-lessons')].filter(vis).map(a => [a.getAttribute('href'), a.innerText.trim(), !a.target,
+                ((f, l) => Math.abs((f.top + f.bottom) / 2 - (l.top + l.bottom) / 2) < 4 || l.top >= f.bottom - 1)(s.querySelector('.ab-qahwa .follow-btn').getBoundingClientRect(), a.getBoundingClientRect())])}; }""")
     check(got['title'] == ('About Cipher Lacuna', 'عن Cipher Lacuna')[lang == 'ar'], f'{tag} About title {got["title"]!r}')
     check(got['paras'] == ABOUT['about'][lang], f'{tag} About paragraphs not verbatim: {got["paras"]}')
     check([got['name'], got['trust'], got['qahwa']] == [ABOUT[k][lang] for k in ('name_story', 'trust', 'qahwa')], f'{tag} About name/trust/qahwa not verbatim')
@@ -212,6 +245,9 @@ def about_checks(page, tag, lang):
     # One follow button in the contact view (beside the Qahwa & AI line), not a second one on the email card.
     check(got['follows'] == 1, f'{tag} {got["follows"]} follow buttons in #contact, expected 1')
     check(got['over'] <= 0, f'{tag} About section overflows by {got["over"]}px')
+    # Beside the follow button (same row, or the next one on a phone): the link to the Qahwa & AI lessons page.
+    want = [[('qahwa.html', 'qahwa.html?lang=ar')[lang == 'ar'], ('Qahwa & AI lessons', 'دروس قهوة و AI')[lang == 'ar'], True, True]]
+    check(got['lessons'] == want, f'{tag} About lessons link {got["lessons"]}')
     left = [w for w in (PHRASE[0], PHRASE[1], 'Updated', 'آخر تحديث', 'a day', 'يومياً') if w in got['text']]
     check(not left, f'{tag} About mentions the update schedule: {left}')
 
@@ -469,6 +505,18 @@ def main():
             check(not errors and not foreign, f'[{width}px] Learn AI links: errors {errors[:3]} foreign {foreign[:3]}')
             ctx.close()
 
+        # 10g2. The Qahwa & AI lessons page from the footer and the About section, in English: the page opens.
+        ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
+        page, errors, foreign = ctx.new_page(), [], []
+        watch(page, errors, foreign)
+        for start, sel in (('#home', '.foot a[href^="qahwa.html"]'), ('#contact', '#about a.ab-lessons')):
+            page.goto(BASE + start); page.wait_for_load_state('networkidle')
+            page.click(sel); page.wait_for_url('**/qahwa.html'); page.wait_for_load_state('load')
+            got = page.evaluate("[document.documentElement.lang, !!document.getElementById('library'), document.title]")
+            check(got[:2] == ['en', True] and 'Qahwa' in got[2], f'{sel} opened {page.url} as {got}')
+        check(not errors and not foreign, f'Qahwa lessons links: errors {errors[:3]} foreign {foreign[:3]}')
+        ctx.close()
+
         # 10h. Arabic opened from a shared ?lang=ar link (nothing saved) stays Arabic on learn.html, whichever link is used.
         for width in (375, 1280):
             for sel in ('.top .nav a.n-learn', '.pillar.p-learn .cta', '.pillar.p-learn .lvl .chip >> nth=0', '.foot a[href^="learn.html"]'):
@@ -482,16 +530,38 @@ def main():
                 check(got == ['ar', 'rtl', None] and re.match(r'^learn\.html\?lang=ar(#|$)', href or ''), f'[{width}px] {sel} ({href}) opened Learn AI as {got}')
                 check(not errors and not foreign, f'[{width}px] Arabic Learn link: errors {errors[:3]} foreign {foreign[:3]}')
                 ctx.close()
+            # The same for the Qahwa & AI lessons page: the footer link and the About link carry ?lang=ar.
+            for start, sel in (('#home', '.foot a[href^="qahwa.html"]'), ('#contact', '#about a.ab-lessons')):
+                ctx = browser.new_context(viewport={'width': width, 'height': 900})
+                page, errors, foreign = ctx.new_page(), [], []
+                watch(page, errors, foreign)
+                page.goto(BASE + '?lang=ar' + start); page.wait_for_load_state('networkidle')
+                href = page.get_attribute(sel, 'href')
+                page.click(sel); page.wait_for_url(lambda u: '/qahwa.html' in u); page.wait_for_load_state('load')
+                got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
+                check(got == ['ar', 'rtl', None] and href == 'qahwa.html?lang=ar', f'[{width}px] {sel} ({href}) opened the lessons page as {got}')
+                check(not errors and not foreign, f'[{width}px] Arabic lessons link: errors {errors[:3]} foreign {foreign[:3]}')
+                ctx.close()
         # English (the default) keeps the plain links.
         ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
         page = ctx.new_page(); page.goto(BASE); page.wait_for_load_state('networkidle')
-        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"]')].map(a => a.getAttribute('href'))")
-        check(hrefs and not any('lang=' in h for h in hrefs), f'English Learn links carry a language: {[h for h in hrefs if "lang=" in h][:3]}')
+        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"], a[href*=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
+        check(len([h for h in hrefs if h.startswith('qahwa.html')]) == 2, f'links to the lessons page (footer, About): {hrefs}')
+        check(hrefs and not any('lang=' in h for h in hrefs), f'English Learn/lessons links carry a language: {[h for h in hrefs if "lang=" in h][:3]}')
         # Switching to Arabic on the overview updates the links too.
         page.click('#lang'); page.wait_for_timeout(100)
-        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"]')].map(a => a.getAttribute('href'))")
-        check(hrefs and all(re.match(r'^learn\.html\?lang=ar(#|$)', h) for h in hrefs), f'Learn links after switching to Arabic: {hrefs[:3]}')
+        hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"], a[href*=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
+        check(hrefs and all(re.match(r'^(learn|qahwa)\.html\?lang=ar(#|$)', h) for h in hrefs), f'Learn/lessons links after switching to Arabic: {hrefs[:3]}')
         ctx.close()
+
+        # 10i. The footer stays tidy from 320 to 1920 px, in both languages (eight links, each on one line).
+        for lang in ('en', 'ar'):
+            for width in (320, 375, 414, 768, 1024, 1280, 1440, 1920):
+                ctx = browser.new_context(viewport={'width': width, 'height': 900})
+                page = ctx.new_page()
+                page.goto(BASE + ('?lang=ar' if lang == 'ar' else '') + '#contact'); page.wait_for_load_state('networkidle')
+                footer_tidy(page, f'[{lang} {width}px footer]')
+                ctx.close()
 
         # 10. Without JavaScript every view is rendered, stacked and readable.
         ctx = browser.new_context(viewport={'width': 375, 'height': 900}, java_script_enabled=False)
@@ -502,6 +572,7 @@ def main():
         check(page.locator('#news .nlist[data-lang="en"] .nitem:visible').count() > 0, 'no-JS: headlines hidden')
         check(overflow(page) <= 0, f'no-JS 375px overflow {overflow(page)}px')
         check(page.locator('#about .ab-area').count() == 4 and page.get_attribute('.foot-links a[data-route="contact/about"]', 'href') == '#about', 'no-JS: About section or its footer anchor')
+        check(page.get_attribute('.foot-links a[href^="qahwa.html"]', 'href') == 'qahwa.html' and page.locator('#about a.ab-lessons').is_visible(), 'no-JS: lessons links')
         ctx.close()
         browser.close()
     print(f'{checks - len(failures)}/{checks} checks passed')

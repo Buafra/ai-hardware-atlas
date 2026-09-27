@@ -2,6 +2,12 @@
    footer it reuses. */
 .ih-learn{--c:#1d5fd1;--c0:#0d2a66}
 .xcard .p-icon svg{width:21px;height:21px}
+/* The Qahwa & AI lessons card under the page header (qahwa.html): the series' coffee orange. */
+.xcard.x-qahwa{--c:#cd7829;--ink:#a4561a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .xcard.x-qahwa{--ink:#f2b27a}}
+:root[data-theme="dark"] .xcard.x-qahwa{--ink:#f2b27a}
+.l-qahwa{margin-top:16px;padding-block:12px}
+.l-qahwa b{font-size:16px}
 
 /* Tabs: without JavaScript both panels are shown one after the other and the tabs are plain jump links. */
 html[data-ltab="concepts"] [data-panel="stacks"],html[data-ltab="stacks"] [data-panel="concepts"]{display:none}
@@ -80,7 +86,7 @@ html.js .p-intro h2{position:absolute;width:1px;height:1px;overflow:hidden;clip:
 .lchip.lesson{background:var(--news-soft);border-color:color-mix(in srgb,var(--news) 30%,var(--border));color:var(--news-ink)}
 .it-sec .lchips{margin-top:8px}
 /* links that open another site end in a small arrow (not read out) */
-.srcs a::after,.opts a::after,.lchip.lesson::after{content:"↗"/"";margin-inline-start:4px;font-weight:400;opacity:.8}
+.srcs a::after,.opts a::after{content:"↗"/"";margin-inline-start:4px;font-weight:400;opacity:.8}
 .srcs{list-style:none;margin:0;padding:0;display:grid;gap:3px}
 .srcs a{font-size:13px;overflow-wrap:anywhere}
 [dir="rtl"] .srcs a{text-align:right;display:inline-block}

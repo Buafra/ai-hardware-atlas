@@ -15,6 +15,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import learn
 import policy
+import qahwa
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -510,6 +511,7 @@ ICON = {
     'uae': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h14v10H5"/><path d="M9 4v10"/></svg>',
     'contact': '<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
     'mail': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>',
+    'cup': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h12.5V14a5 5 0 0 1-5 5h-2.5a5 5 0 0 1-5-5z"/><path d="M16.5 11h1.8a2.6 2.6 0 0 1 0 5.2h-1.8"/><path d="M8.5 3.5c-.8 1 .8 2 0 3M12.5 3.5c-.8 1 .8 2 0 3"/></svg>',
     'home': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>',
     'arrow': '<svg class="flip" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
     'back': '<svg class="flip" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>',
@@ -530,6 +532,11 @@ def follow_btn():
     """The Qahwa & AI follow button: the same markup in the hero, every view header, the contact card and the footer."""
     return (f'<a class="ig follow-btn" href="{INSTAGRAM}" target="_blank" rel="noopener noreferrer">{ICON["ig"]}'
             '<span data-i18n>Follow Qahwa &amp; AI</span> <bdi class="handle" lang="en">@qahwa.w.ai</bdi></a>')
+
+def lessons_link(cls):
+    """The link to the Qahwa & AI lessons page (qahwa.html, built by scripts/qahwa.py): About section. app.js adds
+    ?lang= to it in Arabic, like the links to learn.html."""
+    return f'<a class="{cls}" href="{qahwa.PAGE}">{ICON["cup"]}<span data-i18n>Qahwa &amp; AI lessons</span></a>'
 
 def ihead(view, title, lead, extra='', follow=True):
     """Inner view header: breadcrumb, title, lead, Back to overview and the follow button.
@@ -780,7 +787,7 @@ def about_section(c):
             f'<div class="ab-box ab-name">{h("The name", "معنى الاسم")}<p>{about_L(ab["name_story"])}</p></div></div>'
             f'{h("What you&#x27;ll find", "ماذا ستجد هنا")}<ul class="ab-areas">{areas}</ul>'
             f'<div class="ab-box ab-trust"><span class="t-ic" aria-hidden="true">{ICON["shield"]}</span><div>{h("How we keep it honest", "كيف نحافظ على الدقة")}<p>{about_L(ab["trust"])}</p></div></div>'
-            f'<div class="ab-qahwa"><p>{about_L(ab["qahwa"])}</p>{follow_btn()}</div></section>')
+            f'<div class="ab-qahwa"><p>{about_L(ab["qahwa"])}</p><div class="ab-acts">{follow_btn()}{lessons_link("btn-ghost ab-lessons")}</div></div></section>')
 
 # ---------- page ----------
 
@@ -930,6 +937,7 @@ def main():
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     copy_brand_images(OUT/'brand')
     learn.build(OUT)
+    qahwa.build_safe(OUT)  # the Qahwa & AI lessons page: bad Qahwa data is logged and left out, never stops the build
     import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
     app_data.write(OUT,data,feed,sources,uae,models)  # dist/app/*.json for the Android app
     pdf(data)
@@ -939,8 +947,9 @@ def main():
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
         copy_brand_images(target.parent/'brand')
         learn.build(target.parent, home=target.name)  # its links back to the overview go to the standalone file
+        qahwa.build_safe(target.parent, home=target.name)
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
-    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF and {learn.PAGE}")
+    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF, {learn.PAGE} and {qahwa.PAGE}")
 
 if __name__=='__main__':main()

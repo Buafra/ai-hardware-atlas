@@ -8,6 +8,10 @@ web/style.css (header, footer, tokens) plus web/learn.css and web/learn.js, and 
 Every concept and stack is rendered in the HTML in both languages (CSS shows the one matching <html lang>), so the page
 reads completely without JavaScript; learn.js adds the tabs, topic filter, search, deep links and the language and theme
 buttons (same localStorage keys as the overview: atlas-lang, atlas-theme).
+
+Qahwa & AI lessons (qahwa.html, scripts/qahwa.py): a card near the top and a footer link open that page, and a concept's
+lesson chips show only the lessons already published there (qahwa.page_doc()), each linking to qahwa.html#lesson-NN. A
+lesson that is not published yet is never named, and a concept with none published has no lessons block at all.
 """
 import argparse
 import ast
@@ -154,6 +158,7 @@ def _arabic_prose(x, keys, where, errs):
 if str(ROOT / 'scripts') not in sys.path:
     sys.path.insert(0, str(ROOT / 'scripts'))
 import policy  # noqa: E402  (scripts/policy.py: the region detection and normalisation the news check uses)
+import qahwa  # noqa: E402  (scripts/qahwa.py: which Qahwa & AI lessons are published, and their deep links)
 
 _AR = 'ء-ي'  # Arabic letters (without diacritics)
 
@@ -334,9 +339,16 @@ def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXE
         for r in c.get('related') or []:
             if r not in concept_ids or r == c.get('id'):
                 errs.append(f'{at}: related concept {r!r} does not exist')
+        seen_lessons = set()
         for j, les in enumerate(c.get('related_lessons') or []):
-            if not (isinstance(les, dict) and isinstance(les.get('lesson'), int) and les['lesson'] > 0 and _filled(les.get('title_en'))):
-                errs.append(f'{at}: related_lessons[{j}] needs a lesson number and titles')
+            n = les.get('lesson') if isinstance(les, dict) else None
+            if not (isinstance(n, int) and not isinstance(n, bool) and 1 <= n <= 999
+                    and _filled(les.get('title_en')) and _filled(les.get('title_ar'))):
+                errs.append(f'{at}: related_lessons[{j}] needs a lesson number (1 to 999) and titles in both languages')
+            elif n in seen_lessons:
+                errs.append(f'{at}: related_lessons[{j}] repeats lesson {n}')
+            else:
+                seen_lessons.add(n)
         for j, s in enumerate(c.get('site_links') or []):
             problem = _link_problem(s, products, fact_ids)
             if problem:
@@ -475,13 +487,23 @@ def chips(links):
 def lesson_title(t):
     return ' '.join(str(t).split())
 
-def concept_item(c, by_id, home, instagram):
+def published_lessons(c, lessons_doc):
+    """[(related lesson, its qahwa.html deep link)] for the concept's lessons already published on the Qahwa & AI page.
+    A lesson not published yet is left out, so its title never appears before the post does."""
+    out = []
+    for les in c.get('related_lessons') or []:
+        url = qahwa.lesson_url(les['lesson'], lessons_doc)
+        if url:
+            out.append((les, url))
+    return out
+
+def concept_item(c, by_id, home, lessons_doc):
     lv_en, lv_ar = LEVELS[c['level']]
     related = [f'<a class="lchip rel" href="#concept/{esc(r)}">{T(by_id[r], "title")}</a>' for r in c.get('related') or []]
-    lessons = [f'<a class="lchip lesson" href="{esc(instagram)}" {OUT_LINK}>'
+    lessons = [f'<a class="lchip lesson" href="{esc(url)}">'
                + L(f'Qahwa &amp; AI lesson {les["lesson"]:02d}: {esc(lesson_title(les["title_en"]))}',
                    f'{QAHWA_AR}، الدرس {les["lesson"]:02d}: {esc(lesson_title(les["title_ar"]))}') + '</a>'
-               for les in c.get('related_lessons') or []]
+               for les, url in published_lessons(c, lessons_doc)]
     site_links = [f'<a class="lchip site" href="{esc(home + s["href"])}">{T(s, "label")}</a>' for s in c.get('site_links') or []]
     body = (sec('How it works', 'كيف يعمل', paras(c, 'body'))
             + sec('Example', 'مثال', para(c, 'example', 'it-p ex'))
@@ -558,13 +580,13 @@ def filter_chip(value, label, n):
 def filters(aria_en, aria_ar, chips_html):
     return (f'<div class="l-filter js-only" role="group" aria-label="{esc(aria_en)}" data-aria-ar="{esc(aria_ar)}">{chips_html}</div>')
 
-def concepts_panel(groups, concepts, home, instagram):
+def concepts_panel(groups, concepts, home, lessons_doc):
     by_id = {c['id']: c for c in concepts}
     chip_row = filter_chip('', L('All topics', 'كل المواضيع'), len(concepts)) + ''.join(
         filter_chip(g['id'], T(g, 'title'), sum(c['group'] == g['id'] for c in concepts)) for g in groups)
     out = ''
     for g in groups:
-        items = ''.join(concept_item(c, by_id, home, instagram) for c in concepts if c['group'] == g['id'])
+        items = ''.join(concept_item(c, by_id, home, lessons_doc) for c in concepts if c['group'] == g['id'])
         out += (f'<section class="l-group" id="group/{esc(g["id"])}" data-group="{esc(g["id"])}" aria-labelledby="h-{esc(g["id"])}">'
                 f'<div class="g-head"><h3 id="h-{esc(g["id"])}">{T(g, "title")}</h3>{para(g, "intro", "g-intro")}</div>'
                 f'<div class="l-items">{items}</div></section>')
@@ -600,8 +622,22 @@ HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null,l=null,q=null;try{
                "if(t==='light'||t==='dark')d.dataset.theme=t;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}if(q)l=q;"
                "if(l==='ar'){d.lang='ar';d.dir='rtl'}d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':'concepts'})(document.documentElement)")
 
-def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None):
-    """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to."""
+QAHWA_PAGE = qahwa.PAGE
+
+def lessons_doc_safe():
+    """The Qahwa & AI posts qahwa.html shows (qahwa.page_doc()); the empty document if anything goes wrong, so a
+    problem in data/qahwa.json can only hide lesson chips, never stop the build."""
+    try:
+        return qahwa.page_doc()[0]
+    except Exception as e:  # noqa: BLE001
+        print(f'learn: Qahwa & AI data unreadable, no lesson chips ({type(e).__name__}: {e})', file=sys.stderr)
+        return qahwa.empty_doc()
+
+def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None):
+    """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to.
+    lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips)."""
+    lessons_doc = lessons_doc if lessons_doc is not None else qahwa.empty_doc()
+    any_lesson = any(published_lessons(c, lessons_doc) for c in concepts_doc['concepts'])
     s = site()
     icon = lambda k: s.ICON.get(k, '')
     instagram = s.INSTAGRAM
@@ -663,22 +699,31 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
              f'<input id="lq" class="inp" type="search" autocomplete="off" spellcheck="false" placeholder="Search concepts and stacks…" data-ph-ar="ابحث في المفاهيم والتركيبات…"></label></div>'
              f'<p class="l-count js-only" id="l-count" aria-live="polite"></p>'
              f'<p class="l-empty" id="l-empty" hidden>{L("No matches. Try another word or clear the search.", "لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.")}</p>')
-    note = (f'<p class="muted l-note">{L("These guides are editorial summaries for learning. Products, services, prices and regional availability change, so check the linked sources before you decide. Qahwa &amp; AI lesson links open the @qahwa.w.ai Instagram account.", f"هذه الشروح ملخصات تحريرية لأغراض التعلّم. المنتجات والخدمات والأسعار والتوفّر حسب المنطقة تتغيّر، لذا راجع المصادر المرفقة قبل أن تتخذ قرارك. روابط دروس {QAHWA_AR} تفتح حساب ‎@qahwa.w.ai على إنستغرام.")}</p>')
+    lesson_note = (('Qahwa &amp; AI lesson links open the lesson on the Qahwa &amp; AI lessons page.',
+                    f'روابط دروس {QAHWA_AR} تفتح الدرس في صفحة دروس {QAHWA_AR}.') if any_lesson else ('', ''))
+    note = (f'<p class="muted l-note">' + L(('These guides are editorial summaries for learning. Products, services, prices and regional '
+                                            'availability change, so check the linked sources before you decide. ' + lesson_note[0]).strip(),
+                                           ('هذه الشروح ملخصات تحريرية لأغراض التعلّم. المنتجات والخدمات والأسعار والتوفّر حسب المنطقة تتغيّر، '
+                                            'لذا راجع المصادر المرفقة قبل أن تتخذ قرارك. ' + lesson_note[1]).strip()) + '</p>')
+    qcard = (f'<a class="xcard x-qahwa l-qahwa" href="{QAHWA_PAGE}"><span class="p-icon" aria-hidden="true">{icon("cup")}</span>'
+             f'<span><b>{L("Daily lessons from Qahwa &amp; AI", f"دروس يومية من {QAHWA_AR}")}</b>'
+             f'<span class="x-sub">{L("A short AI lesson a day in Arabic and English, each with a prompt to try.", "درس قصير في الذكاء الاصطناعي كل يوم بالعربية والإنجليزية، ومع كل درس أمر تجرّبه بنفسك.")}</span></span>'
+             f'<span class="x-arr">{arrow}</span></a>')
     cards = (('hardware', '', icon('hw'), L('Hardware', 'العتاد'), L('NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.', 'معالجات رسوميات وأجهزة مكتبية وخوادم ورفوف من NVIDIA وAMD، جنباً إلى جنب.')),
              ('news', ' x-news', icon('news'), L('AI news', 'أخبار الذكاء الاصطناعي'), L('The latest AI headlines in English and Arabic, each linked to the original article.', 'أحدث عناوين الذكاء الاصطناعي بالعربية والإنجليزية، ولكل عنوان رابط إلى المقال الأصلي.')),
              ('uae', ' x-uae', icon('uae'), L('UAE AI', 'الذكاء الاصطناعي في الإمارات'), L('Latest UAE AI headlines, then key facts on strategy, compute and models, each with its source.', 'أحدث عناوين الذكاء الاصطناعي في الإمارات، ثم حقائق رئيسية عن الاستراتيجية والحوسبة والنماذج، ولكل منها مصدره.')))
     xnav = ('<nav class="xnav" aria-label="Other areas" data-aria-ar="الأقسام الأخرى">' + ''.join(
         f'<a class="xcard{cls}" href="{h}#{v}"><span class="p-icon" aria-hidden="true">{ic}</span><span><b>{name}</b><span class="x-sub">{sub}</span></span><span class="x-arr">{arrow}</span></a>'
         for v, cls, ic, name, sub in cards) + '</nav>')
-    main = (f'<main id="main" tabindex="-1"><div class="wrap">\n{ihead}\n{tools}\n'
-            f'{concepts_panel(groups, concepts, home, instagram)}\n{stacks_panel(stacks, concepts, home)}\n{note}\n{xnav}\n</div></main>\n')
+    main = (f'<main id="main" tabindex="-1"><div class="wrap">\n{ihead}\n{qcard}\n{tools}\n'
+            f'{concepts_panel(groups, concepts, home, lessons_doc)}\n{stacks_panel(stacks, concepts, home)}\n{note}\n{xnav}\n</div></main>\n')
     footer = (f'<footer class="foot"><div class="wrap foot-in"><div><p class="foot-brand"><a class="brand" href="{h}"><span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span></a></p>'
               f'<p class="foot-tag">{L(*TAGLINE)}</p><p><bdi lang="en">© {esc(year)} Cipher Lacuna.</bdi> {L("All rights reserved.", "جميع الحقوق محفوظة.")}</p>'
               f'<p>{L("Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.", "صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.")}</p></div>\n'
               f'<div class="foot-side">{follow}<p>{L("AI lessons and news from Qahwa &amp; AI, in English and Arabic.", f"دروس وأخبار الذكاء الاصطناعي من {QAHWA_AR}، بالعربية والإنجليزية.")}</p>'
               f'<nav class="foot-links" aria-label="Footer" data-aria-ar="تذييل الصفحة"><a href="{h}">{L("Overview", "الرئيسية")}</a><a href="{h}#hardware">{L("Hardware", "العتاد")}</a>'
               f'<a href="{h}#news">{L("AI news", "أخبار الذكاء الاصطناعي")}</a><a href="{h}#uae">{L("UAE AI", "الذكاء الاصطناعي في الإمارات")}</a>'
-              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a></nav></div></div></footer>\n')
+              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{QAHWA_PAGE}">{L("Qahwa &amp; AI lessons", f"دروس {QAHWA_AR}")}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a></nav></div></div></footer>\n')
     return head + header + main + footer + f'<script>{_asset("learn.js")}</script></body></html>\n'
 
 def landing_card(data_dir=DATA, href=PAGE):
@@ -700,12 +745,13 @@ def _asset(name):
         raise LearnDataError(f'web/{name} contains {closing}, which would end the inline block early')
     return text
 
-def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, uae_path=UAE):
-    """Validate the learn data and write <out_dir>/learn.html plus the brand PNGs it links (brand/). Returns the page path."""
+def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, uae_path=UAE, lessons_doc=None):
+    """Validate the learn data and write <out_dir>/learn.html plus the brand PNGs it links (brand/). Returns the page path.
+    lessons_doc: the published Qahwa & AI posts (default: lessons_doc_safe(), from data/qahwa.json)."""
     concepts_doc, stacks_doc = load(data_dir)
     catalog = json.loads(Path(catalog_path).read_text(encoding='utf-8'))
     validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path))
-    page = render(concepts_doc, stacks_doc, catalog, home=home)
+    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc_safe() if lessons_doc is None else lessons_doc)
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     target = out_dir / PAGE
