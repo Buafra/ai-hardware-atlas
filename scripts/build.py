@@ -14,6 +14,7 @@ from reportlab.lib.pagesizes import A3
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import learn
+import policy
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -395,12 +396,16 @@ def load_site(products, facts, path=None):
 # ---------- news helpers ----------
 
 def news_items(news, sources):
-    src = {s['id'] for s in sources}
+    src = {s['id']: s for s in sources}
     # news.py only keeps https links from allowed hosts; this guards against a hand edit of news.json.
     # Items the AI summary step judged not mainly about AI (ai_focus false: a weekend digest, a lifestyle piece that
     # only lists AI) stay in news.json but are not shown anywhere. Without a verdict the collection rule stands:
     # general-news feeds only keep headlines that mention AI.
-    items = [i for i in (news or {}).get('items', []) if i.get('source') in src and https(i.get('url')) and i.get('ai_focus') is not False]
+    # Content policy (scripts/policy.py): an item that mentions the UAE or a GCC state is shown only from a regional
+    # outlet or an official source and only with a passing policy verdict at the current version; without one (no key,
+    # an API error, a refusal) it stays hidden. The site and the app (app_data.py) both use this list.
+    items = [i for i in (news or {}).get('items', []) if i.get('source') in src and https(i.get('url')) and i.get('ai_focus') is not False
+             and policy.shown_ok(i, src[i['source']])]
     return sorted(items, key=lambda i: i['published'], reverse=True)
 
 def in_lang(i, lang):

@@ -142,6 +142,47 @@ class DataTests(unittest.TestCase):
         learn.validate(c, self.stacks, self.products)
         with self.assertRaises(learn.LearnDataError):
             learn.validate(c, self.stacks, self.products, fact_ids=set())
+    def test_content_policy_guard(self):
+        # Learn text never pairs a UAE/GCC name with conflict, war, damage, sanctions, spyware or human-rights wording,
+        # in English or Arabic (the owner's content policy): the removed rag-memory pitfall must fail validation.
+        bad = {
+            'en': "AWS's UAE region (me-central-1) has been disrupted since March 2026 after conflict damage.",
+            'ar': 'فمنطقة AWS في الإمارات (me-central-1) تعاني اضطراباً منذ مارس 2026 بعد أضرار ناجمة عن النزاع.',
+        }
+        for lang, text in bad.items():
+            msg = self.broken(lambda s: s['stacks'][0][f'pitfalls_{lang}'].__setitem__(0, text), 'stacks')
+            self.assertIn('breaks the content policy', msg, lang)
+            self.assertIn(f'pitfalls_{lang}[0]', msg, lang)
+        for text in ('Saudi firms face US sanctions over chips', 'A war in the Gulf', 'Spyware claims about a Qatari ministry',
+                     "AWS's UAE region has been down since March after drone attacks.", 'Export-control concerns about G42',
+                     'The blockade of Qatar', 'Critics accused Abu Dhabi of a crackdown', 'Dubai data centre hit by strikes',
+                     'تعطلت منطقة AWS في الإمارات بعد هجمات', 'بسبب الحَرب في الإمارات', 'بسبب الحـرب في الإمارات', 'مخاوف أمنية بشأن G42',
+                     'The Dubаi region was bombed',  # a Cyrillic а
+                     'Human rights groups criticised Abu Dhabi', 'حرب في الخليج', 'تقارير عن برامج التجسس في دبي',
+                     'انتقادات لحقوق الإنسان في البحرين', 'فرضت واشنطن عقوبات على شركات في الإمارات', "Kuwait's grid was damaged"):
+            self.assertTrue(learn.policy_problems(text, 'x'), text)
+        # Neutral text, other countries' matters and words that only look like place names pass.
+        for text in ('Test on Gulf dialect, not only MSA.', 'Report deepfake fraud to Dubai Police eCrime.',
+                     'The EU AI Act bans social scoring; fines can reach EUR 35 million.', 'Over-broad permissions cause real damage.',
+                     'وفي دولة الإمارات، يحدّد المرسوم بقانون عقوبات على نشر المعلومات الكاذبة.', 'النزاعات في الرياضيات والأدب',
+                     'قطرة ماء في نزاع قانوني', 'تُدرج منطقة UAE North فحوص المحتوى الضار',
+                     'Choosing edge hardware by peak TOPS alone, or ignoring Gulf heat that makes enclosed devices throttle or fail.',
+                     'تجاهل حرارة الخليج التي تجعل الأجهزة تتعطّل', 'تعمل الخدمة دون انقطاع في دبي', 'معارض دبي التجارية للتقنية'):
+            self.assertEqual(learn.policy_problems(text, 'x'), [], text)
+        # The same guard covers the other fixed pages (data/uae.json, data/about.json) through validate().
+        with tempfile.TemporaryDirectory() as d:
+            uae = json.loads((ROOT / 'data' / 'uae.json').read_text(encoding='utf-8'))
+            uae['facts'][0]['text_en'] = 'The UAE was hit by conflict damage.'
+            (Path(d) / 'uae.json').write_text(json.dumps(uae, ensure_ascii=False), encoding='utf-8')
+            with self.assertRaises(learn.LearnDataError) as cm:
+                learn.validate(self.concepts, self.stacks, self.products, fixed_paths=(Path(d) / 'uae.json',))
+            self.assertIn('uae.json.facts[0].text_en breaks the content policy', str(cm.exception))
+        self.assertEqual(learn.fixed_content_problems(), [])
+        # The hardware notes (data/catalog.json) are fixed content too.
+        self.assertIn(learn.CATALOG, learn.FIXED_CONTENT)
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / 'catalog.json').write_text(json.dumps({'products': [{'id': 'x', 'notes': 'Shipments to the UAE were halted by export controls.'}]}), encoding='utf-8')
+            self.assertIn('catalog.json.products[0].notes breaks the content policy', learn.fixed_content_problems((Path(d) / 'catalog.json',))[0])
     def test_all_problems_are_listed_together(self):
         def two(c):
             c['concepts'][0]['related'].append('missing-a')

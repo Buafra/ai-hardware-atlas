@@ -2,7 +2,8 @@
 
 The app ships with a copy of these files and refreshes them from GitHub Pages; its background notification check
 reads news.json. Everything here is already public on the site, and the same rules decide what is shown: the news
-list is build.news_items() (AI-focused items only), summaries come from build.summary_of(), and backend-only catalog
+list is build.news_items() (AI-focused items only, and items that mention the UAE or a GCC state only with a passing
+content-policy verdict, see scripts/policy.py), summaries come from build.summary_of(), and backend-only catalog
 fields stay out. manifest.json lists each file's SHA-256 so the app downloads only what changed.
 """
 import hashlib

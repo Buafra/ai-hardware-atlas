@@ -304,7 +304,9 @@ class OwnerRequestTests(unittest.TestCase):
             {'id':'f1','title':'ChatGPT has reached 1 billion weekly users','url':'https://'+build.urlparse(by_region['global']['homepage']).hostname+'/f1','source':by_region['global']['id'],'lang':'en','uae':False,
              'published':'2026-09-26T10:00:00+00:00','excerpt':'The company responded within a day; the schedule was checked at noon and the target was reached.'},
             {'id':'f2','title':'استجابة سريعة من الإمارات للذكاء الاصطناعي','url':'https://'+build.urlparse(by_region['uae']['homepage']).hostname+'/f2','source':by_region['uae']['id'],'lang':'ar','uae':True,
-             'published':'2026-09-26T09:00:00+00:00','excerpt':'تم الوصول إلى اتفاق واستجاب المشاركون للدعوة بسرعة كبيرة.'}]}
+             'published':'2026-09-26T09:00:00+00:00','excerpt':'تم الوصول إلى اتفاق واستجاب المشاركون للدعوة بسرعة كبيرة.',
+             'policy_ok':True,'policy_version':build.policy.POLICY_VERSION}]}  # mentions the UAE: shown only with a passing policy verdict
+        feed['items'][1]['policy_hash']=build.policy.fingerprint(feed['items'][1])  # the verdict holds for these texts
         with tempfile.TemporaryDirectory() as d:
             html,public=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d))
         self.assertIn('ChatGPT has reached 1 billion weekly users',html);self.assertIn('استجابة سريعة',html)  # free text is shown as is

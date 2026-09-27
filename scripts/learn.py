@@ -143,6 +143,111 @@ def _arabic_prose(x, keys, where, errs):
     if _filled(x.get('title_ar')) and not AR_LETTER.search(str(x['title_ar'])):
         errs.append(f'{where}: title_ar has no Arabic letters')
 
+# ---------- content policy guard (owner-approved policy P1-P4, fixed content under M5) ----------
+# Fixed content (Learn AI, and the other fixed pages: data/uae.json, data/about.json and the hardware notes in
+# data/catalog.json) never pairs a UAE/GCC name with conflict, attack, damage, disruption, sanctions or export-control,
+# blockade, crisis, criticism, accusation, crackdown, detention, spyware, surveillance, scandal or human-rights wording,
+# so a sentence like "the UAE region has been disrupted after conflict damage", or any paraphrase of it, cannot come
+# back. The check is per text field, in English and Arabic, on normalised text (diacritics, tatweel, letter variants and
+# look-alike letters do not hide a word); it is deliberately broad ("when in doubt, leave it out"): reword the sentence
+# neutrally or drop the country name.
+if str(ROOT / 'scripts') not in sys.path:
+    sys.path.insert(0, str(ROOT / 'scripts'))
+import policy  # noqa: E402  (scripts/policy.py: the region detection and normalisation the news check uses)
+
+_AR = 'ء-ي'  # Arabic letters (without diacritics)
+
+def _ar_words(*words):
+    """Arabic whole words, allowing a leading و/ف/ب/ل/ك and a nisba or plural ending (Arabic has no \\b)."""
+    alts = '|'.join(policy.normalize(w) for w in words)
+    return rf'(?<![{_AR}])[وفبلك]?(?:{alts})(?:ي|يه|يون|يين|يا|ا)?(?![{_AR}])'
+
+def _ar_any(*phrases):
+    """Arabic phrases matched anywhere (normalised spelling)."""
+    return '|'.join(policy.normalize(x) for x in phrases)
+
+GCC_NAMES = re.compile('|'.join((
+    r'\b(?:U\.?A\.?E|Emirates|Emirati|Abu ?Dhabi|Dubai|Sharjah|Ajman|Fujairah|Ras Al[ -]Khaimah|Umm Al[ -]Quwain|Al Ain|'
+    r'Saudi|KSA|Riyadh|Jeddah|Qatari?|Doha|Kuwaiti?|Bahraini?|Manama|Omani?|Muscat|GCC|Gulf|'
+    r'Al Nahyan|Al Maktoum|Al Qasimi|Al Nuaimi|Al Sharqi|Al Mualla|Al Saud|Al Thani|Al Sabah|Al Khalifa|Al Said|'
+    r'bin Zayed|bin Rashid|bin Salman|Sheikh|Sheikha|G42|MGX|Mubadala|ADNOC|ADQ|TII|Core42|Khazna|PIF|HUMAIN|Aramco|NEOM|QIA|'
+    r'Ooredoo|KIA|Mumtalakat|Omantel|MBZUAI|SDAIA|QCRI|WAM|me-central-1|me-south-1)\b',
+    r'(?<!\w)e&(?!\w)',
+    _ar_any('الإمارات', 'إماراتي', 'أبوظبي', 'أبو ظبي', 'الشارقة', 'عجمان', 'الفجيرة', 'رأس الخيمة', 'أم القيوين', 'السعودي', 'سعودي',
+            'الدوحة', 'الكويت', 'كويتي', 'البحرين', 'بحريني', 'المنامة', 'سلطنة عمان', 'العماني', 'الخليج', 'خليجي', 'مجلس التعاون',
+            'آل نهيان', 'آل مكتوم', 'القاسمي', 'النعيمي', 'المعلا', 'آل سعود', 'آل ثاني', 'آل الصباح', 'آل خليفة', 'آل سعيد', 'بن زايد',
+            'بن راشد', 'بن سلمان', 'أرامكو', 'هيوماين', 'مبادلة', 'أدنوك', 'نيوم', 'جهاز قطر', 'صندوق الاستثمارات العامة', 'أوريدو',
+            'عمانتل', 'ممتلكات البحرين', 'خزنة', 'وكالة أنباء الإمارات'),
+    _ar_words('دبي', 'قطر', 'القطر', 'الرياض', 'مسقط', 'الشيخ', 'الشيخة', 'وام', 'عمان'),
+)), re.I)
+
+RISK_TERMS = re.compile('|'.join((
+    r'\b(?:conflicts?|wars?|warfare|war-?time|war-torn|hostilities|invasion|invaded|military (?:strikes?|action|operations?)|'
+    r'strikes?|struck by|air ?strikes?|drones? (?:strikes?|attacks?)|attack(?:s|ed|ing)?|missiles?|bomb(?:s|ed|ing)?|shelling|'
+    r'damaged?|damages|disrupt(?:ed|ion|ions|s)?|sanction(?:s|ed)?|embargo(?:es)?|export[- ]controls?|blockade[ds]?|'
+    r'boycott(?:s|ed)?|crisis|crises|tensions?|instability|unrest|riots?|protests?|protesters|coup|terror\w*|militants?|'
+    r'militias?|rebels?|Houthis?|criticis(?:e|ed|es|ing|m)|criticiz(?:e|ed|es|ing)|critics?|accus(?:e|ed|es|ing|ation|ations)|'
+    r'allegations?|alleged(?:ly)?|crackdowns?|censor(?:s|ed|ship)?|detain(?:s|ed|ee|ees)?|detention|arrest(?:s|ed)?|jail(?:s|ed)?|'
+    r'imprison(?:s|ed|ment)?|prisons?|dissidents?|activists?|scandals?|abuses?|torture|executions?|spyware|espionage|spying|'
+    r'surveillance|(?:national )?security (?:concerns?|risks?|fears?|threats?)|human[- ]rights?|lawsuits?|sued|probes?|'
+    r'investigations? into)\b',
+    _ar_any('نزاع', 'صراع', 'الحرب', 'حروب', 'حربي', 'قصف', 'غارة', 'غارات', 'صاروخ', 'صواريخ', 'دمار', 'تدمير', 'أضرار', 'تضرر',
+            'اجتياح', 'هجوم', 'هجمات', 'الهجمات', 'هجمة', 'ضربة', 'ضربات', 'مسيرات هجومية', 'اضطرابات',
+            'برامج التجسس', 'برمجيات التجسس', 'تجسس', 'التجسس', 'حقوق الإنسان', 'المراقبة الجماعية', 'مراقبة جماعية',
+            'عقوبات اقتصادية', 'عقوبات دولية', 'عقوبات أمريكية', 'عقوبات أميركية', 'عقوبات غربية', 'العقوبات المفروضة', 'للعقوبات',
+            'لعقوبات', 'قيود التصدير', 'ضوابط التصدير', 'قيود على التصدير', 'حظر التصدير', 'حصار', 'مقاطعة', 'أزمة', 'الأزمة',
+            'أزمات', 'توتر', 'توترات', 'عدم الاستقرار', 'احتجاج', 'احتجاجات', 'مظاهرات', 'انقلاب', 'إرهاب', 'ارهابي', 'الحوثي',
+            'الحوثيين', 'انتقاد', 'انتقادات', 'ينتقد', 'منتقد', 'اتهام', 'اتهامات', 'متهم', 'مزاعم', 'ادعاءات', 'قمع', 'الرقابة على',
+            'اعتقال', 'احتجاز', 'معتقل', 'سجن', 'السجن', 'معارضين', 'المعارضة السياسية', 'معارض سياسي', 'فضيحة', 'انتهاك', 'انتهاكات', 'تعذيب',
+            'إعدام', 'مخاوف أمنية', 'تهديد أمني', 'دعوى قضائية', 'دعاوى قضائية'),
+    r'عقوبات علي (?:شركه|شركات|كيان|كيانات|افراد|مسوول|مسوولين|مسؤول|مسؤولين|دوله|دول)',  # normalised: على -> علي
+    _ar_words('حرب'),
+)), re.I)
+
+def policy_problems(o, where):
+    """Every text field under `o` that names the UAE or a GCC state, leader or state entity together with risk wording
+    (RISK_TERMS: P1-P4 of the owner's content policy)."""
+    errs = []
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k not in ('url', 'href', 'id', 'image', 'images', 'src', 'photo'):
+                errs += policy_problems(v, f'{where}.{k}')
+    elif isinstance(o, list):
+        for i, v in enumerate(o):
+            errs += policy_problems(v, f'{where}[{i}]')
+    elif isinstance(o, str):
+        text = policy.normalize(o)
+        risk = RISK_TERMS.search(text)
+        name = risk and region_name(text)
+        if name:
+            errs.append(f'{where} breaks the content policy: it pairs {name!r} with {risk.group(0).strip()!r}; '
+                        'reword it neutrally or leave it out')
+    return errs
+
+def region_name(text):
+    """The first UAE/GCC name in the text ('' when none): this module's list, then the fuller region detection of
+    scripts/policy.py (the one the news check uses)."""
+    m = GCC_NAMES.search(policy.normalize(text))
+    if m:
+        return m.group(0).strip()
+    found = policy.region_terms(text)
+    return found[0] if found else ''
+
+ABOUT = ROOT / 'data' / 'about.json'
+FIXED_CONTENT = (UAE, ABOUT, CATALOG)
+
+def fixed_content_problems(paths=FIXED_CONTENT):
+    """The policy guard over the other fixed pages (data/uae.json, data/about.json, and the hardware notes, use lines,
+    price notes and other text of data/catalog.json); a missing file is skipped."""
+    errs = []
+    for p in paths:
+        try:
+            doc = json.loads(Path(p).read_text(encoding='utf-8'))
+        except FileNotFoundError:
+            continue
+        errs += policy_problems(doc, Path(p).name)
+    return errs
+
 def uae_fact_ids(path=UAE):
     """The ids of data/uae.json's facts, which #uae/f/<id> links open on the overview (empty when the file is missing)."""
     try:
@@ -190,10 +295,11 @@ def _sources(x, where, errs):
         if not (isinstance(s, dict) and _filled(s.get('label')) and _https(s.get('url'))):
             errs.append(f'{where}.sources[{j}] needs a label and an https url')
 
-def validate(concepts_doc, stacks_doc, products, fact_ids=None):
+def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXED_CONTENT):
     """Raise LearnDataError listing every problem: ids, bilingual text, cross references, links, hardware and UAE fact
-    ids. fact_ids defaults to the facts in data/uae.json."""
-    errs = []
+    ids, and the content policy guard (policy_problems) over the Learn text and the fixed pages in fixed_paths.
+    fact_ids defaults to the facts in data/uae.json."""
+    errs = policy_problems(concepts_doc, 'concepts') + policy_problems(stacks_doc, 'stacks') + fixed_content_problems(fixed_paths)
     fact_ids = uae_fact_ids() if fact_ids is None else set(fact_ids)
     groups, concepts = concepts_doc.get('groups') or [], concepts_doc.get('concepts') or []
     stacks = stacks_doc.get('stacks') or []

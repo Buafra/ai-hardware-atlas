@@ -37,11 +37,14 @@ jobs:
       - name: Check official sources
         if: github.event_name != 'push'
         run: python scripts/refresh.py
-      - name: Collect AI news (Arabic translations need ANTHROPIC_API_KEY)
+      - name: Collect AI news (translations, summaries and the content-policy check need ANTHROPIC_API_KEY)
         if: github.event_name != 'push'
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional private report of removed stories (titles and reasons) to the owner; nothing is sent unless both are set.
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: python scripts/news.py
       - name: Refresh OpenRouter model list and sizes
         if: github.event_name != 'push'

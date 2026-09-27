@@ -55,9 +55,9 @@
     {
       "id": "g42-gb300-export-approval",
       "title_en": "US approves GB300 chips for G42",
-      "text_en": "In November 2025 the US Commerce Department authorised G42 to buy computing power equivalent to up to 35,000 NVIDIA GB300 chips, subject to security and reporting requirements. Saudi Arabia's Humain received the same approval.",
+      "text_en": "In November 2025 the US Commerce Department authorised G42 to buy computing power equivalent to up to 35,000 NVIDIA GB300 chips. Saudi Arabia's Humain received the same approval.",
       "title_ar": "موافقة أمريكية على رقائق GB300 لـG42",
-      "text_ar": "في نوفمبر 2025 أجازت وزارة التجارة الأمريكية لشركة G42 شراء قدرة حوسبة تعادل ما يصل إلى 35,000 شريحة NVIDIA GB300، بشرط الالتزام بمتطلبات الأمن والإبلاغ. وحصلت شركة هيوماين السعودية على الموافقة نفسها.",
+      "text_ar": "في نوفمبر 2025 أجازت وزارة التجارة الأمريكية لشركة G42 شراء قدرة حوسبة تعادل ما يصل إلى 35,000 شريحة NVIDIA GB300. وحصلت شركة هيوماين السعودية على الموافقة نفسها.",
       "as_of": "2025-11-19",
       "hardware": [
         "GB300"

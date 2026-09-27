@@ -36,11 +36,25 @@ def ai_status(path=ROOT / 'data/news.json'):
     except (OSError, ValueError):
         return ''
     if ai and not ai.get('key_set'):
-        return '**AI news steps:** ANTHROPIC_API_KEY is not set, so no Arabic headline translations or AI summaries were written.'
+        return ('**AI news steps:** ANTHROPIC_API_KEY is not set, so no Arabic headline translations, AI summaries or content-policy '
+                'checks were done; news items that mention the UAE or the GCC stay hidden until they pass the check.')
     if ai.get('problems'):
         problems = ', '.join(f'{k} x{v}' for k, v in ai['problems'].items())
         return f"**AI news steps:** {ai.get('translated', 0)} translated, {ai.get('summarised', 0)} summarised; problems: {problems}."
     return ''
+
+def policy_status(path=ROOT / 'data/news.json'):
+    """One line of counts from the content-policy step (news.json "ai"), or '' when it recorded none. This issue is
+    public: counts only, never a title, a link or a reason (the owner gets those privately, if Telegram is set up)."""
+    try:
+        ai = json.loads(Path(path).read_text(encoding='utf-8')).get('ai') or {}
+    except (OSError, ValueError):
+        return ''
+    if 'policy_version' not in ai:
+        return ''
+    n = lambda k: int(ai.get(k) or 0)
+    return (f"**Content policy (UAE/GCC), last news run:** {n('policy_checked')} checked, {n('policy_blocked')} removed, "
+            f"{n('m1_dropped')} dropped from non-regional sources, {n('policy_pending')} of {n('regional')} UAE/GCC items hidden until verified.")
 
 def main():
     report = json.loads((ROOT / 'data/refresh-report.json').read_text(encoding='utf-8'))
@@ -53,8 +67,9 @@ def main():
         print('Nothing needs review.')
         return 0
     text = body(report, drafts)
-    if ai_status():
-        text += '\n\n' + ai_status()
+    for line in (ai_status(), policy_status()):
+        if line:
+            text += '\n\n' + line
     if stale:
         text += f'\n\n**Approximate prices older than {STALE_PRICE_DAYS} days** (re-check and update `price` in data/catalog.json)\n' + '\n'.join(f'- {m}' for m in stale)
     gh('label', 'create', LABEL, '--color', '6537d7', '--description', 'Official source changes to review', '--force')

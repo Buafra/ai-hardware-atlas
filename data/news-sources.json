@@ -213,20 +213,6 @@
     "drop_titles": "\\bDisrupt\\b.*(?:\\bpass(?:es)?\\b|\\bsave\\b|\\bdeals?\\b|\\btickets?\\b|\\d+% off|\\$\\d)|(?:\\bpass(?:es)?\\b|\\bsave\\b|\\bdeals?\\b|\\btickets?\\b|\\d+% off|\\$\\d).*\\bDisrupt\\b"
   },
   {
-    "id": "guardian-ai",
-    "name": "The Guardian — Artificial intelligence",
-    "name_ar": "الغارديان — الذكاء الاصطناعي",
-    "feed": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
-    "homepage": "https://www.theguardian.com/technology/artificialintelligenceai",
-    "lang": "en",
-    "region": "global",
-    "ai_only": true,
-    "link_hosts": [
-      "www.theguardian.com"
-    ],
-    "kind": "news"
-  },
-  {
     "id": "wired-ai",
     "name": "WIRED — AI",
     "name_ar": "وايرد — الذكاء الاصطناعي",
@@ -255,20 +241,6 @@
     "kind": "news"
   },
   {
-    "id": "bbc-tech",
-    "name": "BBC News — Technology",
-    "name_ar": "بي بي سي — التكنولوجيا",
-    "feed": "https://feeds.bbci.co.uk/news/technology/rss.xml",
-    "homepage": "https://www.bbc.com/news/technology",
-    "lang": "en",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "www.bbc.co.uk"
-    ],
-    "kind": "news"
-  },
-  {
     "id": "skynews-ar-tech",
     "name": "Sky News Arabia — Technology",
     "name_ar": "سكاي نيوز عربية — تكنولوجيا",
@@ -280,49 +252,8 @@
     "link_hosts": [
       "www.skynewsarabia.com"
     ],
-    "kind": "news"
-  },
-  {
-    "id": "bbc-ar",
-    "name": "BBC Arabic",
-    "name_ar": "بي بي سي عربي",
-    "feed": "https://feeds.bbci.co.uk/arabic/rss.xml",
-    "homepage": "https://www.bbc.com/arabic",
-    "lang": "ar",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "www.bbc.com"
-    ],
-    "kind": "news"
-  },
-  {
-    "id": "aljazeera-ar",
-    "name": "Al Jazeera Arabic",
-    "name_ar": "الجزيرة نت",
-    "feed": "https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9",
-    "homepage": "https://www.aljazeera.net/",
-    "lang": "ar",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "www.aljazeera.net"
-    ],
-    "kind": "news"
-  },
-  {
-    "id": "cnn-ar",
-    "name": "CNN Arabic",
-    "name_ar": "سي إن إن بالعربية",
-    "feed": "https://arabic.cnn.com/api/v1/rss/rss.xml",
-    "homepage": "https://arabic.cnn.com/",
-    "lang": "ar",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "arabic.cnn.com"
-    ],
-    "kind": "news"
+    "kind": "news",
+    "regional_outlet": true
   },
   {
     "id": "indy-ar-new",
@@ -336,7 +267,8 @@
     "link_hosts": [
       "www.independentarabia.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "regional_outlet": true
   },
   {
     "id": "aitnews",
@@ -349,20 +281,6 @@
     "ai_only": false,
     "link_hosts": [
       "aitnews.com"
-    ],
-    "kind": "news"
-  },
-  {
-    "id": "dw-ar",
-    "name": "DW Arabic",
-    "name_ar": "دويتشه فيله عربية",
-    "feed": "https://rss.dw.com/rdf/rss-ar-all",
-    "homepage": "https://www.dw.com/ar/",
-    "lang": "ar",
-    "region": "global",
-    "ai_only": false,
-    "link_hosts": [
-      "www.dw.com"
     ],
     "kind": "news"
   },
@@ -392,7 +310,8 @@
     "link_hosts": [
       "aawsat.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "regional_outlet": true
   },
   {
     "id": "mediaoffice-en2",

@@ -361,7 +361,7 @@
                 "name": "Azure AI Content Safety (UAE North)",
                 "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/region-availability",
                 "note_en": "As of September 2026, UAE North lists content harms, Prompt Shields, PII and blocklists; task adherence uses global routing.",
-                "note_ar": "حتى سبتمبر 2026، تُدرج منطقة UAE North فحوص أضرار المحتوى وPrompt Shields وكشف PII وقوائم الحظر؛ أما ميزة الالتزام بالمهمة (task adherence) فتستخدم توجيهاً عالمياً."
+                "note_ar": "حتى سبتمبر 2026، تُدرج منطقة UAE North فحوص المحتوى الضار وPrompt Shields وكشف PII وقوائم الحظر؛ أما ميزة الالتزام بالمهمة (task adherence) فتستخدم توجيهاً عالمياً."
               }
             ]
           },
@@ -1135,7 +1135,7 @@
         "Saving whole transcripts as memory: it bloats every prompt, repeats outdated facts and widens privacy exposure—extract a few dated facts and let newer ones replace older ones.",
         "Leaking one user's memories to another through a missing scope filter, a shared cache or a group conversation—test for it as you test document permissions.",
         "Assuming deletion is automatic: some APIs keep stored conversations until you delete them, so build deletion and retention into the app.",
-        "Assuming in-country hosting is automatically resilient: AWS's UAE region (me-central-1) has been disrupted since March 2026 after conflict damage, and on 15 September 2026 AWS said it can't restore data held only in one of its availability zones—keep tested backups of documents, indexes and memory stores in a second location."
+        "Assuming one region or availability zone is automatically resilient: keep tested backups of documents, indexes and memory stores in a second location."
       ],
       "cost_en": "Main drivers: embedding the corpus (again whenever you change embedding model), vector storage and replicas, reranker calls, and LLM input tokens, which retrieved passages dominate. Memory adds LLM calls to extract and consolidate facts, per-user storage, and the tokens that retrieved memories add to each prompt; managed memory services price this differently—Foundry's memory preview, for example, bills the underlying model usage. Fewer, better chunks and memories cut cost and latency. Pricing varies by plan and region and can change.",
       "related_concepts": [
@@ -1180,10 +1180,6 @@
         {
           "label": "Claude Citations documentation (Anthropic)",
           "url": "https://platform.claude.com/docs/en/build-with-claude/citations"
-        },
-        {
-          "label": "AWS Health Dashboard – service status",
-          "url": "https://health.aws.amazon.com/health/status"
         },
         {
           "label": "Microsoft Foundry – Memory in Foundry Agent Service (preview): types, retention and regions",
@@ -1251,7 +1247,7 @@
         "حفظ نصوص المحادثات كاملةً على أنها ذاكرة: فهذا يضخّم كل أمر، ويكرّر حقائق قديمة، ويوسّع نطاق المخاطر على الخصوصية؛ استخرج بضع حقائق مؤرَّخة، ودع الأحدث منها تحلّ محل الأقدم.",
         "تسريب عناصر ذاكرة مستخدم إلى مستخدم آخر بسبب غياب مرشّح النطاق، أو ذاكرة تخزين مؤقت مشتركة، أو محادثة جماعية؛ اختبر ذلك كما تختبر أذونات المستندات.",
         "افتراض أن الحذف يحدث تلقائياً: فبعض واجهات API تحتفظ بالمحادثات المخزّنة إلى أن تحذفها بنفسك، لذا ادمج الحذف ومدد الاحتفاظ في التطبيق نفسه.",
-        "افتراض أن الاستضافة داخل الدولة تضمن المرونة تلقائياً: فمنطقة AWS في الإمارات (me-central-1) تعاني اضطراباً منذ مارس 2026 بعد أضرار ناجمة عن النزاع، وفي 15 سبتمبر 2026 أعلنت AWS أنها لا تستطيع استعادة البيانات المستضافة حصرياً في إحدى مناطق التوافر (availability zones) التابعة لها؛ لذا احتفظ بنسخ احتياطية مُختبَرة من المستندات والفهارس ومخازن الذاكرة في موقع ثانٍ."
+        "افتراض أن منطقة سحابية واحدة أو منطقة توافر واحدة تضمن المرونة تلقائياً: احتفظ بنسخ احتياطية مُختبَرة من المستندات والفهارس ومخازن الذاكرة في موقع ثانٍ."
       ],
       "cost_ar": "أبرز عوامل التكلفة: حساب تضمينات مجموعة المستندات (ثم إعادته كلما غيّرت نموذج التضمين)، وتخزين المتجهات ونسخها المتماثلة، واستدعاءات نموذج إعادة الترتيب، والوحدات اللغوية (tokens) المُدخلة إلى النموذج اللغوي، ومعظمها من المقاطع المسترجَعة. وتضيف الذاكرة استدعاءات للنموذج اللغوي لاستخراج الحقائق ودمجها، وتخزيناً لكل مستخدم، ووحدات لغوية إضافية في كل أمر بسبب عناصر الذاكرة المسترجَعة؛ وتختلف طريقة تسعير خدمات الذاكرة المُدارة، فمعاينة الذاكرة في Foundry مثلاً تحتسب استخدام النماذج التي تعمل عليها. وكلما قلّت المقاطع وعناصر الذاكرة وارتفعت جودتها انخفضت التكلفة وزمن الاستجابة. وتختلف الأسعار حسب الخطة والمنطقة، وقد تتغيّر.",
       "order": 2
@@ -4222,7 +4218,7 @@
           "href": "#hardware/run"
         }
       ],
-      "arabic_en": "Search in Arabic and English and handle name transliterations. Some official Gulf sites (e.g. WAM) render text with JavaScript that simple fetchers miss, so AI tools may skip them. Arabic-language journals can be thinly covered in scholarly indexes. For UAE laws, check the official Arabic text.",
+      "arabic_en": "Search in Arabic and English and handle name transliterations. Some websites render their text with JavaScript that simple fetchers miss, so AI tools may skip them; open key official pages directly. Arabic-language journals can be thinly covered in scholarly indexes. For UAE laws, check the official Arabic text.",
       "practices_en": [
         "Write the question, scope and date range before starting, and keep that brief with the output.",
         "Open every cited link: confirm the page exists, says what the report claims, and note its publication date.",
@@ -4307,7 +4303,7 @@
         "الرصد والتحديث"
       ],
       "hardware_ar": "يعتمد معظم العمل البحثي على نماذج سحابية؛ أما الإعداد المحلي فلا يحتاج إلى وحدة معالجة رسوميات (GPU) إلا لتشغيل النموذج. وعادةً ما تتسع بطاقة بذاكرة سعتها 12 إلى 16 GB للنماذج الصغيرة مفتوحة الأوزان بعد تكميمها؛ وتتعامل البطاقات التي تبلغ سعة ذاكرتها 24 إلى 32 GB مع النماذج متوسطة الحجم؛ أما الأنظمة ذات الذاكرة الموحّدة بسعة 128 GB فتتسع لنماذج أكبر، لكنها أبطأ (لانخفاض عرض نطاق الذاكرة). تحقّق من الأحجام بأداة التقدير.",
-      "arabic_ar": "ابحث بالعربية والإنجليزية، وراعِ اختلاف طرق كتابة الأسماء بالحروف اللاتينية. وتعرض بعض المواقع الخليجية الرسمية، مثل موقع وكالة أنباء الإمارات (WAM)، نصوصها عبر JavaScript، فلا تلتقطها أدوات الجلب البسيطة، وقد تتجاوزها أدوات الذكاء الاصطناعي لذلك. وقد تكون تغطية الدوريات العلمية العربية ضعيفة في الفهارس الأكاديمية. وفيما يخص قوانين الإمارات، راجع النص العربي الرسمي.",
+      "arabic_ar": "ابحث بالعربية والإنجليزية، وراعِ اختلاف طرق كتابة الأسماء بالحروف اللاتينية. وتعرض بعض المواقع نصوصها عبر JavaScript، فلا تلتقطها أدوات الجلب البسيطة، وقد تتجاوزها أدوات الذكاء الاصطناعي لذلك؛ فافتح الصفحات الرسمية المهمة مباشرةً. وقد تكون تغطية الدوريات العلمية العربية ضعيفة في الفهارس الأكاديمية. وفيما يخص قوانين الإمارات، راجع النص العربي الرسمي.",
       "practices_ar": [
         "اكتب السؤال والنطاق والفترة الزمنية قبل البدء، واحفظ هذا الموجز مع المخرجات.",
         "افتح كل رابط مُستشهد به: تأكّد من أن الصفحة موجودة وأنها تقول ما ينسبه إليها التقرير، وسجّل تاريخ نشرها.",
@@ -6359,8 +6355,8 @@
               {
                 "name": "Core42 AI Cloud",
                 "url": "https://www.core42.ai/products/ai-cloud",
-                "note_en": "G42's sovereign AI cloud: rent NVIDIA or AMD GPUs, among other accelerators. Core42 cites in-country data residency but runs data centres in several countries, so confirm a UAE location.",
-                "note_ar": "السحابة السيادية للذكاء الاصطناعي من G42: استأجر وحدات GPU من NVIDIA أو AMD، إلى جانب مسرِّعات أخرى. وتذكر Core42 أن موقع حفظ البيانات (data residency) يكون داخل الدولة، لكنها تشغّل مراكز بيانات في عدة دول، لذا تأكّد من أن الموقع داخل الإمارات."
+                "note_en": "G42's sovereign AI cloud: rent NVIDIA or AMD GPUs, among other accelerators, with in-country data residency. Core42 operates data centres in several countries; choose a UAE location.",
+                "note_ar": "السحابة السيادية للذكاء الاصطناعي من G42: استأجر وحدات GPU من NVIDIA أو AMD إلى جانب مسرِّعات أخرى، مع حفظ البيانات داخل الدولة. وتشغّل Core42 مراكز بيانات في عدة دول، فاختر موقعاً داخل الإمارات."
               }
             ]
           },
