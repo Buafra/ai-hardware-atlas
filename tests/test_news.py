@@ -444,7 +444,7 @@ class ArticleTests(unittest.TestCase):
         with mock.patch.object(news,'_open',side_effect=HTTPError('u',503,'Unavailable',{},None)):
             self.assertFalse(news.robots_allowed('https://www.example-news.com/a',SRC))
         news._ROBOTS.clear()
-        self.assertIn('+https://buafra.github.io/ai-hardware-atlas/',news.UA)
+        self.assertIn('+https://cipherlacuna.ae/',news.UA)
 
 class DedupeTests(unittest.TestCase):
     def test_one_copy_of_an_excerpt_per_source(self):

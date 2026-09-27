@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import learn
 
 ARABIC = re.compile(r'[؀-ۿ]')
-SITE = 'https://buafra.github.io/ai-hardware-atlas/'
+SITE = 'https://cipherlacuna.ae/'
 
 def catalog():
     return json.loads((ROOT / 'data' / 'catalog.json').read_text(encoding='utf-8'))

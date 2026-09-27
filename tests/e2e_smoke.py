@@ -363,7 +363,7 @@ def main():
         check('"announcements"' not in src, 'backend-only announcements published in the page')
         # Share preview and home-screen icon: absolute og:image on the live site, the files themselves served next to the page.
         og = page.get_attribute('meta[property="og:image"]', 'content')
-        check(og == 'https://buafra.github.io/ai-hardware-atlas/brand/og.png', f'og:image is {og}')
+        check(og == 'https://cipherlacuna.ae/brand/og.png', f'og:image is {og}')
         check(page.get_attribute('meta[name="twitter:card"]', 'content') == 'summary_large_image', 'twitter:card')
         for f in ('brand/og.png', page.get_attribute('link[rel="apple-touch-icon"]', 'href'), page.get_attribute('link[rel="icon"][type="image/png"]', 'href')):
             r = page.request.get(BASE + f)

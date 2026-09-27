@@ -22,6 +22,6 @@ How the build uses them (`python scripts/build.py`):
 
 - `logo.svg` and `favicon.svg` are tidied (the build removes `<script>`, `<foreignObject>`, event-handler attributes, links and references outside the file) and embedded in the page as images (`data:image/svg+xml`), never as inline markup. An SVG shown as an image cannot run scripts or load anything from the network, so a file that slips past the tidy-up still can't do harm. Consequences: the logo can't pick up the page's colours (no `currentColor` theming), and the file must be well-formed SVG/XML; the build adds the `xmlns` declaration if it is missing. Keep the files self-contained (shapes, gradients and embedded data only; no external fonts or images).
 - Every `*.png` in this folder is copied to `dist/brand/` (and to `brand/` beside the `--standalone` copy), because the home-screen icon and the share preview are fetched by URL.
-- The Open Graph and X tags in `web/template.html` point to the live site, `https://buafra.github.io/ai-hardware-atlas/`, with `og:image` at `brand/og.png`. Change them there if the site moves.
+- The Open Graph and X tags in `web/template.html` point to the live site, `https://cipherlacuna.ae/`, with `og:image` at `brand/og.png`. Change them there if the site moves.
 
 Without `favicon.svg` the site falls back to a neutral gradient square; without `logo.svg` the header shows the wordmark alone.

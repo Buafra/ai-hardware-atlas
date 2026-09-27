@@ -77,7 +77,7 @@ class BrandTests(unittest.TestCase):
         # PNG tab icon for browsers without SVG favicons, listed before the SVG one so the others keep using the SVG.
         png_icon='<link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png">'
         self.assertIn(png_icon+'<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,',self.head)
-        url='https://buafra.github.io/ai-hardware-atlas/'
+        url='https://cipherlacuna.ae/'
         want={'og:type':'website','og:url':url,'og:image':url+'brand/og.png','og:image:width':'1200','og:image:height':'630','og:locale':'en_US','og:locale:alternate':'ar_AE'}
         for k,v in want.items():self.assertEqual(self.meta('property',k),v,k)
         self.assertTrue(self.meta('property','og:title').startswith('Cipher Lacuna'));self.assertIn('Cipher Lacuna',self.meta('property','og:description'))

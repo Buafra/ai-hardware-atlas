@@ -25,7 +25,7 @@ CATALOG = ROOT / 'data' / 'catalog.json'
 UAE = ROOT / 'data' / 'uae.json'
 OUT = ROOT / 'dist'
 PAGE = 'learn.html'
-SITE_URL = 'https://buafra.github.io/ai-hardware-atlas/'
+SITE_URL = 'https://cipherlacuna.ae/'
 
 class LearnDataError(ValueError):
     """The learn data breaks a rule; the message lists every problem found."""
