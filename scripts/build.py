@@ -52,6 +52,83 @@ def validate_links(sources, uae):
         for s in f.get('sources', []):
             assert https(s.get('url')), f"UAE fact {f.get('id')} source must be https"
 
+# ---------- About Cipher Lacuna (data/about.json, shared with the Android app) ----------
+
+ABOUT = ROOT / 'data' / 'about.json'
+ABOUT_TEXT = ('promise', 'name_story', 'trust', 'qahwa')  # one {en, ar} string each
+ABOUT_AREAS = ('hardware', 'news', 'uae', 'learn')
+ARABIC_LETTER = re.compile(r'[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]')
+LATIN_LETTER = re.compile(r'[A-Za-z]')
+# How often the site updates is said once, on AI news (fresh_line); the About text never repeats it.
+SCHEDULE_WORDS = {
+    'en': re.compile(r'\b(?:a|per|each|every|twice a|once a) (?:day|hour|week)\b|\bdaily\b|\btwice\b|\bthrice\b|\btimes (?:a|per) \w+|\bhourly\b|\bweekly\b|\bevery \d+\s*(?:hours?|minutes?)\b|\bupdated? (?:every|daily|hourly|\d)', re.I),
+    'ar': re.compile(r'يومياً|يوميًا|يوميا|مرتين|مرات|مرة في اليوم|كل ساعة|كل \d+ ساعات|أسبوعياً|أسبوعيا'),
+}
+
+class AboutDataError(ValueError):
+    """data/about.json is missing a field, has an empty or wrong-language text, or talks about the update schedule."""
+
+def about_problems(about):
+    """Everything wrong with the About data, as a list of messages (empty when it is fine)."""
+    if not isinstance(about, dict):
+        return ['about.json must hold an object']
+    out = []
+    def text(where, value, lang):
+        if not isinstance(value, str) or not value.strip():
+            out.append(f'{where}.{lang} is empty')
+            return
+        ar, la = len(ARABIC_LETTER.findall(value)), len(LATIN_LETTER.findall(value))
+        mine = ar if lang == 'ar' else la
+        if mine < 0.6 * max(ar + la, 1):
+            out.append(f'{where}.{lang} is not mostly {"Arabic" if lang == "ar" else "Latin"} letters')
+        if SCHEDULE_WORDS[lang].search(value):
+            out.append(f'{where}.{lang} mentions an update schedule ({SCHEDULE_WORDS[lang].search(value).group(0)!r}); that line belongs to AI news only')
+    def pair(where, value):
+        if not isinstance(value, dict):
+            out.append(f'{where} must be an object with en and ar')
+            return
+        for lang in ('en', 'ar'):
+            text(where, value.get(lang), lang)
+    for key in ('promise', 'about', 'name_story', 'areas', 'trust', 'qahwa'):
+        if key not in about:
+            out.append(f'missing key {key!r}')
+    for key in ABOUT_TEXT:
+        if key in about:
+            pair(key, about[key])
+    paras = about.get('about')
+    if 'about' in about:
+        if not isinstance(paras, dict) or not all(isinstance(paras.get(l), list) and paras.get(l) for l in ('en', 'ar')):
+            out.append('about must hold non-empty en and ar paragraph lists')
+        else:
+            if len(paras['en']) != len(paras['ar']):
+                out.append(f'about has {len(paras["en"])} English and {len(paras["ar"])} Arabic paragraphs')
+            for lang in ('en', 'ar'):
+                for n, p in enumerate(paras[lang]):
+                    text(f'about[{n}]', p, lang)
+    areas = about.get('areas')
+    if 'areas' in about:
+        if not isinstance(areas, list) or not all(isinstance(a, dict) for a in areas):
+            out.append('areas must be a list of objects')
+        else:
+            ids = [a.get('id') for a in areas]
+            if ids != list(ABOUT_AREAS):
+                out.append(f'areas ids are {ids}, want {list(ABOUT_AREAS)} in that order')
+            for a in areas:
+                pair(f'areas.{a.get("id")}', a)
+    return out
+
+def load_about(path=None):
+    """data/about.json, checked: a bad file raises AboutDataError (the build stops before anything is written)."""
+    path = Path(path or ABOUT)
+    try:
+        about = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError) as e:
+        raise AboutDataError(f'{path.name}: {e}') from e
+    problems = about_problems(about)
+    if problems:
+        raise AboutDataError(f'{len(problems)} problem(s) in {path.name}: ' + '; '.join(problems))
+    return about
+
 OPTIONAL = {'bandwidth_tbs': None, 'bandwidth_note': None, 'ai_compute': None, 'interconnect': None, 'form_factor': None, 'cooling': None, 'msrp_usd': None, 'use_ar': None, 'price': None, 'image': None}
 AED_PEG = 3.6725  # UAE dirham is pegged to the US dollar.
 INSTAGRAM = 'https://www.instagram.com/qahwa.w.ai/'
@@ -536,7 +613,7 @@ def home_view(c):
                              f'<span class="lp-s">{L(E(x["summary_en"]), E(x["summary_ar"]))}</span></a></li>')
     topics = ''.join(f'<a class="chip" href="{page}#group/{E(g["id"])}">{L(E(g["title_en"]), E(g["title_ar"]))} <span class="n">{n}</span></a>' for g, n in lc['topics'])
     return f'''<div id="home" class="view" data-view="home">
-<section class="hero" aria-labelledby="home-title"><div class="hero-main"><p class="eyebrow"><bdi>NVIDIA + AMD</bdi> · <span data-i18n>AI news</span> · <span data-i18n>UAE</span></p><h1 id="home-title" tabindex="-1"><bdi lang="en">{SITE_NAME}</bdi></h1><p class="hero-tag" data-i18n>Decoding the gaps in AI knowledge</p><p class="promise" data-i18n>Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.</p></div>
+<section class="hero" aria-labelledby="home-title"><div class="hero-main"><p class="eyebrow"><bdi>NVIDIA + AMD</bdi> · <span data-i18n>AI news</span> · <span data-i18n>UAE</span></p><h1 id="home-title" tabindex="-1"><bdi lang="en">{SITE_NAME}</bdi></h1><p class="hero-tag" data-i18n>Decoding the gaps in AI knowledge</p><p class="promise">{about_L(c['about']['promise'])}</p></div>
 <div class="hero-side">{follow_btn()}</div>
 <nav class="jump" aria-label="Quick links" data-i18n-aria="Quick links"><a href="#hardware"><i class="j-hw" aria-hidden="true"></i><b data-i18n>Hardware</b><span>{L(cnt(len(ps), "product", "en"), cnt(len(ps), "product", "ar"))}</span></a><a href="#news"><i class="j-news" aria-hidden="true"></i><b data-i18n>News</b><span>{L(cnt(c["n_headlines"], "headline", "en"), cnt(c["n_headlines"], "headline", "ar"))}</span></a><a href="#uae"><i class="j-uae" aria-hidden="true"></i><b data-i18n>UAE</b><span>{L(cnt(c["n_facts"], "fact", "en"), cnt(c["n_facts"], "fact", "ar"))}</span></a></nav></section>
 <section class="pillars" aria-label="The four areas of the site" data-i18n-aria="The four areas of the site">
@@ -642,6 +719,64 @@ def uae_view(c):
 def contact_head():
     return ihead('contact', 'Contact', T(CONTACT_LEAD), follow=False)
 
+# A run of Latin words inside Arabic text: product names, "Cipher Lacuna", @qahwa.w.ai. A sentence-ending full stop stays outside.
+LATIN_WORD = r'[A-Za-z@][A-Za-z0-9@_]*(?:[.\-][A-Za-z0-9]+)*'
+LATIN_RUN = re.compile(LATIN_WORD + r'(?: ' + LATIN_WORD + r')*')
+
+def ar_text(value):
+    """Escaped Arabic text with every Latin run (the name Cipher Lacuna, NVIDIA, Android, @qahwa.w.ai…) bidi-isolated.
+    Only markup is added: the words themselves are exactly the source text."""
+    s, out, last = str(value), '', 0
+    for m in LATIN_RUN.finditer(s):
+        out += html.escape(s[last:m.start()]) + f'<bdi lang="en" dir="ltr">{html.escape(m.group(0))}</bdi>'
+        last = m.end()
+    return out + html.escape(s[last:])
+
+def about_L(pair):
+    """One {en, ar} entry of data/about.json in both languages (the L() pattern), verbatim."""
+    return L(E(pair['en']), ar_text(pair['ar']))
+
+META_DESC_MAX = 200  # characters; longer share texts are cut at a sentence boundary
+
+def meta_description(about):
+    """The page's meta, og: and twitter: description: "Cipher Lacuna: " and the approved promise from data/about.json,
+    word for word. If that runs past META_DESC_MAX it keeps whole sentences only (at least the first one)."""
+    sentences = re.findall(r'.+?[.!?](?=\s|$)', about['promise']['en'].strip()) or [about['promise']['en'].strip()]
+    text = f'{SITE_NAME}: ' + sentences[0]
+    for s in sentences[1:]:
+        if len(text) + len(s) + 1 > META_DESC_MAX:
+            break
+        text += ' ' + s.strip()
+    return text
+
+ABOUT_AREA_VIEW = {  # the four areas: nav label, class, icon and link, the same as the landing's pillars
+    'hardware': ('Hardware', '', 'hw', '#hardware'),
+    'news': ('AI news', ' x-news', 'news', '#news'),
+    'uae': ('UAE AI', ' x-uae', 'uae', '#uae'),
+    'learn': ('Learn AI', ' x-learn', 'learn', learn.PAGE),
+}
+
+def about_section(c):
+    """About Cipher Lacuna under the contact card (deep link #contact/about). All text comes from data/about.json as
+    written; only the headings are the site's own. No update schedule here: that line belongs to AI news."""
+    ab = c['about']
+    name = '<bdi lang="en" dir="ltr">Cipher Lacuna</bdi>'
+    h = lambda en, ar: f'<h3>{L(en, ar)}</h3>'
+    paras = ''.join(f'<p>{L(E(en), ar_text(ar))}</p>' for en, ar in zip(ab['about']['en'], ab['about']['ar']))
+    areas = ''
+    for a in ab['areas']:
+        label, cls, icon, href = ABOUT_AREA_VIEW[a['id']]
+        svg = learn.BOOK if icon == 'learn' else ICON[icon]
+        areas += (f'<li><a class="xcard ab-area{cls}" href="{href}" data-area="{a["id"]}"><span class="p-icon" aria-hidden="true">{svg}</span>'
+                  f'<span><b data-i18n>{label}</b><span class="x-sub">{about_L(a)}</span></span><span class="x-arr">{ICON["arrow"]}</span></a></li>')
+    return (f'<section class="panel about" id="about" aria-labelledby="about-title">'
+            f'<h2 id="about-title">{L("About " + name, "عن " + name)}</h2>'
+            f'<div class="ab-top"><div class="ab-intro">{paras}</div>'
+            f'<div class="ab-box ab-name">{h("The name", "معنى الاسم")}<p>{about_L(ab["name_story"])}</p></div></div>'
+            f'{h("What you&#x27;ll find", "ماذا ستجد هنا")}<ul class="ab-areas">{areas}</ul>'
+            f'<div class="ab-box ab-trust"><span class="t-ic" aria-hidden="true">{ICON["shield"]}</span><div>{h("How we keep it honest", "كيف نحافظ على الدقة")}<p>{about_L(ab["trust"])}</p></div></div>'
+            f'<div class="ab-qahwa"><p>{about_L(ab["qahwa"])}</p>{follow_btn()}</div></section>')
+
 # ---------- page ----------
 
 def learn_context():
@@ -655,7 +790,7 @@ def learn_context():
             'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
             'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
-def context(data, feed, sources, uae):
+def context(data, feed, sources, uae, about=None):
     ps = data['products']
     items = news_items(feed, sources)
     facts = (uae or {}).get('facts', [])
@@ -674,6 +809,8 @@ def context(data, feed, sources, uae):
         # Oldest and newest price check: one date while they agree, a range once they differ.
         'prices_checked': sorted({p['price_view']['checked'] for p in ps if p.get('price_view') and p['price_view'].get('checked')}),
         'learn': learn_context(),
+        # About Cipher Lacuna (data/about.json): the hero's promise and the About section in #contact.
+        'about': about if about is not None else load_about(),
     }
 
 def prepare(data):
@@ -694,11 +831,12 @@ def load_all():
     # The Learn AI data feeds the landing's fourth pillar and learn.html: checked here, before anything is written, so a
     # bad edit fails the build without leaving a new index.html beside an old (or missing) learn.html.
     learn.validate(*learn.load(), data['products'])
+    load_about()  # the About text (hero promise, #contact/about): a bad file fails here too
     return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
 
-def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR):
-    """Return (index.html text, public catalog dict). Pure: writes nothing."""
-    c = context(data, feed, sources, uae)
+def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None):
+    """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json."""
+    c = context(data, feed, sources, uae, about)
     slim = {'updated_at': models.get('updated_at'), 'models': [{'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']} for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
@@ -706,11 +844,11 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR):
     text = (ROOT/'web/template.html').read_text(encoding='utf-8')
     replacements = {
         'CSS': (ROOT/'web/style.css').read_text(encoding='utf-8'), 'JS': (ROOT/'web/app.js').read_text(encoding='utf-8'),
-        'FAVICON': favicon, 'LOGO': logo, 'HOME': home_view(c), 'HW_HEAD': hardware_head(c, data),
+        'META_DESC': html.escape(meta_description(c['about'])), 'FAVICON': favicon, 'LOGO': logo, 'HOME': home_view(c), 'HW_HEAD': hardware_head(c, data),
         'PRODUCTS': ''.join(product(p) for p in data['products']), 'COUNT': E(cnt(len(data['products']), 'product', 'en')),
         'CHANGES': '<ul>' + ''.join(f'<li><b>{ymd(x["at"], "en")}</b> - {E(change_text(x["summary"]))}</li>' for x in data['changes'][:8]) + '</ul>',
         'EDITION': E(data['edition_note']), 'XNAV_HW': xnav(c, ('news', 'uae')), 'NEWS': news_view(c), 'UAE': uae_view(c),
-        'CONTACT_HEAD': contact_head(), 'XNAV_CONTACT': xnav(c, ('hardware', 'news', 'uae')),
+        'CONTACT_HEAD': contact_head(), 'ABOUT': about_section(c), 'XNAV_CONTACT': xnav(c, ('hardware', 'news', 'uae')),
         'INSTAGRAM': INSTAGRAM, 'FOLLOW': follow_btn(), 'YEAR': str(data['updated_at'])[:4],
         'MODELS': json.dumps(slim, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c'),
         'JSON': json.dumps(public, ensure_ascii=False).replace('<', '\\u003c'),

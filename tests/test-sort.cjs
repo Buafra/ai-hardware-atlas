@@ -59,6 +59,15 @@ assert.deepEqual(routePatch(parseRoute('#news/global'),known).patch,{region:'glo
 assert.equal(routePatch(parseRoute('#uae/f/jais-arabic-llm'),known).focus,'fact-jais-arabic-llm');
 assert.equal(routePatch(parseRoute('#uae/f/nope'),known).focus,null);
 assert.equal(routePatch(parseRoute('#nope'),known).hash,'home');
+// About Cipher Lacuna: #contact/about (and the plain #about anchor used without JavaScript) opens #contact at the section.
+assert.deepEqual(parseRoute('#contact/about'),{view:'contact',sub:'about',arg:''});
+assert.deepEqual(parseRoute('#about'),{view:'contact',sub:'about',arg:''});
+assert.deepEqual(parseRoute('#contact/about','?q=4090'),{view:'contact',sub:'about',arg:''});
+assert.deepEqual(parseRoute('#contact/nope'),{view:'contact',sub:'',arg:''});
+assert.deepEqual(routePatch(parseRoute('#contact/about'),known),{patch:{},hash:'contact',focus:'about'});
+assert.deepEqual(routePatch(parseRoute('#about'),known),{patch:{},hash:'contact',focus:'about'});
+assert.deepEqual(routePatch(parseRoute('#contact'),known),{patch:{},hash:'contact',focus:null});
+assert.equal(routePatch(parseRoute('#news/about'),known).focus,null);
 // Copy link = path + query-string state + view hash.
 assert.equal(pageUrl('/ai-hardware-atlas/','q=mi3&view=table','hardware'),'/ai-hardware-atlas/?q=mi3&view=table#hardware');
 assert.equal(pageUrl('/','','home'),'/#home');
@@ -83,6 +92,7 @@ assert.equal(parseRoute('#nope','?q=4090').view,'hardware');
 const tpl=require('node:fs').readFileSync(require('node:path').join(__dirname,'../web/template.html'),'utf8');
 const keys=/\[\?&\]\(([a-z|]+)\)\(=\|&\|\$\)/.exec(tpl);assert.ok(keys,'head script key list');
 assert.deepEqual(keys[1].split('|').sort(),[...HW_KEYS].sort());
+assert.ok(tpl.includes("h==='about'?'contact'"),'head script maps #about to the contact view');
 assert.equal(pageUrl('/','q=4090',''),'/?q=4090');assert.equal(pageUrl('/','',''),'/');
 // Arabic agreement with formatted numbers; dates for people (same cases as tests/test_build.py).
 assert.equal(countLabel(131072,'token','ar',n=>n.toLocaleString('en-US')),'131,072 رمزاً');assert.equal(countLabel(8192,'token','en',n=>n.toLocaleString('en-US')),'8,192 tokens');

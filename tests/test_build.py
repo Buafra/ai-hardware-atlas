@@ -1,4 +1,4 @@
-import json,re,sys,tempfile,unittest
+import html,json,re,sys,tempfile,unittest
 from pathlib import Path
 from urllib.parse import unquote,urlparse
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
@@ -582,5 +582,137 @@ class ReviewRoundTests(unittest.TestCase):
     def test_hardware_status_label_does_not_echo_the_news_freshness_line(self):
         self.assertIn("'Content updated:':'تاريخ المحتوى:'",self.js)
         self.assertNotIn('آخر تحديث للمحتوى',self.js)
+
+class AboutTests(unittest.TestCase):
+    """About Cipher Lacuna (owner-approved copy in data/about.json): checked when loaded, the hero's promise and the About
+    section in #contact (deep link #contact/about) render it verbatim in both languages, and it never mentions how often
+    the site updates (that line is AI news only)."""
+    @classmethod
+    def setUpClass(cls):
+        cls.about=json.loads((ROOT/'data/about.json').read_text(encoding='utf-8'))
+        cls.html,_=build.render_page(*build.load_all())
+        main=cls.html[cls.html.index('<main'):cls.html.index('</main>')]
+        cls.home=main[main.index('data-view="home"'):main.index('data-view="hardware"')]
+        cls.contact=main[main.index('data-view="contact"'):]
+        start=cls.contact.index('<section class="panel about" id="about"')
+        cls.section=cls.contact[start:cls.contact.index('</section>',start)]
+        cls.foot=cls.html[cls.html.index('<footer'):cls.html.index('</footer>')]
+        cls.js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+    @staticmethod
+    def text(markup):
+        return html.unescape(re.sub(r'<[^>]+>','',markup))
+    def langs(self,markup):
+        """(English, Arabic) pairs of every L() in the markup, as plain text."""
+        return [(self.text(en),self.text(ar)) for en,ar in re.findall(r'<span data-lang="en">(.*?)</span><span data-lang="ar">(.*?)</span>',markup)]
+    def bad(self,**change):
+        about=json.loads(json.dumps(self.about))
+        about.update(change)
+        return build.about_problems(about)
+
+    def test_repository_file_is_valid(self):
+        self.assertEqual(build.about_problems(self.about),[])
+        self.assertEqual(build.load_about(),self.about)
+    def test_validation(self):
+        a=self.about
+        self.assertTrue(any("missing key 'trust'" in p for p in build.about_problems({k:v for k,v in a.items() if k!='trust'})))
+        self.assertTrue(self.bad(promise={'en':a['promise']['en'],'ar':''}))
+        self.assertTrue(self.bad(promise={'en':a['promise']['en'],'ar':a['promise']['en']}))  # Arabic field in English
+        self.assertTrue(self.bad(qahwa={'en':a['qahwa']['ar'],'ar':a['qahwa']['ar']}))  # English field in Arabic
+        self.assertTrue(self.bad(areas=list(reversed(a['areas']))))
+        self.assertTrue(self.bad(areas=a['areas'][:3]))
+        self.assertTrue(self.bad(about={'en':a['about']['en'],'ar':a['about']['ar'][:1]}))
+        self.assertTrue(self.bad(about={'en':[],'ar':[]}))
+        self.assertTrue(self.bad(name_story='Cipher Lacuna'))
+        for en in ('Headlines are updated 6 times a day.','Fresh news twice a day.','We refresh it daily.','Updated every 4 hours.'):
+            self.assertTrue(self.bad(trust={'en':en,'ar':a['trust']['ar']}),en)
+        for ar in ('تُحدَّث العناوين 6 مرات يومياً.','نحدّث الأخبار مرتين في اليوم.'):
+            self.assertTrue(self.bad(trust={'en':a['trust']['en'],'ar':ar}),ar)
+        with tempfile.TemporaryDirectory() as d:
+            f=Path(d)/'about.json'
+            f.write_text('{not json',encoding='utf-8')
+            with self.assertRaises(build.AboutDataError):build.load_about(f)
+            f.write_text(json.dumps({**a,'areas':a['areas'][1:]}),encoding='utf-8')
+            with self.assertRaises(build.AboutDataError):build.load_about(f)
+    def test_bad_about_fails_before_anything_is_written(self):
+        from unittest import mock
+        with tempfile.TemporaryDirectory() as d:
+            out,bad=Path(d)/'dist',Path(d)/'about.json'
+            bad.write_text(json.dumps({**self.about,'trust':{'en':'Updated twice a day.','ar':self.about['trust']['ar']}}),encoding='utf-8')
+            with mock.patch.object(build,'OUT',out),mock.patch.object(build,'ABOUT',bad),mock.patch.object(sys,'argv',['build.py']),\
+                 mock.patch.object(build,'pdf') as pdf,mock.patch('builtins.print'):
+                with self.assertRaises(build.AboutDataError):build.main()
+            self.assertFalse(out.exists() and any(out.iterdir()))
+            pdf.assert_not_called()
+    def test_ar_text_only_adds_isolation(self):
+        for s in ('ومن هنا جاء Cipher Lacuna ليسدّ هذه الفجوات، على الموقع وفي تطبيق Android.','قارن عتاد NVIDIA وAMD <b> & "x"','على Instagram (@qahwa.w.ai).'):
+            self.assertEqual(self.text(build.ar_text(s)),s)
+        self.assertIn('جاء <bdi lang="en" dir="ltr">Cipher Lacuna</bdi> ليسدّ',build.ar_text('جاء Cipher Lacuna ليسدّ'))
+        self.assertIn('تطبيق <bdi lang="en" dir="ltr">Android</bdi>.',build.ar_text('تطبيق Android.'))  # the full stop stays Arabic
+        self.assertIn('(<bdi lang="en" dir="ltr">@qahwa.w.ai</bdi>)',build.ar_text('(@qahwa.w.ai)'))
+    def test_hero_promise_comes_from_the_file(self):
+        p=re.search(r'<p class="promise">(.*?)</p>',self.home)
+        self.assertTrue(p)
+        self.assertEqual(self.langs(p.group(1)),[(self.about['promise']['en'],self.about['promise']['ar'])])
+        self.assertIn(build.about_L(self.about['promise']),p.group(1))
+        old='catch up on the latest AI news'
+        self.assertNotIn(old,self.html);self.assertNotIn(old,self.js)
+    def test_meta_descriptions(self):
+        head=self.html[:self.html.index('<style>')]
+        # Built from the approved promise, word for word: "Cipher Lacuna: " + whole sentences of promise.en from its start.
+        promise=self.about['promise']['en']
+        want=build.meta_description(self.about)
+        self.assertTrue(want.startswith('Cipher Lacuna: '))
+        body=want[len('Cipher Lacuna: '):]
+        self.assertTrue(promise.startswith(body),body)
+        self.assertTrue(body.endswith('.'))
+        self.assertLessEqual(len(want),build.META_DESC_MAX)
+        self.assertEqual(want,'Cipher Lacuna: '+promise)  # the current promise fits whole
+        for attr,name in (('name','description'),('property','og:description'),('name','twitter:description')):
+            self.assertIn(f'<meta {attr}="{name}" content="{html.escape(want)}">',head)
+        self.assertNotIn('follow AI and UAE AI news',head)  # the earlier reworded sentence
+        # A longer promise is cut at a sentence boundary, never inside a sentence.
+        long={'promise':{'en':'First sentence here. '+'x'*190+'. Third.','ar':''}}
+        self.assertEqual(build.meta_description(long),'Cipher Lacuna: First sentence here.')
+    def test_about_section_is_verbatim(self):
+        a=self.about
+        pairs=self.langs(self.section)
+        want=[(en,ar) for en,ar in zip(a['about']['en'],a['about']['ar'])]+[(a['name_story']['en'],a['name_story']['ar'])]
+        want+=[(x['en'],x['ar']) for x in a['areas']]+[(a['trust']['en'],a['trust']['ar']),(a['qahwa']['en'],a['qahwa']['ar'])]
+        heads=[('About Cipher Lacuna','عن Cipher Lacuna'),('The name','معنى الاسم'),("What you'll find",'ماذا ستجد هنا'),('How we keep it honest','كيف نحافظ على الدقة')]
+        # In DOM order: heading, the two paragraphs, the name, what you'll find with the four areas, trust, the Qahwa & AI line.
+        self.assertEqual(pairs,[heads[0]]+want[:2]+[heads[1],want[2],heads[2]]+want[3:7]+[heads[3],want[7],want[8]])
+        self.assertIn('<div class="ab-qahwa"><p>'+build.about_L(a['qahwa'])+'</p>'+build.follow_btn()+'</div>',self.section)
+        # Cipher Lacuna and every other Latin name inside the Arabic text are bidi-isolated.
+        for ar in re.findall(r'<span data-lang="ar">(.*?)</span>',self.section):
+            bare=re.sub(r'<bdi lang="en" dir="ltr">[^<]*</bdi>','',ar)
+            self.assertIsNone(re.search(r'[A-Za-z]',bare),ar)
+        self.assertIn('<h2 id="about-title"><span data-lang="en">About <bdi lang="en" dir="ltr">Cipher Lacuna</bdi></span><span data-lang="ar">عن <bdi lang="en" dir="ltr">Cipher Lacuna</bdi></span></h2>',self.section)
+    def test_area_links(self):
+        cards=re.findall(r'<a class="xcard ab-area([^"]*)" href="([^"]+)" data-area="([^"]+)"><span class="p-icon" aria-hidden="true">(<svg.*?</svg>)</span><span><b data-i18n>([^<]+)</b>',self.section)
+        self.assertEqual([(c[2],c[1],c[0],c[4]) for c in cards],[('hardware','#hardware','','Hardware'),('news','#news',' x-news','AI news'),('uae','#uae',' x-uae','UAE AI'),('learn','learn.html',' x-learn','Learn AI')])
+        self.assertEqual([c[3] for c in cards],[build.ICON['hw'],build.ICON['news'],build.ICON['uae'],build.learn.BOOK])
+        for label in ('Hardware','AI news','UAE AI','Learn AI'):self.assertIn(f"'{label}':",self.js)
+        # Arabic links to learn.html get ?lang=ar from app.js (learnLinks) like every other link to it.
+        self.assertIn('a[href^="learn.html"]',self.js)
+        self.assertEqual(len(re.findall(r'<a class="xcard x-news" href="#news">',self.html)),3)  # the "other areas" cards are unchanged
+    def test_no_schedule_or_statistics_in_about(self):
+        t=self.text(self.section)
+        for lang in ('en','ar'):self.assertIsNone(build.SCHEDULE_WORDS[lang].search(t),lang)
+        for w in ('times a day','Updated','آخر تحديث','يومياً','feeds','responded'):self.assertNotIn(w,t)
+    def test_placement_footer_and_routes(self):
+        c=self.contact
+        self.assertLess(c.index('class="panel contact-card"'),c.index('id="about"'))
+        self.assertLess(c.index('id="about"'),c.index('<nav class="xnav"'))
+        self.assertEqual(c.count('<form'),0)
+        # One follow button in the contact view: beside the Qahwa & AI line in About, not a second one on the email card.
+        self.assertEqual(c.count(build.follow_btn()),1)
+        card=c[c.index('class="panel contact-card"'):c.index('id="about"')]
+        self.assertNotIn('follow-btn',card);self.assertNotIn('cc-follow',card)
+        self.assertIn('<a href="#contact" data-i18n>Contact</a><a href="#about" data-route="contact/about" data-i18n>About</a></nav>',self.foot)
+        self.assertIn("'About':'عن الموقع'",self.js)
+        self.assertIn("contact: ['about']",self.js);self.assertIn("out.focus = 'about';",self.js)
+        self.assertEqual(self.html.count('id="about"'),1)
+        learn_page=build.learn.render(*build.learn.load())
+        self.assertIn('<a href="index.html#contact/about">',learn_page)
 
 if __name__=='__main__':unittest.main()

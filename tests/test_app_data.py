@@ -12,7 +12,7 @@ class AppDataTests(unittest.TestCase):
         cls.out=app_data.payloads(cls.data,cls.feed,cls.sources,cls.uae,cls.models,*cls.docs)
 
     def test_files_and_schema(self):
-        self.assertEqual(set(self.out),{'catalog.json','news.json','uae.json','learn.json','models.json'})
+        self.assertEqual(set(self.out),{'catalog.json','news.json','uae.json','learn.json','models.json','about.json'})
         for name,payload in self.out.items():self.assertEqual(payload['schema'],app_data.APP_SCHEMA,name)
 
     def test_catalog_keeps_backend_fields_out(self):
@@ -55,6 +55,13 @@ class AppDataTests(unittest.TestCase):
         models=self.out['models.json']['models']
         self.assertEqual(len(models),len(self.models['models']))
         self.assertTrue(all(set(m)==set(app_data.MODEL_KEYS) for m in models))
+
+    def test_about_is_the_shared_file(self):
+        about=self.out['about.json']
+        self.assertEqual({k:v for k,v in about.items() if k!='schema'},app_data.load_about())
+        self.assertEqual([a['id'] for a in about['areas']],['hardware','news','uae','learn'])
+        for key in ('promise','name_story','trust','qahwa'):self.assertTrue(about[key]['en'] and about[key]['ar'],key)
+        self.assertEqual(len(about['about']['en']),len(about['about']['ar']))
 
     def test_manifest_hashes_match_files(self):
         with tempfile.TemporaryDirectory() as tmp:

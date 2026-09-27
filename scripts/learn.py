@@ -74,7 +74,7 @@ OPTION_COLUMNS = (('local', 'Local / open-source', 'محلي / مفتوح الم
 SLUG = re.compile(r'^[a-z0-9][a-z0-9-]*$')
 AS_OF = re.compile(r'^(\d{4})-(0[1-9]|1[0-2])$')
 # Links into the overview page (index.html): its views and the routes app.js understands (parseRoute in web/app.js).
-SITE_HREF = re.compile(r'^#(?:hardware(?:/.+)?|news(?:/(?:all|global|uae))?|uae(?:/f/[a-z0-9-]+)?|contact|estimator)$')
+SITE_HREF = re.compile(r'^#(?:hardware(?:/.+)?|news(?:/(?:all|global|uae))?|uae(?:/f/[a-z0-9-]+)?|contact(?:/about)?|estimator)$')
 HW_HREF = re.compile(r'^#hardware(?:/(p|level|vendor|run|table|cards|timeline|compare)(?:/(.+))?)?$')
 UAE_FACT = re.compile(r'^#uae/f/([a-z0-9-]+)$')
 # A chip named after the "What can it run?" estimator must open it (#hardware alone stops at the top of the catalog).
@@ -572,7 +572,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
               f'<div class="foot-side">{follow}<p>{L("AI lessons and news from Qahwa &amp; AI, in English and Arabic.", f"دروس وأخبار الذكاء الاصطناعي من {QAHWA_AR}، بالعربية والإنجليزية.")}</p>'
               f'<nav class="foot-links" aria-label="Footer" data-aria-ar="تذييل الصفحة"><a href="{h}">{L("Overview", "الرئيسية")}</a><a href="{h}#hardware">{L("Hardware", "العتاد")}</a>'
               f'<a href="{h}#news">{L("AI news", "أخبار الذكاء الاصطناعي")}</a><a href="{h}#uae">{L("UAE AI", "الذكاء الاصطناعي في الإمارات")}</a>'
-              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a></nav></div></div></footer>\n')
+              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a></nav></div></div></footer>\n')
     return head + header + main + footer + f'<script>{_asset("learn.js")}</script></body></html>\n'
 
 def landing_card(data_dir=DATA, href=PAGE):

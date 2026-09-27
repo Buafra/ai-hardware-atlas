@@ -20,6 +20,8 @@ day" line only once (top of AI news), full summaries in the news and UAE lists (
 full-width band under them on wide screens (one column below 1000px) with its counts from data/learn, and its links
 opening the page and its deep links.
 Review of that round: the UAE list in steps of 8 ("Show more"), and Arabic carried across to learn.html by its links.
+About Cipher Lacuna (data/about.json): the section under the contact card in both languages, its area links, no update
+schedule in it, the #contact/about deep link and the footer's About link landing on it, and no overflow at 375 and 1280 px.
 """
 import json
 import re
@@ -36,6 +38,7 @@ LEARN_COUNTS = [len(LEARN[0]['concepts']), sum(s['kind'] != 'foundation' for s i
 # How often the site says it updates, worded as build.schedule_phrase() words it from data/catalog.json.
 _RUNS = len(re.findall(r'\b\d{1,2}:\d{2}\b', json.loads((DATA / 'catalog.json').read_text(encoding='utf-8')).get('schedule') or ''))
 PHRASE = ({1: 'once a day', 2: 'twice a day'}.get(_RUNS, f'{_RUNS} times a day'), {1: 'مرة يومياً', 2: 'مرتين يومياً'}.get(_RUNS, f'{_RUNS} مرات يومياً'))
+ABOUT = json.loads((DATA / 'about.json').read_text(encoding='utf-8'))
 ITEM_URLS = {i['url'] for i in json.loads((DATA / 'news.json').read_text(encoding='utf-8'))['items']}
 HOMEPAGES = {s['homepage'] for s in json.loads((DATA / 'news-sources.json').read_text(encoding='utf-8'))}
 # The site's own phrases for what was removed; checked only in the site's own text, never in headlines or summaries.
@@ -48,7 +51,7 @@ KEY = {
     'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort', '#extra-hint', '#hardware .ihead .follow-btn'],
     'news': ['#news-title', '#news .ifresh', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
     'uae': ['#uae-title', '#uae .uae-facts .fact', '#uae .uae-heads .sec-h h2', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
-    'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .contact-card .follow-btn', '#contact .xcard.x-uae .p-icon svg'],
+    'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .xcard.x-uae .p-icon svg', '#about #about-title', '#about .ab-area', '#about .follow-btn'],
 }
 LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
 failures, checks = [], 0
@@ -187,7 +190,30 @@ def route_checks(page, route, lang, width, hash=None):
         # A short view still ends with the footer at the bottom of the window, not a band of page background.
         page_h, foot_bottom = page.evaluate("[document.documentElement.scrollHeight, document.querySelector('.foot').getBoundingClientRect().bottom + scrollY]")
         check(abs(page_h - foot_bottom) <= 1, f'{tag} footer ends {page_h - foot_bottom:.0f}px above the end of the page')
+        about_checks(page, tag, lang)
     check(page.evaluate('document.documentElement.lang') == lang and page.evaluate('document.documentElement.dir') == ('rtl' if lang == 'ar' else 'ltr'), f'{tag} lang/dir not applied')
+
+def about_checks(page, tag, lang):
+    # About Cipher Lacuna: under the email card, the owner's text as written, four area links, the follow button.
+    got = page.evaluate("""() => { const s = document.getElementById('about'), vis = e => e.getClientRects().length > 0;
+        return {title: s.querySelector('#about-title').innerText.trim(), paras: [...s.querySelectorAll('.ab-intro p')].map(p => p.innerText.trim()),
+            name: s.querySelector('.ab-name p').innerText.trim(), trust: s.querySelector('.ab-trust p').innerText.trim(),
+            qahwa: s.querySelector('.ab-qahwa p').innerText.trim(), follow: vis(s.querySelector('.ab-qahwa .follow-btn')),
+            areas: [...s.querySelectorAll('.ab-area')].filter(vis).map(a => [a.getAttribute('href'), a.querySelector('.x-sub').innerText.trim(), !!a.querySelector('.p-icon svg')]),
+            text: s.innerText, over: s.scrollWidth - s.clientWidth,
+            after: document.querySelector('#contact .contact-card').getBoundingClientRect().bottom <= s.getBoundingClientRect().top,
+            follows: document.querySelectorAll('#contact .follow-btn').length}; }""")
+    check(got['title'] == ('About Cipher Lacuna', 'عن Cipher Lacuna')[lang == 'ar'], f'{tag} About title {got["title"]!r}')
+    check(got['paras'] == ABOUT['about'][lang], f'{tag} About paragraphs not verbatim: {got["paras"]}')
+    check([got['name'], got['trust'], got['qahwa']] == [ABOUT[k][lang] for k in ('name_story', 'trust', 'qahwa')], f'{tag} About name/trust/qahwa not verbatim')
+    hrefs = ['#hardware', '#news', '#uae', ('learn.html', 'learn.html?lang=ar')[lang == 'ar']]
+    check(got['areas'] == [[h, a[lang], True] for h, a in zip(hrefs, ABOUT['areas'])], f'{tag} About areas {got["areas"]}')
+    check(got['follow'] and got['after'], f'{tag} About: follow button hidden or section not under the email card')
+    # One follow button in the contact view (beside the Qahwa & AI line), not a second one on the email card.
+    check(got['follows'] == 1, f'{tag} {got["follows"]} follow buttons in #contact, expected 1')
+    check(got['over'] <= 0, f'{tag} About section overflows by {got["over"]}px')
+    left = [w for w in (PHRASE[0], PHRASE[1], 'Updated', 'آخر تحديث', 'a day', 'يومياً') if w in got['text']]
+    check(not left, f'{tag} About mentions the update schedule: {left}')
 
 def go(page, url, view):
     # Hash-only changes are same-document navigations: wait for the router to settle on the view.
@@ -380,6 +406,33 @@ def main():
                 check(hb - 1 <= top < vh / 2, f'[{width}px] fresh {link}: target top {top:.0f}, header {hb:.0f}')
                 check(page.evaluate('location.hash') in ('#hardware', '#uae'), f'[{width}px] fresh {link}: hash not canonical {page.evaluate("location.hash")}')
                 ctx.close()
+        # 10e2. About Cipher Lacuna: #contact/about on a fresh page, in both languages, ends with the section in view and
+        # focused (hash reduced to #contact); the footer's About link does the same from another view. No overflow.
+        for lang in ('en', 'ar'):
+            for width, height in ((375, 812), (1280, 800)):
+                ctx = browser.new_context(viewport={'width': width, 'height': height})
+                page, errors, foreign = ctx.new_page(), [], []
+                watch(page, errors, foreign)
+                q = '?lang=ar' if lang == 'ar' else ''
+                page.goto(BASE + q + '#contact/about'); page.wait_for_load_state('load')
+                page.wait_for_function('document.activeElement && document.activeElement.id === "about"', timeout=5000)
+                tag = f'[{lang} {width}px #contact/about]'
+                top, hb = page.evaluate("[document.getElementById('about').getBoundingClientRect().top, document.querySelector('.top').getBoundingClientRect().bottom]")
+                check(hb - 1 <= top < height / 2, f'{tag} fresh deep link: section top {top:.0f}, header {hb:.0f}')
+                check(page.evaluate('location.hash') == '#contact' and visible_views(page) == ['contact'], f'{tag} hash {page.evaluate("location.hash")}, views {visible_views(page)}')
+                check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')
+                about_checks(page, tag, lang)
+                # The footer's About link (#contact/about once app.js has run) from the overview.
+                go(page, q + '#home', 'home')
+                link = page.locator('.foot-links a[data-route="contact/about"]')
+                check(link.get_attribute('href') == '#contact/about' and link.text_content() == ('About', 'عن الموقع')[lang == 'ar'], f'{tag} footer About link {link.get_attribute("href")} {link.text_content()!r}')
+                link.click()
+                page.wait_for_function('document.activeElement && document.activeElement.id === "about"', timeout=5000)
+                top = page.evaluate("document.getElementById('about').getBoundingClientRect().top")
+                check(hb - 1 <= top < height / 2 and visible_views(page) == ['contact'], f'{tag} footer About link: section top {top:.0f}, views {visible_views(page)}')
+                check(not errors and not foreign, f'{tag} errors {errors[:3]} foreign {foreign[:3]}')
+                ctx.close()
+
         # 10f. Arabic: the model note follows the page direction; dates and the footnote are in Arabic.
         ctx = browser.new_context(viewport={'width': 1280, 'height': 800})
         page = ctx.new_page()
@@ -448,6 +501,7 @@ def main():
         check(page.locator('#products .product:visible').count() == total, 'no-JS: not all products visible')
         check(page.locator('#news .nlist[data-lang="en"] .nitem:visible').count() > 0, 'no-JS: headlines hidden')
         check(overflow(page) <= 0, f'no-JS 375px overflow {overflow(page)}px')
+        check(page.locator('#about .ab-area').count() == 4 and page.get_attribute('.foot-links a[data-route="contact/about"]', 'href') == '#about', 'no-JS: About section or its footer anchor')
         ctx.close()
         browser.close()
     print(f'{checks - len(failures)}/{checks} checks passed')

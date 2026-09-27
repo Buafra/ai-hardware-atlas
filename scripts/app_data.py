@@ -16,6 +16,10 @@ import learn
 APP_SCHEMA = 1
 APP_DIR = 'app'
 MODEL_KEYS = ('id', 'name', 'hf', 'params_b', 'params_source', 'open', 'moe', 'context')
+ABOUT = build.ROOT / 'data' / 'about.json'  # the About text the site and the app share
+
+def load_about(path=ABOUT):
+    return json.loads(Path(path).read_text(encoding='utf-8'))
 
 def news_entry(i, src):
     """One headline with everything the app shows: region tags, which language lists carry it, and per language the
@@ -29,7 +33,7 @@ def news_entry(i, src):
         out[f'summary_{lang}'], out[f'summary_kind_{lang}'] = text, kind
     return out
 
-def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc):
+def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None):
     """Return {file name: JSON-ready dict}. Pure: writes nothing. `data` must already be prepared (build.prepare)."""
     c = build.context(data, feed, sources, uae)
     src = c['src']
@@ -46,19 +50,20 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc):
                        'stacks': sorted(stacks_doc['stacks'], key=lambda s: s.get('order', 0))},
         'models.json': {'schema': APP_SCHEMA, 'updated_at': models.get('updated_at'), 'source': models.get('source'),
                         'models': [{k: m.get(k) for k in MODEL_KEYS} for m in models.get('models', [])]},
+        'about.json': {'schema': APP_SCHEMA, **(about if about is not None else load_about())},
     }
 
 def encode(payload):
     return (json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
 
-def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None):
+def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None):
     """Write dist/app/*.json and manifest.json; return the manifest."""
     if concepts_doc is None or stacks_doc is None:
         concepts_doc, stacks_doc = learn.load()
     target = Path(out_dir) / APP_DIR
     target.mkdir(parents=True, exist_ok=True)
     files = {}
-    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc).items():
+    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about).items():
         raw = encode(payload)
         (target / name).write_bytes(raw)
         files[name] = {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}

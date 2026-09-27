@@ -1,0 +1,50 @@
+{
+  "promise": {
+    "en": "AI knowledge you can check, in English and Arabic. Compare NVIDIA and AMD hardware, follow AI news and what the UAE is building, and learn the essentials in plain language.",
+    "ar": "معلومات موثّقة عن الذكاء الاصطناعي تتحقق منها بنفسك، بالعربية والإنجليزية: قارن عتاد NVIDIA وAMD، وتابع أحدث أخبار هذا المجال وما تبنيه الإمارات فيه، وتعلّم أهم مفاهيمه بلغة مبسّطة."
+  },
+  "about": {
+    "en": [
+      "AI knowledge has gaps: hype that runs ahead of the facts, claims with no source, and too little of it in clear Arabic. Cipher Lacuna is built to fill them: a free guide in English and Arabic, on the web and on Android.",
+      "Here you can compare AI hardware, read the latest AI news, follow what the UAE is building and learn the key ideas. Every fact and figure links to its source, unknown values stay blank, and anything AI-written is labelled, so you can check it yourself."
+    ],
+    "ar": [
+      "في المعرفة المتاحة عن الذكاء الاصطناعي فجوات: تهويل يسبق الحقائق، وادعاءات بلا مصدر، وشحّ في المحتوى العربي الواضح والموثوق. ومن هنا جاء Cipher Lacuna ليسدّ هذه الفجوات، دليلاً مجانياً بالعربية والإنجليزية، على الموقع وفي تطبيق Android.",
+      "هنا تقارن عتاد الذكاء الاصطناعي، وتتابع أحدث أخبار هذا المجال وما تبنيه الإمارات فيه، وتتعلّم أهم مفاهيمه بلغة مبسّطة. لكل معلومة ورقم رابط إلى مصدره، والقيم غير المعروفة تُترك فارغة دون تخمين، وكل ما أُعدّ بالذكاء الاصطناعي يحمل إشارة واضحة، لتتحقق من كل ذلك بنفسك."
+    ]
+  },
+  "name_story": {
+    "en": "Lacuna is Latin for a gap, a missing piece. Cipher, a code waiting to be read, comes from the Arabic sifr, zero. Together: decoding the gaps in AI knowledge.",
+    "ar": "كلمة Lacuna لاتينية تعني الفجوة أو الحلقة المفقودة، وCipher تعني الشيفرة، وأصلها كلمة «صِفر» العربية. ومن اجتماعهما جاء معنى الاسم: كشف المجهول في عالم الذكاء الاصطناعي."
+  },
+  "areas": [
+    {
+      "id": "hardware",
+      "en": "Compare NVIDIA and AMD hardware, desktop to rack, with official specs and dated USD/AED prices, then estimate which models fit.",
+      "ar": "قارن عتاد NVIDIA وAMD من الأجهزة المكتبية إلى الرفوف، بمواصفاته الرسمية وأسعاره المؤرّخة بالدولار والدرهم، وقدّر النماذج التي يتسع لها."
+    },
+    {
+      "id": "news",
+      "en": "AI headlines in English and Arabic from vetted sources, with a summary where available and a link to each original article. AI summaries are labelled.",
+      "ar": "عناوين بالعربية والإنجليزية من مصادر إخبارية ورسمية موثوقة، مع ملخص حين يتوفر ورابط إلى المقال الأصلي، ووسم لما أعدّه الذكاء الاصطناعي."
+    },
+    {
+      "id": "uae",
+      "en": "Latest AI news about the UAE, then key facts on its strategy, computing power and models, each with its source.",
+      "ar": "أحدث أخبار الذكاء الاصطناعي في الإمارات، ثم أبرز الحقائق عن استراتيجيتها وقدراتها الحاسوبية ونماذجها، ولكل معلومة مصدرها."
+    },
+    {
+      "id": "learn",
+      "en": "Plain-language guides to LLMs, tokens, RAG, agents, governance and risk, with best practices and recommended AI stacks for real projects.",
+      "ar": "شروح مبسّطة للنماذج اللغوية الكبيرة والوحدات اللغوية وRAG ووكلاء الذكاء الاصطناعي وحوكمته ومخاطره، مع أفضل الممارسات وتركيبات تقنية موصى بها."
+    }
+  ],
+  "trust": {
+    "en": "Every fact and figure links to its source. Announcement and availability dates are kept apart. Unknown values stay blank: we never invent data. Prices are approximate, dated snapshots, not offers. AI summaries and translations are labelled and may contain mistakes.",
+    "ar": "لكل معلومة ورقم رابط إلى مصدره. ونفصل بين تاريخ الإعلان وتاريخ التوفّر، ونترك القيم غير المعروفة فارغة، فلا نختلق البيانات أبداً. والأسعار تقريبية ومؤرّخة، وليست عروض بيع. أما الملخصات والترجمات المُعدّة بالذكاء الاصطناعي فتحمل وسماً يوضّح ذلك، وقد تتضمن أخطاء."
+  },
+  "qahwa": {
+    "en": "From the creator of Qahwa & AI, the bilingual AI lessons and news series on Instagram (@qahwa.w.ai).",
+    "ar": "من صانع محتوى «قهوة و AI»، سلسلة دروس الذكاء الاصطناعي وأخباره بالعربية والإنجليزية على Instagram (@qahwa.w.ai)."
+  }
+}

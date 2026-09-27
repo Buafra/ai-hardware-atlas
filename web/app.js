@@ -66,9 +66,9 @@
     return s;
   }
   // Views live in the hash (#home, #hardware, #news, #uae, #contact); filters stay in the query string.
-  // Deep links such as #hardware/level/Personal or #uae/f/<id> are applied once, then the hash is reduced to the view.
+  // Deep links such as #hardware/level/Personal, #uae/f/<id> or #contact/about are applied once, then the hash is reduced to the view.
   const VIEWS = ['home','hardware','news','uae','contact'];
-  const SUBS = {hardware: ['cards','table','timeline','compare','run','level','vendor','p'], news: ['all','global','uae'], uae: ['f']};
+  const SUBS = {hardware: ['cards','table','timeline','compare','run','level','vendor','p'], news: ['all','global','uae'], uae: ['f'], contact: ['about']};
   const WITH_ARG = ['level','vendor','p','f'];
   // Links shared before the views existed carry only a query string (?q=4090, ?cmp=…): they belong to the hardware atlas.
   // The head script in template.html repeats this list so the first paint already shows the right view.
@@ -82,12 +82,13 @@
   function parseRoute(hash, search) {
     let h = String(hash || '').replace(/^#/, '');
     try { h = decodeURIComponent(h); } catch (e) {}
-    // Plain element ids used as no-JavaScript fallbacks (#p-<product>, #fact-<id>, #estimator) map onto their view.
+    // Plain element ids used as no-JavaScript fallbacks (#p-<product>, #fact-<id>, #estimator, #about) map onto their view.
     let m = /^p-(.+)$/.exec(h);
     if (m) return {view: 'hardware', sub: 'p', arg: m[1]};
     m = /^fact-(.+)$/.exec(h);
     if (m) return {view: 'uae', sub: 'f', arg: m[1]};
     if (h === 'estimator') return {view: 'hardware', sub: 'run', arg: ''};
+    if (h === 'about') return {view: 'contact', sub: 'about', arg: ''};
     const parts = h.split('/');
     if (!VIEWS.includes(parts[0])) return {view: impliedView(search), sub: '', arg: ''};
     const view = parts[0], sub = (SUBS[view] || []).includes(parts[1]) ? parts[1] : '';
@@ -111,6 +112,8 @@
       out.patch = {region: route.sub === 'all' ? '' : route.sub};
     } else if (route.view === 'uae' && route.sub === 'f' && has(known.facts, route.arg)) {
       out.focus = 'fact-' + route.arg;
+    } else if (route.view === 'contact' && route.sub === 'about') {
+      out.focus = 'about';
     }
     return out;
   }
@@ -209,9 +212,8 @@
     'Reference total graphics power':'الطاقة الإجمالية المرجعية للرسوميات','Official specification, checked automatically':'مواصفة رسمية يُتحقق منها تلقائياً','Accelerator rating; excludes host':'تصنيف المسرّع، دون النظام المضيف','Total board power':'إجمالي طاقة البطاقة','Workstation Edition maximum':'الحد الأقصى لإصدار محطة العمل',
     // Site shell and the four-pillar hub
     'Skip to content':'انتقل إلى المحتوى','Main sections':'الأقسام الرئيسية','Overview':'الرئيسية','News':'الأخبار','UAE':'الإمارات',
-    'Breadcrumb':'مسار التنقل','Back to overview':'العودة إلى الرئيسية','Other areas':'الأقسام الأخرى','Footer':'تذييل الصفحة',
+    'Breadcrumb':'مسار التنقل','Back to overview':'العودة إلى الرئيسية','Other areas':'الأقسام الأخرى','Footer':'تذييل الصفحة','About':'عن الموقع',
     'AI hardware, AI news and UAE AI':'عتاد الذكاء الاصطناعي وأخباره وحضوره في الإمارات','Decoding the gaps in AI knowledge':'كشف المجهول في عالم الذكاء الاصطناعي',
-    'Compare NVIDIA and AMD AI hardware, catch up on the latest AI news, and follow what the UAE is building — with sources and dates shown throughout.':'قارن عتاد الذكاء الاصطناعي من NVIDIA وAMD، وتابع آخر أخبار الذكاء الاصطناعي، واطّلع على ما تبنيه الإمارات، مع ذكر المصادر والتواريخ في كل قسم.',
     'Follow Qahwa & AI':'تابع قهوة و AI','AI lessons and news from Qahwa & AI, in English and Arabic.':'دروس وأخبار الذكاء الاصطناعي من قهوة و AI، بالعربية والإنجليزية.',
     'Quick links':'روابط سريعة','The four areas of the site':'أقسام الموقع الأربعة',
     'NVIDIA and AMD GPUs, desktop systems, servers and racks, side by side.':'معالجات رسوميات وأجهزة مكتبية وخوادم ورفوف من NVIDIA وAMD، جنباً إلى جنب.',
