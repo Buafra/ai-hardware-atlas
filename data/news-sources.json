@@ -1,19 +1,5 @@
 [
   {
-    "id": "nvidia-blog",
-    "name": "NVIDIA Blog",
-    "name_ar": "مدونة إنفيديا",
-    "feed": "https://blogs.nvidia.com/feed/",
-    "homepage": "https://blogs.nvidia.com/",
-    "lang": "en",
-    "region": "global",
-    "ai_only": true,
-    "link_hosts": [
-      "blogs.nvidia.com"
-    ],
-    "kind": "primary"
-  },
-  {
     "id": "nvidia-news",
     "name": "NVIDIA Newsroom",
     "name_ar": "غرفة أخبار إنفيديا",
@@ -55,6 +41,22 @@
       "openai.com"
     ],
     "kind": "primary"
+  },
+  {
+    "id": "anthropic-news",
+    "name": "Anthropic News",
+    "name_ar": "أخبار Anthropic",
+    "feed": "https://www.anthropic.com/news",
+    "homepage": "https://www.anthropic.com/news",
+    "lang": "en",
+    "region": "global",
+    "ai_only": true,
+    "link_hosts": [
+      "www.anthropic.com"
+    ],
+    "kind": "primary",
+    "feed_type": "anthropic_listing",
+    "listing_directory": "news"
   },
   {
     "id": "google-ai",
@@ -114,10 +116,10 @@
   },
   {
     "id": "ms-cloud",
-    "name": "Microsoft Cloud Blog",
-    "name_ar": "مدونة مايكروسوفت السحابية",
-    "feed": "https://www.microsoft.com/en-us/microsoft-cloud/blog/feed/",
-    "homepage": "https://www.microsoft.com/en-us/microsoft-cloud/blog/",
+    "name": "Official Microsoft Blog",
+    "name_ar": "مدونة مايكروسوفت الرسمية",
+    "feed": "https://blogs.microsoft.com/feed/",
+    "homepage": "https://blogs.microsoft.com/",
     "lang": "en",
     "region": "global",
     "ai_only": false,
@@ -167,7 +169,8 @@
     "link_hosts": [
       "www.technologyreview.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "drop_authors": "MIT Technology Review Insights|^Sponsored$"
   },
   {
     "id": "verge-ai",
@@ -228,17 +231,19 @@
   },
   {
     "id": "register-ai",
-    "name": "The Register — AI",
-    "name_ar": "ذا ريجستر — الذكاء الاصطناعي",
-    "feed": "https://www.theregister.com/software/ai_ml/headlines.atom",
-    "homepage": "https://www.theregister.com/software/ai_ml/",
+    "name": "The Register",
+    "name_ar": "ذا ريجستر",
+    "feed": "https://www.theregister.com/headlines.atom",
+    "homepage": "https://www.theregister.com/",
     "lang": "en",
     "region": "global",
-    "ai_only": true,
+    "ai_only": false,
     "link_hosts": [
       "www.theregister.com"
     ],
-    "kind": "news"
+    "kind": "news",
+    "drop_links": "/sponsored/|/partner-content-",
+    "weak_ai_terms": "data ?cent(?:er|re)s?"
   },
   {
     "id": "skynews-ar-tech",
@@ -311,21 +316,8 @@
       "mediaoffice.ae"
     ],
     "kind": "primary",
-    "prefer_ai_summary": true
-  },
-  {
-    "id": "thenational-uae2",
-    "name": "The National — UAE",
-    "name_ar": "ذا ناشيونال — الإمارات",
-    "feed": "https://www.thenationalnews.com/arc/outboundfeeds/rss/category/news/uae/?outputType=xml",
-    "homepage": "https://www.thenationalnews.com/news/uae/",
-    "lang": "en",
-    "region": "uae",
-    "ai_only": false,
-    "link_hosts": [
-      "www.thenationalnews.com"
-    ],
-    "kind": "news"
+    "prefer_ai_summary": true,
+    "timeout": 45
   },
   {
     "id": "thenational",
@@ -384,7 +376,9 @@
       "www.khaleejtimes.com"
     ],
     "kind": "news",
-    "feed_excerpt": false
+    "feed_excerpt": false,
+    "drop_authors": "\\bPartner Content\\b|\\bKT Engage\\b",
+    "page_drop": "Follow KT on WhatsApp|^[A-Z][\\w'’. -]{2,40} is (?:an? |the )?(?:[\\w-]+ ){0,3}(?:editor|reporter|correspondent|journalist|writer|columnist)\\b"
   },
   {
     "id": "kt-business",
@@ -399,7 +393,76 @@
       "www.khaleejtimes.com"
     ],
     "kind": "news",
-    "feed_excerpt": false
+    "feed_excerpt": false,
+    "drop_authors": "\\bPartner Content\\b|\\bKT Engage\\b",
+    "page_drop": "Follow KT on WhatsApp|^[A-Z][\\w'’. -]{2,40} is (?:an? |the )?(?:[\\w-]+ ){0,3}(?:editor|reporter|correspondent|journalist|writer|columnist)\\b"
+  },
+  {
+    "id": "kt-tech",
+    "name": "Khaleej Times — Tech",
+    "name_ar": "خليج تايمز — التكنولوجيا",
+    "feed": "https://www.khaleejtimes.com/api/v1/collections/tech-business.rss",
+    "homepage": "https://www.khaleejtimes.com/business/tech",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.khaleejtimes.com"
+    ],
+    "kind": "news",
+    "feed_excerpt": false,
+    "drop_authors": "\\bPartner Content\\b|\\bKT Engage\\b",
+    "page_drop": "Follow KT on WhatsApp|^[A-Z][\\w'’. -]{2,40} is (?:an? |the )?(?:[\\w-]+ ){0,3}(?:editor|reporter|correspondent|journalist|writer|columnist)\\b",
+    "uae_by_content": true
+  },
+  {
+    "id": "gulftoday-business",
+    "name": "Gulf Today — Business",
+    "name_ar": "جلف توداي — الأعمال",
+    "feed": "https://www.gulftoday.ae/rssFeed/52/",
+    "homepage": "https://www.gulftoday.ae/business",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.gulftoday.ae"
+    ],
+    "kind": "news"
+  },
+  {
+    "id": "wam-en",
+    "name": "WAM — Emirates News Agency",
+    "name_ar": "وكالة أنباء الإمارات (وام)",
+    "feed": "https://www.wam.ae/en/sitemap/news.xml",
+    "homepage": "https://www.wam.ae/en",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.wam.ae"
+    ],
+    "kind": "primary",
+    "feed_type": "news_sitemap",
+    "read_pages": false,
+    "uae_by_content": true
+  },
+  {
+    "id": "sharjah24-en",
+    "name": "Sharjah24",
+    "name_ar": "الشارقة 24",
+    "feed": "https://sharjah24.ae/NewsSitemap.xml",
+    "homepage": "https://sharjah24.ae/en",
+    "lang": "en",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "sharjah24.ae"
+    ],
+    "kind": "primary",
+    "feed_type": "news_sitemap",
+    "link_prefix": "https://sharjah24.ae/en/",
+    "uae_by_content": true,
+    "page_stop": "^(?:Related News|أخبار ذات صلة|مواضيع ذات صلة|More News|المزيد من الأخبار)$|Your web browser is not fully supported"
   },
   {
     "id": "mediaoffice-ar2",
@@ -414,7 +477,8 @@
       "mediaoffice.ae"
     ],
     "kind": "primary",
-    "prefer_ai_summary": true
+    "prefer_ai_summary": true,
+    "timeout": 45
   },
   {
     "id": "alkhaleej-uae",
@@ -462,7 +526,7 @@
     "id": "emaratalyoum",
     "name": "Emarat Al Youm",
     "name_ar": "الإمارات اليوم",
-    "feed": "https://www.emaratalyoum.com/1.533091?ot=ot.AjaxPageLayout",
+    "feed": "https://www.emaratalyoum.com/1.533089?ot=ot.AjaxPageLayout",
     "homepage": "https://www.emaratalyoum.com/",
     "lang": "ar",
     "region": "uae",
@@ -473,5 +537,57 @@
     "kind": "news",
     "excerpt_full_sentences": true,
     "prefer_ai_summary": true
+  },
+  {
+    "id": "wam-ar",
+    "name": "WAM — Emirates News Agency (Arabic)",
+    "name_ar": "وكالة أنباء الإمارات (وام)",
+    "feed": "https://www.wam.ae/ar/sitemap/news.xml",
+    "homepage": "https://www.wam.ae/ar",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.wam.ae"
+    ],
+    "kind": "primary",
+    "feed_type": "news_sitemap",
+    "read_pages": false,
+    "uae_by_content": true
+  },
+  {
+    "id": "albayan",
+    "name": "Al Bayan",
+    "name_ar": "البيان",
+    "feed": "https://www.albayan.ae/news-sitemap.xml",
+    "homepage": "https://www.albayan.ae/",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "www.albayan.ae"
+    ],
+    "kind": "news",
+    "feed_type": "news_sitemap",
+    "uae_by_content": true,
+    "drop_links": "/opinions/"
+  },
+  {
+    "id": "sharjah24-ar",
+    "name": "Sharjah24 (Arabic)",
+    "name_ar": "الشارقة 24",
+    "feed": "https://sharjah24.ae/NewsSitemap.xml",
+    "homepage": "https://sharjah24.ae/ar",
+    "lang": "ar",
+    "region": "uae",
+    "ai_only": false,
+    "link_hosts": [
+      "sharjah24.ae"
+    ],
+    "kind": "primary",
+    "feed_type": "news_sitemap",
+    "link_prefix": "https://sharjah24.ae/ar/",
+    "uae_by_content": true,
+    "page_stop": "^(?:Related News|أخبار ذات صلة|مواضيع ذات صلة|More News|المزيد من الأخبار)$|Your web browser is not fully supported"
   }
 ]

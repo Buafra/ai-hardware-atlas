@@ -33,7 +33,35 @@ Optional per-source settings in news-sources.json:
   excerpt_full_sentences: true   drop an excerpt the publisher cut off mid-sentence
   prefer_ai_summary: true        summarise these items first (their excerpts say little)
   drop_titles: "<regex>"         skip items whose headline matches (e.g. ticket promotions)
+  drop_links: "<regex>"          skip items whose link matches (e.g. sponsored or partner content)
+  drop_authors: "<regex>"        skip items whose feed author or category matches (paid content that sits under the
+                                 same links as the news, e.g. Khaleej Times' "Partner Content" / "KT Engage")
+  weak_ai_terms: "<regex>"       for a general feed: a headline whose only AI keyword matches this is not kept
+                                 (The Register: "datacenter" alone)
+  uae_by_content: true           a UAE source that carries much global wire copy: its items count as UAE news only
+                                 when the headline or the excerpt names the UAE (the source may still carry them)
+  raw_limit: <n>                 how many of the feed's newest entries are scanned (default RAW_LIMIT, or
+                                 SITEMAP_RAW_LIMIT for a news sitemap, whose busy publishers list hundreds a day)
+  timeout: <seconds>             for the feed request (default FEED_TIMEOUT), for slow official feeds
+  page_stop: "<regex>"           the article text read from a page ends at the first paragraph or heading that
+                                 matches (page furniture: related stories, browser notices); besides PAGE_STOP
+  page_drop: "<regex>"           paragraphs of the article page that are left out (e.g. a "follow us" line)
   read_pages: false              never fetch this source's article pages (headline and feed excerpt only)
+  link_prefix: "<url prefix>"    keep only links that start with it (one language of a mixed sitemap)
+  feed_type: "<type>"            how the feed URL is read (FEED_TYPES), one request per run either way:
+      "rss" (the default)        RSS 2.0, RSS 1.0 (RDF) or Atom
+      "news_sitemap"             a Google News sitemap (<url><loc> with <news:title> and <news:publication_date>), for
+                                 publishers with no RSS (WAM, Al Bayan, Sharjah24); no description, so excerpts come
+                                 from the article page
+      "anthropic_listing"        anthropic.com's server-rendered listing page (it has no feed): the post list embedded
+                                 in the page's Next.js data (title, summary, publishedOn, slug), or else the rendered
+                                 links; with listing_directory "news" (the default) or "research"
+Sources that share a feed URL (Sharjah24's one sitemap for both languages) share one fetch per run.
+One story is kept once per language: the same link from two sources, or headlines that share most of their words
+(published within DUPLICATE_HOURS of each other), keep the copy from an official or primary source first, then one
+with an excerpt or summary (dedupe_stories).
+Each run stores the newest MAX_ITEMS items of the last KEEP_DAYS days, plus up to PER_SOURCE_MIN of each source's newest
+that the cap would leave out, so busy feeds cannot crowd out the quiet official ones.
 """
 import collections
 import concurrent.futures
@@ -70,6 +98,22 @@ MODEL = 'claude-opus-5'
 KEEP_DAYS = 14
 PER_FEED = 25
 RAW_LIMIT = 80  # some feeds (OpenAI, Hugging Face) return their whole archive
+# A news sitemap lists every story of the last two days, most of them not about AI (Al Bayan: about 330, Sharjah24:
+# about 520 for both languages), so 80 entries would cover only hours: a late run would lose items for good. Only AI
+# headlines are kept and PER_FEED still applies, so scanning more costs nothing but parsing.
+SITEMAP_RAW_LIMIT = 600
+FEED_TIMEOUT = 25
+# What each feed type asks for: a CDN that honours Accept could refuse a page asked for as RSS (406).
+ACCEPT = {
+    'rss': 'application/rss+xml, application/atom+xml, application/xml, text/xml',
+    'news_sitemap': 'application/xml, text/xml;q=0.9, */*;q=0.1',
+    'anthropic_listing': 'text/html, application/xhtml+xml;q=0.9, */*;q=0.1',
+}
+DUPLICATE_HOURS = 48   # copies of one story are published within this many hours of each other ...
+DUPLICATE_SHARE = 0.7  # ... and the shorter headline shares at least this share of its words with the other ...
+DUPLICATE_WORDS = 4    # ... and at least this many
+MAX_ITEMS = 200       # items stored per run (newest first) ...
+PER_SOURCE_MIN = 3    # ... plus up to this many of each source's newest that the cap leaves out
 TRANSLATE_PER_RUN = 20
 EXCERPT_MAX = 280
 PAGE_EXCERPTS_PER_RUN = 60
@@ -93,10 +137,12 @@ ARTICLE_CHARS = 6000
 ATOM = '{http://www.w3.org/2005/Atom}'
 RSS1 = '{http://purl.org/rss/1.0/}'
 DC = '{http://purl.org/dc/elements/1.1/}'
+SITEMAP = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
+GNEWS = '{http://www.google.com/schemas/sitemap-news/0.9}'
 UA = 'AI-Hardware-Atlas/1.1 (news monitor; +https://cipherlacuna.ae/)'
 ARABIC = re.compile(r'[؀-ۿ]')
 AI_EN = re.compile(r"\b(AI|A\.I\.|artificial intelligence|machine learning|deep learning|LLMs?|large language models?|generative|chatbots?|GPUs?|data ?cent(?:er|re)s?|supercomput\w*|OpenAI|Anthropic|Claude|ChatGPT|Gemini|DeepMind|Copilot|NVIDIA|AMD Instinct|G42|MBZUAI|Falcon LLM|Stargate|neural|robot\w*)\b", re.I)
-AI_AR = re.compile(r'الذكاء الاصطناعي|الذكاء الإصطناعي|ذكاء اصطناعي|تعلم الآلة|التعلم الآلي|التعلم العميق|نماذج لغوية|النماذج اللغوية|روبوت|الرقائق|أشباه الموصلات|مراكز البيانات|مركز بيانات|إنفيديا|انفيديا|أوبن إيه آي|شات ?جي ?بي ?تي|جيميني|\bAI\b|G42')
+AI_AR = re.compile(r'الذكاء الاصطناعي|للذكاء الاصطناعي|الذكاء الإصطناعي|ذكاء اصطناعي|تعلم الآلة|التعلم الآلي|التعلم العميق|نماذج لغوية|النماذج اللغوية|روبوت|الرقائق|أشباه الموصلات|مراكز البيانات|مركز بيانات|إنفيديا|انفيديا|أوبن إيه آي|شات ?جي ?بي ?تي|جيميني|\bAI\b|G42')
 UAE = re.compile(r'\b(UAE|U\.A\.E\.|Emirat\w*|Abu Dhabi|Dubai|Sharjah|MBZUAI|G42|Khazna|Stargate UAE)\b|الإمارات|الامارات|أبوظبي|أبو ظبي|دبي|الشارقة|إماراتي', re.I)
 
 # What went wrong in the optional AI steps this run (kind -> count); saved in news.json, not shown on the site.
@@ -270,30 +316,132 @@ def parse_date(value):
             return None
     return (d if d.tzinfo else d.replace(tzinfo=timezone.utc)).astimezone(timezone.utc)
 
+# One feed entry. authors and categories (as the feed gives them) let a source skip paid content (drop_authors).
+Entry = collections.namedtuple('Entry', 'title link published description authors categories', defaults=((), ()))
+
+def _names(*values):
+    return tuple(dict.fromkeys(t for t in (clean(v) for v in values) if t))
+
 def parse_feed(raw):
-    """Yield (title, link, published, description) from RSS 2.0, RSS 1.0 (RDF) or Atom bytes. The description is raw feed text."""
+    """Yield Entry(title, link, published, description, authors, categories) from RSS 2.0, RSS 1.0 (RDF) or Atom
+    bytes. The description is raw feed text. Authors come from <author>, <dc:creator> or <atom:author><atom:name>
+    (Khaleej Times puts the Atom one in its RSS items), categories from <category> (its text, or an Atom term or
+    label) or <dc:subject>."""
     root = ET.fromstring(raw)
+    atom_names = lambda el: [a.findtext(ATOM + 'name') for a in el.findall(ATOM + 'author')]
+    atom_terms = lambda el: [v for c in el.findall(ATOM + 'category') for v in (c.get('term'), c.get('label'))]
     for item in root.iter('item'):
-        yield (clean(item.findtext('title')), (item.findtext('link') or '').strip(),
-               parse_date(item.findtext('pubDate') or item.findtext(DC + 'date')), item.findtext('description') or '')
+        yield Entry(clean(item.findtext('title')), (item.findtext('link') or '').strip(),
+                    parse_date(item.findtext('pubDate') or item.findtext(DC + 'date')), item.findtext('description') or '',
+                    _names(item.findtext('author'), *(e.text for e in item.findall(DC + 'creator')), *atom_names(item)),
+                    _names(*(e.text for e in item.findall('category')), *(e.text for e in item.findall(DC + 'subject')), *atom_terms(item)))
     for item in root.iter(RSS1 + 'item'):
-        yield (clean(item.findtext(RSS1 + 'title')), (item.findtext(RSS1 + 'link') or item.get('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about') or '').strip(),
-               parse_date(item.findtext(DC + 'date')), item.findtext(RSS1 + 'description') or '')
+        yield Entry(clean(item.findtext(RSS1 + 'title')), (item.findtext(RSS1 + 'link') or item.get('{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about') or '').strip(),
+                    parse_date(item.findtext(DC + 'date')), item.findtext(RSS1 + 'description') or '',
+                    _names(*(e.text for e in item.findall(DC + 'creator'))), _names(*(e.text for e in item.findall(DC + 'subject'))))
     for entry in root.iter(ATOM + 'entry'):
         link = ''
         for l in entry.findall(ATOM + 'link'):
             if l.get('rel', 'alternate') == 'alternate':
                 link = l.get('href', '')
                 break
-        yield (clean(entry.findtext(ATOM + 'title')), link.strip(), parse_date(entry.findtext(ATOM + 'published') or entry.findtext(ATOM + 'updated')),
-               entry.findtext(ATOM + 'summary') or entry.findtext(ATOM + 'content') or '')
+        yield Entry(clean(entry.findtext(ATOM + 'title')), link.strip(), parse_date(entry.findtext(ATOM + 'published') or entry.findtext(ATOM + 'updated')),
+                    entry.findtext(ATOM + 'summary') or entry.findtext(ATOM + 'content') or '', _names(*atom_names(entry)), _names(*atom_terms(entry)))
+
+def _newest_first(entries):
+    far_past = datetime.min.replace(tzinfo=timezone.utc)
+    return sorted(entries, key=lambda e: e[2] or far_past, reverse=True)
+
+def parse_news_sitemap(raw):
+    """Entry(title, link, published, '') for each <url> of a Google News sitemap that has a <news:news> title and
+    date, newest first (so the scan limit keeps the newest). Image entries (<image:loc>) are not links. There is no
+    description: excerpts come from the article page's <meta> tags."""
+    root = ET.fromstring(raw)
+    if root.tag != SITEMAP + 'urlset':
+        raise ValueError('Not a news sitemap')
+    out = []
+    for url in root.iter(SITEMAP + 'url'):
+        meta = url.find(GNEWS + 'news')
+        if meta is not None:
+            out.append(Entry(clean(meta.findtext(GNEWS + 'title')), (url.findtext(SITEMAP + 'loc') or '').strip(),
+                             parse_date(meta.findtext(GNEWS + 'publication_date')), ''))
+    return _newest_first(out)
+
+_NEXT_DATA = re.compile(r'<script[^>]*>\s*self\.__next_f\.push\((\[.*?\])\)\s*;?\s*</script>', re.S)
+_SLUG = re.compile(r'[\w.-]+')
+_LISTED_DATE = re.compile(r'>\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{1,2}, \d{4})\s*<')
+
+def _listed_date(text):
+    text = text.replace('.', '').replace('Sept ', 'Sep ')
+    for fmt in ('%b %d, %Y', '%B %d, %Y'):
+        try:
+            return datetime.strptime(text, fmt).replace(tzinfo=timezone.utc)
+        except ValueError:
+            pass
+    return None
+
+def parse_anthropic(raw, directory='news', base='https://www.anthropic.com'):
+    """(title, link, published, summary) for the posts of one directory ("news" or "research") on anthropic.com's
+    server-rendered listing page, newest first. The page embeds its whole post list in its Next.js data
+    (self.__next_f.push chunks): each post has a title, a summary, publishedOn (ISO time) and a slug, and lives under
+    its first directory (/news/<slug> or /research/<slug>). When that data is missing or changes shape, the rendered
+    links of the first page are read instead (title and "Sep 23, 2026" date, no summary)."""
+    page = raw.decode('utf-8', 'replace') if isinstance(raw, bytes) else raw
+    parts = []
+    for m in _NEXT_DATA.finditer(page):
+        try:
+            chunk = json.loads(m.group(1))
+        except ValueError:
+            continue
+        if len(chunk) > 1 and isinstance(chunk[1], str):
+            parts.append(chunk[1])
+    flight, decoder, seen, out = ''.join(parts), json.JSONDecoder(), set(), []
+    for m in re.finditer(r'\{\s*"_type"\s*:\s*"post"', flight):
+        try:
+            post, _ = decoder.raw_decode(flight, m.start())
+        except ValueError:
+            continue
+        slug = post.get('slug')
+        slug = str(slug.get('current') or '').strip() if isinstance(slug, dict) else ''
+        dirs = [d.get('value') for d in post.get('directories') or [] if isinstance(d, dict)]
+        if not _SLUG.fullmatch(slug) or not dirs or dirs[0] != directory or slug in seen:
+            continue
+        seen.add(slug)
+        out.append(Entry(clean(post.get('title') or ''), f'{base}/{directory}/{slug}', parse_date(str(post.get('publishedOn') or '')),
+                         post.get('summary') if isinstance(post.get('summary'), str) else ''))
+    if not out:
+        for m in re.finditer(rf'<a\b[^>]*\bhref="/{re.escape(directory)}/([\w.-]+)"[^>]*>(.*?)</a>', page, re.S):
+            slug, inner = m.groups()
+            date = _LISTED_DATE.search(inner)
+            if slug in seen or not date:
+                continue
+            title = re.search(r'<[^>]+class="[^"]*title[^"]*"[^>]*>(.*?)</', inner, re.S)
+            texts = [t for t in (clean(x) for x in re.split(r'<[^>]+>', inner)) if t and t != date.group(1)]
+            title = clean(title.group(1)) if title else max(texts, key=len, default='')
+            seen.add(slug)
+            out.append(Entry(title, f'{base}/{directory}/{slug}', _listed_date(date.group(1)), ''))
+    return _newest_first(out)
+
+def entries(source, raw):
+    """The Entry items of a fetched feed, read as its feed_type says (FEED_TYPES)."""
+    kind = source.get('feed_type', 'rss')
+    if kind not in FEED_TYPES:
+        raise ValueError(f'Unknown feed_type {kind!r}')
+    return FEED_TYPES[kind](raw, source)
+
+FEED_TYPES = {
+    'rss': lambda raw, source: parse_feed(raw),
+    'news_sitemap': lambda raw, source: parse_news_sitemap(raw),
+    'anthropic_listing': lambda raw, source: parse_anthropic(
+        raw, source.get('listing_directory', 'news'), '{0.scheme}://{0.netloc}'.format(urlparse(source['feed']))),
+}
 
 class EmptyFeed(ValueError):
     """The feed parsed but held no items: treated like a failed fetch, so the source keeps its earlier headlines."""
 
-def fetch(url):
-    req = Request(url, headers={'User-Agent': UA, 'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml'})
-    with urlopen(req, timeout=25) as r:
+def fetch(url, accept=ACCEPT['rss'], timeout=FEED_TIMEOUT):
+    req = Request(url, headers={'User-Agent': UA, 'Accept': accept})
+    with urlopen(req, timeout=timeout) as r:
         raw = r.read(8_000_001)
     if len(raw) > 8_000_000:
         raise ValueError('Feed exceeded size limit')
@@ -302,6 +450,25 @@ def fetch(url):
         if len(raw) > 8_000_000:
             raise ValueError('Feed exceeded size limit')
     return raw
+
+_FEED_CACHE_LOCK = threading.Lock()
+
+def fetch_once(url, cache=None, **options):
+    """fetch(url, **options), once per run for sources that share a feed URL: with a cache (a dict for this run) the
+    body, or the error, of the first fetch is reused, even by threads that ask at the same moment."""
+    if cache is None:
+        return fetch(url, **options)
+    with _FEED_CACHE_LOCK:
+        entry = cache.setdefault(url, {'lock': threading.Lock()})
+    with entry['lock']:
+        if 'raw' not in entry and 'error' not in entry:
+            try:
+                entry['raw'] = fetch(url, **options)
+            except Exception as exc:
+                entry['error'] = exc
+    if 'error' in entry:
+        raise entry['error']
+    return entry['raw']
 
 # Query parameters that only track where a click came from: the same story with any of them is the same story.
 TRACKING = re.compile(r'^(?:utm_\w*|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid|igshid|ref|ref_src|output|cmpid|ncid|smid|at_medium|at_campaign|__twitter_impression)$', re.I)
@@ -327,24 +494,61 @@ def block_keys(url, source_id, title):
 def is_blocked(item, blocked):
     return bool(blocked) and not blocked.keys().isdisjoint(block_keys(item.get('url', ''), item.get('source', ''), item.get('title', '')))
 
-def collect(source, now, blocked=None):
+def raw_limit(source):
+    """How many of the feed's newest entries collect() scans (in this source's language, for a mixed sitemap)."""
+    if source.get('raw_limit'):
+        return int(source['raw_limit'])
+    return SITEMAP_RAW_LIMIT if source.get('feed_type') == 'news_sitemap' else RAW_LIMIT
+
+def mentions_ai(title, source):
+    """Does the headline name AI (AI_EN / AI_AR by the source's language)? With weak_ai_terms, keywords that match
+    it (The Register: "datacenter") don't count on their own."""
+    found = [m.group(0) for m in (AI_AR if source['lang'] == 'ar' else AI_EN).finditer(title)]
+    weak = source.get('weak_ai_terms')
+    if weak:
+        found = [f for f in found if not re.fullmatch(weak, f, re.I)]
+    return bool(found)
+
+def names_uae(*texts):
+    return any(t and UAE.search(t) for t in texts)
+
+def uae_item(source, title, text=''):
+    """Is this UAE news? Every item of a UAE newsroom, and any headline that names the UAE; for a source marked
+    uae_by_content (wire-heavy UAE sources), only when the headline or the excerpt names the UAE."""
+    if source.get('uae_by_content'):
+        return names_uae(title, text)
+    return source['region'] == 'uae' or names_uae(title)
+
+def collect(source, now, blocked=None, cache=None):
     """This run's items of one feed. Blocked stories are skipped (see block_keys), and so (rule M1) are items that
-    mention the UAE or a GCC state when the source is not a regional outlet or an official source of the region."""
+    mention the UAE or a GCC state when the source is not a regional outlet or an official source of the region.
+    `cache` (one dict per run) lets sources that share a feed URL share one fetch."""
     items, seen_excerpts = [], set()
     covers_region = policy.may_cover_region(source)
     drop = re.compile(source['drop_titles'], re.I) if source.get('drop_titles') else None
-    entries = 0
-    for n, (title, link, published, description) in enumerate(parse_feed(fetch(source['feed']))):
-        entries += 1
-        if n >= RAW_LIMIT:
+    drop_links = re.compile(source['drop_links'], re.I) if source.get('drop_links') else None
+    drop_authors = re.compile(source['drop_authors'], re.I) if source.get('drop_authors') else None
+    prefix, limit = source.get('link_prefix'), raw_limit(source)
+    kind = source.get('feed_type', 'rss')
+    feed = entries(source, fetch_once(source['feed'], cache, accept=ACCEPT.get(kind, ACCEPT['rss']),
+                                      timeout=source.get('timeout', FEED_TIMEOUT)))
+    # A mixed-language sitemap: only this source's language counts, also towards the scan limit.
+    feed = (e for e in feed if e[1].startswith(prefix)) if prefix else feed
+    n = -1
+    for n, entry in enumerate(feed):
+        if n >= limit:
             break
+        title, link, published, description = entry[:4]
         if not title or not published or not allowed(link, source) or published > now + timedelta(hours=6):
             continue
         if now - published > timedelta(days=KEEP_DAYS):
             continue
-        if not source['ai_only'] and not (AI_AR if source['lang'] == 'ar' else AI_EN).search(title):
+        if not source['ai_only'] and not mentions_ai(title, source):
             continue
-        if drop and drop.search(title):
+        if (drop and drop.search(title)) or (drop_links and drop_links.search(link)):
+            continue
+        # Paid content under the same links as the news: only its byline or category shows it.
+        if drop_authors and any(drop_authors.search(t) for t in (*getattr(entry, 'authors', ()), *getattr(entry, 'categories', ()))):
             continue
         item_id = _hash(link)
         if blocked and not blocked.keys().isdisjoint(block_keys(link, source['id'], title)):
@@ -354,7 +558,7 @@ def collect(source, now, blocked=None):
             count('m1_dropped')
             continue
         item = {'id': item_id, 'title': title, 'url': link, 'source': source['id'],
-                'lang': source['lang'], 'uae': source['region'] == 'uae' or bool(UAE.search(title)), 'published': published.replace(microsecond=0).isoformat()}
+                'lang': source['lang'], 'uae': uae_item(source, title, text), 'published': published.replace(microsecond=0).isoformat()}
         # A podcast and a video about one story can share a description word for word: keep it on the first only.
         if text and text not in seen_excerpts:
             item['excerpt'] = text
@@ -362,7 +566,7 @@ def collect(source, now, blocked=None):
         items.append(item)
         if len(items) >= PER_FEED:
             break
-    if not entries:
+    if n < 0:
         raise EmptyFeed('Feed has no items')
     return items
 
@@ -409,13 +613,15 @@ def translate(items):
 
 class _Page(HTMLParser):
     """The publisher's description from the page's <meta> tags, and the visible paragraph text of the page: <p>
-    elements outside scripts, navigation, headers, footers and forms."""
+    elements outside scripts, navigation, headers, footers and forms. Headings (<h1>-<h6>) are recorded in `blocks`
+    beside the paragraphs, in page order, so the article text can end where "Related content" starts."""
     SKIP = {'script', 'style', 'noscript', 'template', 'svg', 'nav', 'header', 'footer', 'aside', 'form', 'button', 'figure', 'figcaption', 'iframe', 'select', 'textarea'}
     META = ('description', 'og:description', 'twitter:description')
+    HEADINGS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.skip, self.cur, self.paras, self.meta = 0, None, [], {}
+        self.skip, self.cur, self.head, self.paras, self.blocks, self.meta = 0, None, None, [], [], {}
 
     def handle_starttag(self, tag, attrs):
         if tag == 'meta':
@@ -428,6 +634,9 @@ class _Page(HTMLParser):
         elif tag == 'p':
             self._flush()
             self.cur = []
+        elif tag in self.HEADINGS:
+            self._flush_heading()
+            self.head = []
         elif tag == 'br' and self.cur is not None:
             self.cur.append(' ')
 
@@ -440,17 +649,35 @@ class _Page(HTMLParser):
             self.skip = max(0, self.skip - 1)
         elif tag == 'p':
             self._flush()
+        elif tag in self.HEADINGS:
+            self._flush_heading()
 
     def handle_data(self, data):
-        if self.cur is not None and not self.skip:
+        if self.skip:
+            return
+        if self.cur is not None:
             self.cur.append(data)
+        if self.head is not None:
+            self.head.append(data)
+
+    @staticmethod
+    def _text(parts):
+        return re.sub(r'\s+', ' ', visible(''.join(parts)).replace('\xa0', ' ')).strip()
 
     def _flush(self):
         if self.cur is not None:
-            text = re.sub(r'\s+', ' ', visible(''.join(self.cur)).replace('\xa0', ' ')).strip()
+            text = self._text(self.cur)
             if len(text) >= 30 and text not in self.paras:
                 self.paras.append(text)
+                self.blocks.append(('p', text))
         self.cur = None
+
+    def _flush_heading(self):
+        if self.head is not None:
+            text = self._text(self.head)
+            if text:
+                self.blocks.append(('h', text))
+        self.head = None
 
     def descriptions(self):
         return [self.meta[k] for k in self.META if k in self.meta]
@@ -463,13 +690,37 @@ def _parse_page(page):
     except Exception:  # malformed markup: keep what was read
         pass
     parser._flush()
+    parser._flush_heading()
     return parser
 
-def article_text(page, parser=None):
-    """Paragraph text of an HTML page, at most ARTICLE_CHARS characters, cut at a paragraph (or word) boundary."""
+# Headings that start page furniture after an article (related or popular stories), matched as the whole heading.
+# They only end the text once some article paragraphs were read: the same heading in a sidebar above the article
+# does not cut it away.
+PAGE_STOP = re.compile(r'(?:related|recommended|similar)(?: (?:content|news|articles?|stories|posts|reads?|reading|topics|links))?'
+                       r'|more (?:from|on|in|about|stories|news|to read)\b.*|most (?:popular|read|viewed|shared)|trending(?: now| stories)?'
+                       r'|you (?:may|might) also like|(?:read|up) next'
+                       r'|(?:أخبار|مواضيع|مقالات|قصص)? ?ذات صلة|الأكثر (?:قراءة|مشاهدة|تداولاً?)|المزيد من .*', re.I)
+
+def article_text(page, parser=None, source=None):
+    """Paragraph text of an HTML page, at most ARTICLE_CHARS characters, cut at a paragraph (or word) boundary. It
+    ends at a PAGE_STOP heading after the article, or at the first paragraph or heading that matches the source's
+    page_stop (even before any article text: then there is none); paragraphs matching page_drop are left out."""
     parser = parser or _parse_page(page)
+    source = source or {}
+    stop = re.compile(source['page_stop'], re.I) if source.get('page_stop') else None
+    drop = re.compile(source['page_drop'], re.I) if source.get('page_drop') else None
+    paras = []
+    for kind, text in getattr(parser, 'blocks', None) or [('p', p) for p in parser.paras]:
+        if stop and stop.search(text):
+            break
+        if kind == 'h':
+            if paras and PAGE_STOP.fullmatch(text.strip(' :：-–—|')):
+                break
+            continue
+        if not (drop and drop.search(text)):
+            paras.append(text)
     out = ''
-    for p in parser.paras:
+    for p in paras:
         if len(out) + len(p) + 2 > ARTICLE_CHARS:
             if not out:
                 out = p[:ARTICLE_CHARS].rsplit(' ', 1)[0]
@@ -558,7 +809,7 @@ def read_page(item, source):
     except LookupError:
         page = raw.decode('utf-8', errors='replace')
     parser = _parse_page(page)
-    return parser.descriptions(), article_text(page, parser)
+    return parser.descriptions(), article_text(page, parser, source)
 
 def fetch_article(item, source):
     """Readable text of the item's article page, or '' (see read_page)."""
@@ -942,16 +1193,33 @@ def notify_owner(report, sources):
 CARRIED = ('summary_en', 'summary_ar', 'summary_source', 'summary_basis', 'summary_version', 'ai_focus', 'summary_attempts',
            'summary_attempts_version', 'page_checked', 'policy_ok', 'policy_version', 'policy_hash', 'policy_attempts')
 
-def merge(previous, fresh, errors):
+def ranker(sources):
+    """Sort key for copies of one story (lowest is kept): a copy that is shown before one that is not (judged not
+    mainly about AI, or failing the policy check), then an official or primary source (kind "primary": the vendor
+    newsrooms, WAM, Sharjah24, the Dubai Media Office), then a copy with an excerpt or a summary, then the first
+    published, then the source listed later in news-sources.json (for one link in two sections of a newspaper, the
+    more specific section is listed later, e.g. Khaleej Times Tech after Business)."""
+    order = {s['id']: n for n, s in enumerate(sources)}
+    primary = {s['id'] for s in sources if s.get('kind') == 'primary'}
+
+    def key(item):
+        return (item.get('ai_focus') is False or item.get('policy_ok') is False, item.get('source') not in primary,
+                not (item.get('excerpt') or item.get('summary_en')), item.get('published', ''), -order.get(item.get('source'), -1))
+    return key
+
+def merge(previous, fresh, errors, sources=None):
     """Items from this run plus those of feeds that failed; earlier translations, page excerpts and summaries carry
     over. An item fetched again this run takes the feed excerpt computed now (even none), so a rule that now rejects
-    an old excerpt removes it; an excerpt read from the article page is kept while it still passes the rules."""
+    an old excerpt removes it; an excerpt read from the article page is kept while it still passes the rules. One
+    link that two sources list this run is kept once, from the source `ranker` prefers (with `sources`; else the
+    later one)."""
     by_url = {}
     old_by_url = {p['url']: p for p in previous}
     for item in previous:
         # Items from a feed that failed this run are carried over unchanged.
         if item['source'] in errors or item['source'] not in fresh:
             by_url[item['url']] = item
+    fresh_urls, rank = set(), ranker(sources or [])
     for items in fresh.values():
         for item in items:
             old = old_by_url.get(item['url'])
@@ -963,8 +1231,96 @@ def merge(previous, fresh, errors):
                 for k in CARRIED:
                     if k in old and k not in item:
                         item[k] = old[k]
+            if sources and item['url'] in fresh_urls and rank(by_url[item['url']]) <= rank(item):
+                continue
             by_url[item['url']] = item
+            fresh_urls.add(item['url'])
     return list(by_url.values())
+
+_STOP_WORDS = set('''a an the of to in on for and or with as at by from is are be its it this that these than into over after
+before about amid says said say new will has have how why what who more its'''.split()) | {
+    'في', 'من', 'علي', 'الي', 'عن', 'مع', 'ان', 'او', 'التي', 'الذي', 'هذا', 'هذه', 'بعد', 'قبل', 'خلال', 'حول', 'ما', 'لا', 'قد', 'كما'}
+# Words every headline here shares: "AI" and its Arabic forms.
+_STOP_WORDS |= {'ai', 'artificial', 'intelligence', 'ذكاء', 'اصطناعي', 'الاصطناعي'}
+
+def headline_words(title):
+    """The content words of a headline for comparing two copies of one story: case, accents, Arabic letter variants
+    and the Arabic article and a leading "and" removed, a plural "s" dropped, common words and "AI" left out."""
+    words = set()
+    for w in re.findall(r'\w+', policy.normalize(title or '').casefold()):
+        if ARABIC.search(w):
+            w = re.sub(r'^(?:و(?=ال)|ف(?=ال))', '', w)
+            w = re.sub(r'^(?:بال|كال|ال|لل)(?=\w{3})', '', w)
+        elif len(w) > 3 and w.endswith('s') and not w.endswith('ss'):
+            w = w[:-1]
+        if len(w) > 1 and w not in _STOP_WORDS:
+            words.add(w)
+    return words
+
+def _published(item):
+    try:
+        return datetime.fromisoformat(item['published'])
+    except (KeyError, TypeError, ValueError):
+        return None
+
+def same_story(a, b, words=None, times=None):
+    """Two items that report one story: same language, different sources, published within DUPLICATE_HOURS, and
+    headlines that share most of their words (see DUPLICATE_SHARE and DUPLICATE_WORDS). `words` and `times` (by
+    id() of the item) save working them out again for every pair."""
+    if a['lang'] != b['lang'] or a['source'] == b['source']:
+        return False
+    ta, tb = ((times or {}).get(id(x)) or _published(x) for x in (a, b))
+    if ta is None or tb is None or abs(ta - tb) > timedelta(hours=DUPLICATE_HOURS):
+        return False
+    wa, wb = (words or {}).get(id(a)) or headline_words(a['title']), (words or {}).get(id(b)) or headline_words(b['title'])
+    shared = len(wa & wb)
+    return shared >= DUPLICATE_WORDS and shared >= DUPLICATE_SHARE * min(len(wa), len(wb))
+
+def dedupe_stories(items, sources):
+    """One copy of each story per language (a wire story that WAM, Al Bayan, Sharjah24 and Khaleej Times all run):
+    items that are the same story (same_story), directly or through another copy, form one group, and only the best
+    of each group (ranker) is kept. A group never spans more than DUPLICATE_HOURS, so a chain of similar headlines
+    over several days (a recurring feature) is not taken for one story. Returns (kept items in their original order,
+    number left out)."""
+    words = {id(i): headline_words(i.get('title')) for i in items}
+    times = {id(i): _published(i) for i in items}
+    group = list(range(len(items)))
+    span = {n: (times[id(i)], times[id(i)]) for n, i in enumerate(items)}
+
+    def root(n):
+        while group[n] != n:
+            group[n] = group[group[n]]
+            n = group[n]
+        return n
+    for a in range(len(items)):
+        for b in range(a + 1, len(items)):
+            ra, rb = root(a), root(b)
+            if ra == rb or not same_story(items[a], items[b], words, times):
+                continue
+            first, last = min(span[ra][0], span[rb][0]), max(span[ra][1], span[rb][1])
+            if last - first <= timedelta(hours=DUPLICATE_HOURS):
+                group[rb] = ra
+                span[ra] = (first, last)
+    best, rank = {}, ranker(sources)
+    for n, item in enumerate(items):
+        r = root(n)
+        if r not in best or rank(item) < rank(items[best[r]]):
+            best[r] = n
+    keep = set(best.values())
+    return [i for n, i in enumerate(items) if n in keep], len(items) - len(keep)
+
+def flag_uae(items, sources):
+    """For sources marked uae_by_content, the UAE flag follows the texts as they are now (a page excerpt read this
+    run can name the UAE; a stored item from before the setting may not). Returns the number of items changed."""
+    src = {s['id']: s for s in sources}
+    changed = 0
+    for item in items:
+        s = src.get(item.get('source'))
+        if s and s.get('uae_by_content'):
+            flag = uae_item(s, item.get('title', ''), item.get('excerpt', ''))
+            changed += flag != item.get('uae')
+            item['uae'] = flag
+    return changed
 
 def recheck(items, sources):
     """Stored excerpts (including those of items kept from failed feeds) must still pass the current cleaning rules;
@@ -981,6 +1337,21 @@ def recheck(items, sources):
         else:
             item.pop('excerpt', None)
             item.pop('excerpt_source', None)
+
+def window(items, now):
+    """The items a run keeps, newest first: those of the last KEEP_DAYS days, at most MAX_ITEMS of them, plus up to
+    PER_SOURCE_MIN of each source's newest that the cap left out, so a quiet source (an official UAE newsroom posts
+    a few AI stories a week) is not crowded out by busy ones. Items already judged not mainly about AI (never shown)
+    neither count towards nor use a source's minimum."""
+    cutoff = now - timedelta(days=KEEP_DAYS)
+    recent = sorted((i for i in items if datetime.fromisoformat(i['published']) >= cutoff), key=lambda i: i['published'], reverse=True)
+    kept = recent[:MAX_ITEMS]
+    shown = collections.Counter(i['source'] for i in kept if i.get('ai_focus') is not False)
+    for item in recent[MAX_ITEMS:]:
+        if item.get('ai_focus') is not False and shown[item['source']] < PER_SOURCE_MIN:
+            kept.append(item)
+            shown[item['source']] += 1
+    return sorted(kept, key=lambda i: i['published'], reverse=True)
 
 def dedupe_excerpts(items):
     """One excerpt text per source: a podcast and a video about the same story can share a description word for word.
@@ -1034,10 +1405,10 @@ def main():
     blocked = load_blocked()
     now = datetime.now(timezone.utc).replace(microsecond=0)
     STATS.clear()
-    fresh, errors = {}, {}
+    fresh, errors, feeds = {}, {}, {}
     def load(source):
         try:
-            return source['id'], collect(source, now, blocked), None
+            return source['id'], collect(source, now, blocked, feeds), None
         except Exception as exc:
             return source['id'], None, type(exc).__name__
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
@@ -1046,10 +1417,12 @@ def main():
                 errors[sid] = error
             else:
                 fresh[sid] = items
-    cutoff = now - timedelta(days=KEEP_DAYS)
     # Items of sources no longer followed and blocked items go first, whatever run collected them.
-    merged = purge(merge(previous['items'], fresh, errors), sources, blocked)
-    items = sorted((i for i in merged if datetime.fromisoformat(i['published']) >= cutoff), key=lambda i: i['published'], reverse=True)[:200]
+    merged = purge(merge(previous['items'], fresh, errors, sources), sources, blocked)
+    flag_uae(merged, sources)
+    # One copy of a story per language, chosen before the window so copies don't take its places.
+    merged, duplicates = dedupe_stories(merged, sources)
+    items = window(merged, now)
     recheck(items, sources)
     key = bool(os.environ.get('ANTHROPIC_API_KEY'))
     if not key:
@@ -1057,6 +1430,7 @@ def main():
               '(items that mention the UAE or the GCC stay hidden)', file=sys.stderr)
     added = _optional(page_excerpts, items, sources)
     dedupe_excerpts(items)
+    flag_uae(items, sources)  # page excerpts read this run can name the UAE
     # Summaries first: their ai_focus verdict keeps items that are never shown out of the translation budget.
     summarized = _optional(summarize, items, sources)
     translated = _optional(translate, items)
@@ -1075,7 +1449,7 @@ def main():
     kept = [i for i in items if storable(i, key, i['url'] in saved_before)]
     counts['held_back'] = len(items) - len(kept)
     items = kept
-    data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources)}, 'errors': errors,
+    data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
             'ai': {'key_set': key, 'model': MODEL, 'translated': translated, 'summarised': summarized,
                    'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS)},
             'items': items}
@@ -1083,7 +1457,7 @@ def main():
     tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
     tmp.replace(OUT)
     # Public log: counts only, never a title or a reason.
-    print(f"News: {len(fresh)}/{len(sources)} feeds, {len(items)} items, {sum(i['uae'] for i in items)} UAE, "
+    print(f"News: {len(fresh)}/{len(sources)} feeds, {len(items)} items ({duplicates} copies of a story already kept left out), {sum(i['uae'] for i in items)} UAE, "
           f"{sum(1 for i in items if i.get('excerpt'))} with excerpts ({added} new from article pages), {translated} translated, {summarized} summarised, "
           f"{sum(1 for i in items if i.get('ai_focus') is False)} hidden as not mainly about AI")
     print(f"Content policy v{counts['policy_version']}: {counts['policy_checked']} checked, {counts['policy_blocked']} removed, "

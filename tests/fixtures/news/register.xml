@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:lab="https://labradorcms.com/ns/rss">
+<channel>
+    <title>www.theregister.com - Articles</title>
+    <link>https://www.theregister.com</link>
+    <description>Articles from www.theregister.com</description>
+
+    <item>
+        <guid isPermaLink="true">https://www.theregister.com/a/5298765</guid>
+        <link>https://www.theregister.com/ai-and-ml/2026/09/25/partner-content-huawei-cloud-rolls-out-enterprise-ai-products-across-the-board-building-an-open-agentic-cloud/5298765</link>
+        <pubDate>Fri, 25 Sep 2026 10:00:00 +0200</pubDate>
+        <title>Huawei Cloud Rolls Out Enterprise AI Products Across the Board, Building an Open Agentic Cloud</title>
+        <description><![CDATA[ PARTNER CONTENT: Huawei Cloud strengthens the silicon bedrock on the cloud ]]></description>
+        <category>ai and ml</category>
+                <dc:modified>Fri, 25 Sep 2026 08:14:01 +0000</dc:modified>
+                
+                <enclosure url="https://image.theregister.com/?imageId=5298769&amp;width=800" type="image/jpeg" />
+                <media:thumbnail url="https://image.theregister.com/?imageId=5298769&amp;width=800" />
+            </item>
+<item>
+        <guid isPermaLink="true">https://www.theregister.com/a/5298888</guid>
+        <link>https://www.theregister.com/paas-and-iaas/2026/09/24/sponsored/5298888</link>
+        <pubDate>Thu, 24 Sep 2026 16:49:40 +0200</pubDate>
+        <title>Ask HPE and NVIDIA the AI data question you cannot ask in public</title>
+        <description><![CDATA[ Matt Rosoff chairs a Register roundtable with HPE and NVIDIA on data sovereignty in the AI
+era, off the record, in Washington ]]></description>
+        <category>paas and iaas</category>
+                <lab:kicker><![CDATA[ EVENT ]]></lab:kicker>
+                <dc:modified>Thu, 24 Sep 2026 14:50:11 +0000</dc:modified>
+                
+                <enclosure url="https://image.theregister.com/?imageId=5298900&amp;width=800" type="image/jpeg" />
+                <media:thumbnail url="https://image.theregister.com/?imageId=5298900&amp;width=800" />
+            </item>
+<item>
+        <guid isPermaLink="true">https://www.theregister.com/a/5296946</guid>
+        <link>https://www.theregister.com/ai-and-ml/2026/09/16/openais-new-sponsored-agents-are-happy-to-chat-about-selling-you-things/5296946</link>
+        <pubDate>Wed, 16 Sep 2026 20:32:37 +0200</pubDate>
+        <title>OpenAI's new sponsored agents are happy to chat about selling you things</title>
+        <description><![CDATA[ Advertisers can now ask ChatGPT to help create their ChatGPT ads, because what's more relatable than an ad crafted by a bot? ]]></description>
+        <category>ai and ml</category>
+                <lab:kicker><![CDATA[ ai and ml ]]></lab:kicker>
+                
+                <enclosure url="https://image.theregister.com/?imageId=5296955&amp;width=800" type="image/jpeg" />
+                <media:thumbnail url="https://image.theregister.com/?imageId=5296955&amp;width=800" />
+            </item>
+<item>
+        <guid isPermaLink="true">https://www.theregister.com/a/5298931</guid>
+        <link>https://www.theregister.com/os-platforms/2026/09/25/asahi-fork-embraces-llms-and-lands-linux-on-the-m4-mac-mini/5298931</link>
+        <pubDate>Fri, 25 Sep 2026 14:00:00 +0200</pubDate>
+        <title>Asahi fork embraces LLMs and lands Linux on the M4 Mac mini</title>
+        <description><![CDATA[ Coding agents helped two developers build an accelerated desktop and graphics driver in weeks ]]></description>
+        <category>os platforms</category>
+                <dc:modified>Fri, 25 Sep 2026 11:41:25 +0000</dc:modified>
+                
+                <enclosure url="https://image.theregister.com/?imageId=5299086&amp;width=800" type="image/jpeg" />
+                <media:thumbnail url="https://image.theregister.com/?imageId=5299086&amp;width=800" />
+            </item>
+<item>
+        <guid isPermaLink="true">https://www.theregister.com/a/5298679</guid>
+        <link>https://www.theregister.com/ai-and-ml/2026/09/23/mop-the-slop-from-your-linkedin-feed-with-a-new-open-source-chrome-extension/5298679</link>
+        <pubDate>Wed, 23 Sep 2026 22:23:13 +0200</pubDate>
+        <title>Mop the slop from your LinkedIn feed with a new open-source Chrome extension</title>
+        <description><![CDATA[ Jev-powered Slop Mop demonstrates another great use case for probabilistic, non-chatty AI model ]]></description>
+        <category>ai and ml</category>
+                
+                <enclosure url="https://image.theregister.com/?imageId=5292734&amp;width=800" type="image/jpeg" />
+                <media:thumbnail url="https://image.theregister.com/?imageId=5292734&amp;width=800" />
+            </item>
+</channel></rss>

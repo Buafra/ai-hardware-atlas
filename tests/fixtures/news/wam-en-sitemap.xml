@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.wam.ae/en/article/c2ghqqv-uae-delegation-continues-key-meetings-third-day</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T20:16:47+04:00</news:publication_date>
+      <news:title>UAE delegation continues key meetings on third day of 81st session of UN General Assembly</news:title>
+    </news:news>
+  </url>
+<url>
+    <loc>https://www.wam.ae/en/article/c2ghqqu-uae-adopts-proactive-approach-combating-crime-and</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T20:11:17+04:00</news:publication_date>
+      <news:title>UAE adopts proactive approach in combating crime and financial crime worldwide: MENAFATF</news:title>
+    </news:news>
+  </url>
+<url>
+    <loc>https://www.wam.ae/en/article/c2ghqqt-ministry-family-organises-workshop-shape-national</loc>
+    <image:image>
+      <image:loc>https://assets.wam.ae/resource/3v707i4v1ka1l1cpd.jpeg</image:loc>
+      <image:title>Ministry of Family organises workshop to shape national strategic priorities for People of Determination</image:title>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T20:04:17+04:00</news:publication_date>
+      <news:title>Ministry of Family organises workshop to shape national strategic priorities for People of Determination</news:title>
+    </news:news>
+  </url>
+<url>
+    <loc>https://www.wam.ae/en/article/c2ghpxx-warnings-toxic-e-waste-tsunami-driven-boom</loc>
+    <image:image>
+      <image:loc>https://assets.wam.ae/resource/k7p07i7y1ka0ucupd.jpg</image:loc>
+      <image:title>Warnings of toxic e-waste tsunami driven by AI boom</image:title>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T10:55:19+04:00</news:publication_date>
+      <news:title>Warnings of toxic e-waste tsunami driven by AI boom</news:title>
+    </news:news>
+  </url>
+<url>
+    <loc>https://www.wam.ae/en/article/17g1rsr-openai-says-agents-posted-user-images-online</loc>
+    <image:image>
+      <image:loc>https://assets.wam.ae/resource/0i107i5m1ka0t1ppd.jpg</image:loc>
+      <image:title>OpenAI says AI agents posted 53 user images online</image:title>
+    </image:image>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-27T10:27:09+04:00</news:publication_date>
+      <news:title>OpenAI says AI agents posted 53 user images online</news:title>
+    </news:news>
+  </url>
+<url>
+    <loc>https://www.wam.ae/en/article/c2fwakv-women-launches-digital-hub-for-gender-equality</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Emirates News Agency</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-26T13:45:02+04:00</news:publication_date>
+      <news:title>UN Women launches digital, AI hub for gender equality</news:title>
+    </news:news>
+  </url>
+</urlset>
