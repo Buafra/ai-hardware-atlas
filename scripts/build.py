@@ -582,7 +582,9 @@ def xnav(c, views):
     return f'<nav class="xnav" aria-label="Other areas" data-i18n-aria="Other areas">{out}</nav>'
 
 def stat(value, label):
-    return f'<div class="stat"><dt data-i18n>{label}</dt><dd><bdi>{value}</bdi></dd></div>'
+    # --n = characters in the longest shown value ("155 · 104" = 9), so the number can shrink to fit a narrow box.
+    n = max((len(s) for s in re.split(r'<[^>]+>', str(value)) if s.strip()), default=1)
+    return f'<div class="stat" style="--n:{n}"><dt data-i18n>{label}</dt><dd><bdi>{value}</bdi></dd></div>'
 
 # ---------- views ----------
 

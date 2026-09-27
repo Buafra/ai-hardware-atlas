@@ -163,6 +163,9 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .stat{display:flex;flex-direction:column-reverse;justify-content:flex-end;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:10px 12px;min-width:0}
 .stat dd{margin:0;font-size:23px;font-weight:800;line-height:1.15;color:var(--strong);font-variant-numeric:tabular-nums;white-space:nowrap}
 .stat dt{font-size:12px;line-height:1.35;color:var(--muted);margin-top:3px}
+/* Pillar stats: a long value ("155 · 104") shrinks to its box (never below 14px, then it wraps); short ones keep the full size. */
+.stats>.stat{container-type:inline-size}
+.stats>.stat dd{font-size:max(14px,min(23px,calc(100cqi / (var(--n,3) * .6))));white-space:normal;overflow-wrap:anywhere}
 .split-wrap{margin-top:-6px}
 .split{display:flex;height:8px;border-radius:99px;overflow:hidden;background:var(--surface-3)}
 .split i{display:block;height:100%}
@@ -605,6 +608,7 @@ dialog::backdrop{background:#0a0d1a99}
   .p-foot{padding:0 16px 16px}
   .stat{padding:9px 10px}
   .stat dd{font-size:20px}
+  .stats>.stat dd{font-size:max(14px,min(20px,calc(100cqi / (var(--n,3) * .6))))}
   .mini a{grid-template-columns:84px minmax(0,1fr)}
   .trust{grid-template-columns:1fr}
   .trust>div+div{border-inline-start:0;border-top:1px solid var(--border)}

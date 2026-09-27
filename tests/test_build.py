@@ -741,4 +741,16 @@ class AboutTests(unittest.TestCase):
         learn_page=build.learn.render(*build.learn.load())
         self.assertIn('<a href="index.html#contact/about">',learn_page)
 
+class StatFitTests(unittest.TestCase):
+    """Pillar stat values shrink to fit their box: each stat carries its longest value's length (--n)."""
+    def test_stat_carries_value_length(self):
+        self.assertIn('style="--n:9"',build.stat('155 · 104','English · Arabic'))
+        self.assertIn('style="--n:3"',build.stat(180,'headlines'))
+        both=build.L('155 · 104','104 · 155')
+        self.assertIn('style="--n:9"',build.stat(both,'English · Arabic'))
+    def test_css_scales_pillar_stats(self):
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        self.assertIn('.stats>.stat{container-type:inline-size}',css)
+        self.assertIn('.stats>.stat dd{font-size:max(14px,min(23px,calc(100cqi / (var(--n,3) * .6))));white-space:normal;overflow-wrap:anywhere}',css)
+
 if __name__=='__main__':unittest.main()
