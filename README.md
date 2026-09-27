@@ -25,7 +25,7 @@ Cipher Lacuna ("Decoding the gaps in AI knowledge"): public NVIDIA / AMD compari
 - Contact view: the email address (assembled by JavaScript, so it is not in the page source) and the follow button; there is no form.
 - "Pick a model" in the estimator: every model listed on OpenRouter (`data/models.json`, refreshed with each scheduled run by `scripts/models.py`). Open-weight sizes come from Hugging Face safetensors metadata (all experts of MoE models counted); only unambiguous dense names are used as a fallback. Closed models are shown as cloud-only.
 - Embedded fonts and one-page A3 PDF, generated from the same catalog.
-- Scheduled workflow: 07:15 and 19:15 Dubai time (03:15 and 15:15 UTC).
+- Scheduled workflow: 6 times a day, every 4 hours: 03:15, 07:15, 11:15, 15:15, 19:15 and 23:15 Dubai time (23:15, 03:15, 07:15, 11:15, 15:15 and 19:15 UTC).
 
 ## Publish
 

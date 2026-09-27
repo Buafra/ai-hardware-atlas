@@ -1,4 +1,4 @@
-"""Collect AI headlines twice a day from vetted feeds in data/news-sources.json.
+"""Collect AI headlines with every scheduled run (6 times a day) from vetted feeds in data/news-sources.json.
 
 Stored per item: title, link, source, date and a short excerpt of the publisher's own description (at most 280
 characters, publisher boilerplate removed). The excerpt comes from the feed, or, when the feed gives none worth showing,

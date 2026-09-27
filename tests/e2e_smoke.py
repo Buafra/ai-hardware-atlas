@@ -33,6 +33,9 @@ ORIGIN = '{0.scheme}://{0.netloc}'.format(urlparse(BASE))
 DATA = Path(__file__).resolve().parents[1] / 'data'
 LEARN = [json.loads((DATA / 'learn' / f).read_text(encoding='utf-8')) for f in ('concepts.json', 'stacks.json')]
 LEARN_COUNTS = [len(LEARN[0]['concepts']), sum(s['kind'] != 'foundation' for s in LEARN[1]['stacks']), sum(s['kind'] == 'foundation' for s in LEARN[1]['stacks'])]
+# How often the site says it updates, worded as build.schedule_phrase() words it from data/catalog.json.
+_RUNS = len(re.findall(r'\b\d{1,2}:\d{2}\b', json.loads((DATA / 'catalog.json').read_text(encoding='utf-8')).get('schedule') or ''))
+PHRASE = ({1: 'once a day', 2: 'twice a day'}.get(_RUNS, f'{_RUNS} times a day'), {1: 'مرة يومياً', 2: 'مرتين يومياً'}.get(_RUNS, f'{_RUNS} مرات يومياً'))
 ITEM_URLS = {i['url'] for i in json.loads((DATA / 'news.json').read_text(encoding='utf-8'))['items']}
 HOMEPAGES = {s['homepage'] for s in json.loads((DATA / 'news-sources.json').read_text(encoding='utf-8'))}
 # The site's own phrases for what was removed; checked only in the site's own text, never in headlines or summaries.
@@ -109,11 +112,11 @@ def route_checks(page, route, lang, width, hash=None):
     check(ln.get_attribute('href') == ('learn.html', 'learn.html?lang=ar')[lang == 'ar'], f'{tag} Learn AI header link href {ln.get_attribute("href")}')
     shown = page.evaluate("[...document.querySelectorAll('.top .nav a.n-learn span')].filter(s => s.getBoundingClientRect().width > 2).map(s => s.textContent.trim())")
     check(len(shown) == 1 and shown[0] in (('Learn AI', 'Learn'), ('تعلّم الذكاء الاصطناعي', 'تعلّم'))[lang == 'ar'], f'{tag} Learn AI header label {shown}')
-    # "Updated <date> · twice a day" appears once on the whole site, at the top of the AI news view.
-    fresh = page.evaluate(r"""() => { const t = [...document.querySelectorAll('main, header, footer')].map(e => e.textContent).join(' ');
+    # "Updated <date> · 6 times a day" (whatever the schedule says) appears once on the whole site, at the top of AI news.
+    fresh = page.evaluate(r"""([en, ar]) => { const t = [...document.querySelectorAll('main, header, footer')].map(e => e.textContent).join(' ');
         return [(t.match(/Updated \d{1,2} [A-Z][a-z]{2} \d{4}/g) || []).length, (t.match(/آخر تحديث \d/g) || []).length,
-                (t.match(/twice a day/gi) || []).length, (t.match(/مرتين يومياً/g) || []).length]; }""")
-    check(fresh == [1, 1, 1, 1], f'{tag} freshness line / "twice a day" counts {fresh} (want one each)')
+                t.split(en).length - 1, t.split(ar).length - 1]; }""", list(PHRASE))
+    check(fresh == [1, 1, 1, 1], f'{tag} freshness line / {PHRASE[0]!r} counts {fresh} (want one each)')
     check(page.locator('.ifresh >> visible=true').count() == (1 if route == 'news' else 0), f'{tag} freshness line visible outside #news')
     # The site's own text only: headlines and summaries may well say "reached".
     text = page.evaluate("[...document.querySelectorAll('.hero, .trust, .ihead, .side, .p-head, .stats, .live, .xnav, .sec-h, .n-note, .foot, .main-col > h2')].map(e => e.innerText).join(' ')")
@@ -385,7 +388,7 @@ def main():
         page.fill('#model', name); page.wait_for_timeout(150)
         check(page.evaluate("getComputedStyle(document.getElementById('model-note')).direction") == 'rtl' and page.locator('#model-note bdi').count() == 1, 'Arabic model note not in page direction')
         check(re.search(r'[؀-ۿ]', page.text_content('#hardware .footnote')) is not None, 'footnote not translated')
-        raw = page.evaluate(r"[...document.querySelectorAll('#table-view td, #products dd')].map(e => e.innerText).filter(t => /\d{4}-(Q\d|H\d|Summer|end)/.test(t))")
+        raw = page.evaluate(r"[...document.querySelectorAll('#table-view td, #products dd')].map(e => e.innerText).filter(t => /\d{4}-(Q\d|H\d|Summer|end)\b/.test(t))")
         check(not raw, f'raw date windows shown in Arabic: {raw[:3]}')
         ctx.close()
 

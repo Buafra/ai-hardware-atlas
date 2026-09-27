@@ -459,11 +459,12 @@ def ihead(view, title, lead, extra='', follow=True):
             f'<div class="ihead-acts">{acts}</div></div>{extra}</div>')
 
 def schedule_times(data):
-    """'07:15 and 19:15 Asia/Dubai' -> ['07:15', '19:15'] (the publish workflow's cron, in UAE time; checked by a test)."""
+    """'03:15, 07:15, … and 23:15 Asia/Dubai' -> ['03:15', '07:15', …] (the publish workflow's cron, in UAE time; checked by a test)."""
     return re.findall(r'\b\d{1,2}:\d{2}\b', str((data or {}).get('schedule') or ''))
 
 def schedule_phrase(data, lang):
-    """How often the site refreshes, in words: 'twice a day' / 'مرتين يومياً' (the times themselves are not shown)."""
+    """How often the site refreshes, in words: 'twice a day' / 'مرتين يومياً', '6 times a day' / '6 مرات يومياً' (the times
+    themselves are not shown)."""
     n = len(schedule_times(data))
     if not n:
         return ''
@@ -472,7 +473,7 @@ def schedule_phrase(data, lang):
     return {1: 'once a day', 2: 'twice a day'}.get(n, f'{n} times a day')
 
 def fresh_line(feed, data=None):
-    """'Updated 26 Sep 2026 · twice a day': when the headlines last changed and how often they do. No fetch statistics.
+    """'Updated 26 Sep 2026 · 6 times a day': when the headlines last changed and how often they do. No fetch statistics.
     Shown once on the whole site, at the top of the AI news view."""
     if not feed or not feed.get('updated_at'):
         return T('Headlines appear after the first scheduled update.')
