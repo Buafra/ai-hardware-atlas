@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-27T18:00:00+04:00",
+  "generated_at": "2026-09-27T18:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -240,6 +240,10 @@
           },
           "en": {
             "title": "Save this and send it to someone who ==hears about AI every day=="
+          },
+          "next": {
+            "ar": "الدرس 02: كيف تتعلّم الآلة؟",
+            "en": "Lesson 02: How does a machine learn?"
           }
         }
       ],
@@ -336,6 +340,144 @@
       "related_concepts": []
     },
     {
+      "id": "week-01-day-02--1-learn-lesson-02",
+      "kind": "lesson",
+      "lesson": 2,
+      "code": "L02",
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "How does a machine learn?",
+        "ar": "كيف تتعلّم الآلة؟"
+      },
+      "summary": {
+        "en": "A way for computers to learn patterns from examples, instead of following rules a programmer wrote.",
+        "ar": "طريقة يتعلّم بها الحاسوب الأنماط من الأمثلة، لا باتباع قواعد يكتبها المبرمج."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "كيف ==تتعلّم== الآلة؟",
+            "body": "التعلّم الآلي في دقيقة."
+          },
+          "en": {
+            "title": "How does a machine ==learn==?",
+            "body": "Machine learning in one minute."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "طريقة يتعلّم بها الحاسوب ==الأنماط من الأمثلة==، لا باتباع قواعد يكتبها المبرمج."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "A way for computers to ==learn patterns from examples==, instead of following rules a programmer wrote."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "مثال: فلتر الرسائل المزعجة",
+            "body": "نعطيه آلاف الرسائل مع الإجابة الصحيحة: «مزعجة» أو «عادية»، فيكتشف ==الأنماط بنفسه==."
+          },
+          "en": {
+            "title": "Example: the spam filter",
+            "body": "Show it thousands of emails labeled “spam” or “not spam”, and it finds ==the patterns itself==."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "تراه في…",
+            "items": [
+              "اقتراحات يوتيوب ونتفليكس",
+              "تنبيه البنك عند عملية غريبة",
+              "التصحيح التلقائي في لوحة المفاتيح"
+            ]
+          },
+          "en": {
+            "title": "You see it in…",
+            "items": [
+              "YouTube and Netflix recommendations",
+              "Your bank flagging a strange payment",
+              "Autocorrect on your keyboard"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "انتبه: ==الأمثلة السيئة تعلّم أخطاء==",
+            "body": "إذا كانت البيانات ناقصة أو منحازة، يتعلّم النظام أخطاءها أيضاً."
+          },
+          "en": {
+            "title": "Careful: ==bad examples teach mistakes==",
+            "body": "If the data is incomplete or one-sided, the system learns those mistakes too."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل ==باريستا جديد==",
+            "body": "يتعلّم طلبك المعتاد من مراقبة ما تختاره كل صباح."
+          },
+          "en": {
+            "title": "Like ==a new barista==",
+            "body": "Who learns your usual order by watching what you pick every morning."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الآلة تتعلّم وحدها من لا شيء.",
+            "fact": "تتعلّم الأنظمة الأنماط من البيانات والتغذية الراجعة. بعض بيانات التدريب يصنّفها البشر، وكثير منها لا يحتاج إلى تصنيف يدوي."
+          },
+          "en": {
+            "myth": "Machines learn on their own, from nothing.",
+            "fact": "Machines learn patterns from data and feedback. Some training data is labeled by people; much of it is not."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "اشرح لي التعلّم الآلي بمثال من المطبخ، في 5 أسطر."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Explain machine learning with a kitchen example, in 5 lines."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، وأرسله لشخص ==يحبّ أن يفهم كيف تعمل الأشياء=="
+          },
+          "en": {
+            "title": "Save this and send it to someone who ==loves knowing how things work=="
+          },
+          "next": {
+            "ar": "الدرس 03: الذكاء الاصطناعي التوليدي",
+            "en": "Lesson 03: Generative AI"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain machine learning with a kitchen example, in 5 lines.",
+        "ar": "اشرح لي التعلّم الآلي بمثال من المطبخ، في 5 أسطر.",
+        "code": "L02"
+      },
+      "permalink": "https://www.instagram.com/p/DdyuPDuEZP-/",
+      "published_at": "2026-09-27T17:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-02--1-learn-lesson-02.webp",
+      "related_concepts": [
+        "training-vs-inference"
+      ]
+    },
+    {
       "id": "week-01-day-02--3-check-story",
       "kind": "story",
       "lesson": null,
@@ -369,6 +511,127 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-27T18:00:00+04:00",
       "cover": "images/qahwa/week-01-day-02--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-03--1-learn-lesson-03",
+      "kind": "lesson",
+      "lesson": 3,
+      "code": "L03",
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "Generative AI",
+        "ar": "الذكاء الاصطناعي التوليدي"
+      },
+      "summary": {
+        "en": "AI that creates new content: text, images, audio, video and code.",
+        "ar": "ذكاء اصطناعي يولّد محتوى جديداً: نصوصاً وصوراً وأصواتاً وفيديو وأكواد برمجية."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "الذكاء الاصطناعي ==التوليدي==",
+            "body": "الذكاء الذي يصنع شيئاً جديداً."
+          },
+          "en": {
+            "title": "==Generative== AI",
+            "body": "The AI that creates something new."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "ذكاء اصطناعي ==يولّد محتوى جديداً==: نصوصاً وصوراً وأصواتاً وفيديو وأكواد برمجية."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "AI that ==creates new content==: text, images, audio, video and code."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما الفرق؟",
+            "body": "الذكاء الاصطناعي التقليدي غالباً ==يصنّف أو يتنبأ==:\n«هل هذه رسالة مزعجة؟»\nأما الذكاء الاصطناعي التوليدي ==فيُنتج محتوى جديداً==:\n«اكتب لي هذه الرسالة.»"
+          },
+          "en": {
+            "title": "What’s the difference?",
+            "body": "Traditional AI often ==classifies or predicts==:\n“Is this spam?”\nGenerative AI ==produces new content==:\n“Write this email for me.”"
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أمثلة تعرفها",
+            "items": [
+              "ChatGPT وClaude وGemini: نصوص ومحادثة",
+              "Midjourney وAdobe Firefly: صور",
+              "Suno: أغانٍ وموسيقى"
+            ]
+          },
+          "en": {
+            "title": "Examples you know",
+            "items": [
+              "ChatGPT, Claude, Gemini: text and chat",
+              "Midjourney, Adobe Firefly: images",
+              "Suno: songs and music"
+            ]
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "ليس آلة ==تفحص== قهوتك",
+            "body": "بل آلة ==تبتكر== وصفة جديدة."
+          },
+          "en": {
+            "title": "Not a machine that ==checks== your coffee",
+            "body": "But one that ==invents== a new recipe."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "كل ما يصنعه الذكاء الاصطناعي منسوخ.",
+            "fact": "غالباً يصنع تركيبات جديدة، لكنه قد يكرّر أجزاء مما تعلّمه، ولهذا تبرز أهمية حقوق النشر."
+          },
+          "en": {
+            "myth": "Everything AI makes is copied.",
+            "fact": "It usually makes new combinations, but can repeat parts of what it learned. That's why copyright matters."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "اكتب 4 أسطر عن قهوة الصباح، ثم حوّلها إلى مثل شعبي قصير."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Write 4 lines about morning coffee, then rewrite them as a short proverb."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "جرّب الأمر، و==شاركنا النتيجة== في التعليقات"
+          },
+          "en": {
+            "title": "Try the prompt and ==share your result== in the comments"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Write 4 lines about morning coffee, then rewrite them as a short proverb.",
+        "ar": "اكتب 4 أسطر عن قهوة الصباح، ثم حوّلها إلى مثل شعبي قصير.",
+        "code": "L03"
+      },
+      "permalink": "https://www.instagram.com/p/Ddy20NikUwO/",
+      "published_at": "2026-09-27T18:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-03--1-learn-lesson-03.webp",
       "related_concepts": []
     }
   ]
