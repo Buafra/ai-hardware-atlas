@@ -46,5 +46,17 @@
   "https://newsroom.amd.com/news/aai-2026-helios-update/": {
     "at": "2026-09-26T20:05:50+00:00",
     "result": "drafted"
+  },
+  "https://newsroom.amd.com/news/aai-2026-full-stack-compute-agentic-ai/": {
+    "at": "2026-09-27T09:16:28+00:00",
+    "result": "drafted"
+  },
+  "https://newsroom.amd.com/news/meta-ai-infrastructure-update/": {
+    "at": "2026-09-27T09:16:28+00:00",
+    "result": "not a new product"
+  },
+  "https://newsroom.amd.com/news/amd-anthropic-strategic-partnership/": {
+    "at": "2026-09-27T09:16:28+00:00",
+    "result": "not a new product"
   }
 }
