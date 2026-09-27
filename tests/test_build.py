@@ -499,7 +499,8 @@ class LearnIntegrationTests(unittest.TestCase):
         self.assertIn("'Learn AI':'تعلّم الذكاء الاصطناعي','Learn':'تعلّم'",js)
     def test_styles(self):
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
-        self.assertIn('.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));',css)  # two by two, no lone fourth card
+        self.assertIn('.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));',css)  # the owner's three pillars in a row
+        self.assertIn('.pillars>.p-learn{grid-column:1/-1;',css)  # Learn AI: a full-width band under them
         self.assertIn('.p-learn{--c:var(--learn);--ink:var(--learn-ink);--soft:var(--learn-soft)}',css)
         self.assertEqual(css.count('--learn:#3b7be6;'),2)  # both dark-mode blocks
         self.assertIn('.n-learn{--c:var(--learn)}',css)

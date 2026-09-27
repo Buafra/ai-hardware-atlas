@@ -16,8 +16,9 @@ window, the estimator wording, and the Qahwa & AI follow button in every view, t
 width. Second round: the UAE flag removed again (the generic icon and markers are back), the "Updated <date> · twice a
 day" line only once (top of AI news), full summaries in the news and UAE lists (clamped on the overview), the «ترجمة
 بالذكاء الاصطناعي» label, and the UAE view and pillar with the latest UAE headlines before the key facts. Learn AI
-(learn.html, a separate page): its header link at every width, the fourth pillar two by two with the others on wide
-screens (one column below 1000px) with its counts from data/learn, and its links opening the page and its deep links.
+(learn.html, a separate page): its header link at every width, the three pillars in one row with Learn AI as a
+full-width band under them on wide screens (one column below 1000px) with its counts from data/learn, and its links
+opening the page and its deep links.
 Review of that round: the UAE list in steps of 8 ("Show more"), and Arabic carried across to learn.html by its links.
 """
 import json
@@ -40,7 +41,7 @@ BACKEND_WORDS = ('feeds responded', 'sources responded', 'responded in the lates
 LABELS = {'en': ('AI summary', 'From the publisher'), 'ar': ('ملخص بالذكاء الاصطناعي', 'من الناشر')}
 ROUTES = ['home', 'hardware', 'news', 'uae', 'contact']
 KEY = {
-    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-icon svg', '.pillar.p-uae .heads li .n-title', '.pillar .cta', '.trust', '#home .follow-btn', '.pillar.p-learn .stats .stat', '.pillar.p-learn .lpicks a', '.pillar.p-learn .lvl .chip', '.pillar.p-learn .cta'],
+    'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-icon svg', '.pillar.p-uae .heads li .n-title', '.pillar .cta', '.trust', '#home .follow-btn', '.pillar.p-learn .stats .stat', '.pillar.p-learn .lvl .chip', '.pillar.p-learn .cta'],
     'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort', '#extra-hint', '#hardware .ihead .follow-btn'],
     'news': ['#news-title', '#news .ifresh', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
     'uae': ['#uae-title', '#uae .uae-facts .fact', '#uae .uae-heads .sec-h h2', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
@@ -152,12 +153,19 @@ def route_checks(page, route, lang, width, hash=None):
         check(page.locator('.pillar.p-uae .fmini').count() == 1, f'{tag} UAE pillar should show one key fact')
         clamps = page.evaluate("[...document.querySelectorAll('.pillar .heads .n-sum')].filter(e => e.getClientRects().length).map(e => getComputedStyle(e).webkitLineClamp)")
         check(clamps and all(c == '3' for c in clamps), f'{tag} overview summary clamps {sorted(set(clamps))}')
-        # Four pillars: two by two from 1000px (each row's cards level), one column below, never a lone card in a row.
-        boxes = page.evaluate("[...document.querySelectorAll('.pillars > .pillar')].map(p => { const r = p.getBoundingClientRect(); return [p.classList[1], Math.round(r.left), Math.round(r.top + scrollY), Math.round(r.height)]; })")
-        tops = sorted({b[2] for b in boxes})
-        want_rows = 2 if width >= 1000 else 4
-        check([b[0] for b in boxes] == ['p-hw', 'p-news', 'p-uae', 'p-learn'] and len(tops) == want_rows and all(sum(b[2] == t for b in boxes) == 4 // want_rows for t in tops), f'{tag} pillar layout {boxes}')
-        check(all(len({b[3] for b in boxes if b[2] == t}) == 1 for t in tops), f'{tag} pillars in a row differ in height {boxes}')
+        # From 1000px: the owner's three pillars in one row (level heights), Learn AI a full-width band under them with its
+        # concept and stack picks hidden; below 1000px one column with everything shown.
+        boxes = page.evaluate("[...document.querySelectorAll('.pillars > .pillar')].map(p => { const r = p.getBoundingClientRect(); return [p.classList[1], Math.round(r.left), Math.round(r.top + scrollY), Math.round(r.height), Math.round(r.width)]; })")
+        check([b[0] for b in boxes] == ['p-hw', 'p-news', 'p-uae', 'p-learn'], f'{tag} pillar order {boxes}')
+        grid_w = page.evaluate("Math.round(document.querySelector('.pillars').getBoundingClientRect().width)")
+        if width >= 1000:
+            three, band = boxes[:3], boxes[3]
+            check(len({b[2] for b in three}) == 1 and len({b[3] for b in three}) == 1, f'{tag} the three pillars should share one row and height {boxes}')
+            check(band[2] > three[0][2] + three[0][3] and abs(band[4] - grid_w) <= 1, f'{tag} Learn AI should be a full-width band under the three {boxes}')
+        else:
+            check(len({b[2] for b in boxes}) == 4, f'{tag} pillars should stack in one column {boxes}')
+        picks = page.locator('.pillar.p-learn .lpicks a >> visible=true').count()
+        check((picks == 0) if width >= 1000 else (picks > 0), f'{tag} Learn AI picks visible: {picks}')
         nums = page.evaluate("[...document.querySelectorAll('.pillar.p-learn .stats dd')].map(d => +d.textContent)")
         check(nums == LEARN_COUNTS, f'{tag} Learn AI pillar counts {nums}, want {LEARN_COUNTS}')
     if route == 'hardware':
@@ -393,10 +401,15 @@ def main():
             page.click('.pillar.p-learn .cta'); page.wait_for_url('**/learn.html')
             check(page.evaluate('location.pathname').endswith('/learn.html'), f'[{width}px] Learn AI button opened {page.url}')
             page.go_back(); page.wait_for_load_state('networkidle')
-            href = page.get_attribute('.pillar.p-learn .lpicks a >> nth=0', 'href')
-            page.click('.pillar.p-learn .lpicks a >> nth=0'); page.wait_for_url('**/' + href); page.wait_for_timeout(200)
+            # Phones show the concept picks; the wide band shows topic chips (their deep links are covered by e2e_learn).
+            pick = '.pillar.p-learn .lpicks a >> nth=0' if width < 1000 else '.pillar.p-learn .lvl .chip >> nth=0'
+            href = page.get_attribute(pick, 'href')
+            page.click(pick); page.wait_for_url('**/' + href); page.wait_for_timeout(200)
             item = href.split('#', 1)[1]
-            check(page.evaluate('id => { const e = document.getElementById(id); return !!e && e.open && e.getBoundingClientRect().top < innerHeight / 2; }', item), f'[{width}px] {href} did not open its concept')
+            if item.startswith('concept/'):
+                check(page.evaluate('id => { const e = document.getElementById(id); return !!e && e.open && e.getBoundingClientRect().top < innerHeight / 2; }', item), f'[{width}px] {href} did not open its concept')
+            else:
+                check(page.evaluate('location.hash') == '#' + item, f'[{width}px] {href} opened {page.url}')
             check(not errors and not foreign, f'[{width}px] Learn AI links: errors {errors[:3]} foreign {foreign[:3]}')
             ctx.close()
 

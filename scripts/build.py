@@ -558,9 +558,9 @@ def home_view(c):
 {cta('uae', 'Open UAE AI')}</article>
 <article class="pillar p-learn" aria-labelledby="p4-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{learn.BOOK}</span><span>04</span></div><h2 id="p4-title"><a href="{page}" data-i18n>Learn AI</a></h2><p class="p-lead" data-i18n>Plain-language guides to the ideas behind today's AI, and recommended stacks for building with it.</p></div>
 <div class="p-body"><dl class="stats">{stat(lc['n_concepts'], 'concepts')}{stat(lc['n_stacks'], 'AI stacks')}{stat(lc['n_foundations'], 'foundations')}</dl>
-<div><h3 class="p-sub"><span data-i18n>Start here</span><small data-i18n>Beginner concepts</small></h3><ul class="lpicks">{''.join(lmini('concept', x) for x in lc['start'])}</ul></div>
-<div><h3 class="p-sub"><span data-i18n>AI stacks</span><small data-i18n>Local, cloud and UAE-hosted options</small></h3><ul class="lpicks">{''.join(lmini('stack', x) for x in lc['stacks'])}</ul></div>
-<div><h3 class="p-sub"><span data-i18n>Browse by topic</span></h3><div class="lvl">{topics}</div></div></div>
+<div class="lp-start"><h3 class="p-sub"><span data-i18n>Start here</span><small data-i18n>Beginner concepts</small></h3><ul class="lpicks">{''.join(lmini('concept', x) for x in lc['start'])}</ul></div>
+<div class="lp-stacks"><h3 class="p-sub"><span data-i18n>AI stacks</span><small data-i18n>Local, cloud and UAE-hosted options</small></h3><ul class="lpicks">{''.join(lmini('stack', x) for x in lc['stacks'])}</ul></div>
+<div class="lp-topics"><h3 class="p-sub"><span data-i18n>Browse by topic</span></h3><div class="lvl">{topics}</div></div></div>
 <div class="p-foot"><a class="cta" href="{page}"><span data-i18n>Open Learn AI</span><span class="arr">{ICON["arrow"]}</span></a></div></article></section>
 <section class="trust" aria-labelledby="trust-title"><h2 id="trust-title" class="sr-only" data-i18n>Why trust this</h2>
 <div><span class="t-ic" aria-hidden="true">{ICON['shield']}</span><div><h3 data-i18n>Official sources</h3><p>{L(f"All {len(ps)} products link to official NVIDIA or AMD pages.", f"كل المنتجات الـ{len(ps)} مرتبطة بصفحات رسمية من NVIDIA أو AMD.")}</p></div></div>

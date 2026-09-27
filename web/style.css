@@ -138,8 +138,8 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .jump{display:none}
 
 /* pillars */
-/* Four pillars: two by two on wide screens (one column below 1000px), so no row is left with a single card. */
-.pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:22px}
+/* The owner's three pillars side by side, with Learn AI as a full-width band under them (one column below 1000px). */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:22px}
 .pillar{--c:var(--hw);--ink:var(--hw-ink);--soft:var(--hw-soft);position:relative;display:flex;flex-direction:column;min-width:0;background:var(--surface);border:1px solid var(--border);border-top:5px solid var(--c);border-radius:var(--r-lg);box-shadow:var(--shadow);transition:box-shadow .2s}
 .pillar:hover{box-shadow:var(--shadow-lg)}
 .p-news{--c:var(--news);--ink:var(--news-ink);--soft:var(--news-soft)}
@@ -213,12 +213,22 @@ html[dir="rtl"] .top .wordmark{text-align:right}
 .cta{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;background:var(--c);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:13px 14px;padding-inline:20px 14px;border-radius:14px;box-shadow:0 8px 20px color-mix(in srgb,var(--c) 30%,transparent);transition:transform .15s,filter .15s}
 .cta:hover{transform:translateY(-1px);filter:brightness(1.06)}
 .cta .arr{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#ffffff2e;flex:none}
-/* keep the pillar heads (and so their stat rows) aligned across each row when a title wraps; auto rows, so the second
-   row of pillars is only as tall as its own content */
+/* keep the three pillar heads (and so their stat rows) aligned when a title wraps */
 @supports (grid-template-rows:subgrid){@media (min-width:1000px){
-  .pillars{grid-auto-rows:auto}
+  .pillars{grid-template-rows:auto 1fr auto}
   .pillar{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}
 }}
+/* Learn AI band: title | counts and topics | button in one row; the concept and stack picks stay for phones. */
+@media (min-width:1000px){
+  .pillars>.p-learn{grid-column:1/-1;grid-row:auto;display:grid;grid-template-rows:none;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) max-content;align-items:stretch}
+  .p-learn .p-head{background:linear-gradient(90deg,var(--soft),transparent);border-radius:0 0 0 var(--r-lg);align-content:center;padding-block:20px}
+  [dir="rtl"] .p-learn .p-head{background:linear-gradient(270deg,var(--soft),transparent);border-radius:0 0 var(--r-lg) 0}
+  .p-learn .p-body{justify-content:center;gap:12px;padding:18px 0}
+  .p-learn .lp-start,.p-learn .lp-stacks{display:none}
+  .p-learn .lp-topics .p-sub{display:none}
+  .p-learn .p-foot{display:flex;align-items:center;padding:18px 22px}
+  .p-learn .cta{white-space:nowrap}
+}
 .trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-sm)}
 .trust>div{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;min-width:0}
 .trust>div+div{border-inline-start:1px solid var(--border)}
@@ -633,7 +643,9 @@ dialog::backdrop{background:#0a0d1a99}
 }
 /* The header has six sections (Learn AI added): shorter labels where the row gets tight, so the nav never needs its
    sideways scroll. Hidden full labels stay for screen readers; the short ones are aria-hidden. */
-@media (min-width:1000px){.n-home .nl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
+@media (min-width:1000px) and (max-width:1279px){.n-home .nl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}}
+/* From 1280px the Overview label is back; slightly narrower links keep all six on one row (the header stops growing). */
+@media (min-width:1280px){.nav a{padding-inline:10px}}
 @media (min-width:1000px) and (max-width:1239px),(min-width:640px) and (max-width:719px){
   .nav .nl-full{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
   .nav .nl-short{display:inline}
