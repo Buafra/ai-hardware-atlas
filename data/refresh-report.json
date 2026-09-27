@@ -1,17 +1,11 @@
 {
-  "at": "2026-09-27T09:13:30+00:00",
+  "at": "2026-09-27T14:30:28+00:00",
   "health": {
     "successful_sources": 114,
     "failed_sources": 0,
     "attempted_sources": 114
   },
   "changes": [],
-  "review": [
-    {
-      "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-27T09:13:30+00:00"
-    }
-  ],
+  "review": [],
   "errors": {}
 }
