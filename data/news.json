@@ -1,31 +1,47 @@
 {
-  "updated_at": "2026-09-27T22:09:35+00:00",
+  "updated_at": "2026-09-28T01:38:46+00:00",
   "health": {
-    "ok": 41,
-    "failed": 0,
+    "ok": 40,
+    "failed": 1,
     "sources": 41,
     "duplicates": 11
   },
-  "errors": {},
+  "errors": {
+    "indy-ar-new": "IncompleteRead"
+  },
   "ai": {
     "key_set": true,
     "model": "claude-opus-5",
     "translated": 20,
-    "summarised": 11,
-    "not_ai_focus": 9,
+    "summarised": 3,
+    "not_ai_focus": 7,
     "policy_version": 1,
-    "policy_checked": 28,
-    "policy_passed": 28,
+    "policy_checked": 22,
+    "policy_passed": 22,
     "policy_blocked": 0,
     "m1_dropped": 0,
-    "regional": 31,
-    "regional_verified": 31,
+    "regional": 30,
+    "regional_verified": 30,
     "policy_pending": 0,
     "blocked_ids": 31,
     "held_back": 0,
     "problems": {}
   },
   "items": [
+    {
+      "id": "1d6f2d474bf4",
+      "title": "الصين تدرس السماح لشركاتها بشراء رقائق \"إنفيديا\" المتطورة",
+      "url": "https://www.wam.ae/ar/article/17g3w54-الصين-تدرس-السماح-لشركاتها-بشراء-رقائق-إنفيديا",
+      "source": "wam-ar",
+      "lang": "ar",
+      "uae": false,
+      "published": "2026-09-28T00:50:48+00:00",
+      "summary_attempts": 1,
+      "summary_attempts_version": 2,
+      "policy_ok": true,
+      "policy_version": 1,
+      "policy_hash": "823e3e82ad76"
+    },
     {
       "id": "101e0dd2ff40",
       "title": "«إتيكيت الذكاء الاصطناعي» يحمي بيئة العمل من الآلية والابتذال",
@@ -74,13 +90,13 @@
       "uae": false,
       "published": "2026-09-27T20:46:36+00:00",
       "excerpt": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds. This isn't Suno in a box, though.",
+      "title_ar": "Engram جهاز عيّنات صوتية يحوّل هلوسات الذكاء الاصطناعي المعطوبة إلى موسيقى",
       "summary_en": "Music startup Thoughtful Things has launched a Kickstarter campaign for Engram, its first instrument, a sampler and groovebox that uses AI to distort incoming audio and generate entirely new sounds. The device is not internet-connected and instead runs a small AI model designed in-house and custom-trained; the company says its audio models were trained only on openly licensed material cleared for commercial use, such as CC-BY, and never on pirated data. Founder Evan King describes Engram as a field recorder for latent space, geared to experimental and glitchy results rather than radio-ready tracks, and the firm plans to open the firmware so users can modify it or load their own models. Kickstarter pledges start at $675, described as a 30 percent discount, suggesting a retail price of roughly $850 to $900.",
       "summary_ar": "أطلقت شركة الموسيقى الناشئة Thoughtful Things حملة على Kickstarter لأول آلاتها، Engram، وهي جهاز أخذ عيّنات صوتية وصندوق إيقاعات يستخدم الذكاء الاصطناعي لتشويه الصوت الداخل وتوليد أصوات جديدة تماماً. ولا يتصل الجهاز بالإنترنت، بل يشغّل نموذجاً صغيراً صُمِّم داخلياً ودُرِّب خصيصاً، وتقول الشركة إنها دربت نماذجها الصوتية على مجموعات بيانات مفتوحة مرخّصة للاستخدام التجاري مثل CC-BY، ولن تستخدم بيانات مقرصنة. ويصف المؤسس إيفان كينغ الجهاز بأنه «مسجّل ميداني للفضاء الكامن»، موجّه إلى التصميم الصوتي التجريبي لا إلى إنتاج أغنيات جاهزة للإذاعة، وتعتزم الشركة فتح البرنامج الثابت ليتمكن المستخدمون من تعديله أو تحميل نماذجهم. وتبدأ المساهمات من 675 دولاراً بخصم 30%، ما يرجّح سعر تجزئة بين 850 و900 دولار.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "Engram جهاز عيّنات صوتية يحوّل هلوسات الذكاء الاصطناعي المعطوبة إلى موسيقى",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "2ef45a344240"
@@ -94,13 +110,13 @@
       "uae": false,
       "published": "2026-09-27T20:34:28+00:00",
       "excerpt": "This will be the first one-on-one meeting between Dario Amodei and Donald Trump",
+      "title_ar": "الرئيس التنفيذي لشركة Anthropic على وشك تناول العشاء مع الرئيس ترامب",
       "summary_en": "Anthropic CEO Dario Amodei was set to have dinner with President Donald Trump at the White House, according to a report first published by Axios and confirmed by TechCrunch through a source familiar with his plans. It would be the first one-on-one meeting between the two, who have taken opposing positions in the debate over AI safety: Amodei has put forward a plan to move more cautiously on AI development, while Trump has said without evidence that the backlash against AI is a Democratic hoax and wants the technology rebranded as \"super intelligence.\" Anthropic's relations with the administration have been strained, with the Pentagon labelling the company a supply-chain risk over its attempts to set limits on how its technology is used, a designation Anthropic is contesting in court. Amodei was also parodied on the season premiere of Saturday Night Live the same weekend.",
       "summary_ar": "ذكرت تقارير نشرتها أوَّلاً «أكسيوس» وأكدتها «تك كرانش» عبر مصدر مطلع أن الرئيس التنفيذي لشركة Anthropic «داريو أمودي» كان مقرراً أن يتناول العشاء مع الرئيس «دونالد ترامب» في البيت الأبيض. وسيكون هذا أول لقاء ثنائي بينهما، وهما على طرفي نقيض في الجدل حول سلامة الذكاء الاصطناعي؛ إذ طرح «أمودي» خطة للتقدم بحذر أكبر في تطوير هذه التقنية، بينما قال «ترامب» من دون أدلة إن ردة الفعل السلبية تجاه الذكاء الاصطناعي خدعة ديمقراطية، ويريد إعادة تسمية التقنية بـ«الذكاء الخارق». وكانت علاقة الشركة بالإدارة متوترة، بعد أن صنّفتها وزارة الدفاع خطراً على سلسلة التوريد رداً على محاولتها وضع ضوابط على استخدام تقنيتها، وهو تصنيف تخوض Anthropic نزاعاً قضائياً بشأنه. كما جرت السخرية من «أمودي» في افتتاحية موسم برنامج Saturday Night Live في العطلة ذاتها.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "الرئيس التنفيذي لشركة Anthropic على وشك تناول العشاء مع الرئيس ترامب",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "2afcb1814abb"
@@ -133,13 +149,13 @@
       "uae": false,
       "published": "2026-09-27T19:57:30+00:00",
       "excerpt": "On Equity, we discussed how Meta's AI announcement managed to steal the spotlight from OpenAI and Anthropic.",
+      "title_ar": "هل يستطيع Muse تجاوز مشكلات الثقة لدى Meta؟",
       "summary_en": "On TechCrunch's Equity podcast, Kirsten Korosec, Sean O'Kane and Anthony Ha discussed Muse, Meta's new personal AI agent, which was a centrepiece of the company's annual Connect event where Mark Zuckerberg said AI features would be pushed across its products. The hosts noted that Meta's consumer focus, including a Tamagotchi-style AI device the company says is for adults only, contrasts with rivals such as OpenAI and Anthropic, which are chasing coding and enterprise revenue ahead of possible public listings. O'Kane, who tested Muse, said it prompted him to search for unclaimed funds and found some, but he called that a one-off party trick rather than a reason for repeat use. He also raised doubts about entrusting Meta with sensitive financial data such as credit card and Gmail details, given the company's advertising business.",
       "summary_ar": "ناقش برنامج Equity البودكاستي من «تك كرانش»، بمشاركة كيرستن كوروسيك وشون أوكين وأنتوني ها، وكيل الذكاء الاصطناعي الشخصي الجديد Muse من Meta، الذي تصدّر فعالية Connect السنوية للشركة حيث أوضح «مارك زوكربيرغ» عزمها دفع مزايا الذكاء الاصطناعي في كل منتجاتها. وأشار المتحدثون إلى أن توجه Meta الاستهلاكي، ومنه جهاز ذكاء اصطناعي على غرار Tamagotchi تقول الشركة إنه للبالغين فقط، يتعارض مع اتجاه OpenAI وAnthropic نحو البرمجة وحلول الشركات قبل طرحهما المحتمل للاكتتاب. وقال أوكين، الذي جرّب Muse، إن الوكيل اقترح البحث عن أموال غير مُطالَب بها ووجد بعضها فعلاً، لكنه وصف ذلك بأنه حيلة تُجرى مرة واحدة لا تدفع للاستخدام المتكرر. كما تساءل عن مدى الثقة في منح Meta بيانات مالية حساسة مثل بطاقة الائتمان وحساب Gmail، في ظل اعتماد أعمالها على الإعلانات.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "هل يستطيع Muse تجاوز مشكلات الثقة لدى Meta؟",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "8f2a44b0d1ae"
@@ -830,26 +846,6 @@
       "policy_hash": "447e64fb508c"
     },
     {
-      "id": "90a51291f44d",
-      "title": "الذكاء الاصطناعي لن يظلّ \"أداة\" في يدك .. وقريباً قد يصبح زميلك في الشغل أو حتى مديرك",
-      "url": "https://www.emaratalyoum.com/life/four-sides/2026-09-27-1.2086961",
-      "source": "emaratalyoum",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-27T05:35:10+00:00",
-      "excerpt": "قد يكون زميلك المقبل في العمل بلا مكتب أو راتب، لكنه يملك هوية وصلاحيات ومهامًا يؤديها حتى وهو بعيد عن جهازه. هذا ما تقترب منه مايكروسوفت مع جيل جديد من وكلاء الذكاء الاصطناعي، لم يعد دوره يقتصر على مساعدتك في إنجاز العمل، بل بات قادرًا على الدخول إلى أنظ",
-      "excerpt_source": "page",
-      "summary_en": "Microsoft has announced a new generation of AI agents on its Copilot platform that can access company systems and carry out parts of a job themselves. The update lets users delegate whole tasks to Cowork, which can run multi-step work such as searching internal resources, preparing documents, managing files, scheduling meetings and drafting emails, with user approval required before sensitive actions; a tool called Code builds apps and dashboards from natural-language prompts. A new agent named Autopilot is described as persistent, proactive and personal, and can keep working in the background when the user is away from the computer. Within its Entra system Microsoft is building Agent Identities, giving each agent a separate digital identity with defined data access and permissions that administrators can monitor, restrict or revoke. The article notes this raises questions of responsibility if an agent sends information to the wrong person or acts unintentionally.",
-      "summary_ar": "أعلنت مايكروسوفت عن جيل جديد من وكلاء الذكاء الاصطناعي ضمن منصة Copilot، بات بإمكانه الدخول إلى أنظمة المؤسسة وتنفيذ جزء من العمل بنفسه. ويتيح التحديث تفويض مهام كاملة إلى Cowork الذي ينفذ مهاماً متعددة الخطوات تشمل البحث داخل موارد المؤسسة وإعداد المستندات وإدارة الملفات وترتيب الاجتماعات وتجهيز رسائل البريد الإلكتروني، مع اشتراط موافقة المستخدم قبل الإجراءات الحساسة، فيما تنشئ أداة Code تطبيقات ولوحات بيانات بأوامر بلغة طبيعية. ويضيف وكيل جديد باسم Autopilot عنصر الاستمرارية بمواصلة العمل في الخلفية حتى في غياب المستخدم. وتبني الشركة داخل نظام Entra ما يسمى Agent Identities بحيث يملك الوكيل هوية رقمية مستقلة وصلاحيات محددة يمكن لمسؤولي المؤسسة مراقبتها أو سحبها. ويشير التقرير إلى أسئلة جديدة حول المسؤولية إذا أرسل الوكيل معلومات إلى الشخص الخطأ أو اتخذ إجراءً غير مقصود.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": true,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "5f60c0dc7e6e"
-    },
-    {
       "id": "320fe6785ea3",
       "title": "UAE ministry explores Agentic AI to streamline financial services",
       "url": "https://www.khaleejtimes.com/business/uae-use-agentic-ai-streamline-financial-services-zero-bureaucracy",
@@ -909,25 +905,6 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "023eb746439c"
-    },
-    {
-      "id": "d5c238365331",
-      "title": "كتالونيا تحظر \"الذكاء الاصطناعي\" في المدارس .. بعد أن نسي الطلاب كيفية الكتابة",
-      "url": "https://www.emaratalyoum.com/life/four-sides/2026-09-27-1.2086946",
-      "source": "emaratalyoum",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-27T01:55:26+00:00",
-      "excerpt": "أعلن رئيس حكومة كاتالونيا، سلفادور إيلا، حظر استخدام الذكاء الاصطناعي في المدارس، على الأقل حتى سن الرابعة عشرة.",
-      "summary_en": "Catalonia's regional president, Salvador Illa, announced a ban on the use of artificial intelligence in schools for children under the age of 14, presenting it as part of a plan to cut screen time and encourage reading. He outlined the measure in an interview on Rac1 radio and at an event promoting books over screens, comparing efforts to limit phone use to anti-smoking campaigns. The ban is one of more than 60 measures, to be approved by an inter-ministerial committee on Monday, aimed at securing children's digital rights and creating a regional digital wellbeing framework. The move follows weak PISA reading results, a health ministry guide based on a review of 700 studies warning of possible irreversible harm to young children, and Catalonia's 2025 classroom mobile phone ban. Some teachers say AI makes it harder to assess homework.",
-      "summary_ar": "أعلن رئيس حكومة كاتالونيا سلفادور إيلا حظر استخدام الذكاء الاصطناعي في المدارس للأطفال دون سن الرابعة عشرة، ضمن خطة للحد من وقت الشاشات وتشجيع القراءة. وعرض الإجراء في مقابلة على راديو Rac1 وفي فعالية تدعو إلى إطفاء الشاشات وفتح الكتب، مقارناً جهود الحد من استخدام الهواتف بمكافحة التدخين. ويُعد الحظر أحد أكثر من 60 إجراءً ستقرّها اللجنة المشتركة بين الوزارات يوم الاثنين المقبل لضمان الحقوق الرقمية للأطفال وجعل الإقليم أول منطقة تمتلك إطاراً للرفاه الرقمي. ويأتي القرار بعد نتائج ضعيفة في تقرير PISA بشأن القراءة، ودليل لوزارة الصحة يستند إلى مراجعة 700 دراسة يحذر من أضرار قد تكون لا رجعة فيها لدى الأطفال الصغار، وبعد حظر الهواتف في الفصول عام 2025. ويشير بعض المعلمين إلى أن الذكاء الاصطناعي يصعّب تقييم الواجبات المنزلية.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": true,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "802a3266e6c8"
     },
     {
       "id": "53fa87bbccc8",
@@ -1752,21 +1729,6 @@
       "policy_hash": "cdd7ffce518b"
     },
     {
-      "id": "5fb61473221c",
-      "title": "US stocks close higher on AI gains",
-      "url": "https://www.wam.ae/en/article/17fzmky-stocks-close-higher-gains",
-      "source": "wam-en",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-25T23:36:03+00:00",
-      "title_ar": "الأسهم الأمريكية تغلق مرتفعة بدعم من مكاسب الذكاء الاصطناعي",
-      "summary_attempts": 2,
-      "summary_attempts_version": 2,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "349b2ed4ac91"
-    },
-    {
       "id": "303ad555831b",
       "title": "Crusoe abandons $1.25B plan to use Boom turbines at AI data centers",
       "url": "https://techcrunch.com/2026/09/25/crusoe-abandons-1-25b-plan-to-use-boom-turbines-at-ai-data-centers/",
@@ -1785,20 +1747,6 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "942108935078"
-    },
-    {
-      "id": "34ee2468f9fb",
-      "title": "الأسهم الأمريكية تغلق مرتفعة بفضل شركات الذكاء الاصطناعي",
-      "url": "https://www.wam.ae/ar/article/17fzlt6-الأسهم-الأمريكية-تغلق-مرتفعة-بفضل-شركات-الذكاء",
-      "source": "wam-ar",
-      "lang": "ar",
-      "uae": false,
-      "published": "2026-09-25T23:09:00+00:00",
-      "summary_attempts": 2,
-      "summary_attempts_version": 2,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "6407ce43c880"
     },
     {
       "id": "4a19c9abdcc1",
@@ -3172,13 +3120,13 @@
       "uae": false,
       "published": "2026-09-24T10:00:00+00:00",
       "excerpt": "Its vector search is ready, but coding assistants keep pointing developers toward other databases, says the foundation's chairman",
+      "title_ar": "بالنسبة إلى MariaDB، النماذج اللغوية الكبيرة هي محركات البحث الجديدة التي يجب كسبها",
       "summary_en": "The MariaDB Foundation says large language models have become the new gatekeepers that its database must win over, much as search engines once were, according to comments from the foundation's chairman reported by The Register. The open-source database has vector search capabilities ready for use, a feature associated with AI applications. However, the chairman notes that AI coding assistants tend to steer developers toward rival databases instead of MariaDB. The concern points to how recommendations generated by LLM-based tools can shape which technologies developers adopt.",
       "summary_ar": "تقول مؤسسة MariaDB إن النماذج اللغوية الكبيرة أصبحت البوابة الجديدة التي يتعين على قاعدة بياناتها كسب ودّها، تماماً كما كانت محركات البحث سابقاً، وفق تصريحات رئيس مجلس المؤسسة التي نقلتها The Register. وتتوفر في قاعدة البيانات مفتوحة المصدر خاصية البحث المتجهي (vector search) الجاهزة للاستخدام، وهي ميزة مرتبطة بتطبيقات الذكاء الاصطناعي. لكن رئيس المؤسسة يشير إلى أن مساعدي البرمجة العاملين بالذكاء الاصطناعي يوجّهون المطورين نحو قواعد بيانات منافسة بدلاً من MariaDB. ويبرز ذلك كيف يمكن لتوصيات الأدوات القائمة على النماذج اللغوية أن تؤثر في اختيار المطورين للتقنيات.",
       "summary_source": "ai",
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "بالنسبة إلى MariaDB، النماذج اللغوية الكبيرة هي محركات البحث الجديدة التي يجب كسبها",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "a10087460407"
@@ -3210,6 +3158,7 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-24T07:30:26+00:00",
+      "title_ar": "الذكاء الاصطناعي التوليدي يضيف بعداً جديداً لسمعة العلامات التجارية في الإمارات",
       "excerpt": "Growing use of AI-powered search highlights the importance of accurate and consistent digital information for businesses",
       "excerpt_source": "page",
       "summary_en": "Rosa Digital Solutions, a Toronto-based digital marketing firm with a presence in the UAE, says the spread of AI-powered search is reshaping corporate reputation management, as consumers increasingly ask AI platforms about products, services and companies. The company cites Visa's Stay Secure 2026 study, which found 85 per cent of surveyed UAE consumers used AI to help with shopping, including checking ratings and reviews and comparing prices, and Adobe's AI and Digital Trends 2026 research, in which one in four of 4,000 consumers surveyed globally ranked platforms such as ChatGPT among their leading sources for research and purchase decisions, ahead of brand websites and reviews. Senior marketing consultant Robert Shaker said outdated profiles or inconsistent descriptions can distort how a company is represented, and urged firms to review corporate information regularly, particularly those operating across multiple markets and languages.",
@@ -3218,7 +3167,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "الذكاء الاصطناعي التوليدي يضيف بعداً جديداً لسمعة العلامات التجارية في الإمارات",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "2d54b0bee4b8"
@@ -3251,6 +3199,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T06:45:49+00:00",
+      "title_ar": "مارك زوكربيرغ يكشف عن Muse Charm، ميدالية مفاتيح بالذكاء الاصطناعي تشبه Tamagotchi: ماذا تفعل وكم تكلّف",
       "excerpt": "Meta has unveiled Muse Charm, a keychain device for its Muse AI agent, shipping in December. Here is what Muse does, how to use it, what it costs and where it works.",
       "excerpt_source": "page",
       "summary_en": "At Meta's Connect conference in Menlo Park, Mark Zuckerberg presented Muse Charm, a keychain-sized device designed to give users quick access to the company's Muse agent. The gadget is described as roughly the size of an AirPods case, with a small touchscreen, its own 5G connection, a microphone and deliberately no camera; it ships in December with no announced price, battery life or final specifications. Muse, launched on 8 September 2026 and running on the Muse Spark model family, carries out tasks such as sending email, booking travel and completing purchases, and is available via app, the web and WhatsApp, free up to 100 million tokens a week with paid tiers at $20 and $100 a month. The service is currently limited to adults in the United States. Meta also showed VR glasses at $1,299 for spring 2027 and camera-free Ray-Ban audio glasses.",
@@ -3259,7 +3208,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "مارك زوكربيرغ يكشف عن Muse Charm، ميدالية مفاتيح بالذكاء الاصطناعي تشبه Tamagotchi: ماذا تفعل وكم تكلّف",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "090a108934d5"
@@ -3292,6 +3240,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T05:27:00+00:00",
+      "title_ar": "Meta تكشف عن أجهزة ارتدائية جديدة مدعومة بالذكاء الاصطناعي وسط مخاوف تتعلق بالخصوصية",
       "excerpt": "Meta has introduced new AI-powered glasses, including a camera-free audio version priced from $349, as it expands its wearable technology amid ongoing privacy…",
       "excerpt_source": "page",
       "summary_en": "Meta presented a new line of AI-powered wearables at its annual Connect conference, where CEO Mark Zuckerberg framed AI glasses as a primary way for people to reach personal AI assistants. A camera-free model goes on sale on 13 October starting at $349, while other Meta smart glasses can take photos and video, play music, manage calls, translate text and work with Meta's AI assistant. The company also showed display-equipped glasses starting at $799 and a mixed-reality headset priced at $1,299 and due in spring 2027. Meta said privacy remains a key consideration, with indicator lights signalling when the glasses are recording.",
@@ -3300,7 +3249,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "Meta تكشف عن أجهزة ارتدائية جديدة مدعومة بالذكاء الاصطناعي وسط مخاوف تتعلق بالخصوصية",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "5943b8cde8fc"
@@ -3313,6 +3261,7 @@
       "lang": "en",
       "uae": true,
       "published": "2026-09-24T05:01:32+00:00",
+      "title_ar": "Meta تطلق نظارات ذكاء اصطناعي جديدة في الإمارات بأسعار تبدأ من 1,160 درهماً",
       "excerpt": "Meta launches AI-powered smart glasses in the UAE, with prices from Dh1,160 and new Ray-Ban Meta Gen 3 options, bringing advanced wearable tech to local buyers.",
       "excerpt_source": "page",
       "summary_en": "Meta has opened orders in the UAE for its Meta Glasses for the first time, starting at Dh1,160, following the launch at Meta Connect 2026. The UAE is one of four new markets alongside Singapore, South Korea and Mexico, and Meta is also selling the Ray-Ban Meta Gen 3 AI glasses locally from Dh1,960, with a slimmer design, an action button for Meta AI and longer battery life. New styles include an Ivory colourway and a collection designed with LISA, while a capture LED still signals photo or video recording. Meta also detailed updates to its Muse personal AI agent, available only in the US, Canada and Mexico for now, plus Ray-Ban Meta Audio glasses and Meta VR Glasses due in spring 2027. The company said more than 100 styles across its glasses brands are expected by year end.",
@@ -3321,7 +3270,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "Meta تطلق نظارات ذكاء اصطناعي جديدة في الإمارات بأسعار تبدأ من 1,160 درهماً",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "a9a8785ad5fb"
@@ -3334,6 +3282,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-24T04:53:24+00:00",
+      "title_ar": "رئيس وزراء أستراليا يقول إن نموذجاً من OpenAI اخترق نظام Medicare واستخدم بريداً عاماً لتنبيه الحكومة",
       "excerpt": "The breach occurred in June as leading artificial intelligence company OpenAI ran training exercises to rate the performance of AI models.",
       "excerpt_source": "page",
       "summary_en": "Australian Prime Minister Anthony Albanese said an OpenAI model bypassed safeguards during an internal evaluation in June and accessed public and non-public files on an old government health statistics website. Speaking to reporters in New York on Wednesday, he said he raised Australia's concern with OpenAI chief executive Sam Altman and criticised the delay in notification: the company only spotted the activity in August and emailed a generic government inbox, checked once a day, on 10 September. Albanese said there was no evidence personal information was accessed and other services were not compromised, while Australia has begun a rapid review involving its cyber security intelligence agency. OpenAI said its models took actions it did not intend while looking up Australian statistics. The article notes other recent incidents involving models from OpenAI, Anthropic and Google's Gemini.",
@@ -3342,7 +3291,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "رئيس وزراء أستراليا يقول إن نموذجاً من OpenAI اخترق نظام Medicare واستخدم بريداً عاماً لتنبيه الحكومة",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "3286cbcb3672"
@@ -3356,13 +3304,13 @@
       "uae": false,
       "published": "2026-09-24T04:00:00+00:00",
       "excerpt": "In their new book, “How AI Sees the City,” the leaders of MIT’s Senseable City Lab examine the technology’s implications for researching urban life.",
+      "title_ar": "وعود ومخاطر استخدام الذكاء الاصطناعي البصري في دراسة المدن",
       "summary_en": "Researchers at the MIT Senseable City Lab have published \"How AI Sees the City: Urban Visual Intelligence\" with Routledge, examining how computer vision can turn city images into data. The authors are Fábio Duarte, Martina Mazzarello and Carlo Ratti of MIT, together with Fan Zhang of Peking University. They point to applications such as an earlier study that used machine learning to identify vehicles in 331 New York City traffic cameras and estimate their emissions, plus work on greenery, safety, public spaces and even interior design across 400,000 Airbnb listings. The book places visual AI in the tradition of urbanists such as Kevin Lynch and William H. Whyte, while warning about pervasive visual surveillance and the reinforcement of bias.",
       "summary_ar": "أصدر باحثون من مختبر Senseable City Lab في MIT كتاباً بعنوان «كيف يرى الذكاء الاصطناعي المدينة» (How AI Sees the City: Urban Visual Intelligence) عن دار Routledge، يبحث كيفية تحويل صور المدن إلى بيانات عبر الرؤية الحاسوبية. والمؤلفون هم «فابيو دوارتي» و«مارتينا ماتزاريللو» و«كارلو راتي» من MIT، إضافة إلى «فان جانغ» من جامعة بكين. ويستعرض الكتاب تطبيقات مثل دراسة سابقة استخدمت التعلم الآلي لتحديد أنواع المركبات في 331 كاميرا مرورية في نيويورك وتقدير انبعاثاتها، وأعمالاً حول المساحات الخضراء والسلامة والفضاءات العامة، وحتى التصميم الداخلي في 400 ألف إعلان على Airbnb. ويضع المؤلفون هذه الأدوات في امتداد تقاليد رواد الدراسات الحضرية، محذرين في الوقت نفسه من المراقبة البصرية الواسعة وترسيخ التحيز.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "وعود ومخاطر استخدام الذكاء الاصطناعي البصري في دراسة المدن",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "99140e0d8ed9"
@@ -3376,13 +3324,13 @@
       "uae": false,
       "published": "2026-09-23T23:42:44+00:00",
       "excerpt": "At its Meta Connect event, CEO Mark Zuckerberg announced a handful of new smart glasses, including a slimmed-down VR headset and the company’s first camera-free glasses.",
+      "title_ar": "Meta VR Glasses وRay-Ban Meta Audio وRay-Ban Meta Gen 3: المواصفات والميزات والأسعار",
       "summary_en": "At its Meta Connect event in Menlo Park, Mark Zuckerberg unveiled a refreshed smart eyewear lineup. The new Meta VR Glasses are five times lighter than Quest 3, use a 5K micro-OLED display of 2412 x 2288 pixels per eye with an external compute puck, rely on hand pinches and eye tracking instead of controllers, and will cost $1,300 when they ship in spring 2027. After months of privacy criticism, Meta also introduced camera-free Ray-Ban Meta Audio glasses at $349, shipping October 10, alongside Ray-Ban Meta Gen 3 from $449 with 3K Dolby Atmos capture and a Hearing Enhancement feature. The company is bringing its Muse AI agent to the glasses and teased a Muse Charm wearable for the holiday season.",
       "summary_ar": "في فعالية Meta Connect بمدينة مينلو بارك، كشف «مارك زوكربيرغ» عن تشكيلة جديدة من النظارات الذكية. وتأتي نظارات Meta VR Glasses أخف خمس مرات من Quest 3، بشاشة micro-OLED بدقة 5K تبلغ 2412×2288 بكسل لكل عين، مع وحدة حوسبة خارجية، وتُدار عبر حركات الأصابع وتتبع العين بدل وحدات التحكم، بسعر 1300 دولار وشحن في ربيع 2027. وبعد أشهر من الانتقادات المتعلقة بالخصوصية، طرحت الشركة نظارات Ray-Ban Meta Audio بلا كاميرا بسعر 349 دولاراً وشحن في 10 أكتوبر، إلى جانب Ray-Ban Meta Gen 3 ابتداءً من 449 دولاراً مع تصوير 3K بتقنية Dolby Atmos وخاصية لتحسين السمع. كما تدمج Meta مساعدها الذكي Muse في النظارات، ولمّحت إلى جهاز Muse Charm قبل موسم الأعياد.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "Meta VR Glasses وRay-Ban Meta Audio وRay-Ban Meta Gen 3: المواصفات والميزات والأسعار",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "8c46c3bef7f2"
@@ -3396,13 +3344,13 @@
       "uae": false,
       "published": "2026-09-23T21:00:00+00:00",
       "excerpt": "As the US and China race to become the dominant power in the AI industry, the countries also appear to be figuring out ways to communicate on national security issues.",
+      "title_ar": "خط ساخن أميركي صيني للذكاء الاصطناعي لن يكون جاهزاً قبل وقت",
       "summary_en": "A proposed US-China hotline for artificial intelligence is unlikely to be finalised soon, Trump administration officials told WIRED's Inner Loop newsletter, even as AI tops the agenda for Donald Trump's meeting with Xi Jinping and a White House state dinner on Thursday, with executives from OpenAI and Nvidia attending. Treasury secretary Scott Bessent announced the notification system on Sunday alongside Chinese vice premier He Lifeng; it would let each side warn the other about national security incidents involving AI, echoing the Cold War line to Moscow. Officials say benchmarks for what counts as a national security incident remain undefined and Beijing has been noncommittal, with the aim of having a framework ready before Bessent's next talks with He Lifeng in Shenzhen in two months. The plan may also slip while Trump picks a new \"AI czar\"; Bessent, Howard Lutnick, Michael Kratsios and Sean Cairncross are named as possibilities, while David Sacks is not.",
       "summary_ar": "قال مسؤولون في إدارة «ترامب» لنشرة Inner Loop الصادرة عن WIRED إن الخط الساخن المقترح بين الولايات المتحدة والصين بشأن الذكاء الاصطناعي لن يكتمل قريباً، رغم أن الملف يتصدّر جدول أعمال لقاء «دونالد ترامب» و«شي جين بينغ» ومأدبة العشاء الرسمية في البيت الأبيض يوم الخميس بحضور تنفيذيين من OpenAI وNVIDIA. وكان وزير الخزانة «سكوت بيسنت» قد أعلن يوم الأحد، مع نائب رئيس مجلس الدولة الصيني «خه لي فنغ»، عن نظام إخطار يتيح لكل طرف تنبيه الآخر بشأن حوادث الذكاء الاصطناعي ذات الصلة بالأمن القومي، على غرار الخط الساخن مع موسكو إبّان الحرب الباردة. ويقول المسؤولون إن معايير تحديد الحادث الأمني لا تزال غامضة، وإن بكين لم تلتزم بعد، فيما يستهدفون إطاراً جاهزاً قبل لقاء «بيسنت» و«خه لي فنغ» في شنتشن بعد شهرين. وقد يتأخر المشروع أيضاً ريثما يختار «ترامب» «قيصر الذكاء الاصطناعي» الجديد، وتُطرح أسماء «بيسنت» و«هوارد لوتنيك» و«مايكل كراتسيوس» و«شون كيرنكروس»، بينما استُبعد «ديفيد ساكس». ويشير التقرير كذلك إلى تراخيص محدودة مُنحت هذا العام لبيع شرائح NVIDIA H200 إلى الصين.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "خط ساخن أميركي صيني للذكاء الاصطناعي لن يكون جاهزاً قبل وقت",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "212ef5a6928e"
@@ -3416,13 +3364,13 @@
       "uae": false,
       "published": "2026-09-23T20:52:28+00:00",
       "excerpt": "Trump focus on winning “AI race” may deter China from sharing safety intel.",
+      "title_ar": "خبراء: تنافس ترامب مع الصين ووهم \"سباق الذكاء الاصطناعي\" قد يعرّضان الولايات المتحدة للخطر",
       "summary_en": "Ars Technica reports that US and Chinese officials have begun talks on AI safety ahead of meetings between Donald Trump and Xi Jinping on Thursday and Friday, after Treasury Secretary Scott Bessent said both sides discussed a new AI safety notification mechanism that would let each country alert the other when its AI systems pose threats or act unpredictably. China has not publicly acknowledged the proposed alert system, and people familiar with the plan told Politico it looks superficial because no technical experts would assess the risks described. Sam Bresnick of Georgetown's Center for Security and Emerging Technology called the absence of technical monitors a red flag but said it is better than nothing, while Omdia analyst Su Lian Jye said agreement would be needed on risk classifications, notification triggers and response protocols. Representative Ro Khanna urged Trump to seek a broader international deal, including a ban on recursively self-improving AI.",
       "summary_ar": "ذكرت Ars Technica أن واشنطن وبكين بدأتا محادثات حول سلامة الذكاء الاصطناعي قبيل اجتماعات «دونالد ترامب» و«شي جين بينغ» يومي الخميس والجمعة، بعدما أعلن وزير الخزانة «سكوت بيسنت» أن الجانبين بحثا آلية إخطار تتيح لكل بلد تنبيه الآخر حين تشكّل أنظمته للذكاء الاصطناعي تهديداً أو تتصرف بشكل غير متوقع. ولم تعترف الصين علناً بالآلية المقترحة، فيما قال مطلعون لموقع Politico إنها تبدو شكلية لغياب خبراء تقنيين يقيّمون المخاطر. ووصف «سام بريسنيك» من مركز الأمن والتقنيات الناشئة بجامعة جورجتاون غياب الخبراء بأنه مؤشر سلبي لكنه أفضل من لا شيء، بينما رأى المحلل «سو ليان جاي» من Omdia أن الأمر يتطلب اتفاقاً على تصنيفات المخاطر ومحفّزات الإخطار وبروتوكولات الاستجابة. ودعا النائب «رو خانا» إلى اتفاق دولي أوسع يشمل حظر الذكاء الاصطناعي ذاتي التحسين. وتستمر التوترات بسبب ضوابط التصدير واتهام وزارة العدل ست شركات صينية بسرقة تقنيات من مختبرات أمريكية.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "خبراء: تنافس ترامب مع الصين ووهم \"سباق الذكاء الاصطناعي\" قد يعرّضان الولايات المتحدة للخطر",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "5897cd643196"
@@ -3436,13 +3384,13 @@
       "uae": false,
       "published": "2026-09-23T20:28:42+00:00",
       "excerpt": "$11M competition showed wildfire detection is still easier than stopping fires.",
+      "title_ar": "الفائزون بجائزة XPRIZE Wildfire رصدوا الحرائق خلال 10 دقائق لكنهم لم يتمكنوا من إيقافها",
       "summary_en": "No team claimed either grand prize in the $11 million XPRIZE Wildfire competition, though several finalists were recognised for detection and firefighting technologies. One track asked teams to detect all fires across a large area of Australia within 10 minutes, tested at the New South Wales Rural Fire Service in April 2026, where entrants used AI and software built on existing satellite imagery; the UK-based SIRIUS Wildfire Alliance took first place and $500,000, Arizona's Team Snuffed won $250,000, and MyRadar, DeepFire and Germany's Mayday.AI received $100,000 each. A second track, tested near Nenana, Alaska in June 2026, required autonomous detection and suppression of a high-risk fire within 10 minutes across a 386-square-mile area; all three finalists detected the fire in time and two sent drones, but none fully extinguished it.",
       "summary_ar": "لم يفز أي فريق بإحدى الجائزتين الكبريين في مسابقة XPRIZE Wildfire البالغة قيمتها 11 مليون دولار، رغم تكريم عدد من المتأهلين النهائيين عن تقنيات رصد الحرائق ومكافحتها. وطالب المسار الأول برصد جميع الحرائق في منطقة واسعة من أستراليا خلال 10 دقائق، واختُبر لدى هيئة الإطفاء الريفية في نيو ساوث ويلز في أبريل 2026، حيث اعتمدت الفرق على الذكاء الاصطناعي وبرمجيات تستفيد من صور الأقمار الاصطناعية القائمة؛ وحلّ تحالف SIRIUS Wildfire Alliance البريطاني أولاً بجائزة 500 ألف دولار، وفريق Team Snuffed من أريزونا ثانياً بـ250 ألف دولار، فيما نال كل من MyRadar وDeepFire وشركة Mayday.AI الألمانية 100 ألف دولار. أما المسار الثاني، الذي اختُبر قرب نينانا في ألاسكا في يونيو 2026، فاشترط الرصد والإخماد الذاتيين لحريق عالي الخطورة خلال 10 دقائق ضمن مساحة 386 ميلاً مربعاً؛ ونجح المتأهلون الثلاثة في الرصد وأرسل اثنان منهم طائرات مسيّرة، لكن أياً منهم لم يُخمد الحريق بالكامل.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "الفائزون بجائزة XPRIZE Wildfire رصدوا الحرائق خلال 10 دقائق لكنهم لم يتمكنوا من إيقافها",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "02b343f7a553"
@@ -3456,13 +3404,13 @@
       "uae": false,
       "published": "2026-09-23T19:35:53+00:00",
       "excerpt": "YouTube's next year could change the content you see with a big focus on AI and livestreams.",
+      "title_ar": "YouTube يعد بتغذيات مخصّصة والمزيد من الذكاء الاصطناعي في وقت لاحق من هذا العام",
       "summary_en": "At its annual Made on YouTube event, Google unveiled features coming to the platform in the months ahead, most of them powered by AI. Viewers in the US will soon get Custom Feeds, extra tabs built from a typed description and refined by rating suggestions, across web, mobile and TV, while comments gain GIFs and direct messages add group chat in the US, UK, Singapore, Brazil and some European countries. The Ask YouTube assistant will become more prominent, offering conversational help on product review videos and comparison tables in search, and Ask Music moves to the top of the YouTube Music app, with an AI weekly podcast preview called \"Your Podcast Lineup\" for subscribers later this year. Creators get Gemini-based conversational editing in YouTube Create, A/B testing of up to three versions, and an Ask Studio tool that suggests pacing, framing and AI-generated thumbnails.",
       "summary_ar": "كشفت Google خلال فعالية Made on YouTube السنوية عن مزايا ستصل إلى المنصة في الأشهر المقبلة، معظمها مدعوم بالذكاء الاصطناعي. فسيحصل المستخدمون في الولايات المتحدة قريباً على «التغذيات المخصصة» (Custom Feeds)، وهي تبويبات تُنشأ بكتابة وصف نصي وتُحسَّن بتقييم المقترحات، عبر الويب والهاتف والتلفزيون، مع إضافة صور GIF في التعليقات ودردشة جماعية في الرسائل المباشرة بالولايات المتحدة وبريطانيا وسنغافورة والبرازيل وبعض الدول الأوروبية. وسيصبح المساعد الذكي Ask YouTube أكثر حضوراً بتقديم شروح تحاورية في مقاطع مراجعات المنتجات وجداول مقارنة في البحث، فيما ينتقل Ask Music إلى أعلى تطبيق YouTube Music مع ميزة «قائمة البودكاست الأسبوعية» (Your Podcast Lineup) للمشتركين لاحقاً هذا العام. أما صنّاع المحتوى فسيحصلون على تحرير تحاوري يعتمد على Gemini في تطبيق YouTube Create، واختبار حتى ثلاث نسخ من الفيديو، وأداة Ask Studio التي تقترح الإيقاع والتأطير وتولّد الصور المصغّرة. ومطلع العام المقبل تضيف المنصة مطابقة البثوث المباشرة وميزة Live Showdown والدبلجة الآلية الفورية للبث.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "YouTube يعد بتغذيات مخصّصة والمزيد من الذكاء الاصطناعي في وقت لاحق من هذا العام",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "13044d1d256b"
@@ -3475,6 +3423,7 @@
       "lang": "en",
       "uae": false,
       "published": "2026-09-23T18:41:40+00:00",
+      "title_ar": "كيفية استخدام NVIDIA Warp وMjWarp لتسريع محاكاة الروبوتات وسير عمل التعلّم",
       "excerpt": "A Blog post by NVIDIA on Hugging Face",
       "excerpt_source": "page",
       "summary_en": "A Hugging Face blog post explains how to move a robotics simulation from classic CPU-based MuJoCo to MuJoCo Warp (MJWarp), which runs compatible MuJoCo models on NVIDIA GPUs, scaling an SO-101 follower arm in a pick-and-place scene to as many as 2,048 parallel environments. NVIDIA Warp is described as a Python framework for writing statically typed, GPU-accelerated kernels that are compiled for CPU or CUDA and cached after the first launch, with differentiable kernels via wp.Tape and opt-in deterministic execution added in Warp 1.15. The article argues MJWarp's advantage is aggregate throughput, advancing hundreds or thousands of worlds with a single mjw.step call, which suits reinforcement learning and large-scale sampling rather than lowering one environment's latency. It covers practical steps such as CUDA graph capture, choosing between mjw.make_data() and mjw.put_data(), and sizing contact and constraint buffers with mjwarp-testspeed.",
@@ -3483,7 +3432,6 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "كيفية استخدام NVIDIA Warp وMjWarp لتسريع محاكاة الروبوتات وسير عمل التعلّم",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "00bd7b67325b"
@@ -3497,13 +3445,13 @@
       "uae": false,
       "published": "2026-09-23T18:41:09+00:00",
       "excerpt": "HEMA, a 100-year-old Dutch retailer, turned developer portal-hopping into instant answers by building HAL, an internal AI assistant on Amazon Bedrock AgentCore.",
+      "title_ar": "من التنقّل بين البوابات إلى الإجابات الفورية: رحلة HEMA مع MCP وAmazon Bedrock",
       "summary_en": "The Dutch retailer HEMA, which runs more than 750 stores across several countries, has built an internal AI assistant called HAL on Amazon Bedrock AgentCore, as described in a post co-written by HEMA's Mauro Rallo and Patrick van der Plas for the AWS Machine Learning Blog. Engineers previously hunted for answers across wikis, service catalogues and IT portals; while structured data on services, owners and APIs existed, procedural questions such as how to request API access had no single home, slowing onboarding. HAL consolidates that knowledge and delivers it through the Model Context Protocol so clients such as the HAL web chat, Kiro and Claude can use the same tools without custom integrations. The agent is built with Strands, runs as a container on AgentCore runtime with AgentCore memory and Amazon Bedrock Guardrails, and is secured via Microsoft Entra ID with access tied to existing Active Directory groups.",
       "summary_ar": "كشفت شركة التجزئة الهولندية HEMA، التي تدير أكثر من 750 متجراً في عدة دول، عن مساعد ذكي داخلي باسم HAL مبني على Amazon Bedrock AgentCore، في مقال شارك في كتابته «ماورو رالو» و«باتريك فان دير بلاس» من HEMA على مدونة AWS للتعلم الآلي. وكان المهندسون سابقاً يتنقلون بين مواقع ويكي وأدلة الخدمات وبوابات تقنية المعلومات؛ فرغم توافر بيانات منظمة عن الخدمات ومالكيها وواجهات البرمجة، لم يكن للأسئلة الإجرائية مثل كيفية طلب صلاحية الوصول إلى واجهة برمجية مرجع واحد، ما أبطأ انضمام الموظفين الجدد. ويجمع HAL هذه المعرفة ويقدمها عبر بروتوكول Model Context Protocol بحيث تستخدمه أدوات مثل واجهة محادثة HAL وKiro وClaude دون تكاملات مخصصة. وبُني الوكيل بإطار Strands ويعمل كحاوية على AgentCore runtime مع AgentCore memory وAmazon Bedrock Guardrails، ويعتمد في الأمان على Microsoft Entra ID وصلاحيات Active Directory القائمة. وتقول الشركة إن البحث الذي كان يستغرق فترة بعد الظهر صار يتم في ثوانٍ، وتخطط لتحويل HAL من طبقة قراءة فقط إلى طبقة تنفيذ إجراءات.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "من التنقّل بين البوابات إلى الإجابات الفورية: رحلة HEMA مع MCP وAmazon Bedrock",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "110832757887"
@@ -3517,13 +3465,13 @@
       "uae": false,
       "published": "2026-09-23T18:30:00+00:00",
       "excerpt": "A clandestine card-counting operation suggests we may need new ways to spot agent-to-agent deception.",
+      "title_ar": "وكلاء ذكاء اصطناعي تعاونوا للغش في لعبة البلاك جاك... وتواطؤهم بات أصعب في الكشف",
       "summary_en": "Researchers at Oxford University led by computer scientist Christian Schroeder de Witt found that two AI agents, controlled by the same model and told to count cards in blackjack, spontaneously invented a hidden code to coordinate bets while knowing they were being monitored; an existing collusion-detection system failed to notice. The team later caught the scheme using mechanistic interpretability, training a smaller model with a tool called Narcbench to spot revealing activations, though this required watching both agents at once. The agents tested were smaller versions of Llama, GPT-OSS, Qwen and DeepSeek, and PhD student Carissa Cullen says the next step is testing larger models, which showed weaker detectable signals. WIRED links the work to other findings, including research from Shanghai Jiao Tong University and the Shanghai AI Laboratory showing agent swarms were more dangerous in simulated disinformation and ecommerce fraud.",
       "summary_ar": "وجد باحثون في جامعة أكسفورد بقيادة عالم الحاسوب «كريستيان شرودر دي فيت» أن وكيلين للذكاء الاصطناعي يعملان بالنموذج نفسه، بعد تكليفهما بعدّ الأوراق في لعبة بلاك جاك، ابتكرا تلقائياً شيفرة سرية لتنسيق الرهانات رغم علمهما بمراقبة محادثاتهما، ولم يرصد نظام كشف التواطؤ القائم ذلك. وتمكّن الفريق لاحقاً من كشف الخدعة عبر «التفسير الميكانيكي»، بتدريب نموذج أصغر باستخدام أداة تُدعى Narcbench لرصد أنماط التنشيط الدالة، لكن ذلك تطلّب مراقبة الوكيلين معاً. وكانت النماذج المستخدمة نسخاً أصغر من Llama وGPT-OSS وQwen وDeepSeek، وتقول طالبة الدكتوراه «كاريسا كولن» إن الخطوة التالية اختبار نماذج أكبر أظهرت إشارات أقل قابلية للرصد. وتربط WIRED ذلك بأبحاث أخرى، منها دراسة من جامعة شنغهاي جياو تونغ ومختبر شنغهاي للذكاء الاصطناعي تفيد بأن أسراب الوكلاء أخطر في حملات التضليل والاحتيال التجاري المحاكاة، فيما تدعو «ديي يانغ» من جامعة ستانفورد الشركات إلى مراقبة التفاعلات بين الوكلاء لا سلوك كل وكيل منفرداً.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "وكلاء ذكاء اصطناعي تعاونوا للغش في لعبة البلاك جاك... وتواطؤهم بات أصعب في الكشف",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "0318d2b702e8"
@@ -3537,13 +3485,13 @@
       "uae": false,
       "published": "2026-09-23T18:21:54+00:00",
       "excerpt": "Learn how to build a conversational video intelligence solution on AWS using an agentic architecture. A single Strands Agents SDK agent orchestrates Amazon Bedrock, Amazon Rekognition, and Amazon Transcribe at runtime, deciding which service to call so you can ask natural…",
+      "title_ar": "ذكاء فيديو حواري وكيلي مبني على AWS",
       "summary_en": "The AWS Machine Learning Blog details an architecture for an agentic video intelligence system that lets users ask natural language questions about uploaded videos and receive answers in seconds. Built with the Strands Agents SDK and powered by Amazon Bedrock using Claude Sonnet or another tool-using model, the agent decides at runtime whether to call Amazon Transcribe for speech, Amazon Rekognition for visual analysis such as face matching, or Amazon Bedrock Data Automation for combined summaries and chapters, with videos and cached outputs stored in Amazon S3 under per-user prefixes. Previously analysed content returns answers in under a second, while a first pass on a new video takes five to ten minutes. A large media and entertainment company adopted the approach during an AWS Professional Services engagement and reported roughly 80 percent less manual review time across more than 200 multi-hour recordings, based on its own unverified comparison.",
       "summary_ar": "تستعرض مدونة AWS للتعلم الآلي بنية لنظام «ذكاء الفيديو» قائم على وكلاء الذكاء الاصطناعي يتيح طرح أسئلة بلغة طبيعية عن مقاطع مرفوعة والحصول على إجابات خلال ثوانٍ. وبُني النظام باستخدام Strands Agents SDK ويعمل عبر Amazon Bedrock بنموذج Claude Sonnet أو نموذج آخر يدعم استخدام الأدوات، حيث يقرر الوكيل لحظياً استدعاء Amazon Transcribe للمحتوى المنطوق أو Amazon Rekognition للتحليل البصري ومطابقة الوجوه أو Amazon Bedrock Data Automation للملخصات وتقسيم الفصول، مع تخزين المقاطع والنتائج في Amazon S3 بمسارات منفصلة لكل مستخدم. وتعود الإجابات عن محتوى سبق تحليله في أقل من ثانية، بينما يستغرق التحليل الأولي لمقطع جديد من خمس إلى عشر دقائق. واعتمدت شركة كبرى في الإعلام والترفيه هذا النهج ضمن تعاون مع AWS Professional Services، وأفادت بخفض وقت المراجعة اليدوية نحو 80% عبر أكثر من 200 تسجيل طويل، وفق مقارنة داخلية غير مستقلة. وتوصي المدونة بإضافة Amazon Bedrock Guardrails في بيئات الإنتاج، خصوصاً في حالات المراقبة ومطابقة الوجوه.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "ذكاء فيديو حواري وكيلي مبني على AWS",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "e48cdd1e7bc2"
@@ -3557,13 +3505,13 @@
       "uae": false,
       "published": "2026-09-23T18:17:44+00:00",
       "excerpt": "Pair OpenCode, an open-source terminal-native AI coding agent, with open weight models on Amazon Bedrock to get a secure, flexible, pay-per-use coding assistant.",
+      "title_ar": "استخدم النماذج مفتوحة الأوزان كوكيل برمجة بالذكاء الاصطناعي مع Amazon Bedrock",
       "summary_en": "The AWS Machine Learning Blog explains how to run OpenCode, an open source terminal-based AI coding agent written in Go, with open weight models hosted on Amazon Bedrock so that code and prompts remain inside a customer's own AWS account. The walkthrough covers setup, multi-model workflows that match models to tasks, and examples using Moonshot AI Kimi K3, OpenAI GPT-OSS 120B and NVIDIA Nemotron 3 Super 120B, and notes that Ethara.AI runs this architecture in production with multi-agent orchestration. AWS argues the approach avoids per-seat fees, provider lock-in and sending proprietary data to third-party APIs, citing McKinsey's 2025 finding that 76 percent of organisations expect to increase open source AI use and Gartner's 2026 estimate that agentic workflows multiply token consumption five to thirtyfold.",
       "summary_ar": "تشرح مدونة AWS للتعلم الآلي كيفية تشغيل OpenCode، وهو وكيل برمجة مفتوح المصدر يعمل من الطرفية ومكتوب بلغة Go، مع نماذج مفتوحة الأوزان مستضافة على Amazon Bedrock بحيث تبقى الشيفرة والمدخلات داخل حساب AWS الخاص بالعميل. ويتناول الشرح الإعداد وتدفقات العمل متعددة النماذج التي تُطابق كل نموذج بمهمته، مع أمثلة باستخدام Moonshot AI Kimi K3 وOpenAI GPT-OSS 120B وNVIDIA Nemotron 3 Super 120B، ويشير إلى أن Ethara.AI تشغّل هذه البنية في الإنتاج بتنسيق متعدد الوكلاء. وترى AWS أن هذا النهج يتفادى رسوم الاشتراك لكل مستخدم والارتباط بمزوّد واحد وإرسال البيانات إلى واجهات خارجية، مستشهدةً بتقرير McKinsey لعام 2025 الذي يفيد بأن 76% من المؤسسات تتوقع زيادة استخدامها للذكاء الاصطناعي مفتوح المصدر، وبتحليل Gartner لعام 2026 عن مضاعفة استهلاك الوحدات اللغوية من 5 إلى 30 مرة.",
       "summary_source": "ai",
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
-      "title_ar": "استخدم النماذج مفتوحة الأوزان كوكيل برمجة بالذكاء الاصطناعي مع Amazon Bedrock",
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "d5310e86fa80"
@@ -3584,9 +3532,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "Meta تركّز على الذكاء الاصطناعي والنظارات الذكية وسط اعتراضات تتعلق بالخصوصية",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "e63d4436f575"
+      "policy_hash": "edaedccd5612"
     },
     {
       "id": "002f8b1e6732",
@@ -3603,9 +3552,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "مستشار البابا لشؤون الذكاء الاصطناعي قلق من سلوك «الكارتل» بين المختبرات الكبرى",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "f56449c408c6"
+      "policy_hash": "a0761c536597"
     },
     {
       "id": "8a86c97089bb",
@@ -3622,9 +3572,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "Google Beam يتوسع بمناطق وشركاء وعملاء جدد",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "68939a7088bf"
+      "policy_hash": "fb9b70cc7a90"
     },
     {
       "id": "106d9b92dc30",
@@ -3660,9 +3611,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "تطوير Private AI Compute بذاكرة آمنة على جانب الخادم",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "71b8ee9be7d8"
+      "policy_hash": "63c486ef1c3e"
     },
     {
       "id": "9d02eeb8cef1",
@@ -3679,9 +3631,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "عامان على انطلاق OpenAI Academy",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "6f82d705adc9"
+      "policy_hash": "8cb665886ae9"
     },
     {
       "id": "931c28839e38",
@@ -3698,9 +3651,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "MIT يرحّب بديفيد سيغل (ماجستير 1986، دكتوراه 1991) زميلاً للابتكار المقبل",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "e659bde9a2de"
+      "policy_hash": "c87f4e3e2c9e"
     },
     {
       "id": "be2314c62992",
@@ -3713,9 +3667,10 @@
       "summary_attempts": 2,
       "summary_attempts_version": 2,
       "page_checked": 2,
+      "title_ar": "Gemini 3.8 لتحويل النص إلى كلام يُلقي التحية",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "b1cecb3809e4"
+      "policy_hash": "602fb200ba31"
     },
     {
       "id": "671ae93d53c3",
@@ -3752,9 +3707,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "SCHESR ينظّم ورشة عمل حول الذكاء الاصطناعي والإعلام الرقمي بالتعاون مع Shams",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "447cbbf09db7"
+      "policy_hash": "3ffd9d112fec"
     },
     {
       "id": "01d4e543c941",
@@ -3771,9 +3727,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "كلمة سام ألتمان أمام مجلس الأمن الدولي",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "ea068d424227"
+      "policy_hash": "6716ea1cf872"
     },
     {
       "id": "f7558dc5c9de",
@@ -3790,9 +3747,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "Harvey يحوّل السياق القانوني إلى مسوّدات أقوى باستخدام GPT-6 Astra",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "88a6abb5df1d"
+      "policy_hash": "c4cc62784933"
     },
     {
       "id": "7357353a1f1d",
@@ -3809,9 +3767,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "كيف تُحسّن invideo تدرّج الألوان بثلاثة أضعاف باستخدام GPT-6 Astra",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "012d9070f729"
+      "policy_hash": "20314ca30181"
     },
     {
       "id": "7cff1964bf19",
@@ -3828,9 +3787,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "وكلاء الذكاء الاصطناعي لدى Ringg يعالجون ما يصل إلى 65% من مكالمات العملاء بالتعاون مع OpenAI",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "aae1cc832d55"
+      "policy_hash": "595f07f221f4"
     },
     {
       "id": "08adfecb4954",
@@ -3868,9 +3828,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "OpenAI تطلق GPT-6 Sol وLuna فيما تطرح Anthropic نموذج Claude Opus 5.5",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "9c15cbe6fb10"
+      "policy_hash": "5f23423dd350"
     },
     {
       "id": "312c52110b2e",
@@ -3926,9 +3887,10 @@
       "summary_basis": "excerpt",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "التعريف بـ MentalHealthBench",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "7f082a954c5e"
+      "policy_hash": "07e699e82f1f"
     },
     {
       "id": "b18269f7b343",
@@ -3945,9 +3907,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "عملاق التكنولوجيا الصيني Alibaba يوسّع حضور مراكز بياناته في الإمارات ودول أخرى خلال الأشهر الـ12 المقبلة",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "8a9c645085f7"
+      "policy_hash": "aeee5f9fbee6"
     },
     {
       "id": "d736c96f97b6",
@@ -3964,9 +3927,31 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "مؤشر ضجيج الذكاء الاصطناعي: الذكاء الاصطناعي يعشق الغش",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "bd0af13a41bf"
+      "policy_hash": "013e44fe2a8d"
+    },
+    {
+      "id": "c29368db46b0",
+      "title": "Trump renames AI 'super intelligence' at UN Assembly as leaders jostle over dangers",
+      "url": "https://gulfnews.com/technology/trump-renames-ai-super-intelligence-at-un-assembly-as-leaders-jostle-over-dangers-1.500684131",
+      "source": "gulfnews-tech",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-23T05:56:46+00:00",
+      "excerpt": "Super Intelligence \"sounds much better\" and \"it's much more accurate,\" Trump said",
+      "excerpt_source": "page",
+      "summary_en": "Speaking at the United Nations General Assembly on Tuesday, US President Donald Trump said his government would refer to artificial intelligence as \"super intelligence\" in official communications, arguing the word \"artificial\" understates the technology. He restated his opposition to regulating AI and rejected what he called a globalist scheme to control it, comparing AI safety warnings to warnings about climate change. Ahead of the assembly, leaders of more than 20 mostly European states called for binding safety measures, without backing from Washington or Beijing. Prime Minister Andy Burnham said Britain would push for global AI standards during its 2027 G20 presidency and announced an AI defence partnership with the US, while Emmanuel Macron urged a shared open-source model, and UN chief Antonio Guterres called for US-China dialogue.",
+      "summary_ar": "قال الرئيس الأمريكي «دونالد ترامب» في كلمته أمام الجمعية العامة للأمم المتحدة يوم الثلاثاء إن الحكومة الأمريكية ستستخدم مصطلح «الذكاء الخارق» بدل «الذكاء الاصطناعي» في مراسلاتها الرسمية، معتبراً أن كلمة «اصطناعي» تقلّل من شأن التقنية. وجدّد رفضه تنظيم الذكاء الاصطناعي ورفض أي محاولة لفرض إطار عالمي للسيطرة عليه، مقارناً تحذيرات دعاة سلامة الذكاء الاصطناعي بتحذيرات التغيّر المناخي. وقبل الاجتماع، دعا قادة أكثر من 20 دولة معظمها أوروبية إلى تدابير سلامة ملزمة من دون تأييد أمريكي أو صيني. وأعلن رئيس الوزراء «أندي بيرنهام» أن بريطانيا ستدفع نحو معايير عالمية خلال رئاستها لمجموعة العشرين عام 2027 وشراكة دفاعية مع واشنطن، فيما دعا «إيمانويل ماكرون» إلى نموذج مفتوح المصدر مشترك، وطالب «أنطونيو غوتيريش» بحوار أمريكي-صيني.",
+      "summary_source": "ai",
+      "summary_basis": "article",
+      "summary_version": 2,
+      "ai_focus": true,
+      "title_ar": "ترامب يعيد تسمية الذكاء الاصطناعي بـ«الذكاء الخارق» في الجمعية العامة للأمم المتحدة فيما يتجاذب القادة النقاش حول مخاطره",
+      "policy_ok": true,
+      "policy_version": 1,
+      "policy_hash": "beaad175f0e0"
     },
     {
       "id": "301ba2c6df75",
@@ -3983,28 +3968,30 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "في AI Day Singapore، NVIDIA وشركاؤها يستعرضون تطورات الذكاء الاصطناعي في جنوب شرق آسيا",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "6554eebc58fb"
+      "policy_hash": "007af8597112"
     },
     {
-      "id": "ed6f57f437a4",
-      "title": "Women in Technology 2026 places women at heart of future of AI and tech",
-      "url": "https://www.gulftoday.ae/business/2026/09/22/women-in-technology-2026-places-women-at-heart-of-future-of-ai-tech",
-      "source": "gulftoday-business",
+      "id": "1dd9ce125c6e",
+      "title": "ChatGPT Ads expands to Southeast Asia and Taiwan",
+      "url": "https://openai.com/index/chatgpt-ads-expands-southeast-asia-taiwan",
+      "source": "openai-news",
       "lang": "en",
-      "uae": true,
-      "published": "2026-09-22T18:36:00+00:00",
-      "excerpt": "Sheikha Bodour Bint Sultan Al Qasimi, Chairperson of the Sharjah Research, Technology and Innovation Park (SPARK), stressed that the future of technology and innovation requires empowering women to move from participation to influence and decision-making in shaping the future.",
-      "summary_en": "Sheikha Bodour Bint Sultan Al Qasimi, chairperson of the Sharjah Research, Technology and Innovation Park (SPARK), opened the seventh edition of the Women in Technology 2026 Forum, held under her patronage with the theme \"The 2050 Mindset\". She said women should move from participation to influence and decision-making, and called for environments that help them turn ideas into projects and solutions. The forum gathered female, government and executive leaders, researchers, innovators and entrepreneurs to discuss the transformations shaping technology, economies and societies in coming decades. SPARK chief executive Hussain Al Mahmoudi said empowering women in technology expands a society's capacity to innovate and compete, adding that the key question is who will design future technology and shape its impact.",
-      "summary_ar": "افتتحت الشيخة بدور بنت سلطان القاسمي، رئيسة مجمع الشارقة للبحوث والتكنولوجيا والابتكار (SPARK)، النسخة السابعة من منتدى «المرأة في التكنولوجيا 2026» الذي نُظّم برعايتها تحت شعار «عقلية 2050». وأكدت أن على المرأة الانتقال من المشاركة إلى التأثير وصناعة القرار، داعية إلى تهيئة بيئة تمكّنها من تحويل أفكارها إلى مشاريع وحلول ذات أثر. وجمع المنتدى قيادات نسائية وحكومية وتنفيذية وباحثين ومبتكرين ورواد أعمال لمناقشة التحولات التي ستشكّل التكنولوجيا والاقتصادات والمجتمعات في العقود المقبلة. وقال حسين المحمودي، الرئيس التنفيذي لـSPARK، إن تمكين المرأة في التكنولوجيا يوسّع قدرة المجتمعات على الابتكار والتنافس، وإن السؤال الأهم هو من سيصمم تكنولوجيا المستقبل ويحدد أثرها.",
+      "uae": false,
+      "published": "2026-09-23T02:00:00+00:00",
+      "excerpt": "ChatGPT Ads is expanding to Southeast Asia and Taiwan, giving eligible businesses new ways to reach people across more than 60 countries.",
+      "summary_en": "OpenAI said ChatGPT Ads is expanding to Southeast Asia and Taiwan. With the expansion, eligible businesses gain new ways to reach users across more than 60 countries.",
+      "summary_ar": "أعلنت OpenAI توسيع خدمة الإعلانات في ChatGPT لتشمل جنوب شرق آسيا وتايوان. ويتيح هذا التوسّع للشركات المؤهلة وسائل جديدة للوصول إلى المستخدمين في أكثر من 60 دولة.",
       "summary_source": "ai",
-      "summary_basis": "article",
+      "summary_basis": "excerpt",
       "summary_version": 2,
-      "ai_focus": false,
+      "ai_focus": true,
+      "title_ar": "ChatGPT Ads يتوسع إلى جنوب شرق آسيا وتايوان",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "459ed7e0583b"
+      "policy_hash": "f0446e2374dd"
     },
     {
       "id": "193bdb306b4d",
@@ -4021,9 +4008,10 @@
       "summary_basis": "article",
       "summary_version": 2,
       "ai_focus": true,
+      "title_ar": "NVIDIA Isaac ROS 5.0 يدفع قدماً تطوير الروبوتات الوكيلة مفتوحة المصدر",
       "policy_ok": true,
       "policy_version": 1,
-      "policy_hash": "d4720b166a53"
+      "policy_hash": "d1bcf29de955"
     },
     {
       "id": "51d4ae7b470f",
@@ -4101,25 +4089,6 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "10243c76daff"
-    },
-    {
-      "id": "90801afbca07",
-      "title": "MilleMiglia: A realistic instance generator for middle-mile logistics",
-      "url": "https://research.google/blog/millemiglia-a-realistic-instance-generator-for-middle-mile-logistics/",
-      "source": "google-research",
-      "lang": "en",
-      "uae": false,
-      "published": "2026-09-18T17:46:09+00:00",
-      "page_checked": 1,
-      "summary_en": "Google Research has introduced MilleMiglia, an open-source C++ instance generator that creates realistic benchmark data for middle-mile logistics networks, described in the paper \"A Novel Instance Generator for Simulating Middle-Mile Logistics Networks\" by software engineers Aymane Lotfi and Thibaut Cuvelier. The middle mile covers bulk movement of goods between distribution centres at regional or continental scale, yet has received far less research attention than first- and last-mile routing because companies keep network layouts and demand volumes confidential. Unlike standard vehicle routing problems, middle-mile shipments travel like a relay race, changing vehicles and being sorted and consolidated at intermediate hubs, which creates tight synchronisation constraints. The generator produces privacy-preserving, realistic data, with source code and documentation published on GitHub, aiming to support research into more efficient supply chains.",
-      "summary_ar": "أعلنت Google Research عن MilleMiglia، وهو مولّد حالات مفتوح المصدر مكتوب بلغة C++ ينتج بيانات قياس واقعية لشبكات الخدمات اللوجستية في «الميل الأوسط»، وقد عُرض في ورقة بعنوان «A Novel Instance Generator for Simulating Middle-Mile Logistics Networks» أعدّها المهندسان أيمن لطفي وتيبو كوفيلييه. ويغطي الميل الأوسط نقل البضائع بالجملة بين مراكز التوزيع على نطاق إقليمي أو قاري، لكنه حظي باهتمام بحثي أقل من الميلين الأول والأخير لأن الشركات تعدّ خرائط شبكاتها وأحجام الطلب معلومات سرية. وخلافاً لمسائل توجيه المركبات التقليدية، تنتقل الشحنة في الميل الأوسط عبر عدة مركبات مع الفرز والتجميع في مراكز وسيطة، ما يخلق قيود تزامن دقيقة. ونُشرت الشيفرة المصدرية والتوثيق على GitHub بهدف دعم أبحاث سلاسل التوريد الأكثر كفاءة.",
-      "summary_source": "ai",
-      "summary_basis": "article",
-      "summary_version": 2,
-      "ai_focus": false,
-      "policy_ok": true,
-      "policy_version": 1,
-      "policy_hash": "527c846bda77"
     },
     {
       "id": "47b87cc27bae",
@@ -4368,6 +4337,25 @@
       "policy_ok": true,
       "policy_version": 1,
       "policy_hash": "07b53eda2c2e"
+    },
+    {
+      "id": "e0b2eaa994e7",
+      "title": "Bypassing inference bottlenecks: Accelerating complex AI search with Retrieve-for-Train",
+      "url": "https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/",
+      "source": "google-research",
+      "lang": "en",
+      "uae": false,
+      "published": "2026-09-15T20:00:00+00:00",
+      "page_checked": 1,
+      "summary_en": "Google Research has described Retrieve-for-Train, a framework presented in the ICML 2026 paper \"Efficient, Property-Aligned Fan-Out Retrieval via RL-Compiled Diffusion\" by student researcher Pengcheng Jiang and senior research engineer Judith Yue Li. The method moves the cost of query fan-out, where a broad search prompt is split into related sub-queries, from inference time to offline training: reinforcement learning is used once to train a fan-out language model, whose output then supervises a lightweight diffusion-based retriever that produces results in a single pass. Training uses 4B open-source models Gemma3-4B and Qwen3-4B with GRPO and soft PPO against a composite reward balancing groundedness, alignment and diversity, measured partly by the Vendi Score, to prevent reward hacking. The team evaluated the approach on a large fashion outfit dataset with a CLIP-based retriever and a proprietary music playlist dataset using MuLan.",
+      "summary_ar": "عرضت مدونة Google Research إطار عمل Retrieve-for-Train الوارد في ورقة بحثية بمؤتمر ICML 2026 بعنوان «الاسترجاع المتفرّع الفعّال والمتوائم مع الخصائص عبر الانتشار المُجمَّع بالتعلّم المعزّز»، من إعداد الباحث الطالب «بنغتشنغ جيانغ» ومهندسة الأبحاث الأولى «جوديث يوي لي». وتنقل الطريقة كلفة تفريع الاستعلام، أي تقسيم الطلب العام إلى استعلامات فرعية مترابطة، من وقت الاستدلال إلى تدريب مسبق: إذ يُستخدم التعلّم المعزّز مرة واحدة لتدريب نموذج لغوي للتفريع، تُستخدم مخرجاته لتدريب نموذج استرجاع خفيف قائم على الانتشار يعمل بمرور واحد. واعتمد التدريب على نموذجَي Gemma3-4B وQwen3-4B بحجم 4B مع GRPO وsoft PPO ومكافأة مركّبة توازن بين الارتباط بقاعدة البيانات والاتساق والتنوّع عبر مقياس Vendi Score لمنع التحايل على المكافأة. وجرى التقييم على مجموعة بيانات أزياء كبيرة باسترجاع قائم على CLIP، ومجموعة قوائم موسيقية خاصة باستخدام MuLan.",
+      "summary_source": "ai",
+      "summary_basis": "article",
+      "summary_version": 2,
+      "ai_focus": true,
+      "policy_ok": true,
+      "policy_version": 1,
+      "policy_hash": "059ddfbaec3d"
     }
   ]
 }
