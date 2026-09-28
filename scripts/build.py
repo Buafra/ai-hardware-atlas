@@ -944,16 +944,20 @@ def pdf(data):
     c.setFillColor(HexColor('#42516e'));c.setFont('Atlas',9)
     c.drawString(30,h-144,'A = announced / launched. R = availability or vendor target. Blank dates are not established.')
     products=data['products']
-    # Two columns up to 36 products, then three so rows keep room for three text lines.
+    # Two columns up to 36 products, then three so rows keep room for three text lines. When even three columns leave
+    # rows too short for three lines (a long catalog), each row uses two: the model, then memory and dates together.
     cols=2 if len(products)<=36 else 3
     per=math.ceil(len(products)/cols);gap=18 if cols==2 else 12
     cw=(w-60-gap*(cols-1))/cols
     row_h=min(54,850/per)
-    def fit(text,width,size=9,font='Atlas'):
+    compact=row_h<46
+    def fit(text,width,size=9,font='Atlas',smallest=7):
+        # Shrinks the text to fit, then shortens it with an ellipsis rather than run into the next column.
         text=str(text)
-        while pdfmetrics.stringWidth(text,font,size)>width:
-            size-=.2
-            if size<7:break
+        while pdfmetrics.stringWidth(text,font,size)>width and size>smallest:size-=.2
+        if pdfmetrics.stringWidth(text,font,size)>width:
+            while text and pdfmetrics.stringWidth(text+'…',font,size)>width:text=text[:-1]
+            text=text.rstrip()+'…'
         c.setFont(font,size);return text
     for col in range(cols):
         part=products[col*per:(col+1)*per]
@@ -962,18 +966,27 @@ def pdf(data):
             top=y-i*row_h
             c.setFillColor(HexColor('#ffffff') if i%2==0 else HexColor('#eaf0ff'))
             c.rect(x,top-row_h,cw,row_h,fill=1,stroke=0)
-            c.setFillColor(HexColor('#00a7aa') if p['vendor']=='NVIDIA' else HexColor('#f2803c'));c.roundRect(x+10,top-31,4,18,2,fill=1,stroke=0)
-            c.setFillColor(HexColor('#182642'))
-            c.drawString(x+23,top-17,fit(p['model'],cw-90,10,'Atlas-Bold'))
-            c.setFont('Atlas-Bold',7.7);c.drawRightString(x+cw-12,top-17,p['vendor'])
-            c.setFillColor(HexColor('#51627f'))
             line=p['memory'].replace('×','x').replace('·','/')+' / '+p['memory_scope']
             if p['bandwidth_tbs']:line+=f" / {p['bandwidth_tbs']:g} TB/s"
-            c.drawString(x+23,top-32,fit(line,cw-33,8))
             dates=f"A: {p['announcement'] or '-'}  |  R: {p['release'] or '-'}"
             # The kind also explains a missing date (for example "Not on NVIDIA's current roadmap").
             if p['release'] or p['release_kind'] not in (None,'','Not established'):dates+=' ('+p['release_kind']+')'
-            c.drawString(x+23,top-45,fit(dates,cw-33,7.5))
+            c.setFillColor(HexColor('#00a7aa') if p['vendor']=='NVIDIA' else HexColor('#f2803c'))
+            if compact:
+                c.roundRect(x+8,top-row_h+3,3,row_h-6,1.5,fill=1,stroke=0)
+                c.setFillColor(HexColor('#182642'))
+                c.drawString(x+17,top-row_h*.44,fit(p['model'],cw-60,8.6,'Atlas-Bold',7))
+                c.setFont('Atlas-Bold',6.8);c.drawRightString(x+cw-8,top-row_h*.44,p['vendor'])
+                c.setFillColor(HexColor('#51627f'))
+                c.drawString(x+17,top-row_h*.86,fit(line+'  ·  '+dates,cw-25,7,'Atlas',5.8))
+            else:
+                c.roundRect(x+10,top-31,4,18,2,fill=1,stroke=0)
+                c.setFillColor(HexColor('#182642'))
+                c.drawString(x+23,top-17,fit(p['model'],cw-90,10,'Atlas-Bold'))
+                c.setFont('Atlas-Bold',7.7);c.drawRightString(x+cw-12,top-17,p['vendor'])
+                c.setFillColor(HexColor('#51627f'))
+                c.drawString(x+23,top-32,fit(line,cw-33,8))
+                c.drawString(x+23,top-45,fit(dates,cw-33,7.5))
             c.linkURL(p['sources'][0]['url'],(x,top-row_h,x+cw,top))
     c.setFillColor(HexColor('#e9e3fc'));c.roundRect(30,49,w-60,69,11,fill=1,stroke=0)
     c.setFillColor(HexColor('#39236f'));c.setFont('Atlas-Bold',10);c.drawString(45,97,'COMPARE LIKE FOR LIKE')

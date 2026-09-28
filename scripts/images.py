@@ -64,7 +64,7 @@ def main():
             failed += 1
             print(f"{p['id']}: {type(exc).__name__}: {exc}", file=sys.stderr)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
-    print(f'Images: {done} downloaded, {failed} failed, {sum(1 for p in data["products"] if p.get("image", {}).get("file"))} available')
+    print(f'Images: {done} downloaded, {failed} failed, {sum(1 for p in data["products"] if (p.get("image") or {}).get("file"))} available')
     return 1 if failed else 0
 
 if __name__ == '__main__':
