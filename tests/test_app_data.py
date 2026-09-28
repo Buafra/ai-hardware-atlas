@@ -37,6 +37,26 @@ class AppDataTests(unittest.TestCase):
             for lang in ('en','ar'):
                 self.assertEqual((i[f'summary_{lang}'],i[f'summary_kind_{lang}']),build.summary_of(raw,lang))
 
+    def test_news_topic_and_image(self):
+        # Additive keys: each headline's topic and its image, a path relative to the site root, the same the site shows.
+        src={s['id']:s for s in self.sources}
+        items=self.out['news.json']['items']
+        for i in items:
+            self.assertIn(i['topic'],build.topics.TOPICS)
+            self.assertEqual(i['image'],f'news-img/{i["topic"]}.svg')  # no company images given: topic images
+            self.assertNotIn('image_credit',i)
+        site=build.news_items(self.feed,self.sources)
+        company={i['id']:{'file':f'images/news/{i["id"]}.webp','width':480,'height':270,'credit':'OpenAI'}
+                 for i in site if build.news_images.eligible(i,src[i['source']])}
+        self.assertTrue(company)
+        out=app_data.payloads(self.data,self.feed,self.sources,self.uae,self.models,*self.docs,company=company)
+        for i in out['news.json']['items']:
+            if i['id'] in company:
+                self.assertEqual((i['image'],i['image_credit']),(f'images/news/{i["id"]}.webp','OpenAI'))
+            else:
+                self.assertTrue(i['image'].startswith('news-img/'),i['image'])
+            self.assertNotRegex(i['image'],r'^(?:[a-z]+:)?//')
+
     def test_hidden_news_stays_hidden(self):
         feed={**self.feed,'items':[{**self.feed['items'][0],'id':'off-topic','ai_focus':False}]+self.feed['items'][1:]}
         out=app_data.payloads(self.data,feed,self.sources,self.uae,self.models,*self.docs)

@@ -12,7 +12,14 @@
       "blogs.nvidia.com",
       "nvidianews.nvidia.com"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "NVIDIA",
+    "image_hosts": [
+      "blogs.nvidia.com/wp-content/uploads/",
+      "nvidianews.nvidia.com",
+      "iprsoftwaremedia.com/219/"
+    ],
+    "image_skip": "egypt-ecosystem"
   },
   {
     "id": "amd-news",
@@ -40,7 +47,12 @@
     "link_hosts": [
       "openai.com"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "OpenAI",
+    "image_hosts": [
+      "openai.com",
+      "images.ctfassets.net/kftzwdyauwt9/"
+    ]
   },
   {
     "id": "anthropic-news",
@@ -56,7 +68,12 @@
     ],
     "kind": "primary",
     "feed_type": "anthropic_listing",
-    "listing_directory": "news"
+    "listing_directory": "news",
+    "image_credit": "Anthropic",
+    "image_hosts": [
+      "www.anthropic.com",
+      "www-cdn.anthropic.com"
+    ]
   },
   {
     "id": "google-ai",
@@ -70,7 +87,12 @@
     "link_hosts": [
       "blog.google"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "Google",
+    "image_hosts": [
+      "blog.google",
+      "storage.googleapis.com/gweb-uniblog-publish-prod/"
+    ]
   },
   {
     "id": "deepmind",
@@ -84,7 +106,15 @@
     "link_hosts": [
       "deepmind.google"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "Google DeepMind",
+    "image_hosts": [
+      "deepmind.google",
+      "storage.googleapis.com/gweb-uniblog-publish-prod/"
+    ],
+    "image_page_hosts": [
+      "blog.google"
+    ]
   },
   {
     "id": "google-research",
@@ -98,7 +128,13 @@
     "link_hosts": [
       "research.google"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "Google Research",
+    "image_hosts": [
+      "research.google",
+      "storage.googleapis.com/gweb-research2023-media/"
+    ],
+    "image_skip": "HO_previewImage"
   },
   {
     "id": "huggingface",
@@ -112,7 +148,13 @@
     "link_hosts": [
       "huggingface.co"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "Hugging Face",
+    "image_hosts": [
+      "huggingface.co",
+      "cdn-uploads.huggingface.co"
+    ],
+    "image_page_paths": "^/blog/[^/]+/?$"
   },
   {
     "id": "ms-cloud",
@@ -127,7 +169,11 @@
       "blogs.microsoft.com",
       "www.microsoft.com"
     ],
-    "kind": "primary"
+    "kind": "primary",
+    "image_credit": "Microsoft",
+    "image_hosts": [
+      "blogs.microsoft.com/wp-content/uploads/"
+    ]
   },
   {
     "id": "aws-ml",

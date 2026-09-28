@@ -14,8 +14,10 @@ from reportlab.lib.pagesizes import A3
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import learn
+import news_images
 import policy
 import qahwa
+import topics
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -452,9 +454,25 @@ def summary_of(i, lang):
         return i['excerpt'], 'publisher'
     return None, None
 
-def news_card(i, lang, src, tags=''):
+IMAGE_CREDIT = {'en': 'Image:', 'ar': 'الصورة:'}
+
+def news_pic(pic, lang):
+    """(the card's <img>, its credit line) for a picture of news_images.pictures(): a company image says whose it is
+    (alt text and credit line); a topic image is named by its topic. Lazy-loaded, with its size to avoid layout shift."""
+    if not pic:
+        return '', ''
+    who = pic.get('credit')
+    alt = f'{IMAGE_CREDIT[lang]} {who}' if who else topics.name(pic.get('topic'), lang)
+    kind = '' if who else f' data-topic="{E(pic.get("topic"))}"'
+    img = (f'<img class="n-img" src="{E(pic["file"])}" alt="{E(alt)}" width="{int(pic["width"])}" height="{int(pic["height"])}"'
+           f' loading="lazy" decoding="async"{kind}>')
+    return img, (f'<span class="n-credit">{IMAGE_CREDIT[lang]} <bdi>{E(who)}</bdi></span>' if who else '')
+
+def news_card(i, lang, src, tags='', pic=None):
     """One headline: the title as plain text, a short summary with who wrote it, then a small link to the original
-    article with the publisher's name, and the date (UAE time)."""
+    article with the publisher's name, and the date (UAE time). With `pic`, the story's image comes first (and a
+    company image's credit line after the date)."""
+    img, cred = news_pic(pic, lang)
     s, d = src[i['source']], to_uae(i['published'])
     title, mt = headline_text(i, lang)
     ar = lang == 'ar'
@@ -464,30 +482,35 @@ def news_card(i, lang, src, tags=''):
     name = s['name_ar'] if ar else s['name']
     when = f'{d.day} {AR_MONTHS[d.month-1]}، <bdi>{d:%H:%M}</bdi>' if ar else f'{d.day} {EN_MONTHS[d.month-1]}, <bdi>{d:%H:%M}</bdi>'
     link = f'<a class="n-src" href="{E(i["url"])}" target="_blank" rel="noopener noreferrer">{"المصدر" if ar else "Source"}: {E(name)} <span class="n-ext" aria-hidden="true">↗</span></a>'
-    return (f'<h4 class="n-title" {text_dir}>{E(title)}</h4>{summary}'
-            f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}</p>')
+    return (f'{img}<h4 class="n-title" {text_dir}>{E(title)}</h4>{summary}'
+            f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}{cred}</p>')
 
-def heads(items, src, per, limit):
-    """Compact headline cards for the home pillars, one list per language."""
-    out = ''
+def heads(items, src, per, limit, pics=None):
+    """Compact headline cards for the home pillars, one list per language, each with a small image when `pics`
+    (news_images.pictures()) has one."""
+    out, pics = '', pics or {}
+    def li(i, lang):
+        if i['id'] in pics:
+            return f'<li class="has-img">{news_card(i, lang, src, pic=pics[i["id"]])}</li>'
+        return f'<li>{news_card(i, lang, src)}</li>'
     for lang in ('en', 'ar'):
         pool = varied([i for i in items if in_lang(i, lang)], per, limit)
-        out += f'<ol class="heads" data-lang="{lang}">{"".join(f"<li>{news_card(i, lang, src)}</li>" for i in pool)}</ol>' if pool else f'<p class="muted" data-lang="{lang}">{"لا توجد عناوين حديثة." if lang == "ar" else "No recent headlines."}</p>'
+        out += f'<ol class="heads" data-lang="{lang}">{"".join(li(i, lang) for i in pool)}</ol>' if pool else f'<p class="muted" data-lang="{lang}">{"لا توجد عناوين حديثة." if lang == "ar" else "No recent headlines."}</p>'
     return out
 
 REGION_TAG = {'en': {'global': 'Global', 'uae': 'UAE'}, 'ar': {'global': 'عالمي', 'uae': 'الإمارات'}}
 
-def news_li(i, lang, src):
+def news_li(i, lang, src, pic=None):
     reg = regions(i, src)
     tags = ''.join(f'<span class="tag {"uae" if r == "uae" else "glob"}">{REGION_TAG[lang][r]}</span>' for r in reg)
-    return f'<li class="nitem" data-region="{" ".join(reg)}">{news_card(i, lang, src, tags)}</li>'
+    return f'<li class="nitem{" has-img" if pic else ""}" data-region="{" ".join(reg)}">{news_card(i, lang, src, tags, pic)}</li>'
 
 NEWS_NOTE = L('Summaries marked "AI summary" are machine-written from the article or the publisher\'s description and may contain mistakes. Follow the source link to read the full story.',
               'الملخصات الموسومة «ملخص بالذكاء الاصطناعي» يكتبها الذكاء الاصطناعي من نص المقال أو من وصف الناشر، والعناوين الموسومة «ترجمة بالذكاء الاصطناعي» يترجمها الذكاء الاصطناعي، وقد تحتوي على أخطاء. اتبع رابط المصدر لقراءة الخبر كاملاً.')
 
-def day_lists(items, src, empty_en, empty_ar):
-    """Full headline lists, one per language, grouped by day in UAE time."""
-    out = ''
+def day_lists(items, src, empty_en, empty_ar, pics=None):
+    """Full headline lists, one per language, grouped by day in UAE time, each card with its image from `pics`."""
+    out, pics = '', pics or {}
     for lang in ('en', 'ar'):
         pool = [i for i in items if in_lang(i, lang)]
         if not pool:
@@ -499,7 +522,7 @@ def day_lists(items, src, empty_en, empty_ar):
             if day != cur:
                 body += ('</ol></section>' if cur else '') + f'<section class="nday"><h3>{day_label(day, lang)}</h3><ol>'
                 cur = day
-            body += news_li(i, lang, src)
+            body += news_li(i, lang, src, pics.get(i['id']))
         out += f'<div class="nlist" data-lang="{lang}">{body}</ol></section></div>'
     return out
 
@@ -639,12 +662,12 @@ def home_view(c):
 {cta('hardware', 'Open hardware')}</article>
 <article class="pillar p-news" aria-labelledby="p2-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['news']}</span><span>02</span></div><h2 id="p2-title"><a href="#news" data-i18n>AI news</a></h2><p class="p-lead">{L(E(f"The latest AI headlines in English and Arabic, from the {cnt(c['n_sources'], 'vetted', 'en')} we follow."), f"أحدث عناوين الذكاء الاصطناعي بالعربية والإنجليزية، من {cnt(c['n_sources'], 'vetted', 'ar')} نتابعها.")}</p></div>
 <div class="p-body"><dl class="stats">{stat(c['n_headlines'], 'headlines')}{stat(len(en_items), 'English')}{stat(len(ar_items), 'Arabic')}</dl>
-<div><h3 class="p-sub"><span data-i18n>Latest headlines</span><small data-i18n>Times in UAE time</small></h3>{heads([i for i in items if 'global' in regions(i, src)], src, 1, NEWS_PICKS)}</div>
+<div><h3 class="p-sub"><span data-i18n>Latest headlines</span><small data-i18n>Times in UAE time</small></h3>{heads([i for i in items if 'global' in regions(i, src)], src, 1, NEWS_PICKS, c['pics'])}</div>
 <div><h3 class="p-sub"><span data-i18n>Browse</span></h3><div class="lvl">{browse}</div></div></div>
 {cta('news', 'Open AI news')}</article>
 <article class="pillar p-uae" aria-labelledby="p3-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{ICON['uae']}</span><span>03</span></div><h2 id="p3-title"><a href="#uae" data-i18n>UAE AI</a></h2><p class="p-lead" data-i18n>What the UAE is building in AI: strategy, compute and models, each fact with its source.</p></div>
 <div class="p-body"><dl class="stats">{stat(len(uae_items), 'UAE headlines')}{stat(uae_en_ar, 'English · Arabic')}{stat(c['n_facts'], 'key facts')}</dl>
-<div><h3 class="p-sub"><span data-i18n>Latest UAE headlines</span><small data-i18n>Times in UAE time</small></h3>{heads(uae_items, src, 2, 3)}</div>
+<div><h3 class="p-sub"><span data-i18n>Latest UAE headlines</span><small data-i18n>Times in UAE time</small></h3>{heads(uae_items, src, 2, 3, c['pics'])}</div>
 <div><h3 class="p-sub"><span data-i18n>Key fact</span><small>{L('Checked ' + ymd(c['uae_checked'], 'en'), 'تم التحقق في ' + ymd(c['uae_checked'], 'ar'))}</small></h3><div class="fminis">{facts}</div></div></div>
 {cta('uae', 'Open UAE AI')}</article>
 <article class="pillar p-learn" aria-labelledby="p4-title"><div class="p-head"><div class="kick"><span class="p-icon" aria-hidden="true">{learn.BOOK}</span><span>04</span></div><h2 id="p4-title"><a href="{page}" data-i18n>Learn AI</a></h2><p class="p-lead" data-i18n>Plain-language guides to the ideas behind today's AI, and recommended stacks for building with it.</p></div>
@@ -691,7 +714,7 @@ def news_view(c):
 <div class="js-only"><span class="fl" id="fl-nreg" data-i18n>Region</span><div class="chips" role="group" aria-labelledby="fl-nreg">{chips}</div></div>
 <dl class="side-stats">{side}</dl></div></aside>
 <div class="main-col"><h2 class="sr-only" data-i18n>Headlines</h2><div class="bar"><p class="count" id="news-count" aria-live="polite">{L(cnt(len(en_items), "headline", "en"), cnt(len(ar_items), "headline", "ar"))}</p><p class="muted" data-i18n>Times in UAE time</p></div>
-{day_lists(items, src, 'No recent English headlines.', 'لا توجد عناوين عربية حديثة.')}
+{day_lists(items, src, 'No recent English headlines.', 'لا توجد عناوين عربية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="news-more" hidden data-i18n>Show more</button></div>
 <p class="muted n-note">{NEWS_NOTE}</p>
 </div></div>
@@ -721,7 +744,7 @@ def uae_view(c):
 {ihead('uae', 'UAE AI', lead)}
 <div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2><dl class="side-stats">{side}</dl></div></aside>
 <div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p>{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
-{day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.')}
+{day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
 <p class="muted n-note">{NEWS_NOTE}</p></div></div>
 <section class="uae-facts" aria-labelledby="uae-facts-h"><div class="sec-h"><h2 id="uae-facts-h" data-i18n>Key facts</h2><p data-i18n>Newest first. Hardware tags open the matching products.</p></div>
@@ -803,9 +826,12 @@ def learn_context():
             'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
             'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
-def context(data, feed, sources, uae, about=None):
+def context(data, feed, sources, uae, about=None, company=None):
+    """Everything the page is rendered from. `company`: the company images news_images.run() prepared ({item id:
+    image}); every other headline gets its topic image."""
     ps = data['products']
     items = news_items(feed, sources)
+    src = {s['id']: s for s in sources}
     facts = (uae or {}).get('facts', [])
     featured, highlights = load_site(ps, facts)
     vendors, levels = {}, {}
@@ -814,7 +840,7 @@ def context(data, feed, sources, uae, about=None):
         levels[p['level']] = levels.get(p['level'], 0) + 1
     return {
         'data': data, 'products': ps, 'feed': feed, 'sources': sources, 'uae': uae, 'items': items,
-        'src': {s['id']: s for s in sources}, 'featured': featured, 'highlights': highlights,
+        'src': src, 'pics': news_images.pictures(items, src, company), 'featured': featured, 'highlights': highlights,
         'vendors': vendors, 'levels': levels, 'n_products': len(ps), 'n_priced': sum(1 for p in ps if p.get('price_view')),
         'n_headlines': len(items), 'n_sources': len(sources), 'n_facts': len(facts),
         'check_health': data.get('check_health'),
@@ -847,9 +873,10 @@ def load_all():
     load_about()  # the About text (hero promise, #contact/about): a bad file fails here too
     return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
 
-def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None):
-    """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json."""
-    c = context(data, feed, sources, uae, about)
+def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None):
+    """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json;
+    `company`: the company images of news_images.run() (none: every headline gets its topic image)."""
+    c = context(data, feed, sources, uae, about, company)
     slim = {'updated_at': models.get('updated_at'), 'models': [{'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']} for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
@@ -932,7 +959,11 @@ def main():
     args=parser.parse_args()
     data,feed,sources,uae,models=load_all()
     OUT.mkdir(exist_ok=True)
-    text,public=render_page(data,feed,sources,uae,models)
+    # News images: company images from official company sources (downloaded once, cached in .cache/news-img, never
+    # failing the build) and the site's own topic images for every other story.
+    company=news_images.run(OUT,news_items(feed,sources),{s['id']:s for s in sources})
+    news_images.copy_topic_images(OUT)
+    text,public=render_page(data,feed,sources,uae,models,company=company)
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
@@ -940,12 +971,14 @@ def main():
     learn.build(OUT)
     qahwa.build_safe(OUT)  # the Qahwa & AI lessons page: bad Qahwa data is logged and left out, never stops the build
     import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
-    app_data.write(OUT,data,feed,sources,uae,models)  # dist/app/*.json for the Android app
+    app_data.write(OUT,data,feed,sources,uae,models,company=company)  # dist/app/*.json for the Android app
     pdf(data)
     if args.standalone:
         target=args.standalone.resolve()
         shutil.copyfile(OUT/'index.html',target)
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
+        if (OUT/news_images.OUT_DIR).exists():shutil.copytree(OUT/news_images.OUT_DIR,target.parent/news_images.OUT_DIR,dirs_exist_ok=True)
+        news_images.copy_topic_images(target.parent)
         copy_brand_images(target.parent/'brand')
         learn.build(target.parent, home=target.name)  # its links back to the overview go to the standalone file
         qahwa.build_safe(target.parent, home=target.name)

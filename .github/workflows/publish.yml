@@ -69,8 +69,25 @@ jobs:
           d['automation_status']='Configured in GitHub Actions'
           p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
           PY
+      - name: Week of the news-image cache
+        id: news-img-week
+        run: echo "week=$(date -u +%G-W%V)" >> "$GITHUB_OUTPUT"
+      - name: Restore news images (company images are downloaded once, then kept here)
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/news-img
+          key: news-img-${{ steps.news-img-week.outputs.week }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            news-img-${{ steps.news-img-week.outputs.week }}-
+            news-img-
       - name: Build website and PDF
         run: python scripts/build.py
+      - name: Keep news images for the next run (saved even if a later step fails)
+        if: always() && steps.news-img-week.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/news-img
+          key: news-img-${{ steps.news-img-week.outputs.week }}-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Save refreshed data
         run: |
           git config user.name 'github-actions[bot]'

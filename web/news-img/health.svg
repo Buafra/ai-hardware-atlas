@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e8a82"/><stop offset="1" stop-color="#1d5fd1"/></linearGradient>
+<radialGradient id="h"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="k"><stop offset="0" stop-color="#9ff5e8" stop-opacity=".42"/><stop offset="1" stop-color="#9ff5e8" stop-opacity="0"/></radialGradient>
+<pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#fff" fill-opacity=".13"/></pattern></defs>
+<rect width="640" height="360" fill="url(#g)"/><rect width="640" height="360" fill="url(#d)"/>
+<circle cx="110" cy="40" r="230" fill="url(#k)"/><circle cx="570" cy="330" r="210" fill="url(#k)" opacity=".7"/><circle cx="320" cy="180" r="200" fill="url(#h)"/>
+<g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+<path d="M320 300C250 256 170 202 170 136 170 96 200 70 238 70 274 70 300 94 320 120 340 94 366 70 402 70 440 70 470 96 470 136 470 202 390 256 320 300Z" fill="#fff" fill-opacity=".14"/>
+<path d="M96 188H228L258 138 298 238 334 168 354 188H544" stroke="#9ff5e8"/>
+<g fill="#fff" stroke="none" fill-opacity=".7"><circle cx="520" cy="96" r="10"/><circle cx="126" cy="282" r="8"/></g>
+</g></svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6537d7"/><stop offset="1" stop-color="#2b1a78"/></linearGradient>
+<radialGradient id="h"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="k"><stop offset="0" stop-color="#22D4D6" stop-opacity=".42"/><stop offset="1" stop-color="#22D4D6" stop-opacity="0"/></radialGradient>
+<pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#fff" fill-opacity=".13"/></pattern></defs>
+<rect width="640" height="360" fill="url(#g)"/><rect width="640" height="360" fill="url(#d)"/>
+<circle cx="110" cy="40" r="230" fill="url(#k)"/><circle cx="570" cy="330" r="210" fill="url(#k)" opacity=".7"/><circle cx="320" cy="180" r="200" fill="url(#h)"/>
+<g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+<g stroke-width="6" stroke-opacity=".5"><path d="M184 120H120V70M456 240H530V300M456 160H560M184 240H96"/></g>
+<g fill="#22D4D6" stroke="none"><circle cx="120" cy="70" r="10"/><circle cx="530" cy="300" r="10"/><circle cx="560" cy="160" r="10"/><circle cx="96" cy="240" r="10"/></g>
+<rect x="220" y="80" width="200" height="200" rx="26" fill="#fff" fill-opacity=".14"/>
+<rect x="275" y="135" width="90" height="90" rx="12" stroke="#22D4D6"/>
+<path d="M260 80V46M300 80V46M340 80V46M380 80V46M260 280v34M300 280v34M340 280v34M380 280v34M220 120h-34M220 160h-34M220 200h-34M220 240h-34M420 120h34M420 160h34M420 200h34M420 240h34"/>
+</g></svg>

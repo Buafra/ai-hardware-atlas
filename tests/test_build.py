@@ -443,7 +443,7 @@ class OwnerRequestTests2(unittest.TestCase):
         heads,facts=u.index('<h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2>'),u.index('<h2 id="uae-facts-h" data-i18n>Key facts</h2>')
         self.assertLess(heads,facts)
         self.assertLess(u.index('<div class="split-layout uae-heads">'),u.index('<section class="uae-facts"'))
-        if 'class="nitem"' in u:self.assertLess(u.index('class="nitem"'),u.index('class="fact"'))
+        if 'class="nitem' in u:self.assertLess(u.index('class="nitem'),u.index('class="fact"'))
         self.assertLess(facts,u.index('class="fact"'))
         self.assertEqual(u.count('class="f-date"'),len(self.uae['facts']));self.assertEqual(u.count('As of '),len(self.uae['facts']))  # each keeps its date
         js=(ROOT/'web/app.js').read_text(encoding='utf-8')
@@ -535,8 +535,16 @@ class LearnIntegrationTests(unittest.TestCase):
             out,target=Path(d)/'dist',Path(d)/'site'/'Atlas.html'
             target.parent.mkdir()
             fake_pdf=lambda data:(out/'AI_Hardware_Atlas_2026_One_Page.pdf').write_bytes(b'%PDF-1.4\n')
-            with mock.patch.object(build,'OUT',out),mock.patch.object(build,'pdf',fake_pdf),mock.patch.object(sys,'argv',['build.py','--standalone',str(target)]),mock.patch('builtins.print'):
+            # No network in unit tests: every news-image fetch fails (so every headline keeps its topic image), in a temporary cache.
+            offline=mock.Mock(side_effect=build.news_images.Retry('offline'))
+            with mock.patch.object(build,'OUT',out),mock.patch.object(build,'pdf',fake_pdf),mock.patch.object(sys,'argv',['build.py','--standalone',str(target)]),mock.patch('builtins.print'),\
+                 mock.patch.object(build.news_images,'CACHE',Path(d)/'cache'),mock.patch.object(build.news_images,'fetch_page',offline),mock.patch.object(build.news_images,'download',offline):
                 build.main()
+            # The topic images are served beside both copies, and every card's image is one of them.
+            for d_ in (out,target.parent):self.assertEqual(sorted(f.stem for f in (d_/'news-img').glob('*.svg')),sorted(build.topics.TOPICS))
+            page=(out/'index.html').read_text(encoding='utf-8')
+            self.assertGreater(page.count('class="n-img"'),0)
+            self.assertEqual(set(re.findall(r'<img class="n-img" src="([^"/]+)/',page)),{'news-img'})
             self.assertIn('href="learn.html"',(out/'index.html').read_text(encoding='utf-8'))
             self.assertIn('<a href="index.html" class="n-home">',(out/'learn.html').read_text(encoding='utf-8'))
             # Beside the standalone copy, learn.html links back to that file's name.
@@ -576,7 +584,7 @@ class ReviewRoundTests(unittest.TestCase):
         btn='<div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>'
         self.assertIn(btn,self.uae)
         self.assertLess(self.uae.index(btn),self.uae.index('<section class="uae-facts"'))
-        if 'class="nitem"' in self.uae:self.assertLess(self.uae.rindex('class="nitem"'),self.uae.index(btn))
+        if 'class="nitem' in self.uae:self.assertLess(self.uae.rindex('class="nitem'),self.uae.index(btn))
         self.assertIn('const UAE_STEP = 8;',self.js);self.assertIn("$('uae-more').addEventListener('click'",self.js)
         self.assertIn('renderUae();',self.js[self.js.index('function render()'):self.js.index('function renderNews()')])
     def test_news_pillar_shows_three_headlines(self):
@@ -584,7 +592,7 @@ class ReviewRoundTests(unittest.TestCase):
         start=self.home.index('<article class="pillar p-news"');pillar=self.home[start:self.home.index('</article>',start)]
         for lang in ('en','ar'):
             m=re.search(rf'<ol class="heads" data-lang="{lang}">(.*?)</ol>',pillar)
-            if m:self.assertLessEqual(m.group(1).count('<li>'),3,lang)
+            if m:self.assertLessEqual(len(re.findall(r'<li\b',m.group(1))),3,lang)
     def test_bad_learn_data_fails_before_anything_is_written(self):
         from unittest import mock
         with tempfile.TemporaryDirectory() as d:
@@ -752,5 +760,72 @@ class StatFitTests(unittest.TestCase):
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
         self.assertIn('.stats>.stat{container-type:inline-size}',css)
         self.assertIn('.stats>.stat dd{font-size:max(14px,min(23px,calc(100cqi / (var(--n,3) * .6))));white-space:normal;overflow-wrap:anywhere}',css)
+
+class NewsImageTests(unittest.TestCase):
+    """Images on the news cards (the owner's hybrid plan): the company's own image on stories from official company
+    sources, with a credit line, and the site's own topic image on every other story; everything served from the site."""
+    @classmethod
+    def setUpClass(cls):
+        data,feed,cls.sources,uae,models=build.load_all()
+        cls.src={s['id']:s for s in cls.sources}
+        cls.items=build.news_items(feed,cls.sources)
+        cls.company={i['id']:{'file':f'images/news/{i["id"]}.webp','width':480,'height':270,'credit':build.news_images.credit(cls.src[i['source']])}
+                     for i in cls.items if build.news_images.eligible(i,cls.src[i['source']])}
+        with tempfile.TemporaryDirectory() as d:
+            cls.html,_=build.render_page(data,feed,cls.sources,uae,models,brand_dir=Path(d),company=cls.company)
+            cls.plain,_=build.render_page(data,feed,cls.sources,uae,models,brand_dir=Path(d))
+        cls.main=cls.html[cls.html.index('<main'):cls.html.index('</main>')]
+    def cards(self,html):
+        return re.findall(r'<li class="(?:nitem )?has-img"[^>]*>(.*?)</li>',html,re.S)
+    def test_every_card_has_an_image(self):
+        self.assertGreater(len(self.company),0)
+        main=self.main
+        self.assertEqual(len(re.findall(r'<li class="nitem',main)),len(re.findall(r'<li class="nitem has-img"',main)))
+        for view,nxt in (('news','uae'),('uae','contact'),('home','hardware')):
+            chunk=main[main.index(f'data-view="{view}"'):main.index(f'data-view="{nxt}"')]
+            self.assertGreater(chunk.count('<img class="n-img"'),0,view)
+        for c in self.cards(self.html):self.assertTrue(c.startswith('<img class="n-img" src="'),c[:80])
+    def test_company_image_and_credit(self):
+        i=next(i for i in self.items if i['id'] in self.company and build.in_lang(i,'en') and build.in_lang(i,'ar'))
+        who=self.company[i['id']]['credit']
+        pic=build.news_images.pictures([i],self.src,self.company)[i['id']]
+        en,ar=build.news_card(i,'en',self.src,pic=pic),build.news_card(i,'ar',self.src,pic=pic)
+        self.assertTrue(en.startswith(f'<img class="n-img" src="images/news/{i["id"]}.webp" alt="Image: {who}" width="480" height="270" loading="lazy" decoding="async">'),en[:200])
+        self.assertIn(f'<span class="n-credit">Image: <bdi>{who}</bdi></span></p>',en)
+        self.assertIn(f'alt="الصورة: {who}"',ar);self.assertIn(f'<span class="n-credit">الصورة: <bdi>{who}</bdi></span></p>',ar)
+        self.assertIn(f'src="images/news/{i["id"]}.webp"',self.main)
+    def test_topic_image_names_its_topic(self):
+        i=next(i for i in self.items if i['id'] not in self.company and build.in_lang(i,'en'))
+        pic=build.news_images.pictures([i],self.src)[i['id']]
+        t=build.topics.topic_of(i,self.src[i['source']])
+        en,ar=build.news_card(i,'en',self.src,pic=pic),build.news_card(i,'ar',self.src,pic=pic)
+        self.assertTrue(en.startswith(f'<img class="n-img" src="news-img/{t}.svg" alt="{html.escape(build.topics.name(t,"en"))}" width="640" height="360" loading="lazy" decoding="async" data-topic="{t}">'),en[:200])
+        self.assertIn(f'alt="{build.topics.name(t,"ar")}"',ar)
+        self.assertNotIn('n-credit',en+ar)
+    def test_uae_official_and_news_outlets_get_topic_images(self):
+        for i in self.items:
+            s=self.src[i['source']]
+            if s.get('kind')!='primary' or s['region']=='uae' or i.get('uae'):
+                self.assertNotIn(f'images/news/{i["id"]}.webp',self.html,i['source'])
+            if build.topics.uae_official(s):
+                self.assertIn(f'src="news-img/uae.svg"',self.html)
+    def test_no_image_from_another_host(self):
+        for h in (self.html,self.plain):
+            srcs=re.findall(r'<img\b[^>]*\bsrc="([^"]*)"',h)
+            self.assertTrue(srcs)
+            for u in srcs:self.assertIsNone(re.match(r'(?:[a-z]+:)?//',u),u)
+            self.assertIsNone(re.search(r'<img[^>]+src="(?:https?:)?//|srcset=',h))
+        # Without company images (a build with no cache and no network) every card still has its topic image.
+        self.assertEqual(set(re.findall(r'<img class="n-img" src="([^"/]+)/',self.plain)),{'news-img'})
+    def test_cards_rtl_and_compact_pillar_css(self):
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        for rule in ('.heads li.has-img>.n-img{grid-column:1;grid-row:1/span 4;width:80px;height:60px',
+                     '.nitem.has-img>.n-img{grid-column:1;grid-row:1/span 4;width:184px;height:104px}',
+                     '.nitem.has-img>.n-img{grid-column:2;grid-row:1;width:96px;height:72px',
+                     '.n-img{display:block;object-fit:cover'):
+            self.assertIn(rule,css)
+        # Logical placement only (grid columns follow the page direction): no left/right in the image rules.
+        block=re.sub(r'/[*].*?[*]/','',css[css.index('/* News images:'):css.index('.n-note{')],flags=re.S)
+        self.assertNotRegex(block,r'\b(?:left|right)\b|float')
 
 if __name__=='__main__':unittest.main()

@@ -8,6 +8,10 @@ fields stay out, and a concept's related_lessons lists only the Qahwa & AI lesso
 (learn.published_lessons(), the rule behind Learn AI's lesson chips), so a future lesson's title never reaches the app. manifest.json lists each file's SHA-256 so the app downloads only what changed.
 learn.json also carries Learn AI's reports (data/learn/reports.json, validated like the page's, newest first, each with
 its source 'group'): an additive field the app can ignore.
+
+Each headline also carries its topic (scripts/topics.py) and its image, a path relative to the site root: the company's
+own image (images/news/<id>.webp) or the topic image (news-img/<topic>.svg), the same the site shows; image_credit
+names the company for a company image. The app ignores keys it does not know.
 """
 import hashlib
 import json
@@ -15,6 +19,7 @@ import sys
 from pathlib import Path
 
 import build
+import news_images
 import learn
 import qahwa
 
@@ -26,9 +31,10 @@ ABOUT = build.ROOT / 'data' / 'about.json'  # the About text the site and the ap
 def load_about(path=ABOUT):
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
-def news_entry(i, src):
+def news_entry(i, src, pic=None):
     """One headline with everything the app shows: region tags, which language lists carry it, and per language the
-    summary with its kind ('ai' or 'publisher'), exactly as the site decides them."""
+    summary with its kind ('ai' or 'publisher'), exactly as the site decides them; with `pic` (the site's picture of
+    it, news_images.pictures()) its topic and image."""
     s = src[i['source']]
     out = {'id': i['id'], 'url': i['url'], 'source': i['source'], 'source_name': s['name'], 'source_name_ar': s.get('name_ar') or s['name'],
            'lang': i['lang'], 'regions': build.regions(i, src), 'uae': bool(i.get('uae')), 'published': i['published'],
@@ -36,6 +42,10 @@ def news_entry(i, src):
     for lang in ('en', 'ar'):
         text, kind = build.summary_of(i, lang)
         out[f'summary_{lang}'], out[f'summary_kind_{lang}'] = text, kind
+    if pic:
+        out['topic'], out['image'] = pic['topic'], pic['file']
+        if pic.get('credit'):
+            out['image_credit'] = pic['credit']
     return out
 
 def app_concepts(concepts_doc, lessons_doc):
@@ -47,15 +57,16 @@ def app_reports(reports_doc):
     """Learn AI's reports as the page lists them: newest first, each with the source group its filter uses."""
     return [{**r, 'group': learn.report_group(r)} for r in learn.sorted_reports(reports_doc)]
 
-def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None, lessons_doc=None, reports_doc=None):
+def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None, lessons_doc=None, reports_doc=None, company=None):
     """Return {file name: JSON-ready dict}. Pure: writes nothing. `data` must already be prepared (build.prepare).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no related lessons).
-    reports_doc: Learn AI's reports (default: data/learn/reports.json)."""
+    reports_doc: Learn AI's reports (default: data/learn/reports.json).
+    company: the company images of news_images.run() (none: every headline has its topic image)."""
     if lessons_doc is None:
         lessons_doc = qahwa.empty_doc()
     if reports_doc is None:
         reports_doc = learn.load_reports()
-    c = build.context(data, feed, sources, uae)
+    c = build.context(data, feed, sources, uae, company=company)
     src = c['src']
     featured = [p['id'] for p in c['featured']]
     highlights = [f['id'] for f in c['highlights']]
@@ -64,7 +75,7 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=N
     return {
         'catalog.json': {'schema': APP_SCHEMA, **catalog, 'featured': featured, 'levels': build.LEVELS},
         'news.json': {'schema': APP_SCHEMA, 'updated_at': (feed or {}).get('updated_at'), 'schedule': build.schedule_times(data),
-                      'sources': len(sources), 'items': [news_entry(i, src) for i in c['items']]},
+                      'sources': len(sources), 'items': [news_entry(i, src, c['pics'].get(i['id'])) for i in c['items']]},
         'uae.json': {'schema': APP_SCHEMA, 'checked': (uae or {}).get('checked'), 'highlights': highlights, 'facts': facts},
         'learn.json': {'schema': APP_SCHEMA, 'groups': concepts_doc['groups'], 'concepts': app_concepts(concepts_doc, lessons_doc),
                        'stacks': sorted(stacks_doc['stacks'], key=lambda s: s.get('order', 0)), 'reports': app_reports(reports_doc)},
@@ -76,7 +87,7 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=N
 def encode(payload):
     return (json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
 
-def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None, lessons_doc=None, reports_doc=None):
+def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None, lessons_doc=None, reports_doc=None, company=None):
     """Write dist/app/*.json and manifest.json; return the manifest.
     lessons_doc: the published Qahwa & AI posts (default: learn.lessons_doc_safe(), from data/qahwa.json, as learn.html)."""
     if lessons_doc is None:
@@ -86,7 +97,7 @@ def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_d
     target = Path(out_dir) / APP_DIR
     target.mkdir(parents=True, exist_ok=True)
     files = {}
-    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about, lessons_doc, reports_doc).items():
+    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about, lessons_doc, reports_doc, company).items():
         raw = encode(payload)
         (target / name).write_bytes(raw)
         files[name] = {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}
@@ -97,7 +108,9 @@ def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_d
 
 def main():
     data, feed, sources, uae, models = build.load_all()
-    manifest = write(build.OUT, data, feed, sources, uae, models)
+    # The company images already in the cache (no downloads here; build.py fetches new ones).
+    company = news_images.run(build.OUT, build.news_items(feed, sources), {s['id']: s for s in sources}, network=False)
+    manifest = write(build.OUT, data, feed, sources, uae, models, company=company)
     total = sum(f['bytes'] for f in manifest['files'].values())
     print(f"App data: {len(manifest['files'])} files, {total / 1024:.0f} KB in {build.OUT / APP_DIR}")
     return 0

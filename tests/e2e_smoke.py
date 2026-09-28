@@ -25,6 +25,11 @@ schedule in it, the #contact/about deep link and the footer's About link landing
 Qahwa & AI lessons page (qahwa.html, a separate page): the footer link after Learn AI in every view and the About link
 beside the follow button, both carrying ?lang=ar in Arabic like the links to learn.html (and opening the page in Arabic
 without saving a language), and a tidy footer (every link on one line, no overflow) from 320 to 1920 px.
+News images (the owner's hybrid plan): every headline card in #news, #uae and the overview's pillars has an image served
+from the site itself (a company image from an official company source with its "Image: <company>" credit, or the site's
+topic image), loaded lazily and loaded once scrolled into view, beside the text on wide screens (on the start side, so on
+the right in Arabic), a 96x72 thumbnail beside the title on phones, 80x60 on the pillars, with no overflow from 320 to
+1920 px in both languages, in light and dark mode, and no request to another host.
 """
 import json
 import re
@@ -260,6 +265,73 @@ def go(page, url, view):
 def untranslated(page):
     return page.evaluate(r"""() => [...document.querySelectorAll('[data-i18n]')].map(e => e.textContent.trim())
         .filter(t => /[A-Za-z]{3,}/.test(t) && !/[؀-ۿ]/.test(t))""")
+
+def news_image_checks(browser):
+    """Images on the news cards: same origin, loaded when scrolled into view, sizes and sides, credits, no overflow."""
+    for scheme in ('light', 'dark'):
+        for lang in ('en', 'ar'):
+            for width in (320, 390, 768, 1280, 1920):
+                tag = f'[images {lang} {width}px {scheme}]'
+                ctx = browser.new_context(viewport={'width': width, 'height': 900}, color_scheme=scheme)
+                page, errors, foreign = ctx.new_page(), [], []
+                watch(page, errors, foreign)
+                for view in ('news', 'uae', 'home'):
+                    go(page, ('?lang=ar' if lang == 'ar' else '') + '#' + view, view)
+                    sel = {'news': '#news .nlist li.nitem', 'uae': '#uae .nlist li.nitem', 'home': '.pillar.p-news .heads li'}[view]
+                    # Bring the first visible cards (the current language's list) into view one by one so their lazy images load.
+                    n = page.evaluate("sel => Math.min([...document.querySelectorAll(sel)].filter(li => li.getClientRects().length).length, 4)", sel)
+                    for k in range(n):
+                        page.evaluate("([sel, k]) => [...document.querySelectorAll(sel)].filter(li => li.getClientRects().length)[k].scrollIntoView({block: 'center'})", [sel, k])
+                        page.wait_for_timeout(120)
+                    page.wait_for_timeout(300)
+                    got = page.evaluate("""([sel, n]) => [...document.querySelectorAll(sel)].filter(li => li.getClientRects().length).slice(0, n).map(li => {
+                        const img = li.querySelector(':scope > img.n-img'), t = li.querySelector('.n-title');
+                        if (!img) return {missing: true};
+                        const r = img.getBoundingClientRect(), tr = t.getBoundingClientRect(), lr = li.getBoundingClientRect();
+                        return {src: img.currentSrc || img.src, loaded: img.complete && img.naturalWidth > 0, lazy: img.loading, alt: img.alt,
+                                w: Math.round(r.width), h: Math.round(r.height), imgMid: (r.left + r.right) / 2, liMid: (lr.left + lr.right) / 2,
+                                besideTitle: r.top < tr.bottom && r.bottom > tr.top, credit: (li.querySelector('.n-credit') || {}).textContent || '',
+                                company: /\/images\/news\//.test(img.src), dark: getComputedStyle(document.documentElement).colorScheme}; })""", [sel, n])
+                    check(n > 0 and len(got) == n and not any(g.get('missing') for g in got), f'{tag} #{view}: cards without an image {got[:2]}')
+                    for g in got:
+                        if g.get('missing'):
+                            continue
+                        check(g['src'].startswith(ORIGIN + '/'), f'{tag} #{view}: image from another host {g["src"]}')
+                        check(g['loaded'], f'{tag} #{view}: image not loaded {g["src"]}')
+                        check(g['lazy'] == 'lazy' and g['alt'], f'{tag} #{view}: image not lazy or no alt text')
+                        want = (80, 60) if view == 'home' else (96, 72) if width < 640 else (184, 104)
+                        check((g['w'], g['h']) == want, f'{tag} #{view}: image {g["w"]}x{g["h"]}, expected {want}')
+                        # Wide screens: the image on the start side (left in English, right in Arabic). Phones: the thumbnail on the end side,
+                        # beside the title (as in the approved mock).
+                        start_left = (lang == 'en') != (view != 'home' and width < 640)
+                        check((g['imgMid'] < g['liMid']) == start_left, f'{tag} #{view}: image on the wrong side')
+                        if view != 'home' and width < 640:
+                            check(g['besideTitle'], f'{tag} #{view}: phone thumbnail not beside the title')
+                        if g['company']:
+                            want_credit = ('Image: ', 'الصورة: ')[lang == 'ar']
+                            check(g['credit'].startswith(want_credit) and g['alt'].startswith(want_credit.strip()), f'{tag} #{view}: company image credit {g["credit"]!r} alt {g["alt"]!r}')
+                        else:
+                            check(not g['credit'], f'{tag} #{view}: topic image with a credit line')
+                        check(g['dark'] == ('dark' if scheme == 'dark' else 'light'), f'{tag} colour scheme {g["dark"]}')
+                    page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+                    check(overflow(page) <= 0, f'{tag} #{view}: horizontal overflow {overflow(page)}px')
+                check(not errors, f'{tag} console errors: {errors[:3]}')
+                check(not foreign, f'{tag} requests to other hosts: {foreign[:3]}')
+                ctx.close()
+    # A company image and its credit are on the page (the build found at least one), and every image is served by the site.
+    ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
+    page = ctx.new_page()
+    go(page, '#news', 'news')
+    srcs = page.evaluate("[...document.querySelectorAll('img.n-img')].map(i => i.getAttribute('src'))")
+    check(srcs and all(re.match(r'^(news-img/[a-z]+\.svg|images/news/[0-9a-f]+\.webp)$', u) for u in srcs), f'image paths {[u for u in srcs if not re.match(r"^(news-img|images/news)/", u)][:3]}')
+    company = [u for u in srcs if u.startswith('images/news/')]
+    if company:
+        r = page.request.get(BASE + company[0])
+        body = r.body()  # (a local test server may not know the WebP type; GitHub Pages sends image/webp)
+        check(r.ok and body[:4] == b'RIFF' and body[8:12] == b'WEBP' and len(body) <= 40_000, f'company image {company[0]}: {r.status} {len(body)} bytes')
+    else:
+        print('note: no company images in this build (no cache and no network): topic images only')
+    ctx.close()
 
 def main():
     with sync_playwright() as p:
@@ -574,6 +646,9 @@ def main():
         check(page.locator('#about .ab-area').count() == 4 and page.get_attribute('.foot-links a[data-route="contact/about"]', 'href') == '#about', 'no-JS: About section or its footer anchor')
         check(page.get_attribute('.foot-links a[href^="qahwa.html"]', 'href') == 'qahwa.html' and page.locator('#about a.ab-lessons').is_visible(), 'no-JS: lessons links')
         ctx.close()
+
+        # 11. News images.
+        news_image_checks(browser)
         browser.close()
     print(f'{checks - len(failures)}/{checks} checks passed')
     return 1 if failures else 0

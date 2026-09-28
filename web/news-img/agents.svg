@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#753ACA"/><stop offset="1" stop-color="#D52F89"/></linearGradient>
+<radialGradient id="h"><stop offset="0" stop-color="#fff" stop-opacity=".26"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="k"><stop offset="0" stop-color="#22D4D6" stop-opacity=".42"/><stop offset="1" stop-color="#22D4D6" stop-opacity="0"/></radialGradient>
+<pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="#fff" fill-opacity=".13"/></pattern></defs>
+<rect width="640" height="360" fill="url(#g)"/><rect width="640" height="360" fill="url(#d)"/>
+<circle cx="110" cy="40" r="230" fill="url(#k)"/><circle cx="570" cy="330" r="210" fill="url(#k)" opacity=".7"/><circle cx="320" cy="180" r="200" fill="url(#h)"/>
+<g fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+<g stroke-width="8" stroke-opacity=".55"><path d="M320 180 170 92M320 180 468 84M320 180 500 262M320 180 150 268M320 180 330 318"/></g>
+<g fill="#fff" fill-opacity=".22" stroke-width="8"><circle cx="170" cy="92" r="20"/><circle cx="468" cy="84" r="20"/><circle cx="150" cy="268" r="18"/><circle cx="330" cy="318" r="16"/></g>
+<circle cx="320" cy="180" r="56" fill="#fff" fill-opacity=".14"/><path d="M320 148Q320 180 352 180Q320 180 320 212Q320 180 288 180Q320 180 320 148Z" stroke="none" fill="#22D4D6"/>
+<path d="M478 226V300L497 282 512 314 526 307 511 276H537Z" fill="#fff" stroke-width="6"/>
+</g></svg>
