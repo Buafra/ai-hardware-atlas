@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-27T18:45:00+04:00",
+  "generated_at": "2026-09-28T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -632,6 +632,41 @@
       "permalink": "https://www.instagram.com/p/Ddy20NikUwO/",
       "published_at": "2026-09-27T18:45:00+04:00",
       "cover": "images/qahwa/week-01-day-03--1-learn-lesson-03.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-01--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "A language-model AI assistant understands every answer exactly like a human.",
+        "ar": "المساعد الذكي المبني على نموذج لغوي يفهم كل إجابة بالطريقة نفسها التي يفهم بها الإنسان."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "A language-model AI assistant understands every answer ==exactly like a human==.",
+            "body": "Answer: Myth ❌ It generates text from learned patterns by predicting tokens. That is not the same as human understanding."
+          },
+          "ar": {
+            "title": "المساعد الذكي المبني على نموذج لغوي يفهم كل إجابة ==بالطريقة نفسها التي يفهم بها الإنسان==.",
+            "body": "الجواب: خرافة ❌ يولّد النص من أنماط تعلّمها عبر التنبؤ بالوحدات اللغوية (Tokens)، وهذا ليس هو الفهم البشري نفسه."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-28T07:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-01--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
