@@ -2,9 +2,8 @@ name: Update hardware and publish
 on:
   push:
     branches: [main]
-  release:
-    # A new Android app release (tag android-vX.Y.Z with Cipher-Lacuna.apk) goes on the site at once.
-    types: [published]
+  # A new Android app release starts this workflow on main through android-release.yml (a release run itself runs on
+  # its tag, which may not deploy the site).
   workflow_dispatch:
   schedule:
     # Every 4 hours: UTC 23:15 / 03:15 / 07:15 / 11:15 / 15:15 / 19:15 = Dubai 03:15 / 07:15 / 11:15 / 15:15 / 19:15 / 23:15.

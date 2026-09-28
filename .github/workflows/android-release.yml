@@ -1,0 +1,21 @@
+name: Publish a new Android app release
+# The site deploys from main only (the github-pages environment allows the main branch), so a run started by a
+# release, which runs on its tag, cannot deploy. This one starts "Update hardware and publish" on main instead:
+# a new android-vX.Y.Z release replaces the download on cipherlacuna.ae within minutes.
+on:
+  release:
+    types: [published]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  publish-on-main:
+    if: startsWith(github.event.release.tag_name, 'android-v')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start "Update hardware and publish" on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run publish.yml --ref main -R "$GITHUB_REPOSITORY"

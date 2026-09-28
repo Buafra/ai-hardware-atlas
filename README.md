@@ -60,7 +60,7 @@ The website serves only the newest release; a new release replaces the file at t
    ```
 
    (With `gh`, `path#name` sets the name the file is uploaded under; the upload must be named exactly `Cipher-Lacuna.apk`.)
-3. The release starts **Update hardware and publish**. `scripts/android_app.py` picks the highest `android-vX.Y.Z` release (not drafts or pre-releases) and downloads its APK. It checks the file before the site serves it:
+3. The release starts **Update hardware and publish** on main (`.github/workflows/android-release.yml` dispatches it: the site deploys from main only). `scripts/android_app.py` picks the highest `android-vX.Y.Z` release (not drafts or pre-releases) and downloads its APK. It checks the file before the site serves it:
    - the size and SHA-256 match GitHub's record;
    - it is a ZIP holding `AndroidManifest.xml`;
    - its v2/v3 signature block carries the Cipher Lacuna certificate (SHA-256 `1d3d4f1b…b6f912`). A debug build, an unsigned build or another key is refused, and the previous version stays on the site.

@@ -304,7 +304,15 @@ class PageTests(unittest.TestCase):
 class WorkflowTests(unittest.TestCase):
     def test_publish_workflow_fetches_the_app_before_the_build(self):
         wf = (ROOT / '.github' / 'workflows' / 'publish.yml').read_text(encoding='utf-8')
-        self.assertRegex(wf, r'release:\s*\n(\s*#.*\n)?\s*types: \[published\]')
+        # A release run runs on its tag, which the github-pages environment does not let deploy: publish.yml has no
+        # release trigger; android-release.yml starts it on main instead.
+        self.assertNotRegex(wf, r'(?m)^  release:')
+        self.assertIn('workflow_dispatch:', wf)
+        rel = (ROOT / '.github' / 'workflows' / 'android-release.yml').read_text(encoding='utf-8')
+        self.assertRegex(rel, r'release:\s*\n\s*types: \[published\]')
+        self.assertIn("startsWith(github.event.release.tag_name, 'android-v')", rel)
+        self.assertIn('gh workflow run publish.yml --ref main', rel)
+        self.assertIn('actions: write', rel)
         fetch, build = wf.index('run: python scripts/android_app.py'), wf.index('run: python scripts/build.py')
         restore = wf.index('path: .cache/android')
         self.assertLess(restore, fetch)
