@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-28T14:33:53+00:00",
+ "updated_at": "2026-09-28T18:38:25+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -208,17 +208,6 @@
    "created": 1748455170,
    "open": true,
    "params_b": 684.53,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "deepseek/deepseek-r1-distill-llama-70b",
-   "name": "DeepSeek: R1 Distill Llama 70B",
-   "hf": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
-   "context": 8192,
-   "created": 1737663169,
-   "open": true,
-   "params_b": 70.55,
    "params_source": "huggingface",
    "moe": false
   },
@@ -770,6 +759,28 @@
    "open": true,
    "params_b": 13.0,
    "params_source": "name",
+   "moe": false
+  },
+  {
+   "id": "nex-agi/nex-n2.5-mini",
+   "name": "Nex AGI: Nex-N2.5-Mini",
+   "hf": "nex-agi/Nex-N2.5-mini",
+   "context": 262144,
+   "created": 1788890061,
+   "open": true,
+   "params_b": 35.11,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "nex-agi/nex-n2.5-pro",
+   "name": "Nex AGI: Nex-N2.5-Pro",
+   "hf": "nex-agi/Nex-N2.5-Pro",
+   "context": 262144,
+   "created": 1788890050,
+   "open": true,
+   "params_b": 396.8,
+   "params_source": "huggingface",
    "moe": false
   },
   {
@@ -2043,6 +2054,17 @@
    "hf": null,
    "context": 1000000,
    "created": 1782843083,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "anthropic/claude-sonnet-5.5",
+   "name": "Anthropic: Claude Sonnet 5.5",
+   "hf": null,
+   "context": 1000000,
+   "created": 1790618686,
    "open": false,
    "params_b": null,
    "params_source": null,
