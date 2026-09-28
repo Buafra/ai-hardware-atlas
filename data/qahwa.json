@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-28T07:45:00+04:00",
+  "generated_at": "2026-09-28T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -667,6 +667,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-28T07:45:00+04:00",
       "cover": "images/qahwa/week-01-day-01--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-02--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "More data always makes AI more accurate.",
+        "ar": "كلما زادت البيانات، أصبح الذكاء الاصطناعي أدقّ دائماً"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "More data always makes AI ==more accurate==.",
+            "body": "Answer: Myth ❌ Quality beats quantity. Incomplete or one-sided data teaches AI mistakes."
+          },
+          "ar": {
+            "title": "كلما زادت البيانات، أصبح الذكاء الاصطناعي ==أدقّ دائماً==",
+            "body": "الجواب: خرافة ❌ الجودة أهم من الكمية. البيانات الناقصة أو المنحازة تعلّم الذكاء الاصطناعي أخطاء."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-28T07:50:00+04:00",
+      "cover": "images/qahwa/week-01-day-02--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
