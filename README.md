@@ -14,6 +14,7 @@ Cipher Lacuna ("Decoding the gaps in AI knowledge"): public NVIDIA / AMD compari
 - Three views: cards, a sortable table and a timeline of announcement vs availability.
 - Side-by-side comparison of up to 4 products.
 - "What can it run?" estimator: model size x precision + "extra memory for chat length and software" (default 20%, `extra` in the URL), with fit badges and a fits-only filter.
+- The hardware search also lists matching AI models (same matching and ranking as the Android app: `searchModels` / `modelSuggestions` in `web/app.js`, from 2 characters): an "AI models (N)" card above the products, open with the first 3 (and "Show all N models") when no hardware matches, a title line with "Show models" when hardware matches too. Picking a model clears the search and sets it in the estimator. Tests: `tests/test-sort.cjs`, `tests/e2e_model_search.py`.
 - Shareable links: search, filters, sort, view, comparison, estimator and language are kept in the URL.
 - English / Arabic (RTL) interface, light / dark / auto theme, printable table.
 - Official product photos (NVIDIA / AMD, credited and linked), stored as small WebP files in `images/` (`python scripts/images.py`).

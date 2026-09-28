@@ -347,6 +347,23 @@ label{display:block}
 .cmp{display:flex;gap:8px;align-items:center;padding:10px 16px;border-top:1px solid var(--border);font-size:13px;font-weight:750;cursor:pointer;color:var(--hw-ink)}
 .cmp input,.tablewrap input[type=checkbox]{width:17px;height:17px;accent-color:var(--hw);margin:0}
 .empty{padding:40px;text-align:center;background:var(--surface);border:1px dashed var(--border-strong);border-radius:var(--r-lg);color:var(--muted)}
+/* AI models matching the hardware search (app.js renderModelHits): a card above the products, open with the first
+   three when no hardware matches, a title line with "Show models" while hardware matches too. */
+.empty.slim{padding:14px 18px;margin-bottom:12px}
+.mhits{margin:0 0 14px;border-color:color-mix(in srgb,var(--hw) 30%,var(--border));border-inline-start:4px solid var(--hw)}
+.mhits:not(.open){padding-block:10px}
+.mh-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 12px}
+.mh-head h2{margin:0;font-size:16px;line-height:1.35}
+.mh-lead{margin:4px 0 0;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.mh-list{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:8px}
+.mh-list li{display:flex;min-width:0}
+.mh-pick{flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:1px;min-width:0;min-height:44px;padding:8px 12px;text-align:start;background:var(--surface);border:1px solid var(--border);border-inline-start:3px solid var(--hw);border-radius:12px;color:var(--text);transition:border-color .15s,background .15s}
+.mh-pick:hover{border-color:var(--hw);background:var(--surface-2)}
+.mh-name{max-width:100%;font-weight:750;font-size:14.5px;line-height:1.35;color:var(--strong);overflow-wrap:anywhere}
+.mh-size{font-size:12.5px;line-height:1.4;color:var(--muted);unicode-bidi:plaintext}
+.mh-btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;background:var(--surface);border:1px solid var(--border-strong);border-radius:10px;color:var(--hw-ink);font-weight:700;font-size:14px}
+.mh-btn:hover{background:var(--surface-2)}
+.mh-more{margin-top:10px}
 .note{background:var(--warn-bg);border-inline-start:4px solid #efaa27;padding:12px;border-radius:8px;font-size:14px}
 
 /* table and timeline views */
@@ -679,6 +696,8 @@ dialog::backdrop{background:#0a0d1a99}
   .tray .chip{white-space:nowrap}
   /* Tap targets of at least 40px */
   .btn-ghost,.nav a,.chip,.quick a,.lg,.presets button,.sorting button,.tray button,.dlg-head button{min-height:40px}
+  .mh-btn{min-height:44px}
+  .mh-more{width:100%}
   .check{min-height:40px;padding-bottom:0}
   .crumbs a{display:inline-block;padding-block:10px;margin-block:-10px}
   .foot-links{row-gap:0}
@@ -726,7 +745,7 @@ dialog::backdrop{background:#0a0d1a99}
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-2:#f5f5f8;--surface-3:#eef0f6;--border:#cfd5e2;--text:#111;--strong:#000;--muted:#444}
   .n-img{display:none!important}.nitem.has-img,.heads li.has-img{display:block}
-  .top,.skip,.filters,.estimator,.sorting,.downloads,.ihead-acts,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow-btn{display:none!important}
+  .top,.skip,.filters,.estimator,.sorting,.mhits,.downloads,.ihead-acts,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow-btn{display:none!important}
   .wrap{padding:0;max-width:none}
   .ihead,[dir="rtl"] .ihead{color:#111;background:none;border:0;box-shadow:none;padding:0 0 8px;margin:0}
   .ihead h1,.ihead .lead,.statusbar,.statusbar b{color:#111}

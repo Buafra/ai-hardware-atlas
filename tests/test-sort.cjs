@@ -105,3 +105,40 @@ const cases={'2025-Q3|en':'Q3 2025','2025-Q3|ar':'الربع الثالث 2025',
 for(const [k,want] of Object.entries(cases)){const [v,lang]=k.split('|');assert.equal(when(v,lang),want,k);}
 assert.equal(when('soon','en'),'soon');
 console.log('PASS: hash routes, legacy query links, deep links, canonical URL, region state, count labels, dates');
+// AI models in the hardware search: the Android app's EstimatorText.search rules, on a small sample and on the real list.
+const {searchModels,modelSuggestions}=require('../web/app.js');
+const names=list=>list.map(m=>m.n);
+const sample=[{n:'OpenAI: GPT-3.5 Turbo',hf:null},{n:'OpenAI: GPT-5.1',hf:null},{n:'OpenAI: GPT-5',hf:null},{n:'OpenAI: gpt-oss-120b',hf:'openai/gpt-oss-120b'},
+  {n:'OpenAI: o3 Mini',hf:null},{n:'OpenAI: GPT-4o',hf:null},{n:'Qwen2.5 72B Instruct',hf:'Qwen/Qwen2.5-72B-Instruct'},{n:'Qwen: Qwen3 32B',hf:'Qwen/Qwen3-32B'},
+  {n:'DeepSeek: DeepSeek V3',hf:'deepseek-ai/DeepSeek-V3'},{n:'NVIDIA: Nemotron 3 Super',hf:'nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8'},{n:'Auto Router',hf:null}];
+assert.deepEqual(names(searchModels(sample,'')),names(sample));assert.deepEqual(names(searchModels(sample,'   ')),names(sample));  // blank: everything, in list order
+assert.deepEqual(searchModels(sample,'-- ..'),[]);  // no words
+assert.deepEqual(names(searchModels(sample,'gpt 5')),['OpenAI: GPT-5.1','OpenAI: GPT-5']);  // numbers whole: 5 and 5.1, never 3.5
+assert.deepEqual(names(searchModels(sample,'gpt-5')),['OpenAI: GPT-5.1','OpenAI: GPT-5']);
+assert.deepEqual(names(searchModels(sample,'o3')),['OpenAI: o3 Mini']);  // "o" then 3, not GPT-4o
+assert.deepEqual(names(searchModels(sample,'qwen2.5')),['Qwen2.5 72B Instruct']);assert.deepEqual(names(searchModels(sample,'qwen3')),['Qwen: Qwen3 32B']);
+assert.deepEqual(names(searchModels(sample,'qwe')),['Qwen2.5 72B Instruct','Qwen: Qwen3 32B']);  // the last letters may start a word
+assert.deepEqual(names(searchModels(sample,'72b')),['Qwen2.5 72B Instruct']);assert.deepEqual(names(searchModels(sample,'32')),['Qwen: Qwen3 32B']);
+assert.deepEqual(names(searchModels(sample,'seek')),['DeepSeek: DeepSeek V3']);  // letters inside a longer word only as a fallback
+assert.deepEqual(names(searchModels(sample,'nvidia')),['NVIDIA: Nemotron 3 Super']);  // the Hugging Face id counts too
+assert.deepEqual(names(searchModels(sample,'120b')),['OpenAI: gpt-oss-120b','NVIDIA: Nemotron 3 Super']);  // in the name (rank 1) before the Hugging Face id only (rank 3)
+assert.deepEqual(names(searchModels(sample,'gpt')),['OpenAI: GPT-3.5 Turbo','OpenAI: GPT-5.1','OpenAI: GPT-5','OpenAI: gpt-oss-120b','OpenAI: GPT-4o']);
+// Ranks: 0 the name (after "Maker: ") starts with the query, 1 the name has every query word, 2 the maker starts with it, 3 the rest (Hugging Face id).
+const ranked=[{n:'Zed: Thing',hf:'beta/thing'},{n:'Beta Corp: Alpha',hf:null},{n:'Maker: Alpha Beta',hf:null},{n:'Gamma: Alphabeta',hf:null},{n:'Other: Beta Alpha',hf:null},{n:'Beta Two',hf:null}];
+assert.deepEqual(names(searchModels(ranked,'beta')),['Other: Beta Alpha','Beta Two','Maker: Alpha Beta','Beta Corp: Alpha','Zed: Thing']);
+assert.deepEqual(names(searchModels(ranked,'phabet')),['Maker: Alpha Beta','Gamma: Alphabeta']);  // fallback (nothing matched word by word): inside the joined parts, across words
+assert.deepEqual(names(searchModels(sample,'openai o')),['OpenAI: GPT-3.5 Turbo','OpenAI: GPT-5.1','OpenAI: GPT-5','OpenAI: gpt-oss-120b','OpenAI: o3 Mini','OpenAI: GPT-4o']);  // "o" starts "openai": all rank 2, list order
+for(const q of ['H100','MI300X','RTX 4090','80GB','بطاقة','zz'])assert.deepEqual(searchModels(sample,q),[],q);
+assert.deepEqual(modelSuggestions(sample,''),[]);assert.deepEqual(modelSuggestions(sample,' q '),[]);assert.deepEqual(modelSuggestions(sample,'o'),[]);
+assert.deepEqual(names(modelSuggestions(sample,'o3')),['OpenAI: o3 Mini']);assert.deepEqual(modelSuggestions(null,'qwen'),[]);
+// The real list, in the page's slim shape (scripts/build.py render_page).
+const real=require('../data/models.json').models.map(m=>({n:m.name,b:m.params_b,o:m.open,s:m.params_source,moe:m.moe||false,c:m.context,hf:m.hf}));
+let hits=modelSuggestions(real,'qwen');assert.equal(hits.length,53);assert.equal(hits[0].n,'Qwen2.5 72B Instruct');assert.ok(hits.some(m=>m.n==='Qwen2.5 Coder 32B Instruct'&&m.b===32.76));
+assert.equal(modelSuggestions(real,'Qwen').length,53);
+hits=modelSuggestions(real,'gpt 5');assert.equal(hits[0].n,'OpenAI: GPT-5');assert.ok(hits.every(m=>!/3\.5/.test(m.n)),'gpt 5 never lists GPT-3.5');
+assert.deepEqual(names(modelSuggestions(real,'o3')).sort(),['OpenAI: o3','OpenAI: o3 Mini','OpenAI: o3 Mini High','OpenAI: o3 Pro']);
+for(const q of ['gemma 2b','llama 7b','MI3','B2','H2','L4','H100','RTX 4090','MI300X','B200','DGX Spark','80GB','بطاقة'])assert.deepEqual(modelSuggestions(real,q),[],q);
+hits=modelSuggestions(real,'seek');assert.ok(hits.length>0&&hits.every(m=>/deepseek/i.test(m.n+' '+(m.hf||''))),'seek -> DeepSeek');
+hits=modelSuggestions(real,'qwen3');assert.ok(hits.length>0&&!hits.some(m=>m.n==='Qwen2.5 Coder 32B Instruct'),'qwen3 never lists Qwen2.5 Coder 32B');
+hits=modelSuggestions(real,'nvidia');assert.equal(hits.length,6);assert.ok(hits.every(m=>m.n.startsWith('NVIDIA: Nemotron')));
+console.log('PASS: AI models in the hardware search (sample and real list)');

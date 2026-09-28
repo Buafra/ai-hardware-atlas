@@ -153,7 +153,52 @@
   }
   // The kind under an availability date, or '' when it would only repeat "Not established" (same rule as release_kind in build.py).
   const releaseKind = k => k && k !== 'Not established' ? k : '';
-  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS};
+  // AI models named in the hardware search (the Android app's EstimatorText.search, same rules and ranking).
+  // A word is letters and digits with optional dotted versions; each word splits into letter and number parts:
+  // "qwen2.5" -> [qwen, 2.5], "32b" -> [32, b], "o3" -> [o, 3]. Numbers match whole ("5" finds 5 and 5.1, never 3.5 or 50);
+  // letters match whole, except the last part of a query word, which may be the start of a longer word ("qwe" finds qwen).
+  const WORD = /[\p{L}\p{Nd}]+(?:\.\p{Nd}+)*/gu, PART = /\p{L}+|\p{Nd}+(?:\.\p{Nd}+)*/gu;
+  const isDigit = s => /^\p{Nd}/u.test(s);
+  function words(text) { return (String(text || '').toLowerCase().match(WORD) || []).map(w => w.match(PART)); }
+  function partMatches(q, s, last) {
+    if (isDigit(q)) return isDigit(s) && (s === q || s.startsWith(q + '.'));
+    if (isDigit(s)) return false;
+    return last ? s.startsWith(q) : s === q;
+  }
+  function wordMatches(qParts, parts) {
+    for (let i = 0; i + qParts.length <= parts.length; i++) {
+      if (qParts.every((q, j) => partMatches(q, parts[i + j], j === qParts.length - 1))) return true;
+    }
+    return false;
+  }
+  function searchModels(models, query) {
+    const list = models || [];
+    if (!String(query || '').trim()) return list.slice();
+    const q = words(query);
+    if (!q.length) return [];
+    const parts = m => words(m.n + ' ' + (m.hf || '')).flat();
+    let hits = list.filter(m => { const p = parts(m); return q.every(w => wordMatches(w, p)); });
+    if (!hits.length) {
+      // Nothing matched word by word: a query word of letters only may also sit inside a longer word ("seek" -> DeepSeek).
+      hits = list.filter(m => {
+        const p = parts(m), joined = p.join('');
+        return q.every(w => wordMatches(w, p) || (w.length === 1 && !isDigit(w[0]) && joined.includes(w[0])));
+      });
+    }
+    const flat = q.flat(), first = q[0].join('');
+    const rank = m => {
+      const i = m.n.indexOf(': '), bare = words(i < 0 ? m.n : m.n.slice(i + 2)).flat();
+      if (bare.length >= flat.length && flat.every((x, j) => partMatches(x, bare[j], j === flat.length - 1))) return 0;
+      if (q.every(w => wordMatches(w, bare))) return 1;
+      if (words(m.n.split(': ')[0]).flat().join('').startsWith(first)) return 2;
+      return 3;
+    };
+    // Stable: list order within each rank.
+    return hits.map((m, i) => ({m, i, r: rank(m)})).sort((a, b) => a.r - b.r || a.i - b.i).map(x => x.m);
+  }
+  // What the hardware search offers: nothing below two characters.
+  function modelSuggestions(models, query) { return String(query || '').trim().length < 2 ? [] : searchModels(models, query); }
+  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions};
   if (!root.document) return;
 
   const AR = {
@@ -175,6 +220,11 @@
     'Launch price':'سعر الإطلاق','Availability date':'تاريخ التوفر','Announcement date':'تاريخ الإعلان','Power rating':'استهلاك الطاقة',
     'Ascending ↑':'تصاعدي ↑','Descending ↓':'تنازلي ↓','Reset':'إعادة ضبط','Cards':'بطاقات','Table':'جدول','Timeline':'خط زمني','View':'العرض',
     '{n} of {m}':'{n} من أصل {m}','No matches. Try another search or reset the filters.':'لا توجد نتائج. جرّب بحثاً آخر أو أعد ضبط الفلاتر.',
+    // AI models named in the hardware search
+    'AI models ({n})':'نماذج الذكاء الاصطناعي ({n})','The atlas lists hardware. Pick a model to see which hardware can run it.':'الأطلس يعرض العتاد. اختر نموذجاً لترى العتاد القادر على تشغيله.',
+    'Show all {n} models':'عرض كل النماذج ({n})','Show fewer':'عرض أقل','Show models':'عرض النماذج','Hide models':'إخفاء النماذج',
+    'No hardware matches this search.':'لا يوجد عتاد مطابق لهذا البحث.',
+    'No hardware matches this search with these filters. Reset the filters to see more.':'لا يوجد عتاد يطابق هذا البحث مع هذه الفلاتر. أعد ضبط الفلاتر لترى المزيد.',
     'Availability / target':'التوفر / الهدف','Announced / launched':'الإعلان / الإطلاق','Power':'الطاقة','Bandwidth':'عرض النطاق','AI compute':'حوسبة الذكاء الاصطناعي',
     'Form factor':'الشكل','Cooling':'التبريد','Interconnect':'الربط','Content reviewed':'تاريخ مراجعة المحتوى','Notes and official sources':'ملاحظات ومصادر رسمية',
     'Not listed':'غير مذكور','Not documented in this edition':'غير موثق في هذه النسخة','Compare':'قارن','Model':'الطراز','Memory':'الذاكرة','Type':'النوع',
@@ -285,8 +335,40 @@
     const m = findModel(s.model);
     if (m && m.o && m.b && !s.params) s.params = String(m.b);
   }
+  const sizeLabel = m => m.o ? (m.b ? fmt(m.b) + ' B' : T('size not published')) : T('closed · cloud only');
   function fillModelList() {
-    $('model-list').innerHTML = MODELS.models.map(m => `<option value="${esc(m.n)}">${esc(m.o ? (m.b ? fmt(m.b) + ' B' : T('size not published')) : T('closed · cloud only'))}</option>`).join('');
+    $('model-list').innerHTML = MODELS.models.map(m => `<option value="${esc(m.n)}">${esc(sizeLabel(m))}</option>`).join('');
+  }
+  // AI models matching the hardware search: a card above the products. Open with the first 3 when no hardware matches,
+  // a title line with "Show models" when hardware matches too. The count is announced through #mh-live, which stays in
+  // the page (a live region inside the hidden card would not be heard when the card appears).
+  const MH_FIRST = 3;
+  const mh = {q: null, hits: [], open: false, all: false, key: '', live: ''};
+  function renderModelHits() {
+    if (mh.q !== state.q) { mh.q = state.q; mh.hits = modelSuggestions(MODELS.models, state.q); }
+    const hits = mh.hits, n = hits.length, title = n ? F('AI models ({n})', {n}) : '';
+    if (title !== mh.live) { $('mh-live').textContent = title; mh.live = title; }
+    $('model-hits').hidden = !n;
+    if (!n) { mh.open = mh.all = false; return hits; }
+    const none = visible.length === 0, open = none || mh.open, toggle = $('mh-toggle');
+    $('mh-title').textContent = title;
+    toggle.hidden = none;
+    toggle.textContent = T(open ? 'Hide models' : 'Show models');
+    toggle.setAttribute('aria-expanded', String(open));
+    $('model-hits').classList.toggle('open', open);
+    $('mh-body').hidden = !open;
+    if (!open) return hits;
+    const shown = mh.all ? hits : hits.slice(0, MH_FIRST), key = state.lang + '\n' + shown.map(m => m.n).join('\n');
+    // Rebuilt only when the rows change, so typing doesn't replace buttons for nothing.
+    if (key !== mh.key) {
+      $('mh-list').innerHTML = shown.map(m => `<li><button type="button" class="mh-pick" data-pick="${esc(m.n)}"><bdi class="mh-name" lang="en">${esc(m.n)}</bdi><span class="sr-only">, </span><span class="mh-size">${esc(sizeLabel(m))}</span></button></li>`).join('');
+      mh.key = key;
+    }
+    const more = $('mh-more');
+    more.hidden = n <= MH_FIRST;
+    more.textContent = mh.all ? T('Show fewer') : F('Show all {n} models', {n});
+    more.setAttribute('aria-expanded', String(mh.all));
+    return hits;
   }
   function modelNote() {
     // The note follows the page direction; the Latin model name is isolated so it can't reorder an Arabic sentence.
@@ -378,7 +460,10 @@
     });
     visible.forEach(p => $('products').appendChild(cards.get(p.id)));
     $('count').textContent = F('{n} of {m}', {n: visible.length, m: countLabel(data.products.length, 'product', state.lang)});
+    const models = renderModelHits().length > 0, filtered = !!(state.vendor || state.level || state.scope || (state.fit && n));
     $('empty').hidden = visible.length !== 0;
+    $('empty').classList.toggle('slim', models);
+    $('empty').textContent = T(!models ? 'No matches. Try another search or reset the filters.' : filtered ? 'No hardware matches this search with these filters. Reset the filters to see more.' : 'No hardware matches this search.');
     $('direction').textContent = T(state.dir === 1 ? 'Ascending ↑' : 'Descending ↓');
     $('need').textContent = n ? F('Needs about {x} GB', {x: fmt(Math.round(n * 10) / 10)}) : T('Enter a model size to highlight hardware that fits.');
     ['cards','table','timeline'].forEach(v => $('view-' + v).setAttribute('aria-pressed', String(state.view === v)));
@@ -596,7 +681,7 @@
   function onNavigate() { if (location.href !== lastHref) route(false); }
 
   ['search','params','extra'].forEach(id => $(id).addEventListener('input', () => { readControls(); render(); }));
-  $('model').addEventListener('input', () => {
+  function modelInput() {
     const value = $('model').value.trim(), m = findModel(value);
     if (!value) { state.model = ''; render(); return; }
     if (!m) return;  // still typing
@@ -605,7 +690,24 @@
     $('params').value = m.o && m.b ? String(m.b) : '';
     readControls();
     render();
-  });
+  }
+  $('model').addEventListener('input', modelInput);
+  // A model picked from the search card: the search is cleared (the products come back) and the estimator takes the
+  // model exactly as if it had been chosen in its own field, then comes into view with the field focused.
+  function pickModel(name) {
+    const m = findModel(name);
+    if (!m) return;
+    state.q = '';
+    $('search').value = '';
+    mh.open = mh.all = false;
+    $('model').value = m.n;
+    modelInput();
+    land(currentView, 'estimator');
+    highlight($('estimator'));
+  }
+  $('mh-list').addEventListener('click', e => { const b = e.target.closest('[data-pick]'); if (b) pickModel(b.dataset.pick); });
+  $('mh-toggle').addEventListener('click', () => { mh.open = !mh.open; renderModelHits(); });
+  $('mh-more').addEventListener('click', () => { mh.all = !mh.all; renderModelHits(); });
   $('params').addEventListener('input', () => {
     // A hand-typed size no longer describes the picked model.
     const m = findModel(state.model);
