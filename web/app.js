@@ -190,7 +190,9 @@
       const i = m.n.indexOf(': '), bare = words(i < 0 ? m.n : m.n.slice(i + 2)).flat();
       if (bare.length >= flat.length && flat.every((x, j) => partMatches(x, bare[j], j === flat.length - 1))) return 0;
       if (q.every(w => wordMatches(w, bare))) return 1;
-      if (words(m.n.split(': ')[0]).flat().join('').startsWith(first)) return 2;
+      // The maker is the "Org" of "Org: Name"; a name without that prefix has none (as in the app).
+      const maker = i < 0 ? '' : words(m.n.slice(0, i)).flat().join('');
+      if (maker && maker.startsWith(first)) return 2;
       return 3;
     };
     // Stable: list order within each rank.
