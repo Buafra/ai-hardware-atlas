@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-28T09:43:36+00:00",
+  "at": "2026-09-28T14:31:09+00:00",
   "health": {
     "successful_sources": 114,
     "failed_sources": 0,
@@ -10,87 +10,112 @@
     {
       "url": "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/its-time-for-ti-nvidia-introduces-gaming-flagship-the-geforce-rtx-3080-ti",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/latest",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-announces-dgx-spark-and-dgx-station-personal-ai-computers",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-dgx-generative-ai-supercomputing",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-rtx-pro-workstations-servers-agentic-ai",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-debuts-geforce-rtx-3060-family-for-the-holidays",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-28T14:31:09+00:00"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-greatest-ever-generational-leap-in-performance-with-geforce-rtx-30-series-gpus",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-expands-reach-with-new-geforce-laptops-and-desktops-geforce-now-partners-and-omniverse-for-creators",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-28T14:31:09+00:00"
+    },
+    {
+      "url": "https://nvidianews.nvidia.com/news/nvidia-geforce-rtx-4070-brings-power-of-ada-lovelace-architecture-and-dlss-3-to-millions-more-gamers-and-creators-starting-at-599",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-geforce-rtx-3060-next-generation-of-the-worlds-most-popular-gpu",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-pro-servers-speed-trillion-dollar-enterprise-it-industry-transition-to-ai-factories",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T09:43:36+00:00"
+      "at": "2026-09-28T14:31:09+00:00"
     }
   ],
   "errors": {}

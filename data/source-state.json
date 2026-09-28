@@ -1,458 +1,458 @@
 {
   "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/": {
     "digest": "c8b367e53ff98597ad76ab8934140ad83d75b563e30ec28d920e0695fff8614e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://docs.nvidia.com/dgx/dgx-spark/hardware.html": {
     "digest": "341daa6f7df800075793a0973763053484c79a514766255a5b23d6da52a7dbaa",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/category/data-center/": {
     "digest": "a777f87d27812e94489bd39db109c17d34909e6f407cb123e112b55fea5e0d68",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/news/amd-announces-expanded-consumer-and-commercial-ai/": {
     "digest": "08397eb344cfbb7456c3650f953df1ecc28ba3825a051729daedbf989bcf1178",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/news/amd-unveils-next-generation-amd-rdna-4-architectu/": {
     "digest": "1ca3e5933c0160c0a3c87d431e3a308d5658504130ce448a09d42c9c6990da37",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/news/amd-unveils-vision-for-an-open-ai-ecosystem-detai/": {
     "digest": "0c3e29fdac68d3ba932f1a8f3bdcb661103bf12b02b6f4e9c9c2019ae40ed960",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/latest": {
-    "digest": "6482de7838c2a121a1d31cc3393a1298e216eda305412af8d53a5d6ac42cffd9",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "519107ac615230df60d4b05590129dce531a47199aa7164296e99c994c8cd72f",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-announces-dgx-spark-and-dgx-station-personal-ai-computers": {
-    "digest": "7ad38a3d1ae3a42bcfde0897e1ba88de59d3839f62679cb2c95d270b066a6b7e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "2e4b31bf3f6042c65944f66e7cef2358a1cdc0cb2a644995a48ea6b274d362f8",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-blackwell-dgx-generative-ai-supercomputing": {
-    "digest": "9095b657f472aa7d0850300a481defdfd0a533d668bbba264a112f95959dfd15",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "51fc9bd281b123834d83bd18ad36e7406fc68f6777378b4265bc7260f8065fed",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing": {
-    "digest": "03e60a430a652556c63b09d15e5e5b42b9a3d842a5dcdf776b4c31b295a01bb2",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "4d2b5f207fb3f10993249e6199dc6895cd1d612252e4c0ca21cca02910e9b6ee",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-blackwell-rtx-pro-workstations-servers-agentic-ai": {
-    "digest": "8d41e37a40102e12ff0a6d96c80bd58d0a360e1576e941c2ae5a833cff1bd460",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "7afc7e8dfa853766c9b72ec5c851ee110c098b9fbbee37b72d60e6424b223d13",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning": {
-    "digest": "fd87271b329e20d005447ad81e2a3d8886d452f8ff22d6877e938dbea0badb30",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "a466a836e8290afc6febf4d8f498fcfc7e4ad689bd9f1f13cd878048137de9eb",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-dgx-spark-arrives-for-worlds-ai-developers": {
-    "digest": "32eede4903cadbce409619982f42cc8ed3cd311e6e26d352120d4d30a3afa774",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "758ac17a968749b7abfa14418cd23a6d042817f8c562d2fd3b4c021c9fed22fc",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-rtx-pro-servers-speed-trillion-dollar-enterprise-it-industry-transition-to-ai-factories": {
-    "digest": "af507bed33d44f711222f7d70ab42d3fe83c1289eeb5bf08dc0232073f782d28",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "bd47a57d97c4ce3f563105c75cedd78a7ea65cf3364954640aae1ec60d200077",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-supercharges-hopper-the-worlds-leading-ai-computing-platform": {
-    "digest": "860a8e1b3ab3d2b2f02dbc87fc5dbff2bdb48ea3b9e51ea25439fcbc9b1bbeab",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "558bd02f03bfd70d5bf42be923204f72d6edf6ad1f62dad699aa748464d278c8",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-unveils-rubin-cpx-a-new-class-of-gpu-designed-for-massive-context-inference": {
-    "digest": "2a84c3ccee5679ad7ff760fb285264c64336e249d0cd3eb02970dc97c173aa3b",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "91ddd8dbc00b618c7cef290a33769f13794f3e317539a19631e1b9c59c1f2409",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform": {
-    "digest": "5920d0d5c65cf287d7531b45194dcc764f28024a9e67aa29f7780be837b59375",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "7b87bdb12701f11d5f36dbbfd56fb763f3ca04860c3c038e626c611c06b6360b",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://rocmdocs.amd.com/en/latest/reference/gpu-arch/mi350.html": {
     "digest": "7f37120929a02079fb528635a8486b56dfb1a341e32ef203bb75ff669af924d1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html": {
     "digest": "20aa3a0bfb228dfd30f633625da25340c3fefcf4458f6177ebcb81da7e3fd9fc",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/newsroom/press-releases/2023-4-13-amd-unveils-the-most-powerful-amd-radeon-pro-graph.html": {
     "digest": "d47bd98bd20c1a4b80e9b7d9613b727a80d866165ec922c7b693432b04fc55b0",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/newsroom/press-releases/2024-10-10-amd-unveils-leadership-ai-solutions-at-advancing-a.html": {
     "digest": "c5af804321acdcb165b9139caf621d97bb311e44fd3da96eb4de9150a1135c12",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html": {
     "digest": "f077468961f2cf6780d1763c7106ce73076179b9a7371c919c9b3447dc0e0083",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350p.html": {
     "digest": "de2e8f6fa97038e33fa193aa6997679b0d1c92171f691de3633be52275b0b8a8",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi400.html": {
     "digest": "114aacaebe5630fb29d2332898d4c10f80a079f5c0636d6c0a40f0cfbc04bbe0",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html": {
     "digest": "911db404acee7298c68327e8d554cece544a4f74d57abf8dd793584471de4564",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-sg/geforce/news/rtx-5070-ti-out-now/": {
     "digest": "29a0f6d397470881fb8b9ae9c52cf32b1435e4d24ef961132e1c9785d99ebc24",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/": {
     "digest": "097a9c640df96adc177b518193e608b79b4a99b0767b64b6e761ba1694004d9d",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-5070-out-now/": {
     "digest": "286d01b22581c438efdc07c38841c4b1016ef32c8a1a818902ece97f82aeb8e0",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-5090-5080-out-now/": {
     "digest": "92997c866d513d9da9806d5ffee6105450e3b2bbd0b07f4c68e3f77b256c092b",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000/": {
     "digest": "9078fdb66b6a330876d5cd8ed9827b166c631fb22799e5790a299f4d3093aed2",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/": {
     "digest": "6e301d2d82dace3579a4d0046462410bee60a0bcae92557b43de1f19e62f7621",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory-h100-h200-b200/latest/components.html": {
     "digest": "6c23dc5eb5094c07b10c274d2badf6066c2bd71217eb8ca50e6e4e8dc0561127",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://docs.nvidia.com/enterprise-reference-architectures/hgx-ai-factory/latest/components.html": {
     "digest": "1804d7643f32640ac2d39188d8122f701dde66e3ce6e26efde3d8aa235365171",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics": {
-    "digest": "d97dad6029a09defc9e70636cd2976f3d0ef05c07dba0eb8f827a6b67f33f3a2",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "b4158d549140af70047db00876ee512dfe31b0bbf851ce13ee615fd9183a48bd",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html": {
     "digest": "e09ad6ab8b548053330402356deeb6115a89e997e7fe2964302fbe2840499d0e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html": {
     "digest": "86d1f79a6acde1ebdc30b81c9a2744d3a818ec42a52cb9d9329d7cb76f6796fd",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html": {
     "digest": "091db27e3a464f1194dfce9a6be4f5b3d26bab2598e24b7401631da61ff7be2c",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html": {
     "digest": "e7049ac3bea37074a27540fbec37231f9f6fe09ca87e66f3857f6426c0d63521",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/accelerators/instinct/mi400/mi455x.html": {
     "digest": "3f0683e96d8989eb1dc3ade54cbd59cc85f7c8721008e41c82db7edcfcfc893c",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070.html": {
     "digest": "ed3f6538f0b813db5ff2dc3ffcb6e78869af8006f01189342981579de52ce7f6",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html": {
     "digest": "38403098a61bd433145a62cf8100ace5f7d44db68997ab86c2582ca02a23dccc",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w7900.html": {
     "digest": "4a15718027be11ecd8b6ddb1d126f7a9b69d9c6a6c29fb9a2acf1359b7619d64",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.amd.com/en/products/processors/laptop/ryzen-pro/ai-max-pro-300-series/amd-ryzen-ai-max-plus-pro-395.html": {
     "digest": "53e666cff5dec122fba11537f3a9a87893ab9eec388ce3b575ef8e5453b68970",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/dgx-b200/": {
     "digest": "a3a0c2089dd10928cd39a34b6acc8f1170999680d6341390e0dcec1c00912093",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/gb300-nvl72/": {
     "digest": "7997dfda8d36e49356afca8853a2a7c75a00d3a0af6a54b3a2caae2597436caf",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/h200/": {
     "digest": "9144a8cc0196081a425686413a9d9dd04d70d52a9754e8c768d25e6ad9d2b141",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/hgx/": {
     "digest": "f57cdaa484abc6323426cf540bda939dfd2805336937bd0d121acd5804cc3259",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/products/rtx-pro-server/": {
     "digest": "95b6923f8e1ebae686a3560b6737f7b6165cab2e321a778761e222f3b6f30d06",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/": {
     "digest": "7bc7bb85016382f7951413f0476a3f187b09413946b4c8f018e549b3fe903048",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/": {
     "digest": "fc05ce7c4d25d9c30296b1fef2b0b02a4c7fc0b504e6dab6889798b658db12d5",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/compare/": {
     "digest": "036676869d9217be399b803ecce0e409b262a9722908e810df8e665f05afa121",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/": {
     "digest": "81689efa69dcda7401544cdb1ed41bce8f40c901b93edf159f7d98da4458a73a",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/products/workstations/dgx-spark/": {
     "digest": "5780a28b77f2193d4de96d3e23ea201925acdfc940e1e99fa0fd3661d7dc27f5",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/products/workstations/dgx-station/": {
     "digest": "c4bf9746d78e26f8d98008c96375f588163d98742e373d9255ff8ab79a603989",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4500/": {
     "digest": "3d6d1dcd669f9c8e45def3fa37d70ec4d6d15941394e7ded875500f4b9d1e4ae",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-5000/": {
     "digest": "7bb31afa8c38da8831bc175ac4f11d5e086a364336dfd86f3464d28d685bbd05",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/": {
     "digest": "192f9a4bebd7c21cfb3257062a792271f62995155680264539f0143f39567320",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/": {
     "digest": "72b3c4f56989280fef403e1d787dde60293081e81efa18a5b53e84225c6ab881",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/category/ai/": {
     "digest": "ab97597f94df0df905050560dc2a33d73c00040e1ff2bf50a9918d6542eda6fc",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://newsroom.amd.com/category/client-computing/": {
     "digest": "12982a3c292aacdb03d30634deade7f5d620b3f29f1bd61b3774e238b9501331",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/": {
     "digest": "eb97d20fbc701d25fb6ea8c2bf1c4c0373d07582502cbe33adf27a716ff5ab8f",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/geforce-rtx-40-super-series": {
-    "digest": "19590e68fe50578d98642fd8ef5f976b2b9cc638530dfa088e271ae9b0de0e8f",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "5316d9caab80ca3de401308e09b02aeff5ede6aea212703988026659f3060a6e",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/geforce-rtx-4060-family-is-here-nvidias-revolutionary-ada-lovelace-architecture-comes-to-core-gamers-everywhere-starting-at-299": {
-    "digest": "dfa1182c46df1988d20270274ba46272c5e6668fa39cd295efaafca12c3dc349",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "e41713632457a5d3dddc87639048150178fd4c6a36f4dc0743abf88c72aba7b2",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/its-time-for-ti-nvidia-introduces-gaming-flagship-the-geforce-rtx-3080-ti": {
-    "digest": "1cd2e99bfd4c1e2e41f74d251afbc5eef1e208a96079f25e80fd8a87171c70c6",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "05ea6e6c5c1d85ed5674b4d79e526222971e5b4e0bbd72b95dd4038c7b9d9244",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-debuts-geforce-rtx-3060-family-for-the-holidays": {
-    "digest": "be06989ad7e35552129f0b31fe69f2cb771f9b961ca317a794d4e74d53f78d1d",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "73c3197707f6ca185b2a9c7ea40ec2d72bf3846c76a68e115f1ceb8c8b23d17a",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-delivers-greatest-ever-generational-leap-in-performance-with-geforce-rtx-30-series-gpus": {
-    "digest": "1b69829d47d401ed095ba50ac2b32892180d84095ca8cbb60ce21f09600c3d4f",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "b0d0bb593004f85859203dec1673821ff656238217480e5c0e53b85a47e1f658",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-delivers-quantum-leap-in-performance-introduces-new-era-of-neural-rendering-with-geforce-rtx-40-series": {
-    "digest": "c46c431db6b151c1b8166ad616549bbee2a98a4a50bc83463bb8a4e995afc7aa",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "efbbb566d768a5ef3e466713d664c3065eb4cb9f4c06df8a040d3de94abb6871",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-expands-reach-with-new-geforce-laptops-and-desktops-geforce-now-partners-and-omniverse-for-creators": {
-    "digest": "77a638204732b862e52ade4ca1364de9b3ad48619b1dc52caea7570f7139c4b0",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "0b293a69202fb3b0a3b4c072cfb57bf2870ee12ec08827c87a3665308a3e7313",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-geforce-rtx-4070-brings-power-of-ada-lovelace-architecture-and-dlss-3-to-millions-more-gamers-and-creators-starting-at-599": {
-    "digest": "80169c58670f43f62d22794402e4102dc4ad176eecea09e7dcb7f830d961cb06",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "ecc12b4daef086f12fc60b3e13e63504f951fcdb7d2b33b4d7737be904fa4a76",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/nvidia-introduces-geforce-rtx-3060-next-generation-of-the-worlds-most-popular-gpu": {
-    "digest": "dad04c22e9e53981f8c9040aab7a0482ab9a3bb377d765f41a68bb3de2a83c02",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "972b8c68083e4445efcfb0ae102f755edb7abc82b73479e413102c8204d97ff3",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory": {
-    "digest": "f9348936e08da1965adc37d90d0c9d934fa32aa0b699b066c01eb40875cff7f3",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "digest": "3b3336eeb73f95a611ac629e221362d324458c5e276bd71571f3b421f8d1b6e3",
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/": {
     "digest": "7e9ef87d4d073f1f3fc9841feb480618947671967f0b94066efa80dcf9baf678",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/": {
     "digest": "5689bcc809636a18f90d2b1423d51e0565eca304036a615cea53b1da83b534f8",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/": {
     "digest": "55627b8eef72e0ed7f0b225531443c1a31aa649fcff48d0b68280e676a5589da",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/": {
     "digest": "fed3d67a64744aa2ea7c71b076a073aae6265fa7b876e8480e2b46df56c8569e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/": {
     "digest": "ead29c2a6ef1ca65f0444d7cb8142ce5245d162746781732c5229328028fe3f1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/": {
     "digest": "b36b713abda35e14d5f5fd342e61b3b4328025b5c44751c1323647a05cf0b3ee",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/": {
     "digest": "4f4a49dd16019da2c4b20d85b88cfb535bb3c307f3d95af24affbfc1d4dba4ed",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/": {
     "digest": "31a81b8f87c81b7d9e824deaf7a2683de53c9fab6d187a5243bcdb30abe5a34f",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/": {
     "digest": "ada7075105f3a1a1b4bc62dfd09d0322d3cf5bb74940f3c8e7b6e59f364123b7",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/12gb-4080-unlaunch/": {
     "digest": "5e48d28db7efd13b67311ba006e949d4f908c8f9f045ff3ef1b103af7e660bed",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-graphics-cards/": {
     "digest": "a5b8e1f4fb19d360acc17de637c83c7b4ffdefabec362a9001704828e1e71566",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-out-now/": {
     "digest": "48a3a5dabcf86baf2f54bddac924cebabb3969819d2906bbde2737e94308b999",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-out-now/": {
     "digest": "63d9e4fb0e8e78b36de589111d84fde37b09c93b6c5f2f83e27104e41a28fcfb",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-ti-out-december-2/": {
     "digest": "3e50bd527ca6a51318bae85f39a2c2fc16216b7460a145d5e21d034cd943d752",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060/": {
     "digest": "a19f1f3ca4785d2a768858c55f094211554163d2349bcdc293a241c5e02dcd84",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-available-october-29/": {
     "digest": "94f7796fe2d282939f1f4a172c0d70904e29d5c156fed65cd6f224e82b3911fa",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-out-now/": {
     "digest": "6db890aa4ff8fff8317b7db7b8319c308357f72fd333af234f583c4f461b4155",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-ti-out-now/": {
     "digest": "2f0889d856f2b3719d2a14a89ce717544385a504d05008c6a6e0a2695007678c",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-out-now/": {
     "digest": "a20c978ebf06fd53f51371cd4a69d2e90fa59b53ede51eb91e5715f8f9f69ba6",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-ti-out-now/": {
     "digest": "c4c107e55b8f9cae14186e4308558dc2f8e6467fa8c11741a5df766fd41b10b3",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3090-ti-out-now/": {
     "digest": "f4dd1cd400771243ac462dd512d642504750d99bb7448cdded7d2979a30124d4",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti-game-ready-driver/": {
     "digest": "44249ef40ef2eee7bae7cf2758cc3ef9020a228c5de731d332caeb807e8a6080",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti/": {
     "digest": "59c2b39a429fac79c4a699ca0637cfb73007b677e45c58bb70513195c809cb01",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-available-june-29/": {
     "digest": "ddfb4d9df6faa5edc661be2e876a55114142621da64b5cef8e4b56bf8c318aa1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-game-ready-driver/": {
     "digest": "b7af1881585ff18d276a248b88821436233bf766e1e246c3196449c1f39f7ee8",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-game-ready-driver/": {
     "digest": "00fffef07eacceb3cd5c1125852824b2cd4350a73f59fe8cf1f5b7fba19e2497",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-super-game-ready-driver/": {
     "digest": "9ff2f00172028d7d6c665c5cdef49c6e62a876b2798344ec4825a84dd0ca1ec1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-game-ready-driver/": {
     "digest": "a46f4cc5f7fb6ff3c4f575a9b863e45786d8878d0517ee976f693660c742a5db",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-super-rtx-video-hdr-game-ready-driver/": {
     "digest": "a77b69f9e5f9ddb07457f465bb3120459368fb2a57d10563991f383ef9b527e9",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti/": {
     "digest": "c123364ad4c9a6715ca1b719f73b7906b18a89d89df70c546a8479d9a66a390e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070/": {
     "digest": "3df50550abc3765ea44213ab9e7dba754ac54975e7d1b93697e9c239f47d7af6",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/": {
     "digest": "d27faf934be4f001a4c0c019f9cd34b35aa438b0aced95f073d7d84fc924c87a",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-out-now/": {
     "digest": "b9087b180049af26a67da391b4ccab4e555f5b4412d70580e6d36fe77aae110e",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-super-game-ready-driver/": {
     "digest": "25cc7d7b4d212a4d72c466e75212f4a8670615c099b9133bed1e9da59886c7b1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4090-out-now/": {
     "digest": "e8f078f6ef7d4bb9bfd22af35802d356092347746de1a4bf1b5bb8173a3e4345",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/god-of-war-game-ready-driver/": {
     "digest": "68e3c8f0f48306082289f564642a082f68922d13968c3677c8378549be94d575",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/introducing-rtx-30-series-graphics-cards/": {
     "digest": "1caed9173cd8bbc4c1085fcbeaffaec9c38ce858e5ed9592747ea0127dab7021",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/portal-prelude-rtx-game-ready-driver/": {
     "digest": "7ecaf97c07d948cb5043915a653b6db4f77d9b093f15842ab29cd46607f21fb1",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-3050-6gb-out-now/": {
     "digest": "dbf3714c3b21ac25fc317b583e3fcbed01faee904dde07cef423cc1a6421af8f",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-3080-ti-3070-ti-graphics-cards/": {
     "digest": "2a6ffcafc7557e74d0ce2c1d3362144b84452cfe00680b1f8fad6b8564c48791",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-3090-out-september-24/": {
     "digest": "bbe601f2e1dd4160b677dfb4fd111253f0484aeed5a50588a75819742840bb89",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-40-series-graphics-cards-announcements/": {
     "digest": "e6abde6ed9e3b0cbcb67384a7501aec3507410d3737bdd4336a30367a2f9abb6",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   },
   "https://www.nvidia.com/en-us/geforce/news/rtx-4060-stranded-alien-dawn-dlss-released/": {
     "digest": "f42993abe8e4d0898530cb25d49851e759fe5d89ca5106c14d0e28209534ad50",
-    "checked_at": "2026-09-28T09:43:36+00:00"
+    "checked_at": "2026-09-28T14:31:09+00:00"
   }
 }
