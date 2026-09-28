@@ -31,39 +31,6 @@
       "why_ar": "لقطة عالمية حديثة جداً تُظهر انتقال التركيز من تبني الذكاء الاصطناعي إلى إدارته بكفاءة عبر الحوكمة والوكلاء وضبط التكاليف."
     },
     {
-      "id": "mckinsey-state-of-ai-2026",
-      "publisher": "McKinsey & Company (QuantumBlack, AI by McKinsey)",
-      "title_en": "The state of AI in 2026: On the road to ROI",
-      "title_ar": "حالة الذكاء الاصطناعي في 2026: على طريق العائد على الاستثمار",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
-      "published": "2026-08-25",
-      "access": "free",
-      "region": "global",
-      "topics": [
-        "adoption",
-        "agents",
-        "investment",
-        "strategy",
-        "generative-ai"
-      ],
-      "findings_en": [
-        "Among 1,719 respondents in 97 countries, 37% report that AI has made a positive contribution to their organisation's EBIT, essentially unchanged from 2025; so-called AI high performers remain at about 6%.",
-        "80% say AI has raised their own productivity and 50% say it helps them make better decisions, so personal gains are running ahead of company-level returns.",
-        "At firms with more than $1 billion in revenue, the share scaling AI agents rose from 27% to 40%; at smaller firms it stayed flat at 22%.",
-        "32% say agentic coding tools let their organisation build in-house at least one piece of software it would otherwise have bought.",
-        "About one in five say AI operating costs, including token costs, are limiting their use, yet 60% expect AI investment to rise over the next year."
-      ],
-      "findings_ar": [
-        "شمل الاستطلاع 1,719 مشاركاً في 97 دولة، وأفاد 37% منهم بأن الذكاء الاصطناعي أسهم إيجابياً في الأرباح التشغيلية (EBIT) لمؤسساتهم، وهي نسبة شبه ثابتة مقارنةً بعام 2025، فيما بقيت المؤسسات «عالية الأداء» عند نحو 6%.",
-        "قال 80% إن الذكاء الاصطناعي رفع إنتاجيتهم الشخصية، وقال 50% إنه يساعدهم على اتخاذ قرارات أفضل؛ أي أن المكاسب الفردية تسبق العائد على مستوى المؤسسة.",
-        "في الشركات التي تتجاوز إيراداتها مليار دولار، ارتفعت نسبة من يوسّعون استخدام وكلاء الذكاء الاصطناعي من 27% إلى 40%، بينما بقيت عند 22% في الشركات الأصغر.",
-        "أفاد 32% بأن أدوات البرمجة الوكيلة مكّنت مؤسساتهم من بناء برنامج أو خاصية واحدة على الأقل داخلياً بدلاً من شرائها.",
-        "قال نحو واحد من كل خمسة إن تكاليف التشغيل، ومنها تكلفة الوحدات اللغوية، تحدّ من استخدامهم للذكاء الاصطناعي، ومع ذلك يتوقع 60% زيادة الاستثمار خلال العام المقبل."
-      ],
-      "why_en": "McKinsey's annual survey shows AI adoption and agent use growing while bottom-line returns stay flat, so the gap now lies in how firms reorganise work, not in access to tools.",
-      "why_ar": "يُظهر استطلاع McKinsey السنوي أن انتشار الذكاء الاصطناعي واستخدام الوكلاء في ازدياد بينما العائد المالي ثابت، ما يعني أن الفارق اليوم في إعادة تنظيم العمل لا في توفّر الأدوات."
-    },
-    {
       "id": "ey-us-ai-pulse-wave5-2026",
       "publisher": "EY",
       "title_en": "EY US AI Pulse Survey (Wave 5): The reckoning over AI cost and value has begun",
@@ -447,37 +414,6 @@
       "why_ar": "يبيّن أن عوائد الذكاء الاصطناعي تتركز في مجموعة صغيرة من الشركات، ويوضح ما يميزها عن غيرها."
     },
     {
-      "id": "mckinsey-ai-trust-2026",
-      "publisher": "McKinsey & Company",
-      "title_en": "State of AI trust in 2026: Shifting to the agentic era",
-      "title_ar": "حالة الثقة في الذكاء الاصطناعي 2026: الانتقال إلى عصر الوكلاء",
-      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era",
-      "published": "2026-03-25",
-      "access": "free",
-      "region": "global",
-      "topics": [
-        "governance",
-        "risk",
-        "agents"
-      ],
-      "findings_en": [
-        "About 500 organisations were surveyed from December 2025 to January 2026; the average responsible-AI maturity score rose to 2.3 from 2.0 in 2025, but only around a third reach level 3 or higher in strategy, governance and agent controls.",
-        "Security and risk worries are the biggest thing holding back full-scale agentic AI for nearly two-thirds of respondents, cited far more often than regulatory uncertainty or technical limits.",
-        "Inaccuracy (74%) and cybersecurity (72%) are the risks most often rated as highly relevant.",
-        "Lack of know-how and training is now the top obstacle to adopting responsible-AI practices, named by nearly 60% (about 50% a year earlier).",
-        "Where responsible AI has a clearly accountable owner (such as a dedicated AI-governance role or an audit/ethics team), average maturity reaches 2.6, against 1.8 where no function is accountable."
-      ],
-      "findings_ar": [
-        "شمل المسح نحو 500 مؤسسة بين ديسمبر 2025 ويناير 2026، وارتفع متوسط نضج الذكاء الاصطناعي المسؤول إلى 2.3 مقابل 2.0 في 2025، لكن نحو الثلث فقط بلغ المستوى الثالث أو أعلى في الاستراتيجية والحوكمة وضوابط الوكلاء.",
-        "يرى قرابة الثلثين أن مخاوف الأمن والمخاطر هي أكبر ما يعيق التوسع الكامل في الذكاء الاصطناعي الوكيل، بفارق واضح عن الغموض التنظيمي والقيود التقنية.",
-        "عدم الدقة (74%) والأمن السيبراني (72%) هما أكثر المخاطر التي يصنّفها المشاركون عالية الأهمية.",
-        "أصبح نقص المعرفة والتدريب العائق الأول أمام تطبيق ممارسات الذكاء الاصطناعي المسؤول، إذ ذكره قرابة 60% مقابل نحو 50% في العام السابق.",
-        "في المؤسسات التي حدّدت جهة مسؤولة بوضوح عن الذكاء الاصطناعي المسؤول، كدور مخصص لحوكمة الذكاء الاصطناعي أو فريق تدقيق وأخلاقيات، بلغ متوسط النضج 2.6، مقابل 1.8 حيث لا توجد جهة مسؤولة."
-      ],
-      "why_en": "As AI systems start taking actions rather than only producing text, governance and skills, not technology, are becoming the limit on scaling safely.",
-      "why_ar": "مع انتقال أنظمة الذكاء الاصطناعي من إنتاج النصوص إلى تنفيذ الإجراءات، أصبحت الحوكمة والمهارات، لا التقنية، هي ما يحدّد القدرة على التوسع الآمن."
-    },
-    {
       "id": "wef-organizational-transformation-2026",
       "publisher": "World Economic Forum (with Accenture)",
       "title_en": "Organizational Transformation in the Age of AI: How Organizations Maximize AI's Potential",
@@ -668,71 +604,6 @@
       ],
       "why_en": "It gives a clear map of where enterprise AI is heading next and why moving from pilots to real use is now the main challenge.",
       "why_ar": "يقدّم خريطة واضحة لاتجاه الذكاء الاصطناعي في المؤسسات، ويبيّن لماذا أصبح الانتقال من التجارب إلى التشغيل الفعلي التحدي الأبرز."
-    },
-    {
-      "id": "mgi-agents-robots-us-2025",
-      "publisher": "McKinsey Global Institute",
-      "title_en": "Agents, robots, and us: Skill partnerships in the age of AI",
-      "title_ar": "الوكلاء والروبوتات ونحن: شراكة المهارات في عصر الذكاء الاصطناعي",
-      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai",
-      "published": "2025-11-25",
-      "access": "free",
-      "region": "global",
-      "topics": [
-        "workforce",
-        "skills",
-        "economy",
-        "agents"
-      ],
-      "findings_en": [
-        "In theory, about 57% of US work hours involve activities that today's proven technologies could automate (44% via agents, 13% via robots); MGI says this measures technical potential, not expected job losses.",
-        "Over 70% of the skills in demand today apply both to work machines could take on and to work they cannot, so most skills keep their value even as the way they are used shifts.",
-        "US job postings asking for AI fluency (skill in using and overseeing AI tools) rose roughly sevenfold over two years, the fastest growth of any skill tracked.",
-        "Under MGI's midpoint adoption scenario, the US could gain roughly $2.9 trillion in economic value a year by 2030, but only if companies rebuild whole workflows around people, agents and robots.",
-        "Nonphysical work makes up about two-thirds of US work hours, and roughly a third of that time draws on social and emotional abilities that AI largely cannot take over."
-      ],
-      "findings_ar": [
-        "نظرياً، تشمل نحو 57% من ساعات العمل في الولايات المتحدة أنشطة يمكن للتقنيات المُثبتة حالياً أتمتتها (44% عبر الوكلاء و13% عبر الروبوتات)، ويؤكد التقرير أن هذا يقيس الإمكان التقني وليس توقعاً لفقدان الوظائف.",
-        "أكثر من 70% من المهارات المطلوبة اليوم تُستخدم في أعمال قابلة للأتمتة وأخرى غير قابلة لها، لذا تحتفظ معظم المهارات بقيمتها مع تغيّر طريقة توظيفها.",
-        "تضاعف طلب إعلانات الوظائف الأمريكية على الطلاقة في استخدام الذكاء الاصطناعي، أي القدرة على استخدام أدواته وإدارتها، نحو سبع مرات خلال عامين، وهو أسرع نمو بين المهارات المرصودة.",
-        "في سيناريو التبنّي المتوسط، قد تكسب الولايات المتحدة نحو 2.9 تريليون دولار سنوياً من القيمة الاقتصادية بحلول 2030، بشرط أن تعيد الشركات بناء مسارات العمل كاملةً حول البشر والوكلاء والروبوتات.",
-        "يمثّل العمل غير البدني نحو ثلثي ساعات العمل في الولايات المتحدة، ويعتمد قرابة ثلث هذه الساعات على مهارات اجتماعية وعاطفية تظل في معظمها خارج قدرات الذكاء الاصطناعي."
-      ],
-      "why_en": "It moves the jobs debate from which jobs disappear to how human skills combine with AI, which gives a practical frame for training and hiring plans.",
-      "why_ar": "ينقل النقاش من سؤال «أي الوظائف ستختفي؟» إلى «كيف تتكامل المهارات البشرية مع الذكاء الاصطناعي؟»، ما يقدّم إطاراً عملياً لخطط التدريب والتوظيف."
-    },
-    {
-      "id": "mckinsey-gcc-state-of-ai-2025",
-      "publisher": "McKinsey & Company",
-      "title_en": "The state of AI in GCC countries: In pursuit of scale and value",
-      "title_ar": "الذكاء الاصطناعي في دول الخليج: سباقٌ نحو التوسّع في الاستخدام وتعظيم القيمة الاقتصادية",
-      "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-gcc-countries-in-pursuit-of-scale-and-value",
-      "arabic_version_url": "https://www.mckinsey.com/featured-insights/highlights-in-arabic/the-state-of-ai-in-gcc-countries-in-pursuit-of-scale-and-value-arabic/ar",
-      "published": "2025-11-13",
-      "access": "free",
-      "region": "gcc",
-      "topics": [
-        "adoption",
-        "agents",
-        "strategy",
-        "investment"
-      ],
-      "findings_en": [
-        "84% of surveyed GCC executives say their organisation uses AI in at least one business function, up from 62% in McKinsey's 2023 GCC survey.",
-        "60% report that their organisation already uses AI agents to some degree.",
-        "89% expect their organisation's AI budget to grow in the coming year.",
-        "31% say AI is being scaled or fully deployed across their organisation, and 11% qualify as 'value realizers' that attribute at least 5% of earnings to AI.",
-        "Product and service development saw the largest rise in AI use over the past two years."
-      ],
-      "findings_ar": [
-        "أفاد 84% من التنفيذيين المشاركين في دول الخليج بأن مؤسساتهم تستخدم الذكاء الاصطناعي في وظيفة واحدة على الأقل، مقارنةً بـ62% في استبيان McKinsey لعام 2023.",
-        "ذكر 60% أن مؤسساتهم تستخدم وكلاء الذكاء الاصطناعي بدرجةٍ ما.",
-        "يتوقّع 89% زيادة ميزانية الذكاء الاصطناعي في مؤسساتهم خلال العام المقبل.",
-        "أفاد 31% بأن الذكاء الاصطناعي بلغ في مؤسساتهم مرحلة التوسّع أو النشر الكامل، فيما صُنِّفت 11% من المؤسسات ضمن فئة «محقّقي القيمة» التي تَنسب 5% على الأقل من أرباحها إلى الذكاء الاصطناعي.",
-        "سجّل مجال تطوير المنتجات والخدمات أكبر ارتفاع في استخدام الذكاء الاصطناعي خلال العامين الماضيين."
-      ],
-      "why_en": "This survey tracks how GCC organisations are moving from AI pilots to wider use, and it names the capabilities shared by the organisations that get the most value.",
-      "why_ar": "يرصد التقرير انتقال المؤسسات الخليجية من التجارب الأولية إلى الاستخدام الأوسع للذكاء الاصطناعي، ويحدّد القدرات المشتركة لدى المؤسسات الأكثر استفادةً منه."
     },
     {
       "id": "ey-responsible-ai-pulse-2025",

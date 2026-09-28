@@ -464,7 +464,7 @@ def reports_run(browser):
             page.select_option('#r-year', '')
             check(len(visible_ids(page)) == N_R and page.locator('#l-count').inner_text() == '', f'{tag} filters cleared')
             # Search: English publisher names, Arabic with letter variants (a bare alef finds «الإمارات»).
-            word, must = ('الامارات', 'pwc-uae-ai-jobs-barometer-2026') if rtl else ('McKinsey', 'mckinsey-state-of-ai-2026')
+            word, must = ('الامارات', 'pwc-uae-ai-jobs-barometer-2026') if rtl else ('Deloitte', 'deloitte-state-of-ai-enterprise-2026')
             page.fill('#lq', word)
             ids = visible_ids(page)
             check(must in ids and 1 <= len(ids) < N_R, f'{tag} search {word!r} shows {len(ids)} (must include {must})')

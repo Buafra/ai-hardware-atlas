@@ -483,7 +483,6 @@ class ReportDataTests(Quiet, unittest.TestCase):
         mutate(doc['reports'][i])
         return '\n'.join(learn.report_problems(doc))
     def test_validation_catches_each_rule(self):
-        gcc = next(i for i, r in enumerate(self.reports) if 'arabic_version_url' in r)
         cases = {
             'is not on the allow-list': lambda r: r.update(publisher='Gartner'),
             "is not on the publisher's own domain (mckinsey.com)": lambda r: r.update(publisher='McKinsey & Company', url='https://example.com/state-of-ai.pdf'),
@@ -512,7 +511,8 @@ class ReportDataTests(Quiet, unittest.TestCase):
         }
         for want, mutate in cases.items():
             self.assertIn(want, self.broken(mutate), want)
-        self.assertIn('arabic_version_url', self.broken(lambda r: r.update(arabic_version_url='https://example.com/ar'), gcc))
+        # An official Arabic version must also be on the publisher's own domain (no report uses one now; test it on a copy).
+        self.assertIn('arabic_version_url', self.broken(lambda r: r.update(arabic_version_url='https://example.com/ar')))
         doc = copy.deepcopy(self.doc)
         doc['reports'][1]['id'] = doc['reports'][0]['id']
         doc['reports'][2]['url'] = doc['reports'][0]['url']
