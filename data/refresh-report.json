@@ -1,22 +1,35 @@
 {
-  "at": "2026-09-28T18:36:07+00:00",
+  "at": "2026-09-28T23:49:19+00:00",
   "health": {
-    "successful_sources": 114,
-    "failed_sources": 0,
-    "attempted_sources": 114
+    "successful_sources": 257,
+    "failed_sources": 12,
+    "attempted_sources": 269
   },
   "changes": [],
   "review": [
     {
-      "url": "https://rocmdocs.amd.com/en/latest/reference/gpu-arch/mi350.html",
+      "url": "https://newsroom.amd.com/category/ai/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T18:36:07+00:00"
+      "at": "2026-09-28T23:49:19+00:00"
     },
     {
-      "url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html",
+      "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T18:36:07+00:00"
+      "at": "2026-09-28T23:49:19+00:00"
     }
   ],
-  "errors": {}
+  "errors": {
+    "https://developer.nvidia.com/embedded/develop/roadmap": "ValueError",
+    "https://marketplace.nvidia.com/en-us/enterprise/robotics-edge/?category=igx_developer_kit&page=1&limit=15": "ValueError",
+    "https://resources.nvidia.com/en-us-blackwell-architecture/blackwell-ultra-datasheet": "ValueError",
+    "https://resources.nvidia.com/en-us-briefcase-for-datasheets/proviz-rtx-a1000-datasheet": "ValueError",
+    "https://resources.nvidia.com/en-us-briefcase-for-datasheets/rtx-5000-ada-datashe": "ValueError",
+    "https://resources.nvidia.com/en-us-dgx-systems/dgx-b300-datasheet": "ValueError",
+    "https://resources.nvidia.com/en-us-dgx-systems/dgx-h200-datasheet": "ValueError",
+    "https://resources.nvidia.com/en-us-dgx-systems/dgx-rubin-nvl8-datasheet": "ValueError",
+    "https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c": "ValueError",
+    "https://resources.nvidia.com/en-us-rtx-pro-6000/data-center-datasheet-rtx-pro-4500": "ValueError",
+    "https://www.nvidia.com/en-us/data-center/dgx-h200.md": "ValueError",
+    "https://www.nvidia.com/en-us/geforce/forums/geforce-graphics-cards/5/282577/geforce-rtx-2080-ti-availability-update/": "ValueError"
+  }
 }
