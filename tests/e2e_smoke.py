@@ -34,6 +34,7 @@ the right in Arabic), a 96x72 thumbnail beside the title on phones, 80x60 on the
 import json
 import re
 import sys
+import urllib.request
 from pathlib import Path
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright
@@ -63,13 +64,22 @@ KEY = {
 }
 LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')
 failures, checks = [], 0
-FOOT_LABELS = {'en': ['Overview', 'Hardware', 'AI news', 'UAE AI', 'Learn AI', 'Qahwa & AI lessons', 'Contact', 'About'],
-               'ar': ['الرئيسية', 'العتاد', 'أخبار الذكاء الاصطناعي', 'الذكاء الاصطناعي في الإمارات', 'تعلّم الذكاء الاصطناعي', 'دروس قهوة و AI', 'تواصل معنا', 'عن الموقع']}
+def has_android():
+    """The site serves the Android app (dist/download/, scripts/android_app.py): the footer then ends with its link."""
+    try:
+        with urllib.request.urlopen(BASE + 'download/latest.json', timeout=5) as r:
+            return r.status == 200
+    except OSError:
+        return False
+
+ANDROID = has_android()
+FOOT_LABELS = {'en': ['Overview', 'Hardware', 'AI news', 'UAE AI', 'Learn AI', 'Qahwa & AI lessons', 'Contact', 'About'] + (['Android app'] if ANDROID else []),
+               'ar': ['الرئيسية', 'العتاد', 'أخبار الذكاء الاصطناعي', 'الذكاء الاصطناعي في الإمارات', 'تعلّم الذكاء الاصطناعي', 'دروس قهوة و AI', 'تواصل معنا', 'عن الموقع'] + (['تطبيق Android'] if ANDROID else [])}
 
 def foot_hrefs(lang):
     """The footer links after app.js has run: the separate pages carry ?lang=ar in an Arabic visit."""
     q = '?lang=ar' if lang == 'ar' else ''
-    return ['#home', '#hardware', '#news', '#uae', 'learn.html' + q, 'qahwa.html' + q, '#contact', '#contact/about']
+    return ['#home', '#hardware', '#news', '#uae', 'learn.html' + q, 'qahwa.html' + q, '#contact', '#contact/about'] + (['#contact/android'] if ANDROID else [])
 
 def footer_tidy(page, tag):
     """Every footer link on one line, at least 24 px tall (WCAG 2.2 SC 2.5.8) and inside the footer, the follow button's

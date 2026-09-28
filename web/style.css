@@ -497,6 +497,19 @@ tbody tr:hover{background:var(--surface-2)}
 .ab-acts{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .ab-lessons{padding-block:9px;border-radius:999px;color:var(--accent-text)}
 .ab-lessons svg{flex:none}
+/* The Android app (#android, #contact/android): the newest signed APK, same address for every version */
+.ab-app{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px 16px;align-items:start;border-color:color-mix(in srgb,var(--accent) 35%,var(--border))}
+.ab-app-main{display:flex;flex-direction:column;gap:6px;min-width:0}
+.ab-app-main h3{margin:0;color:var(--accent-text)}
+.ab-app-main p{font-size:15px;line-height:1.6}
+.about .ab-app-meta{font-size:14px;font-weight:700}
+.about .ab-app-note{font-size:14px;line-height:1.55;color:var(--muted)}
+.ab-app-sum summary{cursor:pointer;width:max-content;max-width:100%;font-size:13.5px;color:var(--muted)}
+.ab-app-sum code{display:block;margin-top:4px;font-size:12.5px;line-height:1.5;overflow-wrap:anywhere;text-align:left}
+.btn-app{align-self:center;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;background:#6537d7;color:#fff;font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap}
+.btn-app:hover{background:#5531b0}
+.btn-app svg{flex:none}
+@media (max-width:767px){.ab-app{grid-template-columns:auto minmax(0,1fr)}.btn-app{grid-column:1/-1}}
 html[lang="ar"] .ab-intro{font-size:16.5px;line-height:1.85}
 
 /* footer */

@@ -29,6 +29,7 @@ Cipher Lacuna ("Decoding the gaps in AI knowledge"): public NVIDIA / AMD compari
   Raise `POLICY_VERSION` in `scripts/policy.py` whenever the policy text changes: every story is checked again.
 - About Cipher Lacuna: the owner-approved text lives in `data/about.json` (promise, two about paragraphs, the name story, the four areas, trust, the Qahwa & AI line; English and Arabic) and is used as written, never reworded. The build checks it (all keys, non-empty English and Arabic, the areas hardware, news, uae, learn in that order, no update-schedule wording) and stops before writing anything if it is wrong. The hero's promise comes from it, and so do the page's `description`, `og:description` and `twitter:description` ("Cipher Lacuna: " and the English promise, cut at a sentence boundary if it would pass 200 characters), and `#contact` shows it as an About section under the email card (deep link `#contact/about`, footer link "About"); `scripts/app_data.py` exports the same file for the Android app as `dist/app/about.json`.
 - UAE AI section: the latest AI headlines about the UAE first (a story counts as UAE news only when its headline, excerpt or summary names a UAE place, ruler or entity, whoever publishes it; publishers' own names such as Sharjah24 or «الإمارات اليوم» don't count — `policy.mentions_uae`), then the sourced key-fact cards (`data/uae.json`, reviewed by hand, each with its "as of" date). The view shows the first 8 UAE headlines, then a "Show more" button (like the AI news list), so the key facts stay close on a phone. The overview's UAE pillar likewise shows the latest UAE headlines, then one highlighted fact (`uae_highlights` in `data/site.json`).
+- Android app download: the About section (`#contact/android`, footer link "Android app" on the overview and on `learn.html`) offers the newest signed APK at one fixed address, `https://cipherlacuna.ae/download/Cipher-Lacuna.apk`, with its version, size, date and SHA-256, and `download/latest.json` beside it (for a later in-app update check). `scripts/android_app.py` takes it from this repository's GitHub releases before each build (see "Android app releases"); without a checked APK there is no card and no link.
 - "Follow Qahwa & AI · @qahwa.w.ai" button (Instagram) in every view, the footer and the top bar (icon only on phones).
 - Contact view: the email address (assembled by JavaScript, so it is not in the page source) and, in the About section below it, the follow button beside the Qahwa & AI line (one follow button in the view); there is no form.
 - "Pick a model" in the estimator: every model listed on OpenRouter (`data/models.json`, refreshed with each scheduled run by `scripts/models.py`). Open-weight sizes come from Hugging Face safetensors metadata (all experts of MoE models counted); only unambiguous dense names are used as a fallback. Closed models are shown as cloud-only.
@@ -45,6 +46,25 @@ Cipher Lacuna ("Decoding the gaps in AI knowledge"): public NVIDIA / AMD compari
 4. Confirm the deployment succeeds; use the URL reported by the deployment job.
 
 No API key is needed for the current source checker. GitHub's scheduled jobs can be delayed. GitHub may disable scheduled workflows in an inactive public repository after 60 days; inspect Actions if checks stop.
+
+## Android app releases
+
+The website serves only the newest release; a new release replaces the file at the same address. To publish a version:
+
+1. Build and sign it (the app's own repository; the owner signs with the Cipher Lacuna key). Every version needs a higher `versionCode`.
+2. Publish it as a release of this repository, tag `android-v<versionName>`, the APK uploaded as `Cipher-Lacuna.apk`:
+
+   ```bash
+   gh release create android-v1.0.2 "Cipher-Lacuna-1.0.2.apk#Cipher-Lacuna.apk" -R Buafra/ai-hardware-atlas --title "Cipher Lacuna for Android 1.0.2" --notes "..."
+   ```
+
+   (With `gh`, `path#name` sets the name the file is uploaded under; the upload must be named exactly `Cipher-Lacuna.apk`.)
+3. The release starts **Update hardware and publish**. `scripts/android_app.py` picks the highest `android-vX.Y.Z` release (not drafts or pre-releases) and downloads its APK. It checks the file before the site serves it:
+   - the size and SHA-256 match GitHub's record;
+   - it is a ZIP holding `AndroidManifest.xml`;
+   - its v2/v3 signature block carries the Cipher Lacuna certificate (SHA-256 `1d3d4f1b…b6f912`). A debug build, an unsigned build or another key is refused, and the previous version stays on the site.
+
+Old releases stay on GitHub as history; the site never links them. Deleting every Android release removes the download card on the next run. The APK is cached between runs (`.cache/android`, actions/cache), so a failed GitHub request keeps the current download. Tests: `tests/test_android_app.py`, and `tests/e2e_android.py` in a browser.
 
 ## What updates automatically
 

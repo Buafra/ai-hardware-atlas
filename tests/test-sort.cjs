@@ -92,7 +92,10 @@ assert.equal(parseRoute('#nope','?q=4090').view,'hardware');
 const tpl=require('node:fs').readFileSync(require('node:path').join(__dirname,'../web/template.html'),'utf8');
 const keys=/\[\?&\]\(([a-z|]+)\)\(=\|&\|\$\)/.exec(tpl);assert.ok(keys,'head script key list');
 assert.deepEqual(keys[1].split('|').sort(),[...HW_KEYS].sort());
-assert.ok(tpl.includes("h==='about'?'contact'"),'head script maps #about to the contact view');
+assert.ok(tpl.includes("h==='about'||h==='android'?'contact'"),'head script maps #about and #android to the contact view');
+// The Android app card: #android (no-JavaScript anchor) and #contact/android open the contact view and bring the card into view.
+for(const h of ['#android','#contact/android']){const r=parseRoute(h,'');assert.deepEqual(r,{view:'contact',sub:'android',arg:''},h);assert.deepEqual(routePatch(r,known),{patch:{},hash:'contact',focus:'android'},h);}
+assert.equal(routePatch(parseRoute('#contact/about',''),known).focus,'about');
 assert.equal(pageUrl('/','q=4090',''),'/?q=4090');assert.equal(pageUrl('/','',''),'/');
 // Arabic agreement with formatted numbers; dates for people (same cases as tests/test_build.py).
 assert.equal(countLabel(131072,'token','ar',n=>n.toLocaleString('en-US')),'131,072 رمزاً');assert.equal(countLabel(8192,'token','en',n=>n.toLocaleString('en-US')),'8,192 tokens');

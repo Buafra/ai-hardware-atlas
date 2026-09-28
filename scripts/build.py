@@ -13,6 +13,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A3
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import android_app
 import learn
 import news_images
 import policy
@@ -547,6 +548,8 @@ ICON = {
     'calendar': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>',
     'check': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>',
     'clock': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+    'phone': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18h3"/></svg>',
+    'download': '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>',
 }
 NAV = {'hardware': 'Hardware', 'news': 'AI news', 'uae': 'UAE AI', 'contact': 'Contact'}
 CONTACT_LEAD = 'Questions, corrections or partnership ideas? Email us.'
@@ -809,9 +812,32 @@ def about_section(c):
             f'<h2 id="about-title">{L("About " + name, "عن " + name)}</h2>'
             f'<div class="ab-top"><div class="ab-intro">{paras}</div>'
             f'<div class="ab-box ab-name">{h("The name", "معنى الاسم")}<p>{about_L(ab["name_story"])}</p></div></div>'
-            f'{h("What you&#x27;ll find", "ماذا ستجد هنا")}<ul class="ab-areas">{areas}</ul>'
+            f'{h("What you&#x27;ll find", "ماذا ستجد هنا")}<ul class="ab-areas">{areas}</ul>{android_card(c.get("android"))}'
             f'<div class="ab-box ab-trust"><span class="t-ic" aria-hidden="true">{ICON["shield"]}</span><div>{h("How we keep it honest", "كيف نحافظ على الدقة")}<p>{about_L(ab["trust"])}</p></div></div>'
             f'<div class="ab-qahwa"><p>{about_L(ab["qahwa"])}</p><div class="ab-acts">{follow_btn()}{lessons_link("btn-ghost ab-lessons")}</div></div></section>')
+
+def android_card(info):
+    """The Android app in the About section (#android, deep link #contact/android): the newest signed APK from the
+    GitHub releases, checked by scripts/android_app.py and served by the site itself (download/Cipher-Lacuna.apk, the
+    same address for every version). No checked APK: no card."""
+    if not info:
+        return ''
+    v, mb, day = E(info['version']), android_app.size_mb(info['size']), str(info.get('published') or '')
+    android = f'<bdi lang="en" dir="ltr">Android {android_app.MIN_ANDROID}</bdi>'
+    when_en, when_ar = (f' · {ymd(day, "en")}', f' · {ymd(day, "ar")}') if re.match(r'^\d{4}-\d{2}-\d{2}(T|$)', day) else ('', '')  # release time -> UAE date
+    meta = L(f'Version <bdi>{v}</bdi> · <bdi>{mb}</bdi> MB · {android} or newer{when_en}',
+             f'الإصدار <bdi>{v}</bdi> · <bdi>{mb}</bdi> ميجابايت · {android} أو أحدث{when_ar}')
+    return (f'<div class="ab-box ab-app" id="android"><span class="t-ic" aria-hidden="true">{ICON["phone"]}</span><div class="ab-app-main">'
+            f'<h3>{L("The Android app", ar_text("تطبيق Android"))}</h3>'
+            f'<p>{L("Cipher Lacuna on your phone, free: hardware, AI news, UAE AI and Learn AI in English and Arabic, with notifications for new AI news.", ar_text("Cipher Lacuna على هاتفك مجاناً: العتاد وأخبار الذكاء الاصطناعي والإمارات وتعلّم الذكاء الاصطناعي بالعربية والإنجليزية، مع إشعارات بأحدث الأخبار."))}</p>'
+            f'<p class="ab-app-meta">{meta}</p>'
+            f'<p class="ab-app-note">{L("Not from Google Play: after the download, open the file and, if Android asks, allow installs from your browser. Each new version installs over the old one and keeps your settings.", ar_text("التطبيق ليس من Google Play: بعد التنزيل افتح الملف، وإذا طلب Android ذلك فاسمح بالتثبيت من المتصفح. ويُثبَّت كل إصدار جديد فوق القديم مع الاحتفاظ بإعداداتك."))}</p>'
+            f'<details class="ab-app-sum"><summary>{L("Check the file (SHA-256)", ar_text("تحقق من الملف (SHA-256)"))}</summary><code lang="en" dir="ltr">{E(info["sha256"])}</code></details></div>'
+            f'<a class="btn-app" href="{android_app.PUBLIC_APK}" download="{android_app.ASSET}" type="application/vnd.android.package-archive">{ICON["download"]}{L("Download for Android", "نزّل التطبيق")}</a></div>')
+
+def android_link(info):
+    """The footer's link to the Android card (nothing without an APK)."""
+    return '<a href="#android" data-route="contact/android" data-i18n>Android app</a>' if info else ''
 
 # ---------- page ----------
 
@@ -826,7 +852,7 @@ def learn_context():
             'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
             'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
-def context(data, feed, sources, uae, about=None, company=None):
+def context(data, feed, sources, uae, about=None, company=None, android=None):
     """Everything the page is rendered from. `company`: the company images news_images.run() prepared ({item id:
     image}); every other headline gets its topic image."""
     ps = data['products']
@@ -850,6 +876,8 @@ def context(data, feed, sources, uae, about=None, company=None):
         'learn': learn_context(),
         # About Cipher Lacuna (data/about.json): the hero's promise and the About section in #contact.
         'about': about if about is not None else load_about(),
+        # The Android app (android_app.load()): the About section's download card; None: no card.
+        'android': android,
     }
 
 def prepare(data):
@@ -873,10 +901,11 @@ def load_all():
     load_about()  # the About text (hero promise, #contact/about): a bad file fails here too
     return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
 
-def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None):
+def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None, android=None):
     """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json;
-    `company`: the company images of news_images.run() (none: every headline gets its topic image)."""
-    c = context(data, feed, sources, uae, about, company)
+    `company`: the company images of news_images.run() (none: every headline gets its topic image);
+    `android`: the checked APK of android_app.load() (none: no download card or footer link)."""
+    c = context(data, feed, sources, uae, about, company, android)
     slim = {'updated_at': models.get('updated_at'), 'models': [{'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']} for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
@@ -889,7 +918,7 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=Non
         'CHANGES': '<ul>' + ''.join(f'<li><b>{ymd(x["at"], "en")}</b> - {E(change_text(x["summary"]))}</li>' for x in data['changes'][:8]) + '</ul>',
         'EDITION': E(data['edition_note']), 'XNAV_HW': xnav(c, ('news', 'uae')), 'NEWS': news_view(c), 'UAE': uae_view(c),
         'CONTACT_HEAD': contact_head(), 'ABOUT': about_section(c), 'XNAV_CONTACT': xnav(c, ('hardware', 'news', 'uae')),
-        'INSTAGRAM': INSTAGRAM, 'FOLLOW': follow_btn(), 'YEAR': str(data['updated_at'])[:4],
+        'INSTAGRAM': INSTAGRAM, 'FOLLOW': follow_btn(), 'ANDROID_LINK': android_link(android), 'YEAR': str(data['updated_at'])[:4],
         'MODELS': json.dumps(slim, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c'),
         'JSON': json.dumps(public, ensure_ascii=False).replace('<', '\\u003c'),
     }
@@ -963,12 +992,16 @@ def main():
     # failing the build) and the site's own topic images for every other story.
     company=news_images.run(OUT,news_items(feed,sources),{s['id']:s for s in sources})
     news_images.copy_topic_images(OUT)
-    text,public=render_page(data,feed,sources,uae,models,company=company)
+    # The Android app: the newest signed APK that scripts/android_app.py fetched and checked (.cache/android), copied to
+    # dist/download/. None: no download card, and no old APK left behind.
+    android=android_app.load()
+    android_app.publish(OUT,android)
+    text,public=render_page(data,feed,sources,uae,models,company=company,android=android)
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     copy_brand_images(OUT/'brand')
-    learn.build(OUT)
+    learn.build(OUT,android=bool(android))
     qahwa.build_safe(OUT)  # the Qahwa & AI lessons page: bad Qahwa data is logged and left out, never stops the build
     import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
     app_data.write(OUT,data,feed,sources,uae,models,company=company)  # dist/app/*.json for the Android app
@@ -980,10 +1013,12 @@ def main():
         if (OUT/news_images.OUT_DIR).exists():shutil.copytree(OUT/news_images.OUT_DIR,target.parent/news_images.OUT_DIR,dirs_exist_ok=True)
         news_images.copy_topic_images(target.parent)
         copy_brand_images(target.parent/'brand')
-        learn.build(target.parent, home=target.name)  # its links back to the overview go to the standalone file
+        if android:android_app.publish(target.parent,android)
+        learn.build(target.parent, home=target.name, android=bool(android))  # its links back to the overview go to the standalone file
         qahwa.build_safe(target.parent, home=target.name)
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
-    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF, {learn.PAGE} and {qahwa.PAGE}")
+    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF, {learn.PAGE} and {qahwa.PAGE}"
+          +(f", Android app {android['version']} at {android_app.PUBLIC_APK}" if android else ', no Android app download (no checked APK)'))
 
 if __name__=='__main__':main()

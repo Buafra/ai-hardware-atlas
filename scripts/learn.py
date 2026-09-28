@@ -913,8 +913,9 @@ def lessons_doc_safe():
         print(f'learn: Qahwa & AI data unreadable, no lesson chips ({type(e).__name__}: {e})', file=sys.stderr)
         return qahwa.empty_doc()
 
-def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None):
+def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None, android=False):
     """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to.
+    android: the site serves the Android app (a footer link to its card in the overview's About section).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips).
     reports_doc: the Reports tab's data (default: data/learn/reports.json), shown newest first."""
     lessons_doc = lessons_doc if lessons_doc is not None else qahwa.empty_doc()
@@ -1004,13 +1005,14 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     main = (f'<main id="main" tabindex="-1"><div class="wrap">\n{ihead}\n{qcard}\n{tools}\n'
             f'{concepts_panel(groups, concepts, home, lessons_doc)}\n{stacks_panel(stacks, concepts, home)}\n{reports_panel(reports, home)}\n'
             f'{note}\n{xnav}\n</div></main>\n')
+    android_link = f'<a href="{h}#contact/android">{L("Android app", "تطبيق Android")}</a>' if android else ''
     footer = (f'<footer class="foot"><div class="wrap foot-in"><div><p class="foot-brand"><a class="brand" href="{h}"><span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span></a></p>'
               f'<p class="foot-tag">{L(*TAGLINE)}</p><p><bdi lang="en">© {esc(year)} Cipher Lacuna.</bdi> {L("All rights reserved.", "جميع الحقوق محفوظة.")}</p>'
               f'<p>{L("Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.", "صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.")}</p></div>\n'
               f'<div class="foot-side">{follow}<p>{L("AI lessons and news from Qahwa &amp; AI, in English and Arabic.", f"دروس وأخبار الذكاء الاصطناعي من {QAHWA_AR}، بالعربية والإنجليزية.")}</p>'
               f'<nav class="foot-links" aria-label="Footer" data-aria-ar="تذييل الصفحة"><a href="{h}">{L("Overview", "الرئيسية")}</a><a href="{h}#hardware">{L("Hardware", "العتاد")}</a>'
               f'<a href="{h}#news">{L("AI news", "أخبار الذكاء الاصطناعي")}</a><a href="{h}#uae">{L("UAE AI", "الذكاء الاصطناعي في الإمارات")}</a>'
-              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{QAHWA_PAGE}">{L("Qahwa &amp; AI lessons", f"دروس {QAHWA_AR}")}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a></nav></div></div></footer>\n')
+              f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{QAHWA_PAGE}">{L("Qahwa &amp; AI lessons", f"دروس {QAHWA_AR}")}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a>{android_link}</nav></div></div></footer>\n')
     return head + header + main + footer + f'<script>{_asset("learn.js")}</script></body></html>\n'
 
 def landing_card(data_dir=DATA, href=PAGE):
@@ -1032,15 +1034,16 @@ def _asset(name):
         raise LearnDataError(f'web/{name} contains {closing}, which would end the inline block early')
     return text
 
-def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, uae_path=UAE, lessons_doc=None):
+def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, uae_path=UAE, lessons_doc=None, android=False):
     """Validate the learn data and write <out_dir>/learn.html plus the brand PNGs it links (brand/). Returns the page path.
-    lessons_doc: the published Qahwa & AI posts (default: lessons_doc_safe(), from data/qahwa.json)."""
+    lessons_doc: the published Qahwa & AI posts (default: lessons_doc_safe(), from data/qahwa.json).
+    android: the overview has the Android app card (build.py passes it; a footer link to it)."""
     concepts_doc, stacks_doc = load(data_dir)
     reports_doc = load_reports(data_dir)
     catalog = json.loads(Path(catalog_path).read_text(encoding='utf-8'))
     validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path), reports_doc=reports_doc)
     page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc_safe() if lessons_doc is None else lessons_doc,
-                  reports_doc=reports_doc)
+                  reports_doc=reports_doc, android=android)
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     target = out_dir / PAGE

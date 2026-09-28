@@ -2,6 +2,9 @@ name: Update hardware and publish
 on:
   push:
     branches: [main]
+  release:
+    # A new Android app release (tag android-vX.Y.Z with Cipher-Lacuna.apk) goes on the site at once.
+    types: [published]
   workflow_dispatch:
   schedule:
     # Every 4 hours: UTC 23:15 / 03:15 / 07:15 / 11:15 / 15:15 / 19:15 = Dubai 03:15 / 07:15 / 11:15 / 15:15 / 19:15 / 23:15.
@@ -80,6 +83,18 @@ jobs:
           restore-keys: |
             news-img-${{ steps.news-img-week.outputs.week }}-
             news-img-
+      - name: Restore the Android app (kept between runs, so a GitHub hiccup never drops the download)
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/android
+          key: android-apk-none
+          restore-keys: |
+            android-apk-
+      - name: Fetch the newest Android app release (checks size, SHA-256 and the signing certificate)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/android_app.py
       - name: Build website and PDF
         run: python scripts/build.py
       - name: Keep news images for the next run (saved even if a later step fails)
@@ -88,6 +103,13 @@ jobs:
         with:
           path: .cache/news-img
           key: news-img-${{ steps.news-img-week.outputs.week }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Keep the Android app for the next run (a new cache entry only when the APK changes)
+        if: always() && hashFiles('.cache/android/latest.json') != ''
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: .cache/android
+          key: android-apk-${{ hashFiles('.cache/android/latest.json') }}
       - name: Save refreshed data
         run: |
           git config user.name 'github-actions[bot]'

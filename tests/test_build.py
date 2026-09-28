@@ -744,7 +744,7 @@ class AboutTests(unittest.TestCase):
         self.assertNotIn('follow-btn',card);self.assertNotIn('cc-follow',card)
         self.assertIn('<a href="#contact" data-i18n>Contact</a><a href="#about" data-route="contact/about" data-i18n>About</a></nav>',self.foot)
         self.assertIn("'About':'عن الموقع'",self.js)
-        self.assertIn("contact: ['about']",self.js);self.assertIn("out.focus = 'about';",self.js)
+        self.assertIn("contact: ['about', 'android']",self.js);self.assertIn("out.focus = route.sub;",self.js)
         self.assertEqual(self.html.count('id="about"'),1)
         learn_page=build.learn.render(*build.learn.load())
         self.assertIn('<a href="index.html#contact/about">',learn_page)
