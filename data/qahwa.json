@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-28T07:50:00+04:00",
+  "generated_at": "2026-09-28T08:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -702,6 +702,51 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-28T07:50:00+04:00",
       "cover": "images/qahwa/week-01-day-02--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-03--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "tools",
+      "title": {
+        "en": "Birthday message in 3 styles",
+        "ar": "رسالة عيد ميلاد بثلاثة أساليب"
+      },
+      "summary": {
+        "en": "Birthday message → 3 styles in 10 seconds",
+        "ar": "رسالة عيد ميلاد ← 3 أساليب في 10 ثوانٍ"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "ar": {
+            "title": "رسالة عيد ميلاد ← ==3 أساليب== في 10 ثوانٍ"
+          },
+          "en": {
+            "title": "Birthday message → ==3 styles== in 10 seconds"
+          },
+          "chat": {
+            "user": "اكتب رسالة عيد ميلاد لأختي بثلاثة أساليب",
+            "bot": [
+              "رسمي: كل عام وأنتِ بخير",
+              "مرح: كبرتِ سنة، وما زلتِ الأصغر في قلوبنا",
+              "شعري: يا نور البيت، عامٌ جديد يزهر بكِ"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Write a birthday message for my sister in 3 styles: formal, funny and poetic. Two lines each.",
+        "ar": "اكتب رسالة عيد ميلاد لأختي بثلاثة أساليب: رسمي، مرح، وشعري. كل رسالة سطران.",
+        "code": "R2"
+      },
+      "permalink": "https://www.instagram.com/reel/Dd0RrywDZXB/",
+      "published_at": "2026-09-28T08:00:00+04:00",
+      "cover": "images/qahwa/week-01-day-03--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
