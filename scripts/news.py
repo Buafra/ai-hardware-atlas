@@ -1,4 +1,4 @@
-"""Collect AI headlines with every scheduled run (6 times a day) from vetted feeds in data/news-sources.json.
+"""Collect AI headlines with every scheduled run (3 times a day) from vetted feeds in data/news-sources.json.
 
 Stored per item: title, link, source, date and a short excerpt of the publisher's own description (at most 280
 characters, publisher boilerplate removed). The excerpt comes from the feed, or, when the feed gives none worth showing,
@@ -8,8 +8,9 @@ only for items that mention AI. With ANTHROPIC_API_KEY set, recent English headl
 recent items get an AI summary of 3 to 5 sentences in English and Arabic written from the article page, plus a verdict
 (ai_focus) on whether the article is mainly about AI; both texts are marked as AI-written on the page, and items judged
 not mainly about AI stay in news.json but are not shown. A failing feed keeps its previous items; nothing is deleted
-because a fetch failed. What the AI steps did (or why they did nothing) is recorded in news.json under "ai" (not shown
-on the site).
+because a fetch failed. What the AI steps did (or why they did nothing), with the tokens they used and an estimate of
+their cost, is recorded in news.json under "ai" (not shown on the site). With NEWS_BATCH=1 (the scheduled workflow) each
+AI step sends its requests as one Message Batch, which costs half as much as asking one request at a time.
 
 Content policy for the UAE and the GCC states (scripts/policy.py, approved by the owner):
   M1  Stories that mention the region come only from regional outlets and official sources: an item from any other
@@ -117,7 +118,7 @@ DUPLICATE_SHARE = 0.7  # ... and the shorter headline shares at least this share
 DUPLICATE_WORDS = 4    # ... and at least this many
 MAX_ITEMS = 200       # items stored per run (newest first) ...
 PER_SOURCE_MIN = 3    # ... plus up to this many of each source's newest that the cap leaves out
-TRANSLATE_PER_RUN = 20
+TRANSLATE_PER_RUN = 40  # 3 runs a day: as many headlines a day as 20 with 6 runs, and more
 EXCERPT_MAX = 280
 PAGE_EXCERPTS_PER_RUN = 60
 PAGE_TRIES = 2  # pages with no usable description are tried again once, then left alone
@@ -154,6 +155,13 @@ STATS, _STATS_LOCK = collections.Counter(), threading.Lock()
 
 def note(kind):
     PROBLEMS[kind] += 1
+
+# Tokens this run's Claude requests used, and what they cost (an estimate from the list prices below).
+USAGE, _USAGE_LOCK = collections.Counter(), threading.Lock()
+PRICE_IN, PRICE_OUT = 5.0, 25.0  # US dollars per million input / output tokens for MODEL; the Batch API bills half
+BATCH_WAIT = 20 * 60  # seconds a run waits for one batch; it is then cancelled (unanswered requests are not billed) ...
+BATCH_CANCEL_WAIT = 5 * 60  # ... and its answers so far are read once the cancel has gone through
+BATCH_POLL = 20
 
 def count(kind, n=1):
     with _STATS_LOCK:
@@ -612,6 +620,133 @@ def collect(source, now, blocked=None, cache=None):
         raise EmptyFeed('Feed has no items')
     return items
 
+# ---------- Claude requests ----------
+
+def _record(usage, batched):
+    """Add one answered request's tokens to USAGE (fake clients in tests carry no usage)."""
+    tokens_in, tokens_out = getattr(usage, 'input_tokens', 0) or 0, getattr(usage, 'output_tokens', 0) or 0
+    with _USAGE_LOCK:
+        USAGE['requests'] += 1
+        USAGE['batched'] += int(batched)
+        USAGE['input_tokens'] += tokens_in
+        USAGE['output_tokens'] += tokens_out
+        USAGE['micro_usd'] += round((tokens_in * PRICE_IN + tokens_out * PRICE_OUT) * (0.5 if batched else 1))
+
+def usage_report():
+    """This run's Claude usage for news.json: requests (how many went in a batch), tokens and the estimated cost."""
+    return {'requests': USAGE['requests'], 'batched': USAGE['batched'], 'input_tokens': USAGE['input_tokens'],
+            'output_tokens': USAGE['output_tokens'], 'estimated_usd': round(USAGE['micro_usd'] / 1e6, 4)}
+
+def ask_claude(step, system, output_format, max_tokens, prompts):
+    """Claude's answers to `prompts` ({key: user message}), all with one system prompt and output format (a pydantic
+    model): {key: ('ok', parsed output) | ('retry', None) after an API or network error (asked again next run) |
+    ('bad', None) for a refusal, a cut-off or an unusable answer}. With NEWS_BATCH=1 the requests go as one Message
+    Batch at half price (see _ask_batch); requests the batch could not send or did not answer in time are then asked
+    one at a time, as they are without NEWS_BATCH. Problems are noted under `step`."""
+    if not prompts:
+        return {}
+    import anthropic
+    client = anthropic.Anthropic(timeout=120.0, max_retries=1)
+    answers = _ask_batch(client, step, system, output_format, max_tokens, prompts) if os.environ.get('NEWS_BATCH') == '1' else {}
+
+    def one(text):
+        try:
+            response = client.messages.parse(model=MODEL, max_tokens=max_tokens, output_format=output_format, system=system,
+                                             messages=[{'role': 'user', 'content': text}])
+        except (anthropic.APIConnectionError, anthropic.APIStatusError) as exc:  # network or service: try again next run
+            print(f'{step}: request skipped ({type(exc).__name__})', file=sys.stderr)
+            note(f'{step}: {type(exc).__name__}')
+            return 'retry', None
+        except Exception as exc:  # unusable output or anything unexpected
+            print(f'{step}: request failed ({type(exc).__name__})', file=sys.stderr)
+            note(f'{step}: {type(exc).__name__}')
+            return 'bad', None
+        _record(getattr(response, 'usage', None), False)
+        if response.stop_reason != 'end_turn' or response.parsed_output is None:
+            print(f'{step}: answer skipped (stop reason {response.stop_reason})', file=sys.stderr)
+            note(f'{step}: stop reason {response.stop_reason}')
+            return 'bad', None
+        return 'ok', response.parsed_output
+
+    rest = [key for key in prompts if key not in answers]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        for key, answer in zip(rest, pool.map(lambda key: one(prompts[key]), rest)):
+            answers[key] = answer
+    return answers
+
+def _ask_batch(client, step, system, output_format, max_tokens, prompts):
+    """Send `prompts` as one Message Batch and wait for it (up to BATCH_WAIT; most batches end within minutes). Returns
+    the answers it got, as ask_claude does. Left out, to be asked one at a time: every request when the batch could not
+    be created (nothing was sent, so nothing is paid twice), and requests the batch did not answer before it was
+    cancelled or expired. A batch whose results cannot be read is not asked again this run (it may have been billed)."""
+    import anthropic
+    ids = {f'r{n}': key for n, key in enumerate(prompts)}
+    output = {'format': {'type': 'json_schema', 'schema': anthropic.transform_schema(output_format)}}
+    requests = [{'custom_id': cid, 'params': {'model': MODEL, 'max_tokens': max_tokens, 'system': system, 'output_config': output,
+                                              'messages': [{'role': 'user', 'content': prompts[key]}]}} for cid, key in ids.items()]
+    try:
+        batch = client.messages.batches.create(requests=requests)
+    except Exception as exc:
+        print(f'{step}: batch not created ({type(exc).__name__}), asking one request at a time', file=sys.stderr)
+        note(f'{step}: batch {type(exc).__name__}')
+        return {}
+    deadline, cancelled = time.monotonic() + BATCH_WAIT, False
+    while batch.processing_status != 'ended':
+        if time.monotonic() >= deadline:
+            if cancelled:
+                break
+            print(f'{step}: batch still running after {BATCH_WAIT // 60} min, cancelling it', file=sys.stderr)
+            note(f'{step}: batch cancelled')
+            try:
+                client.messages.batches.cancel(batch.id)
+            except Exception:
+                pass  # it may have ended meanwhile
+            deadline, cancelled = time.monotonic() + BATCH_CANCEL_WAIT, True
+        time.sleep(BATCH_POLL)
+        try:
+            batch = client.messages.batches.retrieve(batch.id)
+        except Exception:
+            pass  # a failed check is tried again at the next poll
+    lost = {key: ('retry', None) for key in prompts}
+    if batch.processing_status != 'ended':
+        print(f'{step}: batch did not end, its requests are asked again next run', file=sys.stderr)
+        note(f'{step}: batch did not end')
+        return lost
+    results = None
+    for attempt in range(3):
+        if attempt:
+            time.sleep(BATCH_POLL)
+        try:
+            results = list(client.messages.batches.results(batch.id))
+            break
+        except Exception as exc:
+            print(f'{step}: batch results not read ({type(exc).__name__})', file=sys.stderr)
+    if results is None:
+        note(f'{step}: batch results not read')
+        return lost
+    answers = {}
+    for row in results:
+        key, result = ids.get(row.custom_id), row.result
+        if key is None:
+            continue
+        if result.type == 'succeeded':
+            message = result.message
+            _record(message.usage, True)
+            if message.stop_reason != 'end_turn':
+                note(f'{step}: stop reason {message.stop_reason}')
+                answers[key] = ('bad', None)
+                continue
+            try:
+                answers[key] = ('ok', output_format.model_validate_json(''.join(b.text for b in message.content if b.type == 'text')))
+            except Exception as exc:
+                note(f'{step}: {type(exc).__name__}')
+                answers[key] = ('bad', None)
+        elif result.type == 'errored':  # an API error for this request: asked again next run
+            note(f"{step}: {getattr(getattr(result.error, 'error', None), 'type', 'error')}")
+            answers[key] = ('retry', None)
+        # canceled or expired: left out, asked one at a time
+    return answers
+
 class Translation(BaseModel):
     id: str
     title_ar: str
@@ -619,32 +754,25 @@ class Translation(BaseModel):
 class Translations(BaseModel):
     translations: list[Translation]
 
+TRANSLATE_SYSTEM = 'Translate English news headlines into natural Modern Standard Arabic for a Gulf audience. Stay neutral; report only what the headline says. Keep the meaning exact: do not add, soften or exaggerate claims, and never add an opinion or judgement of your own. Keep product, company and model names in Latin script (e.g. NVIDIA, GPT-5, Instinct MI355X). Write tanween on the alif as ـاً. Return one translation per id.'
+
 def translate(items):
     """Add title_ar to up to TRANSLATE_PER_RUN recent English items. Returns count translated. Items judged not mainly
     about AI (ai_focus false) are never shown, so they don't use the budget."""
     if not os.environ.get('ANTHROPIC_API_KEY'):
         return 0
-    import anthropic
     todo = [i for i in items if i['lang'] == 'en' and not i.get('title_ar') and i.get('ai_focus') is not False][:TRANSLATE_PER_RUN]
     if not todo:
         return 0
     listing = '\n'.join(f"{i['id']}\t{i['title']}" for i in todo)
-    try:
-        response = anthropic.Anthropic(timeout=120.0, max_retries=1).messages.parse(
-            model=MODEL, max_tokens=16000, output_format=Translations,
-            system='Translate English news headlines into natural Modern Standard Arabic for a Gulf audience. Stay neutral; report only what the headline says. Keep the meaning exact: do not add, soften or exaggerate claims, and never add an opinion or judgement of your own. Keep product, company and model names in Latin script (e.g. NVIDIA, GPT-5, Instinct MI355X). Write tanween on the alif as ـاً. Return one translation per id.',
-            messages=[{'role': 'user', 'content': 'Headlines (id<TAB>headline):\n' + listing}])
-    except Exception as exc:  # API, network, output validation or anything unexpected: this step is optional
-        print(f'Translation skipped: {type(exc).__name__}', file=sys.stderr)
-        note(f'translate: {type(exc).__name__}')
-        return 0
-    if response.stop_reason != 'end_turn' or response.parsed_output is None:
-        print(f'Translation skipped: stop reason {response.stop_reason}', file=sys.stderr)
-        note(f'translate: stop reason {response.stop_reason}')
+    # API, network, output validation or anything unexpected: this step is optional, the headlines wait for next run.
+    kind, parsed = ask_claude('translate', TRANSLATE_SYSTEM, Translations, 16000,
+                              {'all': 'Headlines (id<TAB>headline):\n' + listing})['all']
+    if kind != 'ok':
         return 0
     wanted = {i['id']: i for i in todo}
     done = 0
-    for t in response.parsed_output.translations:
+    for t in parsed.translations:
         text = clean(t.title_ar)
         if t.id in wanted and ARABIC.search(text):
             wanted[t.id]['title_ar'] = text
@@ -954,7 +1082,6 @@ def summarize(items, sources):
     meanwhile). Returns the number summarised."""
     if not os.environ.get('ANTHROPIC_API_KEY'):
         return 0
-    import anthropic
     src = {s['id']: s for s in sources}
     for item in items:  # tries made with an older prompt don't count against the new one
         if item.get('summary_attempts_version', 1) < SUMMARY_VERSION:
@@ -978,49 +1105,30 @@ def summarize(items, sources):
         text = page if len(page) >= 300 else '\n\n'.join(x for x in (item['title'], item.get('excerpt', '')) if x)
         ready.append((item, text, (src.get(item['source']) or {}).get('name', item['source'])))
     batches = [ready[n:n + SUMMARY_BATCH] for n in range(0, len(ready), SUMMARY_BATCH)]
-    client = anthropic.Anthropic(timeout=120.0, max_retries=1)
-
-    def ask(batch):
-        try:
-            response = client.messages.parse(model=MODEL, max_tokens=16000, output_format=Summaries, system=SUMMARY_SYSTEM,
-                                             messages=[{'role': 'user', 'content': _summary_prompt(batch)}])
-        except (anthropic.APIConnectionError, anthropic.APIStatusError) as exc:  # network or service: try again next run
-            print(f'Summary batch skipped: {type(exc).__name__}', file=sys.stderr)
-            note(f'summary: {type(exc).__name__}')
-            return None
-        except Exception as exc:  # unusable output or anything unexpected: counts as a try for these items
-            print(f'Summary batch failed: {type(exc).__name__}', file=sys.stderr)
-            note(f'summary: {type(exc).__name__}')
-            return []
-        if response.stop_reason != 'end_turn' or response.parsed_output is None:
-            print(f'Summary batch skipped: stop reason {response.stop_reason}', file=sys.stderr)
-            note(f'summary: stop reason {response.stop_reason}')
-            return []
-        return response.parsed_output.items
-
+    answers = ask_claude('summary', SUMMARY_SYSTEM, Summaries, 16000, {n: _summary_prompt(batch) for n, batch in enumerate(batches)})
     done = 0
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        for batch, result in zip(batches, pool.map(ask, batches)):
-            if result is None:
+    for n, batch in enumerate(batches):
+        kind, parsed = answers[n]
+        if kind == 'retry':  # network or service: try again next run
+            continue
+        wanted = {item['id']: item for item, _, _ in batch}
+        for s in parsed.items if kind == 'ok' else []:  # an unusable answer counts as a try for these items
+            item = wanted.pop(s.id, None)
+            if item is None:
                 continue
-            wanted = {item['id']: item for item, _, _ in batch}
-            for s in result:
-                item = wanted.pop(s.id, None)
-                if item is None:
-                    continue
-                # A summary that runs long is cut back to whole sentences rather than lost.
-                en, ar = shorten(plain(s.summary_en), SUMMARY_MAX), shorten(plain(s.summary_ar), SUMMARY_MAX)
-                if _valid_summary(en, False) and _valid_summary(ar, True):
-                    # The verdict is kept only with a usable summary: from a cookie notice or a paywall it would be a guess.
-                    item.update(summary_en=en, summary_ar=ar, summary_source='ai', summary_basis=item['_basis'],
-                                summary_version=SUMMARY_VERSION, ai_focus=bool(s.ai_focus))
-                    item.pop('summary_attempts', None)
-                    item.pop('summary_attempts_version', None)
-                    done += 1
-                else:
-                    _tried(item)  # empty (too little text), too long or in the wrong language
-            for item in wanted.values():  # left out of the answer (or the whole batch failed)
-                _tried(item)
+            # A summary that runs long is cut back to whole sentences rather than lost.
+            en, ar = shorten(plain(s.summary_en), SUMMARY_MAX), shorten(plain(s.summary_ar), SUMMARY_MAX)
+            if _valid_summary(en, False) and _valid_summary(ar, True):
+                # The verdict is kept only with a usable summary: from a cookie notice or a paywall it would be a guess.
+                item.update(summary_en=en, summary_ar=ar, summary_source='ai', summary_basis=item['_basis'],
+                            summary_version=SUMMARY_VERSION, ai_focus=bool(s.ai_focus))
+                item.pop('summary_attempts', None)
+                item.pop('summary_attempts_version', None)
+                done += 1
+            else:
+                _tried(item)  # empty (too little text), too long or in the wrong language
+        for item in wanted.values():  # left out of the answer (or the whole batch failed)
+            _tried(item)
     return done
 
 # ---------- content policy (UAE and GCC) ----------
@@ -1093,77 +1201,53 @@ def policy_check(items):
     clear_stale_verdicts(items)
     if not os.environ.get('ANTHROPIC_API_KEY'):
         return []
-    import anthropic
     for item in items:  # unusable answers count within one run
         item.pop('policy_attempts', None)
     todo = [i for i in items if not policy.verified(i)]
     todo = sorted(todo, key=lambda i: not policy.item_mentions_region(i))[:POLICY_PER_RUN]
     if not todo:
         return []
-    client = anthropic.Anthropic(timeout=120.0, max_retries=1)
-
-    def ask(batch):
-        """('ok', verdicts), ('retry', None) after an API or network error, or ('bad', None) for an unusable answer."""
-        try:
-            response = client.messages.parse(model=MODEL, max_tokens=8000, output_format=PolicyVerdicts, system=POLICY_SYSTEM,
-                                             messages=[{'role': 'user', 'content': _policy_prompt(batch)}])
-        except (anthropic.APIConnectionError, anthropic.APIStatusError) as exc:
-            print(f'Policy batch skipped: {type(exc).__name__}', file=sys.stderr)
-            note(f'policy: {type(exc).__name__}')
-            return 'retry', None
-        except Exception as exc:
-            print(f'Policy batch failed: {type(exc).__name__}', file=sys.stderr)
-            note(f'policy: {type(exc).__name__}')
-            return 'bad', None
-        if response.stop_reason != 'end_turn' or response.parsed_output is None:
-            print(f'Policy batch skipped: stop reason {response.stop_reason}', file=sys.stderr)
-            note(f'policy: stop reason {response.stop_reason}')
-            return 'bad', None
-        return 'ok', response.parsed_output.items
-
-    def run(batch):
-        """(decisions, ids skipped after an API error, ids with two unusable answers). Items the batch answer left
-        undecided (refused, bad output, left out, wrong id) are asked again one by one, so one story cannot hold back
-        the others."""
-        kind, verdicts = ask(batch)
-        if kind == 'retry':
-            return {}, {i['id'] for i in batch}, set()
-        decided = decide(verdicts, {i['id'] for i in batch})
-        skipped, unusable = set(), set()
-        for one in batch:
-            if one['id'] in decided:
-                continue
-            one['policy_attempts'] = 1
-            k, v = ask([one])
-            if k == 'retry':
-                skipped.add(one['id'])
-                continue
-            got = decide(v, {one['id']})
-            if got:
-                decided.update(got)
-            else:
-                one['policy_attempts'] = POLICY_TRIES
-                unusable.add(one['id'])
-        return decided, skipped, unusable
-
+    ask = lambda prompts: ask_claude('policy', POLICY_SYSTEM, PolicyVerdicts, 8000,
+                                     {key: _policy_prompt(batch) for key, batch in prompts.items()})
     batches = [todo[n:n + POLICY_BATCH] for n in range(0, len(todo), POLICY_BATCH)]
+    # Per batch: the decisions, and the ids with two unusable answers. After an API or network error an item gets no
+    # decision and is checked again next run. Items a batch answer left undecided (refused, bad output, left out, wrong
+    # id) are asked again one by one, so one story cannot hold back the others.
+    decisions, bads, again = [{} for _ in batches], [set() for _ in batches], {}
+    for n, (kind, verdicts) in ask(dict(enumerate(batches))).items():
+        if kind == 'retry':
+            continue
+        decisions[n] = decide(verdicts.items if kind == 'ok' else None, {i['id'] for i in batches[n]})
+        for m, one in enumerate(batches[n]):
+            if one['id'] not in decisions[n]:
+                one['policy_attempts'] = 1
+                again[(n, m)] = [one]
+    for (n, m), (kind, verdicts) in ask(again).items():
+        one = batches[n][m]
+        if kind == 'retry':
+            continue
+        got = decide(verdicts.items if kind == 'ok' else None, {one['id']})
+        if got:
+            decisions[n].update(got)
+        else:
+            one['policy_attempts'] = POLICY_TRIES
+            bads[n].add(one['id'])
     failed, unusable, judged = [], [], 0
-    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        for batch, (decided, skipped, bad) in zip(batches, pool.map(run, batches)):
-            for item in batch:
-                result = decided.get(item['id'])
-                if result is None:
-                    if item['id'] in bad:
-                        unusable.append(item)
-                    continue
-                count('policy_checked')
-                judged += 1
-                if result is True:
-                    item.update(policy_ok=True, policy_version=policy.POLICY_VERSION, policy_hash=policy.fingerprint(item))
-                    item.pop('policy_attempts', None)
-                    count('policy_passed')
-                else:
-                    failed.append((item, result))
+    for batch, decided, bad in zip(batches, decisions, bads):
+        for item in batch:
+            result = decided.get(item['id'])
+            if result is None:
+                if item['id'] in bad:
+                    unusable.append(item)
+                continue
+            count('policy_checked')
+            judged += 1
+            if result is True:
+                item.update(policy_ok=True, policy_version=policy.POLICY_VERSION, policy_hash=policy.fingerprint(item))
+                item.pop('policy_attempts', None)
+                count('policy_passed')
+            else:
+                failed.append((item, result))
     if unusable and judged:  # when in doubt, leave it out
         failed += [(item, 'unverifiable') for item in unusable]
     for item, _ in failed:
@@ -1451,6 +1535,7 @@ def main():
     blocked = load_blocked()
     now = datetime.now(timezone.utc).replace(microsecond=0)
     STATS.clear()
+    USAGE.clear()
     fresh, errors, feeds = {}, {}, {}
     def load(source):
         try:
@@ -1498,7 +1583,8 @@ def main():
     items = kept
     data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
             'ai': {'key_set': key, 'model': MODEL, 'translated': translated, 'summarised': summarized,
-                   'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS)},
+                   'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS),
+                   'usage': usage_report()},
             'items': items}
     tmp = OUT.with_suffix('.tmp')
     tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
@@ -1510,6 +1596,10 @@ def main():
     print(f"Content policy v{counts['policy_version']}: {counts['policy_checked']} checked, {counts['policy_blocked']} removed, "
           f"{counts['m1_dropped']} dropped under M1, {counts['policy_pending']} of {counts['regional']} UAE/GCC items hidden until verified, "
           f"{counts['held_back']} unverified items not saved")
+    use = usage_report()
+    if use['requests']:
+        print(f"Claude: {use['requests']} requests ({use['batched']} in batches at half price), {use['input_tokens']} input and "
+              f"{use['output_tokens']} output tokens, about ${use['estimated_usd']:.2f}")
     if report and notify_owner(report, sources):
         print('Private report sent to the owner.')
     if PROBLEMS:

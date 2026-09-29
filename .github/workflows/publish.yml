@@ -5,9 +5,15 @@ on:
   # A new Android app release starts this workflow on main through android-release.yml (a release run itself runs on
   # its tag, which may not deploy the site).
   workflow_dispatch:
+    inputs:
+      ai:
+        description: 'Also run the paid Claude steps (news summaries, translations, content-policy check, drafts)'
+        type: boolean
+        default: false
   schedule:
-    # Every 4 hours: UTC 23:15 / 03:15 / 07:15 / 11:15 / 15:15 / 19:15 = Dubai 03:15 / 07:15 / 11:15 / 15:15 / 19:15 / 23:15.
-    - cron: '15 3,7,11,15,19,23 * * *'
+    # 3 times a day, every 8 hours: UTC 03:15 / 11:15 / 19:15 = Dubai 07:15 / 15:15 / 23:15. Only these runs (or a manual
+    # run with "ai" ticked) call Claude; a push, a manual run or an Android release only rebuilds the site.
+    - cron: '15 3,11,19 * * *'
 
 permissions:
   contents: read
@@ -18,7 +24,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    # The news step may wait for its Message Batches (most end within minutes; each is cancelled after 20).
+    timeout-minutes: 120
     permissions:
       contents: write
       issues: write
@@ -40,10 +47,13 @@ jobs:
         if: github.event_name != 'push'
         run: python scripts/refresh.py
       - name: Collect AI news (translations, summaries and the content-policy check need ANTHROPIC_API_KEY)
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || inputs.ai
         continue-on-error: true
+        timeout-minutes: 100
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Each AI step sends its requests as one Message Batch: half the price of asking one at a time.
+          NEWS_BATCH: '1'
           # Optional private report of removed stories (titles and reasons) to the owner; nothing is sent unless both are set.
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
@@ -53,7 +63,7 @@ jobs:
         continue-on-error: true
         run: python scripts/models.py
       - name: Draft records for new announcements (optional, needs ANTHROPIC_API_KEY)
-        if: github.event_name != 'push'
+        if: github.event_name == 'schedule' || inputs.ai
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

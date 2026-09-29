@@ -141,13 +141,13 @@ class ScheduleAndLinkTests(unittest.TestCase):
         uae=sorted(f'{(int(h)+4)%24:02d}:{int(cron[0]):02d}' for h in cron[1].split(','))
         self.assertEqual(sorted(build.schedule_times(data)),uae)
         # The page says how often, not at what times (no run statistics in public).
-        self.assertEqual(build.schedule_phrase(data,'en'),'6 times a day')
-        self.assertEqual(build.schedule_phrase(data,'ar'),'6 مرات يومياً')
+        self.assertEqual(build.schedule_phrase(data,'en'),'3 times a day')
+        self.assertEqual(build.schedule_phrase(data,'ar'),'3 مرات يومياً')
         for times,en,ar in ((['07:15'],'once a day','مرة يومياً'),(['07:15','19:15'],'twice a day','مرتين يومياً')):
             d={'schedule':' and '.join(times)+' Asia/Dubai'}
             self.assertEqual((build.schedule_phrase(d,'en'),build.schedule_phrase(d,'ar')),(en,ar))
         line=build.fresh_line({'updated_at':'2026-09-26T13:09:30+00:00'},data)
-        self.assertEqual(line,build.L('Updated 26 Sep 2026 · 6 times a day','آخر تحديث 26 سبتمبر 2026 · 6 مرات يومياً'))
+        self.assertEqual(line,build.L('Updated 26 Sep 2026 · 3 times a day','آخر تحديث 26 سبتمبر 2026 · 3 مرات يومياً'))
     def test_links_must_be_https(self):
         with self.assertRaises(AssertionError):build.validate_links([{'id':'x','homepage':'javascript:alert(1)'}],None)
         with self.assertRaises(AssertionError):build.validate_links([],{'facts':[{'id':'f','sources':[{'url':'http://x.example/'}]}]})
@@ -315,7 +315,7 @@ class OwnerRequestTests(unittest.TestCase):
         for k in ('check_health','automation_status','schedule','last_attempt_at','announcements'):self.assertNotIn(k,public)
         js=(ROOT/'web/app.js').read_text(encoding='utf-8')
         for bad in ("'feeds responded'","'Schedule:'","'Source check:'","'UAE newsrooms'",'GitHub Actions'):self.assertNotIn(bad,js)
-        self.assertRegex(self.html,r'Updated \d{1,2} [A-Z][a-z]{2} \d{4} · 6 times a day</span>')
+        self.assertRegex(self.html,r'Updated \d{1,2} [A-Z][a-z]{2} \d{4} · 3 times a day</span>')
         # The hardware header says when the content and the prices were last updated, nothing about the checks themselves.
         bar=re.search(r'<p class="statusbar">(.*?)</p>',self.views['hardware']).group(1)
         self.assertEqual(re.findall(r'<b data-i18n>([^<]+)</b>',bar),['Content updated:','Prices checked:'])
@@ -395,8 +395,8 @@ class OwnerRequestTests2(unittest.TestCase):
     def test_freshness_line_only_once(self):
         # "Updated <date> · twice a day" (both languages) only at the top of the AI news view.
         page=self.html.split('<style>')[0]+self.html.split('</style>')[1].split('<script type="application/json"')[0]
-        en=re.findall(r'Updated \d{1,2} [A-Z][a-z]{2} \d{4} · 6 times a day',page)
-        ar=re.findall(r'آخر تحديث \d{1,2} \S+ \d{4} · 6 مرات يومياً',page)
+        en=re.findall(r'Updated \d{1,2} [A-Z][a-z]{2} \d{4} · 3 times a day',page)
+        ar=re.findall(r'آخر تحديث \d{1,2} \S+ \d{4} · 3 مرات يومياً',page)
         self.assertEqual((len(en),len(ar)),(1,1))
         self.assertRegex(self.views['news'],r'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span><span data-lang="en">Updated \d')
         for v in ('home','hardware','uae','contact'):

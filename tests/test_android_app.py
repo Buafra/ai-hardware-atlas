@@ -308,6 +308,14 @@ class WorkflowTests(unittest.TestCase):
         # release trigger; android-release.yml starts it on main instead.
         self.assertNotRegex(wf, r'(?m)^  release:')
         self.assertIn('workflow_dispatch:', wf)
+        # Claude is paid for only on the 3 scheduled runs a day (or a manual run with "ai" ticked), in Message Batches.
+        ai_if = "if: github.event_name == 'schedule' || inputs.ai"
+        for name in ('run: python scripts/news.py', 'run: python scripts/draft.py'):
+            at = wf.index(name)
+            self.assertIn(ai_if, wf[wf.rfind('- name:', 0, at):at])
+        self.assertEqual(wf.count('ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}'), 2)
+        self.assertIn("NEWS_BATCH: '1'", wf[wf.rfind('- name:', 0, wf.index('run: python scripts/news.py')):wf.index('run: python scripts/news.py')])
+        self.assertRegex(wf, r"cron: '15 3,11,19 \* \* \*'")
         rel = (ROOT / '.github' / 'workflows' / 'android-release.yml').read_text(encoding='utf-8')
         self.assertRegex(rel, r'release:\s*\n\s*types: \[published\]')
         self.assertIn("startsWith(github.event.release.tag_name, 'android-v')", rel)

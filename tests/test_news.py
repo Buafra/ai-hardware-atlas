@@ -723,4 +723,132 @@ class PolicyRunTests(unittest.TestCase):
             self.assertEqual(news.load_blocked(p),{'bbbbbbbbbbbb':'2026-09-20'})
             self.assertEqual(news.load_blocked(Path(d)/'missing.json'),{})
 
+class FakeBatches:
+    """Stands in for client.messages.batches: `answer(params)` gives a request's result (default ok_result: a summary,
+    translation or verdict for every id in the prompt). The batch ends at retrieve number `polls` (None: only once
+    cancelled, and then only if cancel_ends). Records created batches and cancels."""
+    def __init__(self,answer=None,polls=1,create_error=None,results_error=None,cancel_ends=True):
+        self.created,self.cancelled,self.retrieves=[],[],0
+        self.answer,self.polls,self.create_error,self.results_error,self.cancel_ends=answer,polls,create_error,results_error,cancel_ends
+    def create(self,requests):
+        if self.create_error:raise self.create_error
+        self.created.append(list(requests))
+        return SimpleNamespace(id=f'b{len(self.created)}',processing_status='in_progress')
+    def retrieve(self,bid):
+        self.retrieves+=1
+        ended=(self.polls is not None and self.retrieves>=self.polls) or (bool(self.cancelled) and self.cancel_ends)
+        return SimpleNamespace(id=bid,processing_status='ended' if ended else ('canceling' if self.cancelled else 'in_progress'))
+    def cancel(self,bid):
+        self.cancelled.append(bid)
+    def results(self,bid):
+        if self.results_error:raise self.results_error
+        return iter([SimpleNamespace(custom_id=r['custom_id'],result=(self.answer or ok_result)(r['params'])) for r in self.created[int(bid[1:])-1]])
+
+def message(text,stop='end_turn',tokens=(1000,1000)):
+    # A thinking block first, as adaptive thinking gives; only text blocks carry the answer.
+    return SimpleNamespace(type='succeeded',message=SimpleNamespace(stop_reason=stop,usage=SimpleNamespace(input_tokens=tokens[0],output_tokens=tokens[1]),
+                           content=[SimpleNamespace(type='thinking',thinking='...'),SimpleNamespace(type='text',text=text)]))
+
+def ok_result(params):
+    prompt=params['messages'][0]['content']
+    ids=[l.split('"')[1] for l in prompt.splitlines() if l.startswith('<item id=')]
+    if params['system']==news.SUMMARY_SYSTEM:
+        out=news.Summaries(items=[news.Summary(id=i,summary_en=f'Summary of {i}. It has two sentences.',summary_ar=f'ملخص الخبر {i}.',ai_focus=True) for i in ids])
+    elif params['system']==news.POLICY_SYSTEM:
+        out=news.PolicyVerdicts(items=[news.PolicyVerdict(id=i,policy_ok=True) for i in ids])
+    else:
+        heads=[l.split('\t')[0] for l in prompt.splitlines()[1:]]
+        out=news.Translations(translations=[news.Translation(id=i,title_ar=f'عنوان {i}') for i in heads])
+    return message(out.model_dump_json())
+
+class BatchTests(unittest.TestCase):
+    """NEWS_BATCH=1 (the scheduled workflow): each AI step sends its requests as one Message Batch at half price."""
+    def run_step(self,fn,*args,batches=None,env=None):
+        client=SimpleNamespace(calls=[])
+        def fallback(**kw):
+            client.calls.append(kw)
+            return FakeClient().parse(**kw)
+        client.messages=SimpleNamespace(batches=batches or FakeBatches(),parse=fallback)
+        with mock.patch.dict(os.environ,env or {'ANTHROPIC_API_KEY':'test-key','NEWS_BATCH':'1'}),mock.patch('anthropic.Anthropic',return_value=client),\
+             mock.patch.object(news,'fetch_article',return_value=''),mock.patch.object(news,'PROBLEMS',news.collections.Counter()),\
+             mock.patch.object(news,'STATS',news.collections.Counter()),mock.patch.object(news,'USAGE',news.collections.Counter()),\
+             mock.patch.object(news,'BATCH_POLL',0),mock.patch.object(news.time,'sleep'):
+            out=fn(*args)
+            return out,client,dict(news.PROBLEMS),news.usage_report()
+    def test_summaries_go_as_one_batch_at_half_price(self):
+        items=[item(n) for n in range(100)]
+        fb=FakeBatches(polls=3)
+        done,client,problems,use=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual(done,80);self.assertEqual(client.calls,[]);self.assertEqual(problems,{})
+        self.assertEqual(len(fb.created),1);self.assertEqual(len(fb.created[0]),16)  # 80 items in requests of 5
+        p=fb.created[0][0]['params']
+        self.assertEqual((p['model'],p['max_tokens'],p['system']),('claude-opus-5',16000,news.SUMMARY_SYSTEM))
+        self.assertEqual(p['output_config']['format']['type'],'json_schema')
+        self.assertIn('summary_ar',json.dumps(p['output_config']['format']['schema']))
+        self.assertEqual(len({r['custom_id'] for r in fb.created[0]}),16)
+        self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(80)])
+        # 16 requests of 1000 input and 1000 output tokens: $0.03 each at list price, half in a batch.
+        self.assertEqual(use,{'requests':16,'batched':16,'input_tokens':16000,'output_tokens':16000,'estimated_usd':0.24})
+    def test_without_news_batch_requests_go_one_at_a_time(self):
+        fb=FakeBatches()
+        done,client,_,use=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=fb,env={'ANTHROPIC_API_KEY':'test-key','NEWS_BATCH':''})
+        self.assertEqual((done,len(client.calls),fb.created),(10,2,[]))
+        self.assertEqual((use['requests'],use['batched']),(2,0))  # the fake answers carry no token counts
+    def test_batch_not_created_falls_back_to_one_at_a_time(self):
+        done,client,problems,_=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=FakeBatches(create_error=ConnectionError('down')))
+        self.assertEqual((done,len(client.calls)),(10,2))
+        self.assertEqual(problems,{'summary: batch ConnectionError':1})
+    def test_slow_batch_is_cancelled_and_unanswered_requests_asked_one_at_a_time(self):
+        # One request ended before the cancel went through; the other was cancelled (not billed) and is asked directly.
+        def answer(params):
+            return ok_result(params) if '"i00"' in params['messages'][0]['content'] else SimpleNamespace(type='canceled')
+        fb=FakeBatches(answer=answer,polls=None)
+        with mock.patch.object(news,'BATCH_WAIT',0):
+            done,client,problems,use=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=fb)
+        self.assertEqual(fb.cancelled,['b1']);self.assertEqual(done,10)
+        self.assertEqual(len(client.calls),1);self.assertIn('"i05"',client.calls[0]['messages'][0]['content'])
+        self.assertEqual(problems,{'summary: batch cancelled':1});self.assertEqual((use['requests'],use['batched']),(2,1))
+    def test_batch_that_never_ends_is_left_for_next_run(self):
+        fb=FakeBatches(polls=None,cancel_ends=False)
+        items=[item(n) for n in range(5)]
+        with mock.patch.object(news,'BATCH_WAIT',0),mock.patch.object(news,'BATCH_CANCEL_WAIT',0):
+            done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls),(0,[]))  # not asked again: the batch may still be billed
+        self.assertTrue(all('summary_attempts' not in i for i in items))  # not the items' fault
+        self.assertEqual(problems,{'summary: batch cancelled':1,'summary: batch did not end':1})
+    def test_unreadable_results_are_not_asked_again(self):
+        items=[item(n) for n in range(5)]
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=FakeBatches(results_error=ConnectionError('reset')))
+        self.assertEqual((done,client.calls,problems),(0,[],{'summary: batch results not read':1}))
+        self.assertTrue(all('summary_attempts' not in i for i in items))
+    def test_errored_and_unusable_batch_answers(self):
+        def answer(params):
+            p=params['messages'][0]['content']
+            if '"i00"' in p:return SimpleNamespace(type='errored',error=SimpleNamespace(type='error',error=SimpleNamespace(type='overloaded_error')))
+            if '"i05"' in p:return message('{"items": [',stop='max_tokens')
+            return message('not json')
+        items=[item(n) for n in range(15)]
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=FakeBatches(answer=answer))
+        self.assertEqual((done,client.calls),(0,[]))
+        self.assertTrue(all('summary_attempts' not in i for i in items[:5]))  # API error: next run, no try used
+        self.assertTrue(all(i['summary_attempts']==1 for i in items[5:]))  # cut off or unusable: a try
+        self.assertEqual(problems,{'summary: overloaded_error':1,'summary: stop reason max_tokens':1,'summary: ValidationError':1})
+    def test_translation_in_a_batch(self):
+        items=[item(n) for n in range(3)]
+        done,client,_,_=self.run_step(news.translate,items)
+        self.assertEqual((done,client.calls),(3,[]))
+        self.assertEqual([i['title_ar'] for i in items],['عنوان i00','عنوان i01','عنوان i02'])
+    def test_policy_retries_undecided_items_in_a_second_batch(self):
+        items=[item(n) for n in range(12)]
+        def answer(params):
+            ids=[l.split('"')[1] for l in params['messages'][0]['content'].splitlines() if l.startswith('<item id=')]
+            if len(ids)>1:ids=[i for i in ids if i!='i03']  # the batch answer leaves i03 out
+            return message(news.PolicyVerdicts(items=[news.PolicyVerdict(id=i,policy_ok=True) for i in ids]).model_dump_json())
+        fb=FakeBatches(answer=answer)
+        failed,client,problems,_=self.run_step(news.policy_check,items,batches=fb)
+        self.assertEqual((failed,client.calls,problems),([],[],{}))
+        self.assertEqual([len(b) for b in fb.created],[2,1])  # 12 items in requests of 10, then i03 on its own
+        self.assertIn('"i03"',fb.created[1][0]['params']['messages'][0]['content'])
+        self.assertTrue(all(news.policy.verified(i) for i in items))
+
 if __name__=='__main__':unittest.main()
