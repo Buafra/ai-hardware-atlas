@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-28T23:49:19+00:00",
+  "at": "2026-09-29T00:42:56+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 12,
@@ -8,14 +8,29 @@
   "changes": [],
   "review": [
     {
-      "url": "https://newsroom.amd.com/category/ai/",
+      "url": "https://forums.developer.nvidia.com/t/introducing-the-jetson-orin-nx-series-and-jetson-agx-orin-developer-kit-availability/209139",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T23:49:19+00:00"
+      "at": "2026-09-29T00:42:56+00:00"
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/jetson-orin-modules-and-developer-kit-announcements/209137",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-29T00:42:56+00:00"
+    },
+    {
+      "url": "https://forums.developer.nvidia.com/t/release-date-for-jetson-agx-orin-64gb-developer-kit/254524",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-29T00:42:56+00:00"
     },
     {
       "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-28T23:49:19+00:00"
+      "at": "2026-09-29T00:42:56+00:00"
+    },
+    {
+      "url": "https://www.nvidia.com/en-gb/data-center/tesla-v100/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-29T00:42:56+00:00"
     }
   ],
   "errors": {
