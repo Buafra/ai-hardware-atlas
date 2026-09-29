@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-28T08:00:00+04:00",
+  "generated_at": "2026-09-29T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -621,6 +621,10 @@
           },
           "en": {
             "title": "Try the prompt and ==share your result== in the comments"
+          },
+          "next": {
+            "ar": "الدرس 04: ما هو النموذج اللغوي الكبير؟",
+            "en": "Lesson 04: What is a large language model?"
           }
         }
       ],
@@ -747,6 +751,223 @@
       "permalink": "https://www.instagram.com/reel/Dd0RrywDZXB/",
       "published_at": "2026-09-28T08:00:00+04:00",
       "cover": "images/qahwa/week-01-day-03--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-04--1-learn-lesson-04",
+      "kind": "lesson",
+      "lesson": 4,
+      "code": "L04",
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "What is a large language model?",
+        "ar": "ما هو النموذج اللغوي الكبير؟"
+      },
+      "summary": {
+        "en": "A large neural network trained on very large datasets to learn patterns in language and generate or process text.",
+        "ar": "شبكة عصبية كبيرة تتدرّب على كميات ضخمة من البيانات لتتعلّم أنماط اللغة وتوليد النصوص أو معالجتها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ما هو ==النموذج اللغوي الكبير==؟",
+            "body": "المحرّك اللغوي خلف كثير من المساعدات الذكية الحديثة."
+          },
+          "en": {
+            "title": "What is a ==large language model==?",
+            "body": "The language engine behind many modern AI assistants."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "شبكة عصبية كبيرة تتدرّب على ==كميات ضخمة من البيانات== لتتعلّم أنماط اللغة وتوليد النصوص أو معالجتها."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "A large neural network trained on ==very large datasets== to learn patterns in language and generate or process text."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لماذا «كبير»؟",
+            "body": "لأنه يتدرّب على نطاق واسع ويحتوي على ==عدد ضخم من المعاملات==: قيم رقمية تُعدَّل أثناء التدريب لتمثيل الأنماط التي تعلّمها."
+          },
+          "en": {
+            "title": "Why “large”?",
+            "body": "It is trained at scale and has ==a very large number of parameters==: numerical values adjusted during training that encode learned patterns."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا يستطيع؟",
+            "items": [
+              "يشرح المواضيع بلغة بسيطة",
+              "يكتب ويلخّص ويترجم",
+              "يساعدك في التخطيط وحلّ المشكلات"
+            ]
+          },
+          "en": {
+            "title": "What can it do?",
+            "items": [
+              "Explain topics simply",
+              "Write, summarize and translate",
+              "Help you plan and solve problems"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أشهر النماذج",
+            "items": [
+              "GPT من OpenAI، ويشغّل ChatGPT",
+              "Claude من Anthropic، وGemini من Google",
+              "Llama من Meta",
+              "نماذج عربية: جيس (الإمارات) وعلّام (السعودية)"
+            ]
+          },
+          "en": {
+            "title": "Well-known models",
+            "items": [
+              "GPT by OpenAI, which powers ChatGPT",
+              "Claude by Anthropic, Gemini by Google",
+              "Llama by Meta",
+              "Arabic-focused: Jais (UAE) and ALLaM (Saudi Arabia)"
+            ]
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "النموذج هو ==آلة الإسبريسو==",
+            "body": "وChatGPT أو Claude هو المقهى الذي تطلب منه."
+          },
+          "en": {
+            "title": "The model is ==the espresso machine==",
+            "body": "ChatGPT or Claude is the café where you place your order."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "التطبيق والنموذج شيء واحد.",
+            "fact": "التطبيق يضيف إلى النموذج مزايا، مثل الذاكرة والبحث ورفع الملفات."
+          },
+          "en": {
+            "myth": "The AI assistant app and the model are the same thing.",
+            "fact": "The app adds features on top of the model, like memory, search and file uploads."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "تحقّق أولاً من اسم النموذج الظاهر في التطبيق، ثم اسأل:\n«ماذا تستطيع أن تفعل في هذه المحادثة؟ وما 3 قيود يجب أن أعرفها؟»"
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Check the model name shown in the app. Then ask:\n“What can you do in this chat, and what are 3 limitations I should know about?”"
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "التالي: ==كيف يكتب== المساعد الذكي إجابته؟"
+          },
+          "en": {
+            "title": "Next: ==how does an AI assistant write== its answer?"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Check the model name shown in the app. Then ask:\n“What can you do in this chat, and what are 3 limitations I should know about?”",
+        "ar": "تحقّق أولاً من اسم النموذج الظاهر في التطبيق، ثم اسأل:\n«ماذا تستطيع أن تفعل في هذه المحادثة؟ وما 3 قيود يجب أن أعرفها؟»",
+        "code": "L04"
+      },
+      "permalink": "https://www.instagram.com/p/Dd22k_mjde-/",
+      "published_at": "2026-09-29T08:01:00+04:00",
+      "cover": "images/qahwa/week-01-day-04--1-learn-lesson-04.webp",
+      "related_concepts": [
+        "llm",
+        "parameters"
+      ]
+    },
+    {
+      "id": "week-01-day-03--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "Generative AI can create images, not just text.",
+        "ar": "الذكاء الاصطناعي التوليدي يصنع الصور أيضاً، وليس النصوص فقط"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "الذكاء الاصطناعي التوليدي يصنع ==الصور== أيضاً، وليس النصوص فقط",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Generative AI can create ==images==, not just text.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-29T20:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-03--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-04--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "An AI assistant looks up your answer in a database.",
+        "ar": "المساعد الذكي يبحث عن إجابتك في قاعدة بيانات"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي يبحث عن إجابتك ==في قاعدة بيانات==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant looks up your answer ==in a database==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-29T20:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-04--3-check-story.webp",
       "related_concepts": []
     }
   ]
