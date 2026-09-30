@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-30T07:45:00+04:00",
+  "generated_at": "2026-09-30T13:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1038,6 +1038,158 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-30T07:45:00+04:00",
       "cover": "images/qahwa/week-01-day-04--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-09-29-openai-devday--1-ai-news",
+      "kind": "news",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "OpenAI DevDay 2026",
+        "ar": "مؤتمر OpenAI للمطورين 2026"
+      },
+      "summary": {
+        "en": "Not a chat that starts and ends, but an agent that keeps working on your tasks. On Pro and Business Premium in eligible markets, and off by default in organisation accounts until an admin enables it.",
+        "ar": "ليست محادثة تبدأ وتنتهي، بل وكيل يتابع مهامك باستمرار. متاح في خطط Pro وBusiness Premium في أسواق مؤهلة، ومغلق افتراضياً في حسابات المؤسسات حتى يفعّله المسؤول."
+      },
+      "slides": [
+        {
+          "type": "news-cover",
+          "ar": {
+            "title": "OpenAI تكشف عن ==وكلاء يعملون دائماً==",
+            "body": "أكثر من 20 إعلاناً في مؤتمر المطورين، أبرزها Dots."
+          },
+          "en": {
+            "title": "OpenAI unveils ==always-on agents==",
+            "body": "More than 20 announcements at its developer day, led by Dots."
+          },
+          "source": "Source: OpenAI · 29 Sep 2026"
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا أُعلن؟",
+            "items": [
+              "==Dots==: وكلاء يعملون باستمرار نيابةً عنك",
+              "==GPT-6.1 Sol==: أقوى في البرمجة واستخدام الحاسوب",
+              "==Ultrafast==: توليد أسرع حتى 8 أضعاف في Codex",
+              "==ChatGPT== يفتح أبوابه لتطبيقات المطورين"
+            ]
+          },
+          "en": {
+            "title": "What was announced?",
+            "items": [
+              "==Dots==: agents that keep working on your behalf",
+              "==GPT-6.1 Sol==: stronger at coding and computer use",
+              "==Ultrafast==: up to 8x faster generation in Codex",
+              "==ChatGPT== opens up to developer apps"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما الجديد في ==Dots==؟",
+            "body": "ليست محادثة تبدأ وتنتهي، بل وكيل يتابع مهامك باستمرار. متاح في خطط Pro وBusiness Premium في أسواق مؤهلة، ومغلق افتراضياً في حسابات المؤسسات حتى يفعّله المسؤول."
+          },
+          "en": {
+            "title": "What is new about ==Dots==?",
+            "body": "Not a chat that starts and ends, but an agent that keeps working on your tasks. On Pro and Business Premium in eligible markets, and off by default in organisation accounts until an admin enables it."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا يعني لك؟",
+            "items": [
+              "الوكلاء ينتقلون من التجربة إلى الاستخدام اليومي",
+              "خُمس السعر يخص ==الوحدات اللغوية للمطورين==، لا اشتراكك",
+              "قد لا تصل هذه المزايا إلى منطقتك أو خطتك اليوم"
+            ]
+          },
+          "en": {
+            "title": "What does it mean for you?",
+            "items": [
+              "Agents are moving from demo to daily use",
+              "The fifth-of-the-price claim is about ==developer tokens==, not your subscription",
+              "These features may not reach your region or plan today"
+            ]
+          },
+          "note": {
+            "ar": "الأرقام والمزايا من إعلان الشركة نفسها.",
+            "en": "The figures and features come from the company's own announcement."
+          }
+        },
+        {
+          "type": "hype",
+          "level": 4,
+          "ar": {
+            "low": "ضجة",
+            "high": "تغيير حقيقي",
+            "label": "4 من 5: تحوّل نحو الوكلاء",
+            "body": "فكرة الوكيل الذي يعمل باستمرار تغيّر طريقة استخدامنا للذكاء الاصطناعي، لا سرعته فقط. لكن التوفر محدود بالخطط والأسواق، ولم يجرّبها أحد خارج الشركة بعد."
+          },
+          "en": {
+            "low": "Hype",
+            "high": "Real change",
+            "label": "4 of 5: a shift towards agents",
+            "body": "An agent that keeps working changes how we use AI, not just how fast it is. But availability is limited by plan and market, and nobody outside the company has tested it yet."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "هل تترك مهمة ==لوكيل يعمل نيابةً عنك==؟"
+          },
+          "en": {
+            "title": "Would you hand a task to ==an agent working for you==?"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/Dd59yBhkeku/",
+      "published_at": "2026-09-30T13:01:00+04:00",
+      "cover": "images/qahwa/news-2026-09-29-openai-devday--1-ai-news.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-09-29-openai-devday--2-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "An AI agent finishes the job without you checking it",
+        "ar": "الوكيل الذكي ينفّذ المهمة كاملة دون مراجعتك"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "news",
+          "ar": {
+            "title": "الوكيل الذكي ==ينفّذ المهمة كاملة== دون مراجعتك",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI agent ==finishes the job== without you checking it",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-30T13:30:00+04:00",
+      "cover": "images/qahwa/news-2026-09-29-openai-devday--2-check-story.webp",
       "related_concepts": []
     }
   ]
