@@ -5,6 +5,9 @@ from types import SimpleNamespace
 from unittest import mock
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import news
+import anthropic,httpx2
+# Summary batches left running are recorded here in tests, never in the real data/news-batches.json.
+news.PENDING=Path(tempfile.mkdtemp())/'news-batches.json'
 NOW=datetime(2026,9,26,12,tzinfo=timezone.utc)
 RSS=b'''<?xml version="1.0"?><rss><channel>
 <item><title>NVIDIA opens AI lab in Abu Dhabi</title><link>https://www.example-news.com/a</link><pubDate>Fri, 25 Sep 2026 08:00:00 GMT</pubDate><description>&lt;p&gt;The new lab will train &lt;b&gt;200 engineers&lt;/b&gt; a year on AI systems.&lt;/p&gt;&lt;p&gt;The post &lt;a href="https://www.example-news.com/a"&gt;NVIDIA opens AI lab&lt;/a&gt; appeared first on &lt;a href="https://www.example-news.com/"&gt;Example News&lt;/a&gt;.&lt;/p&gt;</description></item>
@@ -646,7 +649,7 @@ class PolicyRunTests(unittest.TestCase):
     class FixedNow(datetime):
         @classmethod
         def now(cls,tz=None):return NOW
-    def run_main(self,d,client,env,rss=RSS,urlopen=None):
+    def run_main(self,d,client,env,rss=RSS,urlopen=None,batches=None):
         out,srcs,blocked=Path(d)/'news.json',Path(d)/'news-sources.json',Path(d)/'news-blocked.json'
         srcs.write_text(json.dumps([SRC_UAE]),encoding='utf-8')
         summaries=FakeClient()
@@ -655,16 +658,42 @@ class PolicyRunTests(unittest.TestCase):
             if kw.get('output_format') is news.Summaries:return summaries.parse(**kw)
             ids=[l.split('\t')[0] for l in kw['messages'][0]['content'].splitlines()[1:]]
             return SimpleNamespace(stop_reason='end_turn',parsed_output=news.Translations(translations=[news.Translation(id=i,title_ar=f'عنوان {i}') for i in ids]))
-        both=SimpleNamespace(messages=SimpleNamespace(parse=parse))
+        both=SimpleNamespace(messages=SimpleNamespace(parse=parse,batches=batches))
+        self.summaries=summaries
         import io,contextlib
         buf=io.StringIO()
         with mock.patch.object(news,'OUT',out),mock.patch.object(news,'SOURCES',srcs),mock.patch.object(news,'BLOCKED',blocked),mock.patch.object(news,'fetch',return_value=rss),\
+             mock.patch.object(news,'PENDING',Path(d)/'news-batches.json'),\
              mock.patch.object(news,'datetime',self.FixedNow),mock.patch.object(news,'read_page',return_value=([],'')),mock.patch.dict(os.environ,env,clear=True),\
              mock.patch('anthropic.Anthropic',return_value=both),mock.patch.object(news,'PROBLEMS',news.collections.Counter()),\
              mock.patch.object(news,'urlopen',urlopen or mock.MagicMock(side_effect=AssertionError('no network'))),\
              contextlib.redirect_stdout(buf),contextlib.redirect_stderr(buf):
             self.assertEqual(news.main(),0)
         return json.loads(out.read_text(encoding='utf-8')),json.loads(blocked.read_text(encoding='utf-8')),buf.getvalue()
+    def test_a_whole_run_collects_a_pending_summary_batch(self):
+        eid=news.hashlib.sha1(b'https://www.example-news.com/e').hexdigest()[:12]  # "AI chip exports rise"
+        def fb():
+            b=FakeBatches(polls=0)
+            b.created.append([{'custom_id':'r0','params':{'system':news.SUMMARY_SYSTEM,'messages':[{'content':f'<item id="{eid}">'}]}}])
+            return b
+        def pending(d,created=None):
+            with mock.patch.object(news,'PENDING',Path(d)/'news-batches.json'):
+                if created is not None:
+                    news.remember_pending('summary',SimpleNamespace(id='b1',created_at=created),{'r0':{'items':[eid],'basis':{eid:'article'},'version':news.SUMMARY_VERSION}})
+                return news.load_pending()
+        err=anthropic.APIConnectionError(request=httpx2.Request('POST','https://api.anthropic.com/v1/messages'))
+        with tempfile.TemporaryDirectory() as d:
+            pending(d,NOW-news.timedelta(hours=8))
+            # The content check cannot run: the collected summary's item is held back, so the batch stays in the file.
+            data,_,_=self.run_main(d,FakePolicyClient(error=err),{'ANTHROPIC_API_KEY':'test-key'},batches=fb())
+            self.assertNotIn(eid,[i['id'] for i in data['items']]);self.assertEqual([b['id'] for b in pending(d)],['b1'])
+            self.assertEqual(data['ai']['batches_left_running'],1)
+            # Next run: read again for free, checked, stored; the entry leaves the file only now.
+            data,_,log=self.run_main(d,FakePolicyClient(),{'ANTHROPIC_API_KEY':'test-key'},batches=fb())
+            [e]=[i for i in data['items'] if i['id']==eid]
+            self.assertTrue(e['summary_en'].startswith(f'Summary of {eid}') and e['policy_ok'])
+            self.assertNotIn(eid,''.join(c['messages'][0]['content'] for c in self.summaries.calls))  # not asked again
+            self.assertEqual((pending(d),data['ai']['batches_left_running']),([],0))
     def test_failing_story_is_removed_and_blocked_for_good(self):
         client=FakePolicyClient(verdict=lambda i:(False,'P1') if i==news.hashlib.sha1(b'https://www.example-news.com/a').hexdigest()[:12] else (True,None))
         with tempfile.TemporaryDirectory() as d:
@@ -727,16 +756,17 @@ class FakeBatches:
     """Stands in for client.messages.batches: `answer(params)` gives a request's result (default ok_result: a summary,
     translation or verdict for every id in the prompt). The batch ends at retrieve number `polls` (None: only once
     cancelled, and then only if cancel_ends). Records created batches and cancels."""
-    def __init__(self,answer=None,polls=1,create_error=None,results_error=None,cancel_ends=True):
-        self.created,self.cancelled,self.retrieves=[],[],0
+    def __init__(self,answer=None,polls=1,create_error=None,results_error=None,cancel_ends=True,running=(),broken=None):
+        self.created,self.cancelled,self.retrieves,self.running,self.broken=[],[],0,set(running),dict(broken or {})
         self.answer,self.polls,self.create_error,self.results_error,self.cancel_ends=answer,polls,create_error,results_error,cancel_ends
     def create(self,requests):
         if self.create_error:raise self.create_error
         self.created.append(list(requests))
         return SimpleNamespace(id=f'b{len(self.created)}',processing_status='in_progress')
     def retrieve(self,bid):
+        if bid in self.broken:raise self.broken[bid]
         self.retrieves+=1
-        ended=(self.polls is not None and self.retrieves>=self.polls) or (bool(self.cancelled) and self.cancel_ends)
+        ended=bid not in self.running and ((self.polls is not None and self.retrieves>=self.polls) or (bool(self.cancelled) and self.cancel_ends))
         return SimpleNamespace(id=bid,processing_status='ended' if ended else ('canceling' if self.cancelled else 'in_progress'))
     def cancel(self,bid):
         self.cancelled.append(bid)
@@ -763,18 +793,32 @@ def ok_result(params):
 
 class BatchTests(unittest.TestCase):
     """NEWS_BATCH=1 (the scheduled workflow): each AI step sends its requests as one Message Batch at half price."""
-    def run_step(self,fn,*args,batches=None,env=None):
+    def setUp(self):
+        self.pending=Path(tempfile.mkdtemp())/'news-batches.json'
+        news.FINISHED.clear();news.COLLECTED.clear()
+    def next_run(self):
+        # What main() does after writing news.json, and then at the start of the next run.
+        with mock.patch.object(news,'PENDING',self.pending):
+            news.commit_pending()
+        news.FINISHED.clear();news.COLLECTED.clear()
+    def remember(self,batch_id,requests,hours_ago=0):
+        with mock.patch.object(news,'PENDING',self.pending):
+            news.remember_pending('summary',SimpleNamespace(id=batch_id,created_at=news.datetime.now(news.timezone.utc)-news.timedelta(hours=hours_ago)),requests)
+    def run_step(self,fn,*args,batches=None,env=None,parse=None):
         client=SimpleNamespace(calls=[])
         def fallback(**kw):
             client.calls.append(kw)
-            return FakeClient().parse(**kw)
+            return (parse or FakeClient().parse)(**kw)
         client.messages=SimpleNamespace(batches=batches or FakeBatches(),parse=fallback)
         with mock.patch.dict(os.environ,env or {'ANTHROPIC_API_KEY':'test-key','NEWS_BATCH':'1'}),mock.patch('anthropic.Anthropic',return_value=client),\
              mock.patch.object(news,'fetch_article',return_value=''),mock.patch.object(news,'PROBLEMS',news.collections.Counter()),\
              mock.patch.object(news,'STATS',news.collections.Counter()),mock.patch.object(news,'USAGE',news.collections.Counter()),\
-             mock.patch.object(news,'BATCH_POLL',0),mock.patch.object(news.time,'sleep'):
+             mock.patch.object(news,'BATCH_POLL',0),mock.patch.object(news.time,'sleep'),mock.patch.object(news,'PENDING',self.pending):
             out=fn(*args)
             return out,client,dict(news.PROBLEMS),news.usage_report()
+    def pending_batches(self):
+        with mock.patch.object(news,'PENDING',self.pending):
+            return news.load_pending()
     def test_summaries_go_as_one_batch_at_half_price(self):
         items=[item(n) for n in range(100)]
         fb=FakeBatches(polls=3)
@@ -798,29 +842,152 @@ class BatchTests(unittest.TestCase):
         done,client,problems,_=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=FakeBatches(create_error=ConnectionError('down')))
         self.assertEqual((done,len(client.calls)),(10,2))
         self.assertEqual(problems,{'summary: batch ConnectionError':1})
-    def test_slow_batch_is_cancelled_and_unanswered_requests_asked_one_at_a_time(self):
-        # One request ended before the cancel went through; the other was cancelled (not billed) and is asked directly.
+    def test_slow_policy_batch_is_cancelled_and_unanswered_requests_asked_one_at_a_time(self):
+        # The content check must finish within the run: one request ended before the cancel went through; the other was
+        # cancelled (not billed) and is asked directly.
         def answer(params):
             return ok_result(params) if '"i00"' in params['messages'][0]['content'] else SimpleNamespace(type='canceled')
         fb=FakeBatches(answer=answer,polls=None)
+        items=[item(n) for n in range(12)]
         with mock.patch.object(news,'BATCH_WAIT',0):
-            done,client,problems,use=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=fb)
-        self.assertEqual(fb.cancelled,['b1']);self.assertEqual(done,10)
-        self.assertEqual(len(client.calls),1);self.assertIn('"i05"',client.calls[0]['messages'][0]['content'])
-        self.assertEqual(problems,{'summary: batch cancelled':1});self.assertEqual((use['requests'],use['batched']),(2,1))
-    def test_batch_that_never_ends_is_left_for_next_run(self):
+            failed,client,problems,use=self.run_step(news.policy_check,items,batches=fb,parse=FakePolicyClient().parse)
+        self.assertEqual(fb.cancelled,['b1']);self.assertEqual(failed,[])
+        self.assertTrue(all(news.policy.verified(i) for i in items))
+        self.assertEqual(len(client.calls),1);self.assertIn('"i10"',client.calls[0]['messages'][0]['content'])
+        self.assertEqual(problems,{'policy: batch cancelled':1});self.assertEqual((use['requests'],use['batched']),(2,1))
+        self.assertEqual(self.pending_batches(),[])  # only summary batches are left running
+    def test_policy_batch_that_never_ends_is_not_asked_again(self):
         fb=FakeBatches(polls=None,cancel_ends=False)
         items=[item(n) for n in range(5)]
         with mock.patch.object(news,'BATCH_WAIT',0),mock.patch.object(news,'BATCH_CANCEL_WAIT',0):
+            failed,client,problems,_=self.run_step(news.policy_check,items,batches=fb,parse=FakePolicyClient().parse)
+        self.assertEqual((failed,client.calls),([],[]))  # not asked again: the batch may still be billed
+        self.assertTrue(all('policy_ok' not in i and 'policy_attempts' not in i for i in items))  # checked next run
+        self.assertEqual(problems,{'policy: batch cancelled':1,'policy: batch did not end':1})
+    def test_slow_summary_batch_is_left_running_and_collected_next_run(self):
+        fb=FakeBatches(polls=None,cancel_ends=False)
+        items=[item(n) for n in range(10)]
+        with mock.patch.object(news,'BATCH_WAIT',0):
             done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
-        self.assertEqual((done,client.calls),(0,[]))  # not asked again: the batch may still be billed
-        self.assertTrue(all('summary_attempts' not in i for i in items))  # not the items' fault
-        self.assertEqual(problems,{'summary: batch cancelled':1,'summary: batch did not end':1})
-    def test_unreadable_results_are_not_asked_again(self):
+        self.assertEqual((done,client.calls,fb.cancelled),(0,[],[]))  # not cancelled, not asked again
+        self.assertTrue(all('summary_attempts' not in i and not i.get('summary_en') for i in items))
+        self.assertEqual(problems,{'summary: batch left running':1})
+        [b]=self.pending_batches()
+        self.assertEqual((b['id'],b['step'],sorted(b['requests'])),('b1','summary',['r0','r1']))
+        self.assertEqual(b['requests']['r0']['items'],[f'i{n:02d}' for n in range(5)])
+        self.assertEqual(set(b['requests']['r0']['basis'].values()),{'excerpt'})
+        raw=self.pending.read_text(encoding='utf-8')  # ids only in the public repository: no headline or excerpt
+        self.assertTrue(all(i['title'] not in raw and i['excerpt'] not in raw for i in items))
+        self.assertEqual(b['requests']['r0']['version'],news.SUMMARY_VERSION)
+        # Next run: the batch has ended; its answers are stored and nothing is asked again.
+        self.next_run()
+        fb.polls=0
+        done,client,problems,use=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls,len(fb.created)),(10,[],1))
+        self.assertTrue(all(i['summary_basis']=='excerpt' and i['summary_source']=='ai' for i in items))
+        self.assertEqual(problems,{'summary: earlier batch collected':1})
+        self.assertEqual(len(self.pending_batches()),1)  # it leaves the file only once news.json is written ...
+        self.next_run()
+        self.assertEqual(self.pending_batches(),[])  # ... here
+        self.assertEqual((use['requests'],use['batched']),(2,2))
+    def test_a_run_that_dies_before_saving_collects_the_answers_again(self):
+        fb=FakeBatches(polls=None,cancel_ends=False)
+        with mock.patch.object(news,'BATCH_WAIT',0):
+            self.run_step(news.summarize,[item(n) for n in range(5)],[SRC],batches=fb)
+        self.next_run()
+        fb.polls=0
+        self.run_step(news.summarize,[item(n) for n in range(5)],[SRC],batches=fb)
+        news.FINISHED.clear()  # the run died before writing news.json: no commit_pending
+        items=[item(n) for n in range(5)]  # news.json still holds the items without summaries
+        done,client,_,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls,len(fb.created)),(5,[],1))  # read again (free), not asked again
+    def test_items_in_a_running_batch_are_not_asked_again(self):
         items=[item(n) for n in range(5)]
-        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=FakeBatches(results_error=ConnectionError('reset')))
-        self.assertEqual((done,client.calls,problems),(0,[],{'summary: batch results not read':1}))
-        self.assertTrue(all('summary_attempts' not in i for i in items))
+        self.remember('b0',{'r0':{'items':['i00','i01'],'basis':{'i00':'article','i01':'article'},'version':news.SUMMARY_VERSION}},hours_ago=16)
+        fb=FakeBatches(running={'b0'})
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,fb.cancelled),(3,[]));self.assertEqual(problems,{})
+        sent=fb.created[0][0]['params']['messages'][0]['content']
+        self.assertNotIn('"i00"',sent);self.assertNotIn('"i01"',sent);self.assertIn('"i02"',sent)
+        self.assertEqual([b['id'] for b in self.pending_batches()],['b0'])  # still waiting for it
+    def test_batches_are_never_cancelled_and_items_stop_waiting_after_25_hours(self):
+        # A batch not read 26 hours after it was created (here: it cannot be checked) no longer holds its items back;
+        # it stays in the file so that its answers can still be read, and nothing is cancelled.
+        items=[item(n) for n in range(5)]
+        self.remember('b0',{'r0':{'items':['i00'],'basis':{'i00':'article'},'version':news.SUMMARY_VERSION}},hours_ago=26)
+        fb=FakeBatches(broken={'b0':ConnectionError('down')})
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,fb.cancelled),(5,[]));self.assertIn('"i00"',fb.created[0][0]['params']['messages'][0]['content'])
+        self.assertEqual(problems,{'summary: earlier batch not checked (ConnectionError)':1})
+        self.next_run();self.assertEqual([b['id'] for b in self.pending_batches()],['b0'])
+    def test_unknown_or_week_old_unreadable_batches_are_given_up(self):
+        class NotFoundError(Exception):pass
+        items=[item(n) for n in range(3)]
+        self.remember('b7',{'r0':{'items':['i00'],'basis':{},'version':news.SUMMARY_VERSION}})
+        self.remember('b8',{'r0':{'items':['i01'],'basis':{},'version':news.SUMMARY_VERSION}},hours_ago=24*8)
+        fb=FakeBatches(broken={'b7':NotFoundError('no such batch'),'b8':ConnectionError('down')})
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual(done,3)
+        self.assertEqual(problems,{'summary: earlier batch not found':1,'summary: earlier batch not checked (ConnectionError)':1,
+                                   'summary: earlier batch given up after 8 days':1})
+        self.next_run();self.assertEqual(self.pending_batches(),[])
+    def test_answers_from_an_older_prompt_keep_their_version(self):
+        # A batch asked before SUMMARY_VERSION was raised: its summary is stored as the older version and the item is
+        # summarised again (it is not counted, and no try is used up).
+        items=[item(0)]
+        self.remember('b1',{'r0':{'items':['i00'],'basis':{'i00':'article'},'version':news.SUMMARY_VERSION-1}})
+        fb=FakeBatches(polls=0)
+        fb.created.append([{'custom_id':'r0','params':{'system':news.SUMMARY_SYSTEM,'messages':[{'content':'<item id="i00">'}]}}])
+        done,client,_,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual(len(fb.created),2)  # asked again with the current prompt
+        self.assertEqual((done,items[0]['summary_version']),(1,news.SUMMARY_VERSION))
+    def test_a_collected_answer_whose_item_is_held_back_is_kept_for_next_run(self):
+        # The item got its summary from a collected batch but was then held back from news.json (e.g. its new text
+        # could not be policy-checked): the batch stays in the file and the next run reads the answer again, for free.
+        self.remember('b1',{'r0':{'items':['i00'],'basis':{'i00':'article'},'version':news.SUMMARY_VERSION}})
+        fb=FakeBatches(polls=0)
+        fb.created.append([{'custom_id':'r0','params':{'system':news.SUMMARY_SYSTEM,'messages':[{'content':'<item id="i00">'}]}}])
+        done,_,_,_=self.run_step(news.summarize,[item(0)],[SRC],batches=fb)
+        self.assertEqual(done,1)
+        news.keep_batches_of_held_items({'i00'})
+        self.next_run();self.assertEqual([b['id'] for b in self.pending_batches()],['b1'])
+        items=[item(0)]  # news.json never held it
+        done,client,_,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls,len(fb.created)),(1,[],1))
+        news.keep_batches_of_held_items(set())
+        self.next_run();self.assertEqual(self.pending_batches(),[])
+    def test_damaged_pending_file_does_not_stop_summaries(self):
+        items=[item(n) for n in range(3)]
+        for raw in ('{not json','[]','{"batches":[{"id":"b0","step":"summary","created_at":"yesterday","requests":{}}]}'):
+            self.pending.write_text(raw,encoding='utf-8')
+            for i in items:
+                for k in ('summary_en','summary_ar','summary_version','summary_source'):i.pop(k,None)
+            done,_,problems,_=self.run_step(news.summarize,items,[SRC])
+            self.assertEqual(done,3,raw)
+            self.assertEqual(set(problems),{'pending batches: damaged entry left out'} if 'yesterday' in raw else {'pending batches: unreadable file'},raw)
+    def test_collected_answers_skip_items_that_left_or_were_summarised(self):
+        # An earlier batch answered for i00 (now gone from the window) and i01 (summarised meanwhile): nothing changes.
+        items=[item(1,summary_en='Kept. Two.',summary_ar='ملخص.',summary_version=news.SUMMARY_VERSION)]
+        self.remember('b1',{'r0':{'items':['i00','i01'],'basis':{'i00':'article','i01':'article'},'version':news.SUMMARY_VERSION}})
+        fb=FakeBatches(polls=0)
+        fb.created.append([{'custom_id':'r0','params':{'system':news.SUMMARY_SYSTEM,'messages':[{'content':'<item id="i00">\n<item id="i01">'}]}}])
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,items[0]['summary_en']),(0,'Kept. Two.'))
+        self.next_run();self.assertEqual(self.pending_batches(),[])
+    def test_unreadable_summary_results_are_read_again_next_run(self):
+        # The batch ended (and was billed) but its results could not be read: they are kept for the next run.
+        items=[item(n) for n in range(5)]
+        fb=FakeBatches(results_error=ConnectionError('reset'))
+        done,client,problems,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls),(0,[]));self.assertEqual([b['id'] for b in self.pending_batches()],['b1'])
+        self.next_run();fb.results_error=None
+        done,client,_,_=self.run_step(news.summarize,items,[SRC],batches=fb)
+        self.assertEqual((done,client.calls,len(fb.created)),(5,[],1))
+    def test_unreadable_policy_results_are_not_asked_again(self):
+        items=[item(n) for n in range(5)]
+        failed,client,problems,_=self.run_step(news.policy_check,items,batches=FakeBatches(results_error=ConnectionError('reset')),parse=FakePolicyClient().parse)
+        self.assertEqual((failed,client.calls,problems),([],[],{'policy: batch results not read':1}))
+        self.assertTrue(all('policy_ok' not in i for i in items))
     def test_errored_and_unusable_batch_answers(self):
         def answer(params):
             p=params['messages'][0]['content']

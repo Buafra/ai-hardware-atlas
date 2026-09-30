@@ -96,6 +96,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / 'data/news-sources.json'
 OUT = ROOT / 'data/news.json'
 BLOCKED = ROOT / 'data/news-blocked.json'
+# Summary batches still running when a run ended: collected by the next run (batch and item ids only, no titles).
+PENDING = ROOT / 'data/news-batches.json'
 MODEL = 'claude-opus-5'
 KEEP_DAYS = 14
 PER_FEED = 25
@@ -159,9 +161,15 @@ def note(kind):
 # Tokens this run's Claude requests used, and what they cost (an estimate from the list prices below).
 USAGE, _USAGE_LOCK = collections.Counter(), threading.Lock()
 PRICE_IN, PRICE_OUT = 5.0, 25.0  # US dollars per million input / output tokens for MODEL; the Batch API bills half
-BATCH_WAIT = 20 * 60  # seconds a run waits for one batch; it is then cancelled (unanswered requests are not billed) ...
-BATCH_CANCEL_WAIT = 5 * 60  # ... and its answers so far are read once the cancel has gone through
-BATCH_POLL = 20
+BATCH_WAIT = 20 * 60  # seconds a run waits for one batch; a summary batch is then left running for the next run, any
+BATCH_CANCEL_WAIT = 5 * 60  # other is cancelled (unanswered requests are not billed) and its answers so far are read once
+BATCH_POLL = 20             # the cancel has gone through
+# A batch left running ends by itself within 24 hours (requests it never answered expire and are not billed), so it is
+# never cancelled: the next run that finds it ended collects what it answered. Its items wait for it (are not asked
+# again) only until BUSY_HOURS after it was created; an entry that still cannot be checked or read after KEEP_HOURS is
+# given up (results stay readable for 29 days).
+BUSY_HOURS = 25
+KEEP_HOURS = 24 * 7
 
 def count(kind, n=1):
     with _STATS_LOCK:
@@ -637,17 +645,19 @@ def usage_report():
     return {'requests': USAGE['requests'], 'batched': USAGE['batched'], 'input_tokens': USAGE['input_tokens'],
             'output_tokens': USAGE['output_tokens'], 'estimated_usd': round(USAGE['micro_usd'] / 1e6, 4)}
 
-def ask_claude(step, system, output_format, max_tokens, prompts):
+def ask_claude(step, system, output_format, max_tokens, prompts, carry=None):
     """Claude's answers to `prompts` ({key: user message}), all with one system prompt and output format (a pydantic
     model): {key: ('ok', parsed output) | ('retry', None) after an API or network error (asked again next run) |
-    ('bad', None) for a refusal, a cut-off or an unusable answer}. With NEWS_BATCH=1 the requests go as one Message
-    Batch at half price (see _ask_batch); requests the batch could not send or did not answer in time are then asked
-    one at a time, as they are without NEWS_BATCH. Problems are noted under `step`."""
+    ('bad', None) for a refusal, a cut-off or an unusable answer | ('pending', None)}. With NEWS_BATCH=1 the requests go
+    as one Message Batch at half price (see _ask_batch). With `carry` ({key: JSON-safe details of the request}), a batch
+    still running after BATCH_WAIT is left running and recorded in PENDING for the next run (collect_pending), and its
+    requests come back 'pending'; without it the batch is cancelled. Requests the batch could not send or did not answer
+    are then asked one at a time, as they are without NEWS_BATCH. Problems are noted under `step`."""
     if not prompts:
         return {}
     import anthropic
     client = anthropic.Anthropic(timeout=120.0, max_retries=1)
-    answers = _ask_batch(client, step, system, output_format, max_tokens, prompts) if os.environ.get('NEWS_BATCH') == '1' else {}
+    answers = _ask_batch(client, step, system, output_format, max_tokens, prompts, carry) if os.environ.get('NEWS_BATCH') == '1' else {}
 
     def one(text):
         try:
@@ -674,11 +684,13 @@ def ask_claude(step, system, output_format, max_tokens, prompts):
             answers[key] = answer
     return answers
 
-def _ask_batch(client, step, system, output_format, max_tokens, prompts):
+def _ask_batch(client, step, system, output_format, max_tokens, prompts, carry=None):
     """Send `prompts` as one Message Batch and wait for it (up to BATCH_WAIT; most batches end within minutes). Returns
     the answers it got, as ask_claude does. Left out, to be asked one at a time: every request when the batch could not
     be created (nothing was sent, so nothing is paid twice), and requests the batch did not answer before it was
-    cancelled or expired. A batch whose results cannot be read is not asked again this run (it may have been billed)."""
+    cancelled or expired. With `carry`, a batch still running at BATCH_WAIT is not cancelled: it is recorded in PENDING
+    and all its requests come back 'pending'. A batch whose results cannot be read is not asked again this run (it may
+    have been billed)."""
     import anthropic
     ids = {f'r{n}': key for n, key in enumerate(prompts)}
     output = {'format': {'type': 'json_schema', 'schema': anthropic.transform_schema(output_format)}}
@@ -692,6 +704,15 @@ def _ask_batch(client, step, system, output_format, max_tokens, prompts):
         return {}
     deadline, cancelled = time.monotonic() + BATCH_WAIT, False
     while batch.processing_status != 'ended':
+        if time.monotonic() >= deadline and carry is not None and not cancelled:
+            try:
+                remember_pending(step, batch, {cid: carry[key] for cid, key in ids.items()})
+            except Exception as exc:  # it could not be recorded: cancel it instead, as for the other steps
+                note(f'{step}: batch not recorded ({type(exc).__name__})')
+            else:
+                print(f'{step}: batch still running after {BATCH_WAIT // 60} min, left running for the next run', file=sys.stderr)
+                note(f'{step}: batch left running')
+                return {key: ('pending', None) for key in prompts}
         if time.monotonic() >= deadline:
             if cancelled:
                 break
@@ -712,23 +733,35 @@ def _ask_batch(client, step, system, output_format, max_tokens, prompts):
         print(f'{step}: batch did not end, its requests are asked again next run', file=sys.stderr)
         note(f'{step}: batch did not end')
         return lost
+    got = _read_results(client, step, output_format, batch.id)
+    if got is None and carry is not None:  # ended (and billed) but unreadable now: the next run reads it again
+        try:
+            remember_pending(step, batch, {cid: carry[key] for cid, key in ids.items()})
+            return {key: ('pending', None) for key in prompts}
+        except Exception as exc:
+            note(f'{step}: batch not recorded ({type(exc).__name__})')
+    if got is None:
+        return lost
+    return {ids[cid]: answer for cid, answer in got.items() if cid in ids}
+
+def _read_results(client, step, output_format, batch_id):
+    """An ended batch's answers: {custom_id: ('ok', parsed) | ('bad', None) | ('retry', None)}, leaving out requests
+    that were cancelled or expired; None when the results cannot be read (noted)."""
     results = None
     for attempt in range(3):
         if attempt:
             time.sleep(BATCH_POLL)
         try:
-            results = list(client.messages.batches.results(batch.id))
+            results = list(client.messages.batches.results(batch_id))
             break
         except Exception as exc:
             print(f'{step}: batch results not read ({type(exc).__name__})', file=sys.stderr)
     if results is None:
         note(f'{step}: batch results not read')
-        return lost
+        return None
     answers = {}
     for row in results:
-        key, result = ids.get(row.custom_id), row.result
-        if key is None:
-            continue
+        key, result = row.custom_id, row.result
         if result.type == 'succeeded':
             message = result.message
             _record(message.usage, True)
@@ -746,6 +779,108 @@ def _ask_batch(client, step, system, output_format, max_tokens, prompts):
             answers[key] = ('retry', None)
         # canceled or expired: left out, asked one at a time
     return answers
+
+# Ids of pending batches this run has finished with (collected or given up). They leave PENDING only once news.json
+# has been written (commit_pending), so a run that dies in between collects them again rather than paying twice.
+FINISHED = set()
+# Collected batch id -> ids of the items its answers were applied to this run: a batch whose answered item is then held
+# back from news.json (keep_batches_of_held_items) stays in PENDING, so the next run reads the answer again for free.
+COLLECTED = {}
+
+def _valid_pending(b):
+    try:
+        return (isinstance(b, dict) and isinstance(b['id'], str) and isinstance(b['step'], str) and isinstance(b['requests'], dict)
+                and all(isinstance(d, dict) and isinstance(d.get('items'), list) for d in b['requests'].values())
+                and datetime.fromisoformat(b['created_at']).tzinfo is not None)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+def load_pending():
+    """The entries of PENDING; a damaged file or entry is left out (noted) rather than stopping the run."""
+    try:
+        data = json.loads(Path(PENDING).read_text(encoding='utf-8'))
+    except OSError:
+        return []
+    except ValueError:
+        note('pending batches: unreadable file')
+        return []
+    batches = data.get('batches') if isinstance(data, dict) else None
+    if not isinstance(batches, list):
+        note('pending batches: unreadable file')
+        return []
+    good = [b for b in batches if _valid_pending(b)]
+    if len(good) < len(batches):
+        note('pending batches: damaged entry left out')
+    return good
+
+def save_pending(batches):
+    data = {'about': 'Claude summary batches still running when a run ended; the next run collects their answers. Ids only.',
+            'batches': batches}
+    path = Path(PENDING)
+    tmp = path.with_suffix('.tmp')
+    tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
+    tmp.replace(path)
+
+def remember_pending(step, batch, requests):
+    """Record a batch left running (a batch object or its id): its id, the step, when it was created (from the API when
+    it says) and each request's details ({custom_id: details})."""
+    created = getattr(batch, 'created_at', None)
+    created = created if isinstance(created, datetime) else datetime.now(timezone.utc)
+    if created.tzinfo is None:
+        created = created.replace(tzinfo=timezone.utc)
+    save_pending(load_pending() + [{'id': getattr(batch, 'id', batch), 'step': step,
+                                    'created_at': created.astimezone(timezone.utc).replace(microsecond=0).isoformat(), 'requests': requests}])
+
+def keep_batches_of_held_items(held):
+    """Keep in PENDING every collected batch whose answers went to an item not written to news.json (`held`: ids)."""
+    for batch_id, ids in COLLECTED.items():
+        if ids & held:
+            FINISHED.discard(batch_id)
+
+def commit_pending():
+    """Take the batches this run finished with out of PENDING (after news.json holds their answers)."""
+    if FINISHED:
+        save_pending([b for b in load_pending() if b['id'] not in FINISHED])
+
+def collect_pending(step, output_format):
+    """The answers of this step's batches left running by earlier runs: ([(batch id, details, kind, parsed)] for every request of
+    each batch that has ended since (a request it did not answer comes back 'retry'), [details] of the requests whose
+    items should wait for a batch still running). Batches are never cancelled: one still running (or not checkable, or
+    ended with results not readable yet) stays, and its items wait for it until BUSY_HOURS after it was created; after
+    that they are asked afresh. An entry the API does not know, or that still cannot be read after KEEP_HOURS, is given
+    up. Finished entries are marked in FINISHED and leave PENDING at commit_pending."""
+    mine = [b for b in load_pending() if b['step'] == step and b['id'] not in FINISHED]
+    if not mine:
+        return [], []
+    import anthropic
+    client = anthropic.Anthropic(timeout=120.0, max_retries=1)
+    answers, waiting = [], []
+    now = datetime.now(timezone.utc)
+    for b in mine:
+        age_hours = (now - datetime.fromisoformat(b['created_at'])).total_seconds() / 3600
+        try:
+            status = client.messages.batches.retrieve(b['id']).processing_status
+        except Exception as exc:
+            if type(exc).__name__ == 'NotFoundError':  # gone (another account or key): its items are asked afresh
+                note(f'{step}: earlier batch not found')
+                FINISHED.add(b['id'])
+                continue
+            note(f'{step}: earlier batch not checked ({type(exc).__name__})')
+            status = None
+        if status == 'ended':
+            got = _read_results(client, step, output_format, b['id'])
+            if got is not None:
+                answers += [(b['id'], details, *got.get(cid, ('retry', None))) for cid, details in b['requests'].items()]
+                note(f'{step}: earlier batch collected')
+                FINISHED.add(b['id'])
+                continue
+        if age_hours > KEEP_HOURS:
+            note(f'{step}: earlier batch given up after {age_hours / 24:.0f} days')
+            FINISHED.add(b['id'])
+            continue
+        if age_hours <= BUSY_HOURS:
+            waiting += list(b['requests'].values())
+    return answers, waiting
 
 class Translation(BaseModel):
     id: str
@@ -1087,11 +1222,23 @@ def summarize(items, sources):
         if item.get('summary_attempts_version', 1) < SUMMARY_VERSION:
             item.pop('summary_attempts', None)
             item.pop('summary_attempts_version', None)
+    # Answers of batches an earlier run left running, and the items still waiting in running ones (not asked again).
+    carried, waiting = collect_pending('summary', Summaries)
+    by_id = {i['id']: i for i in items}
+    done = 0
+    for batch_id, details, kind, parsed in carried:
+        batch = [by_id[i] for i in details['items'] if i in by_id and not _current(by_id[i])]  # some may have left the window
+        for item in batch:
+            item['_basis'] = details['basis'].get(item['id'], 'excerpt')
+        done += _apply_summaries(batch, kind, parsed, details.get('version', 1))
+        if kind in ('ok', 'bad') and batch:
+            COLLECTED.setdefault(batch_id, set()).update(item['id'] for item in batch)
+    busy = {i for details in waiting for i in details['items']}
     weak = lambda i: not i.get('excerpt') or (src.get(i['source']) or {}).get('prefer_ai_summary', False)
-    todo = [i for i in items if not _current(i) and i.get('summary_attempts', 0) < SUMMARY_TRIES]
+    todo = [i for i in items if not _current(i) and i.get('summary_attempts', 0) < SUMMARY_TRIES and i['id'] not in busy]
     todo = sorted(todo, key=lambda i: (bool(i.get('summary_en')), not weak(i), not i.get('uae')))[:SUMMARY_PER_RUN]
     if not todo:
-        return 0
+        return done
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         # Pages already read for an excerpt this run are not fetched again.
         pages = list(pool.map(lambda i: i['_page'] if i.get('_page') is not None else fetch_article(i, src.get(i['source'])), todo))
@@ -1105,29 +1252,42 @@ def summarize(items, sources):
         text = page if len(page) >= 300 else '\n\n'.join(x for x in (item['title'], item.get('excerpt', '')) if x)
         ready.append((item, text, (src.get(item['source']) or {}).get('name', item['source'])))
     batches = [ready[n:n + SUMMARY_BATCH] for n in range(0, len(ready), SUMMARY_BATCH)]
-    answers = ask_claude('summary', SUMMARY_SYSTEM, Summaries, 16000, {n: _summary_prompt(batch) for n, batch in enumerate(batches)})
-    done = 0
+    carry = {n: {'items': [item['id'] for item, _, _ in batch], 'basis': {item['id']: item['_basis'] for item, _, _ in batch},
+                 'version': SUMMARY_VERSION} for n, batch in enumerate(batches)}
+    answers = ask_claude('summary', SUMMARY_SYSTEM, Summaries, 16000, {n: _summary_prompt(batch) for n, batch in enumerate(batches)}, carry)
     for n, batch in enumerate(batches):
-        kind, parsed = answers[n]
-        if kind == 'retry':  # network or service: try again next run
+        done += _apply_summaries([item for item, _, _ in batch], *answers[n])
+    return done
+
+def _apply_summaries(batch, kind, parsed, version=None):
+    """Store one answer's summaries on the items it was asked about (`batch`, each with its _basis), stamped with the
+    prompt `version` they were written with (default SUMMARY_VERSION; an answer collected from an older prompt's batch
+    stays older, so the item is summarised again). 'retry' and 'pending' change nothing (network or service trouble,
+    or a batch left running: asked or collected next run); an unusable answer, or an item left out of it, counts as one
+    of the item's tries. Returns the number summarised (at the current version)."""
+    version = SUMMARY_VERSION if version is None else version
+    if kind in ('retry', 'pending'):
+        return 0
+    done = 0
+    wanted = {item['id']: item for item in batch}
+    for s in parsed.items if kind == 'ok' else []:  # an unusable answer counts as a try for these items
+        item = wanted.pop(s.id, None)
+        if item is None:
             continue
-        wanted = {item['id']: item for item, _, _ in batch}
-        for s in parsed.items if kind == 'ok' else []:  # an unusable answer counts as a try for these items
-            item = wanted.pop(s.id, None)
-            if item is None:
-                continue
-            # A summary that runs long is cut back to whole sentences rather than lost.
-            en, ar = shorten(plain(s.summary_en), SUMMARY_MAX), shorten(plain(s.summary_ar), SUMMARY_MAX)
-            if _valid_summary(en, False) and _valid_summary(ar, True):
-                # The verdict is kept only with a usable summary: from a cookie notice or a paywall it would be a guess.
-                item.update(summary_en=en, summary_ar=ar, summary_source='ai', summary_basis=item['_basis'],
-                            summary_version=SUMMARY_VERSION, ai_focus=bool(s.ai_focus))
+        # A summary that runs long is cut back to whole sentences rather than lost.
+        en, ar = shorten(plain(s.summary_en), SUMMARY_MAX), shorten(plain(s.summary_ar), SUMMARY_MAX)
+        if _valid_summary(en, False) and _valid_summary(ar, True):
+            # The verdict is kept only with a usable summary: from a cookie notice or a paywall it would be a guess.
+            item.update(summary_en=en, summary_ar=ar, summary_source='ai', summary_basis=item['_basis'],
+                        summary_version=version, ai_focus=bool(s.ai_focus))
+            if version >= SUMMARY_VERSION:
                 item.pop('summary_attempts', None)
                 item.pop('summary_attempts_version', None)
                 done += 1
-            else:
-                _tried(item)  # empty (too little text), too long or in the wrong language
-        for item in wanted.values():  # left out of the answer (or the whole batch failed)
+        elif version >= SUMMARY_VERSION:
+            _tried(item)  # empty (too little text), too long or in the wrong language
+    for item in wanted.values():  # left out of the answer (or the whole batch failed)
+        if version >= SUMMARY_VERSION:
             _tried(item)
     return done
 
@@ -1536,6 +1696,8 @@ def main():
     now = datetime.now(timezone.utc).replace(microsecond=0)
     STATS.clear()
     USAGE.clear()
+    FINISHED.clear()
+    COLLECTED.clear()
     fresh, errors, feeds = {}, {}, {}
     def load(source):
         try:
@@ -1580,15 +1742,17 @@ def main():
     saved_before = {p.get('url') for p in previous['items']}
     kept = [i for i in items if storable(i, key, i['url'] in saved_before)]
     counts['held_back'] = len(items) - len(kept)
+    keep_batches_of_held_items({i['id'] for i in items} - {i['id'] for i in kept})
     items = kept
     data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
             'ai': {'key_set': key, 'model': MODEL, 'translated': translated, 'summarised': summarized,
                    'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS),
-                   'usage': usage_report()},
+                   'usage': usage_report(), 'batches_left_running': len([b for b in load_pending() if b['id'] not in FINISHED])},
             'items': items}
     tmp = OUT.with_suffix('.tmp')
     tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
     tmp.replace(OUT)
+    commit_pending()  # only now: the collected answers are in news.json
     # Public log: counts only, never a title or a reason.
     print(f"News: {len(fresh)}/{len(sources)} feeds, {len(items)} items ({duplicates} copies of a story already kept left out), {sum(i['uae'] for i in items)} UAE, "
           f"{sum(1 for i in items if i.get('excerpt'))} with excerpts ({added} new from article pages), {translated} translated, {summarized} summarised, "
@@ -1600,6 +1764,8 @@ def main():
     if use['requests']:
         print(f"Claude: {use['requests']} requests ({use['batched']} in batches at half price), {use['input_tokens']} input and "
               f"{use['output_tokens']} output tokens, about ${use['estimated_usd']:.2f}")
+    if load_pending():
+        print(f'Claude: {len(load_pending())} summary batch(es) left running or not yet read; the next run collects them')
     if report and notify_owner(report, sources):
         print('Private report sent to the owner.')
     if PROBLEMS:
