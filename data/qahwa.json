@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-29T20:30:00+04:00",
+  "generated_at": "2026-09-30T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -968,6 +968,76 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-29T20:30:00+04:00",
       "cover": "images/qahwa/week-01-day-04--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-03--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "Generative AI can create images, not just text.",
+        "ar": "الذكاء الاصطناعي التوليدي يصنع الصور أيضاً، وليس النصوص فقط"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "fact",
+          "en": {
+            "title": "Generative AI can create ==images==, not just text.",
+            "body": "Answer: Fact ✅ Generative AI creates images, audio and video, not just text."
+          },
+          "ar": {
+            "title": "الذكاء الاصطناعي التوليدي يصنع ==الصور== أيضاً، وليس النصوص فقط",
+            "body": "الجواب: حقيقة ✅ الذكاء الاصطناعي التوليدي يصنع صوراً وأصواتاً وفيديو، وليس نصوصاً فقط."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-30T07:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-03--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-04--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "An AI assistant looks up your answer in a database.",
+        "ar": "المساعد الذكي يبحث عن إجابتك في قاعدة بيانات"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant looks up your answer ==in a database==.",
+            "body": "Answer: Myth ❌ A language-model AI assistant usually generates an answer token by token from learned patterns. It may also use search, retrieval or other tools when available."
+          },
+          "ar": {
+            "title": "المساعد الذكي يبحث عن إجابتك ==في قاعدة بيانات==",
+            "body": "الجواب: خرافة ❌ المساعد الذكي المبني على نموذج لغوي يولّد الإجابة عادةً وحدة لغوية بعد أخرى اعتماداً على الأنماط التي تعلّمها. وقد يستخدم أيضاً البحث أو استرجاع المعلومات أو أدوات أخرى عند توفرها."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-09-30T07:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-04--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
