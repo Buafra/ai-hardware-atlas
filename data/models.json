@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-30T00:09:05+00:00",
+ "updated_at": "2026-09-30T10:48:34+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1601,7 +1601,7 @@
    "id": "xiaomi/mimo-v2.6-flash",
    "name": "Xiaomi: MiMo-V2.6-Flash",
    "hf": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-   "context": 1048576,
+   "context": 1050000,
    "created": 1790021264,
    "open": true,
    "params_b": 310.76,
