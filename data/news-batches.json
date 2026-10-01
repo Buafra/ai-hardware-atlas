@@ -256,6 +256,211 @@
           "version": 2
         }
       }
+    },
+    {
+      "id": "msgbatch_019oyzejamYbTo7VuYgYFxtX",
+      "step": "summary",
+      "created_at": "2026-09-30T23:03:26+00:00",
+      "requests": {
+        "r0": {
+          "items": [
+            "26cb68725f0f",
+            "cce5fd46763f",
+            "e360d8e2792e",
+            "e5030454cdaa",
+            "2fbef5ef28d5"
+          ],
+          "basis": {
+            "26cb68725f0f": "article",
+            "cce5fd46763f": "article",
+            "e360d8e2792e": "article",
+            "e5030454cdaa": "article",
+            "2fbef5ef28d5": "excerpt"
+          },
+          "version": 2
+        },
+        "r1": {
+          "items": [
+            "89e8674e8164",
+            "83afd6cc6cd8",
+            "028c4f104082",
+            "ace7c59821d5",
+            "751c39712621"
+          ],
+          "basis": {
+            "89e8674e8164": "article",
+            "83afd6cc6cd8": "article",
+            "028c4f104082": "article",
+            "ace7c59821d5": "article",
+            "751c39712621": "article"
+          },
+          "version": 2
+        },
+        "r2": {
+          "items": [
+            "be0dfeac61ef",
+            "d42c84726533",
+            "f9953f3a0f91",
+            "97fa5252aa29",
+            "da90560c54ac"
+          ],
+          "basis": {
+            "be0dfeac61ef": "article",
+            "d42c84726533": "article",
+            "f9953f3a0f91": "article",
+            "97fa5252aa29": "article",
+            "da90560c54ac": "article"
+          },
+          "version": 2
+        },
+        "r3": {
+          "items": [
+            "9d76017ebf6d",
+            "556e1e4b03fe",
+            "afa057bd37b7",
+            "7fae1aa3e4fb",
+            "5e1b20e7fa9e"
+          ],
+          "basis": {
+            "9d76017ebf6d": "excerpt",
+            "556e1e4b03fe": "article",
+            "afa057bd37b7": "article",
+            "7fae1aa3e4fb": "article",
+            "5e1b20e7fa9e": "article"
+          },
+          "version": 2
+        },
+        "r4": {
+          "items": [
+            "cb18e27612ef",
+            "0340c6a1003f",
+            "871e521e5fab",
+            "12fd79e7af63",
+            "c2747f33753d"
+          ],
+          "basis": {
+            "cb18e27612ef": "article",
+            "0340c6a1003f": "article",
+            "871e521e5fab": "article",
+            "12fd79e7af63": "excerpt",
+            "c2747f33753d": "article"
+          },
+          "version": 2
+        },
+        "r5": {
+          "items": [
+            "dc2e6e7fe28a",
+            "846404c900e6",
+            "7cdb83130a45",
+            "6e1523d27751",
+            "3396425db918"
+          ],
+          "basis": {
+            "dc2e6e7fe28a": "article",
+            "846404c900e6": "article",
+            "7cdb83130a45": "article",
+            "6e1523d27751": "article",
+            "3396425db918": "article"
+          },
+          "version": 2
+        },
+        "r6": {
+          "items": [
+            "f872b5f1d0b5",
+            "e76dc9eb5d6c",
+            "940c49f7ad52",
+            "8b112c5c2190",
+            "b8bc0ced14bc"
+          ],
+          "basis": {
+            "f872b5f1d0b5": "article",
+            "e76dc9eb5d6c": "article",
+            "940c49f7ad52": "article",
+            "8b112c5c2190": "article",
+            "b8bc0ced14bc": "article"
+          },
+          "version": 2
+        },
+        "r7": {
+          "items": [
+            "04acd56abe80",
+            "ec7f1e61ac48",
+            "b3707029996a",
+            "33eae2aa4a6a",
+            "f9faccd416c4"
+          ],
+          "basis": {
+            "04acd56abe80": "article",
+            "ec7f1e61ac48": "article",
+            "b3707029996a": "article",
+            "33eae2aa4a6a": "article",
+            "f9faccd416c4": "article"
+          },
+          "version": 2
+        },
+        "r8": {
+          "items": [
+            "93edc25908ea",
+            "6a91381a4292",
+            "37728767b989",
+            "10ef8909e095",
+            "984223f109f3"
+          ],
+          "basis": {
+            "93edc25908ea": "article",
+            "6a91381a4292": "excerpt",
+            "37728767b989": "excerpt",
+            "10ef8909e095": "article",
+            "984223f109f3": "article"
+          },
+          "version": 2
+        },
+        "r9": {
+          "items": [
+            "41149516380c",
+            "899c77caa9d7",
+            "19dab3834f6a",
+            "3bba5905fdc5",
+            "c4fe21ac6125"
+          ],
+          "basis": {
+            "41149516380c": "article",
+            "899c77caa9d7": "excerpt",
+            "19dab3834f6a": "excerpt",
+            "3bba5905fdc5": "article",
+            "c4fe21ac6125": "article"
+          },
+          "version": 2
+        },
+        "r10": {
+          "items": [
+            "e91decbf7f9c",
+            "6251f022a92b",
+            "dd66acaed2a0",
+            "19db7cc5ca5c",
+            "95096bb71d88"
+          ],
+          "basis": {
+            "e91decbf7f9c": "article",
+            "6251f022a92b": "article",
+            "dd66acaed2a0": "excerpt",
+            "19db7cc5ca5c": "excerpt",
+            "95096bb71d88": "article"
+          },
+          "version": 2
+        },
+        "r11": {
+          "items": [
+            "cd2b0796b9be",
+            "13d62ca6fcfd"
+          ],
+          "basis": {
+            "cd2b0796b9be": "article",
+            "13d62ca6fcfd": "article"
+          },
+          "version": 2
+        }
+      }
     }
   ]
 }

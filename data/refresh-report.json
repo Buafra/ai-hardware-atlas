@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-30T16:50:10+00:00",
+  "at": "2026-09-30T23:01:50+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 12,
@@ -10,137 +10,132 @@
     {
       "url": "https://blogs.nvidia.com/blog/ampere-rtx-a400-a1000-ai/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/blackwell-coreweave-gb200-nvl72-instances-cloud/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/dgx-h100-systems-shipping/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/dgx-superpod-rubin/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/gtc-2026-news/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/gtc-2026-news/#rtx-pro-4500",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/igx-thor-processor-physical-ai-industrial-medical-edge/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-generative-ai-supercomputer/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-thor-physical-ai-edge/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-2000-ada/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-a2000/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-tackle-pro-workflows/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/inside-nvidia-groq-3-lpx-the-low-latency-inference-accelerator-for-the-nvidia-vera-rubin-platform/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-30T23:01:50+00:00"
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-30T23:01:50+00:00"
+    },
+    {
+      "url": "https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/introducing-the-jetson-orin-nx-series-and-jetson-agx-orin-developer-kit-availability/209139",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
-    },
-    {
-      "url": "https://forums.developer.nvidia.com/t/jetson-orin-modules-and-developer-kit-announcements/209137",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/release-date-for-jetson-agx-orin-64gb-developer-kit/254524",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
-    },
-    {
-      "url": "https://newsroom.amd.com/category/ai/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
       "url": "https://nvidianews.nvidia.com/news/latest",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
-      "url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html",
+      "url": "https://www.nvidia.com/en-gb/data-center/tesla-v100/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     },
     {
-      "url": "https://www.amd.com/en/products/accelerators/instinct/mi400.html",
+      "url": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-sg/data-center/dgx-h100/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/hgx/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-09-30T16:50:10+00:00"
+      "at": "2026-09-30T23:01:50+00:00"
     }
   ],
   "errors": {
