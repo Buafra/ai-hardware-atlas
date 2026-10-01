@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-30T13:30:00+04:00",
+  "generated_at": "2026-10-01T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1190,6 +1190,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-09-30T13:30:00+04:00",
       "cover": "images/qahwa/news-2026-09-29-openai-devday--2-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-09-29-openai-devday--2-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "An AI agent finishes the job without you checking it",
+        "ar": "الوكيل الذكي ينفّذ المهمة كاملة دون مراجعتك"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI agent ==finishes the job== without you checking it",
+            "body": "Answer: Myth ❌ An agent carries out steps, but it makes mistakes like any model. Check what it did before you rely on it — especially with money, accounts and messages sent in your name."
+          },
+          "ar": {
+            "title": "الوكيل الذكي ==ينفّذ المهمة كاملة== دون مراجعتك",
+            "body": "الجواب: خرافة ❌ الوكيل ينفّذ خطوات، لكنه يخطئ مثل أي نموذج. راجع ما فعله قبل أن تعتمد عليه، خاصة في المال والحسابات والرسائل باسمك."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-01T07:50:00+04:00",
+      "cover": "images/qahwa/news-2026-09-29-openai-devday--2-check-story-answer.webp",
       "related_concepts": []
     }
   ]
