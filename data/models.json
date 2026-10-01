@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-01T11:19:49+00:00",
+ "updated_at": "2026-10-01T18:04:43+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2082,6 +2082,17 @@
    "moe": false
   },
   {
+   "id": "apodex/apodex-1.1-mini",
+   "name": "Apodex: Apodex 1.1 Mini",
+   "hf": null,
+   "context": 262144,
+   "created": 1790875335,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "openrouter/auto",
    "name": "Auto Router",
    "hf": null,
@@ -3572,6 +3583,17 @@
    "hf": null,
    "context": 262144,
    "created": 1789686178,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "unbiased/pareto-26.10-preview",
+   "name": "Pareto 26.10 Preview",
+   "hf": null,
+   "context": 1048576,
+   "created": 1790863623,
    "open": false,
    "params_b": null,
    "params_source": null,

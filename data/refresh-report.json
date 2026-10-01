@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-01T10:11:26+00:00",
+  "at": "2026-10-01T17:23:43+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 12,
@@ -8,149 +8,119 @@
   "changes": [],
   "review": [
     {
+      "url": "https://blogs.nvidia.com/blog/ampere-rtx-a400-a1000-ai/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/blackwell-coreweave-gb200-nvl72-instances-cloud/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/dgx-h100-systems-shipping/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/dgx-superpod-rubin/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/igx-thor-processor-physical-ai-industrial-medical-edge/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-generative-ai-supercomputer/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-thor-physical-ai-edge/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-2000-ada/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-a2000/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-tackle-pro-workflows/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-01T17:23:43+00:00"
+    },
+    {
       "url": "https://forums.developer.nvidia.com/t/introducing-the-jetson-orin-nx-series-and-jetson-agx-orin-developer-kit-availability/209139",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/jetson-orin-modules-and-developer-kit-announcements/209137",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/release-date-for-jetson-agx-orin-64gb-developer-kit/254524",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
-      "url": "https://www.nvidia.com/en-us/data-center/a100/",
+      "url": "https://nvidianews.nvidia.com/news/latest",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
-      "url": "https://www.nvidia.com/en-us/data-center/a40/",
+      "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
-      "url": "https://www.nvidia.com/en-us/data-center/dgx-b200/",
+      "url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     },
     {
-      "url": "https://www.nvidia.com/en-us/data-center/dgx-b300/",
+      "url": "https://www.nvidia.com/en-sg/data-center/dgx-h100/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/dgx-gb200/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/dgx-rubin-nvl8/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/gb200-nvl72/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/gb300-nvl72/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/grace-hopper-superchip/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/h100/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/h200/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/hgx/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/l4/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/l40/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/l40s/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/lpx/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/products/a10-gpu/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/products/a2/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/products/a30-gpu/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/products/rtx-pro-server/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/rtx-pro-4500-blackwell-server-edition/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/technologies/rubin/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/tesla-t4/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/data-center/vera-rubin-nvl72/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-01T10:11:26+00:00"
+      "at": "2026-10-01T17:23:43+00:00"
     }
   ],
   "errors": {
