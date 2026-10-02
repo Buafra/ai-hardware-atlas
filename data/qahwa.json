@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-01T07:50:00+04:00",
+  "generated_at": "2026-10-02T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -882,6 +882,10 @@
           },
           "en": {
             "title": "Next: ==how does an AI assistant write== its answer?"
+          },
+          "next": {
+            "en": "Lesson 05: Language models don’t think like humans",
+            "ar": "الدرس 05: النماذج اللغوية لا تفكّر مثل البشر"
           }
         }
       ],
@@ -1225,6 +1229,331 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-01T07:50:00+04:00",
       "cover": "images/qahwa/news-2026-09-29-openai-devday--2-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "promo-cipher-lacuna--cipher-lacuna-carousel",
+      "kind": "other",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "promo",
+      "title": {
+        "en": "Our new website: Cipher Lacuna",
+        "ar": "موقعنا الجديد: Cipher Lacuna"
+      },
+      "summary": {
+        "en": "Scattered news, hype without sources, too little clear Arabic. Our new website, Cipher Lacuna, puts the facts and their sources in one place.",
+        "ar": "أخبار مبعثرة، وتهويل بلا مصدر، وشحّ في المحتوى العربي الواضح. موقعنا الجديد Cipher Lacuna يجمع لك المعلومة ومصدرها في مكان واحد."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "badge": {
+            "name": "Cipher Lacuna",
+            "tagline": {
+              "ar": "كشف المجهول في عالم الذكاء الاصطناعي",
+              "en": "Decoding the gaps in AI knowledge"
+            }
+          },
+          "ar": {
+            "title": "أين تجد معلومة ==موثّقة== عن الذكاء الاصطناعي؟",
+            "body": "أخبار مبعثرة، وتهويل بلا مصدر، وشحّ في المحتوى العربي الواضح. موقعنا الجديد Cipher Lacuna يجمع لك المعلومة ومصدرها في مكان واحد."
+          },
+          "en": {
+            "title": "Where do you find ==reliable== AI info?",
+            "body": "Scattered news, hype without sources, too little clear Arabic. Our new website, Cipher Lacuna, puts the facts and their sources in one place."
+          }
+        },
+        {
+          "type": "screen",
+          "note": {
+            "ar": "تقدير للذاكرة، لا للسرعة",
+            "en": "A memory estimate, not a speed test"
+          },
+          "ar": {
+            "title": "قارن عتاد NVIDIA وAMD ==جنباً إلى جنب==",
+            "body": "53 منتجاً من الأجهزة المكتبية إلى الرفوف، بمواصفات رسمية وأسعار تقريبية مؤرّخة بالدولار والدرهم. اختر نموذجاً وقدّر أي عتاد يتسع له."
+          },
+          "en": {
+            "title": "Compare NVIDIA and AMD ==side by side==",
+            "body": "53 products, desktop to rack: official specs, approximate dated USD/AED prices. Pick a model and see which hardware has the memory for it."
+          }
+        },
+        {
+          "type": "screen",
+          "ar": {
+            "title": "أخبار الذكاء الاصطناعي ==من مصادرها==",
+            "body": "عناوين عربية وإنجليزية من 40 مصدراً موثوقاً، تتجدد ست مرات يومياً، ولكل خبر رابط إلى مقاله الأصلي. وما يُعدّ بالذكاء الاصطناعي يحمل إشارة واضحة."
+          },
+          "en": {
+            "title": "AI news, ==straight from the source==",
+            "body": "Arabic and English headlines from 40 vetted sources, refreshed 6 times a day, each linked to the original. AI summaries and translations are labelled."
+          }
+        },
+        {
+          "type": "screen",
+          "ar": {
+            "title": "ماذا تبني ==الإمارات== في الذكاء الاصطناعي؟",
+            "body": "أحدث الأخبار، ثم 12 حقيقة أساسية عن الاستراتيجية والقدرات الحاسوبية والنماذج، من Stargate UAE إلى Falcon وJais، ولكل معلومة مصدرها."
+          },
+          "en": {
+            "title": "What is ==the UAE== building in AI?",
+            "body": "Latest UAE AI news, then 12 sourced facts on strategy, compute and models, from Stargate UAE to Falcon and Jais."
+          }
+        },
+        {
+          "type": "screen",
+          "ar": {
+            "title": "تعلّم الذكاء الاصطناعي ==بلغة مبسّطة==",
+            "body": "39 شرحاً في 6 مواضيع، من الوحدات اللغوية وRAG إلى وكلاء الذكاء الاصطناعي ومخاطره، مع أفضل الممارسات و12 تركيبة تقنية لمشاريع حقيقية."
+          },
+          "en": {
+            "title": "Learn AI ==in plain language==",
+            "body": "39 guides in 6 topics, from tokens and RAG to AI agents and risk, plus best practices and 12 AI stacks for real projects."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "==تحقّق== بنفسك",
+            "items": [
+              "لكل معلومة ورقم رابط إلى مصدره",
+              "القيم غير المعروفة تبقى فارغة، بلا تخمين",
+              "الأسعار تقريبية ومؤرّخة",
+              "كل ما أُعدّ بالذكاء الاصطناعي يحمل إشارة واضحة"
+            ]
+          },
+          "en": {
+            "title": "Check it ==yourself==",
+            "items": [
+              "Every fact and figure links to its source",
+              "Unknown values stay blank, never guessed",
+              "Prices are approximate, dated snapshots",
+              "AI-written text is labelled"
+            ]
+          },
+          "note": {
+            "ar": "Cipher Lacuna · كشف المجهول في عالم الذكاء الاصطناعي",
+            "en": "Cipher Lacuna · Decoding the gaps in AI knowledge"
+          }
+        },
+        {
+          "type": "cta",
+          "badge": {
+            "name": "Cipher Lacuna",
+            "tagline": {
+              "ar": "كشف المجهول في عالم الذكاء الاصطناعي",
+              "en": "Decoding the gaps in AI knowledge"
+            }
+          },
+          "nextLabel": {
+            "en": "Link in bio",
+            "ar": "الرابط في البايو"
+          },
+          "ar": {
+            "title": "جرّب ==Cipher Lacuna== مجاناً",
+            "body": "بلا تسجيل، بالعربية والإنجليزية مع واجهة عربية كاملة من اليمين إلى اليسار، ويعمل من متصفح موبايلك."
+          },
+          "en": {
+            "title": "Try ==Cipher Lacuna== for free",
+            "body": "No sign-up. English and Arabic, with a full right-to-left Arabic layout, right in your phone's browser."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/Dd8inZWkVcb/",
+      "published_at": "2026-10-01T13:02:00+04:00",
+      "cover": "images/qahwa/promo-cipher-lacuna--cipher-lacuna-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-05--1-learn-lesson-05",
+      "kind": "lesson",
+      "lesson": 5,
+      "code": "L05",
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "Language models don’t think like humans",
+        "ar": "النماذج اللغوية لا تفكّر مثل البشر"
+      },
+      "summary": {
+        "en": "Once you know how it works, you know when to trust it and when to double-check.",
+        "ar": "عندما تفهم كيف يعمل، تعرف متى تثق به ومتى تتحقق من كلامه."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "النماذج اللغوية لا تفكّر مثل البشر.\n==إنها تتنبأ بالوحدات اللغوية.==",
+            "body": "ماذا يحدث فعلياً عندما يولّد المساعد الذكي إجابة؟"
+          },
+          "en": {
+            "title": "Language models don’t think like humans.\n==They predict tokens.==",
+            "body": "What really happens when an AI assistant generates an answer."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لماذا يهمّك هذا؟",
+            "body": "عندما تفهم كيف يعمل، تعرف ==متى تثق به== ومتى تتحقق من كلامه."
+          },
+          "en": {
+            "title": "Why should you care?",
+            "body": "Once you know how it works, you know ==when to trust it== and when to double-check."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "يتعلّم الأنماط من كميات ضخمة من البيانات",
+            "body": "قد تشمل بيانات التدريب ==الكتب والمقالات والمواقع والشيفرات البرمجية== وغيرها. ويختلف نوع البيانات المستخدمة من نموذج إلى آخر."
+          },
+          "en": {
+            "title": "It learns patterns from large datasets",
+            "body": "Training data can include text such as ==books, articles, websites and code==. The exact mix varies by model."
+          }
+        },
+        {
+          "type": "predict",
+          "ar": {
+            "title": "ثم يتنبأ بالوحدة اللغوية التالية (Token)",
+            "prompt": "لون السماء…",
+            "body": "وهي جزء صغير من النص؛ قد تكون كلمة كاملة أو جزءاً من كلمة."
+          },
+          "en": {
+            "title": "Then it predicts the next token",
+            "prompt": "The sky is…",
+            "body": "A token is a small unit of text — sometimes a whole word, and sometimes only part of one."
+          },
+          "options": [
+            {
+              "ar": "أزرق",
+              "en": "blue",
+              "pct": 72
+            },
+            {
+              "ar": "رمادي",
+              "en": "grey",
+              "pct": 14
+            },
+            {
+              "ar": "برتقالي",
+              "en": "orange",
+              "pct": 6
+            }
+          ],
+          "note": {
+            "ar": "أرقام توضيحية",
+            "en": "Illustrative numbers"
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "وحدة لغوية بعد أخرى… تتكوّن الإجابة",
+            "body": "يكرّر النموذج عملية التنبؤ مرات كثيرة خلال ثوانٍ، ==فتظهر الإجابة تدريجياً== أمامك."
+          },
+          "en": {
+            "title": "Token by token, an answer appears",
+            "body": "It repeats this prediction many times in seconds, so the response ==appears to be typed out==."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لهذا قد يبدو واثقاً… ويكون مخطئاً",
+            "body": "يتنبأ ==بوحدات لغوية محتملة== اعتماداً على الأنماط التي تعلّمها، وهذا لا يضمن صحة كل معلومة. تحقّق دائماً من المعلومات المهمة."
+          },
+          "en": {
+            "title": "That’s why it can sound confident and still be wrong",
+            "body": "It predicts ==plausible next tokens== from learned patterns. That does not guarantee every fact is correct. Always check important information."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل باريستا ==سمع ملايين الطلبات==",
+            "body": "يتوقّع ما ستقوله. غالباً يصيب، وأحياناً يخطئ تماماً."
+          },
+          "en": {
+            "title": "Like a barista who ==has heard millions of orders==",
+            "body": "They guess what you'll say next. Usually right, sometimes very wrong."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "اشرح لي كيف تكتب إجاباتك، وكأنني طفل عمري 10 سنوات."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Explain how you write your answers, as if I'm 10 years old."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، وأرسله لشخص ==يستخدم المساعد الذكي=="
+          },
+          "en": {
+            "title": "Save this and send it to someone who ==uses AI assistants=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain how you write your answers, as if I'm 10 years old.",
+        "ar": "اشرح لي كيف تكتب إجاباتك، وكأنني طفل عمري 10 سنوات.",
+        "code": "L05"
+      },
+      "permalink": "https://www.instagram.com/p/Dd-lMz4jT_I/",
+      "published_at": "2026-10-02T08:03:00+04:00",
+      "cover": "images/qahwa/week-01-day-05--1-learn-lesson-05.webp",
+      "related_concepts": [
+        "tokens",
+        "training-vs-inference",
+        "inference-serving",
+        "llm",
+        "hallucination"
+      ]
+    },
+    {
+      "id": "week-01-day-05--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "If the answer sounds confident, it's correct.",
+        "ar": "إذا كانت الإجابة واثقة فهي صحيحة"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "إذا كانت الإجابة ==واثقة== فهي صحيحة",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "If the answer sounds ==confident==, it's correct.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-02T20:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-05--3-check-story.webp",
       "related_concepts": []
     }
   ]
