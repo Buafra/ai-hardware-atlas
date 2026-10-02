@@ -773,6 +773,96 @@
           "version": 2
         }
       }
+    },
+    {
+      "id": "msgbatch_01QHYRqaBaVLHxTYWTdY7u2d",
+      "step": "summary",
+      "created_at": "2026-10-02T09:49:45+00:00",
+      "requests": {
+        "r0": {
+          "items": [
+            "14db52f37bec",
+            "bf0ff1412ab7",
+            "9897e2f57c90",
+            "c11d2843ba5d",
+            "b7dd82503263"
+          ],
+          "basis": {
+            "14db52f37bec": "article",
+            "bf0ff1412ab7": "article",
+            "9897e2f57c90": "article",
+            "c11d2843ba5d": "article",
+            "b7dd82503263": "article"
+          },
+          "version": 2
+        },
+        "r1": {
+          "items": [
+            "a567d48e1587",
+            "085187c7d81c",
+            "7caefce381fd",
+            "e270dd4b6c38",
+            "c1617416b188"
+          ],
+          "basis": {
+            "a567d48e1587": "excerpt",
+            "085187c7d81c": "article",
+            "7caefce381fd": "article",
+            "e270dd4b6c38": "article",
+            "c1617416b188": "article"
+          },
+          "version": 2
+        },
+        "r2": {
+          "items": [
+            "777b8d372e41",
+            "1c435808300f",
+            "1b69810b2b8b",
+            "f87f41865ac3",
+            "400833ba706d"
+          ],
+          "basis": {
+            "777b8d372e41": "article",
+            "1c435808300f": "article",
+            "1b69810b2b8b": "article",
+            "f87f41865ac3": "article",
+            "400833ba706d": "article"
+          },
+          "version": 2
+        },
+        "r3": {
+          "items": [
+            "7cc6313b0245",
+            "a885ed61f54a",
+            "5ef2700f9c57",
+            "c68e4b407e02",
+            "bcd5500bd1f1"
+          ],
+          "basis": {
+            "7cc6313b0245": "article",
+            "a885ed61f54a": "article",
+            "5ef2700f9c57": "article",
+            "c68e4b407e02": "article",
+            "bcd5500bd1f1": "excerpt"
+          },
+          "version": 2
+        },
+        "r4": {
+          "items": [
+            "0a4333499f54",
+            "c75be28270e3",
+            "dfc89a0aa5a0",
+            "04e15d4b0a76"
+          ],
+          "basis": {
+            "0a4333499f54": "excerpt",
+            "c75be28270e3": "article",
+            "dfc89a0aa5a0": "article",
+            "04e15d4b0a76": "article"
+          },
+          "version": 2
+        }
+      }
     }
   ]
 }
