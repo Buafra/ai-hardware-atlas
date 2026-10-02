@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-02T10:44:12+00:00",
+ "updated_at": "2026-10-02T17:02:14+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2604,6 +2604,17 @@
    "hf": null,
    "context": 262144,
    "created": 1788545946,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "inclusionai/ling-3.1-flash",
+   "name": "inclusionAI: Ling 3.1 Flash",
+   "hf": null,
+   "context": 262144,
+   "created": 1790950024,
    "open": false,
    "params_b": null,
    "params_source": null,
