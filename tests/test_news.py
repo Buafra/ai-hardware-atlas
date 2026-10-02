@@ -842,28 +842,45 @@ class BatchTests(unittest.TestCase):
         done,client,problems,_=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=FakeBatches(create_error=ConnectionError('down')))
         self.assertEqual((done,len(client.calls)),(10,2))
         self.assertEqual(problems,{'summary: batch ConnectionError':1})
-    def test_slow_policy_batch_is_cancelled_and_unanswered_requests_asked_one_at_a_time(self):
-        # The content check must finish within the run: one request ended before the cancel went through; the other was
-        # cancelled (not billed) and is asked directly.
+    def policy_prompts(self,items):
+        return {n:news._policy_prompt(items[n*10:n*10+10]) for n in range((len(items)+9)//10)}
+    def ask_policy(self,items,fb):
+        # A batch without carry (no step uses one today; kept for any that must finish within the run).
+        return self.run_step(lambda:news.ask_claude('policy',news.POLICY_SYSTEM,news.PolicyVerdicts,8000,self.policy_prompts(items)),
+                             batches=fb,parse=FakePolicyClient().parse)
+    def test_slow_uncarried_batch_is_cancelled_and_unanswered_requests_asked_one_at_a_time(self):
+        # One request ended before the cancel went through; the other was cancelled (not billed) and is asked directly.
         def answer(params):
             return ok_result(params) if '"i00"' in params['messages'][0]['content'] else SimpleNamespace(type='canceled')
         fb=FakeBatches(answer=answer,polls=None)
         items=[item(n) for n in range(12)]
         with mock.patch.object(news,'BATCH_WAIT',0):
-            failed,client,problems,use=self.run_step(news.policy_check,items,batches=fb,parse=FakePolicyClient().parse)
-        self.assertEqual(fb.cancelled,['b1']);self.assertEqual(failed,[])
-        self.assertTrue(all(news.policy.verified(i) for i in items))
+            answers,client,problems,use=self.ask_policy(items,fb)
+        self.assertEqual(fb.cancelled,['b1']);self.assertEqual({k:v[0] for k,v in answers.items()},{0:'ok',1:'ok'})
         self.assertEqual(len(client.calls),1);self.assertIn('"i10"',client.calls[0]['messages'][0]['content'])
         self.assertEqual(problems,{'policy: batch cancelled':1});self.assertEqual((use['requests'],use['batched']),(2,1))
         self.assertEqual(self.pending_batches(),[])  # only summary batches are left running
-    def test_policy_batch_that_never_ends_is_not_asked_again(self):
+    def test_uncarried_batch_that_never_ends_is_not_asked_again(self):
         fb=FakeBatches(polls=None,cancel_ends=False)
-        items=[item(n) for n in range(5)]
         with mock.patch.object(news,'BATCH_WAIT',0),mock.patch.object(news,'BATCH_CANCEL_WAIT',0):
-            failed,client,problems,_=self.run_step(news.policy_check,items,batches=fb,parse=FakePolicyClient().parse)
-        self.assertEqual((failed,client.calls),([],[]))  # not asked again: the batch may still be billed
-        self.assertTrue(all('policy_ok' not in i and 'policy_attempts' not in i for i in items))  # checked next run
+            answers,client,problems,_=self.ask_policy([item(n) for n in range(5)],fb)
+        self.assertEqual((answers,client.calls),({0:('retry',None)},[]))  # not asked again: the batch may still be billed
         self.assertEqual(problems,{'policy: batch cancelled':1,'policy: batch did not end':1})
+    def test_headlines_and_content_check_never_use_a_batch(self):
+        # They must finish within the run: from 30 Sep to 2 Oct 2026 every batch took over 20 minutes and no story could
+        # be approved while the content check was batched.
+        def translations(**kw):
+            ids=[l.split('\t')[0] for l in kw['messages'][0]['content'].splitlines()[1:]]
+            return SimpleNamespace(stop_reason='end_turn',parsed_output=news.Translations(translations=[news.Translation(id=i,title_ar=f'عنوان {i}') for i in ids]))
+        fb=FakeBatches(polls=None)
+        items=[item(n) for n in range(3)]
+        done,client,_,use=self.run_step(news.translate,items,batches=fb,parse=translations)
+        self.assertEqual((done,len(client.calls),fb.created),(3,1,[]))
+        self.assertEqual([i['title_ar'] for i in items],['عنوان i00','عنوان i01','عنوان i02'])
+        items=[item(n) for n in range(12)]
+        failed,client,_,use=self.run_step(news.policy_check,items,batches=fb,parse=FakePolicyClient().parse)
+        self.assertEqual((failed,len(client.calls),fb.created,use['batched']),([],2,[],0))
+        self.assertTrue(all(news.policy.verified(i) for i in items))
     def test_slow_summary_batch_is_left_running_and_collected_next_run(self):
         fb=FakeBatches(polls=None,cancel_ends=False)
         items=[item(n) for n in range(10)]
@@ -983,11 +1000,9 @@ class BatchTests(unittest.TestCase):
         self.next_run();fb.results_error=None
         done,client,_,_=self.run_step(news.summarize,items,[SRC],batches=fb)
         self.assertEqual((done,client.calls,len(fb.created)),(5,[],1))
-    def test_unreadable_policy_results_are_not_asked_again(self):
-        items=[item(n) for n in range(5)]
-        failed,client,problems,_=self.run_step(news.policy_check,items,batches=FakeBatches(results_error=ConnectionError('reset')),parse=FakePolicyClient().parse)
-        self.assertEqual((failed,client.calls,problems),([],[],{'policy: batch results not read':1}))
-        self.assertTrue(all('policy_ok' not in i for i in items))
+    def test_unreadable_uncarried_results_are_not_asked_again(self):
+        answers,client,problems,_=self.ask_policy([item(n) for n in range(5)],FakeBatches(results_error=ConnectionError('reset')))
+        self.assertEqual((answers,client.calls,problems),({0:('retry',None)},[],{'policy: batch results not read':1}))
     def test_errored_and_unusable_batch_answers(self):
         def answer(params):
             p=params['messages'][0]['content']
@@ -1000,22 +1015,5 @@ class BatchTests(unittest.TestCase):
         self.assertTrue(all('summary_attempts' not in i for i in items[:5]))  # API error: next run, no try used
         self.assertTrue(all(i['summary_attempts']==1 for i in items[5:]))  # cut off or unusable: a try
         self.assertEqual(problems,{'summary: overloaded_error':1,'summary: stop reason max_tokens':1,'summary: ValidationError':1})
-    def test_translation_in_a_batch(self):
-        items=[item(n) for n in range(3)]
-        done,client,_,_=self.run_step(news.translate,items)
-        self.assertEqual((done,client.calls),(3,[]))
-        self.assertEqual([i['title_ar'] for i in items],['عنوان i00','عنوان i01','عنوان i02'])
-    def test_policy_retries_undecided_items_in_a_second_batch(self):
-        items=[item(n) for n in range(12)]
-        def answer(params):
-            ids=[l.split('"')[1] for l in params['messages'][0]['content'].splitlines() if l.startswith('<item id=')]
-            if len(ids)>1:ids=[i for i in ids if i!='i03']  # the batch answer leaves i03 out
-            return message(news.PolicyVerdicts(items=[news.PolicyVerdict(id=i,policy_ok=True) for i in ids]).model_dump_json())
-        fb=FakeBatches(answer=answer)
-        failed,client,problems,_=self.run_step(news.policy_check,items,batches=fb)
-        self.assertEqual((failed,client.calls,problems),([],[],{}))
-        self.assertEqual([len(b) for b in fb.created],[2,1])  # 12 items in requests of 10, then i03 on its own
-        self.assertIn('"i03"',fb.created[1][0]['params']['messages'][0]['content'])
-        self.assertTrue(all(news.policy.verified(i) for i in items))
 
 if __name__=='__main__':unittest.main()

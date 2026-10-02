@@ -9,8 +9,10 @@ recent items get an AI summary of 3 to 5 sentences in English and Arabic written
 (ai_focus) on whether the article is mainly about AI; both texts are marked as AI-written on the page, and items judged
 not mainly about AI stay in news.json but are not shown. A failing feed keeps its previous items; nothing is deleted
 because a fetch failed. What the AI steps did (or why they did nothing), with the tokens they used and an estimate of
-their cost, is recorded in news.json under "ai" (not shown on the site). With NEWS_BATCH=1 (the scheduled workflow) each
-AI step sends its requests as one Message Batch, which costs half as much as asking one request at a time.
+their cost, is recorded in news.json under "ai" (not shown on the site). With NEWS_BATCH=1 (the scheduled workflow) the
+summaries go as one Message Batch, which costs half as much as asking one request at a time; a batch still running is
+collected by a later run. Headlines and the content check are always asked directly: both must finish within the run,
+and batches have often taken more than 20 minutes.
 
 Content policy for the UAE and the GCC states (scripts/policy.py, approved by the owner):
   M1  Stories that mention the region come only from regional outlets and official sources: an item from any other
@@ -645,19 +647,20 @@ def usage_report():
     return {'requests': USAGE['requests'], 'batched': USAGE['batched'], 'input_tokens': USAGE['input_tokens'],
             'output_tokens': USAGE['output_tokens'], 'estimated_usd': round(USAGE['micro_usd'] / 1e6, 4)}
 
-def ask_claude(step, system, output_format, max_tokens, prompts, carry=None):
+def ask_claude(step, system, output_format, max_tokens, prompts, carry=None, batch=True):
     """Claude's answers to `prompts` ({key: user message}), all with one system prompt and output format (a pydantic
     model): {key: ('ok', parsed output) | ('retry', None) after an API or network error (asked again next run) |
     ('bad', None) for a refusal, a cut-off or an unusable answer | ('pending', None)}. With NEWS_BATCH=1 the requests go
     as one Message Batch at half price (see _ask_batch). With `carry` ({key: JSON-safe details of the request}), a batch
     still running after BATCH_WAIT is left running and recorded in PENDING for the next run (collect_pending), and its
     requests come back 'pending'; without it the batch is cancelled. Requests the batch could not send or did not answer
-    are then asked one at a time, as they are without NEWS_BATCH. Problems are noted under `step`."""
+    are then asked one at a time, as they are without NEWS_BATCH or with batch=False. Problems are noted under `step`."""
     if not prompts:
         return {}
     import anthropic
     client = anthropic.Anthropic(timeout=120.0, max_retries=1)
-    answers = _ask_batch(client, step, system, output_format, max_tokens, prompts, carry) if os.environ.get('NEWS_BATCH') == '1' else {}
+    use_batch = batch and os.environ.get('NEWS_BATCH') == '1'
+    answers = _ask_batch(client, step, system, output_format, max_tokens, prompts, carry) if use_batch else {}
 
     def one(text):
         try:
@@ -901,8 +904,9 @@ def translate(items):
         return 0
     listing = '\n'.join(f"{i['id']}\t{i['title']}" for i in todo)
     # API, network, output validation or anything unexpected: this step is optional, the headlines wait for next run.
+    # Asked directly, not in a batch: the headlines are needed within this run.
     kind, parsed = ask_claude('translate', TRANSLATE_SYSTEM, Translations, 16000,
-                              {'all': 'Headlines (id<TAB>headline):\n' + listing})['all']
+                              {'all': 'Headlines (id<TAB>headline):\n' + listing}, batch=False)['all']
     if kind != 'ok':
         return 0
     wanted = {i['id']: i for i in todo}
@@ -1367,8 +1371,10 @@ def policy_check(items):
     todo = sorted(todo, key=lambda i: not policy.item_mentions_region(i))[:POLICY_PER_RUN]
     if not todo:
         return []
+    # Asked directly, not in a batch: a story is stored only with a verdict from this run, and batches have often
+    # taken longer than the run can wait (no story could be approved from 1 to 2 Oct 2026).
     ask = lambda prompts: ask_claude('policy', POLICY_SYSTEM, PolicyVerdicts, 8000,
-                                     {key: _policy_prompt(batch) for key, batch in prompts.items()})
+                                     {key: _policy_prompt(batch) for key, batch in prompts.items()}, batch=False)
     batches = [todo[n:n + POLICY_BATCH] for n in range(0, len(todo), POLICY_BATCH)]
     # Per batch: the decisions, and the ids with two unusable answers. After an API or network error an item gets no
     # decision and is checked again next run. Items a batch answer left undecided (refused, bad output, left out, wrong

@@ -24,8 +24,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # The news step may wait for its Message Batches (most end within minutes). After 20 minutes a headline or
-    # content-check batch is cancelled; a summary batch is left running and collected by a later run.
+    # The news step waits up to 20 minutes for its summary Message Batch, which is then left running and collected by a
+    # later run. Headlines and the content check are asked directly (they must finish within the run).
     timeout-minutes: 120
     permissions:
       contents: write
