@@ -5,3 +5,6 @@ __pycache__/
 dist/
 tmp/
 .cache/
+
+# Monthly Learn AI link report (generated, not published)
+data/learn-links.json
