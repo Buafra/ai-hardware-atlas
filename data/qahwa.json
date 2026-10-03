@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-02T20:30:00+04:00",
+  "generated_at": "2026-10-03T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1554,6 +1554,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-02T20:30:00+04:00",
       "cover": "images/qahwa/week-01-day-05--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-05--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "basics",
+      "title": {
+        "en": "If the answer sounds confident, it's correct.",
+        "ar": "إذا كانت الإجابة واثقة فهي صحيحة"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "If the answer sounds ==confident==, it's correct.",
+            "body": "Answer: Myth ❌ Sounding confident doesn't mean being right. Always check important facts."
+          },
+          "ar": {
+            "title": "إذا كانت الإجابة ==واثقة== فهي صحيحة",
+            "body": "الجواب: خرافة ❌ الثقة لا تعني الصحة. تحقّق دائماً من المعلومات المهمة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-03T07:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-05--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
