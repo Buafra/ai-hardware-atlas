@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-03T07:45:00+04:00",
+  "generated_at": "2026-10-03T08:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1589,6 +1589,51 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-03T07:45:00+04:00",
       "cover": "images/qahwa/week-01-day-05--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-05--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "tools",
+      "title": {
+        "en": "Make AI say what to double-check",
+        "ar": "اجعل المساعد الذكي يقول لك ماذا تتحقق منه"
+      },
+      "summary": {
+        "en": "Make the AI assistant admit what it's unsure of",
+        "ar": "اجعل المساعد الذكي يعترف بما ليس متأكداً منه"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "ar": {
+            "title": "اجعل المساعد الذكي ==يعترف== بما ليس متأكداً منه"
+          },
+          "en": {
+            "title": "Make the AI assistant ==admit== what it's unsure of"
+          },
+          "chat": {
+            "user": "أجب عن سؤالي، ثم قل لي أي أجزاء يجب أن أتحقق منها",
+            "bot": [
+              "تحقّق من الأرقام والتواريخ",
+              "تحقّق من اسم الدراسة المذكورة",
+              "افتح المصدر قبل أن تشارك"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Answer my question, then list which parts I should double-check and why.",
+        "ar": "أجب عن سؤالي، ثم اذكر الأجزاء التي يجب أن أتحقق منها ولماذا.",
+        "code": "R3"
+      },
+      "permalink": "https://www.instagram.com/reel/DeBJp-lD2G4/",
+      "published_at": "2026-10-03T08:01:00+04:00",
+      "cover": "images/qahwa/week-01-day-05--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
