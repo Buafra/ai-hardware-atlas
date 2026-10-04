@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-03T08:01:00+04:00",
+  "generated_at": "2026-10-04T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1634,6 +1634,126 @@
       "permalink": "https://www.instagram.com/reel/DeBJp-lD2G4/",
       "published_at": "2026-10-03T08:01:00+04:00",
       "cover": "images/qahwa/week-01-day-05--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-07--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "recap",
+      "title": {
+        "en": "Week 1 recap",
+        "ar": "ملخص الأسبوع الأول"
+      },
+      "summary": {
+        "en": "Everything we learned, with your coffee.",
+        "ar": "راجع كل ما تعلّمناه مع قهوتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "الأسبوع الأول ==في بطاقات==",
+            "body": "راجع كل ما تعلّمناه مع قهوتك."
+          },
+          "en": {
+            "title": "Week 1 ==in a few cards==",
+            "body": "Everything we learned, with your coffee."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (1)",
+            "items": [
+              "الذكاء الاصطناعي: أنظمة تؤدي مهام تحتاج ذكاءً بشرياً",
+              "التعلّم الآلي: التعلّم من الأمثلة",
+              "التوليدي: يصنع محتوى جديداً"
+            ]
+          },
+          "en": {
+            "title": "What we learned (1)",
+            "items": [
+              "AI: systems that do tasks needing human intelligence",
+              "Machine learning: learning from examples",
+              "Generative AI: creates new content"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (2)",
+            "items": [
+              "النموذج اللغوي الكبير: المحرّك اللغوي خلف كثير من المساعدات الذكية الحديثة",
+              "تولّد النماذج اللغوية النص عبر التنبؤ بالوحدات اللغوية",
+              "قد تبدو الإجابة واثقة رغم أنها خاطئة",
+              "تحقّق دائماً من المعلومات المهمة"
+            ]
+          },
+          "en": {
+            "title": "What we learned (2)",
+            "items": [
+              "LLM: the language engine behind many modern AI assistants",
+              "Language models generate text by predicting tokens",
+              "They can sound confident and still be wrong",
+              "Always check important facts"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "من الغد: ==تعرّف على الأدوات=="
+          },
+          "en": {
+            "title": "Starting tomorrow: ==meet the tools=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DeDupiWCJNM/",
+      "published_at": "2026-10-04T08:02:00+04:00",
+      "cover": "images/qahwa/week-01-day-07--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-07--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these is not generative AI?",
+        "ar": "أيّ هذه ليس ذكاءً اصطناعياً توليدياً؟"
+      },
+      "summary": {
+        "en": "Which is not generative AI?",
+        "ar": "أيّها ليس ذكاءً اصطناعياً توليدياً؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "ar": {
+            "title": "أيّ هذه ==ليس== ذكاءً اصطناعياً توليدياً؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Which of these is ==not== generative AI?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-04T20:30:00+04:00",
+      "cover": "images/qahwa/week-01-day-07--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
