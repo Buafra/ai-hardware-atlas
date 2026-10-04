@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-02T17:02:14+00:00",
+ "updated_at": "2026-10-04T05:59:41+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2835,6 +2835,17 @@
    "hf": null,
    "context": 262144,
    "created": 1751910858,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "nvidia/switchyard",
+   "name": "NVIDIA: Switchyard",
+   "hf": null,
+   "context": 1000000,
+   "created": 1790025947,
    "open": false,
    "params_b": null,
    "params_source": null,
