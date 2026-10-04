@@ -133,12 +133,17 @@ assert.deepEqual(modelSuggestions(sample,''),[]);assert.deepEqual(modelSuggestio
 assert.deepEqual(names(modelSuggestions(sample,'o3')),['OpenAI: o3 Mini']);assert.deepEqual(modelSuggestions(null,'qwen'),[]);
 // The real list, in the page's slim shape (scripts/build.py render_page).
 const real=require('../data/models.json').models.map(m=>({n:m.name,b:m.params_b,o:m.open,s:m.params_source,moe:m.moe||false,c:m.context,hf:m.hf}));
-let hits=modelSuggestions(real,'qwen');assert.equal(hits.length,53);assert.equal(hits[0].n,'Qwen2.5 72B Instruct');assert.ok(hits.some(m=>m.n==='Qwen2.5 Coder 32B Instruct'&&m.b===32.76));
-assert.equal(modelSuggestions(real,'Qwen').length,53);
-hits=modelSuggestions(real,'gpt 5');assert.equal(hits[0].n,'OpenAI: GPT-5');assert.ok(hits.every(m=>!/3\.5/.test(m.n)),'gpt 5 never lists GPT-3.5');
-assert.deepEqual(names(modelSuggestions(real,'o3')).sort(),['OpenAI: o3','OpenAI: o3 Mini','OpenAI: o3 Mini High','OpenAI: o3 Pro']);
+// The list is refreshed from OpenRouter with every scheduled run, so counts come from the data, not fixed numbers
+// (a 7th NVIDIA model on 3 Oct 2026 failed four runs while this test expected exactly 6).
+const own=m=>m.n.includes(': ')?m.n.slice(m.n.indexOf(': ')+2):m.n;  // the name after "Maker: "
+let hits=modelSuggestions(real,'qwen');assert.equal(hits.length,real.filter(m=>/qwen/i.test(m.n)).length);assert.ok(hits.length>=20,'qwen finds the Qwen family');
+assert.ok(/^qwen/i.test(own(hits[0])),'a name that starts with Qwen comes first');
+const coder=real.find(m=>m.n==='Qwen2.5 Coder 32B Instruct');if(coder)assert.ok(hits.some(m=>m.n===coder.n&&m.b===coder.b));
+assert.equal(modelSuggestions(real,'Qwen').length,hits.length);
+hits=modelSuggestions(real,'gpt 5');assert.ok(hits.length>0&&/^gpt-5/i.test(own(hits[0])),'gpt 5 lists GPT-5 first');assert.ok(hits.every(m=>!/3\.5/.test(m.n)),'gpt 5 never lists GPT-3.5');
+assert.deepEqual(names(modelSuggestions(real,'o3')).sort(),real.filter(m=>/^o3( |$)/i.test(own(m))&&/^OpenAI:/.test(m.n)).map(m=>m.n).sort());
 for(const q of ['gemma 2b','llama 7b','MI3','B2','H2','L4','H100','RTX 4090','MI300X','B200','DGX Spark','80GB','بطاقة'])assert.deepEqual(modelSuggestions(real,q),[],q);
 hits=modelSuggestions(real,'seek');assert.ok(hits.length>0&&hits.every(m=>/deepseek/i.test(m.n+' '+(m.hf||''))),'seek -> DeepSeek');
 hits=modelSuggestions(real,'qwen3');assert.ok(hits.length>0&&!hits.some(m=>m.n==='Qwen2.5 Coder 32B Instruct'),'qwen3 never lists Qwen2.5 Coder 32B');
-hits=modelSuggestions(real,'nvidia');assert.equal(hits.length,6);assert.ok(hits.every(m=>m.n.startsWith('NVIDIA: Nemotron')));
+hits=modelSuggestions(real,'nvidia');assert.equal(hits.length,real.filter(m=>/nvidia/i.test(m.n)).length);assert.ok(hits.length>0&&hits.every(m=>m.n.startsWith('NVIDIA:')));
 console.log('PASS: AI models in the hardware search (sample and real list)');
