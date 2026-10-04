@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-04T20:30:00+04:00",
+  "generated_at": "2026-10-04T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1754,6 +1754,74 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-04T20:30:00+04:00",
       "cover": "images/qahwa/week-01-day-07--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-06--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "challenge",
+      "title": {
+        "en": "Explain your job to a 10-year-old",
+        "ar": "اشرح وظيفتك لطفل عمره 10 سنوات"
+      },
+      "summary": {
+        "en": "With a little help from an AI assistant.",
+        "ar": "بالاستعانة بالمساعد الذكي."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحدّي الأسبوع: ==اشرح وظيفتك== لطفل عمره 10 سنوات",
+            "body": "بالاستعانة بالمساعد الذكي."
+          },
+          "en": {
+            "title": "Weekly challenge: ==explain your job== to a 10-year-old",
+            "body": "With a little help from an AI assistant."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات",
+            "items": [
+              "افتح أي مساعد ذكي: ChatGPT أو Claude أو Gemini",
+              "انسخ الأمر في الشاشة التالية واكتب وظيفتك",
+              "انشر أجمل جملة في ستوري وأشر لنا"
+            ]
+          },
+          "en": {
+            "title": "How to play",
+            "items": [
+              "Open any AI assistant: ChatGPT, Claude or Gemini",
+              "Copy the prompt on the next screen and add your job",
+              "Post your favorite line in a story and tag us"
+            ]
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "انسخ هذا الأمر",
+            "prompt": "وظيفتي هي [اكتب وظيفتك]. اشرحها لطفل عمره 10 سنوات في 4 جمل مرحة."
+          },
+          "en": {
+            "title": "Copy this prompt",
+            "prompt": "My job is [your job]. Explain it to a 10-year-old in 4 fun sentences."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My job is [your job]. Explain it to a 10-year-old in 4 fun sentences.",
+        "ar": "وظيفتي هي [اكتب وظيفتك]. اشرحها لطفل عمره 10 سنوات في 4 جمل مرحة.",
+        "code": "C1"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-04T21:01:00+04:00",
+      "cover": "images/qahwa/week-01-day-06--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
