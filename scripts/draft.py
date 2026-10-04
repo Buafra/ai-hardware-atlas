@@ -22,7 +22,7 @@ from refresh import fetch, official  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 DRAFTS = ROOT / 'data/drafts'
 STATE = ROOT / 'data/draft-state.json'
-MODEL = 'claude-opus-5'
+MODEL = 'claude-sonnet-5-5'
 MAX_PER_RUN = 3
 DATE = re.compile(r'^\d{4}-(\d{2}(-\d{2})?|Q[1-4]|H[12]|Summer|end)$')
 

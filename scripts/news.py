@@ -1,4 +1,4 @@
-"""Collect AI headlines with every scheduled run (3 times a day) from vetted feeds in data/news-sources.json.
+"""Collect AI headlines with every scheduled run (twice a day) from vetted feeds in data/news-sources.json.
 
 Stored per item: title, link, source, date and a short excerpt of the publisher's own description (at most 280
 characters, publisher boilerplate removed). The excerpt comes from the feed, or, when the feed gives none worth showing,
@@ -100,7 +100,7 @@ OUT = ROOT / 'data/news.json'
 BLOCKED = ROOT / 'data/news-blocked.json'
 # Summary batches still running when a run ended: collected by the next run (batch and item ids only, no titles).
 PENDING = ROOT / 'data/news-batches.json'
-MODEL = 'claude-opus-5'
+MODEL = 'claude-sonnet-5-5'  # owner's choice (4 Oct 2026): 60% cheaper per token than claude-opus-5
 KEEP_DAYS = 14
 PER_FEED = 25
 RAW_LIMIT = 80  # some feeds (OpenAI, Hugging Face) return their whole archive
@@ -122,7 +122,7 @@ DUPLICATE_SHARE = 0.7  # ... and the shorter headline shares at least this share
 DUPLICATE_WORDS = 4    # ... and at least this many
 MAX_ITEMS = 200       # items stored per run (newest first) ...
 PER_SOURCE_MIN = 3    # ... plus up to this many of each source's newest that the cap leaves out
-TRANSLATE_PER_RUN = 40  # 3 runs a day: as many headlines a day as 20 with 6 runs, and more
+TRANSLATE_PER_RUN = 40  # twice a day: up to 80 headlines a day
 EXCERPT_MAX = 280
 PAGE_EXCERPTS_PER_RUN = 60
 PAGE_TRIES = 2  # pages with no usable description are tried again once, then left alone
@@ -162,7 +162,7 @@ def note(kind):
 
 # Tokens this run's Claude requests used, and what they cost (an estimate from the list prices below).
 USAGE, _USAGE_LOCK = collections.Counter(), threading.Lock()
-PRICE_IN, PRICE_OUT = 5.0, 25.0  # US dollars per million input / output tokens for MODEL; the Batch API bills half
+PRICE_IN, PRICE_OUT = 2.0, 10.0  # US dollars per million input / output tokens for MODEL; the Batch API bills half
 BATCH_WAIT = 20 * 60  # seconds a run waits for one batch; a summary batch is then left running for the next run, any
 BATCH_CANCEL_WAIT = 5 * 60  # other is cancelled (unanswered requests are not billed) and its answers so far are read once
 BATCH_POLL = 20             # the cancel has gone through

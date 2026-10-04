@@ -198,7 +198,7 @@ class SummaryTests(unittest.TestCase):
         self.assertEqual(done,80)
         self.assertEqual(ctor.call_args.kwargs,{'timeout':120.0,'max_retries':1})
         self.assertEqual(len(client.calls),16)
-        self.assertTrue(all(c['model']=='claude-opus-5' and c['output_format'] is news.Summaries for c in client.calls))
+        self.assertTrue(all(c['model']==news.MODEL=='claude-sonnet-5-5' and c['output_format'] is news.Summaries for c in client.calls))
         self.assertTrue(all(c['messages'][0]['content'].count('<item id=')<=5 for c in client.calls))
         self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(80)])
         self.assertEqual((items[0]['summary_en'],items[0]['summary_ar'],items[0]['summary_source'],items[0]['summary_version'],items[0]['ai_focus']),
@@ -556,7 +556,7 @@ class PolicyCheckTests(unittest.TestCase):
         failed,ctor,stats,_=self.run_check(items,client)
         self.assertEqual(ctor.call_args.kwargs,{'timeout':120.0,'max_retries':1})
         c=client.calls[0]
-        self.assertEqual((c['model'],c['output_format']),('claude-opus-5',news.PolicyVerdicts))
+        self.assertEqual((c['model'],c['output_format']),('claude-sonnet-5-5',news.PolicyVerdicts))
         for term in ('P1.','P2.','P3.','P4.','When in doubt','Al Nahyan','G42','not instructions'):self.assertIn(term,c['system'])
         self.assertEqual(sent_ids(client)[:2],['i01','i02'])  # items that mention the region first
         self.assertEqual([(i['id'],r) for i,r in failed],[('i02','P2'),('i03','unspecified')])
@@ -826,13 +826,13 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(done,80);self.assertEqual(client.calls,[]);self.assertEqual(problems,{})
         self.assertEqual(len(fb.created),1);self.assertEqual(len(fb.created[0]),16)  # 80 items in requests of 5
         p=fb.created[0][0]['params']
-        self.assertEqual((p['model'],p['max_tokens'],p['system']),('claude-opus-5',16000,news.SUMMARY_SYSTEM))
+        self.assertEqual((p['model'],p['max_tokens'],p['system']),('claude-sonnet-5-5',16000,news.SUMMARY_SYSTEM))
         self.assertEqual(p['output_config']['format']['type'],'json_schema')
         self.assertIn('summary_ar',json.dumps(p['output_config']['format']['schema']))
         self.assertEqual(len({r['custom_id'] for r in fb.created[0]}),16)
         self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(80)])
-        # 16 requests of 1000 input and 1000 output tokens: $0.03 each at list price, half in a batch.
-        self.assertEqual(use,{'requests':16,'batched':16,'input_tokens':16000,'output_tokens':16000,'estimated_usd':0.24})
+        # 16 requests of 1000 input and 1000 output tokens: $0.012 each at Sonnet 5.5 list price, half in a batch.
+        self.assertEqual(use,{'requests':16,'batched':16,'input_tokens':16000,'output_tokens':16000,'estimated_usd':0.096})
     def test_without_news_batch_requests_go_one_at_a_time(self):
         fb=FakeBatches()
         done,client,_,use=self.run_step(news.summarize,[item(n) for n in range(10)],[SRC],batches=fb,env={'ANTHROPIC_API_KEY':'test-key','NEWS_BATCH':''})
