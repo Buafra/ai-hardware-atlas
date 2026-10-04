@@ -647,6 +647,12 @@ def usage_report():
     return {'requests': USAGE['requests'], 'batched': USAGE['batched'], 'input_tokens': USAGE['input_tokens'],
             'output_tokens': USAGE['output_tokens'], 'estimated_usd': round(USAGE['micro_usd'] / 1e6, 4)}
 
+def api_error(exc):
+    """An API error for the public log: its type and Anthropic's own message (e.g. a too-low credit balance), never
+    any request content."""
+    message = getattr(exc, 'message', None) or ''
+    return f'{type(exc).__name__}: {message}'[:200] if message else type(exc).__name__
+
 def ask_claude(step, system, output_format, max_tokens, prompts, carry=None, batch=True):
     """Claude's answers to `prompts` ({key: user message}), all with one system prompt and output format (a pydantic
     model): {key: ('ok', parsed output) | ('retry', None) after an API or network error (asked again next run) |
@@ -667,7 +673,7 @@ def ask_claude(step, system, output_format, max_tokens, prompts, carry=None, bat
             response = client.messages.parse(model=MODEL, max_tokens=max_tokens, output_format=output_format, system=system,
                                              messages=[{'role': 'user', 'content': text}])
         except (anthropic.APIConnectionError, anthropic.APIStatusError) as exc:  # network or service: try again next run
-            print(f'{step}: request skipped ({type(exc).__name__})', file=sys.stderr)
+            print(f'{step}: request skipped ({api_error(exc)})', file=sys.stderr)
             note(f'{step}: {type(exc).__name__}')
             return 'retry', None
         except Exception as exc:  # unusable output or anything unexpected
@@ -702,7 +708,7 @@ def _ask_batch(client, step, system, output_format, max_tokens, prompts, carry=N
     try:
         batch = client.messages.batches.create(requests=requests)
     except Exception as exc:
-        print(f'{step}: batch not created ({type(exc).__name__}), asking one request at a time', file=sys.stderr)
+        print(f'{step}: batch not created ({api_error(exc)}), asking one request at a time', file=sys.stderr)
         note(f'{step}: batch {type(exc).__name__}')
         return {}
     deadline, cancelled = time.monotonic() + BATCH_WAIT, False
