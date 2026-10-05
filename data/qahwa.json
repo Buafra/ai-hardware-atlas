@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-05T07:45:00+04:00",
+  "generated_at": "2026-10-05T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1857,6 +1857,191 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-05T07:45:00+04:00",
       "cover": "images/qahwa/week-01-day-07--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-08--1-learn-lesson-06",
+      "kind": "lesson",
+      "lesson": 6,
+      "code": "L06",
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "ChatGPT, Claude, Gemini, Copilot: what's the difference?",
+        "ar": "ChatGPT وClaude وGemini وCopilot: ما الفرق؟"
+      },
+      "summary": {
+        "en": "You talk to them in plain language, and they write, explain and summarize. The difference is in their strengths and the apps they connect to.",
+        "ar": "تتحدث معها بلغتك العادية، فتكتب وتشرح وتلخّص. الفرق في نقاط القوة والتطبيقات المرتبطة بها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ChatGPT وClaude وGemini وCopilot:\n==ما الفرق؟==",
+            "body": "دليلك السريع لأشهر المساعدات الذكية."
+          },
+          "en": {
+            "title": "ChatGPT, Claude, Gemini, Copilot:\n==what's the difference?==",
+            "body": "Your quick guide to the best-known AI assistants."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "كلها مساعدات ذكية",
+            "body": "تتحدث معها بلغتك العادية، فتكتب وتشرح وتلخّص. الفرق في ==نقاط القوة== والتطبيقات المرتبطة بها."
+          },
+          "en": {
+            "title": "They're all AI assistants",
+            "body": "You talk to them in plain language, and they write, explain and summarize. The difference is in their ==strengths== and the apps they connect to."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "بطاقات تعريف (1)",
+            "items": [
+              "ChatGPT من OpenAI: الأشهر، ومتعدد الاستخدامات",
+              "Claude من Anthropic: قوي في الكتابة والمستندات الطويلة"
+            ]
+          },
+          "en": {
+            "title": "Quick profiles (1)",
+            "items": [
+              "ChatGPT by OpenAI: the best known, a strong all-rounder",
+              "Claude by Anthropic: strong at writing and long documents"
+            ]
+          },
+          "note": {
+            "en": "Features vary by plan, account, region and organization, and can change over time.",
+            "ar": "تختلف المزايا حسب الخطة والحساب والمنطقة والجهة، وقد تتغير بمرور الوقت."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "بطاقات تعريف (2)",
+            "items": [
+              "Gemini من Google: مرتبط بـGmail وDocs وAndroid",
+              "Copilot من Microsoft: داخل Windows وWord وExcel",
+              "Meta AI: داخل واتساب وإنستقرام"
+            ]
+          },
+          "en": {
+            "title": "Quick profiles (2)",
+            "items": [
+              "Gemini by Google: connected to Gmail, Docs and Android",
+              "Copilot by Microsoft: inside Windows, Word and Excel",
+              "Meta AI: inside WhatsApp and Instagram"
+            ]
+          },
+          "note": {
+            "en": "Features vary by plan, account, region and organization, and can change over time.",
+            "ar": "تختلف المزايا حسب الخطة والحساب والمنطقة والجهة، وقد تتغير بمرور الوقت."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "أيّها الأفضل؟",
+            "body": "لا يوجد ==ما هو أفضل للجميع==. جرّب اثنين بسؤال واحد، واختر ما يناسب مهمتك ولغتك."
+          },
+          "en": {
+            "title": "Which one is best?",
+            "body": "There's ==no single best== for everyone. Try two with the same question and pick what suits your task and language."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل ==مقاهٍ مختلفة== في شارع واحد",
+            "body": "كلها تقدّم القهوة، لكن لكل مقهى طعمه وأسلوبه."
+          },
+          "en": {
+            "title": "Like ==different cafés== on the same street",
+            "body": "They all serve coffee, but each has its own taste and style."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "كلها شيء واحد بأسماء مختلفة.",
+            "fact": "قد تستخدم هذه المساعدات تركيبات مختلفة من النماذج والأدوات والتعليمات والتكاملات، لذلك تختلف إجاباتها وإمكاناتها."
+          },
+          "en": {
+            "myth": "They're all the same thing with different names.",
+            "fact": "These assistants can use different combinations of models, tools, instructions and integrations, so their answers and capabilities can differ."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها في تطبيقين",
+            "prompt": "اشرح الذكاء الاصطناعي في 3 أسطر لشخص لم يستخدمه من قبل."
+          },
+          "en": {
+            "title": "Try it in two apps",
+            "prompt": "Explain AI in 3 lines to someone who has never used it."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدليل، وأرسله لشخص ==محتار أيّها يستخدم=="
+          },
+          "en": {
+            "title": "Save this guide and send it to someone ==who can't decide which to use=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain AI in 3 lines to someone who has never used it.",
+        "ar": "اشرح الذكاء الاصطناعي في 3 أسطر لشخص لم يستخدمه من قبل.",
+        "code": "L06"
+      },
+      "permalink": "https://www.instagram.com/p/DeGTliQDTKa/",
+      "published_at": "2026-10-05T08:03:00+04:00",
+      "cover": "images/qahwa/week-02-day-08--1-learn-lesson-06.webp",
+      "related_concepts": [
+        "evals",
+        "llm"
+      ]
+    },
+    {
+      "id": "week-02-day-08--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "All AI assistants give the same answer.",
+        "ar": "المساعدات الذكية كلها تعطي نفس الإجابة"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعدات الذكية كلها ==تعطي نفس الإجابة==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "All AI assistants ==give the same answer==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-05T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-08--3-check-story.webp",
       "related_concepts": []
     }
   ]
