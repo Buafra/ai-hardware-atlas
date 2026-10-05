@@ -62,5 +62,9 @@
   "https://newsroom.amd.com/news/microsoft-azure-ai-infrastructure/": {
     "at": "2026-09-27T14:34:30+00:00",
     "result": "not a new product"
+  },
+  "https://newsroom.amd.com/news/amd-helios-designing-building-future-ai-infrastructure/": {
+    "at": "2026-10-05T22:06:22+00:00",
+    "result": "not a new product"
   }
 }
