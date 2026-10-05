@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-04T21:01:00+04:00",
+  "generated_at": "2026-10-05T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1822,6 +1822,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-04T21:01:00+04:00",
       "cover": "images/qahwa/week-01-day-06--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-01-day-07--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 1,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these is not generative AI?",
+        "ar": "أيّ هذه ليس ذكاءً اصطناعياً توليدياً؟"
+      },
+      "summary": {
+        "en": "Answer: Which is not generative AI?",
+        "ar": "الجواب: أيّها ليس ذكاءً اصطناعياً توليدياً؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which of these is ==not== generative AI?",
+            "body": "Answer: The spam filter ✅ It sorts messages; it doesn't create anything new. ChatGPT and Midjourney are generative."
+          },
+          "ar": {
+            "title": "أيّ هذه ==ليس== ذكاءً اصطناعياً توليدياً؟",
+            "body": "الجواب: فلتر الرسائل المزعجة ✅ فهو يصنّف الرسائل ولا يصنع محتوى جديداً. أما ChatGPT وMidjourney فتوليديان."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-05T07:45:00+04:00",
+      "cover": "images/qahwa/week-01-day-07--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
