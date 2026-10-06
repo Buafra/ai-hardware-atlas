@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-06T07:45:00+04:00",
+  "generated_at": "2026-10-06T08:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2077,6 +2077,53 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-06T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-08--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-08--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Long file → 5-point summary",
+        "ar": "ملف طويل ← ملخص في 5 نقاط"
+      },
+      "summary": {
+        "en": "Long file → 5-point summary",
+        "ar": "ملف طويل ← ملخص في 5 نقاط"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:33",
+          "ar": {
+            "title": "ملف طويل ← ==ملخص في 5 نقاط=="
+          },
+          "en": {
+            "title": "Long file → ==5-point summary=="
+          },
+          "chat": {
+            "user": "لخّص هذا الملف في 5 نقاط بلغة بسيطة",
+            "bot": [
+              "الهدف من التقرير",
+              "أهم 3 أرقام",
+              "القرارات المطلوبة",
+              "المواعيد المهمة",
+              "الخطوة التالية"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Summarize this file in 5 simple points, then point out the most important number or date in it.",
+        "ar": "لخّص هذا الملف في 5 نقاط بلغة بسيطة، ثم اذكر أهم رقم أو تاريخ فيه.",
+        "code": "R4"
+      },
+      "permalink": "https://www.instagram.com/reel/DeI4HnrEh97/",
+      "published_at": "2026-10-06T08:01:00+04:00",
+      "cover": "images/qahwa/week-02-day-08--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
