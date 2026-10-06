@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-05T20:30:00+04:00",
+  "generated_at": "2026-10-06T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2042,6 +2042,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-05T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-08--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-08--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "All AI assistants give the same answer.",
+        "ar": "المساعدات الذكية كلها تعطي نفس الإجابة"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "All AI assistants ==give the same answer==.",
+            "body": "Answer: Myth ❌ Each assistant can use a different combination of models, tools, instructions and integrations. That’s why answers can differ in style, features and accuracy."
+          },
+          "ar": {
+            "title": "المساعدات الذكية كلها ==تعطي نفس الإجابة==",
+            "body": "الجواب: خرافة ❌ قد يستخدم كل مساعد تركيبة مختلفة من النماذج والأدوات والتعليمات والتكاملات، ولذلك قد تختلف الإجابات في الأسلوب والإمكانات والدقة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-06T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-08--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
