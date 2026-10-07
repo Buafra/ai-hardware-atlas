@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-06T08:01:00+04:00",
+  "generated_at": "2026-10-07T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -1992,6 +1992,10 @@
           },
           "en": {
             "title": "Save this guide and send it to someone ==who can't decide which to use=="
+          },
+          "next": {
+            "ar": "الدرس 07: المجاني أم المدفوع؟",
+            "en": "Lesson 07: Free or paid?"
           }
         }
       ],
@@ -2124,6 +2128,186 @@
       "permalink": "https://www.instagram.com/reel/DeI4HnrEh97/",
       "published_at": "2026-10-06T08:01:00+04:00",
       "cover": "images/qahwa/week-02-day-08--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-09--1-learn-lesson-07",
+      "kind": "lesson",
+      "lesson": 7,
+      "code": "L07",
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Free or paid?",
+        "ar": "المجاني أم المدفوع؟"
+      },
+      "summary": {
+        "en": "For everyday questions, writing and summaries, start with the free plan and see whether it meets your needs before paying.",
+        "ar": "للأسئلة اليومية والكتابة والتلخيص، ابدأ بالخطة المجانية واختبر إن كانت تلبي احتياجاتك قبل أن تدفع."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "المجاني أم ==المدفوع==؟",
+            "body": "ماذا تحصل عليه فعلاً عندما تشترك؟"
+          },
+          "en": {
+            "title": "Free or ==paid==?",
+            "body": "What you actually get when you subscribe."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "==ابدأ بالمجاني==",
+            "body": "للأسئلة اليومية والكتابة والتلخيص، ابدأ بالخطة المجانية واختبر إن كانت تلبي احتياجاتك قبل أن تدفع."
+          },
+          "en": {
+            "title": "Free is ==a good place to start==",
+            "body": "For everyday questions, writing and summaries, start with the free plan and see whether it meets your needs before paying."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا قد يضيف الاشتراك؟",
+            "items": [
+              "حدود استخدام أعلى",
+              "الوصول إلى نماذج أو أوضاع أكثر تقدماً",
+              "مزايا إضافية أو حدود أكبر للملفات والصور والبحث"
+            ]
+          },
+          "en": {
+            "title": "What a subscription may add",
+            "items": [
+              "Higher usage limits",
+              "Access to more advanced models or modes",
+              "More features or larger quotas for files, images and research"
+            ]
+          },
+          "note": {
+            "en": "Exact benefits vary by service.",
+            "ar": "تختلف المزايا حسب الخدمة."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "متى يكون الدفع مجدياً؟",
+            "items": [
+              "تستخدمه كل يوم في عملك",
+              "تصل كثيراً إلى حدّ الاستخدام",
+              "تحتاج ميزة غير متوفرة مجاناً"
+            ]
+          },
+          "en": {
+            "title": "When is paying worth it?",
+            "items": [
+              "You use it every day for work",
+              "You often hit the usage limit",
+              "You need a feature the free plan doesn't have"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "انتبه قبل الاشتراك",
+            "body": "الأسعار والمزايا ==تتغيّر كثيراً==. راجع صفحة الأسعار الرسمية، وألغِ التجربة المجانية إن لم تحتجها."
+          },
+          "en": {
+            "title": "Before you subscribe",
+            "body": "Prices and features ==change often==. Check the official pricing page, and cancel free trials you don't need."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "المجاني ==قهوة البيت==",
+            "body": "والمدفوع اشتراك المقهى: يستحق ثمنه فقط إن كنت تزوره كل يوم."
+          },
+          "en": {
+            "title": "Free is ==coffee at home==",
+            "body": "Paid is a café membership: worth it only if you go every day."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "النسخ المجانية ضعيفة ولا تفيد.",
+            "fact": "الخطط المجانية اليوم قادرة على تنفيذ كثير من المهام اليومية بشكل جيد، لكن المزايا وحدود الاستخدام تختلف من خدمة إلى أخرى."
+          },
+          "en": {
+            "myth": "Free versions are weak and useless.",
+            "fact": "Today’s free plans can handle many everyday tasks well, but features and limits vary by service."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "استخدامي: [اكتب استخدامك]. هل تكفيني النسخة المجانية؟ وما الذي قد ينقصني؟"
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "I use you for [your use]. Is the free version enough for me? What might I be missing?"
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==أن تشترك في أي تطبيق=="
+          },
+          "en": {
+            "title": "Save this before ==you subscribe to any app=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I use you for [your use]. Is the free version enough for me? What might I be missing?",
+        "ar": "استخدامي: [اكتب استخدامك]. هل تكفيني النسخة المجانية؟ وما الذي قد ينقصني؟",
+        "code": "L07"
+      },
+      "permalink": "https://www.instagram.com/p/DeLdLWADYtc/",
+      "published_at": "2026-10-07T08:03:00+04:00",
+      "cover": "images/qahwa/week-02-day-09--1-learn-lesson-07.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-09--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "The paid version never makes mistakes.",
+        "ar": "النسخة المدفوعة لا تخطئ أبداً"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "النسخة المدفوعة ==لا تخطئ أبداً==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "The paid version ==never makes mistakes==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-07T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-09--3-check-story.webp",
       "related_concepts": []
     }
   ]
