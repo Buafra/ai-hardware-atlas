@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-07T20:37:18+00:00",
+  "at": "2026-10-08T10:33:59+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 12,
@@ -10,452 +10,402 @@
     {
       "url": "https://blogs.nvidia.com/blog/ampere-rtx-a400-a1000-ai/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/blackwell-coreweave-gb200-nvl72-instances-cloud/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/dgx-h100-systems-shipping/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/dgx-superpod-rubin/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-08T10:33:59+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/#rtx-pro-4500",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/igx-thor-processor-physical-ai-industrial-medical-edge/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-generative-ai-supercomputer/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-thor-physical-ai-edge/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-2000-ada/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-a2000/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://blogs.nvidia.com/blog/rtx-tackle-pro-workflows/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/introducing-the-jetson-orin-nx-series-and-jetson-agx-orin-developer-kit-availability/209139",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/jetson-orin-modules-and-developer-kit-announcements/209137",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/release-date-for-jetson-agx-orin-64gb-developer-kit/254524",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://nvidianews.nvidia.com/news/latest",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/20-series/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3050/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3070-3070ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3080-3080ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4070-family/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4080-family/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5050/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/compare/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/12gb-4080-unlaunch/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-2080-ti-custom-card-roundup/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-graphics-cards/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3050-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060-ti-out-december-2/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3060/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-available-october-29/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3070-ti-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3080-ti-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-3090-ti-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-4060ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-available-june-29/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4060-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-super-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti-super-rtx-video-hdr-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070-ti/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4070/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-4070-ti-4070-super-gpu/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4080-super-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-4090-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/geforce-rtx-5060-ti-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/god-of-war-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/introducing-rtx-30-series-graphics-cards/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/mecha-break-dlss-4-multi-frame-gen-geforce-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/portal-prelude-rtx-game-ready-driver/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3050-6gb-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3080-ti-3070-ti-graphics-cards/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-3090-out-september-24/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-40-series-graphics-cards-announcements/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-4060-stranded-alien-dawn-dlss-released/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-50-series-graphics-cards-gpu-laptop-announcements/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5050-desktop-gpu-and-laptops/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5060-desktop-family-laptop-5060-coming-soon/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5060-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5070-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/geforce/news/rtx-5090-5080-out-now/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     },
     {
       "url": "https://www.nvidia.com/en-us/products/rtx-spark/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/previous-quadro-desktop-gpus/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4000/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/rtx-a2000/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/rtx-a4500/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/rtx-a5000/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/rtx-a5500/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/products/workstations/rtx-a6000/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
-    },
-    {
-      "url": "https://www.nvidia.com/en-us/titan/titan-rtx/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-07T20:37:18+00:00"
+      "at": "2026-10-08T10:33:59+00:00"
     }
   ],
   "errors": {
