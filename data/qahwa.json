@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-07T20:30:00+04:00",
+  "generated_at": "2026-10-08T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2308,6 +2308,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-07T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-09--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-09--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "The paid version never makes mistakes.",
+        "ar": "النسخة المدفوعة لا تخطئ أبداً"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "The paid version ==never makes mistakes==.",
+            "body": "Answer: Myth ❌ Paid plans may give you access to more capable models or higher limits, but AI can still be wrong. Always check important facts."
+          },
+          "ar": {
+            "title": "النسخة المدفوعة ==لا تخطئ أبداً==",
+            "body": "الجواب: خرافة ❌ قد تمنحك الخطط المدفوعة نماذج أكثر قدرة أو حدود استخدام أعلى، لكن الذكاء الاصطناعي قد يخطئ أيضاً. تحقّق دائماً من المعلومات المهمة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-08T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-09--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
