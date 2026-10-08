@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-08T10:52:19+00:00",
+ "updated_at": "2026-10-08T20:47:17+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -12,17 +12,6 @@
    "params_b": 398.64,
    "params_source": "huggingface",
    "moe": false
-  },
-  {
-   "id": "baidu/ernie-4.5-vl-424b-a47b",
-   "name": "Baidu: ERNIE 4.5 VL 424B A47B",
-   "hf": "baidu/ERNIE-4.5-VL-424B-A47B-PT",
-   "context": 123000,
-   "created": 1751300903,
-   "open": true,
-   "params_b": 423.53,
-   "params_source": "huggingface",
-   "moe": true
   },
   {
    "id": "bytedance/ui-tars-1.5-7b",
@@ -2778,7 +2767,7 @@
    "id": "mistralai/mistral-large-4-0",
    "name": "Mistral: Mistral Large 4",
    "hf": null,
-   "context": 524288,
+   "context": 1048576,
    "created": 1791294122,
    "open": false,
    "params_b": null,
@@ -4067,6 +4056,17 @@
    "hf": null,
    "context": 256000,
    "created": 1779298123,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "stepfun/step-5-preview",
+   "name": "StepFun: Step 5 Preview",
+   "hf": null,
+   "context": 1000000,
+   "created": 1791462849,
    "open": false,
    "params_b": null,
    "params_source": null,
