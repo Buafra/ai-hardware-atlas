@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-08T07:45:00+04:00",
+  "generated_at": "2026-10-08T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2261,6 +2261,10 @@
           },
           "en": {
             "title": "Save this before ==you subscribe to any app=="
+          },
+          "next": {
+            "ar": "الدرس 08: مولّدات الصور ببساطة",
+            "en": "Lesson 08: Image generators, explained"
           }
         }
       ],
@@ -2343,6 +2347,200 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-08T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-09--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-10--1-learn-lesson-08",
+      "kind": "lesson",
+      "lesson": 8,
+      "code": "L08",
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Image generators, explained",
+        "ar": "مولّدات الصور ببساطة"
+      },
+      "summary": {
+        "en": "Tools that turn a written description into an image, or edit an existing one.",
+        "ar": "أدوات تحوّل الوصف المكتوب إلى صورة، أو تعدّل صورة موجودة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "من ==جملة== إلى صورة",
+            "body": "كيف تعمل مولّدات الصور؟"
+          },
+          "en": {
+            "title": "From a ==sentence== to a picture",
+            "body": "How do AI image generators work?"
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "أدوات تحوّل ==الوصف المكتوب== إلى صورة، أو تعدّل صورة موجودة."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "Tools that turn ==a written description== into an image, or edit an existing one."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "كيف تعمل؟",
+            "body": "تبدأ كثير من مولّدات الصور — خصوصاً ==نماذج الانتشار== — من تشويش عشوائي، ثم تحسّنه تدريجياً حتى تتكوّن الصورة. وتستخدم نماذج أخرى طرقاً مختلفة."
+          },
+          "en": {
+            "title": "How does it work?",
+            "body": "Many image generators — especially ==diffusion models== — start with random noise and refine it step by step until an image appears. Other image models use different methods."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أشهر الأدوات",
+            "items": [
+              "Midjourney: صور فنية (خطط مدفوعة)",
+              "ChatGPT وGemini: صور داخل المحادثة",
+              "Adobe Firefly وCanva: للتصميم والسوشال ميديا"
+            ]
+          },
+          "en": {
+            "title": "Well-known tools",
+            "items": [
+              "Midjourney: artistic images (paid plans)",
+              "ChatGPT and Gemini: images inside the chat",
+              "Adobe Firefly and Canva: for design and social media"
+            ]
+          },
+          "note": {
+            "ar": "تختلف حدود الاستخدام المجاني حسب الخطة، وقد تتغيّر.",
+            "en": "Free limits vary by plan and can change."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "وصفة الأمر الجيد",
+            "items": [
+              "الموضوع: ماذا في الصورة؟",
+              "المكان والإضاءة: أين ومتى؟",
+              "الأسلوب: صورة واقعية، رسم، أو ثلاثي الأبعاد"
+            ]
+          },
+          "en": {
+            "title": "Recipe for a good prompt",
+            "items": [
+              "Subject: what's in the picture?",
+              "Setting and light: where and when?",
+              "Style: photo, illustration or 3D"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "تنبيه: ==النص العربي== داخل الصور",
+            "body": "تحسّن توليد النص العربي داخل الصور، لكن قد تظهر أخطاء في الإملاء أو شكل الحروف أو ترتيبها. راجع النص دائماً، وعدّله في برنامج تصميم عند الحاجة."
+          },
+          "en": {
+            "title": "Heads-up: ==Arabic text== in images",
+            "body": "Arabic text generation has improved, but spelling, letter shapes and layout can still be inconsistent. Always check the text and fix it in a design app when needed."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل أن ==تصف مشروبك== للباريستا",
+            "body": "كلما كان وصفك أدق، اقترب الكوب مما تتخيّله."
+          },
+          "en": {
+            "title": "Like ==describing your drink== to a barista",
+            "body": "The more precise you are, the closer the cup is to what you imagined."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الصور المولَّدة بالذكاء الاصطناعي سهلة الاكتشاف دائماً.",
+            "fact": "أصبحت واقعية جداً. تحقّق من المصدر، ولا تعتمد على العين فقط."
+          },
+          "en": {
+            "myth": "AI-made images are always easy to spot.",
+            "fact": "They've become very realistic. Check the source; don't rely on your eyes alone."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "طاولة مقهى دافئة عند شروق الشمس، فنجان قهوة عربية صغير، إضاءة ناعمة، صورة واقعية."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "A cozy café table at sunrise, a small cup of Arabic coffee, soft light, photo style."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "جرّب الأمر، و==شاركنا صورتك== في الستوري"
+          },
+          "en": {
+            "title": "Try the prompt and ==share your picture== in your story"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "A cozy café table at sunrise, a small cup of Arabic coffee, soft light, photo style.",
+        "ar": "طاولة مقهى دافئة عند شروق الشمس، فنجان قهوة عربية صغير، إضاءة ناعمة، صورة واقعية.",
+        "code": "L08"
+      },
+      "permalink": "https://www.instagram.com/p/DeOCCm0DfGJ/",
+      "published_at": "2026-10-08T08:04:00+04:00",
+      "cover": "images/qahwa/week-02-day-10--1-learn-lesson-08.webp",
+      "related_concepts": [
+        "prompt-engineering",
+        "multimodal"
+      ]
+    },
+    {
+      "id": "week-02-day-10--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Image generators search the internet for an existing picture.",
+        "ar": "مولّدات الصور تبحث عن صورة جاهزة في الإنترنت"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "مولّدات الصور ==تبحث عن صورة جاهزة== في الإنترنت",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Image generators ==search the internet== for an existing picture.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-08T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-10--3-check-story.webp",
       "related_concepts": []
     }
   ]
