@@ -2225,7 +2225,7 @@
       "announcement": "2025-03-18",
       "release": "2025-10-15",
       "release_kind": "Orders opened",
-      "source_reviewed": "2026-09-26",
+      "source_reviewed": "2026-10-08",
       "architecture": "Grace Blackwell / GB10",
       "power_w": null,
       "power_note": "Not documented in this edition",
@@ -2249,7 +2249,7 @@
           "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
         }
       ],
-      "notes": "15 October 2025 is the NVIDIA order-opening date; 13 October was the shipping press announcement. 128 GB is shared CPU/GPU memory. The 273 GB/s bandwidth is a capacity-versus-speed consideration, not a performance ranking. Launch price was $3,999; NVIDIA announced an increase to $4,699 in February 2026.",
+      "notes": "15 October 2025 is the NVIDIA order-opening date; 13 October was the shipping press announcement. 128 GB is shared CPU/GPU memory. The 273 GB/s bandwidth is a capacity-versus-speed consideration, not a performance ranking. Launch price was $3,999; NVIDIA announced an increase to $4,699 in February 2026, and by 2 Oct 2026 its US store listed $6,950 without an announcement. The 64 GB model (from $4,999 through partners, 23 Oct 2026) is now the lower-cost option.",
       "use_ar": "نماذج محلية كبيرة في جهاز صغير",
       "bandwidth_tbs": 0.273,
       "bandwidth_note": "273 GB/s LPDDR5x unified (CPU+GPU shared)",
@@ -2266,35 +2266,39 @@
         "file": "images/dgx-spark-gb10.webp"
       },
       "price": {
-        "usd_low": 4699,
-        "usd_high": 4999.99,
+        "usd_low": 6950,
+        "usd_high": 7999.99,
         "usd_kind": "US retail",
-        "aed_low": 24999,
-        "aed_high": 30000,
+        "aed_low": 25200,
+        "aed_high": 26250,
         "aed_kind": "UAE retail",
         "vat_included": true,
-        "basis": "NVIDIA DGX Spark Founders Edition 128GB/4TB; US = NVIDIA list $4,699 (raised from $3,999 in Feb 2026; NVIDIA store out of stock) to Amazon $4,999.99 sold by Micro Center, per pi3g.com (2026-09-24); partner GB10 boxes excluded.",
-        "checked": "2026-09-26",
+        "basis": "NVIDIA DGX Spark 128 GB / 4 TB (Founders Edition), checked 2026-10-08. US, before tax: NVIDIA Marketplace lists it at $6,950 but out of stock (up from $4,699; NVIDIA posted no notice, press dates the rise to 2 Oct 2026); the cheapest unit in stock was $7,999.99 from a third-party seller on Walmart Marketplace. Best Buy ($5,299.99) is sold out, and CDW and B&H list the Founders Edition as discontinued. UAE, VAT included, in stock: Amazon.ae (sold by Promise Computers) AED 25,200, Al Ershad AED 25,839, Microless AED 26,250; MindTech lists AED 24,999 and Promise's own store AED 30,000 without stating VAT. Partner GB10 boxes are excluded.",
+        "checked": "2026-10-08",
         "sources": [
           {
-            "label": "NVIDIA list / Amazon (Micro Center) via pi3g.com, 2026-09-24",
-            "url": "https://pi3g.com/nvidia-dgx-spark-price/"
+            "label": "NVIDIA Marketplace US: DGX Spark $6,950, out of stock (2026-10-08)",
+            "url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/dgx-spark/"
           },
           {
-            "label": "Microless UAE",
-            "url": "https://uae.microless.com/search/?query=dgx+spark"
+            "label": "Walmart Marketplace: DGX Spark $7,999.99, third-party seller (2026-10-08)",
+            "url": "https://www.walmart.com/ip/18161403400"
           },
           {
-            "label": "MindTech (UAE)",
-            "url": "https://mindtech.ae/?s=dgx+spark&post_type=product"
+            "label": "Amazon.ae: DGX Spark AED 25,200 incl. VAT (2026-10-08)",
+            "url": "https://www.amazon.ae/dp/B0FWJ16CCH"
           },
           {
-            "label": "Promise Computer Technology",
-            "url": "https://www.promisegulf.com/product/nvidia-dgx-spark/"
+            "label": "Microless UAE: DGX Spark AED 26,250 incl. VAT (2026-10-08)",
+            "url": "https://uae.microless.com/product/nvidia-dgx-spark-computer-20-core-arm-cortex-cpu-128gb-ram-4tb-ssd-blackwell-architecture-graphics-nvidia-dgx-os-gold-dgxsparkfounedituk/"
           },
           {
-            "label": "NVIDIA forum: Feb 2026 price change",
+            "label": "NVIDIA forum: Feb 2026 price change to $4,699",
             "url": "https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713"
+          },
+          {
+            "label": "The Register, 2 Oct 2026: DGX Spark 128 GB raised to $6,950",
+            "url": "https://www.theregister.com/a/5300622"
           }
         ]
       }
@@ -9697,6 +9701,10 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-10-08",
+      "summary": "DGX Spark (GB10) 128 GB: prices rechecked. NVIDIA's US store now lists $6,950 (out of stock; was $4,699); in stock from $7,999.99 at US third-party sellers; UAE AED 25,200-26,250 including VAT."
+    },
     {
       "at": "2026-10-08",
       "summary": "Added the first NVIDIA RTX Spark laptops, one per maker, from the 7 Oct 2026 Windows event: Microsoft Surface Laptop Ultra, ASUS ProArt P16, Dell XPS 16 Creator Edition, HP OmniBook Ultra 16, Lenovo Yoga Pro 9n, and MSI Prestige N16 Flip AI+, with US preorder prices and specifications from each maker (no UAE prices yet). Added DGX Spark 64 GB (GB10): announced 2 Oct 2026, sold only through Acer, ASUS, Dell, Gigabyte, HP and MSI from 23 Oct, NVIDIA starting price $4,999. RTX Spark N1X: laptop preorders opened 7 Oct 2026, available 16 Oct, compact desktops in November. These are RTX Spark laptops, not DGX Spark laptops."
