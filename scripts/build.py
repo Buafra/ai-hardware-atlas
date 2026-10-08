@@ -24,6 +24,14 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
 E = lambda value: html.escape(str(value if value is not None else 'Not established'))
 ALLOWED = ('nvidia.com', 'amd.com')
+# Partner devices built on an NVIDIA or AMD chip (vendor is the chip maker): their maker's own site is also an official
+# source. Images still come only from NVIDIA or AMD, and every partner device keeps at least one NVIDIA/AMD source.
+MAKERS = {'ASUS': ('asus.com',), 'Dell': ('dell.com', 'delltechnologies.com'), 'HP': ('hp.com',), 'Lenovo': ('lenovo.com',),
+          'Microsoft': ('microsoft.com', 'windows.com'), 'MSI': ('msi.com',)}
+
+def on_host(url, hosts):
+    u = urlparse(url)
+    return u.scheme == 'https' and any(u.hostname == h or u.hostname.endswith('.'+h) for h in hosts)
 
 def validate(data):
     ids = set()
@@ -32,6 +40,7 @@ def validate(data):
         ids.add(p['id'])
         assert 0 < p['memory_gb'] <= 2000000
         assert p['vendor'] in ('NVIDIA','AMD')
+        assert p.get('maker') is None or p['maker'] in MAKERS, 'Unknown maker'
         assert p['sources'], 'Missing evidence'
         for k in ('bandwidth_tbs', 'msrp_usd'):
             assert p.get(k) is None or (isinstance(p[k], (int, float)) and p[k] > 0), f'Invalid {k}'
@@ -39,11 +48,10 @@ def validate(data):
         for s in (p.get('price') or {}).get('sources', []):
             assert urlparse(s['url']).scheme == 'https', 'Price source must be https'
         if p.get('image'):
-            u = urlparse(p['image']['url'])
-            assert u.scheme == 'https' and any(u.hostname == h or u.hostname.endswith('.'+h) for h in ALLOWED), 'Unofficial image'
-        for s in p['sources']:
-            u = urlparse(s['url'])
-            assert u.scheme == 'https' and any(u.hostname == h or u.hostname.endswith('.'+h) for h in ALLOWED), 'Unofficial source'
+            assert on_host(p['image']['url'], ALLOWED), 'Unofficial image'
+        hosts = ALLOWED + MAKERS.get(p.get('maker'), ())
+        assert all(on_host(s['url'], hosts) for s in p['sources']), 'Unofficial source'
+        assert any(on_host(s['url'], ALLOWED) for s in p['sources']), 'No NVIDIA or AMD source'
     assert len(ids) >= 31, 'Unexpected catalog loss'
 
 def https(url):
@@ -290,15 +298,16 @@ def product(p):
     sources = ' '.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">{E(s["label"])}</a>' for s in p['sources'])
     power = NA(p['power_w'], lambda v: f'{v:g} W')
     bandwidth = NA(p['bandwidth_tbs'], lambda v: f'{v:g} TB/s') + (f'<small lang="en">{E(p["bandwidth_note"])}</small>' if p['bandwidth_note'] else '')
-    price = NA(p['msrp_usd'], lambda v: f'${v:,.0f}')
+    price = NA(p['msrp_usd'], lambda v: f'${v:,.0f}' if v == int(v) else f'${v:,.2f}')
     release = dated(p['release'])
     announced = dated(p['announcement'])
     cooling = NA(p['cooling'], T)
     use_ar = f' data-ar="{E(p["use_ar"])}"' if p['use_ar'] else ''
     shot = image_block(p, f'<span class="vbadge">{p["vendor"]}</span>')
     vendor = '' if shot else f'<span class="vendor">{p["vendor"]}</span> · '
+    maker = f' · <span class="maker">{L("Built by " + EN(p["maker"]), "من صنع " + EN(p["maker"]))}</span>' if p.get('maker') else ''
     return f'''<article class="product {p['vendor'].lower()}" id="p-{E(p['id'])}" data-product="{E(p['id'])}">{shot}
-    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}</p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
+    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}{maker}</p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
     <p class="memory"><strong><bdi lang="en">{E(p['memory'])}</bdi></strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></p>
     <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}{release_kind(p['release_kind'])}</dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
     <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div></details>

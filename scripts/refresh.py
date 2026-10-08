@@ -91,7 +91,8 @@ def main():
     rules=json.loads((ROOT/'data/refresh-rules.json').read_text(encoding='utf-8'))
     urls=set(DISCOVERY)|{r['url'] for r in rules.values()}
     for p in data['products']:
-        urls.update(s['url'] for s in p['sources'] if not urlparse(s['url']).path.lower().endswith('.pdf'))
+        # Partner devices also cite their maker's site; only NVIDIA / AMD pages are monitored.
+        urls.update(s['url'] for s in p['sources'] if official(s['url']) and not urlparse(s['url']).path.lower().endswith('.pdf'))
     pages={};errors={}
     def load(url):
         try:return url,fetch(url),None

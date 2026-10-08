@@ -148,6 +148,25 @@ class ScheduleAndLinkTests(unittest.TestCase):
             self.assertEqual((build.schedule_phrase(d,'en'),build.schedule_phrase(d,'ar')),(en,ar))
         line=build.fresh_line({'updated_at':'2026-09-26T13:09:30+00:00'},data)
         self.assertEqual(line,build.L('Updated 26 Sep 2026 · twice a day','آخر تحديث 26 سبتمبر 2026 · مرتين يومياً'))
+    def test_partner_devices_cite_their_maker_and_nvidia(self):
+        data=json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
+        ps=[p for p in data['products'] if p.get('maker')]
+        self.assertEqual({p['maker'] for p in ps},{'ASUS','Dell','HP','Lenovo','Microsoft','MSI'})
+        laptop=json.loads(json.dumps(next(p for p in ps if p['maker']=='Microsoft')))
+        card_of=lambda p:build.product(dict(p,price_view=build.price_view(p)))
+        def bad(**change):
+            d=json.loads(json.dumps(data));p=next(x for x in d['products'] if x['id']==laptop['id']);p.update(change)
+            with self.assertRaises(AssertionError):build.validate(d)
+        build.validate(data)
+        bad(maker='Acme')  # unknown maker
+        bad(maker='Dell')  # Microsoft pages are not Dell's own site
+        bad(sources=[s for s in laptop['sources'] if 'nvidia.com' not in s['url']])  # needs an NVIDIA source too
+        bad(image=dict(laptop['image'],url='https://www.microsoft.com/x.jpg'))  # images only from NVIDIA or AMD
+        card=card_of(laptop)
+        self.assertIn('Built by <span lang="en">Microsoft</span>',card)
+        self.assertIn('من صنع <span lang="en">Microsoft</span>',card)
+        self.assertIn('$2,599</dd>',card)
+        self.assertIn('$2,799.99</dd>',card_of(dict(laptop,msrp_usd=2799.99)))
     def test_links_must_be_https(self):
         with self.assertRaises(AssertionError):build.validate_links([{'id':'x','homepage':'javascript:alert(1)'}],None)
         with self.assertRaises(AssertionError):build.validate_links([],{'facts':[{'id':'f','sources':[{'url':'http://x.example/'}]}]})

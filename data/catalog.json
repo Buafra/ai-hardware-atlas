@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-09-28T19:36:59+00:00",
+  "updated_at": "2026-10-08",
   "last_check_at": "2026-10-08T10:33:59+00:00",
   "schedule": "07:15 and 19:15 Asia/Dubai",
   "automation_status": "Configured in GitHub Actions",
@@ -2295,6 +2295,79 @@
           {
             "label": "NVIDIA forum: Feb 2026 price change",
             "url": "https://forums.developer.nvidia.com/t/2-23-2026-price-change-announcement/361713"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "level": "Personal",
+      "type": "System",
+      "model": "DGX Spark 64 GB (GB10)",
+      "memory": "64 GB unified",
+      "use": "Local models up to 100B parameters in a compact box",
+      "id": "dgx-spark-gb10-64gb",
+      "announcement": "2026-10-02",
+      "release": "2026-10-23",
+      "release_kind": "Partner rollout expected",
+      "source_reviewed": "2026-10-08",
+      "architecture": "Grace Blackwell / GB10",
+      "power_w": 140,
+      "power_note": "Power rating",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 64,
+      "sources": [
+        {
+          "label": "Timeline source (NVIDIA Blog, Oct 2, 2026: from partners on Oct 23, starting at $4,999)",
+          "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
+        },
+        {
+          "label": "Hardware specification (NVIDIA DGX Spark page: 64 GB or 128 GB options, 273 GB/s, 140 W GB10 TDP)",
+          "url": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+        },
+        {
+          "label": "GB10 compute figure with sparsity (NVIDIA DGX Spark hardware docs, 128 GB edition)",
+          "url": "https://docs.nvidia.com/dgx/dgx-spark/hardware.html"
+        },
+        {
+          "label": "Partner 64 GB listings (NVIDIA Marketplace)",
+          "url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/"
+        }
+      ],
+      "notes": "Announced 2 October 2026 for sale from 23 October 2026, only through Acer, ASUS, Dell, Gigabyte, HP and MSI; NVIDIA does not sell its own 64 GB unit. It keeps the GB10 chip, DGX OS, software and 273 GB/s bandwidth of the 128 GB model with half the memory, shared by CPU and GPU. NVIDIA rates one unit for models up to 100B parameters and two units linked over ConnectX-7 (128 GB pooled) for up to 200B. Storage depends on the partner model (1 TB to 4 TB in NVIDIA Marketplace listings). $4,999 is NVIDIA's stated starting price, and the 140 W figure is the GB10 chip TDP listed in NVIDIA's DGX Spark spec table.",
+      "use_ar": "نماذج محلية حتى 100 مليار مُعامل في جهاز صغير",
+      "bandwidth_tbs": 0.273,
+      "bandwidth_note": "273 GB/s LPDDR5x unified (CPU+GPU shared)",
+      "ai_compute": "FP4 1 PFLOP (sparse)",
+      "interconnect": "NVLink-C2C (CPU-GPU); ConnectX-7 200 Gb/s networking",
+      "form_factor": "Compact desktop system from partners (size varies by model)",
+      "cooling": null,
+      "msrp_usd": 4999,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/dgx-spark/nvidia-dgx-spark-family-og.jpg",
+        "page": "https://www.nvidia.com/en-us/products/workstations/dgx-spark/",
+        "credit": "NVIDIA",
+        "shows": "Nine GB10 desktop systems on white: NVIDIA's gold DGX Spark and partner units (HP, Lenovo, MSI, Acer and Dell logos visible); the 64 GB model is sold only in partner designs",
+        "file": "images/dgx-spark-gb10-64gb.webp"
+      },
+      "price": {
+        "usd_low": null,
+        "usd_high": null,
+        "usd_kind": null,
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Not on sale until 23 October 2026. On 2026-10-08 the NVIDIA Marketplace listed 64 GB units from ASUS (Ascent GX10, 1 TB), MSI (EdgeXpert, 2 TB), Gigabyte (AI TOP ATOM, 1 or 2 TB), Acer (Veriton GN100, 2 TB) and Dell (Pro Max with GB10, 2 or 4 TB) as Coming Soon with no price; HP's 64 GB unit was not listed. NVIDIA's stated starting price is $4,999 (shown as the launch price). No UAE price or date was found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "NVIDIA Marketplace, personal AI supercomputers (64 GB units Coming Soon, 2026-10-08)",
+            "url": "https://marketplace.nvidia.com/en-us/enterprise/personal-ai-supercomputers/"
+          },
+          {
+            "label": "NVIDIA Blog, Oct 2, 2026 (from $4,999 on Oct 23)",
+            "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/"
           }
         ]
       }
@@ -6302,9 +6375,9 @@
       "use": "Local AI agents on PCs",
       "id": "rtx-spark-n1x",
       "announcement": "2026-05-31",
-      "release": "2026-10",
-      "release_kind": "Partner rollout expected",
-      "source_reviewed": "2026-09-28",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
       "architecture": "Grace Blackwell",
       "power_w": 140,
       "power_note": "Power rating",
@@ -6326,14 +6399,26 @@
         {
           "label": "Availability update (NVIDIA Blog, Sept 3, 2026: OEMs shipping in October)",
           "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/"
+        },
+        {
+          "label": "Availability update (NVIDIA Blog, Oct 7, 2026: laptop preorders open, available Oct 16; desktops in November; CPU-GPU link 600 GB/s)",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "N1X variants: 6,144-core laptop and desktop, 5,120-core laptop only (NVIDIA RTX Spark porting guide, GPU identification)",
+          "url": "https://docs.nvidia.com/rtx-spark/rtx-spark-porting-guide/latest/gpu-identification.html"
+        },
+        {
+          "label": "Partner RTX Spark systems (NVIDIA Marketplace)",
+          "url": "https://marketplace.nvidia.com/en-us/products/rtx-spark/"
         }
       ],
-      "notes": "NVIDIA lists two laptop configurations both named N1X (6,144-core GPU and 20-core CPU with up to 128 GB, or 5,120-core GPU and 18-core CPU with up to 64 GB); this record is the 128 GB configuration, rated 45-80 W TDP in laptops and 140 W in desktops. The 128 GB is shared CPU/GPU memory that should not be compared directly with single-GPU VRAM, and NVIDIA has published no price.",
+      "notes": "NVIDIA lists two laptop configurations both named N1X (6,144-core GPU and 20-core CPU with up to 128 GB, or 5,120-core GPU and 18-core CPU with up to 64 GB); this record is the 128 GB configuration, rated 45-80 W TDP in laptops and 140 W in desktops, which use only the 6,144-core version. Laptop preorders opened on 7 October 2026 and NVIDIA says laptops are available from 16 October; compact desktops go on sale in November. The first laptops are the ASUS ProArt P16 and P14, Dell XPS 16 Creator Edition, HP OmniBook Ultra 16 and OmniBook X 14, Lenovo Yoga 9n 2-in-1, MSI Prestige N16 Flip AI+ and Microsoft Surface Laptop Ultra, with US starting prices from $2,599.99 (Surface Laptop Ultra and ASUS ProArt). The Surface Laptop Ultra with 128 GB is $5,899.99, and the Surface RTX Spark Dev Box desktop (128 GB, US only, shipping in November) is $5,999.99. The 600 GB/s figure is the CPU-GPU link, not memory bandwidth. The 128 GB is shared CPU/GPU memory that should not be compared directly with single-GPU VRAM, and NVIDIA has published no chip price.",
       "use_ar": "وكلاء ذكاء اصطناعي محليون على الحواسيب الشخصية",
       "bandwidth_tbs": 0.3,
       "bandwidth_note": "300 GB/s over a 256-bit interface, shared by CPU and GPU (NVIDIA porting guide, which calls the memory LPDDR5)",
       "ai_compute": "Up to 1 petaflop FP4 AI performance (sparsity not stated)",
-      "interconnect": "NVLink-C2C (CPU-GPU); PCIe Gen 5",
+      "interconnect": "NVLink-C2C (CPU-GPU, 600 GB/s); PCIe Gen 5",
       "form_factor": "Superchip (SoC) in partner laptops and small desktops",
       "cooling": null,
       "msrp_usd": null,
@@ -6344,7 +6429,519 @@
         "shows": "Render of a transparent laptop chassis with the RTX Spark superchip glowing at its center",
         "file": "images/rtx-spark-n1x.webp"
       },
-      "price": null
+      "price": {
+        "usd_low": 5899.99,
+        "usd_high": 5999.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "The chip is not sold alone, so this prices 128 GB RTX Spark N1X systems listed by Microsoft on 2026-10-08 (pre-order, US, before tax): Surface Laptop Ultra with the 6,144-core N1X, 128 GB and 1 TB at $5,899.99 (available from 16 Oct), and Surface RTX Spark Dev Box with 128 GB and 2 TB at $5,999.99 (US only, ships in November). Other makers' 128 GB models had no confirmed US price; lower-memory RTX Spark laptops start at $2,599.99. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "Microsoft Store: Surface Laptop Ultra configurations (2026-10-08)",
+            "url": "https://www.microsoft.com/en-us/d/surface-laptop-ultra/8wg5vqp0x4b8"
+          },
+          {
+            "label": "Microsoft: Surface RTX Spark Dev Box (2026-10-08)",
+            "url": "https://www.microsoft.com/en-us/surface/devices/surface-rtx-spark-dev-box"
+          },
+          {
+            "label": "Microsoft Devices Blog, 2026-10-07",
+            "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "Microsoft",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "Microsoft Surface Laptop Ultra",
+      "memory": "24 to 128 GB LPDDR5x unified",
+      "use": "Local AI, coding and creative work on a 15-inch laptop",
+      "id": "surface-laptop-ultra",
+      "announcement": "2026-05-31",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": null,
+      "power_note": "Not documented in this edition",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "Microsoft: Surface Laptop Ultra (product page and specifications)",
+          "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra"
+        },
+        {
+          "label": "Microsoft Store: Surface Laptop Ultra configurations and prices",
+          "url": "https://www.microsoft.com/en-us/d/surface-laptop-ultra/8wg5vqp0x4b8"
+        },
+        {
+          "label": "Microsoft Store: Surface Laptop Ultra for Business",
+          "url": "https://www.microsoft.com/en-us/d/surface-laptop-ultra-for-business/8wg5vqp0x4d1"
+        },
+        {
+          "label": "Microsoft Devices Blog, 7 Oct 2026: preorders open",
+          "url": "https://blogs.windows.com/devices/2026/10/07/pre-order-our-most-powerful-surface-devices-ever/"
+        },
+        {
+          "label": "Microsoft Devices Blog, 31 May 2026: Surface Laptop Ultra introduced",
+          "url": "https://blogs.windows.com/devices/2026/05/31/introducing-surface-laptop-ultra-made-for-world-makers/"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "Two N1X versions: the $2,599.99 to $3,299.99 models (24 or 32 GB) use the 5,120-core GPU and 18-core CPU; the models from $3,699.99 (32, 48, 64 or 128 GB) use the 6,144-core GPU and 20-core CPU, which the 1 petaflop and 128 GB figures need. 24 GB models ship with Windows 11 Home, 32 GB and up with Windows 11 Pro; Windows 11 on Arm runs other apps through Prism emulation. Removable SSD of 512 GB to 2 TB. Microsoft states no chip power; NVIDIA rates the laptop N1X at 45-80 W. First shown on 31 May 2026; preorders opened 7 Oct 2026 on Microsoft.com and at select retailers in the US, Canada, UK, Ireland, Germany, France, Australia, New Zealand and Japan (UK from GBP 2,599, Germany from EUR 2,899), with availability from 16 Oct. Surface Laptop Ultra for Business (anti-reflective display, Windows 11 Pro on every model) costs $2,749.99 to $5,949.99. Microsoft also opened US-only preorders for the Surface RTX Spark Dev Box, a compact desktop with 128 GB and 2 TB at $5,999.99, shipping in November. No UAE price or date yet: Microsoft calls it a pre-release product in the UAE, subject to regulatory approval, and the US store does not ship to the UAE.",
+      "use_ar": "ذكاء اصطناعي محلي وبرمجة وأعمال إبداعية على حاسوب محمول بشاشة 15 بوصة",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X; not stated by the maker",
+      "ai_compute": "Up to 1 petaflop FP4 on 20-core configurations (Microsoft: theoretical, with sparsity)",
+      "interconnect": "3x USB-C USB4 40 Gbps (DisplayPort 2.1), HDMI 2.1b, USB-A; Wi-Fi 7, Bluetooth 5.4",
+      "form_factor": "15-inch laptop, 3270 x 2180 mini-LED touchscreen up to 120 Hz (2,000 nits peak HDR, 1,000 nits SDR), no pen support; 2.0 kg (4.41 lb); 328.8 x 238.7 x 17.99 mm; 92 Wh battery",
+      "cooling": null,
+      "msrp_usd": 2599,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-microsoft-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "Microsoft Surface Laptop Ultra (NVIDIA RTX Spark gallery photo)",
+        "file": "images/surface-laptop-ultra.webp"
+      },
+      "price": {
+        "usd_low": 2599.99,
+        "usd_high": 5899.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Microsoft Store US preorder prices before tax, checked 2026-10-08, all eight configurations. 5,120-core N1X: 24 GB/512 GB $2,599.99, 24 GB/1 TB $2,999.99, 32 GB/1 TB $3,299.99. 6,144-core N1X: 32 GB/1 TB $3,699.99, 48 GB/1 TB $3,999.99, 64 GB/1 TB $4,299.99, 64 GB/2 TB $4,699.99, 128 GB/1 TB $5,899.99. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "Microsoft Store: Surface Laptop Ultra (2026-10-08)",
+            "url": "https://www.microsoft.com/en-us/d/surface-laptop-ultra/8wg5vqp0x4b8"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "MSI",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "MSI Prestige N16 Flip AI+",
+      "memory": "32 to 128 GB LPDDR5X unified",
+      "use": "Local AI on a 16-inch 2-in-1 with pen",
+      "id": "msi-prestige-n16-flip-ai-plus",
+      "announcement": "2026-06-01",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": null,
+      "power_note": "Not documented in this edition",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "MSI press release, 8 Oct 2026: Prestige N16 Flip AI+ preorders",
+          "url": "https://www.msi.com/news/detail/MSI-Unveils-Prestige-N16-Flip-AI---An-NVIDIA-RTX-Spark-Powered-2-in-1-Built-for-the-Agentic-AI-Era-150008"
+        },
+        {
+          "label": "MSI: Prestige N16 Flip AI+ specification",
+          "url": "https://www.msi.com/Business-Productivity/Prestige-N16-Flip-AI-Plus-C1XMX/Specification"
+        },
+        {
+          "label": "MSI US store: Prestige N16 Flip AI+ models",
+          "url": "https://us-store.msi.com/PRESTIGE-N16-NVIDIA-RTX-SPARK"
+        },
+        {
+          "label": "MSI news, 1 Jun 2026 (Computex): Prestige N16 Flip AI+ unveiled",
+          "url": "https://www.msi.com/news/detail/MSI-Partners-with-NVIDIA-to-Unveil-Its-First-Laptop-Powered-by-NVIDIA-RTX-Spark-at-COMPUTEX-2026-148992"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "Every retail model found uses the 6,144-core N1X with 32, 64 or 128 GB and 1 or 2 TB; MSI's specification also lists the 5,120-core version. MSI US store, checked 8 Oct 2026: 32 GB/1 TB $3,299.99, 64 GB/1 TB $4,199.99, 128 GB/2 TB with the 3840 x 2400 Tandem OLED $6,799.99. First shown at Computex on 1 Jun 2026; MSI announced preorders on 8 Oct through certified partners in select markets; ship dates vary by model and are later than NVIDIA's 16 Oct platform date (MSI US store 23 Oct for the 64 GB model, Newegg 6 Nov for the 32 GB model). 140 W USB-C adapter; MSI states no chip power. Not yet listed in the UAE: MSI Arabia has no page for it.",
+      "use_ar": "ذكاء اصطناعي محلي على حاسوب محمول قابل للتحويل بشاشة 16 بوصة وقلم",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X; not stated by the maker",
+      "ai_compute": "Up to 1 petaflop FP4 (NVIDIA figure for N1X)",
+      "interconnect": "2x USB4 Type-C (DisplayPort, PD 3.1), 2x USB-A, HDMI 2.1; Wi-Fi 7, Bluetooth 5.4",
+      "form_factor": "16-inch 2-in-1, OLED touchscreen (2880 x 1800, or 3840 x 2400 Tandem OLED) up to 120 Hz with pen support; 1.9 kg; 357.7 x 254.3 x 13.9-16.9 mm; 99.9 Wh battery",
+      "cooling": null,
+      "msrp_usd": 3299.99,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-msi-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "MSI Prestige N16 Flip AI+ (NVIDIA RTX Spark gallery photo)",
+        "file": "images/msi-prestige-n16-flip-ai-plus.webp"
+      },
+      "price": {
+        "usd_low": 3299.99,
+        "usd_high": 6799.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "MSI US store preorder prices before tax, checked 2026-10-08: C1XMT-067USY 32 GB/1 TB $3,299.99, 066USY 64 GB/1 TB $4,199.99, 062USY 128 GB/2 TB $6,799.99. Newegg lists the 32 GB model at $3,299.00. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "MSI US store: C1XMT-067USY (2026-10-08)",
+            "url": "https://us-store.msi.com/Laptops/business-productivity/prestige-series/Prestige-N16-Flip-AI-C1XMT-067USY"
+          },
+          {
+            "label": "MSI US store: C1XMT-062USY (2026-10-08)",
+            "url": "https://us-store.msi.com/Laptops/business-productivity/prestige-series/Prestige-N16-Flip-AI-C1XMT-062USY"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "HP",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "HP OmniBook Ultra 16",
+      "memory": "32 to 128 GB LPDDR5x unified",
+      "use": "Local AI and creative work on a 16-inch laptop",
+      "id": "hp-omnibook-ultra-16",
+      "announcement": "2026-06-01",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": null,
+      "power_note": "Not documented in this edition",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "HP press release, 7 Oct 2026: RTX Spark OmniBook laptops, prices and dates",
+          "url": "https://www.hp.com/us-en/newsroom/press-releases/2026/hp-leads-the-expansion-of-the-local-ai-era-from-gb300-ai-workstations-to-rtx-spark-windows-pcs.html"
+        },
+        {
+          "label": "HP: OmniBook Ultra 16 (product page and specifications)",
+          "url": "https://www.hp.com/us-en/shop/pdp/hp-omnibook-ultra-laptop-next-gen-ai-16-bk000-16-bg9s9av-1"
+        },
+        {
+          "label": "HP: OmniBook X 14 (product page and specifications)",
+          "url": "https://www.hp.com/us-en/shop/pdp/hp-omnibook-x-laptop-next-gen-ai-14-ks000-14-cb1l6av-1"
+        },
+        {
+          "label": "HP press release, 1 Jun 2026 (Computex): OmniBook Ultra 16 and X 14 with RTX Spark previewed",
+          "url": "https://www.hp.com/us-en/newsroom/press-releases/2026/computex.html"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "HP.com sells two N1X versions: the 5,120-core GPU and 18-core CPU with 32 GB from $3,199.99, or the 6,144-core GPU and 20-core CPU with 32 GB ($3,619.99), 64 GB ($4,199.99) or 128 GB ($5,309.99), each with 1 TB; a 2 TB Gen5 SSD adds $850. Best Buy's 32 GB/1 TB model (16-bk0013dx) at $3,199.99 has the 6,144-core version. First previewed at Computex on 1 Jun 2026; available at HP.com and Best Buy from 16 Oct 2026. 140 W USB-C adapter; HP states no chip power. The smaller HP OmniBook X 14 (14-inch, 1.66 kg, same chip and memory options) starts at $2,999.99, also from 16 Oct. Not yet listed in the UAE: HP Middle East shows only Intel and AMD OmniBook models.",
+      "use_ar": "ذكاء اصطناعي محلي وأعمال إبداعية على حاسوب محمول بشاشة 16 بوصة",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X; not stated by the maker",
+      "ai_compute": "Up to 1 petaflop FP4 (NVIDIA figure for N1X)",
+      "interconnect": "2x USB-C 40 Gbps (DisplayPort 2.1), 2x USB-A 10 Gbps, HDMI 2.1; Wi-Fi 7, Bluetooth 6.0",
+      "form_factor": "16-inch laptop, 2880 x 1800 OLED touchscreen up to 120 Hz; 2.22 kg (4.89 lb); 355.9 x 256.5 x 15.7 mm; 99 Wh battery",
+      "cooling": null,
+      "msrp_usd": 3199.99,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-hp-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "HP OmniBook Ultra 16 (NVIDIA RTX Spark gallery photo)",
+        "file": "images/hp-omnibook-ultra-16.webp"
+      },
+      "price": {
+        "usd_low": 3199.99,
+        "usd_high": 5309.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "HP.com configure-to-order prices before tax, checked 2026-10-08, all with 1 TB: 5,120-core N1X 32 GB $3,199.99; 6,144-core N1X 32 GB $3,619.99, 64 GB $4,199.99, 128 GB $5,309.99 (2 TB adds $850). Best Buy lists a 6,144-core 32 GB/1 TB model at $3,199.99. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "HP.com: OmniBook Ultra 16 configurator (2026-10-08)",
+            "url": "https://www.hp.com/us-en/shop/pdp/hp-omnibook-ultra-laptop-next-gen-ai-16-bk000-16-bg9s9av-1"
+          },
+          {
+            "label": "Best Buy: HP OmniBook Ultra 16 16-bk0013dx (2026-10-08)",
+            "url": "https://www.bestbuy.com/site/6690025.p?skuId=6690025"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "ASUS",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "ASUS ProArt P16 (H7607)",
+      "memory": "24 to 128 GB LPDDR5X unified",
+      "use": "Local AI and creative work on a 16-inch laptop",
+      "id": "asus-proart-p16-h7607",
+      "announcement": "2026-06-01",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": null,
+      "power_note": "Not documented in this edition",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "ASUS press release: ProArt P16 and P14 with RTX Spark, preorders and US availability",
+          "url": "https://press.asus.com/news/press-releases/asus-proart-rtx-spark-p16-p14-ai-pcs/"
+        },
+        {
+          "label": "ASUS: ProArt P16 (H7607) product page",
+          "url": "https://www.asus.com/us/laptops/for-creators/proart/proart-p16-h7607/"
+        },
+        {
+          "label": "ASUS: ProArt P16 (H7607) technical specifications",
+          "url": "https://www.asus.com/laptops/for-creators/proart/proart-p16-h7607/techspec/"
+        },
+        {
+          "label": "ASUS: ProArt P14 (H7407) technical specifications",
+          "url": "https://www.asus.com/laptops/for-creators/proart/proart-p14-h7407/techspec/"
+        },
+        {
+          "label": "ASUS press release, 1 Jun 2026 (Computex): ProArt P16 and P14 with RTX Spark unveiled",
+          "url": "https://press.asus.com/news/press-releases/asus-proart-p16-p14-mini-pc-nvidia-rtx-spark-computex-2026/"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "ASUS specification pages list the 6,144-core GPU and 20-core CPU version of N1X with 24 to 128 GB and 512 GB to 2 TB; NVIDIA Marketplace shows some models with the 5,120-core version, which ASUS does not confirm. Best Buy preorder prices, checked 8 Oct 2026: 24 GB/512 GB $2,799.99, 32 GB/1 TB $3,399.99, 128 GB/2 TB $6,999.99 (the ASUS Store shows the 128 GB model as coming soon at the same price). Unveiled at Computex on 1 Jun 2026; global preorders opened 7 Oct and the first US units arrive 16 Oct. The smaller ProArt P14 (14-inch, 1.48 kg, 24 to 128 GB) starts at $2,599.99, the \"from\" price in ASUS's press release. ASUS has Middle East specification pages for both, but no UAE price or date yet.",
+      "use_ar": "ذكاء اصطناعي محلي وأعمال إبداعية على حاسوب محمول بشاشة 16 بوصة",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X; not stated by the maker",
+      "ai_compute": "Up to 1 petaflop FP4 (NVIDIA figure for N1X)",
+      "interconnect": "3x USB4 40 Gbps Type-C, USB-A 10 Gbps, HDMI 2.1, SD Express reader; Wi-Fi 7, Bluetooth 5.4",
+      "form_factor": "16-inch laptop, OLED touchscreen (3840 x 2400 or 2880 x 1800) at 120 Hz; 1.77 kg; 354.1 x 243.0 x 12.9-15.9 mm; 99.9 Wh battery",
+      "cooling": null,
+      "msrp_usd": 2799.99,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-asus-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "ASUS ProArt P16 (NVIDIA RTX Spark gallery photo)",
+        "file": "images/asus-proart-p16-h7607.webp"
+      },
+      "price": {
+        "usd_low": 2799.99,
+        "usd_high": 6999.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Best Buy preorder prices before tax, checked 2026-10-08 (shown on NVIDIA Marketplace and Best Buy): 24 GB/512 GB $2,799.99, 32 GB/1 TB $3,399.99, 128 GB/2 TB $6,999.99. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "Best Buy: ASUS ProArt P16 32 GB/1 TB (2026-10-08)",
+            "url": "https://www.bestbuy.com/product/asus-proart-p16-16-4k-oled-touchscreen-laptop-nvidia-rtx-spark-n1x-2026-32gb-memory-1tb-storage-copilot-pc-nano-black/JJGHGSJKWC"
+          },
+          {
+            "label": "NVIDIA Marketplace: ASUS ProArt P16 128 GB/2 TB (2026-10-08)",
+            "url": "https://marketplace.nvidia.com/en-us/products/rtx-spark/asus-proart-p16-h7607-ba-xb99t/"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "Dell",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "Dell XPS 16 Creator Edition",
+      "memory": "Up to 128 GB LPDDR5X unified",
+      "use": "Local AI and creative work on a 16-inch laptop",
+      "id": "dell-xps-16-creator-edition",
+      "announcement": "2026-05-31",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": null,
+      "power_note": "Not documented in this edition",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "Dell press release, 7 Oct 2026: XPS 16 Creator Edition with RTX Spark",
+          "url": "https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-drives-agentic-ai-era-new-windows-pcs-and"
+        },
+        {
+          "label": "Dell blog: XPS 16 Creator Edition, preorder on Best Buy from $3,799.99",
+          "url": "https://www.dell.com/en-us/blog/dell-xps-16-creator-edition-where-nvidia-rtx-spark-meets-premium-design"
+        },
+        {
+          "label": "Dell: XPS laptops (Creator Edition size and weight)",
+          "url": "https://www.dell.com/en-us/shop/computer-pcs/lp/xps-laptops"
+        },
+        {
+          "label": "NVIDIA newsroom, 31 May 2026: RTX Spark launch naming the Dell XPS 16 Creator Edition",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-microsoft-windows-pcs-agents-rtx-spark"
+        },
+        {
+          "label": "Dell blog, 1 Jun 2026: first look at the XPS 16 Creator Edition",
+          "url": "https://www.dell.com/en-us/blog/dell-and-nvidia-bring-serious-performance-to-creators/"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "Dell says the XPS 16 Creator Edition comes with up to the 6,144-core GPU and 20-core CPU, up to 128 GB and up to 4 TB, but the only model on sale on 8 Oct 2026 has the 5,120-core GPU and 18-core CPU with 32 GB and 512 GB, at $3,799.99 on Best Buy (preorder from 7 Oct, release date 16 Oct). First named in NVIDIA's RTX Spark launch release on 31 May 2026. Dell says Dell.com sales follow soon and has not yet published a full specification page. Dell states no chip power; NVIDIA rates the laptop N1X at 45-80 W. NVIDIA's RTX Spark page calls it \"Dell XPS 16\". Not yet listed in the UAE: Dell names the US only.",
+      "use_ar": "ذكاء اصطناعي محلي وأعمال إبداعية على حاسوب محمول بشاشة 16 بوصة",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X, which 128 GB needs; the 32 GB model on sale has the 5,120-core version",
+      "ai_compute": "Up to 1 petaflop FP4 (NVIDIA figure for N1X)",
+      "interconnect": "3x USB4 40 Gbps Type-C (DisplayPort 2.1), HDMI 2.1b, SD reader; Wi-Fi 7",
+      "form_factor": "16-inch laptop, 3200 x 2000 tandem OLED touchscreen at 20-120 Hz; from 2.02 kg (4.45 lb); 352.6 x 238.0 x 17.8 mm",
+      "cooling": null,
+      "msrp_usd": 3799.99,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-dell-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "Dell XPS 16 Creator Edition (NVIDIA RTX Spark gallery photo)",
+        "file": "images/dell-xps-16-creator-edition.webp"
+      },
+      "price": {
+        "usd_low": 3799.99,
+        "usd_high": 3799.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Best Buy preorder price before tax, checked 2026-10-08, for the only model listed: 5,120-core N1X, 32 GB, 512 GB. No 64 or 128 GB price yet. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "Best Buy: Dell XPS 16 RTX Spark 32 GB/512 GB (2026-10-08)",
+            "url": "https://www.bestbuy.com/product/dell-xps-16-3-2k-oled-touchscreen-laptop-nvidia-rtx-spark-n1x-2026-32gb-memory-512gb-storage-graphite/J3K4L6QH28"
+          }
+        ]
+      }
+    },
+    {
+      "vendor": "NVIDIA",
+      "maker": "Lenovo",
+      "level": "Personal",
+      "type": "Laptop",
+      "model": "Lenovo Yoga Pro 9n",
+      "memory": "32 to 128 GB LPDDR5X unified",
+      "use": "Local AI and creative work on a 15-inch laptop",
+      "id": "lenovo-yoga-pro-9n",
+      "announcement": "2026-06-01",
+      "release": "2026-10-07",
+      "release_kind": "Orders opened",
+      "source_reviewed": "2026-10-08",
+      "architecture": "NVIDIA RTX Spark N1X (Grace Blackwell)",
+      "power_w": 80,
+      "power_note": "Power rating",
+      "memory_scope": "Shared CPU + GPU",
+      "memory_gb": 128.0,
+      "sources": [
+        {
+          "label": "Lenovo press release, 3 Sep 2026 (IFA): Yoga Pro 9n and Yoga 9n 2-in-1 with RTX Spark",
+          "url": "https://news.lenovo.com/pressroom/press-releases/yoga-portfolio-new-ai-pcs-and-tablets/"
+        },
+        {
+          "label": "Lenovo US: Lenovo Pro 9n (15-inch, NVIDIA) product page",
+          "url": "https://www.lenovo.com/us/en/p/laptops/yoga/yoga-pro-series/lenovo-pro-9n-gen-11-15-inch-nvidia/len101l0078"
+        },
+        {
+          "label": "Lenovo US: Yoga 9n 2-in-1 (16-inch, NVIDIA) product page",
+          "url": "https://www.lenovo.com/us/en/p/laptops/yoga/yoga-2-in-1-series/yoga-9n-2-in-1-gen-11-16-inch-nvidia/len101y0076"
+        },
+        {
+          "label": "NVIDIA Blog, 7 Oct 2026: RTX Spark laptop preorders open, available 16 Oct",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/"
+        },
+        {
+          "label": "NVIDIA RTX Spark page (partner laptop gallery and chip specifications)",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/"
+        }
+      ],
+      "notes": "Lenovo's US store and NVIDIA call it \"Lenovo Pro 9n\". Lenovo US configurator, checked 8 Oct 2026: 18-core CPU with 32 GB and 512 GB from $2,999.99 (NVIDIA pairs the 18-core CPU with the 5,120-core GPU), or 20-core CPU with 64 GB and 1 TB ($4,249.99) or 128 GB and 2 TB ($6,099.99). Lenovo's press release rates the chip at 80 W in this laptop. First named on 1 Jun 2026 in NVIDIA's RTX Spark launch gallery and by Lenovo; full details at IFA on 3 Sep 2026 without prices; preorder at Lenovo US, release date 16 Oct 2026. The separate Lenovo Yoga 9n 2-in-1 (16-inch convertible, 1.94 kg, up to 64 GB, 70 W) starts at $2,999.99 at Lenovo ($3,099.99 at Best Buy for 32 GB/1 TB), also from 16 Oct. Not yet listed in the UAE.",
+      "use_ar": "ذكاء اصطناعي محلي وأعمال إبداعية على حاسوب محمول بشاشة 15 بوصة",
+      "bandwidth_tbs": 0.3,
+      "bandwidth_note": "NVIDIA's figure for the 6,144-core N1X; not stated by the maker",
+      "ai_compute": "Up to 1 petaflop FP4 (NVIDIA figure for N1X)",
+      "interconnect": "2x USB4 40 Gbps (DisplayPort 2.1), 2x USB-A 10 Gbps, HDMI 2.1, SD reader; Wi-Fi 7, Bluetooth 5.4",
+      "form_factor": "15.3-inch laptop, 2560 x 1600 OLED up to 165 Hz; from 1.65 kg; 347 x 242 x 16.7 mm; 92.5 Wh battery",
+      "cooling": null,
+      "msrp_usd": 2999.99,
+      "image": {
+        "url": "https://www.nvidia.com/content/dam/en-zz/nvidiaweb/products/rtx-spark/nvidia-rtx-spark-gallery-lenovo-ari.jpg/jcr:content/renditions/original",
+        "page": "https://www.nvidia.com/en-us/products/rtx-spark/",
+        "credit": "NVIDIA",
+        "shows": "Lenovo Yoga Pro 9n (NVIDIA RTX Spark gallery photo, captioned \"Lenovo Pro 9n\")",
+        "file": "images/lenovo-yoga-pro-9n.webp"
+      },
+      "price": {
+        "usd_low": 2999.99,
+        "usd_high": 6099.99,
+        "usd_kind": "US retail",
+        "aed_low": null,
+        "aed_high": null,
+        "aed_kind": null,
+        "vat_included": null,
+        "basis": "Lenovo US store preorder prices before tax, checked 2026-10-08: 18-core N1X, 32 GB/512 GB $2,999.99; 20-core N1X, 64 GB/1 TB $4,249.99 and 128 GB/2 TB $6,099.99. No UAE listing found.",
+        "checked": "2026-10-08",
+        "sources": [
+          {
+            "label": "Lenovo US: Lenovo Pro 9n configurations (2026-10-08)",
+            "url": "https://www.lenovo.com/us/en/p/laptops/yoga/yoga-pro-series/lenovo-pro-9n-gen-11-15-inch-nvidia/len101l0078"
+          }
+        ]
+      }
     },
     {
       "vendor": "NVIDIA",
@@ -9100,6 +9697,10 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-10-08",
+      "summary": "Added the first NVIDIA RTX Spark laptops, one per maker, from the 7 Oct 2026 Windows event: Microsoft Surface Laptop Ultra, ASUS ProArt P16, Dell XPS 16 Creator Edition, HP OmniBook Ultra 16, Lenovo Yoga Pro 9n, and MSI Prestige N16 Flip AI+, with US preorder prices and specifications from each maker (no UAE prices yet). Added DGX Spark 64 GB (GB10): announced 2 Oct 2026, sold only through Acer, ASUS, Dell, Gigabyte, HP and MSI from 23 Oct, NVIDIA starting price $4,999. RTX Spark N1X: laptop preorders opened 7 Oct 2026, available 16 Oct, compact desktops in November. These are RTX Spark laptops, not DGX Spark laptops."
+    },
     {
       "at": "2026-09-28",
       "summary": "Added 68 NVIDIA products that were missing: professional workstation cards (RTX A-series, RTX Ada Generation, more RTX PRO Blackwell editions, Quadro RTX), data-center GPUs (A100, H100, L40S, L4, A40 and others), HGX and DGX systems, GB200 and Rubin platforms, newer and older GeForce cards, and Jetson and IGX edge platforms. Every spec comes from an official NVIDIA page and was checked by two independent passes; prices are dated 2026-09-28."

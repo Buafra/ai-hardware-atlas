@@ -28,7 +28,7 @@
   }
   function select(products, filters, key, direction) {
     const q = (filters.q || '').trim().toLowerCase();
-    const result = products.filter(p => (!filters.vendor || p.vendor === filters.vendor) && (!filters.level || p.level === filters.level) && (!filters.scope || p.memory_scope === filters.scope) && (!filters.fitOnly || !filters.need || fitStatus(p, filters.need) !== 'no') && (!q || [p.model,p.vendor,p.level,p.type,p.architecture,p.memory,p.use,p.use_ar,p.notes,p.release,p.announcement,p.interconnect,p.form_factor,p.ai_compute].join(' ').toLowerCase().includes(q)));
+    const result = products.filter(p => (!filters.vendor || p.vendor === filters.vendor) && (!filters.level || p.level === filters.level) && (!filters.scope || p.memory_scope === filters.scope) && (!filters.fitOnly || !filters.need || fitStatus(p, filters.need) !== 'no') && (!q || [p.model,p.vendor,p.maker,p.level,p.type,p.architecture,p.memory,p.use,p.use_ar,p.notes,p.release,p.announcement,p.interconnect,p.form_factor,p.ai_compute].join(' ').toLowerCase().includes(q)));
     const get = p => key === 'level' ? levels.indexOf(p.level) : key === 'release' || key === 'announcement' ? dateNumber(p[key]) : p[key];
     return result.sort((a,b) => {
       const av = get(a), bv = get(b);
@@ -213,7 +213,7 @@
     'All levels':'كل المستويات','All memory scopes':'كل نطاقات الذاكرة',
     'Personal':'شخصي','Workstation':'محطة عمل','Enterprise':'مؤسسات','Data center':'مراكز البيانات','Rack scale':'على مستوى الرف',
     'Per GPU':'لكل معالج رسوميات','Shared CPU + GPU':'مشتركة بين المعالج والرسوميات','System total':'إجمالي النظام','Rack total':'إجمالي الرف',
-    'GPU':'معالج رسوميات','System':'نظام','Platform':'منصة','Server class':'فئة خادم','Rack':'رف','Reference design':'تصميم مرجعي',
+    'GPU':'معالج رسوميات','System':'نظام','Platform':'منصة','Server class':'فئة خادم','Rack':'رف','Reference design':'تصميم مرجعي','Laptop':'حاسوب محمول','Built by':'من صنع',
     'Expected':'متوقع','Generally available':'متاح للجميع','Not established':'غير محدد','Orders opened':'فُتح باب الطلب','Partner rollout':'طرح عبر الشركاء',
     'Partner rollout expected':'طرح متوقع عبر الشركاء','Released':'صدر','Standalone cards':'بطاقات منفصلة','Vendor availability window':'فترة توفر معلنة',
     'Vendor distribution window':'فترة توزيع معلنة','Vendor target (summer 2025)':'هدف الشركة (صيف 2025)','Volume expected':'إنتاج كمي متوقع',
@@ -593,7 +593,7 @@
     // English-only data values carry lang="en" so screen readers don't read them with Arabic pronunciation.
     const value = v => v == null || v === '' ? esc(T('Not listed')) : en(v);
     const rows = [
-      ['Vendor', p => esc(p.vendor)], ['Level', p => esc(T(p.level)) + ' / ' + esc(T(p.type))], ['Architecture', p => en(p.architecture)],
+      ['Vendor', p => esc(p.vendor) + (p.maker ? `<small>${esc(T('Built by'))} <span lang="en">${esc(p.maker)}</span></small>` : '')], ['Level', p => esc(T(p.level)) + ' / ' + esc(T(p.type))], ['Architecture', p => en(p.architecture)],
       ['Memory', p => `<span class="${p.memory_gb === bestMem ? 'best' : ''}" lang="en">${esc(p.memory)}</span>`], ['Memory scope', p => esc(T(p.memory_scope))],
       ['Bandwidth', p => `<span class="${p.bandwidth_tbs != null && p.bandwidth_tbs === bestBw ? 'best' : ''}">${esc(bw(p))}</span>${p.bandwidth_note ? `<small lang="en">${esc(p.bandwidth_note)}</small>` : ''}`],
       ['AI compute', p => value(p.ai_compute)], ['Power', p => esc(watts(p))],
@@ -759,7 +759,7 @@
   $('c-mail').href = 'mailto:' + contactAddress;
   $('c-mail').textContent = contactAddress;
   $('csv').addEventListener('click', () => {
-    const cols = ['vendor','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
+    const cols = ['vendor','maker','model','level','type','architecture','memory','memory_gb','memory_scope','bandwidth_tbs','ai_compute','power_w','power_note','msrp_usd','price_usd_range','price_aed_range','price_checked','form_factor','cooling','interconnect','announcement','release','release_kind','use','source_reviewed'];
     const cell = v => '"' + String(v ?? '').replaceAll('"', '""') + '"';
     const csv = [cols.join(','), ...visible.map(p => cols.map(k => cell(k === 'price_usd_range' ? pv(p,'usd') : k === 'price_aed_range' ? pv(p,'aed') : k === 'price_checked' ? pv(p,'checked') : p[k])).join(','))].join('\r\n');
     const url = URL.createObjectURL(new Blob(['﻿' + csv], {type: 'text/csv;charset=utf-8'}));
