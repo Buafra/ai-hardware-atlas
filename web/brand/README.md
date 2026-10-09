@@ -17,6 +17,9 @@ The artwork is the owner's own design (source: the Cipher_Lacuna_Brand_Pack fold
 | `apple-touch-icon.png` | `icon-180.png` | iPhone / iPad home-screen icon (`<link rel="apple-touch-icon">`). Its background is transparent; iOS shows transparent pixels as black. |
 | `icon-512.png` | `icon-512.png` | Large icon, published with the site for reuse. |
 | `og.png` | generated | Share preview (Open Graph / X card), 1200 x 630: the logo, "Cipher Lacuna" and both taglines on the light background. Regenerate with `python scripts/make_og.py` (needs Playwright) when the logo or the taglines change. |
+| `app-qr.svg`, `app-qr.png` | generated | QR code for `https://cipherlacuna.ae/apk`, the app share page (the SVG is embedded in that page; the 1024 px PNG is for printing or sending). Regenerate with `python scripts/make_app_share.py` (needs Playwright). |
+| `app-og.png` | generated | 1200 x 630 link preview of the app share page (WhatsApp, X, Telegram): logo, "Android app" in both languages and the QR code. Same script. |
+| `app-card.png` | generated | 1080 x 1350 picture to post in a chat or a status: logo, what the app has, the QR code and the link. Same script. |
 
 How the build uses them (`python scripts/build.py`):
 

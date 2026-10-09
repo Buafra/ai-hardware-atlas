@@ -14,6 +14,7 @@ from reportlab.lib.pagesizes import A3
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import android_app
+import apk_page
 import learn
 import news_images
 import policy
@@ -365,6 +366,16 @@ def brand_assets(brand_dir=BRAND_DIR):
     if fp.exists():
         icon = sanitize_svg(fp.read_text(encoding='utf-8'), prefix='') or PLACEHOLDER_FAVICON
     return logo, svg_uri(icon)
+
+def apk_share(out_dir, android, brand_dir=BRAND_DIR):
+    """The Android app's share page, cipherlacuna.ae/apk (scripts/apk_page.py), with the logo, the favicon and the QR code
+    (brand/app-qr.svg, from make_app_share.py) as data: images, tidied like the header logo. Written on every build; without a
+    checked APK the page says the Android download is unavailable and keeps the iPhone Home Screen steps."""
+    def uri(name):
+        f = brand_dir / name
+        svg = sanitize_svg(f.read_text(encoding='utf-8'), prefix='') if f.exists() else ''
+        return svg_uri(svg) if svg else ''
+    return apk_page.build(out_dir, android, uri('logo.svg'), uri('favicon.svg'), uri('app-qr.svg'))
 
 def copy_brand_images(dest, brand_dir=BRAND_DIR):
     """Raster brand files (apple-touch-icon.png, icon-32.png, icon-512.png, og.png) are served as files next to the page:
@@ -1018,6 +1029,7 @@ def main():
     # dist/download/. None: no download card, and no old APK left behind.
     android=android_app.load()
     android_app.publish(OUT,android)
+    apk_share(OUT,android)  # cipherlacuna.ae/apk: the link to share, which starts the download on Android
     text,public=render_page(data,feed,sources,uae,models,company=company,android=android)
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
@@ -1035,7 +1047,7 @@ def main():
         if (OUT/news_images.OUT_DIR).exists():shutil.copytree(OUT/news_images.OUT_DIR,target.parent/news_images.OUT_DIR,dirs_exist_ok=True)
         news_images.copy_topic_images(target.parent)
         copy_brand_images(target.parent/'brand')
-        if android:android_app.publish(target.parent,android)
+        if android:android_app.publish(target.parent,android);apk_share(target.parent,android)
         learn.build(target.parent, home=target.name, android=bool(android))  # its links back to the overview go to the standalone file
         qahwa.build_safe(target.parent, home=target.name)
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')

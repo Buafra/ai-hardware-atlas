@@ -301,6 +301,70 @@ class PageTests(unittest.TestCase):
         self.assertIn("'Android app':'تطبيق Android'", js)
         self.assertIn("h==='about'||h==='android'?'contact'", (ROOT / 'web' / 'template.html').read_text(encoding='utf-8'))
 
+class SharePageTests(unittest.TestCase):
+    """cipherlacuna.ae/apk: the link to share. Android starts the download, iPhone gets Home Screen steps."""
+    INFO = PageTests.INFO
+
+    def test_page_for_a_checked_apk(self):
+        import apk_page
+        page = apk_page.render(self.INFO, 'data:image/svg+xml,logo', 'data:image/svg+xml,icon', 'data:image/svg+xml,qr')
+        for text in ('<meta property="og:url" content="https://cipherlacuna.ae/apk/">',
+                     '<meta property="og:image" content="https://cipherlacuna.ae/brand/app-og.png">',
+                     '<meta property="og:image:width" content="1200">', '<link rel="canonical" href="https://cipherlacuna.ae/apk/">',
+                     'href="../download/Cipher-Lacuna.apk" download="Cipher-Lacuna.apk"', 'Version <bdi>1.0.1</bdi>', '<bdi>2.7</bdi> MB',
+                     self.INFO['sha256'], 'Download for Android', 'نزّل التطبيق', 'Add to Home Screen', 'إضافة إلى الشاشة الرئيسية',
+                     'Open in Safari', 'Open in external browser', 'View More', 'Google Play Protect', 'Install anyway',
+                     '<meta name="apple-mobile-web-app-title" content="Cipher Lacuna">', '<p class="status" id="st" role="status" hidden>',
+                     'class="card for-android"', 'class="card cols for-ios"', 'src="data:image/svg+xml,qr"', "default-src 'none'"):
+            self.assertIn(text, page)
+        # Android starts the download once per visit; a Home Screen launch of this page opens the website instead.
+        self.assertIn("sessionStorage.getItem('apk-started')", page)
+        self.assertIn("dl.addEventListener('click', () => { clearTimeout(t);", page)  # a tap cancels the timer: never two downloads
+        self.assertIn('if (android && !inApp && dl)', page)  # no automatic download inside Instagram, Facebook or a WebView
+        self.assertIn('; wv\)|Instagram|FBAN|FBAV', page)
+        # iPhone users add the website itself (Open the website comes before the steps), not this page.
+        ios = page[page.index('id="iphone"'):]
+        self.assertLess(ios.index('class="btn2" href="../"'), ios.index('<h2>Add to Home Screen</h2>'))
+        self.assertIn("navigator.standalone === true", page)
+        self.assertIn("location.replace('../')", page)
+        # Self-contained: the only absolute addresses are the site's own (preview tags and the link to share).
+        for url in re.findall(r'(?:src|href)="(https?://[^"]+)"', page) + re.findall(r'content="(https?://[^"]+)"', page):
+            self.assertTrue(url.startswith('https://cipherlacuna.ae/'), url)
+        self.assertNotIn('github.com', page)
+
+    def test_written_with_and_without_an_apk(self):
+        import apk_page
+        with tempfile.TemporaryDirectory() as d:
+            page = apk_page.build(d, self.INFO)
+            self.assertEqual(page, Path(d) / 'apk' / 'index.html')
+            self.assertIn('download/Cipher-Lacuna.apk', page.read_text(encoding='utf-8'))
+            # No checked APK: the page stays (shared links and QR codes keep working) but offers no download.
+            text = apk_page.build(d, None).read_text(encoding='utf-8')
+            for gone in ('.apk"', 'id="dl"', 'Version <bdi>', 'Free Android app', 'لأجهزة Android'):
+                self.assertNotIn(gone, text)
+            for kept in ('not available right now', 'غير متاح حالياً', 'Add to Home Screen', 'navigator.standalone === true',
+                         '<meta property="og:title" content="Cipher Lacuna on your phone">'):
+                self.assertIn(kept, text)
+
+    def test_build_embeds_logo_and_qr_and_the_brand_kit_exists(self):
+        import build
+        with tempfile.TemporaryDirectory() as d:
+            text = build.apk_share(d, self.INFO).read_text(encoding='utf-8')
+        self.assertEqual(text.count('src="data:image/svg+xml,'), 2, 'logo and QR code as data: images')
+        self.assertIn('href="data:image/svg+xml,', text)  # favicon
+        brand = ROOT / 'web' / 'brand'
+        self.assertIn('aria-label="QR code for cipherlacuna.ae/apk"', (brand / 'app-qr.svg').read_text(encoding='utf-8'))
+        for name, size in (('app-og.png', (1200, 630)), ('app-card.png', (1080, 1350)), ('app-qr.png', (1024, 1024))):
+            head = (brand / name).read_bytes()[:24]
+            self.assertEqual(head[:8], bytes.fromhex('89504e470d0a1a0a'), name)
+            self.assertEqual(struct.unpack('>II', head[16:24]), size, name)
+
+    def test_site_works_as_an_iphone_home_screen_icon(self):
+        head = (ROOT / 'web' / 'template.html').read_text(encoding='utf-8')
+        for tag in ('<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">', '<meta name="apple-mobile-web-app-capable" content="yes">',
+                    '<meta name="apple-mobile-web-app-title" content="Cipher Lacuna">'):
+            self.assertIn(tag, head)
+
 class WorkflowTests(unittest.TestCase):
     def test_publish_workflow_fetches_the_app_before_the_build(self):
         wf = (ROOT / '.github' / 'workflows' / 'publish.yml').read_text(encoding='utf-8')
