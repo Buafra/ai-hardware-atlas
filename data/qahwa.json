@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-09T07:45:00+04:00",
+  "generated_at": "2026-10-09T08:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2576,6 +2576,51 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-09T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-10--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-10--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Your dream coffee corner in 20 seconds",
+        "ar": "ركن القهوة الذي تحلم به في 20 ثانية"
+      },
+      "summary": {
+        "en": "Your dream coffee corner → in 20 seconds",
+        "ar": "ركن القهوة الذي تحلم به ← في 20 ثانية"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "ar": {
+            "title": "ركن القهوة الذي تحلم به ← ==في 20 ثانية=="
+          },
+          "en": {
+            "title": "Your dream coffee corner → ==in 20 seconds=="
+          },
+          "chat": {
+            "user": "ركن قهوة صغير في البيت، دلّة وفناجين، ألوان دافئة، صورة واقعية",
+            "bot": [
+              "الصورة الأولى جاهزة",
+              "تعديل: أضف نبتة خضراء",
+              "تعديل: إضاءة المساء"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "A small coffee corner at home, a wooden shelf, a dallah and small cups, warm colors, morning light, photo style.",
+        "ar": "ركن قهوة صغير في البيت، رفّ خشبي، دلّة وفناجين، ألوان دافئة، إضاءة صباحية، صورة واقعية.",
+        "code": "R5"
+      },
+      "permalink": "https://www.instagram.com/reel/DeQmb_zlRRq/",
+      "published_at": "2026-10-09T08:00:00+04:00",
+      "cover": "images/qahwa/week-02-day-10--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
