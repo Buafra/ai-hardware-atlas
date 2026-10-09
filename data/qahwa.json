@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-08T20:30:00+04:00",
+  "generated_at": "2026-10-09T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2541,6 +2541,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-08T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-10--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-10--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Image generators search the internet for an existing picture.",
+        "ar": "مولّدات الصور تبحث عن صورة جاهزة في الإنترنت"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "Image generators ==search the internet== for an existing picture.",
+            "body": "Answer: Myth ❌ An image generator usually creates a new image from learned patterns rather than searching for an existing matching picture. Some apps can also use reference images or search when those features are enabled."
+          },
+          "ar": {
+            "title": "مولّدات الصور ==تبحث عن صورة جاهزة== في الإنترنت",
+            "body": "الجواب: خرافة ❌ عادةً ما ينشئ مولّد الصور صورة جديدة اعتماداً على الأنماط التي تعلّمها، بدلاً من البحث عن صورة جاهزة مطابقة. وقد تستخدم بعض التطبيقات صوراً مرجعية أو البحث عند تفعيل هذه المزايا."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-09T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-10--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
