@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-09T08:00:00+04:00",
+  "generated_at": "2026-10-10T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2491,6 +2491,10 @@
           },
           "en": {
             "title": "Try the prompt and ==share your picture== in your story"
+          },
+          "next": {
+            "ar": "الدرس 09: تكلّم معه، وأرِه الصورة",
+            "en": "Lesson 09: Talk to it, and show it pictures"
           }
         }
       ],
@@ -2621,6 +2625,184 @@
       "permalink": "https://www.instagram.com/reel/DeQmb_zlRRq/",
       "published_at": "2026-10-09T08:00:00+04:00",
       "cover": "images/qahwa/week-02-day-10--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-11--1-learn-lesson-09",
+      "kind": "lesson",
+      "lesson": 9,
+      "code": "L09",
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Talk to it, and show it pictures",
+        "ar": "تكلّم معه، وأرِه الصورة"
+      },
+      "summary": {
+        "en": "AI that can process more than one kind of input: text, images, voice and sometimes video.",
+        "ar": "ذكاء اصطناعي يستطيع معالجة أكثر من نوع من المدخلات: النص والصور والصوت، وأحياناً الفيديو."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تكلّم معه، و==أرِه الصورة==",
+            "body": "الذكاء الاصطناعي متعدد الوسائط."
+          },
+          "en": {
+            "title": "Talk to it, and ==show it pictures==",
+            "body": "Multimodal AI, simply explained."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "التعريف ببساطة",
+            "body": "ذكاء اصطناعي يستطيع معالجة ==أكثر من نوع== من المدخلات: النص والصور والصوت، وأحياناً الفيديو."
+          },
+          "en": {
+            "title": "The simple definition",
+            "body": "AI that can process ==more than one kind== of input: text, images, voice and sometimes video."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "بصوتك",
+            "items": [
+              "اسأل وأنت تمشي أو تطبخ",
+              "تدرّب على محادثة بلغة جديدة",
+              "اطلب شرحاً واستمع إليه فقط"
+            ]
+          },
+          "en": {
+            "title": "With your voice",
+            "items": [
+              "Ask while you walk or cook",
+              "Practice a conversation in a new language",
+              "Get an explanation just by listening"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "بالكاميرا",
+            "items": [
+              "صوّر قائمة طعام واطلب ترجمتها",
+              "صوّر ثلاجتك واطلب فكرة عشاء",
+              "صوّر رسالة خطأ واطلب الحل"
+            ]
+          },
+          "en": {
+            "title": "With your camera",
+            "items": [
+              "Photograph a menu and ask for a translation",
+              "Photograph your fridge and ask for a dinner idea",
+              "Photograph an error message and ask for a fix"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "أين تجده؟",
+            "body": "تتوفر مزايا الصوت والصور في مساعدات مثل ==ChatGPT وGemini وClaude وCopilot==. ويختلف توفرها حسب الخطة والجهاز والمنطقة والحساب والجهة، وقد يتغيّر."
+          },
+          "en": {
+            "title": "Where do you find it?",
+            "body": "Voice and image features are available in assistants such as ==ChatGPT, Gemini, Claude and Copilot==. Availability varies by plan, device, region, account and organization, and can change."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل باريستا ==يسمعك ويرى ما تشير إليه==",
+            "body": "لا تحتاج أن تكتب طلبك، يكفي أن تقوله أو تريه الصورة."
+          },
+          "en": {
+            "title": "Like a barista who ==hears you and sees what you point at==",
+            "body": "You don't have to write your order. Just say it or show a photo."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "وضع الصوت يعني أن التطبيق يستمع إليك طوال الوقت.",
+            "fact": "تستخدم ميزة الصوت الميكروفون أثناء جلسة صوتية نشطة. وبعض التطبيقات قد تستمر في الجلسة في الخلفية إذا فعّلت هذا الخيار. راجع إعدادات الميكروفون والعمل في الخلفية والخصوصية."
+          },
+          "en": {
+            "myth": "Voice mode means the app listens to you all the time.",
+            "fact": "Voice features use the microphone during an active voice session. Some apps can continue the session in the background if you enable that setting. Review your microphone, background and privacy settings."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "صوّر ثلاجتك واسأل: ماذا أطبخ بهذه المكونات في 20 دقيقة؟"
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Take a photo of your fridge and ask: What can I cook with this in 20 minutes?"
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "التالي: ==كيف تختار الأداة المناسبة==؟"
+          },
+          "en": {
+            "title": "Next: ==how to pick the right tool=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Take a photo of your fridge and ask: What can I cook with this in 20 minutes?",
+        "ar": "صوّر ثلاجتك واسأل: ماذا أطبخ بهذه المكونات في 20 دقيقة؟",
+        "code": "L09"
+      },
+      "permalink": "https://www.instagram.com/p/DeTLnV3iH2-/",
+      "published_at": "2026-10-10T08:04:00+04:00",
+      "cover": "images/qahwa/week-02-day-11--1-learn-lesson-09.webp",
+      "related_concepts": [
+        "multimodal"
+      ]
+    },
+    {
+      "id": "week-02-day-11--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "AI can process pictures, not just text.",
+        "ar": "يستطيع الذكاء الاصطناعي معالجة الصور، وليس النصوص فقط"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "يستطيع الذكاء الاصطناعي ==معالجة الصور==، وليس النصوص فقط",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "AI can ==process pictures==, not just text.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-10T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-11--3-check-story.webp",
       "related_concepts": []
     }
   ]
