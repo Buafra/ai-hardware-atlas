@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-10T20:30:00+04:00",
+  "generated_at": "2026-10-11T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2803,6 +2803,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-10T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-11--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-11--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "AI can process pictures, not just text.",
+        "ar": "يستطيع الذكاء الاصطناعي معالجة الصور، وليس النصوص فقط"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "fact",
+          "en": {
+            "title": "AI can ==process pictures==, not just text.",
+            "body": "Answer: Fact ✅ Many AI assistants today can process images and voice, not just text."
+          },
+          "ar": {
+            "title": "يستطيع الذكاء الاصطناعي ==معالجة الصور==، وليس النصوص فقط",
+            "body": "الجواب: حقيقة ✅ تستطيع كثير من المساعدات الذكية اليوم معالجة الصور والصوت، وليس النصوص فقط."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-11T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-11--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
