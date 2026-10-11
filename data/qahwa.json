@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-11T07:45:00+04:00",
+  "generated_at": "2026-10-11T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -2754,6 +2754,10 @@
           },
           "en": {
             "title": "Next: ==how to pick the right tool=="
+          },
+          "next": {
+            "ar": "الدرس 10: الأداة المناسبة للمهمة المناسبة",
+            "en": "Lesson 10: The right tool for the right job"
           }
         }
       ],
@@ -2838,6 +2842,206 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-11T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-11--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-12--1-learn-lesson-10",
+      "kind": "lesson",
+      "lesson": 10,
+      "code": "L10",
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "The right tool for the right job",
+        "ar": "الأداة المناسبة للمهمة المناسبة"
+      },
+      "summary": {
+        "en": "Start with the task: what do you want to get done? Then pick the tool that fits.",
+        "ar": "ابدأ بالمهمة: ماذا تريد أن تنجز؟ ثم اختر الأداة التي تناسبها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "الأداة المناسبة ==للمهمة المناسبة==",
+            "body": "دليل اختيار في 4 أسئلة."
+          },
+          "en": {
+            "title": "The right tool ==for the right job==",
+            "body": "A 4-question guide to choosing."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لا تبدأ بالأداة",
+            "body": "ابدأ ==بالمهمة==: ماذا تريد أن تنجز؟ ثم اختر الأداة التي تناسبها."
+          },
+          "en": {
+            "title": "Don't start with the tool",
+            "body": "Start with ==the task==: what do you want to get done? Then pick the tool that fits."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "4 أسئلة قبل أن تختار",
+            "items": [
+              "ما المهمة؟ كتابة، صور، بحث، أم عمل؟",
+              "هل تحتاج معلومات حديثة؟",
+              "هل تهمّك جودة العربية؟",
+              "هل البيانات حساسة؟"
+            ]
+          },
+          "en": {
+            "title": "4 questions before you choose",
+            "items": [
+              "What's the task? Writing, images, research or work?",
+              "Do you need up-to-date information?",
+              "Does Arabic quality matter?",
+              "Is the data sensitive?"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "دليل سريع (1)",
+            "items": [
+              "كتابة وشرح: أي مساعد ذكي",
+              "صور: Midjourney أو ChatGPT أو Canva",
+              "بحث بمصادر: Perplexity أو وضع البحث"
+            ]
+          },
+          "en": {
+            "title": "Quick guide (1)",
+            "items": [
+              "Writing and explaining: any AI assistant",
+              "Images: Midjourney, ChatGPT or Canva",
+              "Research with sources: Perplexity or search mode"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "دليل سريع (2)",
+            "items": [
+              "مستنداتك الخاصة: Gemini Notebook",
+              "العمل: الأداة التي تعتمدها شركتك",
+              "العربية: جرّب أكثر من أداة بلهجتك"
+            ]
+          },
+          "en": {
+            "title": "Quick guide (2)",
+            "items": [
+              "Your own documents: Gemini Notebook",
+              "Work: the tool your company approves",
+              "Arabic: test a few tools with your dialect"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "قاعدة ذهبية: ==الخصوصية أولاً==",
+            "body": "لا تشارك كلمات المرور أو أرقام الهوية أو بيانات البنك مع أي أداة."
+          },
+          "en": {
+            "title": "Golden rule: ==privacy first==",
+            "body": "Never share passwords, ID numbers or bank details with any tool."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "لا تطلب ==الإسبريسو من آلة الشاي==",
+            "body": "لكل مهمة أداة، كما لكل مشروب آلة."
+          },
+          "en": {
+            "title": "Don't order ==espresso from the tea machine==",
+            "body": "Every task has its tool, like every drink has its machine."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "أداة واحدة تكفي لكل شيء.",
+            "fact": "يستطيع المساعد الذكي العام تنفيذ كثير من المهام، بينما قد تكون الأدوات المتخصصة أفضل في مهام محددة مثل إنشاء الصور أو البحث أو تحليل المستندات."
+          },
+          "en": {
+            "myth": "One tool is enough for everything.",
+            "fact": "A general AI assistant can handle many tasks, while specialist tools can be better for particular jobs such as image creation, research workflows or document analysis."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "مهمتي هي [اكتب مهمتك]. ما نوع أداة الذكاء الاصطناعي الأنسب لها؟ وما الذي يجب أن أنتبه له؟"
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "My task is [your task]. Which type of AI tool fits best, and what should I watch out for?"
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدليل، و==جهّز موبايلك لتحدّي الليلة=="
+          },
+          "en": {
+            "title": "Save this guide, and ==get your phone ready for tonight's challenge=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My task is [your task]. Which type of AI tool fits best, and what should I watch out for?",
+        "ar": "مهمتي هي [اكتب مهمتك]. ما نوع أداة الذكاء الاصطناعي الأنسب لها؟ وما الذي يجب أن أنتبه له؟",
+        "code": "L10"
+      },
+      "permalink": "https://www.instagram.com/p/DeVwe6YCNGo/",
+      "published_at": "2026-10-11T08:04:00+04:00",
+      "cover": "images/qahwa/week-02-day-12--1-learn-lesson-10.webp",
+      "related_concepts": [
+        "evals",
+        "data-privacy"
+      ]
+    },
+    {
+      "id": "week-02-day-12--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "safety",
+      "title": {
+        "en": "It's safe to share your ID number with an AI assistant if it asks.",
+        "ar": "من الآمن أن تشارك رقم هويتك مع المساعد الذكي إذا طلبه"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "من الآمن أن ==تشارك رقم هويتك== مع المساعد الذكي إذا طلبه",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "It's safe to ==share your ID number== with an AI assistant if it asks.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-11T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-12--3-check-story.webp",
       "related_concepts": []
     }
   ]
