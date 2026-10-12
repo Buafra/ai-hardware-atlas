@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-11T20:30:00+04:00",
+  "generated_at": "2026-10-12T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3042,6 +3042,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-11T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-12--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-12--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "safety",
+      "title": {
+        "en": "It's safe to share your ID number with an AI assistant if it asks.",
+        "ar": "من الآمن أن تشارك رقم هويتك مع المساعد الذكي إذا طلبه"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "It's safe to ==share your ID number== with an AI assistant if it asks.",
+            "body": "Answer: Myth ❌ Never share passwords, ID numbers or bank details with any AI assistant."
+          },
+          "ar": {
+            "title": "من الآمن أن ==تشارك رقم هويتك== مع المساعد الذكي إذا طلبه",
+            "body": "الجواب: خرافة ❌ لا تشارك أبداً كلمات المرور أو أرقام الهوية أو بيانات البنك مع أي مساعد ذكي."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-12T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-12--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
