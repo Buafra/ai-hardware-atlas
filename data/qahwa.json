@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-12T07:45:00+04:00",
+  "generated_at": "2026-10-12T08:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3077,6 +3077,51 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-12T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-12--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-12--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "tools",
+      "title": {
+        "en": "Practice English out loud with AI",
+        "ar": "تدرّب على الإنجليزية بصوتك مع الذكاء الاصطناعي"
+      },
+      "summary": {
+        "en": "Practice English out loud, no pressure",
+        "ar": "تدرّب على الإنجليزية بصوتك بدون إحراج"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "ar": {
+            "title": "تدرّب على الإنجليزية ==بصوتك== بدون إحراج"
+          },
+          "en": {
+            "title": "Practice English ==out loud==, no pressure"
+          },
+          "chat": {
+            "user": "لنتدرّب: أنت باريستا وأنا زبون، بالإنجليزية",
+            "bot": [
+              "يبدأ المحادثة بالإنجليزية",
+              "يصحّح أخطائي بلطف",
+              "يقترح عبارات أفضل"
+            ]
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Let's practice: you're a barista and I'm a customer. Speak English slowly, and gently correct my mistakes after each reply.",
+        "ar": "لنتدرّب: أنت باريستا وأنا زبون. تكلّم بالإنجليزية ببطء، وصحّح أخطائي بلطف بعد كل ردّ.",
+        "code": "R6"
+      },
+      "permalink": "https://www.instagram.com/reel/DeYU0TYAiBg/",
+      "published_at": "2026-10-12T08:00:00+04:00",
+      "cover": "images/qahwa/week-02-day-12--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
