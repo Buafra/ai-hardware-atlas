@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-12T10:51:52+00:00",
+ "updated_at": "2026-10-12T22:41:17+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2626,6 +2626,17 @@
    "hf": null,
    "context": 1048576,
    "created": 1788381519,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "meta/muse-wonder",
+   "name": "Meta: Muse Wonder",
+   "hf": null,
+   "context": 1048576,
+   "created": 1791807945,
    "open": false,
    "params_b": null,
    "params_source": null,
