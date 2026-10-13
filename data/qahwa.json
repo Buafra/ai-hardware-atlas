@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-12T08:00:00+04:00",
+  "generated_at": "2026-10-13T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3122,6 +3122,124 @@
       "permalink": "https://www.instagram.com/reel/DeYU0TYAiBg/",
       "published_at": "2026-10-12T08:00:00+04:00",
       "cover": "images/qahwa/week-02-day-12--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-14--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "recap",
+      "title": {
+        "en": "Week 2 recap",
+        "ar": "ملخص الأسبوع الثاني"
+      },
+      "summary": {
+        "en": "Everything we learned about the tools, with your coffee.",
+        "ar": "كل ما تعلّمناه عن الأدوات، مع قهوتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "الأسبوع الثاني ==في بطاقات==",
+            "body": "كل ما تعلّمناه عن الأدوات، مع قهوتك."
+          },
+          "en": {
+            "title": "Week 2 ==in a few cards==",
+            "body": "Everything we learned about the tools, with your coffee."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (1)",
+            "items": [
+              "المساعدات الذكية متشابهة في الفكرة العامة، لكنها تختلف في النماذج والأدوات ونقاط القوة",
+              "الخطط المجانية نقطة بداية جيدة لكثير من الناس",
+              "مولّدات الصور: كلما كان وصفك أوضح، زادت قدرتك على التحكم في النتيجة"
+            ]
+          },
+          "en": {
+            "title": "What we learned (1)",
+            "items": [
+              "AI assistants share the same broad idea but differ in models, tools and strengths",
+              "Free plans are a good starting point for many people",
+              "Image generators: clearer descriptions usually give you more control over the result"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (2)",
+            "items": [
+              "متعدد الوسائط: تكلّم معه وأرِه الصور",
+              "ابدأ بالمهمة، ثم اختر الأداة",
+              "الخصوصية أولاً: لا تشارك بياناتك الحساسة"
+            ]
+          },
+          "en": {
+            "title": "What we learned (2)",
+            "items": [
+              "Multimodal: talk to it and show it pictures",
+              "Start with the task, then pick the tool",
+              "Privacy first: never share sensitive data"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "التالي: ==الذكاء الاصطناعي في العمل والدراسة=="
+          },
+          "en": {
+            "title": "Next: ==AI for work and study=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/Dea5xoUjdxy/",
+      "published_at": "2026-10-13T08:02:00+04:00",
+      "cover": "images/qahwa/week-02-day-14--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-14--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never share with an AI assistant?",
+        "ar": "أيّ هذه يجب ألّا تشاركه مع المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "What should you never share?",
+        "ar": "ما الذي يجب ألّا تشاركه؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "ar": {
+            "title": "أيّ هذه ==يجب ألّا== تشاركه مع المساعد الذكي؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Which of these should you ==never== share with an AI assistant?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-13T20:30:00+04:00",
+      "cover": "images/qahwa/week-02-day-14--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
