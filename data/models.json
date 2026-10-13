@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-13T10:37:48+00:00",
+ "updated_at": "2026-10-13T20:46:17+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -303,7 +303,7 @@
    "id": "inclusionai/ling-3.0-flash-vl",
    "name": "inclusionAI: Ling 3.0 Flash VL",
    "hf": "inclusionAI/Ling-3.0-flash-VL",
-   "context": 262144,
+   "context": 131072,
    "created": 1789056114,
    "open": true,
    "params_b": 124.85,
@@ -342,6 +342,17 @@
    "params_b": 2.7,
    "params_source": "huggingface",
    "moe": false
+  },
+  {
+   "id": "liquid/lfm-2.5-24b-a2b",
+   "name": "LiquidAI: LFM2.5-24B-A2B",
+   "hf": "LiquidAI/LFM2.5-24B-A2B",
+   "context": 128000,
+   "created": 1791912025,
+   "open": true,
+   "params_b": 23.97,
+   "params_source": "huggingface",
+   "moe": true
   },
   {
    "id": "anthracite-org/magnum-v4-72b",
@@ -2016,17 +2027,6 @@
    "moe": false
   },
   {
-   "id": "apodex/apodex-1.1-mini",
-   "name": "Apodex: Apodex 1.1 Mini",
-   "hf": null,
-   "context": 262144,
-   "created": 1790875335,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "openrouter/auto",
    "name": "Auto Router",
    "hf": null,
@@ -2390,6 +2390,17 @@
    "moe": false
   },
   {
+   "id": "google/gemini-4-argon",
+   "name": "Google: Gemini 4 Argon",
+   "hf": null,
+   "context": 1048576,
+   "created": 1791907477,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "~google/gemini-flash-latest",
    "name": "Google: Gemini Flash Latest",
    "hf": null,
@@ -2527,28 +2538,6 @@
    "hf": null,
    "context": 260000,
    "created": 1788892137,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inclusionai/ling-3.0-flash-fin",
-   "name": "inclusionAI: Ling 3.0 Flash Fin",
-   "hf": null,
-   "context": 262144,
-   "created": 1787846290,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inclusionai/ling-3.0-flash-sante",
-   "name": "inclusionAI: Ling 3.0 Flash Sante",
-   "hf": null,
-   "context": 262144,
-   "created": 1788545946,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -3869,6 +3858,28 @@
    "hf": null,
    "context": 262144,
    "created": 1786410129,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "scaledown/extract",
+   "name": "ScaleDown: Extract",
+   "hf": null,
+   "context": 1000000,
+   "created": 1791893351,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "scaledown/summarize",
+   "name": "ScaleDown: Summarize",
+   "hf": null,
+   "context": 1000000,
+   "created": 1791893360,
    "open": false,
    "params_b": null,
    "params_source": null,
