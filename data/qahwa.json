@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-13T20:30:00+04:00",
+  "generated_at": "2026-10-13T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3240,6 +3240,74 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-13T20:30:00+04:00",
       "cover": "images/qahwa/week-02-day-14--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-13--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "challenge",
+      "title": {
+        "en": "Same question, three assistants",
+        "ar": "سؤال واحد لثلاثة مساعدات"
+      },
+      "summary": {
+        "en": "Which one gives you the best answer?",
+        "ar": "أيّها يعطيك الإجابة الأفضل؟"
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحدّي الأسبوع: ==سؤال واحد== لثلاثة مساعدات",
+            "body": "أيّها يعطيك الإجابة الأفضل؟"
+          },
+          "en": {
+            "title": "Weekly challenge: ==same question==, three assistants",
+            "body": "Which one gives you the best answer?"
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات",
+            "items": [
+              "اطرح السؤال نفسه على 3 مساعدات: ChatGPT وClaude وGemini",
+              "قارن: أيّها أوضح وأكثر فائدة؟",
+              "شاركنا الفائز في ستوري وأشر لنا"
+            ]
+          },
+          "en": {
+            "title": "How to play",
+            "items": [
+              "Ask 3 assistants the same question: ChatGPT, Claude and Gemini",
+              "Compare: which is clearest and most useful?",
+              "Share the winner in a story and tag us"
+            ]
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "انسخ هذا السؤال",
+            "prompt": "ما أفضل طريقة لتنظيم يومي إذا كنت أعمل وأدرس؟ أعطني 5 نصائح قصيرة."
+          },
+          "en": {
+            "title": "Copy this question",
+            "prompt": "What's the best way to organize my day if I work and study? Give me 5 short tips."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "What's the best way to organize my day if I work and study? Give me 5 short tips.",
+        "ar": "ما أفضل طريقة لتنظيم يومي إذا كنت أعمل وأدرس؟ أعطني 5 نصائح قصيرة.",
+        "code": "C2"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-13T21:01:00+04:00",
+      "cover": "images/qahwa/week-02-day-13--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
