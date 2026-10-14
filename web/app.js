@@ -586,19 +586,30 @@
   // The search controls of one view: the (x) while the field has text, the count line (written only when it changes, so
   // the live region isn't repeated) and, when a search matches nothing, the message with "Clear search". The message never
   // repeats the query: a link can set it (?nq=, ?uq=).
+  // As in the app (CountOrNoMatch), the message takes the count line's place: "No results" never sits right above a
+  // message that starts with the same words («لا توجد نتائج»), and "Times in UAE time" is hidden with it. The count stays
+  // the one live region and holds the message (kept for screen readers only), so it is announced once; the box under the
+  // list shows it on screen (aria-hidden, so it isn't read twice) with "Clear search". "No results" is left only for a
+  // search where the page language has no headlines at all, above that language's own message (as in the app).
   function searchUi(view, terms, total, shown, counts, hasList) {
-    const input = $(view + '-q'), searching = terms.length > 0;
+    const input = $(view + '-q'), searching = terms.length > 0, none = hasList && searching && total === 0;
     if (input) $(view + '-q-clear').hidden = !input.value;
     const count = countEl(view), m = countLabel(total, 'headline', state.lang);
-    if (!hasList) setHtml(count, builtCount[view]);
-    else if (searching) setText(count, total === 0 ? T('No results') : shown < total ? F('Results: {m} · showing {n}', {m, n: shown}) : F('Results: {m}', {m}));
+    const msg = none ? T(view === 'news' && state.region && counts && counts[''] > 0
+      ? 'No headlines in this region match this search. Choose All to search every region.' : 'No matches. Try another word or clear the search.') : '';
+    if (none) setText(count, msg);
+    else if (!hasList) { if (searching) setText(count, T('No results')); else setHtml(count, builtCount[view]); }
+    else if (searching) setText(count, shown < total ? F('Results: {m} · showing {n}', {m, n: shown}) : F('Results: {m}', {m}));
     else if (view === 'news') setText(count, F('Showing {n} of {m}', {n: shown, m}));
     else setHtml(count, builtCount.uae);
+    if (count) {
+      count.classList.toggle('sr-only', none);
+      if (view === 'news' && count.nextElementSibling) count.nextElementSibling.hidden = none;  // "Times in UAE time"
+    }
     const empty = $(view + '-empty');
     if (!empty) return;
-    empty.hidden = !(hasList && searching && total === 0);
-    if (!empty.hidden) setText($(view + '-empty-msg'), T(view === 'news' && state.region && counts && counts[''] > 0
-      ? 'No headlines in this region match this search. Choose All to search every region.' : 'No matches. Try another word or clear the search.'));
+    empty.hidden = !none;
+    if (none) setText($(view + '-empty-msg'), msg);
   }
   function searchInput(view, value) {
     const key = view === 'news' ? 'nq' : 'uq', before = searchWords(state[key]).join(' ');
@@ -612,12 +623,19 @@
     const col = changed && document.querySelector(`#${view} .main-col`), bar = document.querySelector('.top');
     if (col && bar && col.getBoundingClientRect().top < bar.getBoundingClientRect().bottom) col.scrollIntoView({block: 'start'});
   }
+  // Empties a view's search. focus 'field' then puts the focus in the field; 'list' on the list's heading (after a tap on
+  // "Clear search", whose box disappears: the on-screen keyboard stays closed and a screen reader keeps its place instead
+  // of starting again at the top of the page); none leaves it where it is (Escape, typed in the field).
   function clearSearch(view, focus) {
     const input = $(view + '-q');
     if (!input) return;
     input.value = '';
     searchInput(view, '');
-    if (focus) input.focus();
+    if (focus === 'field') input.focus();
+    else if (focus === 'list') {
+      const h = view === 'news' ? document.querySelector('#news .main-col > h2') : $('uae-news-h');
+      if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); }
+    }
   }
 
   function renderTable(n) {
@@ -848,10 +866,11 @@
     const rc = e.target.closest('[data-region-chip]');
     if (rc) { state.region = rc.dataset.regionChip; newsLimit = NEWS_STEP; render(); }
     // The (x) in a news search field and the "Clear search" button under a search without results. The (x) keeps the
-    // focus in the field; the button gives it back to the field from the keyboard or a mouse (e.detail 0 is a keyboard
-    // click), not after a tap, where focusing would open the on-screen keyboard over the list that just came back.
+    // focus in the field (pressing it never takes the focus, see below; from the keyboard it gives it back). The button
+    // gives the focus to the field from the keyboard or a mouse (e.detail 0 is a keyboard click); after a tap it goes to
+    // the list's heading, since focusing the field would open the on-screen keyboard over the list that just came back.
     const cs = e.target.closest('[data-clear-search]');
-    if (cs) clearSearch(cs.dataset.clearSearch, cs.classList.contains('q-clear') || e.detail === 0 || matchMedia('(pointer: fine)').matches);
+    if (cs) clearSearch(cs.dataset.clearSearch, cs.classList.contains('q-clear') || e.detail === 0 || matchMedia('(pointer: fine)').matches ? 'field' : 'list');
   });
   $('news-more') && $('news-more').addEventListener('click', () => { newsLimit += NEWS_STEP; renderNews(); });
   $('uae-more') && $('uae-more').addEventListener('click', () => { uaeLimit += UAE_STEP; renderUae(); });
@@ -859,9 +878,12 @@
     const input = $(view + '-q');
     if (!input) return;
     input.addEventListener('input', () => searchInput(view, input.value));
+    // Pressing the (x) with a mouse, a finger or a pen doesn't move the focus out of the field, so a phone keyboard
+    // doesn't close and reopen and a screen reader doesn't announce the field again; its click then empties the field.
+    ['pointerdown', 'mousedown'].forEach(t => $(view + '-q-clear').addEventListener(t, e => e.preventDefault()));
     input.addEventListener('keydown', e => {
       // Escape empties a field that has text and keeps the focus; Enter only closes the on-screen keyboard (results are live).
-      if (e.key === 'Escape' && input.value) { e.preventDefault(); clearSearch(view, false); }
+      if (e.key === 'Escape' && input.value) { e.preventDefault(); clearSearch(view); }
       else if (e.key === 'Enter') { e.preventDefault(); if (matchMedia('(pointer: coarse)').matches) input.blur(); }
     });
   });

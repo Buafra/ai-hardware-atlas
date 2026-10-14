@@ -736,8 +736,10 @@ def search_box(view):
 
 def search_empty(view):
     """Shown by app.js when a search in #news or #uae matches nothing: a message (it never repeats the query) and a
-    "Clear search" button. After the list's "Show more" row, so the list and that row keep their markup."""
-    return (f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg"></p>'
+    "Clear search" button. After the list's "Show more" row, so the list and that row keep their markup. The message
+    takes the count line's place: the count (the live region) holds the same words for screen readers, so this copy is
+    aria-hidden and the message is read once."""
+    return (f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg" aria-hidden="true"></p>'
             f'<button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>')
 
 def news_view(c):

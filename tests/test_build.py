@@ -883,7 +883,8 @@ class NewsSearchMarkupTests(unittest.TestCase):
     def test_no_match_blocks_after_show_more_and_before_the_note(self):
         for view,more in (('news','id="news-more"'),('uae','id="uae-more"')):
             v=self.views[view]
-            block=f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg"></p><button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>'
+            # The message is aria-hidden: the count line (the live region) holds it for screen readers, so it is read once.
+            block=f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg" aria-hidden="true"></p><button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>'
             self.assertIn(block,v,view)
             self.assertLess(v.index(more),v.index(block));self.assertLess(v.index(block),v.index('class="muted n-note"'))
             if 'class="nitem' in v:self.assertLess(v.rindex('class="nitem'),v.index(block))
@@ -919,7 +920,9 @@ class NewsSearchMarkupTests(unittest.TestCase):
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
         for rule in ('.n-search .inp{padding-inline-end:48px}','.q-clear:hover{background:var(--surface-3);',
                      '@media (max-width:639px){.q-clear{width:40px;height:40px}}','@media (pointer:coarse){.n-search .inp{font-size:16px}}',
-                     '.n-search .inp::-webkit-search-cancel-button{-webkit-appearance:none;display:none}'):
+                     '.n-search .inp::-webkit-search-cancel-button{-webkit-appearance:none;display:none}',
+                     # In Arabic the English placeholder waits for app.js, like the labels (head script, .i18n-wait).
+                     '.i18n-wait [data-i18n-ph]::placeholder{color:transparent}'):
             self.assertIn(rule,css)
         block=css[css.index('/* News search'):css.index('@media (pointer:coarse){.n-search')]
         self.assertNotRegex(re.sub(r'/[*].*?[*]/','',block,flags=re.S),r'\b(?:left|right)\b')  # logical sides only (RTL)

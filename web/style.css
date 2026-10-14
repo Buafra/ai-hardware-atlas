@@ -72,8 +72,10 @@ html[data-route="home"] [data-view]:not([data-view="home"]),html[data-route="har
 /* Anything scrolled to (hash jumps, deep links, keyboard focus) stops below the sticky bar and above the compare tray;
    app.js sets --tray-h while the tray is shown. */
 html{scroll-padding-top:calc(var(--stick) + 10px);scroll-padding-bottom:var(--tray-h,0px)}
-/* In Arabic the English labels wait for app.js (see the head script) instead of flashing untranslated. */
+/* In Arabic the English labels wait for app.js (see the head script) instead of flashing untranslated. The search
+   fields stay visible; only their English placeholder waits. */
 .i18n-wait [data-i18n],.i18n-wait #lang,.i18n-wait .theme-label{visibility:hidden}
+.i18n-wait [data-i18n-ph]::placeholder{color:transparent}
 html:not([data-route]) .view+.view{margin-top:56px;padding-top:8px;border-top:1px dashed var(--border-strong)}
 html[lang="en"] [data-lang="ar"],html[lang="ar"] [data-lang="en"]{display:none!important}
 
