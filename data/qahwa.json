@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-13T21:01:00+04:00",
+  "generated_at": "2026-10-14T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3308,6 +3308,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-13T21:01:00+04:00",
       "cover": "images/qahwa/week-02-day-13--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-02-day-14--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 2,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never share with an AI assistant?",
+        "ar": "أيّ هذه يجب ألّا تشاركه مع المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Answer: What should you never share?",
+        "ar": "الجواب: ما الذي يجب ألّا تشاركه؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which of these should you ==never== share with an AI assistant?",
+            "body": "Answer: Your email password ✅ Never share passwords with any AI assistant or AI tool."
+          },
+          "ar": {
+            "title": "أيّ هذه ==يجب ألّا== تشاركه مع المساعد الذكي؟",
+            "body": "الجواب: كلمة مرور بريدك ✅ لا تشارك كلمات المرور أبداً مع أي مساعد ذكي أو أداة ذكاء اصطناعي."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-14T07:45:00+04:00",
+      "cover": "images/qahwa/week-02-day-14--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
