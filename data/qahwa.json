@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-14T07:45:00+04:00",
+  "generated_at": "2026-10-14T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3196,6 +3196,10 @@
           },
           "en": {
             "title": "Next: ==AI for work and study=="
+          },
+          "next": {
+            "ar": "الدرس 11: من ملاحظات الاجتماع إلى مهام واضحة",
+            "en": "Lesson 11: From meeting notes to clear tasks"
           }
         }
       ],
@@ -3343,6 +3347,177 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-14T07:45:00+04:00",
       "cover": "images/qahwa/week-02-day-14--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-15--1-learn-lesson-11",
+      "kind": "lesson",
+      "lesson": 11,
+      "code": "L11",
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "From meeting notes to clear tasks",
+        "ar": "من ملاحظات الاجتماع إلى مهام واضحة"
+      },
+      "summary": {
+        "en": "We write fast and messy, then forget the notebook. An AI assistant reorders what you wrote and pulls out what matters.",
+        "ar": "نكتب بسرعة وبلا ترتيب، ثم ننساها في الدفتر. المساعد الذكي يعيد ترتيب ما كتبته ويستخرج منه الأهم."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "من الملاحظات إلى ==مهام واضحة==",
+            "body": "حوّل ملاحظات اجتماعك أو محاضرتك إلى ملخص وقائمة مهام."
+          },
+          "en": {
+            "title": "From notes to ==clear tasks==",
+            "body": "Turn your meeting or class notes into a summary and a task list."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "المشكلة ليست ==قلة الملاحظات==",
+            "body": "نكتب بسرعة وبلا ترتيب، ثم ننساها في الدفتر. المساعد الذكي يعيد ترتيب ما كتبته ويستخرج منه الأهم."
+          },
+          "en": {
+            "title": "The problem isn't ==too few notes==",
+            "body": "We write fast and messy, then forget the notebook. An AI assistant reorders what you wrote and pulls out what matters."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اطلب أربعة أشياء",
+            "items": [
+              "ملخص في خمس نقاط",
+              "القرارات المتفق عليها",
+              "المهام: لكل مهمة مسؤول وموعد",
+              "الأسئلة التي بقيت بلا إجابة"
+            ]
+          },
+          "en": {
+            "title": "Ask for four things",
+            "items": [
+              "A summary in five points",
+              "The decisions that were agreed",
+              "Tasks: each with an owner and a date",
+              "Questions left unanswered"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "لنتيجة أفضل",
+            "items": [
+              "الصق ملاحظاتك كما هي",
+              "اذكر نوع اللقاء وهدفه",
+              "اطلب منه الرد بلغتك"
+            ]
+          },
+          "en": {
+            "title": "For a better result",
+            "items": [
+              "Paste your notes exactly as they are",
+              "Say what the meeting was and its goal",
+              "Ask it to reply in your language"
+            ]
+          },
+          "note": {
+            "ar": "لا تلصق مستندات سرية أو بيانات شخصية.",
+            "en": "Don't paste confidential documents or personal data."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "الباريستا يكتب ==طلبك على الكوب==",
+            "body": "كلامك السريع يتحوّل إلى سطر واضح: من طلب، وماذا يريد، ومتى يجهز."
+          },
+          "en": {
+            "title": "The barista writes ==your order on the cup==",
+            "body": "Your rushed words become one clear line: who asked, what they want, and when it's due."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "[نوع اللقاء]: [الصق ملاحظاتك]. أريد ملخصاً وقرارات ومهام بمسؤول وموعد وأسئلة معلّقة. اكتب «غير مذكور» للناقص. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "[Meeting type] notes: [paste your notes]. Summary, decisions, tasks with owner and date, open questions. Add 'not stated' for gaps. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الملخص يغني عن الملاحظات الأصلية.",
+            "fact": "الملخص يختصر، وقد يسقط تفصيلاً مهماً أو ينقله خطأ. راجع القرارات والمواعيد في ملاحظاتك قبل أن تعتمدها."
+          },
+          "en": {
+            "myth": "A summary replaces the original notes.",
+            "fact": "A summary leaves things out and can get a detail wrong. Check the decisions and dates against your own notes before relying on them."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==اجتماعك القادم=="
+          },
+          "en": {
+            "title": "Save this before ==your next meeting=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "[Meeting type] notes: [paste your notes]. Summary, decisions, tasks with owner and date, open questions. Add 'not stated' for gaps. Answer in my language.",
+        "ar": "[نوع اللقاء]: [الصق ملاحظاتك]. أريد ملخصاً وقرارات ومهام بمسؤول وموعد وأسئلة معلّقة. اكتب «غير مذكور» للناقص. أجب بلغتي.",
+        "code": "L11"
+      },
+      "permalink": "https://www.instagram.com/p/DedexRCiHio/",
+      "published_at": "2026-10-14T08:03:00+04:00",
+      "cover": "images/qahwa/week-03-day-15--1-learn-lesson-11.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-15--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "An AI assistant hears your meeting automatically.",
+        "ar": "المساعد الذكي يسمع اجتماعك تلقائياً"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي ==يسمع اجتماعك== تلقائياً",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant ==hears your meeting== automatically.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-14T20:30:00+04:00",
+      "cover": "images/qahwa/week-03-day-15--3-check-story.webp",
       "related_concepts": []
     }
   ]
