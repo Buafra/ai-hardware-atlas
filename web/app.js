@@ -40,12 +40,37 @@
       return n * direction || a.model.localeCompare(b.model);
     });
   }
-  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',region:''};
-  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',region:'region'};
+  // News search (#news and #uae): the same rules as the Android app's NewsSearch.norm, so keep the two in step. The shared
+  // cases are in tests/test-sort.cjs and in the app's NewsSearchTest.kt.
+  // Case, accents, Arabic diacritics, tatweel and invisible marks are ignored; ٱ أ إ آ count as ا, ة as ه, ى and ی as ي,
+  // ؤ as و, ئ as ي, ک and گ as ك, ڤ as ف, پ as ب, چ as ج; Arabic-Indic and Persian digits as 0-9; anything that is
+  // not a letter or a digit is a space. A search starts at 2 characters, and the field takes 100 at most.
+  const SEARCH_MIN = 2, SEARCH_MAX = 100;
+  const FOLD = {'\u0671': '\u0627', '\u0649': '\u064A', '\u06CC': '\u064A', '\u0629': '\u0647', '\u06A9': '\u0643', '\u06AF': '\u0643', '\u06A4': '\u0641', '\u067E': '\u0628', '\u0686': '\u062C'};
+  function normText(s) {
+    return String(s ?? '').normalize('NFKD').toLowerCase()
+      .replace(/[\p{M}\p{Cf}\u0640]/gu, '')  // accents, harakat, hamza marks (أ إ آ ؤ ئ fold here), tatweel, bidi and zero-width marks
+      .replace(/[\u0671\u0649\u06CC\u0629\u06A9\u06AF\u06A4\u067E\u0686]/g, c => FOLD[c])
+      .replace(/[\u0660-\u0669]/g, d => String(d.charCodeAt(0) - 0x0660))
+      .replace(/[\u06F0-\u06F9]/g, d => String(d.charCodeAt(0) - 0x06F0))
+      .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  }
+  // The words of a query, or none below SEARCH_MIN characters (the list then shows in full).
+  function searchWords(q) { const n = normText(String(q ?? '').slice(0, SEARCH_MAX)); return n.length < SEARCH_MIN ? [] : n.split(' '); }
+  // Every word must appear in `text` (normText output), inside a longer word too ("ذكاء" finds "الذكاء"). `compact` is the
+  // same text without spaces, so "gpt5" finds "GPT-5" and "2000" finds "2,000".
+  function matchesWords(text, words, compact) {
+    const t = String(text ?? ''), c = compact ?? t.replace(/ /g, '');
+    return words.every(w => t.includes(w) || c.includes(w));
+  }
+  // nq and uq are the searches of AI news and UAE AI, one each (the UAE list is a part of the news, with its own context).
+  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',region:'',nq:'',uq:''};
+  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',region:'region',nq:'nq',uq:'uq'};
+  const NEWS_QUERIES = ['nq', 'uq'];
   function encodeState(state) {
     const qs = new URLSearchParams();
     Object.keys(PARAMS).forEach(k => {
-      const v = k === 'cmp' ? (state.cmp || []).join(',') : k === 'dir' ? (state.dir === -1 ? 'desc' : '') : k === 'fit' ? (state.fit ? '1' : '') : String(state[k] ?? '');
+      const v = k === 'cmp' ? (state.cmp || []).join(',') : k === 'dir' ? (state.dir === -1 ? 'desc' : '') : k === 'fit' ? (state.fit ? '1' : '') : NEWS_QUERIES.includes(k) ? String(state[k] ?? '').trim() : String(state[k] ?? '');
       if (v && (typeof DEFAULTS[k] !== 'string' || v !== DEFAULTS[k])) qs.set(PARAMS[k], v);
     });
     return qs.toString();
@@ -58,6 +83,7 @@
       if (k === 'cmp') s.cmp = [...new Set(v.split(',').filter(Boolean))].slice(0, 4);
       else if (k === 'dir') s.dir = v === 'desc' ? -1 : 1;
       else if (k === 'fit') s.fit = v === '1';
+      else if (NEWS_QUERIES.includes(k)) s[k] = v.trim().slice(0, SEARCH_MAX);
       else s[k] = v;
     });
     if (!['cards','table','timeline'].includes(s.view)) s.view = 'cards';
@@ -77,7 +103,9 @@
     let qs;
     try { qs = new URLSearchParams(search || ''); } catch (e) { return 'home'; }
     if (HW_KEYS.some(k => qs.has(k))) return 'hardware';
-    return qs.has('region') ? 'news' : 'home';
+    // Without a hash, a region or a news search opens AI news and a UAE search opens UAE AI (the head script agrees).
+    if (qs.has('region') || qs.has('nq')) return 'news';
+    return qs.has('uq') ? 'uae' : 'home';
   }
   function parseRoute(hash, search) {
     let h = String(hash || '').replace(/^#/, '');
@@ -200,7 +228,7 @@
   }
   // What the hardware search offers: nothing below two characters.
   function modelSuggestions(models, query) { return String(query || '').trim().length < 2 ? [] : searchModels(models, query); }
-  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions};
+  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions,normText,searchWords,matchesWords};
   if (!root.document) return;
 
   const AR = {
@@ -289,6 +317,10 @@
     'Each summary says whether AI or the publisher wrote it, and every headline has a source link to the original article.':'يوضح كل ملخص إن كان من كتابة الذكاء الاصطناعي أو من الناشر، ولكل عنوان رابط إلى المقال الأصلي.',
     'Headlines at a glance':'العناوين في لمحة','Region':'النطاق','All':'الكل','English':'الإنجليزية','Arabic':'العربية',
     'Headlines':'العناوين','Show more':'عرض المزيد','Showing {n} of {m}':'المعروض {n} من أصل {m}',
+    // News search (#news and #uae; the Android app uses the same pairs)
+    'Search news…':'ابحث في الأخبار…','Clear search':'مسح البحث','Results: {m}':'النتائج: {m}','Results: {m} · showing {n}':'النتائج: {m} · المعروض منها {n}',
+    'No results':'لا توجد نتائج','No matches. Try another word or clear the search.':'لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.',
+    'No headlines in this region match this search. Choose All to search every region.':'لا توجد عناوين في هذا النطاق تطابق هذا البحث. اختر «الكل» للبحث في كل النطاقات.',
     'Key facts':'حقائق رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولاً. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
     'Each product links to its evidence. Uses are editorial guidance. Power figures apply to the listed component or edition, not the whole server. Launch prices are vendor MSRPs at launch, not current street prices. Timing and stock vary by manufacturer and region. Approximate prices are dated snapshots of retail listings or reported estimates, not offers; UAE retail prices normally include 5% VAT. Product images belong to NVIDIA and AMD and link to their source pages.':'كل منتج مرتبط بمصدره. الاستخدامات المقترحة إرشاد تحريري. أرقام الطاقة تخص المكوّن أو الإصدار المذكور، لا الخادم كاملاً. أسعار الإطلاق هي الأسعار المقترحة من الشركة عند الإطلاق، وليست أسعار السوق الحالية. المواعيد والتوفر يختلفان حسب الشركة المصنّعة والمنطقة. الأسعار التقريبية لقطات مؤرّخة من قوائم المتاجر أو تقديرات منشورة، وليست عروض بيع، وأسعار متاجر الإمارات تشمل عادةً ضريبة القيمة المضافة 5%. صور المنتجات مملوكة لـ NVIDIA وAMD وترتبط بصفحات مصادرها.',
     'Llama, Qwen, DeepSeek, gpt-oss…':'مثل Llama وQwen وDeepSeek وgpt-oss…','Specification':'المواصفة','Selected for comparison':'المنتجات المختارة للمقارنة'
@@ -328,6 +360,10 @@
   // The UAE view lists its headlines before the key facts: a first few, then "Show more", so the facts stay near on a phone.
   const UAE_STEP = 8;
   let uaeLimit = UAE_STEP;
+  // The count lines as the build wrote them (both languages), read before anything changes them: the UAE line comes back
+  // when its search is cleared, and either one when the page language has no headlines.
+  const countEl = view => $(view === 'news' ? 'news-count' : 'uae-count');
+  const builtCount = {news: countEl('news') ? countEl('news').innerHTML : '', uae: countEl('uae') ? countEl('uae').innerHTML : ''};
 
   const MODELS = (() => { try { return JSON.parse($('models-data').textContent); } catch (e) { return {models: []}; } })();
   const modelByName = new Map(MODELS.models.map(m => [m.n.toLowerCase(), m]));
@@ -398,6 +434,9 @@
     $('model').value = state.model || '';
     if (!SORTABLE.includes(state.sort)) state.sort = 'level';
     $('sort').value = state.sort;
+    // The news searches (the fields exist only when the build has headlines). A field that differs only by spaces is left
+    // as typed.
+    [['news-q', 'nq'], ['uae-q', 'uq']].forEach(([id, k]) => { const f = $(id); if (f && f.value.trim() !== state[k].trim()) f.value = state[k]; });
   }
   function applyLang() {
     document.documentElement.lang = state.lang;
@@ -482,31 +521,103 @@
   }
 
   function renderNews() {
-    // Filters the server-rendered list for the current language; "Show more" reveals it in steps.
+    // Filters the server-rendered list for the current language by the search and the region; "Show more" reveals the
+    // matches in steps. The region chips count the matches of the search in each region.
     const view = $('news');
     if (!view) return;
     view.querySelectorAll('[data-region-chip]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.regionChip === state.region)));
-    const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), more = $('news-more');
-    if (!list) { if (more) more.hidden = true; return; }
+    const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), more = $('news-more'), terms = searchWords(state.nq);
+    if (!list) { if (more) more.hidden = true; searchUi('news', terms, 0, 0, null, false); return; }
+    const counts = {'': 0, global: 0, uae: 0};
     let total = 0, shown = 0;
     list.querySelectorAll('li[data-region]').forEach(li => {
-      const match = !state.region || li.dataset.region.split(' ').includes(state.region);
+      const regions = li.dataset.region.split(' '), hit = !terms.length || newsHit(li, terms);
+      if (hit) { counts['']++; regions.forEach(r => { if (r in counts) counts[r]++; }); }
+      const match = hit && (!state.region || regions.includes(state.region));
       if (match) total++;
       li.hidden = !(match && shown < newsLimit);
       if (!li.hidden) shown++;
     });
     list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
-    $('news-count').textContent = F('Showing {n} of {m}', {n: shown, m: countLabel(total, 'headline', state.lang)});
+    view.querySelectorAll('[data-region-chip]').forEach(b => {
+      const n = b.querySelector(`.n [data-lang="${state.lang}"]`), v = String(counts[b.dataset.regionChip] ?? 0);
+      if (n && n.textContent !== v) n.textContent = v;
+    });
     if (more) more.hidden = shown >= total;
+    searchUi('news', terms, total, shown, counts, true);
   }
 
   function renderUae() {
+    // The UAE headlines matching its search, a first few, then "Show more". The key facts below are never filtered.
     const view = $('uae'), more = $('uae-more');
     if (!view || !more) return;
-    const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), items = list ? [...list.querySelectorAll('li.nitem')] : [];
-    items.forEach((li, n) => { li.hidden = n >= uaeLimit; });
+    const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), items = list ? [...list.querySelectorAll('li.nitem')] : [], terms = searchWords(state.uq);
+    let total = 0, shown = 0;
+    items.forEach(li => {
+      const hit = !terms.length || newsHit(li, terms);
+      if (hit) total++;
+      li.hidden = !(hit && shown < uaeLimit);
+      if (!li.hidden) shown++;
+    });
     if (list) list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
-    more.hidden = items.length <= uaeLimit;
+    more.hidden = shown >= total;
+    searchUi('uae', terms, total, shown, null, !!list);
+  }
+
+  // ---------- news search ----------
+  // What a search reads on a card, in the language of its list: the headline, the summary shown and the publisher's name
+  // (the first text of the source link without "Source:"). Never the labels, dates, region tags or image credits. Each
+  // language has its own list elements, so the cache is per language.
+  const cardText = new WeakMap();
+  function newsText(li) {
+    let t = cardText.get(li);
+    if (!t) {
+      const text = el => el ? el.textContent : '', src = li.querySelector('a.n-src'), first = src && src.firstChild;
+      const publisher = first && first.nodeType === 3 ? first.nodeValue.replace(/^[^:]*:\s*/, '') : '';
+      const norm = normText([text(li.querySelector('.n-title')), text(li.querySelector('.n-sum')), publisher].join(' '));
+      t = {norm, compact: norm.replace(/ /g, '')};
+      cardText.set(li, t);
+    }
+    return t;
+  }
+  const newsHit = (li, terms) => { const t = newsText(li); return matchesWords(t.norm, terms, t.compact); };
+  const setText = (el, v) => { if (el && el.textContent !== v) el.textContent = v; };
+  const setHtml = (el, v) => { if (el && el.innerHTML !== v) el.innerHTML = v; };
+  // The search controls of one view: the (x) while the field has text, the count line (written only when it changes, so
+  // the live region isn't repeated) and, when a search matches nothing, the message with "Clear search". The message never
+  // repeats the query: a link can set it (?nq=, ?uq=).
+  function searchUi(view, terms, total, shown, counts, hasList) {
+    const input = $(view + '-q'), searching = terms.length > 0;
+    if (input) $(view + '-q-clear').hidden = !input.value;
+    const count = countEl(view), m = countLabel(total, 'headline', state.lang);
+    if (!hasList) setHtml(count, builtCount[view]);
+    else if (searching) setText(count, total === 0 ? T('No results') : shown < total ? F('Results: {m} · showing {n}', {m, n: shown}) : F('Results: {m}', {m}));
+    else if (view === 'news') setText(count, F('Showing {n} of {m}', {n: shown, m}));
+    else setHtml(count, builtCount.uae);
+    const empty = $(view + '-empty');
+    if (!empty) return;
+    empty.hidden = !(hasList && searching && total === 0);
+    if (!empty.hidden) setText($(view + '-empty-msg'), T(view === 'news' && state.region && counts && counts[''] > 0
+      ? 'No headlines in this region match this search. Choose All to search every region.' : 'No matches. Try another word or clear the search.'));
+  }
+  function searchInput(view, value) {
+    const key = view === 'news' ? 'nq' : 'uq', before = searchWords(state[key]).join(' ');
+    state[key] = String(value ?? '').slice(0, SEARCH_MAX);  // as typed: a trailing space is kept while typing
+    const changed = searchWords(state[key]).join(' ') !== before;
+    if (changed) { if (view === 'news') newsLimit = NEWS_STEP; else uaeLimit = UAE_STEP; }
+    if (view === 'news') renderNews(); else renderUae();
+    syncUrl();
+    // With the side panel sticky (wide screens), the field stays in view while the list is scrolled: new results start
+    // at the top of the list, not somewhere above the window.
+    const col = changed && document.querySelector(`#${view} .main-col`), bar = document.querySelector('.top');
+    if (col && bar && col.getBoundingClientRect().top < bar.getBoundingClientRect().bottom) col.scrollIntoView({block: 'start'});
+  }
+  function clearSearch(view, focus) {
+    const input = $(view + '-q');
+    if (!input) return;
+    input.value = '';
+    searchInput(view, '');
+    if (focus) input.focus();
   }
 
   function renderTable(n) {
@@ -631,6 +742,10 @@
     sizeFromModel(s);
     if (encodeState(s) === encodeState(state)) return;
     if (s.region !== state.region) newsLimit = NEWS_STEP;
+    // Paging restarts only when the search words change, not when another parameter does.
+    const same = k => searchWords(s[k]).join(' ') === searchWords(state[k]).join(' ');
+    if (!same('nq')) newsLimit = NEWS_STEP;
+    if (!same('uq')) uaeLimit = UAE_STEP;
     Object.assign(state, s);
     writeControls();
   }
@@ -718,7 +833,7 @@
   ['vendor','level','scope','bits','fit-only'].forEach(id => $(id).addEventListener('change', () => { readControls(); render(); }));
   $('sort').addEventListener('change', () => { state.sort = $('sort').value; render(); });
   $('direction').addEventListener('click', () => { state.dir *= -1; render(); });
-  $('reset').addEventListener('click', () => { Object.assign(state, {...DEFAULTS, cmp: state.cmp, lang: state.lang, view: state.view, region: state.region}); writeControls(); render(); });
+  $('reset').addEventListener('click', () => { Object.assign(state, {...DEFAULTS, cmp: state.cmp, lang: state.lang, view: state.view, region: state.region, nq: state.nq, uq: state.uq}); writeControls(); render(); });
   ['cards','table','timeline'].forEach(v => $('view-' + v).addEventListener('click', () => { state.view = v; render(); }));
   document.querySelectorAll('[data-params]').forEach(b => b.addEventListener('click', () => { $('params').value = b.dataset.params; readControls(); render(); }));
   document.addEventListener('change', e => { if (e.target.classList.contains('cmp-toggle')) toggleCompare(e.target.value, e.target.checked, e.target); });
@@ -732,9 +847,24 @@
     if (r) toggleCompare(r.dataset.remove, false);
     const rc = e.target.closest('[data-region-chip]');
     if (rc) { state.region = rc.dataset.regionChip; newsLimit = NEWS_STEP; render(); }
+    // The (x) in a news search field and the "Clear search" button under a search without results. The (x) keeps the
+    // focus in the field; the button gives it back to the field from the keyboard or a mouse (e.detail 0 is a keyboard
+    // click), not after a tap, where focusing would open the on-screen keyboard over the list that just came back.
+    const cs = e.target.closest('[data-clear-search]');
+    if (cs) clearSearch(cs.dataset.clearSearch, cs.classList.contains('q-clear') || e.detail === 0 || matchMedia('(pointer: fine)').matches);
   });
   $('news-more') && $('news-more').addEventListener('click', () => { newsLimit += NEWS_STEP; renderNews(); });
   $('uae-more') && $('uae-more').addEventListener('click', () => { uaeLimit += UAE_STEP; renderUae(); });
+  ['news', 'uae'].forEach(view => {
+    const input = $(view + '-q');
+    if (!input) return;
+    input.addEventListener('input', () => searchInput(view, input.value));
+    input.addEventListener('keydown', e => {
+      // Escape empties a field that has text and keeps the focus; Enter only closes the on-screen keyboard (results are live).
+      if (e.key === 'Escape' && input.value) { e.preventDefault(); clearSearch(view, false); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (matchMedia('(pointer: coarse)').matches) input.blur(); }
+    });
+  });
   $('skip').addEventListener('click', e => {
     e.preventDefault();
     const h = document.querySelector(`[data-view="${currentView}"] h1`);

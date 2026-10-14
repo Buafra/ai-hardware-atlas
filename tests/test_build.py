@@ -847,4 +847,81 @@ class NewsImageTests(unittest.TestCase):
         block=re.sub(r'/[*].*?[*]/','',css[css.index('/* News images:'):css.index('.n-note{')],flags=re.S)
         self.assertNotRegex(block,r'\b(?:left|right)\b|float')
 
+class NewsSearchMarkupTests(unittest.TestCase):
+    """The owner's request of October 2026: a search field in AI news and in UAE AI (app.js filters the headlines; the
+    browser checks are in tests/e2e_news_search.py). Its own setUpClass, so it never depends on another class's state."""
+    PAIRS={'Search':'بحث','Search news…':'ابحث في الأخبار…','Clear search':'مسح البحث','Results: {m}':'النتائج: {m}',
+           'Results: {m} · showing {n}':'النتائج: {m} · المعروض منها {n}','No results':'لا توجد نتائج',
+           'No matches. Try another word or clear the search.':'لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.',
+           'No headlines in this region match this search. Choose All to search every region.':'لا توجد عناوين في هذا النطاق تطابق هذا البحث. اختر «الكل» للبحث في كل النطاقات.'}
+    @classmethod
+    def setUpClass(cls):
+        cls.data,cls.feed,cls.sources,cls.uae,cls.models=build.load_all()
+        with tempfile.TemporaryDirectory() as d:
+            cls.html,_=build.render_page(cls.data,cls.feed,cls.sources,cls.uae,cls.models,brand_dir=Path(d))
+        main=cls.html[cls.html.index('<main'):cls.html.index('</main>')]
+        cls.views={v:main[main.index(f'data-view="{v}"'):] for v in ('home','hardware','news','uae','contact')}
+        for v,nxt in (('home','hardware'),('hardware','news'),('news','uae'),('uae','contact')):
+            cls.views[v]=cls.views[v][:cls.views[v].index(f'data-view="{nxt}"')]
+        cls.js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+    def field(self,view):
+        return re.search(rf'<div class="js-only n-search"><label class="fl" for="{view}-q" data-i18n>Search</label><div class="q-wrap"><input id="{view}-q" [^>]*>',self.views[view])
+    def test_news_field_between_heading_and_region_chips(self):
+        n=self.views['news'];m=self.field('news')
+        self.assertTrue(m)
+        for attr in ('type="search"','autocomplete="off"','maxlength="100"','enterkeyhint="search"','placeholder="Search news…"','data-i18n-ph="Search news…"'):self.assertIn(attr,m.group(0))
+        self.assertNotIn('dir=',m.group(0))  # follows the page direction, like the hardware search
+        self.assertLess(n.index('id="n-side-h"'),m.start());self.assertLess(m.start(),n.index('data-region-chip'))
+        self.assertIn('<button type="button" class="q-clear" id="news-q-clear" data-clear-search="news" hidden aria-label="Clear search" data-i18n-aria="Clear search"><svg ',n)
+        self.assertEqual(n.count('id="news-q"'),1)
+        self.assertNotIn('<div class="js-only n-search">',self.views['home']+self.views['hardware']+self.views['contact'])
+    def test_uae_field_between_heading_and_stats(self):
+        u=self.views['uae'];m=self.field('uae')
+        self.assertTrue(m)
+        self.assertLess(u.index('id="u-side-h"'),m.start());self.assertLess(m.start(),u.index('<dl class="side-stats">'))
+        self.assertIn('data-clear-search="uae" hidden aria-label="Clear search"',u)
+    def test_no_match_blocks_after_show_more_and_before_the_note(self):
+        for view,more in (('news','id="news-more"'),('uae','id="uae-more"')):
+            v=self.views[view]
+            block=f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg"></p><button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>'
+            self.assertIn(block,v,view)
+            self.assertLess(v.index(more),v.index(block));self.assertLess(v.index(block),v.index('class="muted n-note"'))
+            if 'class="nitem' in v:self.assertLess(v.rindex('class="nitem'),v.index(block))
+        self.assertLess(self.views['uae'].index('id="uae-empty"'),self.views['uae'].index('<section class="uae-facts"'))
+    def test_uae_count_line_is_a_live_region_with_the_built_text(self):
+        items=[i for i in build.news_items(self.feed,self.sources) if i.get('uae')]
+        n_en,n_ar=sum(build.in_lang(i,'en') for i in items),sum(build.in_lang(i,'ar') for i in items)
+        want=build.L(build.cnt(n_en,'headline','en')+' · times in UAE time',build.cnt(n_ar,'headline','ar')+' · الأوقات بتوقيت الإمارات')
+        self.assertIn(f'<h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p id="uae-count" aria-live="polite">{want}</p>',self.views['uae'])
+        self.assertIn('<p class="count" id="news-count" aria-live="polite">',self.views['news'])
+    def test_no_hardware_tag_attribute_in_the_search_markup(self):
+        # app.js treats any [data-q] as a hardware tag: the news view has none, the UAE view only on its key facts.
+        self.assertNotIn('data-q=',self.views['news'])
+        u=self.views['uae']
+        if 'data-q=' in u:self.assertLess(u.index('class="uae-facts"'),u.index('data-q='))
+        for view in ('news','uae'):
+            self.assertNotIn('data-q=',build.search_box(view)+build.search_empty(view))
+            self.assertIsNone(re.search(r'https?:|//',build.search_box(view)+build.search_empty(view)))  # no request anywhere
+    def test_strings_have_arabic_and_never_repeat_the_query(self):
+        for en,ar in self.PAIRS.items():self.assertIn(f"'{en}':'{ar}'",self.js,en)
+        for en,ar in self.PAIRS.items():
+            if en.startswith('No '):self.assertNotIn('{q}',en+ar)  # a link can set the query, so it is never echoed
+        self.assertNotIn('امسح البحث',self.PAIRS['Clear search'])  # the button is a verbal noun, like «مسح» and «عرض المزيد»
+        exported=re.search(r'module\.exports = \{([^}]*)\}',self.js).group(1).split(',')
+        for name in ('normText','searchWords','matchesWords'):self.assertIn(name,exported)
+    def test_markup_absent_without_news(self):
+        # No sources: no #news view at all; no UAE data: no #uae view. app.js guards every use of the fields.
+        with tempfile.TemporaryDirectory() as d:
+            html,_=build.render_page(self.data,self.feed,[],None,self.models,brand_dir=Path(d))
+        for bad in ('id="news-q"','id="uae-q"','id="uae-count"','id="news-empty"','id="uae-empty"'):self.assertNotIn(bad,html)
+        for guard in ("const f = $(id); if (f &&","if (!input) return;","const input = $(view + '-q');"):self.assertIn(guard,self.js)
+    def test_css(self):
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        for rule in ('.n-search .inp{padding-inline-end:48px}','.q-clear:hover{background:var(--surface-3);',
+                     '@media (max-width:639px){.q-clear{width:40px;height:40px}}','@media (pointer:coarse){.n-search .inp{font-size:16px}}',
+                     '.n-search .inp::-webkit-search-cancel-button{-webkit-appearance:none;display:none}'):
+            self.assertIn(rule,css)
+        block=css[css.index('/* News search'):css.index('@media (pointer:coarse){.n-search')]
+        self.assertNotRegex(re.sub(r'/[*].*?[*]/','',block,flags=re.S),r'\b(?:left|right)\b')  # logical sides only (RTL)
+
 if __name__=='__main__':unittest.main()

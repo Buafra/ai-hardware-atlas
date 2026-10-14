@@ -58,8 +58,8 @@ ROUTES = ['home', 'hardware', 'news', 'uae', 'contact']
 KEY = {
     'home': ['#home-title', '.pillar.p-hw .stats .stat', '.pillar.p-hw .mini', '.pillar.p-news .heads li .n-title', '.pillar.p-news .heads .n-src', '.pillar.p-uae .fmini', '.pillar.p-uae .p-icon svg', '.pillar.p-uae .heads li .n-title', '.pillar .cta', '.trust', '#home .follow-btn', '.pillar.p-learn .stats .stat', '.pillar.p-learn .lvl .chip', '.pillar.p-learn .cta'],
     'hardware': ['#hardware-title', '#search', '#model', '#params', '#products .product', '#count', '#csv', '#share', '#print', '#hardware a[download]', '.product .price-row', '.product .credit', '.guides', '.changes', '.statusbar', '#view-table', '#sort', '#extra-hint', '#hardware .ihead .follow-btn'],
-    'news': ['#news-title', '#news .ifresh', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn'],
-    'uae': ['#uae-title', '#uae .uae-facts .fact', '#uae .uae-heads .sec-h h2', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn'],
+    'news': ['#news-title', '#news .ifresh', '#news .nlist .nitem', '#news [data-region-chip]', '#news-count', '#news .nlist .n-src', '#news .nlist .n-sum', '#news .nlist .n-by', '#news .ihead .follow-btn', '#news-q'],
+    'uae': ['#uae-title', '#uae .uae-facts .fact', '#uae .uae-heads .sec-h h2', '#uae .side-stats .stat', '#uae .nlist .nitem', '#uae .ihead .follow-btn', '#uae-q'],
     'contact': ['#contact-title', '#contact .contact-card', '#c-mail', '#contact .xcard.x-uae .p-icon svg', '#about #about-title', '#about .ab-area', '#about .follow-btn'],
 }
 LATIN_OK = re.compile(r'^(NVIDIA|AMD|CSV|PDF|OpenRouter|Hugging Face|Ada Lovelace|[\d\s.,:/()%+–-]+)$')

@@ -147,3 +147,63 @@ hits=modelSuggestions(real,'seek');assert.ok(hits.length>0&&hits.every(m=>/deeps
 hits=modelSuggestions(real,'qwen3');assert.ok(hits.length>0&&!hits.some(m=>m.n==='Qwen2.5 Coder 32B Instruct'),'qwen3 never lists Qwen2.5 Coder 32B');
 hits=modelSuggestions(real,'nvidia');assert.equal(hits.length,real.filter(m=>/nvidia/i.test(m.n)).length);assert.ok(hits.length>0&&hits.every(m=>m.n.startsWith('NVIDIA:')));
 console.log('PASS: AI models in the hardware search (sample and real list)');
+// News search (#news, #uae): one normalizer and matcher for the site and the Android app. These cases are shared: keep
+// them identical to app/src/test/java/io/github/buafra/cipherlacuna/ui/news/NewsSearchTest.kt in cipher-lacuna-android.
+const {normText,searchWords,matchesWords}=require('../web/app.js');
+const NORM=[
+  ['Café  NVIDIA','cafe nvidia'],
+  ['أإآٱ','اااا'],
+  ['الذّكَاءُ','الذكاء'],
+  ['ـالـذكـاء','الذكاء'],
+  ['مدرسة على','مدرسه علي'],
+  ['مسؤول هيئة','مسوول هييه'],
+  ['٢٠٢٦ ۱۲','2026 12'],
+  ['GPT\u20115.1 — «Falcon»','gpt 5 1 falcon'],
+  ['\u2068NVIDIA\u2069','nvidia'],
+  ['کی','كي'],
+  ['ڤيديو','فيديو'],
+  ['پگچ','بكج'],
+];
+for(const [input,want] of NORM)assert.equal(normText(input),want,'normText '+JSON.stringify(input));
+const WORDS=[['a',[]],['  ,. ',[]],['',[]],[' إنفيديا  H200 ',['انفيديا','h200']]];
+for(const [input,want] of WORDS)assert.deepEqual(searchWords(input),want,'searchWords '+JSON.stringify(input));
+const MATCH=[
+  ['nvidia','NVIDIA ships a new chip',true],
+  ['cafe','Café opens',true],
+  ['ذكاء','الذكاء الاصطناعي',true],
+  ['اخطاء','أخطاء شائعة',true],
+  ['انفيديا','إنفيديا تطرح شريحة',true],
+  ['مدينه','مدينة مصدر',true],
+  ['علي','على الإنترنت',true],
+  ['مسوول','مسؤول',true],
+  ['٢٠٢٦','in 2026',true],
+  ['2026','عام ٢٠٢٦',true],
+  ['gpt-5','OpenAI releases GPT 5',true],
+  ['openai gpt','OpenAI releases GPT-5',true],
+  ['openai google','OpenAI releases GPT-5',false],
+  ['falcon','«Falcon» من معهد الابتكار التكنولوجي',true],
+  ['nvidia','إنفيديا تطرح',false],
+  ['gpt5','OpenAI releases GPT-5',true],
+  ['2000','2,000 users',true],
+  ['فيديو','ڤيديو جديد',true],
+  ['بيتزا','پيتزا',true],
+  ['جيكابايت','چيگابايت',true],
+];
+for(const [q,text,want] of MATCH)assert.equal(matchesWords(normText(text),searchWords(q)),want,`${q} / ${text}`);
+// Limits: nothing below 2 characters, 100 characters at most (a longer query is cut, never an error).
+assert.deepEqual(searchWords('ذ'),[]);assert.deepEqual(searchWords('٢'),[]);assert.deepEqual(searchWords('ab'),['ab']);
+assert.deepEqual(searchWords('x'.repeat(150)),['x'.repeat(100)]);
+assert.equal(matchesWords('anything',[]),true);
+// The searches in the URL: ?nq= (AI news) and ?uq= (UAE AI), trimmed and cut to 100 characters; empty ones are left out.
+// Without a hash they open their view (the head script in template.html agrees); hardware keys still win.
+assert.equal(parseRoute('','?nq=g42').view,'news');assert.equal(parseRoute('#nope','?uq=x&lang=ar').view,'uae');
+assert.equal(parseRoute('','?q=4090&nq=x').view,'hardware');assert.equal(parseRoute('','?nq=x&uq=y').view,'news');
+assert.equal(parseRoute('','?region=global&uq=x').view,'news');assert.equal(parseRoute('#uae','?nq=x').view,'uae');
+assert.equal(decodeState(encodeState({...decodeState(''),nq:'  إنفيديا '})).nq,'إنفيديا');
+assert.equal(encodeState({...decodeState(''),nq:''}),'');assert.equal(encodeState({...decodeState(''),nq:'   '}),'');
+assert.equal(encodeState({...decodeState(''),uq:'falcon ',lang:'ar'}),'lang=ar&uq=falcon');
+assert.equal(decodeState('?uq='+'x'.repeat(150)).uq.length,100);assert.equal(decodeState('?nq=%20g42%20').nq,'g42');
+assert.equal(decodeState('').nq,'');assert.equal(decodeState('').uq,'');
+assert.ok(!HW_KEYS.includes('nq')&&!HW_KEYS.includes('uq'),'?q= stays the hardware search');
+assert.ok(tpl.includes("/[?&](region|nq)(=|&|$)/.test(s)?'news':/[?&]uq(=|&|$)/.test(s)?'uae':'home'"),'head script opens the news and UAE views for ?nq= and ?uq=');
+console.log('PASS: news search (normalizer, words, matching, URL state, implied views)');

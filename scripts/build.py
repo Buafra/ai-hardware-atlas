@@ -720,6 +720,26 @@ def hardware_head(c, data):
                  '<button type="button" id="csv" class="js-only" data-i18n>Export CSV</button><button type="button" id="share" class="js-only" data-i18n>Copy link</button><button type="button" id="print" class="js-only" data-i18n>Print table</button></div>')
     return ihead('hardware', 'AI Hardware Atlas', lead, status + downloads)
 
+SEARCH_PH = 'Search news…'
+CLEAR_ICON = ('<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="m7 7 10 10M17 7 7 17" fill="none"'
+              ' stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>')
+
+def search_box(view):
+    """The search field of #news or #uae (view = 'news' / 'uae'), in the side panel. app.js filters the headlines of the
+    page language as the visitor types and keeps the query in the URL (?nq= / ?uq=). No dir="auto": an empty field would
+    turn left-to-right and put the Arabic placeholder on the wrong side, so it follows the page like the hardware search.
+    Never a data-q attribute here: app.js treats any [data-q] as a hardware tag."""
+    return (f'<div class="js-only n-search"><label class="fl" for="{view}-q" data-i18n>Search</label><div class="q-wrap">'
+            f'<input id="{view}-q" class="inp" type="search" autocomplete="off" spellcheck="false" autocapitalize="off" enterkeyhint="search" maxlength="100"'
+            f' placeholder="{SEARCH_PH}" data-i18n-ph="{SEARCH_PH}">'
+            f'<button type="button" class="q-clear" id="{view}-q-clear" data-clear-search="{view}" hidden aria-label="Clear search" data-i18n-aria="Clear search">{CLEAR_ICON}</button></div></div>')
+
+def search_empty(view):
+    """Shown by app.js when a search in #news or #uae matches nothing: a message (it never repeats the query) and a
+    "Clear search" button. After the list's "Show more" row, so the list and that row keep their markup."""
+    return (f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg"></p>'
+            f'<button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>')
+
 def news_view(c):
     src, items, feed = c['src'], c['items'], c['feed']
     if not c['sources']:
@@ -734,11 +754,13 @@ def news_view(c):
     return f'''<section id="news" class="view v-news" data-view="news" aria-labelledby="news-title">
 {ihead('news', 'AI news', lead, f'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(feed, c["data"])}</span></p>')}
 <div class="split-layout"><aside class="side" aria-labelledby="n-side-h"><div class="panel"><h2 class="side-h" id="n-side-h" data-i18n>Headlines at a glance</h2>
+{search_box('news')}
 <div class="js-only"><span class="fl" id="fl-nreg" data-i18n>Region</span><div class="chips" role="group" aria-labelledby="fl-nreg">{chips}</div></div>
 <dl class="side-stats">{side}</dl></div></aside>
 <div class="main-col"><h2 class="sr-only" data-i18n>Headlines</h2><div class="bar"><p class="count" id="news-count" aria-live="polite">{L(cnt(len(en_items), "headline", "en"), cnt(len(ar_items), "headline", "ar"))}</p><p class="muted" data-i18n>Times in UAE time</p></div>
 {day_lists(items, src, 'No recent English headlines.', 'لا توجد عناوين عربية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="news-more" hidden data-i18n>Show more</button></div>
+{search_empty('news')}
 <p class="muted n-note">{NEWS_NOTE}</p>
 </div></div>
 {xnav(c, ('hardware', 'uae'))}
@@ -765,10 +787,13 @@ def uae_view(c):
     # Latest headlines first, then the key facts (each with its "as of" date) below them.
     return f'''<section id="uae" class="view v-uae" data-view="uae" aria-labelledby="uae-title">
 {ihead('uae', 'UAE AI', lead)}
-<div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2><dl class="side-stats">{side}</dl></div></aside>
-<div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p>{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
+<div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2>
+{search_box('uae')}
+<dl class="side-stats">{side}</dl></div></aside>
+<div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p id="uae-count" aria-live="polite">{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
 {day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
+{search_empty('uae')}
 <p class="muted n-note">{NEWS_NOTE}</p></div></div>
 <section class="uae-facts" aria-labelledby="uae-facts-h"><div class="sec-h"><h2 id="uae-facts-h" data-i18n>Key facts</h2><p data-i18n>Newest first. Hardware tags open the matching products.</p></div>
 <div class="fgrid">{cards}</div></section>
