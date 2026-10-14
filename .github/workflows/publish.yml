@@ -58,6 +58,9 @@ jobs:
           # Optional private report of removed stories (titles and reasons) to the owner; nothing is sent unless both are set.
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          # WAM's RSS for registered users (full article text); the URLs hold the owner's access code.
+          WAM_RSS_EN: ${{ secrets.WAM_RSS_EN }}
+          WAM_RSS_AR: ${{ secrets.WAM_RSS_AR }}
         run: python scripts/news.py
       - name: Refresh OpenRouter model list and sizes
         if: github.event_name != 'push'

@@ -522,7 +522,8 @@
     ],
     "kind": "primary",
     "feed_type": "news_sitemap",
-    "read_pages": false
+    "read_pages": false,
+    "text_feeds_env": "WAM_RSS_EN"
   },
   {
     "id": "sharjah24-en",
@@ -629,7 +630,8 @@
     ],
     "kind": "primary",
     "feed_type": "news_sitemap",
-    "read_pages": false
+    "read_pages": false,
+    "text_feeds_env": "WAM_RSS_AR"
   },
   {
     "id": "albayan",

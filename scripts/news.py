@@ -49,6 +49,11 @@ Optional per-source settings in news-sources.json:
                                  matches (page furniture: related stories, browser notices); besides PAGE_STOP
   page_drop: "<regex>"           paragraphs of the article page that are left out (e.g. a "follow us" line)
   read_pages: false              never fetch this source's article pages (headline and feed excerpt only)
+  text_feeds_env: "<NAME>"       an environment variable (a GitHub secret) holding RSS feed URLs, one per line, whose
+                                 items carry the whole article (WAM's RSS for registered users). This source's headlines
+                                 found there get that text: the excerpt, the UAE check and the summary use it. The URLs
+                                 hold the owner's access code, so they never sit in the public repository, and failures
+                                 are counted, never printed. Unset: headlines only, as before.
   link_prefix: "<url prefix>"    keep only links that start with it (one language of a mixed sitemap)
   feed_type: "<type>"            how the feed URL is read (FEED_TYPES), one request per run either way:
       "rss" (the default)        RSS 2.0, RSS 1.0 (RDF) or Atom
@@ -579,6 +584,33 @@ def uae_item(source, title, text=''):
     entity), whoever publishes it: a UAE newsroom's story about OpenAI is world news, not UAE news."""
     return names_uae(title, text, sources=(source,))
 
+WAM_ARTICLE = re.compile(r'/([a-z]{2})/article/([a-z0-9]+)(?=[-/?#]|$)', re.I)
+
+def article_key(link):
+    """The language and article code of a WAM link ("/en/article/c2qm3mp-..." -> "en/c2qm3mp"), however the rest of the
+    link is encoded, or the link itself when it has none."""
+    m = WAM_ARTICLE.search(unquote(unquote(link or '')))
+    return f'{m.group(1).lower()}/{m.group(2).lower()}' if m else (link or '')
+
+def feed_texts(source, cache=None):
+    """{article_key: whole article text} from the source's text feeds (text_feeds_env), or {} when it has none, the
+    variable is unset or every feed fails. A failed feed is counted (text_feed_failed); its URL, which holds the
+    owner's access code, is never printed."""
+    name = source.get('text_feeds_env')
+    urls = (os.environ.get(name) or '').split() if name else []
+    texts = {}
+    for url in urls:
+        try:
+            raw = fetch_once(url, cache, accept=ACCEPT['rss'], timeout=source.get('timeout', FEED_TIMEOUT),
+                             max_bytes=source.get('max_bytes', FEED_BYTES))
+            for entry in parse_feed(raw):
+                link, body = entry[1], entry[3]
+                if body and allowed(link, source):
+                    texts.setdefault(article_key(link), body)
+        except Exception:
+            count('text_feed_failed')
+    return texts
+
 def collect(source, now, blocked=None, cache=None):
     """This run's items of one feed. Blocked stories are skipped (see block_keys), and so (rule M1) are items that
     mention the UAE or a GCC state when the source is not a regional outlet or an official source of the region.
@@ -594,6 +626,7 @@ def collect(source, now, blocked=None, cache=None):
                                       timeout=source.get('timeout', FEED_TIMEOUT), max_bytes=source.get('max_bytes', FEED_BYTES)))
     # A mixed-language sitemap: only this source's language counts, also towards the scan limit.
     feed = (e for e in feed if e[1].startswith(prefix)) if prefix else feed
+    texts = feed_texts(source, cache)
     n = -1
     for n, entry in enumerate(feed):
         if n >= limit:
@@ -613,6 +646,9 @@ def collect(source, now, blocked=None, cache=None):
         item_id = _hash(link)
         if blocked and not blocked.keys().isdisjoint(block_keys(link, source['id'], title)):
             continue
+        full = texts.get(article_key(link)) if texts else None
+        if full and not description:
+            description = full
         text = excerpt(description, title, source.get('excerpt_full_sentences', False)) if source.get('feed_excerpt', True) else ''
         if not covers_region and policy.mentions_region(title, text):
             count('m1_dropped')
@@ -623,6 +659,9 @@ def collect(source, now, blocked=None, cache=None):
         if text and text not in seen_excerpts:
             item['excerpt'] = text
             seen_excerpts.add(text)
+        if full:  # the whole article, for this run's summary (working field, not saved)
+            item['_page'] = '\n\n'.join(paragraphs(full))
+            count('text_feed_matched')
         items.append(item)
         if len(items) >= PER_FEED:
             break

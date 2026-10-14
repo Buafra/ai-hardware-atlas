@@ -1,6 +1,6 @@
 """The news source list and the non-RSS feed types (news sitemaps, the Anthropic listing page, the Qwen article list),
 tested on trimmed copies of the real feeds saved in tests/fixtures/news (fetched 2026-09-27)."""
-import json,re,sys,unittest
+import json,os,re,sys,unittest
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 from unittest import mock
@@ -556,3 +556,60 @@ class NewGlobalSourceTests(unittest.TestCase):
             with self.assertRaises(ValueError):news.fetch('https://qwen.ai/api',max_bytes=10)
 
 if __name__=='__main__':unittest.main()
+
+class WamTextFeedTests(unittest.TestCase):
+    """WAM's RSS for registered users carries the whole article; its URLs (holding the owner's access code) come from a
+    GitHub secret. Headlines from the public sitemap that appear there get the text."""
+    FEED_EN='https://www.wam.ae/en/rss/feed/CODE?slug=sci&vsCode=X&type=rss'
+    def rss(self,*items):
+        body=''.join(f'<item><title>{t}</title><link>{l}</link><description><![CDATA[{d}]]></description>'
+                     f'<pubDate>Wed, 14 Oct 2026 15:14:02 +0400</pubDate></item>' for t,l,d in items)
+        return f'<?xml version="1.0" encoding="utf-8"?><rss version="2.0"><channel><title>WAM</title>{body}</channel></rss>'.encode('utf-8')
+    def run_collect(self,feeds,env=True):
+        sm=sitemap(('https://www.wam.ae/en/article/c2qm3mp-german-indian-companies-showcase-ai','German, Indian firms show AI water solutions at WETEX 2026','2026-09-27T10:00:00Z'),
+                   ('https://www.wam.ae/en/article/c2zzzzz-no-text-story','New AI chip announced in Japan','2026-09-27T09:00:00Z'))
+        def fake(url,**kw):
+            if url==SRC['wam-en']['feed']:return sm
+            if url in feeds:
+                if isinstance(feeds[url],Exception):raise feeds[url]
+                return feeds[url]
+            raise AssertionError(url)
+        environ={'WAM_RSS_EN':'\n'.join(feeds)} if env else {}
+        with mock.patch.object(news,'fetch',side_effect=fake),mock.patch.dict('os.environ',environ,clear=False):
+            if not env:os.environ.pop('WAM_RSS_EN',None)
+            return news.collect(SRC['wam-en'],NOW,cache={})
+    def test_article_key_ignores_slug_and_encoding(self):
+        self.assertEqual(news.article_key('https://www.wam.ae/en/article/c2qm3mp-german-indian'),'en/c2qm3mp')
+        self.assertEqual(news.article_key('https://www.wam.ae/ar/article/c2qlw3i-%25D8%25B9%25D8%25A8'),'ar/c2qlw3i')
+        self.assertEqual(news.article_key('https://www.wam.ae/ar/article/c2qlw3i-عبدالله'),'ar/c2qlw3i')
+        self.assertEqual(news.article_key('https://example.com/x'),'https://example.com/x')
+    def test_headline_gets_the_article_text_excerpt_and_uae_check(self):
+        text=('DUBAI, 14th October, 2026 (WAM) -- German and Indian companies will showcase AI-driven water and energy solutions '
+              'at WETEX, organised by Dubai Electricity and Water Authority.<p>The exhibition runs from 20 to 22 October.</p>')
+        feed=self.rss(('German, Indian companies at WETEX','https://www.wam.ae/en/article/c2qm3mp-german-indian-companies-showcase%25E2%2580%2598',text))
+        news.STATS.clear()
+        items=self.run_collect({self.FEED_EN:feed})
+        got={i['url'].rsplit('/',1)[1][:7]:i for i in items}
+        wetex=got['c2qm3mp']
+        self.assertIn('DUBAI, 14th October',wetex['excerpt'])
+        self.assertIn('The exhibition runs from 20 to 22 October.',wetex['_page'])
+        self.assertTrue(wetex['uae'],'the text names Dubai, so it is UAE news although the headline does not')
+        self.assertNotIn('_page',got['c2zzzzz']);self.assertNotIn('excerpt',got['c2zzzzz'])
+        self.assertEqual(news.STATS['text_feed_matched'],1)
+    def test_without_the_secret_headlines_only(self):
+        items=self.run_collect({},env=False)
+        self.assertEqual(len(items),2)
+        self.assertTrue(all('_page' not in i and 'excerpt' not in i for i in items))
+    def test_a_failing_feed_is_counted_never_printed(self):
+        import io,contextlib
+        news.STATS.clear();out=io.StringIO()
+        with contextlib.redirect_stdout(out),contextlib.redirect_stderr(out):
+            items=self.run_collect({self.FEED_EN:TimeoutError('slow '+self.FEED_EN)})
+        self.assertEqual(len(items),2)
+        self.assertEqual(news.STATS['text_feed_failed'],1)
+        self.assertNotIn('CODE',out.getvalue())
+    def test_wam_sources_read_the_secret_names(self):
+        self.assertEqual(SRC['wam-en']['text_feeds_env'],'WAM_RSS_EN');self.assertEqual(SRC['wam-ar']['text_feeds_env'],'WAM_RSS_AR')
+        wf=(ROOT/'.github/workflows/publish.yml').read_text(encoding='utf-8')
+        self.assertIn('WAM_RSS_EN: ${{ secrets.WAM_RSS_EN }}',wf);self.assertIn('WAM_RSS_AR: ${{ secrets.WAM_RSS_AR }}',wf)
+        self.assertNotIn('rss/feed/',json.dumps(SOURCES),'feed URLs with the access code never sit in the public repo')
