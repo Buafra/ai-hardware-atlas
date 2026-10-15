@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-15T08:24:41+00:00",
+ "updated_at": "2026-10-15T19:13:10+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -476,6 +476,17 @@
    "moe": false
   },
   {
+   "id": "meta/muse-spark-open",
+   "name": "Meta: Muse Spark Open",
+   "hf": "meta-models/Muse-Spark-Open-816B-A42B",
+   "context": 1048576,
+   "created": 1792087069,
+   "open": true,
+   "params_b": 822.04,
+   "params_source": "huggingface",
+   "moe": true
+  },
+  {
    "id": "microsoft/phi-4",
    "name": "Microsoft: Phi 4",
    "hf": "microsoft/phi-4",
@@ -881,6 +892,17 @@
    "params_b": 31.58,
    "params_source": "huggingface",
    "moe": true
+  },
+  {
+   "id": "nvidia/nemotron-3.5-super-vl",
+   "name": "NVIDIA: Nemotron 3.5 Super VL",
+   "hf": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+   "context": 1048576,
+   "created": 1792076662,
+   "open": true,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
   },
   {
    "id": "openai/gpt-oss-120b",
@@ -1966,17 +1988,6 @@
    "hf": null,
    "context": 1000000,
    "created": 1776795361,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "anthropic/claude-sonnet-4",
-   "name": "Anthropic: Claude Sonnet 4",
-   "hf": null,
-   "context": 200000,
-   "created": 1747930371,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -3550,17 +3561,6 @@
    "hf": null,
    "context": 1000000,
    "created": 1781371647,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "unbiased/pareto-26.10-preview",
-   "name": "Pareto 26.10 Preview",
-   "hf": null,
-   "context": 1048576,
-   "created": 1790863623,
    "open": false,
    "params_b": null,
    "params_source": null,
