@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-15T07:45:00+04:00",
+  "generated_at": "2026-10-15T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3471,6 +3471,10 @@
           },
           "en": {
             "title": "Save this before ==your next meeting=="
+          },
+          "next": {
+            "ar": "الدرس 12: تقرير طويل وأنت مستعجل",
+            "en": "Lesson 12: A long report and no time"
           }
         }
       ],
@@ -3554,6 +3558,142 @@
       "published_at": "2026-10-15T07:45:00+04:00",
       "cover": "images/qahwa/week-03-day-15--3-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-03-day-16--1-learn-lesson-12",
+      "kind": "lesson",
+      "lesson": 12,
+      "code": "L12",
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "A long report and no time",
+        "ar": "تقرير طويل وأنت مستعجل"
+      },
+      "summary": {
+        "en": "Don't just say “summarize”. Say what you are looking for: the decision, the risks, the numbers, or the part that affects your team.",
+        "ar": "لا تكتفِ بكلمة «لخّص». قل ما الذي تبحث عنه: القرار المطلوب، أو المخاطر، أو الأرقام، أو ما يخص قسمك أنت."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تقرير طويل ==وأنت مستعجل==",
+            "body": "استخرج زبدة المستند، ثم تحقّق من الأرقام في مصدرها."
+          },
+          "en": {
+            "title": "A long report ==and no time==",
+            "body": "Pull out the key points, then check the numbers in the source."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ابدأ ==بسؤال محدد==",
+            "body": "لا تكتفِ بكلمة «لخّص». قل ما الذي تبحث عنه: القرار المطلوب، أو المخاطر، أو الأرقام، أو ما يخص قسمك أنت."
+          },
+          "en": {
+            "title": "Start with ==a specific question==",
+            "body": "Don't just say “summarize”. Say what you are looking for: the decision, the risks, the numbers, or the part that affects your team."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اطلبها بهذا الشكل",
+            "items": [
+              "أهم خمس نقاط بلغة بسيطة",
+              "الأرقام والمواعيد وموضع كل منها",
+              "ما الذي يُطلب مني أن أقرره؟"
+            ]
+          },
+          "en": {
+            "title": "Ask for it like this",
+            "items": [
+              "The five key points in plain words",
+              "Numbers and dates, and where each one is",
+              "What am I being asked to decide?"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ثم تحقّق",
+            "items": [
+              "افتح الصفحة واقرأ الرقم بنفسك",
+              "اسأله: من أين جاءت هذه المعلومة؟",
+              "ما لا تجده في المستند لا تعتمده"
+            ]
+          },
+          "en": {
+            "title": "Then verify",
+            "items": [
+              "Open the page and read the number yourself",
+              "Ask it: where did this come from?",
+              "If it isn't in the document, don't use it"
+            ]
+          },
+          "note": {
+            "ar": "قد تختلف قدرة قراءة الملفات وحجمها حسب الخدمة والخطة.",
+            "en": "File support and size limits vary by service and plan."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "==رشفة أولى== قبل الكوب كله",
+            "body": "تتذوّق القهوة قبل أن تشربها كاملة. والملخص رشفة: إن بنيت عليه قراراً، ارجع إلى المستند."
+          },
+          "en": {
+            "title": "==A first sip== before the whole cup",
+            "body": "You taste the coffee before drinking it all. A summary is that sip: if a decision rides on it, go back to the document."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "قبل أن ==ترفع الملف==",
+            "body": "لا ترفع مستندات عمل سرية أو بيانات عملاء إلى خدمة لم تعتمدها جهة عملك. اسأل قسم تقنية المعلومات أولاً."
+          },
+          "en": {
+            "title": "Before you ==upload the file==",
+            "body": "Don't upload confidential work documents or customer data to a service your employer hasn't approved. Ask IT first."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "[أرفق المستند]: خمس نقاط، والأرقام والمواعيد وموضعها، وما يخص [اهتمامي]. لا تخرج عنه وقل الناقص. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "[Attach the document]: five key points, numbers and dates with where each is, anything on [my interest]. Use only it; say if missing. Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==التقرير القادم=="
+          },
+          "en": {
+            "title": "Save this before ==your next report=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "[Attach the document]: five key points, numbers and dates with where each is, anything on [my interest]. Use only it; say if missing. Answer in my language.",
+        "ar": "[أرفق المستند]: خمس نقاط، والأرقام والمواعيد وموضعها، وما يخص [اهتمامي]. لا تخرج عنه وقل الناقص. أجب بلغتي.",
+        "code": "L12"
+      },
+      "permalink": "https://www.instagram.com/p/DegDkYyiLRW/",
+      "published_at": "2026-10-15T08:03:00+04:00",
+      "cover": "images/qahwa/week-03-day-16--1-learn-lesson-12.webp",
+      "related_concepts": [
+        "context-window",
+        "rag"
+      ]
     }
   ]
 }
