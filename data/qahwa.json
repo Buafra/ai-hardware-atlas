@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-14T20:30:00+04:00",
+  "generated_at": "2026-10-15T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3518,6 +3518,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-14T20:30:00+04:00",
       "cover": "images/qahwa/week-03-day-15--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-15--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "An AI assistant hears your meeting automatically.",
+        "ar": "المساعد الذكي يسمع اجتماعك تلقائياً"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant ==hears your meeting== automatically.",
+            "body": "Answer: Myth ❌ An AI assistant only uses what you give it. Some services do offer meeting recording and summaries, but it is a separate feature you must turn on, and tell the others first."
+          },
+          "ar": {
+            "title": "المساعد الذكي ==يسمع اجتماعك== تلقائياً",
+            "body": "الجواب: خرافة ❌ المساعد الذكي يعالج ما تعطيه إياه فقط. توفّر بعض الخدمات تسجيل الاجتماعات وتلخيصها، لكنها ميزة منفصلة تحتاج تفعيلاً، ويجب إبلاغ الحاضرين."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-15T07:45:00+04:00",
+      "cover": "images/qahwa/week-03-day-15--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
