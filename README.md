@@ -59,10 +59,11 @@ The website serves only the newest release; a new release replaces the file at t
 2. Publish it as a release of this repository, tag `android-v<versionName>`, the APK uploaded as `Cipher-Lacuna.apk`:
 
    ```bash
-   gh release create android-v1.0.2 "Cipher-Lacuna-1.0.2.apk#Cipher-Lacuna.apk" -R Buafra/ai-hardware-atlas --title "Cipher Lacuna for Android 1.0.2" --notes "..."
+   cp Cipher-Lacuna-1.1.0.apk upload/Cipher-Lacuna.apk
+   gh release create android-v1.1.0 upload/Cipher-Lacuna.apk -R Buafra/ai-hardware-atlas --title "Cipher Lacuna for Android 1.1.0" --notes "..."
    ```
 
-   (With `gh`, `path#name` sets the name the file is uploaded under; the upload must be named exactly `Cipher-Lacuna.apk`.)
+   The file must be named exactly `Cipher-Lacuna.apk` on disk: GitHub keeps the file's own name, and `gh`'s `path#text` only sets a display label (a release of 1.1.0 uploaded as `Cipher-Lacuna-1.1.0.apk#Cipher-Lacuna.apk` was skipped by the site until the file was uploaded again under the right name). Check with `gh release view android-vX.Y.Z --json assets --jq '.assets[].name'`.
 3. The release starts **Update hardware and publish** on main (`.github/workflows/android-release.yml` dispatches it: the site deploys from main only). `scripts/android_app.py` picks the highest `android-vX.Y.Z` release (not drafts or pre-releases) and downloads its APK. It checks the file before the site serves it:
    - the size and SHA-256 match GitHub's record;
    - it is a ZIP holding `AndroidManifest.xml`;
