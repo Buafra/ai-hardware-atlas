@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-14T19:27:31+00:00",
+ "updated_at": "2026-10-15T07:56:15+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1352,6 +1352,17 @@
    "created": 1779985069,
    "open": true,
    "params_b": 201.37,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "stepfun/step-5-preview",
+   "name": "StepFun: Step 5 Preview",
+   "hf": "stepfun-ai/Step-5-Preview",
+   "context": 1048576,
+   "created": 1791462849,
+   "open": true,
+   "params_b": 604.34,
    "params_source": "huggingface",
    "moe": false
   },
@@ -3968,17 +3979,6 @@
    "hf": null,
    "context": 256000,
    "created": 1779298123,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "stepfun/step-5-preview",
-   "name": "StepFun: Step 5 Preview",
-   "hf": null,
-   "context": 1000000,
-   "created": 1791462849,
    "open": false,
    "params_b": null,
    "params_source": null,
