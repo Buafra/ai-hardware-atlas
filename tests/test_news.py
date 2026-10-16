@@ -245,6 +245,28 @@ class SummaryTests(unittest.TestCase):
         self.assertEqual(len(read),100)  # 80 in the first round, then 20 more for the 20 places left; i100-i119 not read
         self.assertEqual(sorted(set(read)),sorted(read))
         self.assertEqual(len(client.calls),news.SUMMARY_PER_RUN//news.SUMMARY_BATCH)
+    def test_a_page_with_no_text_is_read_at_most_page_tries_times(self):
+        # A story with no excerpt whose page refuses the bot waits without using a try, but its page is not fetched on
+        # every run for 14 days: PAGE_TRIES reads, then left alone. A source with read_pages false is never fetched.
+        wam={**SRC,'id':'wam','read_pages':False}
+        bare=item(1);bare.pop('excerpt');feed=item(2,source='wam');feed.pop('excerpt')
+        read=[];client=FakeClient()
+        def page(i,s):read.append(i['id']);return 'Access denied'
+        for run in range(10):
+            with mock.patch.dict(os.environ,{'ANTHROPIC_API_KEY':'test-key'}),mock.patch('anthropic.Anthropic',return_value=client),\
+                 mock.patch.object(news,'fetch_article',side_effect=page):
+                self.assertEqual(news.summarize([bare,feed],[SRC,wam]),0)
+        self.assertEqual((read,client.calls),(['i01']*news.PAGE_TRIES,[]))
+        self.assertEqual(bare['summary_page_misses'],news.PAGE_TRIES);self.assertNotIn('summary_page_misses',feed)
+        self.assertIn('summary_page_misses',news.CARRIED)  # kept by the fresh copy of the story each run (merge)
+        self.assertTrue(all('summary_attempts' not in i for i in (bare,feed)))
+        # Text that arrives without a page read (WAM's text feed, as _page) is still used, and an excerpt still is.
+        feed['_page']='The full article from the agency text feed. '*10;bare['excerpt']='A publisher description, long enough.'
+        with mock.patch.dict(os.environ,{'ANTHROPIC_API_KEY':'test-key'}),mock.patch('anthropic.Anthropic',return_value=client),\
+             mock.patch.object(news,'fetch_article',side_effect=page):
+            self.assertEqual(news.summarize([bare,feed],[SRC,wam]),2)
+        self.assertEqual(read,['i01']*news.PAGE_TRIES)
+        self.assertEqual((feed['summary_basis'],bare['summary_basis']),('article','excerpt'))
     def test_validation(self):
         long_en='The company announced a new accelerator for data centres this week. '*20
         answers={'i00':{'summary_en':long_en,'summary_ar':'أعلنت الشركة عن مسرّع جديد لمراكز البيانات هذا الأسبوع. '*25},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},

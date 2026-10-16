@@ -131,7 +131,7 @@ PER_SOURCE_MIN = 3    # ... plus up to this many of each source's newest that th
 TRANSLATE_PER_RUN = 40  # twice a day: up to 80 headlines a day
 EXCERPT_MAX = 280
 PAGE_EXCERPTS_PER_RUN = 60
-PAGE_TRIES = 2  # pages with no usable description are tried again once, then left alone
+PAGE_TRIES = 2  # pages with no usable description (or, for a summary, no text) are tried again once, then left alone
 SUMMARY_PER_RUN = 80
 SUMMARY_BATCH = 5
 SUMMARY_MAX = 1000  # longer answers are trimmed to whole sentences, not thrown away
@@ -1299,7 +1299,9 @@ def summarize(items, sources):
     item left out of the answer counts as one of the item's SUMMARY_TRIES at this version (an older summary stays
     meanwhile). Only a Claude request counts as a try: an item with nothing to send (page text under 300 characters
     and no excerpt) is not asked, uses no try and waits for a later run (WAM's text feed may carry it then; it leaves
-    the window after KEEP_DAYS anyway). Pages are read in rounds until SUMMARY_PER_RUN items have text to send, so
+    the window after KEEP_DAYS anyway). Its page is read here at most PAGE_TRIES times over the runs
+    (summary_page_misses), so a page that refuses the bot is not fetched every run; text that arrives without a page
+    read (WAM's text feed) is still used. Pages are read in rounds until SUMMARY_PER_RUN items have text to send, so
     waiting items never take the places of others. Returns the number summarised."""
     if not os.environ.get('ANTHROPIC_API_KEY'):
         return 0
@@ -1330,8 +1332,7 @@ def summarize(items, sources):
         while len(ready) < SUMMARY_PER_RUN and pos < len(todo):
             chunk = todo[pos:pos + SUMMARY_PER_RUN - len(ready)]
             pos += len(chunk)
-            # Pages already read for an excerpt this run are not fetched again.
-            pages = list(pool.map(lambda i: i['_page'] if i.get('_page') is not None else fetch_article(i, src.get(i['source'])), chunk))
+            pages = list(pool.map(lambda i: _summary_page(i, src.get(i['source'])), chunk))
             ready += _summary_inputs(chunk, pages, src)
     if not ready:
         return done
@@ -1342,6 +1343,22 @@ def summarize(items, sources):
     for n, batch in enumerate(batches):
         done += _apply_summaries([item for item, _, _ in batch], *answers[n])
     return done
+
+def _summary_page(item, source):
+    """The item's page text for its summary: read already this run (page excerpts) or carried by a text feed (WAM),
+    else read now. A story with no excerpt whose page gave no text (under 300 characters) PAGE_TRIES times here is not
+    fetched again (summary_page_misses, kept across runs): a page that refuses the bot would otherwise be fetched every
+    run until the story leaves the window."""
+    if item.get('_page') is not None:
+        return item['_page']
+    if (source or {}).get('read_pages') is False or item.get('summary_page_misses', 0) >= PAGE_TRIES:
+        return ''
+    page = fetch_article(item, source)
+    if len(page) >= 300:
+        item.pop('summary_page_misses', None)
+    elif not item.get('excerpt'):
+        item['summary_page_misses'] = item.get('summary_page_misses', 0) + 1
+    return page
 
 def _summary_inputs(items, pages, src):
     """(item, text, publisher) for the items that have something to summarise: the article page when it was read
@@ -1583,7 +1600,8 @@ def notify_owner(report, sources):
 
 # Fields worked out in earlier runs that a fresh copy of the same item keeps.
 CARRIED = ('summary_en', 'summary_ar', 'summary_source', 'summary_basis', 'summary_version', 'ai_focus', 'summary_attempts',
-           'summary_attempts_version', 'page_checked', 'policy_ok', 'policy_version', 'policy_hash', 'policy_attempts')
+           'summary_attempts_version', 'summary_page_misses', 'page_checked', 'policy_ok', 'policy_version', 'policy_hash',
+           'policy_attempts')
 
 def ranker(sources):
     """Sort key for copies of one story (lowest is kept): a copy that is shown before one that is not (judged not
