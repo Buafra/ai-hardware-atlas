@@ -103,11 +103,24 @@ class ReviewIssueTests(unittest.TestCase):
                      '**AI drafts:** none open.', 'Official pages that changed', 'https://blogs.nvidia.com/blog/a/',
                      'Failing sources', 'HTTPError: 403 Forbidden', 'no email'):
             self.assertIn(text, body)
-        self.assertNotIn('Approximate prices older', body)
+        self.assertNotIn('Approximate prices', body)
         for run in range(3):
             fake = self.run_review(FakeGh(comments=fake.comments))
             self.assertEqual(fake.new_comments(), [], run)
             self.assertEqual([p for p, _ in fake.writes('PATCH')], [f"repos/{{owner}}/{{repo}}/issues/comments/{self.status(fake)['id']}"])
+
+    def test_prices_are_flagged_at_30_days(self):
+        from datetime import date
+        self.assertEqual(R.STALE_PRICE_DAYS, 30)
+        catalog = {'products': [product('d29', '2026-09-17'), product('d30', '2026-09-16'), product('d47', '2026-08-30'),
+                                {'id': 'none', 'model': 'NONE', 'price': None}, {'id': 'nodate', 'model': 'X', 'price': {'usd_low': 1, 'checked': None}}]}
+        stale = R.stale_prices(catalog, date(2026, 10, 16))
+        self.assertEqual([(s['id'], s['days']) for s in stale], [('d47', 47), ('d30', 30)])
+        self.write('catalog.json', catalog)
+        fake = self.run_review(FakeGh())
+        self.assertIn('Approximate price 30 days old: D30 (checked 2026-09-16)', fake.new_comments()[-1])
+        self.assertNotIn('D29', fake.new_comments()[-1])
+        self.assertIn('**Approximate prices 30 days old or more:** D47 (2026-08-30), D30 (2026-09-16)', self.status(fake)['body'])
 
     def test_a_price_reaching_the_limit_is_announced_once(self):
         self.write('catalog.json', {'products': [product('fresh', '2026-10-08'), product('old', '2026-08-30')]})

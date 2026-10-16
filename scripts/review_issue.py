@@ -24,7 +24,7 @@ from refresh import FAILING_AFTER  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 LABEL = 'source-review'
-STALE_PRICE_DAYS = 45
+STALE_PRICE_DAYS = 30  # a price is flagged on the day it reaches this age
 MARKER = '<!-- cipher-lacuna:review-status -->'
 BOT = 'github-actions[bot]'
 ALERTED = re.compile(r'<!-- alerted: (\[.*?\]) -->', re.S)
@@ -43,11 +43,11 @@ def _load(path, default):
         return default
 
 def stale_prices(catalog, today):
-    """Products whose approximate price was checked more than STALE_PRICE_DAYS days before `today`, oldest first."""
+    """Products whose approximate price was checked STALE_PRICE_DAYS days or more before `today`, oldest first."""
     out = []
     for p in catalog['products']:
         checked = (p.get('price') or {}).get('checked')
-        if checked and (today - date.fromisoformat(checked)).days > STALE_PRICE_DAYS:
+        if checked and (today - date.fromisoformat(checked)).days >= STALE_PRICE_DAYS:
             out.append({'id': p['id'], 'model': p['model'], 'checked': checked, 'days': (today - date.fromisoformat(checked)).days})
     return sorted(out, key=lambda s: (s['checked'], s['model']))
 
@@ -159,7 +159,7 @@ def status_text(report, draft_report, stale, keys, now, news_path=None, cost_pat
     else:
         lines.append('- **AI drafts:** none open.')
     if stale:
-        lines.append(f'- **Approximate prices older than {STALE_PRICE_DAYS} days:** ' + ', '.join(f"{s['model']} ({s['checked']})" for s in stale))
+        lines.append(f'- **Approximate prices {STALE_PRICE_DAYS} days old or more:** ' + ', '.join(f"{s['model']} ({s['checked']})" for s in stale))
     if report.get('changes'):
         lines.append('- **Verified specification changes this run (already applied):** ' + '; '.join(report['changes']))
     folded = [_folded('Official pages that changed since the last check: inspect the timeline and unparsed specifications',
