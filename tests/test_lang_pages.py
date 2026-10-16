@@ -79,6 +79,8 @@ class RelocateTests(unittest.TestCase):
                  'index.html': 'index.html', 'learn.html#concept/rag': 'learn.html#concept/rag', 'qahwa.html?lang=en': 'qahwa.html?lang=en',
                  # Not site files.
                  '#news': '#news', 'https://www.nvidia.com/x': 'https://www.nvidia.com/x', 'data:image/svg+xml,x': 'data:image/svg+xml,x',
+                 # Pages in the Arabic folder itself (the Arabic weekly pages): relative to it.
+                 'ar/weekly/2026-w42.html': 'weekly/2026-w42.html', 'ar/weekly/index.html#x': 'weekly/index.html#x', 'weekly/index.html': '../weekly/index.html',
                  '../index.html': '../index.html', '/brand/x.png': '/brand/x.png', 'mailto:x': 'mailto:x', '': ''}
         for link, want in cases.items():
             self.assertEqual(lang_pages.moved(link), want, link)
@@ -250,7 +252,8 @@ class PageTests(unittest.TestCase):
         for page, name in ((self.ar, 'ar/index.html'), (self.learn_ar, 'ar/learn.html'), (self.qahwa_ar, 'ar/qahwa.html')):
             for link in lang_pages.relative_links(page):
                 path = link.split('#')[0].split('?')[0]
-                self.assertTrue(path.startswith('../') or path in lang_pages.PAGES, (name, link))
+                # The site's files one folder up, the paired pages beside it, and the Arabic weekly pages (ar/weekly/).
+                self.assertTrue(path.startswith('../') or path in lang_pages.PAGES or path.startswith('weekly/'), (name, link))
         self.assertIn('url(../fonts/qahwa/', self.qahwa_ar)
         self.assertIn('"root":"../"', self.qahwa_ar)
         self.assertIn('"root":""', self.qahwa_en)
@@ -282,7 +285,7 @@ class PageTests(unittest.TestCase):
         app = (ROOT / 'web' / 'app.js').read_text(encoding='utf-8')
         self.assertIn("const PAGE_LANG = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'en';", app)
         self.assertIn('function urlQuery() { return encodeState({...state, lang: DEFAULTS.lang}); }', app)
-        self.assertIn("langLink.setAttribute('href', pageUrl(langBase, urlQuery(), currentView));", app)
+        self.assertIn("langLink.setAttribute('href', pageUrl(langBase, urlQuery(), hashNow()));", app)
         self.assertIn("langLink.addEventListener('click', () => store.set('atlas-lang', PAGE_LANG === 'ar' ? 'en' : 'ar'));", app)
         self.assertNotIn("$('lang').addEventListener('click', () => { state.lang", app)  # no switching in place
         learn_js = (ROOT / 'web' / 'learn.js').read_text(encoding='utf-8')

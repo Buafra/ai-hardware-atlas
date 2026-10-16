@@ -78,22 +78,26 @@ def _segments(text, markup, style=None):
     out.append(markup(text[last:]))
     return ''.join(out)
 
-def moved(link, prefix='../', keep=PAGES):
+def moved(link, prefix='../', keep=PAGES, inside=AR_DIR):
     """One relative link of a root page as seen from a page one folder down: 'brand/x.png' -> '../brand/x.png'. Absolute
-    links, data: URIs, #fragments, ../ links and the paired pages (keep) are left as they are."""
+    links, data: URIs, #fragments, ../ links and the paired pages (keep) are left as they are. A link into the folder
+    the copy is in (`inside`) loses that folder: 'ar/weekly/2026-w42.html' -> 'weekly/2026-w42.html'."""
     if ABSOLUTE.match(link):
         return link
-    if re.split(r'[?#]', link, 1)[0] in keep:
+    path = re.split(r'[?#]', link, 1)[0]
+    if path in keep:
         return link
+    if inside and path.startswith(inside + '/'):
+        return link[len(inside) + 1:]
     return prefix + link
 
-def relocate(text, prefix='../', keep=PAGES):
+def relocate(text, prefix='../', keep=PAGES, inside=AR_DIR):
     """The page's own src/href links and its CSS url()s, rewritten for a copy one folder down (see moved())."""
     def markup(seg):
-        return LINK_ATTR.sub(lambda m: m.group(1) + moved(m.group(2), prefix, keep) + m.group(3), seg)
+        return LINK_ATTR.sub(lambda m: m.group(1) + moved(m.group(2), prefix, keep, inside) + m.group(3), seg)
     def style(css):
         return CSS_URL.sub(lambda m: m.group(0) if m.group(2).startswith('data:') else
-                           f'url({m.group(1)}{moved(m.group(2), prefix, keep)}{m.group(1)})', css)
+                           f'url({m.group(1)}{moved(m.group(2), prefix, keep, inside)}{m.group(1)})', css)
     return _segments(text, markup, style)
 
 def relative_links(text):

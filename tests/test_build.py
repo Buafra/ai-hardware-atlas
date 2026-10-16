@@ -2,7 +2,7 @@ import html,json,re,sys,tempfile,unittest
 from pathlib import Path
 from urllib.parse import unquote,urlparse
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-import build
+import build,topics
 ROOT=Path(__file__).resolve().parents[1]
 
 class BrandSlotTests(unittest.TestCase):
@@ -929,5 +929,85 @@ class NewsSearchMarkupTests(unittest.TestCase):
             self.assertIn(rule,css)
         block=css[css.index('/* News search'):css.index('@media (pointer:coarse){.n-search')]
         self.assertNotRegex(re.sub(r'/[*].*?[*]/','',block,flags=re.S),r'\b(?:left|right)\b')  # logical sides only (RTL)
+
+class TopicShareMarkupTests(unittest.TestCase):
+    """Owner requests of October 2026: topic chips in AI news (?nt=), share buttons on story, product and key-fact cards,
+    and the links to the weekly pages. The browser behaviour is checked by tests/test-sort.cjs (pure functions)."""
+    @classmethod
+    def setUpClass(cls):
+        cls.data,cls.feed,cls.sources,cls.uae,cls.models=build.load_all()
+        with tempfile.TemporaryDirectory() as d:
+            cls.html,_=build.render_page(cls.data,cls.feed,cls.sources,cls.uae,cls.models,brand_dir=Path(d),archive=[])
+        main=cls.html[cls.html.index('<main'):cls.html.index('</main>')]
+        cls.views={v:main[main.index(f'data-view="{v}"'):] for v in ('home','hardware','news','uae','contact')}
+        for v,nxt in (('home','hardware'),('hardware','news'),('news','uae'),('uae','contact')):
+            cls.views[v]=cls.views[v][:cls.views[v].index(f'data-view="{nxt}"')]
+        cls.items=build.news_items(cls.feed,cls.sources)
+        cls.src={s['id']:s for s in cls.sources}
+        cls.js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+    def test_every_list_card_names_its_topic(self):
+        for view in ('news','uae'):
+            for li in re.findall(r'<li class="nitem[^"]*" data-region="[^"]*" data-topic="([a-z]+)">',self.views[view]):self.assertIn(li,topics.TOPICS)
+        pics=build.news_images.pictures(self.items,self.src)
+        for i in self.items:
+            self.assertEqual(build.item_topic(i,self.src),pics[i['id']]['topic'])  # the chip and the topic image agree
+        if self.items:
+            i=self.items[0]
+            self.assertIn(f'data-topic="{build.item_topic(i,self.src)}">',build.news_li(i,'en',self.src))
+    def test_topic_chips(self):
+        en=[i for i in self.items if build.in_lang(i,'en')];ar=[i for i in self.items if build.in_lang(i,'ar')]
+        chips=build.topic_chips(en,ar,self.src)
+        present=[t for t in topics.TOPICS if any(build.item_topic(i,self.src)==t for i in en+ar)]
+        if len(present)<2:
+            self.assertEqual(chips,'');return
+        got=re.findall(r'data-topic-chip="([a-z]*)"',chips)
+        self.assertEqual(got,['']+present)  # All first, then topics.TOPICS order
+        for t in present:
+            n_en=sum(build.item_topic(i,self.src)==t for i in en);n_ar=sum(build.item_topic(i,self.src)==t for i in ar)
+            langs=' '.join(l for l,n in (('en',n_en),('ar',n_ar)) if n)
+            self.assertIn(f'data-topic-chip="{t}" data-langs="{langs}" aria-pressed="false">{build.L(build.E(topics.label(t,"en")),build.E(topics.label(t,"ar")))} <span class="n">{build.L(n_en,n_ar)}</span></button>',chips)
+        n=self.views['news']
+        self.assertLess(n.index('id="news-q"'),n.index('data-topic-chip'));self.assertLess(n.index('data-topic-chip'),n.index('data-region-chip'))
+        self.assertIn('<span class="fl" id="fl-ntopic" data-i18n>Topic</span>',n);self.assertIn("'Topic':'الموضوع'",self.js)
+        self.assertNotIn('data-topic-chip',self.views['uae']+self.views['home'])
+        # One topic: nothing to choose.
+        one=[{**self.items[0]}] if self.items else []
+        self.assertEqual(build.topic_chips(one,[],self.src),'')
+    def test_topic_labels(self):
+        self.assertEqual(topics.label('general','en'),'Other AI news');self.assertEqual(topics.label('general','ar'),'أخبار أخرى عن الذكاء الاصطناعي')
+        self.assertEqual(topics.label('models','ar'),topics.name('models','ar'))
+        self.assertEqual(topics.name('general','en'),'AI news')  # the topic image's alt text is unchanged
+    def test_share_buttons(self):
+        n,u,h=self.views['news'],self.views['uae'],self.views['hardware']
+        for view in (n,u):
+            cards=re.findall(r'<li class="nitem.*?</li>',view,re.S)
+            for li in cards:self.assertEqual(li.count('data-share="story"'),1)
+        self.assertEqual(h.count('data-share="product"'),len(self.data['products']))
+        self.assertIn('<button type="button" class="share-btn p-share js-only" data-share="product" aria-label="Share this product" data-i18n-aria="Share this product"><svg ',h)
+        self.assertEqual(u.count('data-share="fact"'),len(self.uae['facts']))
+        self.assertIn('class="share-btn f-share js-only" data-share="fact" aria-label="Share this key fact" data-i18n-aria="Share this key fact"',u)
+        self.assertIn('data-share="story" aria-label="Share this story" title="Share this story"',build.news_card(self.items[0],'en',self.src,share=True) if self.items else 'data-share="story" aria-label="Share this story" title="Share this story"')
+        if self.items:
+            ar=build.news_card(self.items[0],'ar',self.src,share=True)
+            self.assertIn('aria-label="مشاركة الخبر" title="مشاركة الخبر"',ar)
+            self.assertNotIn('data-share',build.news_card(self.items[0],'en',self.src))  # the overview's compact cards have none
+        self.assertNotIn('data-share',self.views['home'])
+        for pair in ("'Share this product':'مشاركة المنتج'","'Share this key fact':'مشاركة الحقيقة الرئيسية'","'Share this story':'مشاركة الخبر'"):self.assertIn(pair,self.js)
+        # No third-party share widget or script: the phone's own share sheet or the clipboard (app.js shareFrom).
+        for bad in ('facebook.com/sharer','twitter.com/intent','x.com/intent','wa.me/','addthis','sharethis','linkedin.com/share'):self.assertNotIn(bad,self.html.lower())
+        self.assertIn("navigator.share",self.js);self.assertIn("navigator.clipboard.writeText(s.copy)",self.js)
+    def test_new_strings_have_arabic(self):
+        for en in ('Search older stories','Search earlier months','Older stories: {m}','No older stories match this search.','Loading older stories…',
+                   'Older stories could not be loaded. Try again later.','No headlines match these filters. Choose All to see every headline.',
+                   'No headlines match this search with these filters. Choose All to search every headline.'):
+            self.assertRegex(self.js,re.escape(f"'{en}':'")+r'[^\x00-\x7f]',en)
+            self.assertNotIn('{q}',en)  # a link can set the query: it is never echoed
+    def test_css_and_head_script(self):
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        block=css[css.index('/* Topic chips (AI news)'):css.index('.n-older .more-row')]
+        self.assertNotRegex(re.sub(r'/[*].*?[*]/','',block,flags=re.S),r'\b(?:margin|padding)-(?:left|right)\b|[{;](?:left|right):')  # logical sides only (RTL)
+        for rule in ('.split-layout>.side{min-width:0}','.n-meta .n-share{margin-inline-start:auto}','.t-chips .chip[hidden]{display:none}'):self.assertIn(rule,css)
+        tpl=(ROOT/'web/template.html').read_text(encoding='utf-8')
+        self.assertIn('/[?&](region|nq|nt)(=|&|$)/',tpl)
 
 if __name__=='__main__':unittest.main()

@@ -270,10 +270,11 @@ def about_checks(page, tag, lang):
     left = [w for w in (PHRASE[0], PHRASE[1], 'Updated', 'آخر تحديث', 'a day', 'يومياً') if w in got['text']]
     check(not left, f'{tag} About mentions the update schedule: {left}')
 
-def go(page, url, view):
-    # Hash-only changes are same-document navigations: wait for the router to settle on the view.
+def go(page, url, view, hash=None):
+    # Hash-only changes are same-document navigations: wait for the router to settle on the view (and on `hash`, the
+    # address a product or key-fact deep link keeps; by default the view's own).
     page.goto(BASE + url)
-    page.wait_for_function(f'location.hash === "#{view}" && document.documentElement.dataset.route === "{view}"')
+    page.wait_for_function(f'location.hash === "{hash or "#" + view}" && document.documentElement.dataset.route === "{view}"')
     page.wait_for_timeout(150)
 
 def untranslated(page):
@@ -397,10 +398,11 @@ def main():
         n = int(page.text_content('#count').split()[0])
         check(0 < n < total, f'level filter count {n} of {total}')
         go(page, '#home', 'home')
-        page.click('.pillar.p-hw .mini a >> nth=0'); page.wait_for_function('location.hash === "#hardware"')
+        # A featured product keeps its deep link in the address (#hardware/p/<id>), so the address can be shared.
+        page.click('.pillar.p-hw .mini a >> nth=0'); page.wait_for_function('location.hash.startsWith("#hardware/p/")')
         page.wait_for_selector('.product.flash', timeout=3000)
         check(page.locator('.product.flash').count() == 1 and page.locator('.product.flash').is_visible(), 'featured product not highlighted')
-        go(page, '#p-h200', 'hardware')
+        go(page, '#p-h200', 'hardware', '#hardware/p/h200')
         check(visible_views(page) == ['hardware'] and page.locator('#p-h200').is_visible(), 'plain #p-<id> anchor did not open the card')
         go(page, '#hardware/vendor/AMD', 'hardware')
         check(page.url.endswith('vendor=AMD#hardware') and page.input_value('#vendor') == 'AMD', f'vendor deep link: {page.url}')
@@ -528,7 +530,9 @@ def main():
                 page.wait_for_function(f'document.activeElement && document.activeElement.id === "{focus}"', timeout=5000)
                 top, hb, vh = page.evaluate(f"[document.querySelector('{target}').getBoundingClientRect().top, document.querySelector('.top').getBoundingClientRect().bottom, innerHeight]")
                 check(hb - 1 <= top < vh / 2, f'[{width}px] fresh {link}: target top {top:.0f}, header {hb:.0f}')
-                check(page.evaluate('location.hash') in ('#hardware', '#uae'), f'[{width}px] fresh {link}: hash not canonical {page.evaluate("location.hash")}')
+                # Products and key facts keep their deep link (shareable); #hardware/run is reduced to the view.
+                want = {'#hardware/run': '#hardware', '#p-gb300-nvl72': '#hardware/p/gb300-nvl72'}.get(link, link)
+                check(page.evaluate('location.hash') == want, f'[{width}px] fresh {link}: hash {page.evaluate("location.hash")}, want {want}')
                 ctx.close()
         # 10e2. About Cipher Lacuna: #contact/about on a fresh page, in both languages, ends with the section in view and
         # focused (hash reduced to #contact); the footer's About link does the same from another view. No overflow.

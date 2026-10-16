@@ -49,7 +49,9 @@ let rp=routePatch(parseRoute('#hardware/level/Personal'),known);
 assert.deepEqual(rp,{patch:{q:'',vendor:'',level:'Personal',scope:'',fit:false},hash:'hardware',focus:null});
 assert.deepEqual(routePatch(parseRoute('#hardware/level/Evil'),known),{patch:{},hash:'hardware',focus:null});
 assert.equal(routePatch(parseRoute('#hardware/vendor/AMD'),known).patch.vendor,'AMD');
-rp=routePatch(parseRoute('#p-h200'),known);assert.equal(rp.focus,'p-h200');assert.equal(rp.patch.view,'cards');assert.equal(rp.hash,'hardware');
+// A product or a key fact keeps its deep link in the address (shareable); other deep links are reduced to the view.
+rp=routePatch(parseRoute('#p-h200'),known);assert.equal(rp.focus,'p-h200');assert.equal(rp.patch.view,'cards');assert.equal(rp.hash,'hardware/p/h200');
+assert.equal(routePatch(parseRoute('#hardware/p/h200'),known).hash,'hardware/p/h200');assert.equal(routePatch(parseRoute('#hardware/p/unknown'),known).hash,'hardware');
 assert.equal(routePatch(parseRoute('#hardware/p/unknown'),known).focus,null);
 assert.deepEqual(routePatch(parseRoute('#hardware/timeline'),known).patch,{view:'timeline'});
 assert.equal(routePatch(parseRoute('#hardware/run'),known).focus,'estimator');
@@ -57,7 +59,9 @@ assert.equal(routePatch(parseRoute('#hardware/compare'),known).focus,'compare');
 assert.deepEqual(routePatch(parseRoute('#news/all'),known).patch,{region:''});
 assert.deepEqual(routePatch(parseRoute('#news/global'),known).patch,{region:'global'});
 assert.equal(routePatch(parseRoute('#uae/f/jais-arabic-llm'),known).focus,'fact-jais-arabic-llm');
-assert.equal(routePatch(parseRoute('#uae/f/nope'),known).focus,null);
+assert.equal(routePatch(parseRoute('#uae/f/jais-arabic-llm'),known).hash,'uae/f/jais-arabic-llm');assert.equal(routePatch(parseRoute('#fact-jais-arabic-llm'),known).hash,'uae/f/jais-arabic-llm');
+assert.equal(routePatch(parseRoute('#uae/f/nope'),known).focus,null);assert.equal(routePatch(parseRoute('#uae/f/nope'),known).hash,'uae');
+assert.equal(routePatch(parseRoute('#hardware/run'),known).hash,'hardware');assert.equal(routePatch(parseRoute('#hardware/level/Personal'),known).hash,'hardware');
 assert.equal(routePatch(parseRoute('#nope'),known).hash,'home');
 // About Cipher Lacuna: #contact/about (and the plain #about anchor used without JavaScript) opens #contact at the section.
 assert.deepEqual(parseRoute('#contact/about'),{view:'contact',sub:'about',arg:''});
@@ -207,7 +211,7 @@ assert.equal(encodeState({...decodeState(''),uq:'falcon ',lang:'ar'}),'lang=ar&u
 assert.equal(decodeState('?uq='+'x'.repeat(150)).uq.length,100);assert.equal(decodeState('?nq=%20g42%20').nq,'g42');
 assert.equal(decodeState('').nq,'');assert.equal(decodeState('').uq,'');
 assert.ok(!HW_KEYS.includes('nq')&&!HW_KEYS.includes('uq'),'?q= stays the hardware search');
-assert.ok(tpl.includes("/[?&](region|nq)(=|&|$)/.test(s)?'news':/[?&]uq(=|&|$)/.test(s)?'uae':'home'"),'head script opens the news and UAE views for ?nq= and ?uq=');
+assert.ok(tpl.includes("/[?&](region|nq|nt)(=|&|$)/.test(s)?'news':/[?&]uq(=|&|$)/.test(s)?'uae':'home'"),'head script opens the news and UAE views for ?nq=, ?nt= and ?uq=');
 console.log('PASS: news search (normalizer, words, matching, URL state, implied views)');
 // Language pages (scripts/lang_pages.py): / is English and /ar/ Arabic, so the address app.js writes never repeats the
 // language (urlQuery() encodes the state with the default lang), and the language link carries the view and the filters
@@ -221,9 +225,53 @@ console.log('PASS: news search (normalizer, words, matching, URL state, implied 
   assert.equal(decodeState('?lang=ar').lang,'ar');assert.equal(decodeState('?lang=xx').lang,'en');
   const app=require('node:fs').readFileSync(require('node:path').join(__dirname,'..','web','app.js'),'utf8');
   assert.ok(app.includes('function urlQuery() { return encodeState({...state, lang: DEFAULTS.lang}); }'),'the URL never carries the language');
-  assert.ok(app.includes("langLink.setAttribute('href', pageUrl(langBase, urlQuery(), currentView));"),'the language link keeps the view and filters');
+  assert.ok(app.includes("langLink.setAttribute('href', pageUrl(langBase, urlQuery(), hashNow()));"),'the language link keeps the view (and a product or key-fact deep link) and the filters');
   assert.ok(app.includes(String.raw`langHref.replace(/(^|\/)index\.html$/, '$1')`),'over http(s) the link is /ar/ or /, not index.html');
   assert.ok(!tpl.includes("d.classList.add('i18n-wait')"),'no in-place Arabic: the head script sends the visit to /ar/');
   assert.ok(tpl.includes('__LANG_JS__'),'the language rule runs first in the head script');
 }
 console.log('PASS: language pages (URL without lang, language link, legacy ?lang=)');
+// Topic chips in AI news: ?nt= holds a topic id of scripts/topics.py, kept with the other news state; it opens AI news.
+assert.equal(decodeState('?nt=models').nt,'models');assert.equal(decodeState('').nt,'');
+for(const bad of ['?nt=Models','?nt=x','?nt=a%20b','?nt=%3Cscript%3E','?nt='+'a'.repeat(30)])assert.equal(decodeState(bad).nt,'',bad);
+assert.equal(encodeState({...decodeState(''),nt:'hardware',region:'uae',nq:'g42'}),'region=uae&nq=g42&nt=hardware');
+assert.deepEqual(decodeState(encodeState({...decodeState(''),nt:'robotics',lang:'ar'})),{...decodeState(''),nt:'robotics',lang:'ar'});
+assert.equal(parseRoute('','?nt=models').view,'news');assert.equal(parseRoute('','?q=4090&nt=models').view,'hardware');
+assert.ok(!HW_KEYS.includes('nt'),'?nt= is not a hardware key');
+console.log('PASS: topic chips URL state');
+// Share buttons: a story shares "<headline> — via cipherlacuna.ae" and the original link; products and facts their own deep link.
+const {sharePayload,deepLink,olderView,olderMatches}=require('../web/app.js');
+assert.deepEqual(sharePayload('story','  NVIDIA ships\n a chip ','https://pub.example/a','en'),
+  {title:'NVIDIA ships a chip',text:'NVIDIA ships a chip — via cipherlacuna.ae',url:'https://pub.example/a',copy:'NVIDIA ships a chip — via cipherlacuna.ae https://pub.example/a'});
+assert.equal(sharePayload('story','إنفيديا تطرح شريحة','https://pub.example/b','ar').text,'إنفيديا تطرح شريحة — عبر cipherlacuna.ae');
+assert.equal(sharePayload('story','Startup raises $& and $1','https://x.example/','en').text,'Startup raises $& and $1 — via cipherlacuna.ae');  // never a replacement pattern
+assert.deepEqual(sharePayload('product','H200 · Cipher Lacuna','https://cipherlacuna.ae/#hardware/p/h200','en'),{title:'H200 · Cipher Lacuna',url:'https://cipherlacuna.ae/#hardware/p/h200',copy:'https://cipherlacuna.ae/#hardware/p/h200'});
+assert.equal(deepLink('https://cipherlacuna.ae/','hardware/p/h200'),'https://cipherlacuna.ae/#hardware/p/h200');
+// The Arabic page's address says its language (/ar/), so its deep links never carry ?lang=.
+assert.equal(deepLink('https://cipherlacuna.ae/ar/','uae/f/jais-arabic-llm'),'https://cipherlacuna.ae/ar/#uae/f/jais-arabic-llm');
+console.log('PASS: share payloads and deep links');
+// Older stories (dist/news-archive/): the card's text per language and the matcher, the same rules as the current list.
+const SRCS={g:{name:'Global Pub',name_ar:'ناشر عالمي',region:'global'},u:{name:'Gulf Daily',name_ar:'صحيفة الخليج',region:'uae'},a:{name:'Arabic Pub',name_ar:'ناشر عربي',region:'uae'}};
+const OLD=[
+  {id:'1',source:'g',lang:'en',uae:false,topic:'hardware',published:'2026-09-20T10:00:00+00:00',title:'NVIDIA ships a new GPU',title_ar:'إنفيديا تشحن معالجاً جديداً',url:'https://g.example/1',summary_en:'The H300 has 300 GB.',summary_ar:'المعالج H300 بذاكرة 300 جيجابايت.',excerpt:null},
+  {id:'2',source:'u',lang:'en',uae:true,topic:'uae',published:'2026-09-19T10:00:00+00:00',title:'Abu Dhabi opens AI campus',title_ar:null,url:'https://u.example/2',summary_en:null,summary_ar:null,excerpt:'A campus for 2,000 students.'},
+  {id:'3',source:'a',lang:'ar',uae:true,topic:'education',published:'2026-09-18T10:00:00+00:00',title:'دبي تطلق برنامجاً للذكاء الاصطناعي',title_ar:null,url:'https://a.example/3',summary_en:'Dubai launches an AI programme.',summary_ar:'أطلقت دبي برنامجاً جديداً.',excerpt:'نص الناشر.'},
+  {id:'4',source:'u',lang:'en',uae:false,topic:'models',published:'2026-09-17T10:00:00+00:00',title:'OpenAI releases GPT-5',title_ar:null,url:'https://u.example/4',summary_en:null,summary_ar:null,excerpt:null},
+];
+let ov=olderView(OLD[0],'ar',SRCS);assert.deepEqual(ov,{title:'إنفيديا تشحن معالجاً جديداً',summary:'المعالج H300 بذاكرة 300 جيجابايت.',kind:'ai',mt:true,publisher:'ناشر عالمي'});
+ov=olderView(OLD[1],'en',SRCS);assert.deepEqual([ov.summary,ov.kind,ov.mt,ov.publisher],['A campus for 2,000 students.','publisher',false,'Gulf Daily']);
+ov=olderView(OLD[1],'ar',SRCS);assert.deepEqual([ov.title,ov.summary,ov.kind],['Abu Dhabi opens AI campus','','']);  // an English excerpt never stands in for Arabic
+ov=olderView(OLD[2],'ar',SRCS);assert.deepEqual([ov.summary,ov.kind,ov.mt],['أطلقت دبي برنامجاً جديداً.','ai',false]);
+const ids=o=>olderMatches(OLD,SRCS,{lang:'en',view:'news',...o}).map(i=>i.id);
+assert.deepEqual(ids({terms:[]}),[]);  // no search: nothing listed
+assert.deepEqual(ids({terms:searchWords('nvidia')}),['1']);assert.deepEqual(ids({terms:searchWords('h300')}),['1']);  // the summary counts
+assert.deepEqual(ids({terms:searchWords('gulf daily')}),['2','4']);  // the publisher counts
+assert.deepEqual(ids({terms:searchWords('2000 students')}),['2']);  // "2,000" across punctuation
+assert.deepEqual(ids({terms:searchWords('gpt5')}),['4']);
+assert.deepEqual(ids({terms:searchWords('gulf'),region:'uae'}),['2']);assert.deepEqual(ids({terms:searchWords('gulf'),region:'global'}),['4']);  // a UAE outlet's world story is global
+assert.deepEqual(ids({terms:searchWords('gulf'),topic:'models'}),['4']);
+assert.deepEqual(olderMatches(OLD,SRCS,{lang:'en',view:'uae',terms:searchWords('gulf'),topic:'models',region:'global'}).map(i=>i.id),['2']);  // UAE AI: UAE stories, no chips
+assert.deepEqual(olderMatches(OLD,SRCS,{lang:'ar',view:'news',terms:searchWords('دبي')}).map(i=>i.id),['3']);
+assert.deepEqual(olderMatches(OLD,SRCS,{lang:'ar',view:'news',terms:searchWords('انفيديا')}).map(i=>i.id),['1']);  // the AI translation in Arabic
+assert.deepEqual(olderMatches(OLD,SRCS,{lang:'ar',view:'news',terms:searchWords('campus')}).map(i=>i.id),[]);  // not in the Arabic list
+console.log('PASS: older stories (archive) card text and matching');

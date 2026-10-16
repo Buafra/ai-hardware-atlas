@@ -9,9 +9,16 @@ fields stay out, and a concept's related_lessons lists only the Qahwa & AI lesso
 learn.json also carries Learn AI's reports (data/learn/reports.json, validated like the page's, newest first, each with
 its source 'group'): an additive field the app can ignore.
 
-Each headline also carries its topic (scripts/topics.py) and its image, a path relative to the site root: the company's
-own image (images/news/<id>.webp) or the topic image (news-img/<topic>.svg), the same the site shows; image_credit
-names the company for a company image. The app ignores keys it does not know.
+Each headline also carries its topic (scripts/topics.py, the id news.py stores as "topic"; the topic chips of AI news use
+it) and its image, a path relative to the site root: the company's own image (images/news/<id>.webp) or the topic image
+(news-img/<topic>.svg), the same the site shows; image_credit names the company for a company image. The app ignores
+keys it does not know.
+
+archive.json: the news archive (scripts/news_archive.py), the stories that left the AI news list in the last
+news_archive.APP_DAYS days before the headlines' last update, newest first, without those still in news.json. Each item
+has exactly news_archive.FIELDS (id, source, lang, uae, topic, published, title, title_ar, url, summary_en, summary_ar,
+excerpt; null when the story has none); summary_en and summary_ar are AI summaries, title_ar an AI translation. Only
+stories the site still shows (news_archive.shown: the content-policy rules apply to the archive too).
 """
 import hashlib
 import json
@@ -19,6 +26,7 @@ import sys
 from pathlib import Path
 
 import build
+import news_archive
 import news_images
 import learn
 import qahwa
@@ -38,7 +46,8 @@ def news_entry(i, src, pic=None):
     s = src[i['source']]
     out = {'id': i['id'], 'url': i['url'], 'source': i['source'], 'source_name': s['name'], 'source_name_ar': s.get('name_ar') or s['name'],
            'lang': i['lang'], 'regions': build.regions(i, src), 'uae': bool(i.get('uae')), 'published': i['published'],
-           'title': i['title'], 'title_ar': i.get('title_ar'), 'in_en': build.in_lang(i, 'en'), 'in_ar': build.in_lang(i, 'ar')}
+           'title': i['title'], 'title_ar': i.get('title_ar'), 'in_en': build.in_lang(i, 'en'), 'in_ar': build.in_lang(i, 'ar'),
+           'topic': (pic or {}).get('topic') or build.item_topic(i, src)}
     for lang in ('en', 'ar'):
         text, kind = build.summary_of(i, lang)
         out[f'summary_{lang}'], out[f'summary_kind_{lang}'] = text, kind
@@ -57,16 +66,18 @@ def app_reports(reports_doc):
     """Learn AI's reports as the page lists them: newest first, each with the source group its filter uses."""
     return [{**r, 'group': learn.report_group(r)} for r in learn.sorted_reports(reports_doc)]
 
-def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None, lessons_doc=None, reports_doc=None, company=None):
+def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None, lessons_doc=None, reports_doc=None, company=None,
+             archive=None):
     """Return {file name: JSON-ready dict}. Pure: writes nothing. `data` must already be prepared (build.prepare).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no related lessons).
     reports_doc: Learn AI's reports (default: data/learn/reports.json).
-    company: the company images of news_images.run() (none: every headline has its topic image)."""
+    company: the company images of news_images.run() (none: every headline has its topic image).
+    archive: the news archive's stories (news_archive.load(); default: data/news-archive/)."""
     if lessons_doc is None:
         lessons_doc = qahwa.empty_doc()
     if reports_doc is None:
         reports_doc = learn.load_reports()
-    c = build.context(data, feed, sources, uae, company=company)
+    c = build.context(data, feed, sources, uae, company=company, archive=archive)
     src = c['src']
     featured = [p['id'] for p in c['featured']]
     highlights = [f['id'] for f in c['highlights']]
@@ -82,12 +93,15 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=N
         'models.json': {'schema': APP_SCHEMA, 'updated_at': models.get('updated_at'), 'source': models.get('source'),
                         'models': [{k: m.get(k) for k in MODEL_KEYS} for m in models.get('models', [])]},
         'about.json': {'schema': APP_SCHEMA, **(about if about is not None else load_about())},
+        'archive.json': {'schema': APP_SCHEMA, 'updated_at': (feed or {}).get('updated_at'), 'days': news_archive.APP_DAYS,
+                         'items': news_archive.app_items(c['archive'], build.reference_time(feed))},
     }
 
 def encode(payload):
     return (json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
 
-def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None, lessons_doc=None, reports_doc=None, company=None):
+def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None, lessons_doc=None, reports_doc=None, company=None,
+          archive=None):
     """Write dist/app/*.json and manifest.json; return the manifest.
     lessons_doc: the published Qahwa & AI posts (default: learn.lessons_doc_safe(), from data/qahwa.json, as learn.html)."""
     if lessons_doc is None:
@@ -97,7 +111,7 @@ def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_d
     target = Path(out_dir) / APP_DIR
     target.mkdir(parents=True, exist_ok=True)
     files = {}
-    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about, lessons_doc, reports_doc, company).items():
+    for name, payload in payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about, lessons_doc, reports_doc, company, archive).items():
         raw = encode(payload)
         (target / name).write_bytes(raw)
         files[name] = {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}

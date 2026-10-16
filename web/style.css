@@ -479,6 +479,47 @@ tbody tr:hover{background:var(--surface-2)}
 @media (max-width:639px){.q-clear{width:40px;height:40px}}
 /* 16px on touch screens (phones and tablets) so iOS doesn't zoom into the field on focus. */
 @media (pointer:coarse){.n-search .inp{font-size:16px}}
+/* Topic chips (AI news): All, then each topic with headlines. On phones one row that scrolls sideways inside the panel
+   (the page itself never scrolls sideways). */
+.split-layout>.side{min-width:0}
+.n-topics{min-width:0;max-width:100%}
+.t-chips{min-width:0}
+.t-chips{gap:5px}
+.t-chips .chip{--c:var(--news);font-size:12.5px;padding:4px 10px;gap:5px}
+/* The sticky side panel of a wide screen scrolls on its own when it is taller than the window (many topics). */
+@media (min-width:1100px){.split-layout>.side{max-height:calc(100vh - 96px);overflow-y:auto;scrollbar-width:thin;overscroll-behavior:contain;border-radius:var(--r-lg)}}
+.t-chips .chip[hidden]{display:none}
+@media (max-width:639px){
+  .t-chips{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;padding-bottom:4px;margin-inline:-2px;padding-inline:2px}
+  .t-chips .chip{flex:none}
+}
+/* Week in review: the newest weekly page (weekly/*.html) and the list of all weeks, in the side panels. */
+.wk-links{padding-top:12px;border-top:1px solid var(--border)}
+.wk-links .fl{display:flex;align-items:center;gap:6px}
+.wk-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.wk-this{display:inline-flex;flex-direction:column;gap:0;padding:8px 12px;border-radius:10px;background:var(--news-soft);color:var(--news-ink);text-decoration:none;font-weight:800;font-size:14px;line-height:1.35}
+.v-uae .wk-this{background:var(--uae-soft);color:var(--uae-ink)}
+.wk-this small{font-weight:650;font-size:12px;color:var(--muted)}
+.wk-this:hover{text-decoration:underline}
+.wk-all{font-weight:700;font-size:13.5px;color:var(--accent-text)}
+/* Share buttons: a small round icon on story cards (end of the source line), product cards (beside Compare) and key facts. */
+.share-btn{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--muted);cursor:pointer;flex:none}
+.share-btn:hover{color:var(--accent-text);border-color:var(--border-strong);background:var(--surface-2)}
+.n-meta .n-share{margin-inline-start:auto}
+.product .p-share{position:absolute;inset-inline-end:10px;bottom:7px}
+.product .cmp{padding-inline-end:52px}
+.fact{position:relative}
+.fact .f-share{position:absolute;top:10px;inset-inline-end:10px;width:30px;height:30px}
+.fact h3{padding-inline-end:26px}
+@media (pointer:coarse){.share-btn{width:40px;height:40px}.fact .f-share{width:36px;height:36px}.product .p-share{bottom:3px}}
+/* Older stories (the news archive): offered under the results while a search is active, listed below them once asked. */
+.n-older{margin-top:16px;padding-top:14px;border-top:1px dashed var(--border-strong)}
+.older-btn{gap:8px}
+.older-count{margin:10px 2px 8px;font-size:13.5px;font-weight:700;color:var(--muted)}
+.older-count:empty{display:none}
+.older-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.older-item{border-style:dashed}
+.n-older .more-row{gap:10px;flex-wrap:wrap}
 .sec-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin:26px 0 12px}
 .sec-h h2{margin:0;font-size:22px}
 .sec-h p{margin:0;font-size:13.5px;color:var(--muted)}

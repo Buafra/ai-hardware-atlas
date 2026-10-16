@@ -1,5 +1,6 @@
 """Build the self-contained website and one-page PDF from the data files."""
 import argparse
+import collections
 import html
 import json
 import math
@@ -18,11 +19,13 @@ import apk_page
 import feeds
 import lang_pages
 import learn
+import news_archive
 import news_images
 import policy
 import qahwa
 import seo
 import topics
+import weekly
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'dist'
@@ -257,6 +260,7 @@ NOUNS = {
     'fact': (('key fact', 'key facts'), ('حقيقة رئيسية واحدة', 'حقيقتان رئيسيتان', 'حقائق رئيسية', 'حقيقة رئيسية', 'حقيقة رئيسية')),
     'source': (('source', 'sources'), ('مصدر واحد', 'مصدران', 'مصادر', 'مصدراً', 'مصدر')),
     'vetted': (('vetted source', 'vetted sources'), ('مصدر موثوق واحد', 'مصدران موثوقان', 'مصادر موثوقة', 'مصدراً موثوقاً', 'مصدر موثوق')),
+    'story': (('story', 'stories'), ('خبر واحد', 'خبران', 'أخبار', 'خبراً', 'خبر')),
 }
 
 def cnt(n, kind, lang):
@@ -315,7 +319,7 @@ def product(p):
     <p class="memory"><strong><bdi lang="en">{E(p['memory'])}</bdi></strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></p>
     <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}{release_kind(p['release_kind'])}</dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
     <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div></details>
-    <label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label></article>'''
+    <label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label>{share_btn('product', 'p-share', label='Share this product')}</article>'''
 
 # ---------- brand slot ----------
 
@@ -495,10 +499,28 @@ def news_pic(pic, lang):
            f' loading="lazy" decoding="async"{kind}>')
     return img, (f'<span class="n-credit">{IMAGE_CREDIT[lang]} <bdi>{E(who)}</bdi></span>' if who else '')
 
-def news_card(i, lang, src, tags='', pic=None):
+# Share buttons (owner request, Oct 2026): app.js uses the phone's share sheet (navigator.share) where there is one, and
+# copies the link otherwise, with a toast. A story shares "<headline> — via cipherlacuna.ae" and the original article's
+# link; a product or a key fact shares its own deep link (#hardware/p/<id>, #uae/f/<id>). No third-party widget.
+SHARE_STORY = {'en': 'Share this story', 'ar': 'مشاركة الخبر'}
+
+def share_btn(kind, cls, lang=None, label=None):
+    """The small share button. In a one-language list (`lang`) its label is in that language; on a card shown in both
+    languages app.js translates `label` (data-i18n-aria)."""
+    if lang:
+        aria = f'aria-label="{SHARE_STORY[lang]}" title="{SHARE_STORY[lang]}"'
+    else:
+        aria = f'aria-label="{label}" data-i18n-aria="{label}"'
+    return f'<button type="button" class="share-btn {cls} js-only" data-share="{kind}" {aria}>{ICON["share"]}</button>'
+
+def item_topic(i, src):
+    """The story's topic id (scripts/topics.py): the same rule as its topic image and the topic stored by news.py."""
+    return topics.topic_of(i, src.get(i['source']))
+
+def news_card(i, lang, src, tags='', pic=None, share=False):
     """One headline: the title as plain text, a short summary with who wrote it, then a small link to the original
     article with the publisher's name, and the date (UAE time). With `pic`, the story's image comes first (and a
-    company image's credit line after the date)."""
+    company image's credit line after the date); with `share`, a share button ends the line."""
     img, cred = news_pic(pic, lang)
     s, d = src[i['source']], to_uae(i['published'])
     title, mt = headline_text(i, lang)
@@ -509,8 +531,9 @@ def news_card(i, lang, src, tags='', pic=None):
     name = s['name_ar'] if ar else s['name']
     when = f'{d.day} {AR_MONTHS[d.month-1]}، <bdi>{d:%H:%M}</bdi>' if ar else f'{d.day} {EN_MONTHS[d.month-1]}, <bdi>{d:%H:%M}</bdi>'
     link = f'<a class="n-src" href="{E(i["url"])}" target="_blank" rel="noopener noreferrer">{"المصدر" if ar else "Source"}: {E(name)} <span class="n-ext" aria-hidden="true">↗</span></a>'
+    btn = share_btn('story', 'n-share', lang) if share else ''
     return (f'{img}<h4 class="n-title" {text_dir}>{E(title)}</h4>{summary}'
-            f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}{cred}</p>')
+            f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}{cred}{btn}</p>')
 
 def heads(items, src, per, limit, pics=None):
     """Compact headline cards for the home pillars, one list per language, each with a small image when `pics`
@@ -528,9 +551,12 @@ def heads(items, src, per, limit, pics=None):
 REGION_TAG = {'en': {'global': 'Global', 'uae': 'UAE'}, 'ar': {'global': 'عالمي', 'uae': 'الإمارات'}}
 
 def news_li(i, lang, src, pic=None):
+    """A card of the AI news and UAE AI lists: its regions and topic (data-topic, for the topic chips) and a share button."""
     reg = regions(i, src)
     tags = ''.join(f'<span class="tag {"uae" if r == "uae" else "glob"}">{REGION_TAG[lang][r]}</span>' for r in reg)
-    return f'<li class="nitem{" has-img" if pic else ""}" data-region="{" ".join(reg)}">{news_card(i, lang, src, tags, pic)}</li>'
+    topic = (pic or {}).get('topic') or item_topic(i, src)
+    return (f'<li class="nitem{" has-img" if pic else ""}" data-region="{" ".join(reg)}" data-topic="{E(topic)}">'
+            f'{news_card(i, lang, src, tags, pic, share=True)}</li>')
 
 NEWS_NOTE = L('Summaries marked "AI summary" are machine-written from the article or the publisher\'s description and may contain mistakes. Follow the source link to read the full story.',
               'الملخصات الموسومة «ملخص بالذكاء الاصطناعي» يكتبها الذكاء الاصطناعي من نص المقال أو من وصف الناشر، والعناوين الموسومة «ترجمة بالذكاء الاصطناعي» يترجمها الذكاء الاصطناعي، وقد تحتوي على أخطاء. اتبع رابط المصدر لقراءة الخبر كاملاً.')
@@ -577,6 +603,8 @@ ICON = {
     'phone': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18h3"/></svg>',
     'download': '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>',
     'rss': '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14"/><circle cx="6" cy="18" r="1.3" fill="currentColor" stroke="none"/></svg>',
+    'share': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8"/><path d="M5 12.5V19a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-6.5"/></svg>',
+    'week': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 14h4M7 17h7"/></svg>',
 }
 NAV = {'hardware': 'Hardware', 'news': 'AI news', 'uae': 'UAE AI', 'contact': 'Contact'}
 CONTACT_LEAD = 'Questions, corrections or partnership ideas? Email us.'
@@ -758,6 +786,52 @@ def rss_link(kind):
                       f'{ICON["rss"]}<span>{ar_text(RSS_LABEL[lang]) if lang == "ar" else RSS_LABEL[lang]}</span></a>')
     return f'<p class="rss">{a("en")}{a("ar")}</p>'
 
+def topic_chips(en_items, ar_items, src):
+    """The topic chips of AI news (owner request, Oct 2026): All, then each topic of scripts/topics.py that has headlines,
+    in TOPICS order, with its count in each language (app.js counts the matches of the search and the region, hides a
+    topic the page language has no headline in, and keeps the choice in the URL as ?nt=). Names in both languages.
+    Nothing when there is only one topic to choose."""
+    count = lambda pool: collections.Counter(item_topic(i, src) for i in pool)
+    n_en, n_ar = count(en_items), count(ar_items)
+    present = [t for t in topics.TOPICS if n_en[t] or n_ar[t]]
+    if len(present) < 2:
+        return ''
+    chips = f'<button type="button" class="chip" data-topic-chip="" aria-pressed="true"><span data-i18n>All</span> <span class="n">{L(len(en_items), len(ar_items))}</span></button>'
+    for t in present:
+        langs = ' '.join(lang for lang, n in (('en', n_en[t]), ('ar', n_ar[t])) if n)
+        chips += (f'<button type="button" class="chip" data-topic-chip="{t}" data-langs="{langs}" aria-pressed="false">'
+                  f'{L(E(topics.label(t, "en")), E(topics.label(t, "ar")))} <span class="n">{L(n_en[t], n_ar[t])}</span></button>')
+    return f'<div class="js-only n-topics"><span class="fl" id="fl-ntopic" data-i18n>Topic</span><div class="chips t-chips" role="group" aria-labelledby="fl-ntopic">{chips}</div></div>'
+
+def week_links(c, kind):
+    """The link to the newest weekly page (scripts/weekly.py) of this kind and to the list of all weeks, each in the page
+    language (weekly/… in English, ar/weekly/… in Arabic; on the Arabic overview lang_pages.relocate() makes these
+    relative to ar/)."""
+    wk = (c.get('weeks') or {}).get(kind)
+    if not wk:
+        return ''
+    name = weekly.TITLE
+    this = ''.join(f'<a class="wk-this" data-lang="{lang}" href="{E(wk[lang])}"><span>{E(name[(kind, lang)])}</span><small>{E(wk["range_" + lang])}</small></a>' for lang in ('en', 'ar'))
+    every = ''.join(f'<a class="wk-all" data-lang="{lang}" href="{weekly.index_path(lang)}">{weekly.ALL_WEEKS[lang]}</a>' for lang in ('en', 'ar'))
+    return (f'<div class="wk-links"><span class="fl">{ICON["week"]}{L(weekly.REVIEW["en"], weekly.REVIEW["ar"])}</span><div class="wk-row">{this}'
+            f'{every}</div></div>')
+
+def older_block(view, c):
+    """The "Search older stories" option of #news or #uae (owner request, Oct 2026): shown by app.js while a search is
+    active; a press loads the archive's month files (dist/news-archive/, same origin, on demand) and lists the matching
+    older stories below the current results, with the same matcher. Nothing when the archive has no story to show."""
+    pool = c.get('archive') or []
+    if view == 'uae':
+        pool = [i for i in pool if i.get('uae')]
+    if not pool:
+        return ''
+    return (f'<div class="n-older js-only" id="{view}-older" hidden data-archive="{news_archive.PUBLIC_DIR}/index.json">'
+            f'<button type="button" class="btn-ghost older-btn" id="{view}-older-btn" data-older="{view}" aria-expanded="false" aria-controls="{view}-older-list">'
+            f'{ICON["clock"]}<span data-i18n>Search older stories</span></button>'
+            f'<p class="older-count" id="{view}-older-count" aria-live="polite"></p><ol class="older-list" id="{view}-older-list"></ol>'
+            f'<div class="more-row"><button type="button" class="btn" id="{view}-older-more" hidden data-i18n>Show more</button>'
+            f'<button type="button" class="btn-ghost" id="{view}-older-back" hidden data-i18n>Search earlier months</button></div></div>')
+
 def news_view(c):
     src, items, feed = c['src'], c['items'], c['feed']
     if not c['sources']:
@@ -773,12 +847,14 @@ def news_view(c):
 {ihead('news', 'AI news', lead, f'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span>{fresh_line(feed, c["data"])}</span></p>')}
 <div class="split-layout"><aside class="side" aria-labelledby="n-side-h"><div class="panel"><h2 class="side-h" id="n-side-h" data-i18n>Headlines at a glance</h2>
 {search_box('news')}
+{topic_chips(en_items, ar_items, src)}
 <div class="js-only"><span class="fl" id="fl-nreg" data-i18n>Region</span><div class="chips" role="group" aria-labelledby="fl-nreg">{chips}</div></div>
-<dl class="side-stats">{side}</dl>{rss_link('news')}</div></aside>
+<dl class="side-stats">{side}</dl>{rss_link('news')}{week_links(c, 'all')}</div></aside>
 <div class="main-col"><h2 class="sr-only" data-i18n>Headlines</h2><div class="bar"><p class="count" id="news-count" aria-live="polite">{L(cnt(len(en_items), "headline", "en"), cnt(len(ar_items), "headline", "ar"))}</p><p class="muted" data-i18n>Times in UAE time</p></div>
 {day_lists(items, src, 'No recent English headlines.', 'لا توجد عناوين عربية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="news-more" hidden data-i18n>Show more</button></div>
 {search_empty('news')}
+{older_block('news', c)}
 <p class="muted n-note">{NEWS_NOTE}</p>
 </div></div>
 {xnav(c, ('hardware', 'uae'))}
@@ -794,6 +870,7 @@ def uae_view(c):
         links = ''.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">{E(s["label"])}</a>' for s in f['sources'])
         chips = f'<div class="chips">{hw}</div>' if hw else ''
         cards += (f'<article class="fact" id="fact-{E(f["id"])}" data-fact="{E(f["id"])}"><span class="f-date">{L("As of " + ymd(f["as_of"], "en"), "بتاريخ " + ymd(f["as_of"], "ar"))}</span>'
+                  f'{share_btn("fact", "f-share", label="Share this key fact")}'
                   f'<h3>{L(E(f["title_en"]), E(f["title_ar"]))}</h3><p>{L(E(f["text_en"]), E(f["text_ar"]))}</p>'
                   f'{chips}<p class="f-src"><span data-i18n>Sources</span>{links}</p></article>')
     uae_items = [i for i in items if i.get('uae')]
@@ -807,11 +884,12 @@ def uae_view(c):
 {ihead('uae', 'UAE AI', lead)}
 <div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2>
 {search_box('uae')}
-<dl class="side-stats">{side}</dl>{rss_link('uae')}</div></aside>
+<dl class="side-stats">{side}</dl>{rss_link('uae')}{week_links(c, 'uae')}</div></aside>
 <div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p id="uae-count" aria-live="polite">{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
 {day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
 {search_empty('uae')}
+{older_block('uae', c)}
 <p class="muted n-note">{NEWS_NOTE}</p></div></div>
 <section class="uae-facts" aria-labelledby="uae-facts-h"><div class="sec-h"><h2 id="uae-facts-h" data-i18n>Key facts</h2><p data-i18n>Newest first. Hardware tags open the matching products.</p></div>
 <div class="fgrid">{cards}</div></section>
@@ -916,11 +994,17 @@ def learn_context():
             'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
             'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
-def context(data, feed, sources, uae, about=None, company=None, android=None):
+def older_stories(items, archived, sources):
+    """The archived stories the site may show (news_archive.shown), without those already in the current list."""
+    return news_archive.shown(archived, sources, exclude={i['id'] for i in items} | {('url', i['url']) for i in items})
+
+def context(data, feed, sources, uae, about=None, company=None, android=None, archive=None):
     """Everything the page is rendered from. `company`: the company images news_images.run() prepared ({item id:
-    image}); every other headline gets its topic image."""
+    image}); every other headline gets its topic image. `archive`: the news archive's stories (news_archive.load();
+    default: data/news-archive/), for "Search older stories" and the weekly links."""
     ps = data['products']
     items = news_items(feed, sources)
+    older = older_stories(items, news_archive.load() if archive is None else archive, sources)
     src = {s['id']: s for s in sources}
     facts = (uae or {}).get('facts', [])
     featured, highlights = load_site(ps, facts)
@@ -942,6 +1026,8 @@ def context(data, feed, sources, uae, about=None, company=None, android=None):
         'about': about if about is not None else load_about(),
         # The Android app (android_app.load()): the About section's download card; None: no card.
         'android': android,
+        # Stories that left the AI news list (the archive), and the newest weekly page of each kind.
+        'archive': older, 'weeks': weekly.latest(items, older, sources),
     }
 
 def prepare(data):
@@ -985,13 +1071,14 @@ def lang_link(lang, other):
     return (f'<a class="btn-ghost" id="lang" href="{E(other)}" hreflang="ar" lang="ar"><span class="l-long">العربية</span>'
             '<span class="l-short" aria-hidden="true">عربي</span></a>')
 
-def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None, android=None, lang='en', other=None):
+def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None, android=None, archive=None, lang='en', other=None):
     """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json;
     `company`: the company images of news_images.run() (none: every headline gets its topic image);
-    `android`: the checked APK of android_app.load() (none: no download card or footer link).
+    `android`: the checked APK of android_app.load() (none: no download card or footer link);
+    `archive`: the news archive's stories (news_archive.load(); default: data/news-archive/).
     `lang`: 'en' for index.html, 'ar' for ar/index.html (lang_pages.py): the same page, served in Arabic (texts as app.js
     would show them, its own links one folder down); `other`: the link to the other language's copy."""
-    c = context(data, feed, sources, uae, about, company, android)
+    c = context(data, feed, sources, uae, about, company, android, archive)
     ar = lang == 'ar'
     other = other or ('../index.html' if ar else f'{lang_pages.AR_DIR}/index.html')
     desc = meta_description(c['about'], lang)
@@ -1093,6 +1180,20 @@ def pdf(data):
     c.setFillColor(HexColor('#65758f'));c.setFont('Atlas',8);c.drawString(30,28,'One-page overview. Precise dates are shown only where established; availability varies by partner and region.');c.drawRightString(w-30,28,f"© {str(data['updated_at'])[:4]} {SITE_NAME}")
     c.showPage();c.save()
 
+def reference_time(feed):
+    """When the headlines last changed (news.json updated_at), else now: the weekly pages' "in progress" note."""
+    try:
+        return datetime.fromisoformat(str((feed or {}).get('updated_at')).replace('Z','+00:00')).astimezone(timezone.utc)
+    except (TypeError,ValueError):
+        return datetime.now(timezone.utc)
+
+def write_weekly(out_dir,items,older,sources,feed,home='index.html'):
+    """The weekly pages (scripts/weekly.py) into out_dir/weekly/, with the site's logo; their links back go to `home`.
+    Returns the number of pages."""
+    logo,_=brand_assets()
+    built,_=weekly.pages(items,older,sources,reference_time(feed),logo.replace('class="brand-logo" ','class="w-logo" '),home)
+    return len(weekly.write(out_dir,built))
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--standalone',type=Path,help='also copy the self-contained page (and PDF beside it) to this .html path')
@@ -1108,18 +1209,23 @@ def main():
     android=android_app.load()
     android_app.publish(OUT,android)
     apk_share(OUT,android)  # cipherlacuna.ae/apk: the link to share, which starts the download on Android
-    text,public=render_page(data,feed,sources,uae,models,company=company,android=android)
-    page_ar,_=render_page(data,feed,sources,uae,models,company=company,android=android,lang='ar')  # ar/index.html: the same page in Arabic
+    archived=news_archive.load()  # data/news-archive/: stories that left the AI news list
+    text,public=render_page(data,feed,sources,uae,models,company=company,android=android,archive=archived)
+    page_ar,_=render_page(data,feed,sources,uae,models,company=company,android=android,archive=archived,lang='ar')  # ar/index.html: the same page in Arabic
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
     (OUT/lang_pages.AR_DIR).mkdir(exist_ok=True)
     (OUT/lang_pages.AR_DIR/'index.html').write_text(page_ar,encoding='utf-8',newline='\n')
+    # The archive's public files (Search older stories) and the weekly pages, from the same stories the page shows.
+    older=older_stories(news_items(feed,sources),archived,sources)
+    news_archive.publish(OUT,older,sources)
+    weeks=write_weekly(OUT,news_items(feed,sources),older,sources,feed)
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     copy_brand_images(OUT/'brand')
     learn.build(OUT,android=bool(android))
     qahwa.build_safe(OUT)  # the Qahwa & AI lessons page: bad Qahwa data is logged and left out, never stops the build
     import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
-    app_data.write(OUT,data,feed,sources,uae,models,company=company)  # dist/app/*.json for the Android app
+    app_data.write(OUT,data,feed,sources,uae,models,company=company,archive=archived)  # dist/app/*.json for the Android app
     feeds.write(OUT,feed,sources)  # news-en.xml, news-ar.xml, uae-en.xml, uae-ar.xml
     pdf(data)
     # Last: the sitemap lists the pages now in dist/ (robots.txt, site.webmanifest, favicon.ico and 404.html with it).
@@ -1129,11 +1235,14 @@ def main():
         shutil.copyfile(OUT/'index.html',target)
         # Its Arabic copy beside it in ar/, whose language link goes back to the standalone file's name.
         (target.parent/lang_pages.AR_DIR).mkdir(exist_ok=True)
-        (target.parent/lang_pages.AR_DIR/'index.html').write_text(render_page(data,feed,sources,uae,models,company=company,android=android,lang='ar',other='../'+target.name)[0],encoding='utf-8',newline='\n')
+        (target.parent/lang_pages.AR_DIR/'index.html').write_text(render_page(data,feed,sources,uae,models,company=company,android=android,archive=archived,lang='ar',other='../'+target.name)[0],encoding='utf-8',newline='\n')
         feeds.write(target.parent,feed,sources)
         seo.assets(target.parent,BRAND_DIR,meta_description(load_about()))
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
         if (OUT/news_images.OUT_DIR).exists():shutil.copytree(OUT/news_images.OUT_DIR,target.parent/news_images.OUT_DIR,dirs_exist_ok=True)
+        # The archive's files and the weekly pages (whose links back go to the standalone file), linked from the page.
+        if (OUT/news_archive.PUBLIC_DIR).exists():shutil.copytree(OUT/news_archive.PUBLIC_DIR,target.parent/news_archive.PUBLIC_DIR,dirs_exist_ok=True)
+        write_weekly(target.parent,news_items(feed,sources),older,sources,feed,home=target.name)
         news_images.copy_topic_images(target.parent)
         copy_brand_images(target.parent/'brand')
         if android:android_app.publish(target.parent,android);apk_share(target.parent,android)
@@ -1141,7 +1250,8 @@ def main():
         qahwa.build_safe(target.parent, home=target.name)
         shutil.copyfile(OUT/'AI_Hardware_Atlas_2026_One_Page.pdf',target.parent/'AI_Hardware_Atlas_2026_One_Page.pdf')
         print(f'Standalone copy written to {target}')
-    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF, {learn.PAGE} and {qahwa.PAGE}"
+    print(f"Built {len(data['products'])} products, self-contained HTML, JSON, one-page PDF, {learn.PAGE}, {qahwa.PAGE}, "
+          f"{weeks} weekly pages and {len(older)} archived stories"
           +(f", Android app {android['version']} at {android_app.PUBLIC_APK}" if android else ', no Android app download (no checked APK)'))
 
 if __name__=='__main__':main()

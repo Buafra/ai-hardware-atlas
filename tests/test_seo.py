@@ -171,8 +171,11 @@ class BuiltSiteTests(unittest.TestCase):
         for name in ('index.html', 'ar/index.html', 'learn.html', 'ar/learn.html', 'qahwa.html', 'ar/qahwa.html', 'apk/index.html', '404.html',
                      'robots.txt', 'sitemap.xml', 'site.webmanifest', 'favicon.ico', 'news-en.xml', 'news-ar.xml', 'uae-en.xml', 'uae-ar.xml'):
             self.assertTrue((self.out / name).is_file(), name)
-        # Nothing is copied into ar/: the Arabic pages use the site's files one folder up.
-        self.assertEqual(sorted(f.name for f in (self.out / 'ar').iterdir()), ['index.html', 'learn.html', 'qahwa.html'])
+        # Nothing is copied into ar/: the Arabic pages use the site's files one folder up. ar/weekly/ holds the Arabic
+        # weekly pages only (their stylesheet is weekly/weekly.css).
+        self.assertEqual(sorted(f.name for f in (self.out / 'ar').iterdir()), ['index.html', 'learn.html', 'qahwa.html', 'weekly'])
+        self.assertTrue((self.out / 'ar' / 'weekly' / 'index.html').is_file())
+        self.assertEqual({f.suffix for f in (self.out / 'ar' / 'weekly').iterdir()}, {'.html'})
 
     def test_every_link_of_every_page_resolves(self):
         for page in sorted(self.out.rglob('*.html')):
@@ -186,8 +189,15 @@ class BuiltSiteTests(unittest.TestCase):
                 self.assertTrue(target.exists(), f'{page.relative_to(self.out)}: {link}')
 
     def test_sitemap_lists_every_page_once(self):
-        locs = re.findall(r'<loc>([^<]+)</loc>', (self.out / 'sitemap.xml').read_text(encoding='utf-8'))
-        self.assertEqual(locs, [SITE, SITE + 'apk/', SITE + 'ar/', SITE + 'ar/learn.html', SITE + 'ar/qahwa.html', SITE + 'learn.html', SITE + 'qahwa.html'])
+        xml = (self.out / 'sitemap.xml').read_text(encoding='utf-8')
+        locs = re.findall(r'<loc>([^<]+)</loc>', xml)
+        # The weekly pages (weekly/ and ar/weekly/, scripts/weekly.py) are listed too, as the build wrote them.
+        weeks = [lang_pages.url(f.relative_to(self.out).as_posix()) for f in self.out.rglob('*.html') if 'weekly' in f.relative_to(self.out).parts]
+        self.assertIn(SITE + 'weekly/', weeks);self.assertIn(SITE + 'ar/weekly/', weeks)
+        fixed = [SITE + 'apk/', SITE + 'ar/', SITE + 'ar/learn.html', SITE + 'ar/qahwa.html', SITE + 'learn.html', SITE + 'qahwa.html']
+        self.assertEqual(locs, [SITE] + sorted(fixed + weeks))
+        self.assertIn(f'<url><loc>{SITE}ar/weekly/</loc><xhtml:link rel="alternate" hreflang="en" href="{SITE}weekly/"/>'
+                      f'<xhtml:link rel="alternate" hreflang="ar" href="{SITE}ar/weekly/"/>', xml)
         self.assertNotIn('404', ' '.join(locs))
 
     def test_canonical_on_home_and_learn(self):

@@ -71,6 +71,10 @@ One story is kept once per language: the same link from two sources, or headline
 with an excerpt or summary (dedupe_stories).
 Each run stores the newest MAX_ITEMS items of the last KEEP_DAYS days, plus up to PER_SOURCE_MIN of each source's newest
 that the cap would leave out, so busy feeds cannot crowd out the quiet official ones.
+Each stored item carries its "topic" (scripts/topics.py, the rule behind its topic image). Stories that leave news.json
+(their feed no longer lists them, or the window's age or cap leaves them out) are kept in the news archive,
+data/news-archive/YYYY-MM.json (scripts/news_archive.py), only those with a passing content-policy verdict; a story that
+comes back (same id or link) gets its archived AI summary and Arabic headline again instead of new paid ones.
 """
 import collections
 import concurrent.futures
@@ -98,7 +102,9 @@ from urllib.robotparser import RobotFileParser
 from pydantic import BaseModel
 
 import ai_cost
+import news_archive
 import policy
+import topics
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / 'data/news-sources.json'
@@ -106,6 +112,8 @@ OUT = ROOT / 'data/news.json'
 BLOCKED = ROOT / 'data/news-blocked.json'
 # Summary batches still running when a run ended: collected by the next run (batch and item ids only, no titles).
 PENDING = ROOT / 'data/news-batches.json'
+# The news archive (scripts/news_archive.py): None means data/news-archive/, beside OUT.
+ARCHIVE = None
 MODEL = 'claude-sonnet-5-5'  # owner's choice (4 Oct 2026): 60% cheaper per token than claude-opus-5
 KEEP_DAYS = 14
 PER_FEED = 25
@@ -1774,6 +1782,26 @@ def dedupe_excerpts(items):
             item.pop('excerpt')
         seen.add(key)
 
+def archive_dir():
+    """The news archive's folder: ARCHIVE, or data/news-archive/ beside OUT (so a run on another news.json, as in the
+    tests, never writes to the repository's archive)."""
+    return Path(ARCHIVE) if ARCHIVE else OUT.parent / 'news-archive'
+
+def reuse_archived(items):
+    """Stories back in the window get their archived AI summary and Arabic headline (news_archive.reuse): no second
+    payment for them. Returns the number of stories that got something back."""
+    return news_archive.reuse(items, news_archive.lookup(archive_dir()), SUMMARY_VERSION)
+
+def archive_leaving(leaving, sources):
+    """Add the stories that left the window this run to the archive (news_archive.append: verified stories only)."""
+    return news_archive.append(leaving, sources, archive_dir())
+
+def set_topics(items, sources):
+    """Store each item's topic (scripts/topics.py, the same rule as its topic image), from its texts as saved."""
+    src = {s['id']: s for s in sources}
+    for item in items:
+        item['topic'] = topics.topic_of(item, src.get(item['source']))
+
 def _optional(step, *args):
     """Run an optional step (page excerpts, translation, summaries); whatever it raises, the fresh headlines are saved."""
     try:
@@ -1834,9 +1862,14 @@ def main():
     merged = purge(merge(previous['items'], fresh, errors, sources), sources, blocked)
     flag_uae(merged, sources)
     # One copy of a story per language, chosen before the window so copies don't take its places.
+    before_dedupe = {i['url'] for i in merged}
     merged, duplicates = dedupe_stories(merged, sources)
+    # Links whose story another copy now stands for: such a copy is not archived beside the one kept.
+    copies = before_dedupe - {i['url'] for i in merged}
     items = window(merged, now)
     recheck(items, sources)
+    # A story back in the window keeps what the archive kept of it: no second payment for its summary or headline.
+    reused = _optional(reuse_archived, items)
     key = bool(os.environ.get('ANTHROPIC_API_KEY'))
     if not key:
         print('ANTHROPIC_API_KEY is not set: no Arabic translations, AI summaries or policy checks this run '
@@ -1858,16 +1891,26 @@ def main():
     count('policy_blocked', len(failing))
     report += remove(items, failing, blocked, now.date())
     blocked = save_blocked(blocked, now.date())
+    # Stories the last run stored that leave news.json now (their feed no longer lists them, or the window's age or cap
+    # leaves them out): they go to the archive below. Not a story still in the window (even one held back this run), a
+    # copy of a story kept from another source, or a story removed under the content policy.
+    in_window = {i['url'] for i in items}
+    leaving = [p for p in previous['items'] if p.get('url') not in in_window and p.get('url') not in copies and not is_blocked(p, blocked)]
     counts = policy_counts(items, blocked)
     saved_before = {p.get('url') for p in previous['items']}
     kept = [i for i in items if storable(i, key, i['url'] in saved_before)]
     counts['held_back'] = len(items) - len(kept)
     keep_batches_of_held_items({i['id'] for i in items} - {i['id'] for i in kept})
     items = kept
+    set_topics(items, sources)
+    # The archive first: if the run stopped between the two writes, the story is still in news.json and leaves again.
+    news_archive.DAMAGED.clear()
+    archived = _optional(archive_leaving, leaving, sources)
     data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
             'ai': {'key_set': key, 'model': MODEL, 'summary_tries_rule': TRIES_RULE, 'translated': translated, 'summarised': summarized,
                    'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS),
                    'usage': usage_report(), 'batches_left_running': len([b for b in load_pending() if b['id'] not in FINISHED])},
+            'archive': {'archived': archived, 'reused': reused, 'damaged_months': len(news_archive.DAMAGED)},
             'items': items}
     tmp = OUT.with_suffix('.tmp')
     tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
@@ -1877,6 +1920,8 @@ def main():
     print(f"News: {len(fresh)}/{len(sources)} feeds, {len(items)} items ({duplicates} copies of a story already kept left out), {sum(i['uae'] for i in items)} UAE, "
           f"{sum(1 for i in items if i.get('excerpt'))} with excerpts ({added} new from article pages), {translated} translated, {summarized} summarised, "
           f"{sum(1 for i in items if i.get('ai_focus') is False)} hidden as not mainly about AI")
+    print(f"News archive: {archived} stories archived as they left the window, {reused} returning stories took their archived "
+          f"summary or Arabic headline" + (f", {len(news_archive.DAMAGED)} damaged month file(s) left untouched" if news_archive.DAMAGED else ''))
     print(f"Content policy v{counts['policy_version']}: {counts['policy_checked']} checked, {counts['policy_blocked']} removed, "
           f"{counts['m1_dropped']} dropped under M1, {counts['policy_pending']} of {counts['regional']} UAE/GCC items hidden until verified, "
           f"{counts['held_back']} unverified items not saved")
