@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-15T19:13:10+00:00",
+ "updated_at": "2026-10-16T08:13:53+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -683,6 +683,28 @@
    "params_b": 24.26,
    "params_source": "huggingface",
    "moe": false
+  },
+  {
+   "id": "moondream/moondream3-preview",
+   "name": "Moondream: Moondream 3 Preview",
+   "hf": "moondream/moondream3-preview",
+   "context": 32000,
+   "created": 1792102385,
+   "open": true,
+   "params_b": 9.27,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "moondream/moondream3.1-9b-a2b",
+   "name": "Moondream: Moondream 3.1",
+   "hf": "moondream/moondream3.1-9B-A2B",
+   "context": 32000,
+   "created": 1792102373,
+   "open": true,
+   "params_b": 9.27,
+   "params_source": "huggingface",
+   "moe": true
   },
   {
    "id": "moonshotai/kimi-k2",
