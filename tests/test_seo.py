@@ -204,8 +204,9 @@ class BuiltSiteTests(unittest.TestCase):
         home = (self.out / 'index.html').read_text(encoding='utf-8')
         self.assertIn(f'<link rel="canonical" href="{SITE}">', home)
         self.assertIn(f'<link rel="canonical" href="{SITE}learn.html">', (self.out / 'learn.html').read_text(encoding='utf-8'))
-        self.assertIn('<link rel="manifest" href="site.webmanifest">', home)
-        self.assertIn('<link rel="manifest" href="../site.webmanifest">', (self.out / 'ar' / 'index.html').read_text(encoding='utf-8'))
+        # No manifest link: on iPhone its display mode would decide how Home Screen icons open (see build.py).
+        for page in ('index.html', 'learn.html', 'ar/index.html', 'ar/learn.html'):
+            self.assertNotIn('rel="manifest"', (self.out / page).read_text(encoding='utf-8'), page)
         # The iPhone Home Screen tags stay.
         for tag in ('<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">', '<meta name="apple-mobile-web-app-capable" content="yes">',
                     '<meta name="apple-mobile-web-app-title" content="Cipher Lacuna">'):

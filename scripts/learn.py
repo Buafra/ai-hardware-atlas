@@ -192,7 +192,6 @@ if str(ROOT / 'scripts') not in sys.path:
 import lang_pages  # noqa: E402  (scripts/lang_pages.py: the English and Arabic copies of the page)
 import policy  # noqa: E402  (scripts/policy.py: the region detection and normalisation the news check uses)
 import qahwa  # noqa: E402  (scripts/qahwa.py: which Qahwa & AI lessons are published, and their deep links)
-import seo  # noqa: E402  (scripts/seo.py: the web app manifest's name)
 
 _AR = 'ء-ي'  # Arabic letters (without diacritics)
 
@@ -1174,7 +1173,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
             f'<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7"><title>{esc(title)}</title>'
             f'<meta name="description" content="{esc(desc)}"><meta name="author" content="Cipher Lacuna">'
             f'<link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png"><link rel="icon" type="image/svg+xml" href="{favicon}">'
-            f'<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">{lang_pages.head_links(PAGE, lang)}<link rel="manifest" href="{seo.MANIFEST}">\n'
+            f'<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">{lang_pages.head_links(PAGE, lang)}\n'  # no manifest link (see build.py: iPhone Home Screen icons)
             f'<meta property="og:type" content="website"><meta property="og:site_name" content="Cipher Lacuna"><meta property="og:title" content="{esc(title)}">'
             f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{page_url}">'
             f'<meta property="og:image" content="{SITE_URL}brand/og.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200">'

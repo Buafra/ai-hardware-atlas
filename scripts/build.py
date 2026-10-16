@@ -1252,8 +1252,9 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=Non
     other = other or ('../index.html' if ar else f'{lang_pages.AR_DIR}/index.html')
     desc = meta_description(c['about'], lang)
     title = f'{SITE_NAME} | ' + (app_ar().get(HOME_TITLE, HOME_TITLE) if ar else HOME_TITLE)
-    head_links = (lang_pages.head_links('index.html', lang) + f'<link rel="manifest" href="{seo.MANIFEST}">'
-                  + (feeds.head_links(lang) if sources else ''))
+    # No <link rel="manifest">: iOS reads a manifest's display mode for Home Screen icons, and "browser" would open the
+    # icon in Safari instead of full screen (the iPhone shortcut on /apk/). site.webmanifest is still written, unlinked.
+    head_links = lang_pages.head_links('index.html', lang) + (feeds.head_links(lang) if sources else '')
     slim = {'updated_at': models.get('updated_at'), 'models': [slim_model(m) for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
