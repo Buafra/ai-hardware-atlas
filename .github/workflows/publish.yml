@@ -177,7 +177,7 @@ jobs:
             done
             test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
           fi
-      - name: Open or update the review issue
+      - name: Update the review issue (one status comment edited each run; a new comment only when the owner must act)
         if: github.event_name != 'push'
         continue-on-error: true
         env:

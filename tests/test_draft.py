@@ -76,7 +76,7 @@ class PullRequestFlowTests(unittest.TestCase):
         self.run_draft();self.record('failure','')
         state,report=self.record('success','7')
         self.assertEqual((state[URL]['result'],state[URL]['pr']),('drafted',7))
-        self.assertNotIn('pr_error',report);self.assertEqual((report['pull_request'],report['waiting'],report['in_pull_request']),(7,[],['Instinct MI999X']))
+        self.assertNotIn('pr_error',report);self.assertEqual((report['pull_requests'],report['waiting'],report['in_pull_request']),([7],[],['Instinct MI999X']))
         # While the pull request is open its drafts are written again, so a later run adds to it instead of emptying it.
         self.file().unlink();state,_=self.run_draft('OPEN')
         self.assertEqual(self.asked,[7]);self.assertTrue(self.file().exists());self.assertEqual(self.client.calls,1)

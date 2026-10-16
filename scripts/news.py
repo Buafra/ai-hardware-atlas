@@ -97,6 +97,7 @@ from urllib.robotparser import RobotFileParser
 
 from pydantic import BaseModel
 
+import ai_cost
 import policy
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -1837,5 +1838,17 @@ def main():
         print(f'AI step problems: {dict(PROBLEMS)}', file=sys.stderr)
     return 0
 
+def record_cost():
+    """Add this run's estimate to the monthly ledger (data/ai-cost.json, shown in the review issue). Called when the
+    script ends, even after an error (requests made before it were paid for); a ledger problem never fails the run."""
+    use = usage_report()
+    try:
+        ai_cost.add(use['estimated_usd'], use['requests'])
+    except Exception as exc:
+        print(f'AI cost ledger not updated ({type(exc).__name__})', file=sys.stderr)
+
 if __name__ == '__main__':
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    finally:
+        record_cost()

@@ -18,6 +18,7 @@ ROOT=Path(__file__).resolve().parents[1]
 VENDORS=('nvidia.com','amd.com')
 DISCOVERY=['https://nvidianews.nvidia.com/news/latest','https://newsroom.amd.com/category/data-center/','https://newsroom.amd.com/category/client-computing/','https://newsroom.amd.com/category/ai/']
 KEYWORDS=re.compile(r'\b(DGX|RTX|Instinct|MI\d{3}|Radeon|Helios|Rubin|Blackwell|Ryzen AI)\b',re.I)
+FAILING_AFTER=2  # failed checks in a row before a source counts as newly failing in the review issue (one timeout is not news)
 
 def official(url):
     u=urlparse(url)
@@ -84,11 +85,23 @@ def apply_values(p,values):
             changed.append(f"{p['model']}: {field} changed from {old} to {value:g}")
     return changed
 
+def mark_failures(state,errors,previous_errors):
+    """Count each failing source's failed checks in a row in source-state.json ("failures"; a good check replaces the
+    entry). Returns the sources that have just reached FAILING_AFTER: newly failing. A source that already failed in the
+    previous report, before this count existed, is not new."""
+    for url in errors:
+        s=state.setdefault(url,{})
+        s['failures']=s.get('failures',FAILING_AFTER if url in previous_errors else 0)+1
+    return sorted(u for u in errors if state[u]['failures']==FAILING_AFTER)
+
 def main():
     catalog_path=ROOT/'data/catalog.json';state_path=ROOT/'data/source-state.json'
     data=json.loads(catalog_path.read_text(encoding='utf-8'));state=json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else {}
     now=datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     rules=json.loads((ROOT/'data/refresh-rules.json').read_text(encoding='utf-8'))
+    report_path=ROOT/'data/refresh-report.json'
+    try:previous_errors=json.loads(report_path.read_text(encoding='utf-8')).get('errors') or {}
+    except (OSError,ValueError,AttributeError):previous_errors={}
     urls=set(DISCOVERY)|{r['url'] for r in rules.values()}
     for p in data['products']:
         # Partner devices also cite their maker's site; only NVIDIA / AMD pages are monitored.
@@ -108,6 +121,7 @@ def main():
         if previous.get('digest') and previous['digest']!=digest:
             review.append({'url':url,'reason':'Official page changed; inspect timeline and unparsed specifications','at':now})
         state[url]={'digest':digest,'checked_at':now}
+    new_errors=mark_failures(state,errors,previous_errors)
     for p in data['products']:
         rule=rules.get(p['id'])
         if not rule or rule['url'] not in pages:continue
@@ -134,8 +148,8 @@ def main():
     if changes:
         data['updated_at']=now
         data['changes']=([{'at':now,'summary':s} for s in changes]+data['changes'])[:80]
-    report={'at':now,'health':data['check_health'],'changes':changes,'review':review,'errors':errors}
-    (ROOT/'data/refresh-report.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
+    report={'at':now,'health':data['check_health'],'changes':changes,'review':review,'errors':errors,'new_errors':new_errors}
+    report_path.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     for path,obj in [(catalog_path,data),(state_path,state)]:
         temp=path.with_suffix('.tmp');temp.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n');temp.replace(path)
     print(f'Checked {len(pages)}/{len(urls)} official sources; {len(changes)} verified field changes; {len(review)} items for review')

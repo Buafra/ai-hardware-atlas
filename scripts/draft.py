@@ -27,6 +27,7 @@ from typing import Literal, Optional
 from pydantic import BaseModel
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ai_cost  # noqa: E402
 from refresh import fetch, official  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +39,8 @@ PENDING, DRAFTED = 'pending', 'drafted'  # waiting for a pull request / in one (
 PR_SETTING = ('Settings > Actions > General > Workflow permissions > "Allow GitHub Actions to create and approve '
               'pull requests"')
 MODEL = 'claude-sonnet-5-5'
+PRICE_IN, PRICE_OUT = 2.0, 10.0  # US dollars per million input / output tokens for MODEL (as in news.py); asked directly
+USAGE = {'requests': 0, 'input_tokens': 0, 'output_tokens': 0}  # this run's Claude requests
 MAX_PER_RUN = 3
 DATE = re.compile(r'^\d{4}-(\d{2}(-\d{2})?|Q[1-4]|H[12]|Summer|end)$')
 
@@ -113,9 +116,25 @@ def extract(client, url, title, text):
         return None, 'retry later: ' + type(exc).__name__
     except anthropic.APIStatusError as exc:
         return None, f'api error {exc.status_code}'
+    usage = getattr(response, 'usage', None)  # fake clients in tests carry none
+    USAGE['requests'] += 1
+    USAGE['input_tokens'] += getattr(usage, 'input_tokens', 0) or 0
+    USAGE['output_tokens'] += getattr(usage, 'output_tokens', 0) or 0
     if response.stop_reason != 'end_turn' or response.parsed_output is None:
         return None, 'no draft (' + str(response.stop_reason) + ')'
     return response.parsed_output.model_dump(), None
+
+def usage_report():
+    """This run's Claude requests, tokens and estimated cost (for data/draft-report.json and the cost ledger)."""
+    return {**USAGE, 'estimated_usd': round((USAGE['input_tokens'] * PRICE_IN + USAGE['output_tokens'] * PRICE_OUT) / 1e6, 4)}
+
+def record_cost():
+    """Add this run's estimate to the monthly ledger (data/ai-cost.json); a ledger problem never fails the run."""
+    use = usage_report()
+    try:
+        ai_cost.add(use['estimated_usd'], use['requests'])
+    except Exception as exc:
+        print(f'AI cost ledger not updated ({type(exc).__name__})', file=sys.stderr)
 
 def _load(path, default):
     try:
@@ -134,8 +153,11 @@ def open_drafts(state):
     is still open (drafted). Their records are written to data/drafts/ on every run."""
     return [(url, e) for url, e in state.items() if e.get('draft') and e.get('result') in (PENDING, DRAFTED)]
 
-def _models(state, result):
-    return [e['model'] for _, e in open_drafts(state) if e['result'] == result]
+def _open_report(state):
+    """The open drafts for data/draft-report.json (and the review issue): waiting for a pull request, in one, and which."""
+    models = lambda result: [e['model'] for _, e in open_drafts(state) if e['result'] == result]
+    return {'waiting': models(PENDING), 'in_pull_request': models(DRAFTED),
+            'pull_requests': sorted({e['pr'] for _, e in open_drafts(state) if e['result'] == DRAFTED})}
 
 def pr_state(number, run=subprocess.run):
     """'OPEN', 'MERGED' or 'CLOSED' for pull request `number` (gh with GH_TOKEN, read only), or None when that
@@ -221,7 +243,7 @@ def run(client=None, get=fetch, ask=pr_state):
             print(f"{url}: drafted {rec['model']} (waits for its pull request)")
     written = write_drafts(state)
     _save_state(state)
-    report = {'at': now, 'created': created, 'waiting': _models(state, PENDING), 'in_pull_request': _models(state, DRAFTED)}
+    report = {'at': now, 'created': created, **_open_report(state), 'usage': usage_report()}
     if skipped:
         report['skipped'] = skipped
     _save_report(report)
@@ -243,7 +265,7 @@ def record_pr(outcome, number, now=None):
         for e in waiting:
             e.update(result=DRAFTED, pr=int(number), pr_at=now)
         report.pop('pr_error', None)
-        report['pull_request'] = int(number)
+        report.pop('pr_error_at', None)
         print(f'Pull request #{number} holds {len(waiting)} new draft(s).')
     else:
         what = 'failed' if outcome == 'failure' else f'gave no pull request ({outcome or "did not run"})'
@@ -251,7 +273,7 @@ def record_pr(outcome, number, now=None):
                               f'kept and the next run tries again. If GitHub Actions may not open pull requests, enable {PR_SETTING}.')
         report['pr_error_at'] = now
         print(report['pr_error'], file=sys.stderr)
-    report['waiting'], report['in_pull_request'] = _models(state, PENDING), _models(state, DRAFTED)
+    report.update(_open_report(state))
     _save_state(state)
     _save_report(report)
     return 0
@@ -284,4 +306,7 @@ if __name__ == '__main__':
         sys.exit(promote(args.promote))
     if args.pr_result:
         sys.exit(record_pr(os.environ.get('PR_OUTCOME', ''), os.environ.get('PR_NUMBER', '')))
-    sys.exit(run())
+    try:
+        sys.exit(run())
+    finally:
+        record_cost()
