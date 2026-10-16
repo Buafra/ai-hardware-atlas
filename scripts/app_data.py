@@ -7,7 +7,10 @@ content-policy verdict, see scripts/policy.py), summaries come from build.summar
 fields stay out, and a concept's related_lessons lists only the Qahwa & AI lessons already published on qahwa.html
 (learn.published_lessons(), the rule behind Learn AI's lesson chips), so a future lesson's title never reaches the app. manifest.json lists each file's SHA-256 so the app downloads only what changed.
 learn.json also carries Learn AI's reports (data/learn/reports.json, validated like the page's, newest first, each with
-its source 'group'): an additive field the app can ignore.
+its source 'group') and its free official UAE AI courses as "courses" (data/learn/courses.json, validated like the
+page's, in the page's order): additive fields the app can ignore. models.json is the estimator's list: OpenRouter's
+models plus the UAE and Gulf models from official model cards (data/models-extra.json), which add maker, country,
+arabic, runnable, card_url and license. Catalog products may carry "benchmarks" (official MLPerf links only).
 
 Each headline also carries its topic (scripts/topics.py, the id news.py stores as "topic"; the topic chips of AI news use
 it) and its image, a path relative to the site root: the company's own image (images/news/<id>.webp) or the topic image
@@ -34,6 +37,17 @@ import qahwa
 APP_SCHEMA = 1
 APP_DIR = 'app'
 MODEL_KEYS = ('id', 'name', 'hf', 'params_b', 'params_source', 'open', 'moe', 'context')
+# models.json also lists the UAE and Gulf models from official model cards (data/models-extra.json, merged by
+# build.load_all()); each of those adds these keys (an additive change the app may ignore). runnable false: chat only,
+# no downloadable weights, so never fitted to hardware. arabic null: the card does not say. params_source may also be
+# "card" (the size the official card states).
+EXTRA_MODEL_KEYS = build.EXTRA_KEYS
+
+def app_model(m):
+    out = {k: m.get(k) for k in MODEL_KEYS}
+    if 'country' in m:
+        out.update({k: m.get(k) for k in EXTRA_MODEL_KEYS})
+    return out
 ABOUT = build.ROOT / 'data' / 'about.json'  # the About text the site and the app share
 
 def load_about(path=ABOUT):
@@ -66,17 +80,24 @@ def app_reports(reports_doc):
     """Learn AI's reports as the page lists them: newest first, each with the source group its filter uses."""
     return [{**r, 'group': learn.report_group(r)} for r in learn.sorted_reports(reports_doc)]
 
+def app_courses(courses_doc):
+    """Learn AI's free official UAE AI courses (data/learn/courses.json), in the page's order, as the file has them."""
+    return [dict(c) for c in (courses_doc or {}).get('courses') or []]
+
 def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=None, lessons_doc=None, reports_doc=None, company=None,
-             archive=None):
+             archive=None, courses_doc=None):
     """Return {file name: JSON-ready dict}. Pure: writes nothing. `data` must already be prepared (build.prepare).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no related lessons).
     reports_doc: Learn AI's reports (default: data/learn/reports.json).
     company: the company images of news_images.run() (none: every headline has its topic image).
-    archive: the news archive's stories (news_archive.load(); default: data/news-archive/)."""
+    archive: the news archive's stories (news_archive.load(); default: data/news-archive/).
+    courses_doc: Learn AI's courses (default: data/learn/courses.json), exported in learn.json as "courses"."""
     if lessons_doc is None:
         lessons_doc = qahwa.empty_doc()
     if reports_doc is None:
         reports_doc = learn.load_reports()
+    if courses_doc is None:
+        courses_doc = learn.load_courses()
     c = build.context(data, feed, sources, uae, company=company, archive=archive)
     src = c['src']
     featured = [p['id'] for p in c['featured']]
@@ -89,9 +110,10 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=N
                       'sources': len(sources), 'items': [news_entry(i, src, c['pics'].get(i['id'])) for i in c['items']]},
         'uae.json': {'schema': APP_SCHEMA, 'checked': (uae or {}).get('checked'), 'highlights': highlights, 'facts': facts},
         'learn.json': {'schema': APP_SCHEMA, 'groups': concepts_doc['groups'], 'concepts': app_concepts(concepts_doc, lessons_doc),
-                       'stacks': sorted(stacks_doc['stacks'], key=lambda s: s.get('order', 0)), 'reports': app_reports(reports_doc)},
+                       'stacks': sorted(stacks_doc['stacks'], key=lambda s: s.get('order', 0)), 'reports': app_reports(reports_doc),
+                       'courses': app_courses(courses_doc)},
         'models.json': {'schema': APP_SCHEMA, 'updated_at': models.get('updated_at'), 'source': models.get('source'),
-                        'models': [{k: m.get(k) for k in MODEL_KEYS} for m in models.get('models', [])]},
+                        'models': [app_model(m) for m in models.get('models', [])]},
         'about.json': {'schema': APP_SCHEMA, **(about if about is not None else load_about())},
         'archive.json': {'schema': APP_SCHEMA, 'updated_at': (feed or {}).get('updated_at'), 'days': news_archive.APP_DAYS,
                          'items': news_archive.app_items(c['archive'], build.reference_time(feed))},

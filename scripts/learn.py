@@ -20,6 +20,11 @@ UAE/GCC sources, summarised in our own words (3 to 5 findings and a "why it matt
 linking to the publisher's own official page. Only publishers on REPORT_PUBLISHERS are accepted, and a report's links
 must be https on that publisher's domains; reports carry text and links only (no images, logos, charts or private
 notes: the evidence for each report is kept outside this repository). The content policy guard covers them too.
+
+Courses (data/learn/courses.json, the fourth tab «الدورات», "Free official AI courses in the UAE"): free AI courses from
+UAE government bodies and universities, each listed only when its organiser's own official page says it is free. Each
+shows who it is for, the language, the format, the cost line, how to join, the organiser, the official link and the date
+it was checked. Links must be https on the organiser's own domains (COURSE_ORGS); course_problems() checks every field.
 """
 import argparse
 import ast
@@ -87,6 +92,15 @@ def load_reports(data_dir=DATA):
         return json.loads((Path(data_dir) / REPORTS).read_text(encoding='utf-8'))
     except FileNotFoundError:
         return {'reports': []}
+
+COURSES = 'courses.json'
+
+def load_courses(data_dir=DATA):
+    """data/learn/courses.json ({"courses": [...]}): free official AI courses in the UAE; no file means none yet."""
+    try:
+        return json.loads((Path(data_dir) / COURSES).read_text(encoding='utf-8'))
+    except FileNotFoundError:
+        return {'courses': []}
 
 LEVELS = {'beginner': ('Beginner', 'مبتدئ'), 'intermediate': ('Intermediate', 'متوسط'), 'advanced': ('Advanced', 'متقدم')}
 KINDS = ('stack', 'foundation')
@@ -320,12 +334,14 @@ def _sources(x, where, errs):
         if not (isinstance(s, dict) and _filled(s.get('label')) and _https(s.get('url'))):
             errs.append(f'{where}.sources[{j}] needs a label and an https url')
 
-def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXED_CONTENT, reports_doc=None):
+def validate(concepts_doc, stacks_doc, products, fact_ids=None, fixed_paths=FIXED_CONTENT, reports_doc=None, courses_doc=None):
     """Raise LearnDataError listing every problem: ids, bilingual text, cross references, links, hardware and UAE fact
-    ids, the reports (report_problems) and the content policy guard (policy_problems) over the Learn text and the fixed
-    pages in fixed_paths. fact_ids defaults to the facts in data/uae.json, reports_doc to data/learn/reports.json."""
+    ids, the reports (report_problems), the courses (course_problems) and the content policy guard (policy_problems) over
+    the Learn text and the fixed pages in fixed_paths. fact_ids defaults to the facts in data/uae.json, reports_doc to
+    data/learn/reports.json, courses_doc to data/learn/courses.json."""
     errs = policy_problems(concepts_doc, 'concepts') + policy_problems(stacks_doc, 'stacks') + fixed_content_problems(fixed_paths)
     errs += report_problems(load_reports() if reports_doc is None else reports_doc)
+    errs += course_problems(load_courses() if courses_doc is None else courses_doc)
     fact_ids = uae_fact_ids() if fact_ids is None else set(fact_ids)
     groups, concepts = concepts_doc.get('groups') or [], concepts_doc.get('concepts') or []
     stacks = stacks_doc.get('stacks') or []
@@ -476,6 +492,7 @@ NOUNS = {
     'stack': (('AI stack', 'AI stacks'), ('تركيبة واحدة', 'تركيبتان', 'تركيبات', 'تركيبة', 'تركيبة')),
     'foundation': (('foundation', 'foundations'), ('أساس واحد', 'أساسان', 'أسس', 'أساساً', 'أساس')),
     'report': (('report', 'reports'), ('تقرير واحد', 'تقريران', 'تقارير', 'تقريراً', 'تقرير')),
+    'course': (('free course', 'free courses'), ('دورة مجانية واحدة', 'دورتان مجانيتان', 'دورات مجانية', 'دورة مجانية', 'دورة مجانية')),
 }
 
 def cnt(n, kind, lang):
@@ -854,6 +871,162 @@ def reports_panel(reports, home='index.html'):
             f'<div class="l-items r-items">{"".join(report_item(r) for r in reports)}</div>{empty}'
             f'<p class="muted r-note">{note}</p></section>')
 
+# ---------- courses ----------
+# Free official AI courses in the UAE (data/learn/courses.json, the fourth tab «الدورات»). A course is listed only when
+# its organiser's own official page says it is free (free_source); paid courses are never listed. Every link a course
+# shows (its page, its Arabic page, the page that says it is free, its episodes) must be https on its organiser's own
+# domains (COURSE_ORGS: add an organiser there first). The content policy guard covers every course field.
+COURSE_ORGS = {  # key -> (short name, official domains)
+    'tdra': ('TDRA', ('academy.dgov.ae',)),
+    'dff': ('Dubai Future Foundation', ('dub.ai',)),
+    'mbrsg': ('MBRSG', ('cfg.ae', 'mbrsg.ae')),
+    'hbmsu': ('HBMSU', ('hbmsu.ac.ae',)),
+}
+COURSE_LANGS = {'ar': ('Arabic', 'العربية'), 'en': ('English', 'الإنجليزية'), 'fr': ('French', 'الفرنسية'),
+                'es': ('Spanish', 'الإسبانية'), 'pt': ('Portuguese', 'البرتغالية')}
+COURSE_FORMATS = {'online': ('Online', 'عبر الإنترنت'), 'hybrid': ('Online and in person', 'عبر الإنترنت وحضورياً'),
+                  'in-person': ('In person', 'حضورياً')}
+COURSE_STATUS = {'self-paced': ('Open any time', 'متاحة في أي وقت'), 'apply': ('Apply to join', 'بالتسجيل والقبول'),
+                 'between-editions': ('Next edition not announced', 'لم يُعلن موعد الدورة القادمة')}
+COURSE_KEYS = ('id', 'org', 'title_en', 'title_ar', 'title_ar_translated', 'organiser_en', 'organiser_ar', 'audience_en',
+               'audience_ar', 'languages', 'format', 'format_en', 'format_ar', 'status', 'status_en', 'status_ar', 'cost_en',
+               'cost_ar', 'certificate_en', 'certificate_ar', 'how_en', 'how_ar', 'items', 'url', 'url_ar', 'free_source',
+               'checked', 'sources')
+COURSE_REQUIRED = ('id', 'org', 'title_en', 'title_ar', 'organiser_en', 'organiser_ar', 'audience_en', 'audience_ar', 'languages',
+                   'format', 'format_en', 'format_ar', 'status', 'cost_en', 'cost_ar', 'how_en', 'how_ar', 'url', 'free_source',
+                   'checked', 'sources')
+COURSE_PROSE = ('organiser', 'audience', 'format', 'cost', 'how', 'certificate', 'status')
+COURSE_ITEM_KEYS = ('title_en', 'title_ar', 'minutes', 'url')
+CHECKED = re.compile(r'^\d{4}-\d{2}-\d{2}$')
+
+def course_problems(doc, today=None):
+    """Every problem in the courses document (empty when it is fine): fields, ids, bilingual text, the organiser
+    allow-list and its own domains, a "free" statement in both languages with the official page that says so, the
+    language/format/status values, the date it was checked, the episodes, and the content policy guard."""
+    if not isinstance(doc, dict) or not isinstance(doc.get('courses'), list):
+        return ['courses.json must be {"courses": [...]}']
+    courses = doc['courses']
+    if not all(isinstance(c, dict) for c in courses):
+        return ['every course must be an object']
+    today = today or date.today()
+    errs = policy_problems(doc, 'courses')
+    _ids(courses, 'course', errs)
+    _walk(doc, 'courses', errs)
+    for c in courses:
+        at = f'course {c.get("id")}'
+        extra = sorted(set(c) - set(COURSE_KEYS))
+        if extra:
+            errs.append(f'{at}: unknown field(s) {extra}')
+        for k in COURSE_REQUIRED:
+            if k not in c:
+                errs.append(f'{at}: {k} missing')
+        org = COURSE_ORGS.get(c.get('org'))
+        if org is None:
+            errs.append(f'{at}: organiser {c.get("org")!r} is not on the allow-list (COURSE_ORGS in scripts/learn.py)')
+        links = [('url', c.get('url')), ('url_ar', c.get('url_ar')), ('free_source', c.get('free_source'))]
+        items = c.get('items')
+        if items is not None and not (isinstance(items, list) and items):
+            errs.append(f'{at}: items must be a non-empty list or left out')
+            items = []
+        for j, it in enumerate(items or []):
+            if not isinstance(it, dict) or set(it) != set(COURSE_ITEM_KEYS):
+                errs.append(f'{at}: items[{j}] needs exactly {COURSE_ITEM_KEYS}')
+                continue
+            m = it.get('minutes')
+            if not (isinstance(m, int) and not isinstance(m, bool) and 1 <= m <= 600):
+                errs.append(f'{at}: items[{j}].minutes must be a whole number of minutes')
+            links.append((f'items[{j}].url', it.get('url')))
+        for k, url in links:
+            if url is None and k in ('url_ar',):
+                continue
+            if not _https(url):
+                errs.append(f'{at}: {k} must be an https URL: {url!r}')
+            elif org and not _on_domain(url, org[1]):
+                errs.append(f'{at}: {k} {url!r} is not on the organiser\'s own domain ({", ".join(org[1])})')
+        langs = c.get('languages')
+        if not (isinstance(langs, list) and langs and all(isinstance(x, str) and x in COURSE_LANGS for x in langs) and len(set(langs)) == len(langs)):
+            errs.append(f'{at}: languages must be a non-empty list of distinct codes from {tuple(COURSE_LANGS)}')
+        if c.get('format') not in COURSE_FORMATS:
+            errs.append(f'{at}: format must be one of {tuple(COURSE_FORMATS)}')
+        if c.get('status') not in COURSE_STATUS:
+            errs.append(f'{at}: status must be one of {tuple(COURSE_STATUS)}')
+        elif c['status'] == 'between-editions' and not (_filled(c.get('status_en')) and _filled(c.get('status_ar'))):
+            errs.append(f'{at}: a course between editions says when the last one ended (status_en, status_ar)')
+        # Free courses only, and the cost line says so in both languages.
+        if not str(c.get('cost_en') or '').startswith('Free'):
+            errs.append(f'{at}: cost_en must start with "Free" (paid courses are not listed)')
+        if 'مجاني' not in str(c.get('cost_ar') or ''):
+            errs.append(f'{at}: cost_ar must say it is free (مجاني)')
+        if 'title_ar_translated' in c and not isinstance(c['title_ar_translated'], bool):
+            errs.append(f'{at}: title_ar_translated must be true or false')
+        checked = str(c.get('checked') or '')
+        try:
+            day = date.fromisoformat(checked) if CHECKED.match(checked) else None
+        except ValueError:
+            day = None
+        if day is None:
+            errs.append(f'{at}: checked must be a real date as YYYY-MM-DD, not {c.get("checked")!r}')
+        elif day > today:
+            errs.append(f'{at}: checked {checked} is in the future')
+        src = c.get('sources')
+        if not (isinstance(src, list) and src and all(_https(s) for s in src)):
+            errs.append(f'{at}: sources must be a non-empty list of https URLs')
+        _arabic_prose(c, COURSE_PROSE, at, errs)
+    return errs
+
+def course_item(c):
+    fmt, status = COURSE_FORMATS[c['format']], COURSE_STATUS[c['status']]
+    badges = (f'<span class="rb rb-free">{L("Free", "مجانية")}</span><span class="rb rb-format">{L(*fmt)}</span>'
+              f'<span class="rb rb-{esc(c["status"])}">{L(*status)}</span>')
+    langs = L('<b>Language:</b> ' + esc(', '.join(COURSE_LANGS[x][0] for x in c['languages'])),
+              '<b>اللغة:</b> ' + esc('، '.join(COURSE_LANGS[x][1] for x in c['languages'])))
+    official = (f'<span data-lang="ar" lang="ar"><span class="r-dot" aria-hidden="true">·</span>العنوان الرسمي: '
+                f'<bdi lang="en" dir="ltr">{esc(c["title_en"])}</bdi></span>') if c.get('title_ar_translated') else ''
+    meta = f'<span class="r-meta"><span>{T(c, "organiser")}</span>{official}</span>'
+    row = lambda en, ar, value: f'<div><dt>{L(en, ar)}</dt><dd>{value}</dd></div>'
+    # Who it is for, its languages and the organiser are in the summary line; the body adds the rest.
+    rows = (row('Format', 'الصيغة', T(c, 'format')) + row('Cost', 'التكلفة', T(c, 'cost'))
+            + (row('Certificate', 'الشهادة', T(c, 'certificate')) if c.get('certificate_en') else '')
+            + row('How to join', 'طريقة الانضمام', T(c, 'how'))
+            + (row('Dates', 'المواعيد', T(c, 'status')) if c.get('status_en') else '')
+            + row('Checked', 'تاريخ التحقق', f'<time datetime="{esc(c["checked"])}">{L(report_date(c["checked"], "en"), report_date(c["checked"], "ar"))}</time>'))
+    episodes = ''
+    if c.get('items'):
+        mins = lambda n: L(f'{int(n)} min', f'{int(n)} دقيقة')
+        lis = ''.join(f'<li><a href="{esc(it["url"])}" {OUT_LINK}>{T(it, "title")}</a> <small>{mins(it["minutes"])}</small></li>'
+                      for it in c['items'])
+        episodes = sec('AI episodes', 'حلقات الذكاء الاصطناعي', f'<ul class="c-eps">{lis}</ul>')
+    name = f'<bdi lang="en" dir="ltr">{esc(COURSE_ORGS[c["org"]][0])}</bdi>'
+    links = f'<a class="c-link r-link" href="{esc(c["url"])}" {OUT_LINK}>{L(f"Official page on {name}", f"الصفحة الرسمية على موقع {name}")}</a>'
+    if c.get('url_ar'):
+        links += (f'<a class="c-link r-link r-alt" href="{esc(c["url_ar"])}" hreflang="ar" {OUT_LINK}>'
+                  f'{L(f"Arabic page on {name}", f"الصفحة العربية على موقع {name}")}</a>')
+    free = '' if c['free_source'] in (c['url'], c.get('url_ar')) else (
+        f'<p class="it-p c-free"><a href="{esc(c["free_source"])}" {OUT_LINK}>{L("Where the organiser says it is free", "حيث تذكر الجهة المنظِّمة أنها مجانية")}</a></p>')
+    body = f'<dl class="c-facts">{rows}</dl>{episodes}<div class="r-links">{links}</div>{free}'
+    return (f'<details class="l-item l-course" id="course/{esc(c["id"])}" data-format="{esc(c["format"])}" data-status="{esc(c["status"])}">'
+            f'<summary><span class="it-head"><h4 class="it-t">{T(c, "title")}</h4>{badges}</span>{meta}'
+            f'<span class="it-sum">{L("<b>For:</b> " + esc(c["audience_en"]), "<b>لمن:</b> " + esc(c["audience_ar"]))} · {langs}</span></summary>'
+            f'<div class="it-body">{body}</div></details>')
+
+def courses_panel(courses, home='index.html'):
+    lead = L('Free AI courses from UAE government bodies and universities. Each one says on its own official page that it is free. '
+             'For each course: who it is for, the language, the format, the organiser and the official link.',
+             'دورات مجانية في الذكاء الاصطناعي من جهات حكومية وجامعات في الإمارات، وكل منها تذكر صفحتها الرسمية أنها مجانية. '
+             'ولكل دورة: لمن هي، واللغة، والصيغة، والجهة المنظِّمة، والرابط الرسمي.')
+    contact = esc(home) + '#contact'
+    note = L('We checked each course on its organiser&#x27;s official pages on the date shown. Courses, dates and conditions change, '
+             'so check the official page before you sign up. Paid courses are not listed. Cipher Lacuna is not affiliated with '
+             f'these organisers. To suggest a free official course, use our <a href="{contact}">contact page</a>.',
+             'تحققنا من كل دورة على الصفحات الرسمية لجهتها المنظِّمة في التاريخ المذكور. الدورات ومواعيدها وشروطها تتغيّر، '
+             'لذا راجع الصفحة الرسمية قبل التسجيل. لا ندرج الدورات المدفوعة. ولا يرتبط Cipher Lacuna بهذه الجهات. '
+             f'ولاقتراح دورة رسمية مجانية استخدم <a href="{contact}">صفحة التواصل</a>.')
+    empty = '' if courses else f'<p class="l-empty">{L("No courses yet.", "لا توجد دورات بعد.")}</p>'
+    return (f'<section id="courses" class="l-panel" data-panel="courses" aria-labelledby="courses-h">'
+            f'<div class="p-intro"><h2 id="courses-h">{L("Free official AI courses in the UAE", "دورات رسمية مجانية في الذكاء الاصطناعي في الإمارات")}</h2><p>{lead}</p></div>'
+            f'<div class="l-items c-items">{"".join(course_item(c) for c in courses)}</div>{empty}'
+            f'<p class="muted r-note">{note}</p></section>')
+
 # ---------- page ----------
 
 def filter_chip(value, label, n, dim=''):
@@ -906,14 +1079,22 @@ OG_ALT = {'en': 'Cipher Lacuna cube logo with the tagline Decoding the gaps in A
 # Before first paint (after the language rule of lang_pages.lang_script()): theme and the open tab, so nothing flashes.
 HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null;try{t=localStorage.getItem('atlas-theme')}catch(e){}"
                "if(t==='light'||t==='dark')d.dataset.theme=t;"
-               "d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':/^#report/.test(location.hash)?'reports':'concepts'})(document.documentElement)")
+               "d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':/^#report/.test(location.hash)?'reports':"
+               "/^#course/.test(location.hash)?'courses':'concepts'})(document.documentElement)")
 DESC_MAX = 160  # search engines show about 155 characters
 
-def description(n_concepts, n_stacks, n_reports, lang='en'):
-    """The page's meta, og: and twitter: description (about 155 characters), counts from the data."""
+def description(n_concepts, n_stacks, n_reports, lang='en', n_courses=0):
+    """The page's meta, og: and twitter: description (about 155 characters, at most DESC_MAX), counts from the data;
+    the free courses (the Courses tab) when there are any."""
     if lang == 'ar':
+        if n_courses:
+            return (f'تعلّم الذكاء الاصطناعي بلغة واضحة: {cnt(n_concepts, "concept", "ar")} و{cnt(n_stacks, "stack", "ar")} (محلية وسحابية '
+                    f'ومستضافة في الإمارات)، و{cnt(n_reports, "report", "ar")} بملخّصاتنا، و{cnt(n_courses, "course", "ar")} من جهات إماراتية.')
         return (f'تعلّم الذكاء الاصطناعي بلغة واضحة: {cnt(n_concepts, "concept", "ar")} و{cnt(n_stacks, "stack", "ar")} بخيارات محلية '
                 f'وسحابية ومستضافة في الإمارات، و{cnt(n_reports, "report", "ar")} بملخّصات من إعدادنا، بالعربية والإنجليزية.')
+    if n_courses:
+        return (f'Learn AI in plain language: {cnt(n_concepts, "concept", "en")}, {cnt(n_stacks, "stack", "en")} (local, cloud, UAE-hosted), '
+                f'{cnt(n_reports, "report", "en")} and {cnt(n_courses, "course", "en")} from UAE bodies, in English and Arabic.')
     return (f'Learn AI in plain language: {cnt(n_concepts, "concept", "en")}, {cnt(n_stacks, "stack", "en")} with local, cloud '
             f'and UAE-hosted options, and {cnt(n_reports, "report", "en")} summarised, in English and Arabic.')
 
@@ -954,11 +1135,12 @@ def lessons_doc_safe():
         return qahwa.empty_doc()
 
 def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None, android=False,
-           lang='en', other=None):
+           courses_doc=None, lang='en', other=None):
     """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to.
     android: the site serves the Android app (a footer link to its card in the overview's About section).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips).
     reports_doc: the Reports tab's data (default: data/learn/reports.json), shown newest first.
+    courses_doc: the Courses tab's data (default: data/learn/courses.json), in the file's order.
     lang: 'en' for learn.html, 'ar' for ar/learn.html (lang_pages.py): the same page served in Arabic, its links to the
     site's files one folder up; `other`: the link to the other language's copy (default: the twin beside the overview)."""
     ar = lang == 'ar'
@@ -966,6 +1148,8 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     lessons_doc = lessons_doc if lessons_doc is not None else qahwa.empty_doc()
     reports = sorted_reports(load_reports() if reports_doc is None else reports_doc)
     n_r = len(reports)
+    courses = list((load_courses() if courses_doc is None else courses_doc).get('courses') or [])
+    n_k = len(courses)
     any_lesson = any(published_lessons(c, lessons_doc) for c in concepts_doc['concepts'])
     s = site()
     icon = lambda k: s.ICON.get(k, '')
@@ -982,7 +1166,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     follow = (f'<a class="ig follow-btn" href="{esc(instagram)}" {OUT_LINK}>{icon("ig")}{L("Follow Qahwa &amp; AI", f"تابع {QAHWA_AR}")} '
               '<bdi class="handle" lang="en">@qahwa.w.ai</bdi></a>')
     learn_name = L('Learn AI', 'تعلّم الذكاء الاصطناعي')
-    desc = description(n_c, n_core, n_r, lang)
+    desc = description(n_c, n_core, n_r, lang, n_courses=n_k)
     title, og_alt = TITLE[lang], OG_ALT[lang]
     page_url = lang_pages.url(lang_pages.twin(PAGE, lang))
     locale, locale_alt = lang_pages.LOCALE[lang], lang_pages.LOCALE['en' if ar else 'ar']
@@ -1022,7 +1206,8 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     lead = L('Plain-language guides to the ideas behind today\'s AI, and recommended stacks for building with it: local, cloud and UAE-hosted options, each with its sources.',
              'شروح واضحة للأفكار التي يقوم عليها الذكاء الاصطناعي اليوم، وتركيبات تقنية موصى بها للبناء به: خيارات محلية وسحابية ومستضافة في الإمارات، ولكل منها مصادرها.')
     status = (f'<p class="statusbar"><span>{L(esc(cnt(n_c, "concept", "en")), cnt(n_c, "concept", "ar"))} · {L(esc(cnt(n_core, "stack", "en")), cnt(n_core, "stack", "ar"))} · '
-              f'{L(esc(cnt(n_found, "foundation", "en")), cnt(n_found, "foundation", "ar"))} · {L(esc(cnt(n_r, "report", "en")), cnt(n_r, "report", "ar"))}</span>'
+              f'{L(esc(cnt(n_found, "foundation", "en")), cnt(n_found, "foundation", "ar"))} · {L(esc(cnt(n_r, "report", "en")), cnt(n_r, "report", "ar"))} · '
+              f'{L(esc(cnt(n_k, "course", "en")), cnt(n_k, "course", "ar"))}</span>'
               + (f'<span><b>{L("Content as of", "المحتوى وفق معلومات")}</b> {L(month(latest, "en"), month(latest, "ar"))}</span>' if latest else '') + '</p>')
     ihead = (f'<div class="ihead ih-learn"><nav class="crumbs" aria-label="Breadcrumb" data-aria-ar="مسار التنقل"><a href="{h}">{L("Overview", "الرئيسية")}</a>'
              f'<span aria-hidden="true">/</span><span aria-current="page">{learn_name}</span></nav>'
@@ -1032,9 +1217,10 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
              f'<a class="l-tab" href="#concepts" data-tab="concepts">{L("Concepts", "المفاهيم")} <span class="n" data-count="concepts">{n_c}</span></a>'
              f'<a class="l-tab" href="#stacks" data-tab="stacks"><span class="t-full">{L("AI stacks", "التركيبات التقنية")}</span>'
              f'<span class="t-short" aria-hidden="true">{L("Stacks", "التركيبات")}</span> <span class="n" data-count="stacks">{n_core}</span></a>'
-             f'<a class="l-tab" href="#reports" data-tab="reports">{L("Reports", "التقارير")} <span class="n" data-count="reports">{n_r}</span></a></nav>'
-             f'<label class="l-search js-only"><span class="sr-only">{L("Search concepts, stacks and reports", "ابحث في المفاهيم والتركيبات والتقارير")}</span>'
-             f'<input id="lq" class="inp" type="search" autocomplete="off" spellcheck="false" placeholder="Search concepts, stacks and reports…" data-ph-ar="ابحث في المفاهيم والتركيبات والتقارير…"></label></div>'
+             f'<a class="l-tab" href="#reports" data-tab="reports">{L("Reports", "التقارير")} <span class="n" data-count="reports">{n_r}</span></a>'
+             f'<a class="l-tab" href="#courses" data-tab="courses">{L("Courses", "الدورات")} <span class="n" data-count="courses">{n_k}</span></a></nav>'
+             f'<label class="l-search js-only"><span class="sr-only">{L("Search concepts, stacks, reports and courses", "ابحث في المفاهيم والتركيبات والتقارير والدورات")}</span>'
+             f'<input id="lq" class="inp" type="search" autocomplete="off" spellcheck="false" placeholder="Search concepts, stacks, reports and courses…" data-ph-ar="ابحث في المفاهيم والتركيبات والتقارير والدورات…"></label></div>'
              f'<p class="l-count js-only" id="l-count" aria-live="polite"></p>'
              f'<p class="l-empty" id="l-empty" hidden>{L("No matches. Try another word or clear the search.", "لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.")}</p>')
     lesson_note = (('Qahwa &amp; AI lesson links open the lesson on the Qahwa &amp; AI lessons page.',
@@ -1055,6 +1241,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
         for v, cls, ic, name, sub in cards) + '</nav>')
     main = (f'<main id="main" tabindex="-1"><div class="wrap">\n{ihead}\n{qcard}\n{tools}\n'
             f'{concepts_panel(groups, concepts, home, lessons_doc)}\n{stacks_panel(stacks, concepts, home)}\n{reports_panel(reports, home)}\n'
+            f'{courses_panel(courses, home)}\n'
             f'{note}\n{xnav}\n</div></main>\n')
     android_link = f'<a href="{h}#contact/android">{L("Android app", "تطبيق Android")}</a>' if android else ''
     footer = (f'<footer class="foot"><div class="wrap foot-in"><div><p class="foot-brand"><a class="brand" href="{h}"><span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span></a></p>'
@@ -1091,14 +1278,15 @@ def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, u
     lessons_doc: the published Qahwa & AI posts (default: lessons_doc_safe(), from data/qahwa.json).
     android: the overview has the Android app card (build.py passes it; a footer link to it)."""
     concepts_doc, stacks_doc = load(data_dir)
-    reports_doc = load_reports(data_dir)
+    reports_doc, courses_doc = load_reports(data_dir), load_courses(data_dir)
     catalog = json.loads(Path(catalog_path).read_text(encoding='utf-8'))
-    validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path), reports_doc=reports_doc)
+    validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path), reports_doc=reports_doc, courses_doc=courses_doc)
     lessons_doc = lessons_doc_safe() if lessons_doc is None else lessons_doc
-    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc, reports_doc=reports_doc, android=android)
+    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc, reports_doc=reports_doc, android=android,
+                  courses_doc=courses_doc)
     # The Arabic copy (ar/learn.html) links to the Arabic overview beside it and reuses the brand files above it.
     page_ar = render(concepts_doc, stacks_doc, catalog, home='index.html', lessons_doc=lessons_doc, reports_doc=reports_doc,
-                     android=android, lang='ar')
+                     android=android, courses_doc=courses_doc, lang='ar')
     out_dir = Path(out_dir)
     (out_dir / lang_pages.AR_DIR).mkdir(parents=True, exist_ok=True)
     target = out_dir / PAGE
@@ -1117,7 +1305,8 @@ def main():
     st = stacks_doc['stacks']
     core = sum(s['kind'] != 'foundation' for s in st)
     print(f'Built {path.name}: {len(concepts_doc["concepts"])} concepts in {len(concepts_doc["groups"])} groups, '
-          f'{core} stacks + {len(st) - core} foundations, {len(load_reports()["reports"])} reports, {path.stat().st_size / 1024:.0f} KB')
+          f'{core} stacks + {len(st) - core} foundations, {len(load_reports()["reports"])} reports, {len(load_courses()["courses"])} courses, '
+          f'{path.stat().st_size / 1024:.0f} KB')
 
 if __name__ == '__main__':
     main()

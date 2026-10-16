@@ -572,8 +572,9 @@ class ReportPageTests(Quiet, unittest.TestCase):
         cls.page.feed(cls.html)
     def test_third_tab_and_status(self):
         n = len(self.reports)
+        # The Reports tab stays third; the Courses tab (fourth) follows it.
         self.has(f'<a class="l-tab" href="#reports" data-tab="reports"><span data-lang="en">Reports</span><span data-lang="ar">التقارير</span> '
-                 f'<span class="n" data-count="reports">{n}</span></a></nav>', self.html)
+                 f'<span class="n" data-count="reports">{n}</span></a><a class="l-tab" href="#courses" data-tab="courses">', self.html)
         status = self.html[self.html.index('<p class="statusbar">'):]
         self.has(f'<span data-lang="en">{learn.cnt(n, "report", "en")}</span><span data-lang="ar">{learn.cnt(n, "report", "ar")}</span>',
                  status[:status.index('</p>')])
@@ -582,7 +583,7 @@ class ReportPageTests(Quiet, unittest.TestCase):
         self.assertEqual(i, sorted(i))
         self.assertLess(i[2], self.html.index('<p class="muted l-note">'))
         self.has("/^#report/.test(location.hash)?'reports'", self.html)
-        self.has('placeholder="Search concepts, stacks and reports…"', self.html)
+        self.has('placeholder="Search concepts, stacks, reports and courses…"', self.html)
     def test_every_report_is_in_the_html_newest_first(self):
         ids = [a['id'][len('report/'):] for a in self.page.items if a.get('id', '').startswith('report/')]
         self.assertEqual(ids, [r['id'] for r in self.reports])

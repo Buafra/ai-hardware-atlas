@@ -74,7 +74,10 @@ class AppDataTests(unittest.TestCase):
         self.assertEqual(orders,sorted(orders))
         models=self.out['models.json']['models']
         self.assertEqual(len(models),len(self.models['models']))
-        self.assertTrue(all(set(m)==set(app_data.MODEL_KEYS) for m in models))
+        # OpenRouter's models keep the original keys; the UAE and Gulf models from official cards add theirs.
+        for m in models:
+            want=set(app_data.MODEL_KEYS)|(set(app_data.EXTRA_MODEL_KEYS) if 'country' in m else set())
+            self.assertEqual(set(m),want,m['id'])
 
     def test_learn_carries_the_reports(self):
         # Additive: the same reports as learn.html, newest first, each with the source group its filter uses.

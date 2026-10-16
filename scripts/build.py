@@ -59,7 +59,37 @@ def validate(data):
         hosts = ALLOWED + MAKERS.get(p.get('maker'), ())
         assert all(on_host(s['url'], hosts) for s in p['sources']), 'Unofficial source'
         assert any(on_host(s['url'], ALLOWED) for s in p['sources']), 'No NVIDIA or AMD source'
+        validate_benchmarks(p.get('benchmarks'))
     assert len(ids) >= 31, 'Unexpected catalog loss'
+
+# Official MLPerf results (MLCommons): links only, never figures. One entry per round the product appears in, under its
+# exact MLCommons accelerator or system name: {label (the link text), url, round, date (the round's publication day)}.
+BENCHMARK_KEYS = ('label', 'url', 'round', 'date')
+
+def benchmark_url_ok(url):
+    """https on mlcommons.org (or a subdomain) or under github.com/mlcommons/, with no user name or port."""
+    try:
+        u = urlparse(str(url or ''))
+        host, port = (u.hostname or '').lower(), u.port
+    except ValueError:
+        return False
+    if u.scheme != 'https' or u.username or u.password or port:
+        return False
+    if host == 'mlcommons.org' or host.endswith('.mlcommons.org'):
+        return True
+    return host == 'github.com' and u.path.split('/')[1:2] == ['mlcommons'] and len(u.path.split('/')) > 2
+
+def validate_benchmarks(benchmarks):
+    if benchmarks is None:
+        return
+    assert isinstance(benchmarks, list) and benchmarks, 'benchmarks must be a non-empty list'
+    for b in benchmarks:
+        assert isinstance(b, dict) and set(b) == set(BENCHMARK_KEYS), 'A benchmark carries label, url, round and date only'
+        assert benchmark_url_ok(b['url']), 'Benchmark link must be https on mlcommons.org or github.com/mlcommons'
+        assert isinstance(b['label'], str) and b['label'].strip(), 'Benchmark label is empty'
+        assert isinstance(b['round'], str) and b['round'].startswith('MLPerf '), 'Benchmark round must name an MLPerf round'
+        assert re.match(r'^\d{4}-\d{2}-\d{2}$', str(b['date'])), 'Benchmark date must be YYYY-MM-DD'
+        datetime.strptime(b['date'], '%Y-%m-%d')
 
 def https(url):
     return urlparse(str(url or '')).scheme == 'https'
@@ -302,6 +332,16 @@ def change_text(summary):
     show = lambda v: 'not listed' if v in ('None', '') else unit.format(v)
     return f'{m.group(1)}: {word} changed from {show(m.group(3))} to {show(m.group(4))}'
 
+def benchmarks_block(p):
+    """The product's official MLPerf results, as links (newest round first): the round name, its date, nothing else."""
+    bs = sorted(p.get('benchmarks') or [], key=lambda b: b['date'], reverse=True)
+    if not bs:
+        return ''
+    items = ''.join(f'<li><a href="{E(b["url"])}" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">{E(b["label"])}</a>'
+                    f' <small>{L(ymd(b["date"], "en"), ymd(b["date"], "ar"))}</small></li>' for b in bs)
+    return (f'<div class="bench"><p class="bench-h"><span data-i18n>Official benchmarks (MLPerf)</span></p><ul class="bench-l">{items}</ul>'
+            f'<p class="bench-note" data-i18n>Open a round to find this hardware in the results MLCommons publishes.</p></div>')
+
 def product(p):
     sources = ' '.join(f'<a href="{E(s["url"])}" target="_blank" rel="noopener noreferrer">{E(s["label"])}</a>' for s in p['sources'])
     power = NA(p['power_w'], lambda v: f'{v:g} W')
@@ -315,11 +355,11 @@ def product(p):
     vendor = '' if shot else f'<span class="vendor">{p["vendor"]}</span> · '
     maker = f' · <span class="maker">{L("Built by " + EN(p["maker"]), "من صنع " + EN(p["maker"]))}</span>' if p.get('maker') else ''
     return f'''<article class="product {p['vendor'].lower()}" id="p-{E(p['id'])}" data-product="{E(p['id'])}">{shot}
-    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}{maker}</p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
+    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}{maker}<span class="myhw-tag" hidden><span data-i18n>My hardware</span></span></p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
     <p class="memory"><strong><bdi lang="en">{E(p['memory'])}</bdi></strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></p>
     <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}{release_kind(p['release_kind'])}</dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
-    <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div></details>
-    <label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label>{share_btn('product', 'p-share', label='Share this product')}</article>'''
+    <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div>{benchmarks_block(p)}</details>
+    <div class="c-acts"><label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label><button type="button" class="myhw-btn js-only" data-myhw="{E(p['id'])}" aria-pressed="false"><span data-i18n>My hardware</span></button>{share_btn('product', 'p-share', label='Share this product')}</div></article>'''
 
 # ---------- brand slot ----------
 
@@ -1038,6 +1078,121 @@ def prepare(data):
         p['price_usd'] = (p['price'] or {}).get('usd_low')
     return data
 
+# ---------- UAE and Gulf models from official model cards (data/models-extra.json) ----------
+# Hand-kept: models that are not on OpenRouter, so scripts/models.py (which rewrites data/models.json on every scheduled
+# run) never sees them. They are merged into the estimator's list and dist/app/models.json here, at build time, so the
+# OpenRouter refresh can never drop them. Chat-only models (runnable false: no downloadable weights) are listed but never
+# fitted to hardware.
+MODELS_EXTRA = ROOT / 'data' / 'models-extra.json'
+MODEL_FIELDS = ('id', 'name', 'hf', 'context', 'created', 'open', 'params_b', 'params_source', 'moe')  # as in data/models.json
+EXTRA_KEYS = ('maker', 'country', 'arabic', 'runnable', 'card_url', 'license')  # what an official card adds
+EXTRA_COUNTRIES = {'UAE': 'الإمارات', 'Qatar': 'قطر', 'Saudi Arabia': 'السعودية'}
+PARAMS_SOURCES = ('huggingface', 'card', 'name')
+MODEL_ID = re.compile(r'^[a-z0-9][a-z0-9._-]*/[a-z0-9][a-z0-9._-]*$')
+HF_REPO = re.compile(r'^[A-Za-z0-9][A-Za-z0-9._-]*/[A-Za-z0-9][A-Za-z0-9._-]*$')
+
+class ModelsExtraError(ValueError):
+    """data/models-extra.json breaks a rule; the message lists every problem found."""
+
+def models_extra_problems(doc):
+    """Every problem in the official-card models (empty when fine): fields, ids, sizes, chat-only rules, links, policy."""
+    if not isinstance(doc, dict) or not isinstance(doc.get('models'), list):
+        return ['models-extra.json must be {"models": [...]}']
+    errs, ids, names = learn.policy_problems(doc, 'models-extra.json'), set(), set()
+    num = lambda v: isinstance(v, (int, float)) and not isinstance(v, bool)
+    for i, m in enumerate(doc['models']):
+        if not isinstance(m, dict):
+            errs.append(f'models[{i}] must be an object')
+            continue
+        at = f'model {m.get("id") or i}'
+        extra = sorted(set(m) - set(MODEL_FIELDS) - set(EXTRA_KEYS) - {'sources'})
+        missing = [k for k in MODEL_FIELDS + EXTRA_KEYS + ('sources',) if k not in m]
+        if extra:
+            errs.append(f'{at}: unknown field(s) {extra}')
+        if missing:
+            errs.append(f'{at}: missing {missing}')
+            continue
+        if not isinstance(m['id'], str) or not MODEL_ID.match(m['id']):
+            errs.append(f'{at}: id must be "org/name" in lower case')
+        elif m['id'] in ids:
+            errs.append(f'{at}: duplicate id')
+        ids.add(m['id'])
+        if not isinstance(m['name'], str) or not m['name'].strip():
+            errs.append(f'{at}: name is empty')
+        elif m['name'].casefold() in names:
+            errs.append(f'{at}: duplicate name {m["name"]!r}')
+        else:
+            names.add(m['name'].casefold())
+        if m['hf'] is not None and not (isinstance(m['hf'], str) and HF_REPO.match(m['hf'])):
+            errs.append(f'{at}: hf must be a Hugging Face "org/repo" or null')
+        for k in ('open', 'runnable', 'moe'):
+            if not isinstance(m[k], bool):
+                errs.append(f'{at}: {k} must be true or false')
+        if m['arabic'] not in (True, False, None):
+            errs.append(f'{at}: arabic must be true, false or null (not stated)')
+        if m['runnable'] is True:
+            if not (m['open'] is True and m['hf'] and num(m['params_b']) and 0 < m['params_b'] < 10000 and m['params_source'] in PARAMS_SOURCES):
+                errs.append(f'{at}: a runnable model needs open true, its Hugging Face repo, a size (params_b) and where the size comes from {PARAMS_SOURCES}')
+        elif m['runnable'] is False and (m['open'] is not False or m['params_b'] is not None or m['params_source'] is not None or m['hf'] is not None):
+            errs.append(f'{at}: a chat-only model (runnable false) has open false and no repo or size')
+        for k in ('context', 'created'):
+            if m[k] is not None and not (isinstance(m[k], int) and not isinstance(m[k], bool) and m[k] > 0):
+                errs.append(f'{at}: {k} must be a positive whole number or null')
+        if m['country'] not in EXTRA_COUNTRIES:
+            errs.append(f'{at}: country must be one of {tuple(EXTRA_COUNTRIES)}')
+        if not isinstance(m['maker'], str) or not m['maker'].strip():
+            errs.append(f'{at}: maker is empty')
+        if m['license'] is not None and not (isinstance(m['license'], str) and m['license'].strip()):
+            errs.append(f'{at}: license must be text or null')
+        if not https(m['card_url']):
+            errs.append(f'{at}: card_url must be an https URL')
+        if not (isinstance(m['sources'], list) and m['sources'] and all(https(s) for s in m['sources'])):
+            errs.append(f'{at}: sources must be a non-empty list of https URLs')
+    return errs
+
+def load_models_extra(path=None):
+    """data/models-extra.json, checked (no file: no extra models). A bad file raises ModelsExtraError, so the build stops
+    before anything is written."""
+    path = Path(path or MODELS_EXTRA)
+    try:
+        doc = json.loads(path.read_text(encoding='utf-8'))
+    except FileNotFoundError:
+        return {'models': []}
+    except ValueError as e:
+        raise ModelsExtraError(f'{path.name}: {e}') from e
+    problems = models_extra_problems(doc)
+    if problems:
+        raise ModelsExtraError(f'{len(problems)} problem(s) in {path.name}:\n  ' + '\n  '.join(problems))
+    return doc
+
+def merge_models(models, extra):
+    """The OpenRouter list (data/models.json) plus the official-card models, in one list sorted like models.py's (open
+    weights first, then by name). A card model that OpenRouter also lists (same id or Hugging Face repo, or the same
+    name) is not added twice: the OpenRouter entry keeps its values and gains the card's maker, country, Arabic flag,
+    runnable flag, card link and license. Pure: neither input is changed."""
+    out = [dict(m) for m in (models or {}).get('models', [])]
+    by_id = {m.get('id'): m for m in out}
+    by_hf = {str(m['hf']).lower(): m for m in out if m.get('hf')}
+    by_name = {str(m.get('name', '')).casefold(): m for m in out}
+    for x in (extra or {}).get('models', []):
+        hit = by_id.get(x['id']) or (x['hf'] and by_hf.get(x['hf'].lower())) or by_name.get(x['name'].casefold())
+        if hit:
+            hit.update({k: x[k] for k in EXTRA_KEYS})
+        else:
+            out.append({k: x[k] for k in MODEL_FIELDS + EXTRA_KEYS})
+    out.sort(key=lambda m: (not m.get('open'), str(m.get('name', '')).casefold()))
+    return {**(models or {}), 'models': out}
+
+def slim_model(m):
+    """One model as the page's estimator reads it (#models-data): the short keys app.js uses. Card models add their maker
+    (mk), country (co), runnable flag (r), card link (u), license (l) and, when the card says, Arabic (ar)."""
+    s = {'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']}
+    if 'country' in m:
+        s.update(mk=m['maker'], co=m['country'], r=m['runnable'], u=m['card_url'], l=m['license'])
+        if m.get('arabic') is not None:
+            s['ar'] = m['arabic']
+    return s
+
 def load_all():
     data = json.loads((ROOT/'data/catalog.json').read_text(encoding='utf-8'))
     validate(data)
@@ -1049,7 +1204,8 @@ def load_all():
     # bad edit fails the build without leaving a new index.html beside an old (or missing) learn.html.
     learn.validate(*learn.load(), data['products'])
     load_about()  # the About text (hero promise, #contact/about): a bad file fails here too
-    return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
+    # The estimator's models: OpenRouter's list plus the UAE and Gulf models from official cards (a bad file fails here).
+    return data, load('news.json'), sources, uae, merge_models(load('models.json') or {'models': []}, load_models_extra())
 
 HOME_TITLE = 'AI hardware, AI news and UAE AI'
 OG_ALT = {'en': 'Cipher Lacuna cube logo with the tagline Decoding the gaps in AI knowledge, in English and Arabic',
@@ -1085,7 +1241,7 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=Non
     title = f'{SITE_NAME} | ' + (app_ar().get(HOME_TITLE, HOME_TITLE) if ar else HOME_TITLE)
     head_links = (lang_pages.head_links('index.html', lang) + f'<link rel="manifest" href="{seo.MANIFEST}">'
                   + (feeds.head_links(lang) if sources else ''))
-    slim = {'updated_at': models.get('updated_at'), 'models': [{'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']} for m in models['models']]}
+    slim = {'updated_at': models.get('updated_at'), 'models': [slim_model(m) for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
     logo, favicon = brand_assets(brand_dir)

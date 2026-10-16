@@ -272,7 +272,7 @@ class PageTests(unittest.TestCase):
 
     def test_arabic_learn_labels(self):
         self.assertIn('<nav class="nav" aria-label="الأقسام الرئيسية" data-aria-ar="الأقسام الرئيسية" data-aria-en="Main sections">', self.learn_ar)
-        self.assertIn('placeholder="ابحث في المفاهيم والتركيبات والتقارير…"', self.learn_ar)
+        self.assertIn('placeholder="ابحث في المفاهيم والتركيبات والتقارير والدورات…"', self.learn_ar)
         self.assertIn('aria-label="المظهر: تلقائي"', self.learn_ar)
 
     def test_learn_description_length(self):

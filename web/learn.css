@@ -9,9 +9,9 @@
 .l-qahwa{margin-top:16px;padding-block:12px}
 .l-qahwa b{font-size:16px}
 
-/* Tabs: without JavaScript all three panels are shown one after the other and the tabs are plain jump links. */
+/* Tabs: without JavaScript all four panels are shown one after the other and the tabs are plain jump links. */
 html[data-ltab="concepts"] [data-panel]:not([data-panel="concepts"]),html[data-ltab="stacks"] [data-panel]:not([data-panel="stacks"]),
-html[data-ltab="reports"] [data-panel]:not([data-panel="reports"]){display:none}
+html[data-ltab="reports"] [data-panel]:not([data-panel="reports"]),html[data-ltab="courses"] [data-panel]:not([data-panel="courses"]){display:none}
 .l-tools{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px;margin-top:22px}
 .l-tabs{display:inline-flex;gap:3px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:4px;box-shadow:var(--shadow-sm)}
 .l-tab{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:10px;color:var(--muted);font-weight:800;font-size:15px;text-decoration:none;white-space:nowrap}
@@ -183,11 +183,27 @@ table.opt{width:100%;border-collapse:separate;border-spacing:0;border:1px solid 
   .srcs a{display:inline-block;padding-block:9px}
   .opts a{display:inline-block;padding-block:6px}
 }
-/* The narrowest phones: each tab's count goes under its name, so the three tabs fit side by side. */
-@media (max-width:370px){
+/* Phones: each tab's count goes under its name, so the four tabs fit side by side. */
+@media (max-width:479px){
   .l-tab{flex-direction:column;gap:2px;padding:6px 4px;font-size:14px;line-height:1.25}
   .l-tab .n{font-size:11.5px;padding:0 7px}
 }
+/* Courses (the fourth tab): free official AI courses in the UAE. */
+.l-course{border-inline-start-color:var(--uae)}
+.l-course>summary::after{grid-row:1/4}
+.l-course .it-sum b{color:var(--strong);font-weight:800}
+.rb-format{background:var(--surface-3);color:var(--muted)}
+.rb-self-paced{background:var(--uae-soft);color:var(--uae-ink)}
+.rb-apply{background:var(--news-soft);color:var(--news-ink)}
+.rb-between-editions{background:var(--warn-bg);color:var(--text)}
+.c-facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px 20px}
+.c-facts dt{font-size:12.5px;font-weight:800;color:var(--muted)}
+.c-facts dd{margin:2px 0 0;font-size:14.5px;line-height:1.55;color:var(--text)}
+.c-eps{margin:0;padding-inline-start:20px}
+.c-eps li{margin:4px 0;font-size:14.5px;line-height:1.5}
+.c-eps small{color:var(--muted);white-space:nowrap}
+.c-free{margin:12px 0 0;font-size:13.5px}
+.l-course .it-sec{margin-top:16px}
 @media print{
   .l-tools,.l-count,.l-filter,.r-selects,.xnav{display:none!important}
   html[data-ltab] [data-panel]{display:block!important}

@@ -1,0 +1,229 @@
+{
+ "courses": [
+  {
+   "id": "one-million-prompters",
+   "org": "dff",
+   "title_en": "One Million Prompters",
+   "title_ar": "مليون خبير لأوامر الذكاء الاصطناعي",
+   "organiser_en": "Dubai Centre for Artificial Intelligence and Dubai Future Foundation",
+   "organiser_ar": "مركز دبي للذكاء الاصطناعي ومؤسسة دبي للمستقبل",
+   "audience_en": "Adults (18 and over), from any field",
+   "audience_ar": "البالغون (18 عاماً فأكثر) من جميع المجالات",
+   "languages": ["en", "ar", "es"],
+   "format": "online",
+   "format_en": "Online: one course of four video modules, about an hour each, at your own pace",
+   "format_ar": "عبر الإنترنت: دورة واحدة من أربع وحدات مصوّرة، مدة كل منها نحو ساعة، وبالوتيرة التي تناسبك",
+   "status": "self-paced",
+   "cost_en": "Free: the course's official terms say the services are provided free of cost.",
+   "cost_ar": "مجانية: تنص الشروط الرسمية للدورة على أن الخدمات تُقدَّم مجاناً.",
+   "certificate_en": "A confirmation certificate from Dubai Future Foundation for meeting the attendance and response requirements",
+   "certificate_ar": "شهادة تأكيد من مؤسسة دبي للمستقبل لمن يستوفي متطلبات الحضور والتفاعل",
+   "how_en": "Create a free account on the course site and accept its terms; a confirmation email opens the course.",
+   "how_ar": "أنشئ حساباً مجانياً على موقع الدورة ووافق على شروطه، ثم تفتح لك رسالة التأكيد الدورة.",
+   "url": "https://dub.ai/en/omp/",
+   "url_ar": "https://dub.ai/ar/omp-ar/",
+   "free_source": "https://omp.dub.ai/terms",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://dub.ai/en/omp/",
+    "https://dub.ai/ar/omp-ar/",
+    "https://omp.dub.ai/",
+    "https://omp.dub.ai/register",
+    "https://omp.dub.ai/terms",
+    "https://mediaoffice.ae/en/news/2025/january/14-01/dcai-opens-global-registrations"
+   ]
+  },
+  {
+   "id": "dgov-digital-literacy-ai",
+   "org": "tdra",
+   "title_en": "Digital Literacy (DGOV Academy): AI episodes",
+   "title_ar": "الثقافة الرقمية (الأكاديمية الرقمية): حلقات الذكاء الاصطناعي",
+   "organiser_en": "Telecommunications and Digital Government Regulatory Authority (TDRA), on DGOV Academy",
+   "organiser_ar": "هيئة تنظيم الاتصالات والحكومة الرقمية، عبر الأكاديمية الرقمية",
+   "audience_en": "The public: short courses with no assessment",
+   "audience_ar": "الجمهور: دورات قصيرة بلا اختبارات",
+   "languages": ["ar"],
+   "format": "online",
+   "format_en": "Online, on demand: three short videos of 10 to 12 minutes",
+   "format_ar": "عبر الإنترنت وفي أي وقت: ثلاثة مقاطع فيديو قصيرة، مدة كل منها من 10 إلى 12 دقيقة",
+   "status": "self-paced",
+   "cost_en": "Free: the DGOV Academy FAQ says all its courses and training programmes are free.",
+   "cost_ar": "مجانية: تقول الأسئلة الشائعة في الأكاديمية الرقمية إن جميع الدورات والبرامج التدريبية مجانية.",
+   "how_en": "Open an episode page to watch; signing in with UAE PASS is optional.",
+   "how_ar": "افتح صفحة الحلقة لمشاهدتها، وتسجيل الدخول عبر UAE PASS اختياري.",
+   "items": [
+    {
+     "title_en": "AI and Machine Learning Technologies",
+     "title_ar": "تقنيات الذكاء الاصطناعي والتعلم الآلي",
+     "minutes": 12,
+     "url": "https://academy.dgov.ae/en/Programs/DigitalLiteracy/AI-and-Machine-Learning-Technologies"
+    },
+    {
+     "title_en": "Generative AI and Machine Learning Across Industries",
+     "title_ar": "الذكاء الاصطناعي التوليدي والتعلم الآلي عبر الصناعات",
+     "minutes": 10,
+     "url": "https://academy.dgov.ae/en/Programs/DigitalLiteracy/GenAI-and-Machine-Learning-Across-Industries"
+    },
+    {
+     "title_en": "Pioneers of Generative AI and Machine Learning",
+     "title_ar": "روّاد الذكاء الاصطناعي التوليدي والتعلم الآلي",
+     "minutes": 10,
+     "url": "https://academy.dgov.ae/en/Programs/DigitalLiteracy/Pioneers-of-Gen-AI-and-Machine-Learning"
+    }
+   ],
+   "url": "https://academy.dgov.ae/en/Programs/DigitalLiteracy",
+   "url_ar": "https://academy.dgov.ae/ar-AE/Programs/DigitalLiteracy",
+   "free_source": "https://academy.dgov.ae/en/FAQs",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://academy.dgov.ae/en/Programs/DigitalLiteracy",
+    "https://academy.dgov.ae/ar-AE/Programs/DigitalLiteracy",
+    "https://academy.dgov.ae/en/FAQs",
+    "https://academy.dgov.ae/ar-AE/FAQs"
+   ]
+  },
+  {
+   "id": "dgov-talks-ai",
+   "org": "tdra",
+   "title_en": "DGOV Talks: AI episodes",
+   "title_ar": "حوارات الحكومة الرقمية: حلقات الذكاء الاصطناعي",
+   "organiser_en": "Telecommunications and Digital Government Regulatory Authority (TDRA), on DGOV Academy",
+   "organiser_ar": "هيئة تنظيم الاتصالات والحكومة الرقمية، عبر الأكاديمية الرقمية",
+   "audience_en": "Not stated by the organiser; the episode pages open without signing in",
+   "audience_ar": "لم تحدده الجهة المنظِّمة، وتُفتح صفحات الحلقات دون تسجيل الدخول",
+   "languages": ["ar"],
+   "format": "online",
+   "format_en": "Online, on demand: three short talks of 9 to 18 minutes",
+   "format_ar": "عبر الإنترنت وفي أي وقت: ثلاث محادثات قصيرة، مدة كل منها من 9 إلى 18 دقيقة",
+   "status": "self-paced",
+   "cost_en": "Free: the DGOV Academy FAQ says all its courses and training programmes are free.",
+   "cost_ar": "مجانية: تقول الأسئلة الشائعة في الأكاديمية الرقمية إن جميع الدورات والبرامج التدريبية مجانية.",
+   "how_en": "Open an episode page to watch; signing in with UAE PASS is optional.",
+   "how_ar": "افتح صفحة الحلقة لمشاهدتها، وتسجيل الدخول عبر UAE PASS اختياري.",
+   "items": [
+    {
+     "title_en": "AI and Machine Learning",
+     "title_ar": "الذكاء الاصطناعي التوليدي وتعلم الآلة",
+     "minutes": 9,
+     "url": "https://academy.dgov.ae/en/Programs/DGOVTalks/AI-and-Machine-Learning"
+    },
+    {
+     "title_en": "Prompt Engineering",
+     "title_ar": "هندسة الأوامر",
+     "minutes": 18,
+     "url": "https://academy.dgov.ae/en/Programs/DGOVTalks/Prompt-Engineering"
+    },
+    {
+     "title_en": "DGOV Talks x GITEX: Agentic AI in Government Services",
+     "title_ar": "الذكاء الاصطناعي الوكيلي في الخدمات الحكومية: من منظور الشباب",
+     "minutes": 9,
+     "url": "https://academy.dgov.ae/en/Programs/DGOVTalks/DGOV-Talks-x-GITEX---Agentic-AI-in-Government-Services"
+    }
+   ],
+   "url": "https://academy.dgov.ae/en/Programs/DGOVTalks",
+   "url_ar": "https://academy.dgov.ae/ar-AE/Programs/DGOVTalks",
+   "free_source": "https://academy.dgov.ae/en/FAQs",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://academy.dgov.ae/en/Programs/DGOVTalks",
+    "https://academy.dgov.ae/ar-AE/Programs/DGOVTalks",
+    "https://academy.dgov.ae/en/Programs/DGOVTalks/AI-and-Machine-Learning",
+    "https://academy.dgov.ae/en/Programs/DGOVTalks/Prompt-Engineering",
+    "https://academy.dgov.ae/en/Programs/DGOVTalks/DGOV-Talks-x-GITEX---Agentic-AI-in-Government-Services",
+    "https://academy.dgov.ae/en/FAQs"
+   ]
+  },
+  {
+   "id": "hbmsu-chatgpt-smart-learning",
+   "org": "hbmsu",
+   "title_en": "ChatGPT in Smart Learning",
+   "title_ar": "ChatGPT في التعلم الذكي",
+   "organiser_en": "Hamdan Bin Mohammed Smart University (HBMSU)",
+   "organiser_ar": "جامعة حمدان بن محمد الذكية",
+   "audience_en": "Educators, students, professionals and anyone curious about AI in digital education",
+   "audience_ar": "المعلمون والطلاب والمهنيون وكل من يهتم بالذكاء الاصطناعي في التعليم الرقمي",
+   "languages": ["en"],
+   "format": "online",
+   "format_en": "Online, self-paced: about 10 minutes of video",
+   "format_ar": "عبر الإنترنت وبالوتيرة التي تناسبك: نحو 10 دقائق من الفيديو",
+   "status": "self-paced",
+   "cost_en": "Free: the course page lists the tuition fee as free.",
+   "cost_ar": "مجانية: تذكر صفحة الدورة أن الرسوم الدراسية مجانية.",
+   "certificate_en": "Certificate of completion issued by HBMSU",
+   "certificate_ar": "شهادة إتمام تصدرها جامعة حمدان بن محمد الذكية",
+   "how_en": "Enrol from the course page, which leads to HBMSU CloudCampus.",
+   "how_ar": "سجّل من صفحة الدورة، وهي تنقلك إلى منصة CloudCampus التابعة للجامعة.",
+   "url": "https://www.hbmsu.ac.ae/schools/school-e-education/chatgpt-smart-learning",
+   "url_ar": "https://www.hbmsu.ac.ae/ar/schools/school-e-education/chatgpt-smart-learning",
+   "free_source": "https://www.hbmsu.ac.ae/schools/school-e-education/chatgpt-smart-learning",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://www.hbmsu.ac.ae/schools/school-e-education/chatgpt-smart-learning",
+    "https://www.hbmsu.ac.ae/ar/schools/school-e-education/chatgpt-smart-learning",
+    "https://www.hbmsu.ac.ae/all-training-programs?page=6"
+   ]
+  },
+  {
+   "id": "mbrsg-ai-digital-transformation-government",
+   "org": "mbrsg",
+   "title_en": "AI and Digital Transformation in Government",
+   "title_ar": "الذكاء الاصطناعي والتحول الرقمي في الحكومة",
+   "title_ar_translated": true,
+   "organiser_en": "Mohammed bin Rashid School of Government (MBRSG), with the University of Oxford Saïd Business School and UNESCO",
+   "organiser_ar": "كلية محمد بن راشد للإدارة الحكومية، مع كلية سعيد للأعمال في جامعة أكسفورد ومنظمة اليونسكو",
+   "audience_en": "People working in public service at any level; the Arabic version is for public-sector staff in Arab countries. No technical background needed",
+   "audience_ar": "العاملون في الخدمة العامة على كل المستويات، والنسخة العربية لموظفي القطاع العام في الدول العربية، ولا تتطلب خلفية تقنية",
+   "languages": ["ar", "en", "fr", "es", "pt"],
+   "format": "online",
+   "format_en": "Online, self-paced: about 12 guided hours with short videos, case studies, quizzes and hands-on activities",
+   "format_ar": "عبر الإنترنت وبالوتيرة التي تناسبك: نحو 12 ساعة موجّهة من مقاطع فيديو قصيرة ودراسات حالة واختبارات وأنشطة تطبيقية",
+   "status": "apply",
+   "cost_en": "Free for accepted participants: the course is funded by UNESCO.",
+   "cost_ar": "مجانية للمشاركين المقبولين: الدورة مموّلة بالكامل من منظمة اليونسكو.",
+   "certificate_en": "Digital certificate of completion from the University of Oxford Saïd Business School, with UNESCO and MBRSG",
+   "certificate_ar": "شهادة إتمام رقمية من كلية سعيد للأعمال في جامعة أكسفورد، مع اليونسكو والكلية",
+   "how_en": "Register your interest through the language links on the course page; participants must be accepted. Enrolment opened in the first quarter of 2026.",
+   "how_ar": "سجّل اهتمامك عبر روابط اللغات في صفحة الدورة، ويشترط قبول المشاركين. وقد فُتح التسجيل في الربع الأول من 2026.",
+   "url": "https://adt.cfg.ae/en",
+   "url_ar": "https://adt.cfg.ae/",
+   "free_source": "https://adt.cfg.ae/en",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://adt.cfg.ae/en",
+    "https://adt.cfg.ae/",
+    "https://mbrsg.ae/w/mbrsg-launches-executive-programme-on-ai-and-digital-transformation-for-arab-governments"
+   ]
+  },
+  {
+   "id": "tdra-camp",
+   "org": "tdra",
+   "title_en": "TDRA Camp",
+   "title_ar": "مخيم تدرا",
+   "organiser_en": "Telecommunications and Digital Government Regulatory Authority (TDRA), on DGOV Academy",
+   "organiser_ar": "هيئة تنظيم الاتصالات والحكومة الرقمية، عبر الأكاديمية الرقمية",
+   "audience_en": "Ages 9 to 15. Virtual camp: UAE citizens and residents; in-person camp: UAE citizens. No programming experience needed",
+   "audience_ar": "من 9 إلى 15 عاماً. المخيم الافتراضي للمواطنين والمقيمين في الإمارات، والمخيم الحضوري للمواطنين، ولا تلزم خبرة سابقة في البرمجة",
+   "languages": ["ar", "en"],
+   "format": "hybrid",
+   "format_en": "Virtual: two weeks of daily live sessions of about an hour. In person: one week in Dubai and Abu Dhabi. Skills covered include coding, artificial intelligence and app development",
+   "format_ar": "افتراضياً: أسبوعان من جلسات مباشرة يومية مدة كل منها نحو ساعة. حضورياً: أسبوع واحد في دبي وأبوظبي. ومن المهارات التي يغطيها البرمجة والذكاء الاصطناعي وتطوير التطبيقات",
+   "status": "between-editions",
+   "status_en": "The 2026 camp has ended, and the next one has no date yet.",
+   "status_ar": "انتهى مخيم 2026، ولم يُحدَّد موعد المخيم القادم بعد.",
+   "cost_en": "Free: the camp page says it is completely free for all accepted participants.",
+   "cost_ar": "مجاني: تقول صفحة المخيم إنه مجاني بالكامل لجميع المشاركين المقبولين.",
+   "certificate_en": "Digital certificate for students who complete the camp",
+   "certificate_ar": "شهادة رقمية للطلاب الذين يُتمّون المخيم",
+   "how_en": "Register on the camp page when the next camp opens. The virtual camp has no selection; the in-person camp has limited seats and a selection.",
+   "how_ar": "سجّل من صفحة المخيم عند فتح المخيم القادم. لا يوجد اختيار للمخيم الافتراضي، أما المخيم الحضوري فمقاعده محدودة ويخضع للاختيار.",
+   "url": "https://academy.dgov.ae/en/Programs/TDRA-Camp",
+   "url_ar": "https://academy.dgov.ae/ar-AE/Programs/TDRA-Camp",
+   "free_source": "https://academy.dgov.ae/en/Programs/TDRA-Camp",
+   "checked": "2026-10-16",
+   "sources": [
+    "https://academy.dgov.ae/en/Programs/TDRA-Camp",
+    "https://academy.dgov.ae/ar-AE/Programs/TDRA-Camp"
+   ]
+  }
+ ]
+}
