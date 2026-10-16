@@ -1,0 +1,37 @@
+{
+  "vendor": "NVIDIA",
+  "model": "NVIDIA RTX Spark",
+  "level": "Personal",
+  "type": "System",
+  "architecture": "Blackwell RTX GPU with NVIDIA Grace CPU",
+  "memory": "up to 128GB of unified memory",
+  "memory_gb": 128.0,
+  "memory_scope": "Shared CPU + GPU",
+  "announcement": "2026-10-16",
+  "release": "2026-10-16",
+  "release_kind": "Released",
+  "power_w": null,
+  "use": "Local AI, creation, gaming on Windows laptops",
+  "notes": "Page announces availability of RTX Spark laptops from ASUS, Dell, HP, Lenovo, Microsoft and MSI, starting at $2,599; 128GB is the maximum and configurations vary by region. Delivers up to 1 petaflop of FP4 AI performance; power is not stated.",
+  "id": "nvidia-rtx-spark",
+  "source_reviewed": null,
+  "power_note": "Not documented in this edition",
+  "sources": [
+    {
+      "label": "Announcement",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs"
+    }
+  ],
+  "_draft": {
+    "model": "claude-sonnet-5-5",
+    "created_at": "2026-10-16T18:53:28+00:00",
+    "source_url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+    "evidence": [
+      "NVIDIA RTX Spark PCs Available Today",
+      "up to 128GB of unified memory",
+      "October 16, 2026",
+      "RTX Spark laptops are available globally today from ASUS, Dell, HP, Lenovo, Microsoft and MSI",
+      "a single superchip combining an NVIDIA Blackwell RTX GPU and an NVIDIA Grace CPU"
+    ]
+  }
+}
