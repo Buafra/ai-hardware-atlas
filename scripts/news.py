@@ -136,6 +136,10 @@ SUMMARY_PER_RUN = 80
 SUMMARY_BATCH = 5
 SUMMARY_MAX = 1000  # longer answers are trimmed to whole sentences, not thrown away
 SUMMARY_TRIES = 2  # Claude requests for an item that gave no usable summary: retried once, then left alone
+# How summary tries are counted, recorded in news.json as ai.summary_tries_rule. 2: only a Claude request uses a try.
+# Under rule 1 (a news.json without the field) a story with no text to send used one too; reset_textless_tries gives
+# those back once, on the first run under rule 2.
+TRIES_RULE = 2
 # The summary prompt's version. Items summarised with an older one are summarised again (they keep the old summary
 # until a new one succeeds), and tries made with an older prompt don't count. 2: fuller summaries (3 to 5 sentences,
 # about 80-120 words) and the ai_focus verdict.
@@ -1257,6 +1261,24 @@ def _tried(item):
     item['summary_attempts'] = item.get('summary_attempts', 0) + 1
     item['summary_attempts_version'] = SUMMARY_VERSION
 
+def reset_textless_tries(previous):
+    """Once, for a news.json written under an older TRIES_RULE (ai.summary_tries_rule missing or lower): the old code
+    used up a summary try on a story with nothing to send (page text under 300 characters and no excerpt) without
+    asking Claude, so such stories (WAM's, and pages that refuse the bot) were left without a summary for good. Stories
+    with no summary and no excerpt get their tries back; main() then records TRIES_RULE in news.json, so tries counted
+    from then on (Claude requests only) are never reset. At worst a story whose old tries were real requests is asked
+    again, at most SUMMARY_TRIES times. Done in code rather than by editing news.json, which the scheduled runs rewrite.
+    Returns how many stories got their tries back."""
+    if ((previous.get('ai') or {}).get('summary_tries_rule') or 1) >= TRIES_RULE:
+        return 0
+    reset = 0
+    for item in previous.get('items', []):
+        if 'summary_attempts' in item and not item.get('summary_en') and not item.get('excerpt'):
+            item.pop('summary_attempts')
+            item.pop('summary_attempts_version', None)
+            reset += 1
+    return reset
+
 def summarize(items, sources):
     """Add summary_en / summary_ar (summary_source "ai", summary_version) and the ai_focus verdict to up to
     SUMMARY_PER_RUN items that have no summary or one from an older SUMMARY_VERSION: items with no summary before those
@@ -1758,6 +1780,9 @@ def storable(item, key_set, stored_before):
 def main():
     sources = json.loads(SOURCES.read_text(encoding='utf-8'))
     previous = json.loads(OUT.read_text(encoding='utf-8')) if OUT.exists() else {'items': []}
+    reset = reset_textless_tries(previous)
+    if reset:
+        print(f'Summaries: {reset} stories with no text got back the tries the old rule used without asking Claude')
     blocked = load_blocked()
     now = datetime.now(timezone.utc).replace(microsecond=0)
     STATS.clear()
@@ -1811,7 +1836,7 @@ def main():
     keep_batches_of_held_items({i['id'] for i in items} - {i['id'] for i in kept})
     items = kept
     data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
-            'ai': {'key_set': key, 'model': MODEL, 'translated': translated, 'summarised': summarized,
+            'ai': {'key_set': key, 'model': MODEL, 'summary_tries_rule': TRIES_RULE, 'translated': translated, 'summarised': summarized,
                    'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS),
                    'usage': usage_report(), 'batches_left_running': len([b for b in load_pending() if b['id'] not in FINISHED])},
             'items': items}

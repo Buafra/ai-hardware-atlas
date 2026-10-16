@@ -405,6 +405,50 @@ class MainTests(unittest.TestCase):
         with mock.patch.object(news,'PROBLEMS',news.collections.Counter()):
             self.assertEqual(news._optional(boom,[]),0);self.assertEqual(dict(news.PROBLEMS),{'boom: KeyError':1})
 
+class TriesRuleTests(unittest.TestCase):
+    """The old rule used up a summary try on a story with no text without asking Claude: given back once, in code."""
+    def test_tries_of_stories_with_nothing_to_send_are_given_back_once(self):
+        stuck={**item(1),'summary_attempts':2,'summary_attempts_version':news.SUMMARY_VERSION};stuck.pop('excerpt')
+        asked={**item(2),'summary_attempts':2,'summary_attempts_version':news.SUMMARY_VERSION}  # had an excerpt: real requests
+        older={**item(3),'summary_en':'Old summary.','summary_version':1,'summary_attempts':1,'summary_attempts_version':news.SUMMARY_VERSION}
+        older.pop('excerpt')
+        old={'ai':{'key_set':True},'items':[stuck,asked,older]}
+        self.assertEqual(news.reset_textless_tries(old),1)
+        self.assertNotIn('summary_attempts',stuck);self.assertNotIn('summary_attempts_version',stuck)
+        self.assertEqual((asked['summary_attempts'],older['summary_attempts']),(2,1))
+        self.assertEqual(news.reset_textless_tries({'items':[]}),0)  # no news.json yet
+        # Written under the current rule: tries counted from then on are Claude requests and are never reset.
+        again={**item(4),'summary_attempts':2,'summary_attempts_version':news.SUMMARY_VERSION};again.pop('excerpt')
+        self.assertEqual(news.reset_textless_tries({'ai':{'summary_tries_rule':news.TRIES_RULE},'items':[again]}),0)
+        self.assertEqual(again['summary_attempts'],2)
+    def test_a_run_records_the_rule_so_the_reset_happens_once(self):
+        class FixedNow(datetime):
+            @classmethod
+            def now(cls,tz=None):return NOW
+        def run(out,d):
+            with mock.patch.object(news,'OUT',out),mock.patch.object(news,'SOURCES',Path(d)/'news-sources.json'),\
+                 mock.patch.object(news,'BLOCKED',Path(d)/'news-blocked.json'),mock.patch.object(news,'fetch',return_value=RSS),\
+                 mock.patch.object(news,'datetime',FixedNow),mock.patch.object(news,'read_page',return_value=([],'')),\
+                 mock.patch.dict(os.environ,{},clear=True),mock.patch.object(news,'PROBLEMS',news.collections.Counter()),mock.patch('builtins.print'):
+                self.assertEqual(news.main(),0)
+            data=json.loads(out.read_text(encoding='utf-8'))
+            return data,next(i for i in data['items'] if i['url']=='https://www.example-news.com/e')
+        with tempfile.TemporaryDirectory() as d:
+            out=Path(d)/'news.json'
+            (Path(d)/'news-sources.json').write_text(json.dumps([SRC]),encoding='utf-8')
+            # A news.json from the old code (no rule recorded): the story's two tries were used without a request.
+            stuck={'id':news._hash('https://www.example-news.com/e'),'title':'AI chip exports rise','url':'https://www.example-news.com/e',
+                   'source':'ex','lang':'en','uae':False,'published':'2026-09-25T11:00:00+00:00','summary_attempts':2,'summary_attempts_version':news.SUMMARY_VERSION}
+            out.write_text(json.dumps({'ai':{'key_set':True},'items':[stuck]}),encoding='utf-8')
+            data,story=run(out,d)
+            self.assertEqual(data['ai']['summary_tries_rule'],news.TRIES_RULE)
+            self.assertNotIn('summary_attempts',story);self.assertNotIn('summary_attempts_version',story)
+            # Tries counted under the new rule are kept by later runs.
+            story.update(summary_attempts=2,summary_attempts_version=news.SUMMARY_VERSION)
+            out.write_text(json.dumps(data),encoding='utf-8')
+            data,story=run(out,d)
+            self.assertEqual(story['summary_attempts'],2)
+
 class ArticleTests(unittest.TestCase):
     PAGE=('<html><head><script>var x="<p>not text</p>"</script><style>p{}</style></head><body><nav><p>Home News Sport and more links here</p></nav>'
           '<article><p>First paragraph of the article, long enough to count.</p><figure><p>Caption text that should be skipped entirely.</p></figure>'
