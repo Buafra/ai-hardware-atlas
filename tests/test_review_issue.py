@@ -2,6 +2,7 @@
 AI cost ledger it shows; newly failing sources. gh is never called: a fake stands in for it."""
 import json
 import os
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -53,6 +54,18 @@ class FakeGh:
 
     def new_comments(self):
         return [d['body'] for path, d in self.writes('POST') if path.endswith('/comments')]
+
+    def alerts(self):
+        """The alert comments posted (each an email); the status comment is not one."""
+        return [b for b in self.new_comments() if b.startswith('**Needs you')]
+
+class FailingAlertGh(FakeGh):
+    """gh whose alert comment cannot be posted (a rate limit or a server error); everything else works."""
+    def __call__(self, *args, data=None):
+        if data and data.get('body', '').startswith('**Needs you'):
+            self.failed = getattr(self, 'failed', 0) + 1  # not a write: GitHub refused it
+            raise subprocess.CalledProcessError(1, ['gh', *args], stderr='HTTP 502')
+        return super().__call__(*args, data=data)
 
 def report(**kw):
     r = {'at': '2026-10-16T10:09:44+00:00', 'health': {'successful_sources': 257, 'failed_sources': 2, 'attempted_sources': 259},
@@ -118,14 +131,15 @@ class ReviewIssueTests(unittest.TestCase):
         self.assertEqual([(s['id'], s['days']) for s in stale], [('d47', 47), ('d30', 30)])
         self.write('catalog.json', catalog)
         fake = self.run_review(FakeGh())
-        self.assertIn('Approximate price 30 days old: D30 (checked 2026-09-16)', fake.new_comments()[-1])
-        self.assertNotIn('D29', fake.new_comments()[-1])
+        [alert] = fake.alerts()
+        self.assertIn('Approximate price 30 days old: D30 (checked 2026-09-16)', alert)
+        self.assertNotIn('D29', alert)
         self.assertIn('**Approximate prices 30 days old or more:** D47 (2026-08-30), D30 (2026-09-16)', self.status(fake)['body'])
 
     def test_a_price_reaching_the_limit_is_announced_once(self):
         self.write('catalog.json', {'products': [product('fresh', '2026-10-08'), product('old', '2026-08-30')]})
         fake = self.run_review(FakeGh())
-        alert = fake.new_comments()[-1]
+        [alert] = fake.alerts()
         self.assertIn('**Needs you:**', alert)
         self.assertIn('Approximate price 47 days old: OLD (checked 2026-08-30)', alert)
         self.assertNotIn('FRESH', alert)
@@ -145,7 +159,7 @@ class ReviewIssueTests(unittest.TestCase):
         self.write('draft-report.json', {'created': ['Instinct MI999X'], 'waiting': ['Instinct MI999X'], 'in_pull_request': [],
                                          'pull_requests': [], 'pr_error': 'The pull request step failed, so 1 AI draft(s) are not in a pull request.'})
         fake = self.run_review(FakeGh())
-        alert = fake.new_comments()[-1]
+        [alert] = fake.alerts()
         for text in ('Verified specification change (already applied): H200: power_w changed from 600 to 700',
                      f'Source failing in {refresh.FAILING_AFTER} checks in a row: https://forums.developer.nvidia.com/t/1 (HTTPError 403: Forbidden)',
                      'AI draft waiting for its pull request: Instinct MI999X', 'The pull request step failed'):
@@ -175,6 +189,60 @@ class ReviewIssueTests(unittest.TestCase):
         self.assertTrue(any('Approximate price 47 days old' in b for b in fake.new_comments()))
         self.assertEqual(self.status(fake)['user'], BOT)
 
+    def test_an_alert_that_could_not_be_posted_is_posted_by_the_next_run(self):
+        # The alert is posted before the status comment is written, and only what was posted counts as announced.
+        self.write('refresh-report.json', report(changes=['H200: power_w changed from 600 to 700'],
+                                                new_errors=['https://forums.developer.nvidia.com/t/1']))
+        self.write('catalog.json', {'products': [product('old', '2026-08-30')]})
+        fake = FailingAlertGh(comments=[])
+        with mock.patch('builtins.print'):
+            self.assertEqual(R.main(run=fake, now=NOW), 1)  # the step shows the failure (it is continue-on-error)
+        self.assertEqual((fake.failed, fake.alerts()), (1, []))
+        body = self.status(fake)['body']
+        self.assertEqual(R.read_alerted(body), set())
+        # A spec change and a newly failing source belong to this run only: they are carried until posted.
+        self.assertEqual([k.split(':')[0] for k, _ in R.read_unsent(body)], ['change', 'fail'])
+        # The next run (gh works again; this source check found nothing new) posts all three.
+        self.write('refresh-report.json', report(at='2026-10-16T22:09:44+00:00'))
+        fake = self.run_review(FakeGh(comments=fake.comments))
+        [alert] = fake.alerts()
+        for text in ('Verified specification change (already applied): H200: power_w changed from 600 to 700',
+                     'Source failing in', 'https://forums.developer.nvidia.com/t/1', 'Approximate price 47 days old: OLD'):
+            self.assertIn(text, alert)
+        body = self.status(fake)['body']
+        self.assertEqual((R.read_alerted(body), R.read_unsent(body)), ({'price:old:2026-08-30'}, []))
+        # And never again.
+        fake = self.run_review(FakeGh(comments=fake.comments))
+        self.assertEqual(fake.new_comments(), [])
+
+    def test_a_failed_post_of_a_lasting_alert_is_tried_again_without_being_carried(self):
+        self.write('catalog.json', {'products': [product('old', '2026-08-30')]})
+        fake = FailingAlertGh(comments=[])
+        with mock.patch('builtins.print'):
+            R.main(run=fake, now=NOW)
+        self.assertEqual(R.read_unsent(self.status(fake)['body']), [])  # still in `current` next run: not carried
+        fake = self.run_review(FakeGh(comments=fake.comments))
+        self.assertIn('Approximate price 47 days old: OLD', fake.alerts()[0])
+
+    def test_old_announcements_settled_without_a_draft_are_listed_once(self):
+        urls = ['https://newsroom.amd.com/news/aai-2026-ryzen-ai-embedded-x100/', 'https://newsroom.amd.com/news/aai-2026-helios-update/']
+        self.write('draft-report.json', {'at': '2026-10-16T22:20:00+00:00', 'created': [], 'waiting': [], 'in_pull_request': [],
+                                         'pull_requests': [], 'settled_without_pull_request': urls})
+        fake = self.run_review(FakeGh(comments=[]))
+        [alert] = fake.alerts()
+        for text in ('2 official announcement(s) were marked "drafted" before pull requests were tracked', 'no new Claude cost',
+                     '`python scripts/draft.py --redraft URL`', *urls):
+            self.assertIn(text, alert)
+        self.assertIn('Old announcements settled without a draft', self.status(fake)['body'])
+        # A run that reads the same report (no draft step): nothing new.
+        fake = self.run_review(FakeGh(comments=fake.comments))
+        self.assertEqual(fake.new_comments(), [])
+        # The next draft run settles nothing: the line goes, no comment.
+        self.write('draft-report.json', {'at': '2026-10-17T10:20:00+00:00', 'created': [], 'waiting': [], 'in_pull_request': [], 'pull_requests': []})
+        fake = self.run_review(FakeGh(comments=fake.comments))
+        self.assertEqual(fake.new_comments(), [])
+        self.assertNotIn('Old announcements', self.status(fake)['body'])
+
     def test_no_open_issue(self):
         # Nothing needs the owner: no issue is opened.
         fake = self.run_review(FakeGh(issues=()))
@@ -193,11 +261,13 @@ class ReviewIssueTests(unittest.TestCase):
     def test_status_text_fits_one_comment_and_keeps_its_hidden_list(self):
         many = [{'url': f'https://nvidianews.nvidia.com/news/{"x" * 300}{n}', 'reason': 'Official page changed', 'at': 'x'} for n in range(400)]
         keys = [f'price:p{n}:2026-08-30' for n in range(50)] + ['change:-->x:y']
+        unsent = [('change:t:-->x', 'Verified specification change (already applied): -->x'), ('price:p:1', 'not one-shot: never carried')]
         text = R.status_text(report(review=many), {}, [], keys, NOW, self.root / 'data/news.json', self.root / 'data/ai-cost.json',
-                             self.root / 'data/run-timing.json')
+                             self.root / 'data/run-timing.json', unsent)
         self.assertLessEqual(len(text), 65536)
         self.assertIn(f'and {400 - R.LIST_MAX} more', text)
         self.assertEqual(R.read_alerted(text), set(keys))
+        self.assertEqual(R.read_unsent(text), unsent[:1])
         self.assertEqual(text.count('-->'), text.count('<!--'))  # no key can end the hidden comment early
         self.assertNotIn('@', text.replace('github-actions[bot]', ''))  # no mention: an edit never notifies anyone
 

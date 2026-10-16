@@ -5,9 +5,12 @@ issue (found by a hidden marker, written by github-actions[bot]; editing a comme
 month's estimated AI cost, the AI news steps, how late scheduled runs start, AI drafts, ageing prices, changed pages and
 failing sources. A new comment (an email) is posted only when the owner must act, once per event: a verified
 specification change, a newly failing source (FAILING_AFTER failed checks in a row), AI drafts waiting (a new draft, or
-the pull request could not be opened), a price reaching STALE_PRICE_DAYS days. What was already announced is kept as a
-hidden list at the end of the status comment. With no open issue, one is opened only when the owner must act.
-The issue is public: news counts only, never a news title, link or reason.
+the pull request could not be opened), a price reaching STALE_PRICE_DAYS days, old announcements settled without a
+draft. What was already announced is kept as a hidden list at the end of the status comment. The alert is posted
+before the status comment is written, and only alerts that were posted join that list: if the post fails, the next run
+posts them again (an alert that exists for one run only, ONE_SHOT, is carried in a second hidden list until it is
+posted). A rare repeated email is better than a lost one. With no open issue, one is opened only when the owner must
+act. The issue is public: news counts only, never a news title, link or reason.
 """
 import json
 import re
@@ -28,6 +31,10 @@ STALE_PRICE_DAYS = 30  # a price is flagged on the day it reaches this age
 MARKER = '<!-- cipher-lacuna:review-status -->'
 BOT = 'github-actions[bot]'
 ALERTED = re.compile(r'<!-- alerted: (\[.*?\]) -->', re.S)
+UNSENT = re.compile(r'<!-- unsent: (\[.*?\]) -->', re.S)
+# Alerts whose key holds the run's time: the matter is not seen again by a later run, so an alert not posted is carried.
+ONE_SHOT = ('change:', 'fail:', 'legacy-drafts:')
+UNSENT_MAX = 50
 LIST_MAX = 120     # lines in one folded list of the status comment
 MAX_BODY = 60000   # GitHub accepts 65,536 characters per comment
 
@@ -67,16 +74,35 @@ def alerts(report, draft_report, stale):
         out.append(('drafts-pr-failed', draft_report['pr_error']))
     out += [(f"price:{s['id']}:{s['checked']}", f"Approximate price {s['days']} days old: {s['model']} (checked {s['checked']}); "
              'check it and update `price` in data/catalog.json') for s in stale]
+    legacy = draft_report.get('settled_without_pull_request') or []
+    if legacy:
+        out.append((f"legacy-drafts:{draft_report.get('at', '')}",
+                    f'{len(legacy)} official announcement(s) were marked "drafted" before pull requests were tracked; no pull '
+                    'request was opened, so their drafts never reached you. They are not drafted again on their own (no new '
+                    'Claude cost). To draft one again, run `python scripts/draft.py --redraft URL` and commit '
+                    'data/draft-state.json: ' + ', '.join(legacy)))
     return out
+
+def _hidden_list(pattern, body):
+    m = pattern.search(body or '')
+    try:
+        value = json.loads(m.group(1)) if m else []
+    except ValueError:
+        return []
+    return value if isinstance(value, list) else []
 
 def read_alerted(body):
     """The keys already announced, from the hidden list at the end of a status comment."""
-    m = ALERTED.search(body or '')
-    try:
-        keys = json.loads(m.group(1)) if m else []
-    except ValueError:
-        return set()
-    return {k for k in keys if isinstance(k, str)} if isinstance(keys, list) else set()
+    return {k for k in _hidden_list(ALERTED, body) if isinstance(k, str)}
+
+def read_unsent(body):
+    """[(key, line)] of one-shot alerts an earlier run could not post, from the status comment's second hidden list."""
+    return [(k, line) for k, line in (e for e in _hidden_list(UNSENT, body) if isinstance(e, list) and len(e) == 2)
+            if isinstance(k, str) and isinstance(line, str) and k.startswith(ONE_SHOT)]
+
+def _hidden(name, value):
+    # '>' is escaped so no value can end the HTML comment early.
+    return f'<!-- {name}: ' + json.dumps(value, ensure_ascii=False).replace('>', '\\u003e') + ' -->'
 
 def find_status(comments):
     """The status comment: the newest written by github-actions[bot] that starts with the marker (a comment by anyone
@@ -139,8 +165,9 @@ def _folded(title, lines):
     shown = lines[:LIST_MAX] + ([f'- … and {len(lines) - LIST_MAX} more'] if len(lines) > LIST_MAX else [])
     return f'<details><summary>{title} ({len(lines)})</summary>\n\n' + '\n'.join(shown) + '\n\n</details>'
 
-def status_text(report, draft_report, stale, keys, now, news_path=None, cost_path=None, timing_path=None):
-    """The status comment: the marker first, the announced keys (hidden) last."""
+def status_text(report, draft_report, stale, keys, now, news_path=None, cost_path=None, timing_path=None, unsent=()):
+    """The status comment: the marker first, the announced keys (hidden) last, then any one-shot alerts not posted yet
+    (`unsent`, [(key, line)], hidden too)."""
     health = report['health']
     lines = [MARKER, f"**Status, updated {now:%Y-%m-%d %H:%M} UTC.** Every run edits this comment (no email); a new comment "
              'appears only when something needs you.', '',
@@ -159,6 +186,9 @@ def status_text(report, draft_report, stale, keys, now, news_path=None, cost_pat
         lines.append(f"- **AI drafts:** {open_drafts} to check in pull request {prs}: " + ', '.join(draft_report.get('in_pull_request', []) + draft_report.get('waiting', [])))
     else:
         lines.append('- **AI drafts:** none open.')
+    if draft_report.get('settled_without_pull_request'):
+        lines.append(f"- **Old announcements settled without a draft (marked drafted before pull requests were tracked; "
+                     f"`python scripts/draft.py --redraft URL` drafts one again):** " + ', '.join(draft_report['settled_without_pull_request']))
     if stale:
         lines.append(f'- **Approximate prices {STALE_PRICE_DAYS} days old or more:** ' + ', '.join(f"{s['model']} ({s['checked']})" for s in stale))
     if report.get('changes'):
@@ -168,8 +198,9 @@ def status_text(report, draft_report, stale, keys, now, news_path=None, cost_pat
               _folded('Failing sources (kept as they were)', [f'- {u}: {e}' for u, e in (report.get('errors') or {}).items()]),
               _folded('To check by hand (not fetched automatically)', [f"- {m['url']}: {m['why']}" for m in report.get('manual_checks', [])])]
     text = '\n'.join(lines) + ''.join('\n\n' + f for f in folded if f)
-    # The announced keys; '>' is escaped so no key can end the HTML comment early.
-    tail = '\n\n<!-- alerted: ' + json.dumps(sorted(set(keys)), ensure_ascii=False).replace('>', '\\u003e') + ' -->'
+    tail = '\n\n' + _hidden('alerted', sorted(set(keys)))
+    if unsent:
+        tail += '\n' + _hidden('unsent', [[k, line[:1000]] for k, line in list(unsent)[:UNSENT_MAX]])
     if len(text) + len(tail) > MAX_BODY:
         text = text[:MAX_BODY - len(tail) - 40] + '\n\n… (cut to fit one comment)'
     return text + tail
@@ -189,31 +220,44 @@ def main(run=gh, now=None):
     if issues:
         number = issues[0]['number']
         existing = find_status(list_comments(number, run))
-        announced = read_alerted(existing['body']) if existing else set()
-        new = [(k, line) for k, line in current if k not in announced]
+        body = existing['body'] if existing else ''
+        announced = read_alerted(body)
+        keys = {k for k, _ in current}
+        # One-shot alerts an earlier run could not post come first (usually no longer in `current`).
+        carried = [(k, line) for k, line in read_unsent(body) if k not in keys]
+        new = [(k, line) for k, line in carried + current if k not in announced]
     elif current:
         run('label', 'create', LABEL, '--color', '6537d7', '--description', 'Official source changes to review', '--force')
         number = json.loads(run('api', '-X', 'POST', 'repos/{owner}/{repo}/issues', '--input', '-',
                                 data={'title': 'Hardware sources need review', 'body': alert_text(current), 'labels': [LABEL]}))['number']
         existing, new = None, []  # the new issue itself carries the alert
+        announced = {k for k, _ in current}
         print(f'Opened issue #{number}')
     else:
         print('Nothing needs the owner and no review issue is open.')
         return 0
-    text = status_text(report, draft_report, stale, [k for k, _ in current], now, ROOT / 'data/news.json',
-                       ROOT / 'data/ai-cost.json', ROOT / 'data/run-timing.json')
+    # The alert first: only what was posted is stored as announced, so a failed post is tried again by the next run.
+    posted, failed = set(), None
+    if new:
+        try:
+            run('api', '-X', 'POST', f'repos/{{owner}}/{{repo}}/issues/{number}/comments', '--input', '-', data={'body': alert_text(new)})
+            posted = {k for k, _ in new}
+            print(f'{len(new)} new item(s) need the owner: commented on issue #{number}')
+        except (subprocess.CalledProcessError, OSError) as exc:
+            failed = exc
+            print(f'The alert comment was not posted ({type(exc).__name__}); the next run posts it again.', file=sys.stderr)
+    else:
+        print('Nothing new needs the owner: no new comment.')
+    unsent = [(k, line) for k, line in new if k not in posted and k.startswith(ONE_SHOT)]
+    text = status_text(report, draft_report, stale, [k for k, _ in current if k in announced or k in posted], now,
+                       ROOT / 'data/news.json', ROOT / 'data/ai-cost.json', ROOT / 'data/run-timing.json', unsent)
     if existing:
         run('api', '-X', 'PATCH', f"repos/{{owner}}/{{repo}}/issues/comments/{existing['id']}", '--input', '-', data={'body': text})
         print(f'Status comment updated on issue #{number}')
     else:
         run('api', '-X', 'POST', f'repos/{{owner}}/{{repo}}/issues/{number}/comments', '--input', '-', data={'body': text})
         print(f'Status comment added to issue #{number}')
-    if new:
-        run('api', '-X', 'POST', f'repos/{{owner}}/{{repo}}/issues/{number}/comments', '--input', '-', data={'body': alert_text(new)})
-        print(f'{len(new)} new item(s) need the owner: commented on issue #{number}')
-    else:
-        print('Nothing new needs the owner: no new comment.')
-    return 0
+    return 1 if failed else 0
 
 if __name__ == '__main__':
     sys.exit(main())
