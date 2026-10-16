@@ -321,7 +321,7 @@ class SharePageTests(unittest.TestCase):
         self.assertIn("sessionStorage.getItem('apk-started')", page)
         self.assertIn("dl.addEventListener('click', () => { clearTimeout(t);", page)  # a tap cancels the timer: never two downloads
         self.assertIn('if (android && !inApp && dl)', page)  # no automatic download inside Instagram, Facebook or a WebView
-        self.assertIn('; wv\)|Instagram|FBAN|FBAV', page)
+        self.assertIn(r'; wv\)|Instagram|FBAN|FBAV', page)
         # iPhone users add the website itself (Open the website comes before the steps), not this page.
         ios = page[page.index('id="iphone"'):]
         self.assertLess(ios.index('class="btn2" href="../"'), ios.index('<h2>Add to Home Screen</h2>'))
@@ -396,6 +396,34 @@ class WorkflowTests(unittest.TestCase):
         self.assertIn('continue-on-error: true', step)
         self.assertIn('GH_TOKEN: ${{ github.token }}', step)
         self.assertIn("key: android-apk-${{ hashFiles('.cache/android/latest.json') }}", wf[build:])
+
+    def test_tests_run_before_the_paid_ai_steps_and_again_after_the_data_changed(self):
+        wf = (ROOT / '.github' / 'workflows' / 'publish.yml').read_text(encoding='utf-8')
+        tests = [m.start() for m in re.finditer(r'python -m unittest discover -s tests\n\s*node tests/test-sort\.cjs', wf)]
+        self.assertEqual(len(tests), 2)
+        early, late = tests
+        # A failing test stops a scheduled run before Claude is paid for (news, then drafts): no paid answers thrown away.
+        step = wf[wf.rfind('- name:', 0, early):early]
+        self.assertIn("if: github.event_name == 'schedule' || inputs.ai", step)
+        self.assertNotIn('continue-on-error', step)
+        for paid in ('run: python scripts/news.py', 'run: python scripts/draft.py'):
+            self.assertLess(early, wf.index(paid), paid)
+            self.assertLess(wf.index(paid), late, paid)
+        # The later run (every event) tests the refreshed data before the build, the data push and the deploy.
+        self.assertNotIn('if:', wf[wf.rfind('- name:', 0, late):late])
+        for after in ('run: python scripts/build.py', 'name: Save refreshed data', 'uses: actions/upload-pages-artifact@'):
+            self.assertLess(late, wf.index(after), after)
+        # The release APK is restored before the first test, so the real-certificate test runs in CI instead of skipping.
+        self.assertLess(wf.index('path: .cache/android'), early)
+        self.assertEqual(wf.count('path: .cache/android'), 2)  # one restore, one save
+
+    def test_python_files_compile_without_warnings(self):
+        # An invalid escape such as '\)' in a normal string is a SyntaxWarning now and an error in a later Python.
+        import warnings
+        for path in sorted((ROOT / 'tests').glob('*.py')) + sorted((ROOT / 'scripts').glob('*.py')):
+            with warnings.catch_warnings():
+                warnings.simplefilter('error')
+                compile(path.read_text(encoding='utf-8'), str(path), 'exec')
 
 if __name__ == '__main__':
     unittest.main()

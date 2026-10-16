@@ -52,6 +52,20 @@ jobs:
         with:
           node-version: '22'
       - run: pip install -r requirements.txt
+      # Restored before the first test: the test of the real release APK's signing certificate needs it (it is skipped
+      # without it).
+      - name: Restore the Android app (kept between runs, so a GitHub hiccup never drops the download)
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/android
+          key: android-apk-none
+          restore-keys: |
+            android-apk-
+      - name: Test before the paid AI steps (a failing test stops the run before Claude is paid for)
+        if: github.event_name == 'schedule' || inputs.ai
+        run: |
+          python -m unittest discover -s tests
+          node tests/test-sort.cjs
       - name: Check official sources
         if: github.event_name != 'push'
         run: python scripts/refresh.py
@@ -80,6 +94,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/draft.py
+      # Again after the data changed (sources, news, models, drafts): nothing untested is saved or published.
       - name: Test catalog and safeguards
         run: |
           python -m unittest discover -s tests
@@ -104,13 +119,6 @@ jobs:
           restore-keys: |
             news-img-${{ steps.news-img-week.outputs.week }}-
             news-img-
-      - name: Restore the Android app (kept between runs, so a GitHub hiccup never drops the download)
-        uses: actions/cache/restore@v4
-        with:
-          path: .cache/android
-          key: android-apk-none
-          restore-keys: |
-            android-apk-
       - name: Fetch the newest Android app release (checks size, SHA-256 and the signing certificate)
         continue-on-error: true
         env:

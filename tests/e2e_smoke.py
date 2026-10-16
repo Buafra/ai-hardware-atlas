@@ -301,7 +301,7 @@ def news_image_checks(browser):
                         return {src: img.currentSrc || img.src, loaded: img.complete && img.naturalWidth > 0, lazy: img.loading, alt: img.alt,
                                 w: Math.round(r.width), h: Math.round(r.height), imgMid: (r.left + r.right) / 2, liMid: (lr.left + lr.right) / 2,
                                 besideTitle: r.top < tr.bottom && r.bottom > tr.top, credit: (li.querySelector('.n-credit') || {}).textContent || '',
-                                company: /\/images\/news\//.test(img.src), dark: getComputedStyle(document.documentElement).colorScheme}; })""", [sel, n])
+                                company: /\\/images\\/news\\//.test(img.src), dark: getComputedStyle(document.documentElement).colorScheme}; })""", [sel, n])
                     check(n > 0 and len(got) == n and not any(g.get('missing') for g in got), f'{tag} #{view}: cards without an image {got[:2]}')
                     for g in got:
                         if g.get('missing'):
