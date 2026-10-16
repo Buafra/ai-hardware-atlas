@@ -3198,7 +3198,33 @@
             "url": "https://pcbuilder.ae/product.php?id=1777461462085"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -3353,7 +3379,15 @@
             "url": "https://www.theregister.com/ai-and-ml/2026/05/07/amd-takes-aim-at-enterprise-ai-with-pcie-based-instinct-gpus/5231481"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -3439,7 +3473,39 @@
             "url": "https://www.itechdevices.ae/900-21010-0040-000-1714669.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -3516,7 +3582,39 @@
             "url": "https://epoch.ai/data-insights/b200-cost-breakdown"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -3589,7 +3687,27 @@
             "url": "https://wccftech.com/nvidia-blackwell-dgx-b200-price-half-a-million-dollars-top-of-the-line-ai-hardware/"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -3654,7 +3772,33 @@
             "url": "https://www.tomshardware.com/pc-components/gpu-drivers/five-year-old-nvidia-a100-servers-triple-in-price-in-china"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        }
+      ]
     },
     {
       "vendor": "AMD",
@@ -3724,7 +3868,39 @@
             "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidias-h100-ai-gpus-cost-up-to-four-times-more-than-amds-competing-mi300x-amds-chips-cost-dollar10-to-dollar15k-apiece-nvidias-h100-has-peaked-beyond-dollar40000"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "AMD",
@@ -3786,7 +3962,33 @@
             "url": "https://www.wiredzone.com/shop/product/10032305-amd-100-300000108h-instinct-mi325x-gpu-graphics-processing-unit-256gb-hbm3e-memory-air-cooling-ac-instinct-mi300-series-15002"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "AMD",
@@ -3860,7 +4062,33 @@
             "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        }
+      ]
     },
     {
       "vendor": "AMD",
@@ -3934,7 +4162,33 @@
             "url": "https://finance.yahoo.com/news/hsbc-upgrades-amd-ai-chip-145404249.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -4007,7 +4261,33 @@
             "url": "https://www.cnbc.com/2026/08/22/nvidia-customers-reportedly-warned-about-ai-related-price-hikes-.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -4096,7 +4376,15 @@
             "url": "https://www.cnbc.com/2026/08/22/nvidia-customers-reportedly-warned-about-ai-related-price-hikes-.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1 (Preview)",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -4709,7 +4997,15 @@
             "url": "https://www.sabrepc.com/900-2G147-0000-000-NVIDIA-S104755051"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -7680,7 +7976,27 @@
             "url": "https://www.cnbc.com/2024/03/19/nvidias-blackwell-ai-chip-will-cost-more-than-30000-ceo-says.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -7899,7 +8215,15 @@
         "shows": "GH200 Grace Hopper Superchip module render with the Grace CPU and Hopper GPU on one board",
         "file": "images/gh200.webp"
       },
-      "price": null
+      "price": null,
+      "benchmarks": [
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -7976,7 +8300,15 @@
             "url": "https://uae.microless.com/product/nvidia-l40s-graphics-card-48gb-gddr6-ecc-with-864gb-s-memory-bandwith-1466-tflops-tensor-performance-18176-cuda-cores-passive-thermal-pcie-gen4-4x-displayport-1-4a-l40s/"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -8138,7 +8470,15 @@
             "url": "https://www.amazon.ae/dp/B0DF6BB2LZ"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -8454,7 +8794,15 @@
             "url": "https://fortune.com/2026/08/22/nvidia-customers-ai-related-price-hikes-15-percent-vera-rubin-grace-blackwell-chips/"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1 (Preview)",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -8750,7 +9098,21 @@
             "url": "https://www.tomshardware.com/pc-components/gpu-drivers/five-year-old-nvidia-a100-servers-triple-in-price-in-china"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -9201,7 +9563,39 @@
             "url": "https://www.cnbc.com/2026/08/22/nvidia-customers-reportedly-warned-about-ai-related-price-hikes-.html"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Training v6.0",
+          "url": "https://github.com/mlcommons/training_results_v6.0",
+          "round": "MLPerf Training v6.0",
+          "date": "2026-06-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        },
+        {
+          "label": "Training v5.1",
+          "url": "https://github.com/mlcommons/training_results_v5.1",
+          "round": "MLPerf Training v5.1",
+          "date": "2025-11-12"
+        },
+        {
+          "label": "Training v5.0",
+          "url": "https://github.com/mlcommons/training_results_v5.0",
+          "round": "MLPerf Training v5.0",
+          "date": "2025-06-04"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",
@@ -9404,7 +9798,21 @@
             "url": "https://www.amazon.ae/dp/B0FTM2LXSF"
           }
         ]
-      }
+      },
+      "benchmarks": [
+        {
+          "label": "Inference v6.1",
+          "url": "https://github.com/mlcommons/inference_results_v6.1",
+          "round": "MLPerf Inference v6.1",
+          "date": "2026-09-16"
+        },
+        {
+          "label": "Inference v6.0",
+          "url": "https://github.com/mlcommons/inference_results_v6.0",
+          "round": "MLPerf Inference v6.0",
+          "date": "2026-04-01"
+        }
+      ]
     },
     {
       "vendor": "NVIDIA",

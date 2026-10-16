@@ -209,3 +209,33 @@ assert.equal(decodeState('').nq,'');assert.equal(decodeState('').uq,'');
 assert.ok(!HW_KEYS.includes('nq')&&!HW_KEYS.includes('uq'),'?q= stays the hardware search');
 assert.ok(tpl.includes("/[?&](region|nq)(=|&|$)/.test(s)?'news':/[?&]uq(=|&|$)/.test(s)?'uae':'home'"),'head script opens the news and UAE views for ?nq= and ?uq=');
 console.log('PASS: news search (normalizer, words, matching, URL state, implied views)');
+// UAE and Gulf models from official model cards (data/models-extra.json) and My hardware: only open, runnable models with a
+// published size are fitted; chat-only (r:false), closed and unsized models never are. Counts come from the data.
+const {fittable,arabicModels,modelsThatFit}=require('../web/app.js');
+const pool=[{n:'A: Big',b:70,o:true},{n:'A: Small',b:7,o:true,ar:true,co:'UAE',r:true},{n:'B: Chat',b:null,o:false,ar:true,co:'UAE',r:false},
+  {n:'C: Closed',b:null,o:false},{n:'D: Unsized',b:null,o:true},{n:'E: Card says chat',b:9,o:true,r:false},{n:'F: Edge',b:20,o:true,ar:false,co:'Qatar',r:true}];
+assert.deepEqual(pool.filter(fittable).map(m=>m.n),['A: Big','A: Small','F: Edge']);
+assert.equal(fittable(null),false);assert.equal(fittable({o:true,b:'8'}),true);assert.equal(fittable({o:true,b:0}),false);
+assert.deepEqual(arabicModels(pool).map(m=>m.n),['A: Small','B: Chat']);assert.deepEqual(arabicModels(null),[]);
+// 4-bit with 20% extra: 70B needs 42 GB, 20B 12 GB, 7B 4.2 GB. Largest first; a need equal to the memory fits (as fitStatus).
+assert.deepEqual(modelsThatFit(pool,24,4,20).map(m=>m.n),['F: Edge','A: Small']);
+assert.deepEqual(modelsThatFit(pool,42,4,20).map(m=>m.n),['A: Big','F: Edge','A: Small']);
+assert.deepEqual(modelsThatFit(pool,4,4,20),[]);assert.deepEqual(modelsThatFit(pool,null,4,20),[]);
+assert.deepEqual(modelsThatFit(pool,24,16,0).map(m=>m.n),['A: Small']);
+// The real merged list (the page's #models-data shape), against every catalog product: modelsThatFit agrees with fitStatus.
+const extra=require('../data/models-extra.json').models.map(m=>({n:m.name,b:m.params_b,o:m.open,s:m.params_source,moe:m.moe,c:m.context,hf:m.hf,mk:m.maker,co:m.country,r:m.runnable,u:m.card_url,l:m.license,...(m.arabic==null?{}:{ar:m.arabic})}));
+const merged=real.concat(extra);
+assert.equal(arabicModels(merged).length,require('../data/models-extra.json').models.filter(m=>m.arabic===true).length);
+assert.ok(extra.filter(m=>m.r===false).every(m=>!fittable(m)),'chat-only models are never fitted');
+for(const p of data.products){
+  const fits=new Set(modelsThatFit(merged,p.memory_gb,'4','20').map(m=>m.n));
+  for(const m of merged.filter(fittable))assert.equal(fits.has(m.n),fitStatus(p,estimateGB(m.b,4,20))!=='no',p.id+' / '+m.n);
+}
+// Card models are found by the hardware search like any other (Jais, Falcon), and a hardware word still lists no model.
+assert.ok(modelSuggestions(merged,'jais').length>0&&modelSuggestions(merged,'jais').every(m=>/jais/i.test(m.n+' '+(m.hf||''))));
+for(const q of ['H100','MI300X','RTX 4090','B200','DGX Spark'])assert.deepEqual(modelSuggestions(merged,q),[],q);
+// The "Arabic models" chip is kept in the link (?arabic=1) and opens the hardware view like the other estimator keys.
+assert.equal(decodeState('?arabic=1').arabic,true);assert.equal(decodeState('').arabic,false);assert.equal(decodeState('?arabic=yes').arabic,false);
+assert.equal(encodeState({...decodeState(''),arabic:true}),'arabic=1');assert.equal(encodeState({...decodeState(''),arabic:false}),'');
+assert.ok(HW_KEYS.includes('arabic'));assert.equal(parseRoute('','?arabic=1').view,'hardware');
+console.log('PASS: official-card models, Arabic chip and My hardware fit list');

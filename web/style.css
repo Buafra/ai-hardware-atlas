@@ -290,6 +290,16 @@ label{display:block}
 .check input{width:18px;height:18px;accent-color:var(--hw);flex:none}
 .need{margin:12px 0 2px;font-weight:750;color:var(--hw-ink)}
 .caveat{margin:6px 0 0;font-size:12.5px;color:var(--muted)}
+/* The model picker with its "Arabic models" chip, and My hardware (app.js; saved in this browser only). */
+.mp-row{display:flex;flex-wrap:wrap;align-items:end;gap:8px 10px}
+.mp-field{flex:1 1 260px;min-width:0}
+.mp-ar{--c:var(--hw);min-height:42px}
+.myhw{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border-strong)}
+.myhw-row{display:flex;flex-wrap:wrap;align-items:end;gap:8px 10px}
+.myhw-field{flex:0 1 420px;min-width:0}
+.myhw-note{margin:8px 2px 0;font-size:13.5px;line-height:1.55;color:var(--text)}
+.myhw-note .fit{white-space:nowrap}
+.myhw .mh-list{margin-top:10px}
 .hint{margin:0;font-size:12.5px;line-height:1.45;color:var(--muted)}
 .est-hint{grid-column:4/-1;grid-row:2;margin-top:-6px}
 .sorting{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:20px 0 14px}
@@ -348,6 +358,23 @@ label{display:block}
 .sources{display:flex;gap:6px 14px;flex-wrap:wrap}.sources a{font-size:12px}
 .cmp{display:flex;gap:8px;align-items:center;padding:10px 16px;border-top:1px solid var(--border);font-size:13px;font-weight:750;cursor:pointer;color:var(--hw-ink)}
 .cmp input,.tablewrap input[type=checkbox]{width:17px;height:17px;accent-color:var(--hw);margin:0}
+/* The card's actions: Compare, and My hardware (a toggle; the card then shows the "My hardware" tag). */
+.c-acts{display:flex;align-items:stretch;border-top:1px solid var(--border)}
+.c-acts .cmp{flex:1;border-top:0;min-width:0}
+.myhw-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;border-inline-start:1px solid var(--border);padding:10px 14px;font-size:13px;font-weight:750;color:var(--muted);cursor:pointer}
+.myhw-btn::before{content:"☆"/"";font-size:15px;line-height:1}
+.myhw-btn:hover{color:var(--hw-ink);background:var(--surface-2)}
+.myhw-btn[aria-pressed="true"]{color:var(--hw-ink);background:var(--accent-soft)}
+.myhw-btn[aria-pressed="true"]::before{content:"★"/""}
+.myhw-tag{display:inline-block;margin-inline-start:8px;font-size:11.5px;font-weight:800;line-height:1.5;border-radius:999px;padding:0 8px;background:var(--accent-soft);color:var(--hw-ink);vertical-align:1px}
+.product.mine{border-color:var(--hw);box-shadow:0 0 0 1px var(--hw),var(--shadow-sm)}
+/* Official MLPerf results in the card's notes: links only. */
+.bench{margin:12px 0 2px}
+.product details .bench-h{margin:0 0 4px;font-size:12px;font-weight:800;color:var(--muted)}
+.bench-l{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}
+.bench-l a{font-size:12.5px;font-weight:700}
+.bench-l small{font-size:11.5px;color:var(--muted)}
+.product details .bench-note{margin:4px 0 0;font-size:12px;color:var(--muted)}
 .empty{padding:40px;text-align:center;background:var(--surface);border:1px dashed var(--border-strong);border-radius:var(--r-lg);color:var(--muted)}
 /* AI models matching the hardware search (app.js renderModelHits): a card above the products, open with the first
    three when no hardware matches, a title line with "Show models" while hardware matches too. */
@@ -758,7 +785,7 @@ dialog::backdrop{background:#0a0d1a99}
 @media print{
   :root{--bg:#fff;--surface:#fff;--surface-2:#f5f5f8;--surface-3:#eef0f6;--border:#cfd5e2;--text:#111;--strong:#000;--muted:#444}
   .n-img{display:none!important}.nitem.has-img,.heads li.has-img{display:block}
-  .top,.skip,.filters,.estimator,.sorting,.mhits,.downloads,.ihead-acts,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow-btn{display:none!important}
+  .top,.skip,.filters,.estimator,.sorting,.mhits,.downloads,.ihead-acts,.crumbs,.tray,.toast,.guides,.changes,.xnav,dialog,.cmp,.c-acts,.tablewrap input[type=checkbox],.foot-side,.more-row,.js-only,.follow-btn{display:none!important}
   .wrap{padding:0;max-width:none}
   .ihead,[dir="rtl"] .ihead{color:#111;background:none;border:0;box-shadow:none;padding:0 0 8px;margin:0}
   .ihead h1,.ihead .lead,.statusbar,.statusbar b{color:#111}

@@ -26,6 +26,21 @@
     if (!(p.memory_gb >= need)) return 'no';
     return p.memory_scope === 'System total' || p.memory_scope === 'Rack total' ? 'multi' : 'fits';
   }
+  // UAE and Gulf models from official model cards (data/models-extra.json, merged by scripts/build.py) also carry the
+  // maker (mk), the country (co), runnable (r: false means chat only, no downloadable weights), the card link (u), the
+  // license (l) and, when the card says so, Arabic (ar). Only open, runnable models with a published size are ever
+  // fitted to hardware: closed, chat-only and unsized models are listed but never fitted.
+  const fittable = m => !!(m && m.o && Number(m.b) > 0 && m.r !== false);
+  // The estimator's "Arabic models" chip: the models whose official card lists Arabic.
+  function arabicModels(models) { return (models || []).filter(m => m && m.ar === true); }
+  // "My hardware": the fittable models whose estimate (weights at `bits` plus `extra`%) fits in `memoryGb` (the same
+  // rule as fitStatus), largest first.
+  function modelsThatFit(models, memoryGb, bits, extra) {
+    const mem = Number(memoryGb);
+    if (!(mem > 0)) return [];
+    return (models || []).filter(fittable).filter(m => { const need = estimateGB(m.b, bits, extra); return need != null && need <= mem; })
+      .sort((a, b) => b.b - a.b || String(a.n).localeCompare(String(b.n)));
+  }
   function select(products, filters, key, direction) {
     const q = (filters.q || '').trim().toLowerCase();
     const result = products.filter(p => (!filters.vendor || p.vendor === filters.vendor) && (!filters.level || p.level === filters.level) && (!filters.scope || p.memory_scope === filters.scope) && (!filters.fitOnly || !filters.need || fitStatus(p, filters.need) !== 'no') && (!q || [p.model,p.vendor,p.maker,p.level,p.type,p.architecture,p.memory,p.use,p.use_ar,p.notes,p.release,p.announcement,p.interconnect,p.form_factor,p.ai_compute].join(' ').toLowerCase().includes(q)));
@@ -64,13 +79,14 @@
     return words.every(w => t.includes(w) || c.includes(w));
   }
   // nq and uq are the searches of AI news and UAE AI, one each (the UAE list is a part of the news, with its own context).
-  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',region:'',nq:'',uq:''};
-  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',region:'region',nq:'nq',uq:'uq'};
-  const NEWS_QUERIES = ['nq', 'uq'];
+  // arabic: the estimator's "Arabic models" chip (?arabic=1).
+  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',arabic:false,region:'',nq:'',uq:''};
+  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',arabic:'arabic',region:'region',nq:'nq',uq:'uq'};
+  const NEWS_QUERIES = ['nq', 'uq'], FLAGS = ['fit', 'arabic'];
   function encodeState(state) {
     const qs = new URLSearchParams();
     Object.keys(PARAMS).forEach(k => {
-      const v = k === 'cmp' ? (state.cmp || []).join(',') : k === 'dir' ? (state.dir === -1 ? 'desc' : '') : k === 'fit' ? (state.fit ? '1' : '') : NEWS_QUERIES.includes(k) ? String(state[k] ?? '').trim() : String(state[k] ?? '');
+      const v = k === 'cmp' ? (state.cmp || []).join(',') : k === 'dir' ? (state.dir === -1 ? 'desc' : '') : FLAGS.includes(k) ? (state[k] ? '1' : '') : NEWS_QUERIES.includes(k) ? String(state[k] ?? '').trim() : String(state[k] ?? '');
       if (v && (typeof DEFAULTS[k] !== 'string' || v !== DEFAULTS[k])) qs.set(PARAMS[k], v);
     });
     return qs.toString();
@@ -82,7 +98,7 @@
       if (v == null) return;
       if (k === 'cmp') s.cmp = [...new Set(v.split(',').filter(Boolean))].slice(0, 4);
       else if (k === 'dir') s.dir = v === 'desc' ? -1 : 1;
-      else if (k === 'fit') s.fit = v === '1';
+      else if (FLAGS.includes(k)) s[k] = v === '1';
       else if (NEWS_QUERIES.includes(k)) s[k] = v.trim().slice(0, SEARCH_MAX);
       else s[k] = v;
     });
@@ -98,7 +114,7 @@
   const WITH_ARG = ['level','vendor','p','f'];
   // Links shared before the views existed carry only a query string (?q=4090, ?cmp=…): they belong to the hardware atlas.
   // The head script in template.html repeats this list so the first paint already shows the right view.
-  const HW_KEYS = ['q','vendor','level','scope','sort','dir','view','cmp','p','bits','extra','fit','m'];
+  const HW_KEYS = ['q','vendor','level','scope','sort','dir','view','cmp','p','bits','extra','fit','m','arabic'];
   function impliedView(search) {
     let qs;
     try { qs = new URLSearchParams(search || ''); } catch (e) { return 'home'; }
@@ -228,7 +244,7 @@
   }
   // What the hardware search offers: nothing below two characters.
   function modelSuggestions(models, query) { return String(query || '').trim().length < 2 ? [] : searchModels(models, query); }
-  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions,normText,searchWords,matchesWords};
+  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions,normText,searchWords,matchesWords,fittable,arabicModels,modelsThatFit};
   if (!root.document) return;
 
   const AR = {
@@ -280,7 +296,23 @@
     'What changed':'ما الذي تغيّر','Contact':'تواصل معنا','Questions, corrections or partnership ideas? Email us.':'أسئلة أو تصحيحات أو أفكار للتعاون؟ راسلنا عبر البريد الإلكتروني.',
     'Email us':'راسلنا عبر البريد الإلكتروني',
     'All rights reserved.':'جميع الحقوق محفوظة.',
-    'Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.':'صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.','Pick a model from OpenRouter':'اختر نموذجاً من OpenRouter','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
+    'Product images © NVIDIA and AMD. Headlines and publisher excerpts © their publishers, with links to the original articles. AI summaries are machine-written and may contain mistakes.':'صور المنتجات © NVIDIA وAMD. العناوين ومقتطفات الناشرين © لناشريها، مع روابط إلى المقالات الأصلية. ملخصات الذكاء الاصطناعي مكتوبة آلياً وقد تحتوي على أخطاء.','Pick a model':'اختر نموذجاً','size not published':'الحجم غير منشور','closed · cloud only':'مغلق · سحابي فقط',
+    // UAE and Gulf models from official model cards (data/models-extra.json) and the "Arabic models" chip
+    'Arabic models':'نماذج عربية','Chat only — no download':'محادثة فقط — لا تنزيل','Qatar':'قطر','Saudi Arabia':'السعودية',
+    '{name} is chat only: its maker offers it in an online chat and has not published weights to download, so no hardware on this page can run it.':'{name} للمحادثة فقط: تتيحه الجهة المطوّرة عبر محادثة على الإنترنت ولم تنشر أوزانه للتنزيل، لذا لا يمكن لأي عتاد في هذه الصفحة تشغيله.',
+    'size from the official model card':'الحجم من بطاقة النموذج الرسمية','Made by {maker} · {country}':'من تطوير {maker} · {country}','Supports Arabic':'يدعم العربية',
+    'License: {l}':'الترخيص: {l}','Model card':'بطاقة النموذج','Official page':'الصفحة الرسمية',
+    'Choose from {n} models listed on OpenRouter (list updated {d}) and {x} UAE and Gulf models from their official model cards, or enter a size below.':'اختر من {n} نموذجاً مدرجاً على OpenRouter (آخر تحديث للقائمة {d}) و{x} نموذجاً من الإمارات ودول الخليج من بطاقاتها الرسمية، أو أدخل الحجم أدناه.',
+    'Arabic models only: {n} whose official model card lists Arabic. Choose one, or enter a size below.':'النماذج العربية فقط: {n} نموذجاً تذكر بطاقاتها الرسمية اللغة العربية. اختر واحداً منها أو أدخل الحجم أدناه.',
+    // My hardware (kept in this browser only)
+    'My hardware':'عتادي','None selected':'لم تختر بعد','Saved as My hardware':'حُفظ كعتادك','My hardware cleared':'أُزيل اختيار عتادك',
+    'Choose the GPU or system you have to see which AI models fit it. It is saved in this browser only.':'اختر معالج الرسوميات أو الجهاز الذي لديك لترى نماذج الذكاء الاصطناعي التي تتسع له. يُحفظ اختيارك في هذا المتصفح فقط.',
+    'With {hw}: {fit}':'مع {hw}: {fit}',
+    '{n} of {m} models fit {hw} at this precision, largest first:':'{n} من أصل {m} نموذجاً تتسع لـ {hw} بهذه الدقة، الأكبر أولاً:',
+    'No model with a published size fits {hw} at this precision. Try a lower precision.':'لا يتسع أي نموذج منشور الحجم لـ {hw} بهذه الدقة. جرّب دقة أقل.',
+    'This memory is a total across several GPUs: the model has to be split across them.':'هذه الذاكرة إجمالي عدة معالجات رسوميات: يجب تقسيم النموذج عليها.',
+    // Official MLPerf results (links only)
+    'Official benchmarks (MLPerf)':'اختبارات الأداء الرسمية (MLPerf)','Open a round to find this hardware in the results MLCommons publishes.':'افتح الجولة للعثور على هذا العتاد في النتائج التي تنشرها MLCommons.',
     "{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.":'{name} نموذج مغلق: أوزانه غير منشورة، لذا يعمل فقط في سحابة المزوّد (مثلاً عبر OpenRouter). لا يمكن لأي عتاد في هذه الصفحة تشغيله محلياً.',
     '{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.':'{name} مفتوح الأوزان، لكن حجمه غير منشور بصيغة يمكننا التحقق منها. أدخل الحجم يدوياً.',
     '{name}: {b} billion parameters':'{name}: {b} مليار مُعامل','size taken from the model name':'الحجم مأخوذ من اسم النموذج','counted from Hugging Face weights':'محسوب من أوزان Hugging Face',
@@ -329,7 +361,7 @@
   const data = JSON.parse($('catalog-data').textContent);
   const byId = new Map(data.products.map(p => [p.id, p]));
   const cards = new Map([...document.querySelectorAll('[data-product]')].map(el => [el.dataset.product, el]));
-  const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+  const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
   const state = decodeState(location.search);
   if (!new URLSearchParams(location.search).has('lang') && store.get('atlas-lang') === 'ar') state.lang = 'ar';
   state.cmp = state.cmp.filter(id => byId.has(id));
@@ -371,11 +403,25 @@
   // A link that names an open model but no size (?m=… without p) takes the model's published size.
   function sizeFromModel(s) {
     const m = findModel(s.model);
-    if (m && m.o && m.b && !s.params) s.params = String(m.b);
+    if (fittable(m) && !s.params) s.params = String(m.b);
   }
-  const sizeLabel = m => m.o ? (m.b ? fmt(m.b) + ' B' : T('size not published')) : T('closed · cloud only');
+  const sizeLabel = m => m.r === false ? T('Chat only — no download') : m.o ? (m.b ? fmt(m.b) + ' B' : T('size not published')) : T('closed · cloud only');
+  // In the picker's list a card model also names its country.
+  const modelLabel = m => sizeLabel(m) + (m.co ? ' · ' + T(m.co) : '');
+  const N_ARABIC = arabicModels(MODELS.models).length;
+  let listKey = '';
   function fillModelList() {
-    $('model-list').innerHTML = MODELS.models.map(m => `<option value="${esc(m.n)}">${esc(sizeLabel(m))}</option>`).join('');
+    // The "Arabic models" chip narrows the picker to the models whose official card lists Arabic.
+    const list = state.arabic ? arabicModels(MODELS.models) : MODELS.models;
+    $('model-list').innerHTML = list.map(m => `<option value="${esc(m.n)}">${esc(modelLabel(m))}</option>`).join('');
+    listKey = state.lang + (state.arabic ? '1' : '0');
+  }
+  function renderArabicChip() {
+    const chip = $('model-ar');
+    chip.hidden = !N_ARABIC;
+    chip.setAttribute('aria-pressed', String(!!state.arabic));
+    $('model-ar-n').textContent = String(N_ARABIC);
+    if (listKey !== state.lang + (state.arabic ? '1' : '0')) fillModelList();
   }
   // AI models matching the hardware search: a card above the products. Open with the first 3 when no hardware matches,
   // a title line with "Show models" when hardware matches too. The count is announced through #mh-live, which stays in
@@ -399,7 +445,7 @@
     const shown = mh.all ? hits : hits.slice(0, MH_FIRST), key = state.lang + '\n' + shown.map(m => m.n).join('\n');
     // Rebuilt only when the rows change, so typing doesn't replace buttons for nothing.
     if (key !== mh.key) {
-      $('mh-list').innerHTML = shown.map(m => `<li><button type="button" class="mh-pick" data-pick="${esc(m.n)}"><bdi class="mh-name" lang="en">${esc(m.n)}</bdi><span class="sr-only">, </span><span class="mh-size">${esc(sizeLabel(m))}</span></button></li>`).join('');
+      $('mh-list').innerHTML = shown.map(m => `<li><button type="button" class="mh-pick" data-pick="${esc(m.n)}"><bdi class="mh-name" lang="en">${esc(m.n)}</bdi><span class="sr-only">, </span><span class="mh-size">${esc(modelLabel(m))}</span></button></li>`).join('');
       mh.key = key;
     }
     const more = $('mh-more');
@@ -411,16 +457,90 @@
   function modelNote() {
     // The note follows the page direction; the Latin model name is isolated so it can't reorder an Arabic sentence.
     const note = $('model-note'), m = findModel(state.model);
-    note.classList.toggle('closed', !!(m && !m.o));
-    if (!m) { note.innerHTML = MODELS.models.length ? FH('Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.', {n: esc(fmt(MODELS.models.length)), d: `<bdi>${esc(day(MODELS.updated_at))}</bdi>`}) : ''; return; }
+    note.classList.toggle('closed', !!(m && (!m.o || m.r === false)));
+    if (!m) {
+      const x = MODELS.models.filter(v => v.co).length, n = MODELS.models.length - x, d = `<bdi>${esc(day(MODELS.updated_at))}</bdi>`;
+      if (state.arabic && N_ARABIC) note.innerHTML = FH('Arabic models only: {n} whose official model card lists Arabic. Choose one, or enter a size below.', {n: esc(fmt(N_ARABIC))});
+      else if (!MODELS.models.length) note.innerHTML = '';
+      else if (x) note.innerHTML = FH('Choose from {n} models listed on OpenRouter (list updated {d}) and {x} UAE and Gulf models from their official model cards, or enter a size below.', {n: esc(fmt(n)), d, x: esc(fmt(x))});
+      else note.innerHTML = FH('Choose from {n} models listed on OpenRouter (list updated {d}), or enter a size below.', {n: esc(fmt(n)), d});
+      return;
+    }
     const name = `<bdi lang="en">${esc(m.n)}</bdi>`;
+    // A card model: who made it, where, Arabic when its card says so, its license, and its official page.
+    const who = m.co ? FH('Made by {maker} · {country}', {maker: `<bdi lang="en">${esc(m.mk)}</bdi>`, country: esc(T(m.co))}) + (m.ar ? ' · ' + esc(T('Supports Arabic')) : '') : '';
+    const link = (href, label) => /^https:\/\//.test(href || '') ? ` · <a href="${esc(href)}" target="_blank" rel="noopener noreferrer">${label}</a>` : '';
+    if (m.r === false) {
+      note.innerHTML = FH('{name} is chat only: its maker offers it in an online chat and has not published weights to download, so no hardware on this page can run it.', {name})
+        + (who ? ' ' + who : '') + link(m.u, esc(T('Official page')));
+      return;
+    }
     if (!m.o) { note.innerHTML = FH("{name} is a closed model: its weights are not public, so it runs only in the provider's cloud (for example through OpenRouter). No hardware on this page can run it locally.", {name}); return; }
     if (!m.b) { note.innerHTML = FH('{name} is open-weight, but its size is not published in a form we can verify. Enter the size manually.', {name}); return; }
-    const parts = [FH('{name}: {b} billion parameters', {name, b: esc(fmt(m.b))}), esc(T(m.s === 'name' ? 'size taken from the model name' : 'counted from Hugging Face weights'))];
+    const parts = [FH('{name}: {b} billion parameters', {name, b: esc(fmt(m.b))}), esc(T(m.s === 'name' ? 'size taken from the model name' : m.s === 'card' ? 'size from the official model card' : 'counted from Hugging Face weights'))];
     if (m.moe) parts.push(esc(T('mixture-of-experts: all experts must fit in memory')));
     if (m.c) parts.push(FH('context up to {c}', {c: esc(countLabel(m.c, 'token', state.lang, fmt))}));
-    const hf = /^[\w.-]+\/[\w.-]+$/.test(m.hf || '') ? ` · <a href="https://huggingface.co/${esc(m.hf)}" target="_blank" rel="noopener noreferrer" lang="en">Hugging Face</a>` : '';
-    note.innerHTML = parts.join(' · ') + hf;
+    if (who) parts.push(who);
+    if (m.l) parts.push(FH('License: {l}', {l: `<bdi lang="en">${esc(m.l)}</bdi>`}));
+    const hfUrl = /^[\w.-]+\/[\w.-]+$/.test(m.hf || '') ? 'https://huggingface.co/' + m.hf : '';
+    const hf = hfUrl ? ` · <a href="${esc(hfUrl)}" target="_blank" rel="noopener noreferrer" lang="en">Hugging Face</a>` : '';
+    note.innerHTML = parts.join(' · ') + hf + (m.u && m.u !== hfUrl ? link(m.u, esc(T('Model card'))) : '');
+  }
+  // ---------- My hardware: one product a visitor owns, kept in this browser only (localStorage atlas-myhw) ----------
+  // The page works the same without it (private windows, blocked storage). The estimator lists the models that fit it.
+  const MYHW_KEY = 'atlas-myhw', MYHW_FIRST = 6;
+  let myhw = byId.has(store.get(MYHW_KEY)) ? store.get(MYHW_KEY) : '', myhwAll = false, myhwKey = '';
+  function setMyHw(id, announce) {
+    myhw = byId.has(id) ? id : '';
+    myhwAll = false;
+    if (myhw) store.set(MYHW_KEY, myhw); else store.del(MYHW_KEY);
+    render();
+    if (announce) flash(T(myhw ? 'Saved as My hardware' : 'My hardware cleared'));
+  }
+  function fillMyHwSelect() {
+    // Every product, grouped by level, with its memory, in the page language (the names are the vendors' own, in Latin).
+    const sel = $('myhw-sel');
+    sel.innerHTML = `<option value="">${esc(T('None selected'))}</option>` + levels.map(l => {
+      const ps = data.products.filter(p => p.level === l);
+      return ps.length ? `<optgroup label="${esc(T(l))}">${ps.map(p => `<option value="${esc(p.id)}">${esc(p.model)} · ${esc(p.memory)}</option>`).join('')}</optgroup>` : '';
+    }).join('');
+    sel.value = myhw;
+  }
+  function renderMyHw(n) {
+    const p = byId.get(myhw), sel = $('myhw-sel'), note = $('myhw-note'), list = $('myhw-list'), more = $('myhw-more');
+    if (sel.value !== myhw) sel.value = myhw;
+    $('myhw-clear').hidden = !p;
+    cards.forEach((el, id) => {
+      const mine = id === myhw;
+      el.classList.toggle('mine', mine);
+      el.querySelector('.myhw-tag').hidden = !mine;
+      el.querySelector('.myhw-btn').setAttribute('aria-pressed', String(mine));
+    });
+    if (!p) {
+      setHtml(note, esc(T('Choose the GPU or system you have to see which AI models fit it. It is saved in this browser only.')));
+      list.hidden = more.hidden = true;
+      myhwKey = '';
+      return;
+    }
+    const hw = `<bdi lang="en">${esc(p.model)}</bdi>`;
+    // The same pool as the picker: every fittable model, or the Arabic ones while that chip is on.
+    const pool = (state.arabic ? arabicModels(MODELS.models) : MODELS.models).filter(fittable);
+    const fits = modelsThatFit(pool, p.memory_gb, state.bits, state.extra), s = fitStatus(p, n), parts = [];
+    if (s) parts.push(FH('With {hw}: {fit}', {hw, fit: `<span class="fit ${s}">${esc(T(FIT[s]))}</span>`}));
+    parts.push(fits.length ? FH('{n} of {m} models fit {hw} at this precision, largest first:', {n: esc(fmt(fits.length)), m: esc(fmt(pool.length)), hw})
+      : FH('No model with a published size fits {hw} at this precision. Try a lower precision.', {hw}));
+    if (p.memory_scope === 'System total' || p.memory_scope === 'Rack total') parts.push(esc(T('This memory is a total across several GPUs: the model has to be split across them.')));
+    setHtml(note, parts.join(' '));
+    const shown = myhwAll ? fits : fits.slice(0, MYHW_FIRST), key = state.lang + '\n' + shown.map(m => m.n).join('\n');
+    list.hidden = !fits.length;
+    // Rebuilt only when the rows change, so typing elsewhere doesn't replace the buttons.
+    if (key !== myhwKey) {
+      list.innerHTML = shown.map(m => `<li><button type="button" class="mh-pick" data-pick="${esc(m.n)}"><bdi class="mh-name" lang="en">${esc(m.n)}</bdi><span class="sr-only">, </span><span class="mh-size">${esc(modelLabel(m))}</span></button></li>`).join('');
+      myhwKey = key;
+    }
+    more.hidden = fits.length <= MYHW_FIRST;
+    more.textContent = myhwAll ? T('Show fewer') : F('Show all {n} models', {n: fits.length});
+    more.setAttribute('aria-expanded', String(myhwAll));
   }
   function need() { return estimateGB(state.params, state.bits, state.extra); }
   function readControls() {
@@ -514,7 +634,9 @@
     if (state.view === 'table') renderTable(n);
     if (state.view === 'timeline') renderTimeline();
     renderTray();
+    renderArabicChip();
     modelNote();
+    renderMyHw(n);
     renderNews();
     renderUae();
     syncUrl();
@@ -821,8 +943,8 @@
     if (!value) { state.model = ''; render(); return; }
     if (!m) return;  // still typing
     state.model = m.n;
-    // Closed or unsized models must not leave an earlier model's size (and fit badges) behind.
-    $('params').value = m.o && m.b ? String(m.b) : '';
+    // Closed, chat-only or unsized models must not leave an earlier model's size (and fit badges) behind.
+    $('params').value = fittable(m) ? String(m.b) : '';
     readControls();
     render();
   }
@@ -840,7 +962,11 @@
     land(currentView, 'estimator');
     highlight($('estimator'));
   }
-  $('mh-list').addEventListener('click', e => { const b = e.target.closest('[data-pick]'); if (b) pickModel(b.dataset.pick); });
+  ['mh-list', 'myhw-list'].forEach(id => $(id).addEventListener('click', e => { const b = e.target.closest('[data-pick]'); if (b) pickModel(b.dataset.pick); }));
+  $('model-ar').addEventListener('click', () => { state.arabic = !state.arabic; render(); });
+  $('myhw-sel').addEventListener('change', () => setMyHw($('myhw-sel').value));
+  $('myhw-clear').addEventListener('click', () => { setMyHw('', true); $('myhw-sel').focus(); });
+  $('myhw-more').addEventListener('click', () => { myhwAll = !myhwAll; renderMyHw(need()); });
   $('mh-toggle').addEventListener('click', () => { mh.open = !mh.open; renderModelHits(); });
   $('mh-more').addEventListener('click', () => { mh.all = !mh.all; renderModelHits(); });
   $('params').addEventListener('input', () => {
@@ -863,6 +989,9 @@
     if (chip) { Object.assign(state, {q: chip.dataset.q, vendor: '', level: '', scope: '', fit: false, view: 'cards'}); writeControls(); syncUrl(); }
     const r = e.target.closest('[data-remove]');
     if (r) toggleCompare(r.dataset.remove, false);
+    // "My hardware" on a product card: pressing it again clears it.
+    const mb = e.target.closest('[data-myhw]');
+    if (mb) setMyHw(mb.dataset.myhw === myhw ? '' : mb.dataset.myhw, true);
     const rc = e.target.closest('[data-region-chip]');
     if (rc) { state.region = rc.dataset.regionChip; newsLimit = NEWS_STEP; render(); }
     // The (x) in a news search field and the "Clear search" button under a search without results. The (x) keeps the
@@ -895,7 +1024,7 @@
   $('compare-open').addEventListener('click', openCompare);
   $('compare-clear').addEventListener('click', () => { state.cmp = []; render(); });
   $('compare-close').addEventListener('click', closeCompare);
-  $('lang').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; store.set('atlas-lang', state.lang); applyLang(); fillModelList(); render(); });
+  $('lang').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; store.set('atlas-lang', state.lang); applyLang(); fillModelList(); fillMyHwSelect(); myhwKey = ''; render(); });
   $('theme').addEventListener('click', () => { theme = {auto:'light', light:'dark', dark:'auto'}[theme]; store.set('atlas-theme', theme); applyTheme(); });
   $('share').addEventListener('click', async () => {
     // The shared link always names the view, even when the address bar has no hash.
@@ -929,5 +1058,6 @@
   writeControls();
   applyLang();
   fillModelList();
+  fillMyHwSelect();
   route(true);
 })(typeof window !== 'undefined' ? window : {});

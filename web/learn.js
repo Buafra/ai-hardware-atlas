@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   // Learn AI page. Everything is already in the HTML in both languages; this adds the tabs, topic filters, search,
-  // deep links (#concept/<id>, #stack/<id>, #report/<id>, #group/<id>, #concepts, #stacks, #reports) and the language and
+  // deep links (#concept/<id>, #stack/<id>, #report/<id>, #course/<id>, #group/<id>, #concepts, #stacks, #reports, #courses) and the language and
   // theme buttons, which share their localStorage keys with the overview page (atlas-lang, atlas-theme).
   // Reports have three filters at once (source chips, topic and year menus); each choice counts what it would show.
   const d = document.documentElement;
@@ -15,7 +15,8 @@
     concepts: {en: ['concept', 'concepts'], ar: ['مفهوم واحد', 'مفهومان', 'مفاهيم', 'مفهوماً', 'مفهوم']},
     stacks: {en: ['AI stack', 'AI stacks'], ar: ['تركيبة واحدة', 'تركيبتان', 'تركيبات', 'تركيبة', 'تركيبة']},
     foundations: {en: ['foundation', 'foundations'], ar: ['أساس واحد', 'أساسان', 'أسس', 'أساساً', 'أساس']},
-    reports: {en: ['report', 'reports'], ar: ['تقرير واحد', 'تقريران', 'تقارير', 'تقريراً', 'تقرير']}
+    reports: {en: ['report', 'reports'], ar: ['تقرير واحد', 'تقريران', 'تقارير', 'تقريراً', 'تقرير']},
+    courses: {en: ['free course', 'free courses'], ar: ['دورة مجانية واحدة', 'دورتان مجانيتان', 'دورات مجانية', 'دورة مجانية', 'دورة مجانية']}
   };
   // Number + noun with English plurals and Arabic number agreement (same rule as cnt() in scripts/learn.py).
   function count(n, kind) {
@@ -28,7 +29,7 @@
   }
   let lang = d.lang === 'ar' ? 'ar' : 'en';
   let theme = store.get('atlas-theme') || 'auto';
-  const TABS = ['concepts', 'stacks', 'reports'];
+  const TABS = ['concepts', 'stacks', 'reports', 'courses'];
   let tab = TABS.includes(d.dataset.ltab) ? d.dataset.ltab : 'concepts';
   const noReportFilter = () => ({group: '', topic: '', year: ''});
   const filter = {concepts: '', stacks: '', reports: noReportFilter()};
@@ -102,13 +103,14 @@
       if (badge) badge.textContent = String(matches);
     }
     if (panels.reports) shown.reports = applyReports(found);
+    if (panels.courses) shown.courses = applyCourses(found);
     const total = items[tab].length, n = shown[tab];
     const narrowed = n !== total;
     // Only while a search or topic filter narrows the list (the tab badge already shows the total).
     $('l-count').textContent = !narrowed ? ''
       : lang === 'ar' ? `عدد النتائج ${n} من أصل ${ofTotal(tab)}` : `Showing ${n} of ${ofTotal(tab)}`;
     // "No matches" sits where the items would be: under the open tab's topic chips (or the report menus).
-    const chips = [...panels[tab].querySelectorAll('.l-filter, .r-selects')].pop();
+    const chips = [...panels[tab].querySelectorAll('.l-filter, .r-selects')].pop() || panels[tab].querySelector('.p-intro');
     if (chips && chips.nextElementSibling !== empty) chips.after(empty);
     empty.hidden = n > 0;
   }
@@ -147,6 +149,15 @@
     });
     const badge = document.querySelector('.l-tab [data-count="reports"]');
     if (badge) badge.textContent = String(matches);
+    return n;
+  }
+
+  // Courses: the search alone (six or so items need no filters); the tab badge counts the matches.
+  function applyCourses(found) {
+    let n = 0;
+    for (const el of items.courses) { const ok = found(el); el.hidden = !ok; if (ok) n++; }
+    const badge = document.querySelector('.l-tab [data-count="courses"]');
+    if (badge) badge.textContent = String(n);
     return n;
   }
 
@@ -208,12 +219,12 @@
       g.scrollIntoView({block: 'start'});
       return true;
     }
-    const m = /^(concept|stack|report)\/([a-z0-9-]+)$/.exec(h);
+    const m = /^(concept|stack|report|course)\/([a-z0-9-]+)$/.exec(h);
     const el = m && document.getElementById(h);
     if (!el || !el.classList.contains('l-item')) return false;
     const p = m[1] + 's';
     setTab(p);
-    if (el.hidden) { filter[p] = p === 'reports' ? noReportFilter() : ''; search.value = ''; apply(); }
+    if (el.hidden) { if (p in filter) filter[p] = p === 'reports' ? noReportFilter() : ''; search.value = ''; apply(); }
     el.open = true;
     el.scrollIntoView({block: 'start'});
     el.querySelector('summary').focus({preventScroll: true});
@@ -236,7 +247,7 @@
     const a = e.target.closest('a[href^="#"]');
     if (!a || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const href = a.getAttribute('href');
-    if (!/^#(concepts|stacks|reports|concept\/|stack\/|report\/|group\/)/.test(href)) return;
+    if (!/^#(concepts|stacks|reports|courses|concept\/|stack\/|report\/|course\/|group\/)/.test(href)) return;
     e.preventDefault();
     if (location.hash !== href) { try { history.pushState(null, '', href); } catch (err) { location.hash = href; return; } }
     go(href, true);
