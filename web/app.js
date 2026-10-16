@@ -821,16 +821,19 @@
 
   // ---------- older stories (the news archive) ----------
   // While a search is active, AI news and UAE AI offer "Search older stories": a press loads the archive's index and its
-  // newest month files (dist/news-archive/, same origin, written by build.py; OLDER_MONTHS at a time, "Search earlier
-  // months" for more) and lists the matches under the current results, with the same matcher (olderMatches). Loaded
-  // once per page and shared by both views. The list follows the search, the language, and in AI news the region and topic.
-  const OLDER_STEP = 20, OLDER_MONTHS = 3, MONTH_FILE = /^\d{4}-(0[1-9]|1[0-2])\.json$/;
+  // newest month file (dist/news-archive/, same origin, written by build.py; OLDER_MONTHS at a time, "Search earlier
+  // months" for more: a month file can be a few MB) and lists the matches under the current results, with the same
+  // matcher (olderMatches). Loaded once per page and shared by both views. The list follows the search, the language,
+  // and in AI news the region and topic.
+  const OLDER_STEP = 20, OLDER_MONTHS = 1, MONTH_FILE = /^\d{4}-(0[1-9]|1[0-2])\.json$/;
   const archive = {index: null, items: [], loaded: 0, loading: null, failed: false};
   const older = {news: {open: false, limit: OLDER_STEP, key: ''}, uae: {open: false, limit: OLDER_STEP, key: ''}};
+  // One load at a time: a press while one runs waits for it. archive.loading is the running load, cleared when it ends
+  // (also when it ends at once: nothing left to fetch), so a later press or the other view starts a new one.
   function loadArchive(view, more) {
     if (archive.loading) return archive.loading;
     const box = $(view + '-older'), base = new URL(ROOT + (box ? box.dataset.archive : 'news-archive/index.json'), location.href);  // ROOT: from ar/, one folder up
-    archive.loading = (async () => {
+    const run = (async () => {
       try {
         if (!archive.index) {
           const r = await fetch(base.href, {credentials: 'same-origin'});
@@ -849,21 +852,27 @@
         }
         archive.failed = false;
       } catch (e) { archive.failed = true; }
-      archive.loading = null;
-      older.news.key = older.uae.key = '';
     })();
-    return archive.loading;
+    // Cleared in a reaction to the finished load, never inside it: a load with nothing to await ends before
+    // archive.loading is even set, and would leave it set for good ("Loading older stories…" forever).
+    const done = run.then(() => {
+      if (archive.loading === done) archive.loading = null;
+      older.news.key = older.uae.key = '';
+    });
+    archive.loading = done;
+    return done;
   }
   const SUMMARY_BY = {ai: {en: 'AI summary', ar: 'ملخص بالذكاء الاصطناعي'}, publisher: {en: 'From the publisher', ar: 'من الناشر'}};
-  function olderCard(i) {
-    // The same card as the server's (build.py news_card), without an image; text only, escaped.
+  function olderCard(i, view) {
+    // The same card as the server's (build.py news_card), without an image; text only, escaped. The share button's name
+    // is its label followed by the headline (aria-labelledby: the button itself, then the title), as on the server's cards.
     const lang = state.lang, ar = lang === 'ar', v = olderView(i, lang, archive.index && archive.index.sources), dir = `lang="${lang}" dir="${ar ? 'rtl' : 'ltr'}"`;
-    const url = /^https:\/\//.test(String(i.url || '')) ? i.url : '';
+    const url = /^https:\/\//.test(String(i.url || '')) ? i.url : '', key = esc(`${view}-${String(i.id || '').replace(/[^\w-]/g, '')}`);
     const sum = v.summary ? `<p class="n-sum" ${dir}>${esc(v.summary)}</p><p class="n-by">${esc(SUMMARY_BY[v.kind][lang])}</p>` : '';
     const link = url ? `<a class="n-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(ar ? 'المصدر' : 'Source')}: ${esc(v.publisher)} <span class="n-ext" aria-hidden="true">↗</span></a>` : '';
     const icon = (document.querySelector('.share-btn svg') || {}).outerHTML || '', label = esc(T('Share this story'));
-    const share = url ? `<button type="button" class="share-btn n-share" data-share="story" aria-label="${label}" title="${label}">${icon}</button>` : '';
-    return `<li class="nitem older-item" data-topic="${esc(i.topic || '')}"><h4 class="n-title" ${dir}>${esc(v.title)}</h4>${sum}`
+    const share = url ? `<button type="button" class="share-btn n-share" data-share="story" aria-label="${label}" title="${label}" id="osb-${key}" aria-labelledby="osb-${key} ost-${key}">${icon}</button>` : '';
+    return `<li class="nitem older-item" data-topic="${esc(i.topic || '')}"><h4 class="n-title" id="ost-${key}" ${dir}>${esc(v.title)}</h4>${sum}`
       + `<p class="n-meta">${link}<time datetime="${esc(i.published)}">${esc(day(i.published))}</time>${v.mt ? '<span class="mt">ترجمة بالذكاء الاصطناعي</span>' : ''}${share}</p></li>`;
   }
   function renderOlder(view) {
@@ -884,7 +893,7 @@
     }
     const hits = olderMatches(archive.items, archive.index.sources, {lang: state.lang, terms, view, region: state.region, topic: state.nt});
     const shown = hits.slice(0, o.limit), key = [state.lang, terms.join(' '), state.region, state.nt, o.limit, archive.items.length].join('|');
-    if (key !== o.key) { list.innerHTML = shown.map(olderCard).join(''); o.key = key; }
+    if (key !== o.key) { list.innerHTML = shown.map(i => olderCard(i, view)).join(''); o.key = key; }
     setText(count, hits.length ? F('Older stories: {m}', {m: countLabel(hits.length, 'headline', state.lang)}) : T('No older stories match this search.'));
     more.hidden = shown.length >= hits.length;
     back.hidden = archive.loaded >= (archive.index.months || []).length;

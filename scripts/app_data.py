@@ -18,10 +18,14 @@ it) and its image, a path relative to the site root: the company's own image (im
 keys it does not know.
 
 archive.json: the news archive (scripts/news_archive.py), the stories that left the AI news list in the last
-news_archive.APP_DAYS days before the headlines' last update, newest first, without those still in news.json. Each item
-has exactly news_archive.FIELDS (id, source, lang, uae, topic, published, title, title_ar, url, summary_en, summary_ar,
-excerpt; null when the story has none); summary_en and summary_ar are AI summaries, title_ar an AI translation. Only
-stories the site still shows (news_archive.shown: the content-policy rules apply to the archive too).
+news_archive.APP_DAYS days before the headlines' last update, newest first, without those still in news.json, and never
+more than news_archive.APP_MAX_BYTES (the oldest stories beyond it are left out). Each item has exactly
+news_archive.FIELDS (id, source, lang, uae, topic, published, title, title_ar, url, summary_en, summary_ar, excerpt; null
+when the story has none); summary_en and summary_ar are AI summaries, title_ar an AI translation. Only stories the site
+still shows (news_archive.shown: the content-policy rules and the block list apply to the archive too). "sources":
+{source id: {name, name_ar, region}} of every followed source (news_archive.public_sources, as in the site's
+news-archive/index.json), so a story whose source has no headline in news.json still shows its publisher's names and
+its Global tag.
 """
 import hashlib
 import json
@@ -115,12 +119,33 @@ def payloads(data, feed, sources, uae, models, concepts_doc, stacks_doc, about=N
         'models.json': {'schema': APP_SCHEMA, 'updated_at': models.get('updated_at'), 'source': models.get('source'),
                         'models': [app_model(m) for m in models.get('models', [])]},
         'about.json': {'schema': APP_SCHEMA, **(about if about is not None else load_about())},
-        'archive.json': {'schema': APP_SCHEMA, 'updated_at': (feed or {}).get('updated_at'), 'days': news_archive.APP_DAYS,
-                         'items': news_archive.app_items(c['archive'], build.reference_time(feed))},
+        'archive.json': archive_doc(feed, c['archive'], sources),
     }
 
 def encode(payload):
     return (json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n').encode('utf-8')
+
+def archive_doc(feed, archived, sources, max_bytes=None):
+    """archive.json: the archive's stories of the last APP_DAYS days (newest first), the newest of them only as far as
+    the encoded file stays within `max_bytes` (default news_archive.APP_MAX_BYTES), and the sources' names and regions.
+    "days" is how far back the file reaches (the app says "from the last <days> days"): APP_DAYS, or fewer whole days
+    when older stories had to be left out."""
+    max_bytes = news_archive.APP_MAX_BYTES if max_bytes is None else max_bytes
+    now = build.reference_time(feed)
+    items = news_archive.app_items(archived, now)
+    doc = {'schema': APP_SCHEMA, 'updated_at': (feed or {}).get('updated_at'), 'days': news_archive.APP_DAYS,
+           'sources': news_archive.public_sources(sources), 'items': []}
+    total, keep = len(encode(doc)), 0
+    for item in items:  # an item's encoded size includes one byte more than the item: its comma
+        total += len(encode(item))
+        if total > max_bytes:
+            break
+        keep += 1
+    days = news_archive.APP_DAYS
+    if keep < len(items):
+        oldest = news_archive.uae_time(items[keep - 1]['published']) if keep else now
+        days = max(1, min(days, (now - oldest).days))
+    return {**doc, 'days': days, 'items': items[:keep]}
 
 def write(out_dir, data, feed, sources, uae, models, concepts_doc=None, stacks_doc=None, about=None, lessons_doc=None, reports_doc=None, company=None,
           archive=None):

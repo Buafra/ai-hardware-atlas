@@ -4,6 +4,12 @@ story of the week, from the current AI news list and the news archive (the stori
 build.news_items and news_archive.shown), grouped by day (newest first) and then by topic (scripts/topics.py, the rule
 behind the topic images), each with the summary the site shows and its link to the original article.
 
+The pages start on the day the archive began (`since`: news_archive.started(), data/news-archive/started.json, written by
+the first news run that archived). Stories that left the list before that day were never kept, so stories published
+before it are left out and no page is made for an earlier week: a page never claims a week it does not hold. The week
+the archive began says so ("This page starts on …") and its lead does not say "this week". Before the first such run
+(`since` None) there is no weekly page.
+
 Paths (page_path): weekly/YYYY-wNN.html and weekly/uae-YYYY-wNN.html in English; ar/weekly/YYYY-wNN.html and
 ar/weekly/uae-YYYY-wNN.html in Arabic, under the site's Arabic folder (scripts/lang_pages.py), with weekly/index.html and
 ar/weekly/index.html listing the weeks. Each English page and its Arabic twin name each other (canonical, hreflang en/ar,
@@ -91,13 +97,18 @@ def _rel(path, target):
     rel = posixpath.relpath(target, posixpath.dirname(path) or '.')
     return rel + hashmark + frag
 
-def stories(current, archived, sources):
+def stories(current, archived, sources, since):
     """The stories the weekly pages list, newest first, one per id and per link: the current list first (full news.json
-    items), then the archive's (news_archive.shown()). Each gets '_topic' and '_week'."""
+    items), then the archive's (news_archive.shown()), only those published (UAE time) on or after `since`, the day the
+    archive began (None: none). Each gets '_topic' and '_week'."""
+    if since is None:
+        return []
     src = {s['id']: s for s in sources}
     seen, out = set(), []
     for item, is_archived in [(i, False) for i in current] + [(i, True) for i in archived]:
         if item.get('source') not in src or item['id'] in seen or ('url', item['url']) in seen:
+            continue
+        if _b().to_uae(item['published']).date() < since:
             continue
         seen.update((item['id'], ('url', item['url'])))
         story = dict(item)
@@ -221,14 +232,21 @@ def render_week(kind, key, pool, lang, src, ctx):
               f'<bdi lang="en">Cipher Lacuna</bdi></a><span aria-hidden="true">/</span><a href="{_rel(path, index_path(lang))}">{REVIEW[lang]}</a>'
               f'<span aria-hidden="true">/</span><span aria-current="page">{week_label}</span></nav>')
     count = b.cnt(n, 'story', lang)
-    lead = (('كل خبر عن الذكاء الاصطناعي في الإمارات نشرناه هذا الأسبوع' if kind == 'uae' else 'كل خبر عن الذكاء الاصطناعي نشرناه هذا الأسبوع')
-            + '، مرتباً حسب اليوم والموضوع، مع ملخصه ورابط إلى المقال الأصلي. الأوقات بتوقيت الإمارات.' if ar else
-            ('Every UAE AI story' if kind == 'uae' else 'Every AI story') + ' we listed this week, grouped by day and topic, with its summary and a link to the original article. Times in UAE time.')
-    notes = ''
     monday, sunday = week_days(y, w)
+    # The week the archive began holds only the days from its start: its lead says so instead of "this week".
+    partial = bool(ctx['since']) and monday < ctx['since'] <= sunday
+    if ar:
+        lead = (('كل خبر عن الذكاء الاصطناعي في الإمارات نشرناه' if kind == 'uae' else 'كل خبر عن الذكاء الاصطناعي نشرناه')
+                + (' منذ بدء الأرشيف' if partial else ' هذا الأسبوع')
+                + '، مرتباً حسب اليوم والموضوع، مع ملخصه ورابط إلى المقال الأصلي. الأوقات بتوقيت الإمارات.')
+    else:
+        lead = (('Every UAE AI story' if kind == 'uae' else 'Every AI story')
+                + (' we listed from the day the archive began' if partial else ' we listed this week')
+                + ', grouped by day and topic, with its summary and a link to the original article. Times in UAE time.')
+    notes = ''
     if sunday >= ctx['today']:
         notes += f'<p class="w-flag">{"هذا الأسبوع لم ينته بعد: تضاف الأخبار فور نشرها." if ar else "This week is still in progress: stories are added as they are published."}</p>'
-    if ctx['since'] and monday < ctx['since'] <= sunday:
+    if partial:
         since = f'{ctx["since"].day} {(b.AR_MONTHS if ar else b.EN_MONTHS)[ctx["since"].month - 1]} {ctx["since"].year}'
         notes += f'<p class="w-flag">{f"تبدأ هذه الصفحة في {since}، تاريخ بدء الأرشيف." if ar else f"This page starts on {since}, when the archive began."}</p>'
     tcount = {}
@@ -296,16 +314,16 @@ def render_index(weeks, ctx, lang='en'):
             f'</div></footer>\n</body></html>\n')
     return head + top + f'<main class="w-wrap" id="main" tabindex="-1">{body}' + foot
 
-def pages(current, archived, sources, now, logo='', home='index.html'):
+def pages(current, archived, sources, now, logo='', home='index.html', since=None):
     """({path: page text}, links) for every week. Pure: writes nothing. `links`: the newest week of each kind, for the
     AI news and UAE AI views: {'all'|'uae': {'en': path, 'ar': path, 'range_en', 'range_ar', 'week'}} (a kind without
     stories is left out). `now`: the reference time (the in-progress note). `home`: the overview's file name beside the
-    weekly folder (index.html; the --standalone copy has its own)."""
+    weekly folder (index.html; the --standalone copy has its own). `since`: the day the archive began
+    (news_archive.started()); None: no week yet."""
     src = {s['id']: s for s in sources}
-    all_stories = stories(current, archived, sources)
+    all_stories = stories(current, archived, sources, since)
     weeks = group_weeks(all_stories)
     today = now.astimezone(UAE_TZ).date()
-    since = min((_b().to_uae(s['published']).date() for s in all_stories), default=None)
     ctx = {'logo': logo, 'today': today, 'since': since, 'year': today.year, 'home': home}
     out = {}
     for kind in KINDS:
@@ -330,10 +348,10 @@ def _links(weeks):
                            'range_en': range_text(y, w, 'en'), 'range_ar': range_text(y, w, 'ar')}
     return links
 
-def latest(current, archived, sources):
+def latest(current, archived, sources, since=None):
     """The newest weekly page of each kind, as pages() gives it (for the links in AI news and UAE AI), without
-    rendering any page."""
-    return _links(group_weeks(stories(current, archived, sources)))
+    rendering any page. `since`: as for pages()."""
+    return _links(group_weeks(stories(current, archived, sources, since)))
 
 def write(out_dir, built):
     """Write the pages of pages() and weekly.css (one copy, in weekly/) into out_dir; pages of an earlier build that are

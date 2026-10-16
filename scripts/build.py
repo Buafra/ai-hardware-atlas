@@ -16,6 +16,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import android_app
 import apk_page
+import blocklist
 import feeds
 import lang_pages
 import learn
@@ -355,11 +356,11 @@ def product(p):
     vendor = '' if shot else f'<span class="vendor">{p["vendor"]}</span> · '
     maker = f' · <span class="maker">{L("Built by " + EN(p["maker"]), "من صنع " + EN(p["maker"]))}</span>' if p.get('maker') else ''
     return f'''<article class="product {p['vendor'].lower()}" id="p-{E(p['id'])}" data-product="{E(p['id'])}">{shot}
-    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}{maker}<span class="myhw-tag" hidden><span data-i18n>My hardware</span></span></p><h3><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
+    <div class="c-body"><p class="c-eye">{vendor}{T(p['level'])} · {T(p['type'])}{maker}<span class="myhw-tag" hidden><span data-i18n>My hardware</span></span></p><h3 id="pn-{E(p['id'])}"><bdi lang="en">{E(p['model'])}</bdi></h3><p class="architecture"><bdi lang="en">{E(p['architecture'])}</bdi></p><p class="use"{use_ar}>{E(p['use'])}</p>
     <p class="memory"><strong><bdi lang="en">{E(p['memory'])}</bdi></strong><small>{T(p['memory_scope'])}</small><span class="fit" hidden></span></p>
     <dl class="facts"><div><dt data-i18n>Availability / target</dt><dd>{release}{release_kind(p['release_kind'])}</dd></div><div><dt data-i18n>Announced / launched</dt><dd>{announced}</dd></div><div><dt data-i18n>Bandwidth</dt><dd>{bandwidth}</dd></div><div><dt data-i18n>Power</dt><dd>{power}<small>{T(p['power_note'])}</small></dd></div><div><dt data-i18n>AI compute</dt><dd>{NA(p['ai_compute'], EN)}</dd></div><div><dt data-i18n>Launch price</dt><dd>{price}</dd></div>{price_block(p)}</dl></div>
     <details><summary data-i18n>Notes and official sources</summary><dl class="more"><div><dt data-i18n>Form factor</dt><dd>{NA(p['form_factor'], EN)}</dd></div><div><dt data-i18n>Cooling</dt><dd>{cooling}</dd></div><div><dt data-i18n>Interconnect</dt><dd>{NA(p['interconnect'], EN)}</dd></div><div><dt data-i18n>Content reviewed</dt><dd>{dated(p['source_reviewed'])}</dd></div></dl><p lang="en" dir="auto">{E(p['notes'])}</p><div class="sources" lang="en">{sources}</div>{benchmarks_block(p)}</details>
-    <div class="c-acts"><label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label><button type="button" class="myhw-btn js-only" data-myhw="{E(p['id'])}" aria-pressed="false"><span data-i18n>My hardware</span></button>{share_btn('product', 'p-share', label='Share this product')}</div></article>'''
+    <div class="c-acts"><label class="cmp"><input type="checkbox" class="cmp-toggle" value="{E(p['id'])}"><span data-i18n>Compare</span></label><button type="button" class="myhw-btn js-only" data-myhw="{E(p['id'])}" aria-pressed="false" aria-labelledby="pmh-{E(p['id'])} pn-{E(p['id'])}"><span id="pmh-{E(p['id'])}" data-i18n>My hardware</span></button>{share_btn('product', 'p-share', label='Share this product', own='psh-' + E(p['id']), of='pn-' + E(p['id']))}</div></article>'''
 
 # ---------- brand slot ----------
 
@@ -544,23 +545,28 @@ def news_pic(pic, lang):
 # link; a product or a key fact shares its own deep link (#hardware/p/<id>, #uae/f/<id>). No third-party widget.
 SHARE_STORY = {'en': 'Share this story', 'ar': 'مشاركة الخبر'}
 
-def share_btn(kind, cls, lang=None, label=None):
+def share_btn(kind, cls, lang=None, label=None, own=None, of=None):
     """The small share button. In a one-language list (`lang`) its label is in that language; on a card shown in both
-    languages app.js translates `label` (data-i18n-aria)."""
+    languages app.js translates `label` (data-i18n-aria). With `own` (the button's id) and `of` (the id of the card's
+    title), its name is its label followed by that title ("Share this story NVIDIA ships …"): aria-labelledby names
+    the button itself first, whose part is its aria-label, so a list of the page's buttons tells the cards apart."""
     if lang:
         aria = f'aria-label="{SHARE_STORY[lang]}" title="{SHARE_STORY[lang]}"'
     else:
         aria = f'aria-label="{label}" data-i18n-aria="{label}"'
+    if own and of:
+        aria += f' id="{own}" aria-labelledby="{own} {of}"'
     return f'<button type="button" class="share-btn {cls} js-only" data-share="{kind}" {aria}>{ICON["share"]}</button>'
 
 def item_topic(i, src):
     """The story's topic id (scripts/topics.py): the same rule as its topic image and the topic stored by news.py."""
     return topics.topic_of(i, src.get(i['source']))
 
-def news_card(i, lang, src, tags='', pic=None, share=False):
+def news_card(i, lang, src, tags='', pic=None, share=False, key=None):
     """One headline: the title as plain text, a short summary with who wrote it, then a small link to the original
     article with the publisher's name, and the date (UAE time). With `pic`, the story's image comes first (and a
-    company image's credit line after the date); with `share`, a share button ends the line."""
+    company image's credit line after the date); with `share`, a share button ends the line, named after the headline
+    when `key` (unique on the page: view, language and story id) gives the title and the button their ids."""
     img, cred = news_pic(pic, lang)
     s, d = src[i['source']], to_uae(i['published'])
     title, mt = headline_text(i, lang)
@@ -571,8 +577,9 @@ def news_card(i, lang, src, tags='', pic=None, share=False):
     name = s['name_ar'] if ar else s['name']
     when = f'{d.day} {AR_MONTHS[d.month-1]}، <bdi>{d:%H:%M}</bdi>' if ar else f'{d.day} {EN_MONTHS[d.month-1]}, <bdi>{d:%H:%M}</bdi>'
     link = f'<a class="n-src" href="{E(i["url"])}" target="_blank" rel="noopener noreferrer">{"المصدر" if ar else "Source"}: {E(name)} <span class="n-ext" aria-hidden="true">↗</span></a>'
-    btn = share_btn('story', 'n-share', lang) if share else ''
-    return (f'{img}<h4 class="n-title" {text_dir}>{E(title)}</h4>{summary}'
+    title_id = f' id="st-{E(key)}"' if share and key else ''
+    btn = share_btn('story', 'n-share', lang, own=f'sb-{E(key)}', of=f'st-{E(key)}') if share and key else share_btn('story', 'n-share', lang) if share else ''
+    return (f'{img}<h4 class="n-title"{title_id} {text_dir}>{E(title)}</h4>{summary}'
             f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}{cred}{btn}</p>')
 
 def heads(items, src, per, limit, pics=None):
@@ -590,19 +597,22 @@ def heads(items, src, per, limit, pics=None):
 
 REGION_TAG = {'en': {'global': 'Global', 'uae': 'UAE'}, 'ar': {'global': 'عالمي', 'uae': 'الإمارات'}}
 
-def news_li(i, lang, src, pic=None):
-    """A card of the AI news and UAE AI lists: its regions and topic (data-topic, for the topic chips) and a share button."""
+def news_li(i, lang, src, pic=None, view='news'):
+    """A card of the AI news and UAE AI lists (`view`): its regions and topic (data-topic, for the topic chips) and a
+    share button named after the headline."""
     reg = regions(i, src)
     tags = ''.join(f'<span class="tag {"uae" if r == "uae" else "glob"}">{REGION_TAG[lang][r]}</span>' for r in reg)
     topic = (pic or {}).get('topic') or item_topic(i, src)
+    key = f'{view}-{lang}-{i["id"]}'
     return (f'<li class="nitem{" has-img" if pic else ""}" data-region="{" ".join(reg)}" data-topic="{E(topic)}">'
-            f'{news_card(i, lang, src, tags, pic, share=True)}</li>')
+            f'{news_card(i, lang, src, tags, pic, share=True, key=key)}</li>')
 
 NEWS_NOTE = L('Summaries marked "AI summary" are machine-written from the article or the publisher\'s description and may contain mistakes. Follow the source link to read the full story.',
               'الملخصات الموسومة «ملخص بالذكاء الاصطناعي» يكتبها الذكاء الاصطناعي من نص المقال أو من وصف الناشر، والعناوين الموسومة «ترجمة بالذكاء الاصطناعي» يترجمها الذكاء الاصطناعي، وقد تحتوي على أخطاء. اتبع رابط المصدر لقراءة الخبر كاملاً.')
 
-def day_lists(items, src, empty_en, empty_ar, pics=None):
-    """Full headline lists, one per language, grouped by day in UAE time, each card with its image from `pics`."""
+def day_lists(items, src, empty_en, empty_ar, pics=None, view='news'):
+    """Full headline lists of the AI news or UAE AI view (`view`), one per language, grouped by day in UAE time, each
+    card with its image from `pics`."""
     out, pics = '', pics or {}
     for lang in ('en', 'ar'):
         pool = [i for i in items if in_lang(i, lang)]
@@ -615,7 +625,7 @@ def day_lists(items, src, empty_en, empty_ar, pics=None):
             if day != cur:
                 body += ('</ol></section>' if cur else '') + f'<section class="nday"><h3>{day_label(day, lang)}</h3><ol>'
                 cur = day
-            body += news_li(i, lang, src, pics.get(i['id']))
+            body += news_li(i, lang, src, pics.get(i['id']), view)
         out += f'<div class="nlist" data-lang="{lang}">{body}</ol></section></div>'
     return out
 
@@ -926,7 +936,7 @@ def uae_view(c):
 {search_box('uae')}
 <dl class="side-stats">{side}</dl>{rss_link('uae')}{week_links(c, 'uae')}</div></aside>
 <div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p id="uae-count" aria-live="polite">{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
-{day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'])}
+{day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'], 'uae')}
 <div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
 {search_empty('uae')}
 {older_block('uae', c)}
@@ -1034,9 +1044,11 @@ def learn_context():
             'topics': [(g, sum(x['group'] == g['id'] for x in concepts)) for g in concepts_doc['groups']],
             'start': [x for x in concepts if x.get('level') == 'beginner'][:LEARN_PICKS], 'stacks': core[:LEARN_PICKS]}
 
-def older_stories(items, archived, sources):
-    """The archived stories the site may show (news_archive.shown), without those already in the current list."""
-    return news_archive.shown(archived, sources, exclude={i['id'] for i in items} | {('url', i['url']) for i in items})
+def older_stories(items, archived, sources, blocked=None):
+    """The archived stories the site may show (news_archive.shown), without those already in the current list and
+    never one on the content-policy block list (`blocked`; default: data/news-blocked.json)."""
+    return news_archive.shown(archived, sources, exclude={i['id'] for i in items} | {('url', i['url']) for i in items},
+                              blocked=blocklist.load() if blocked is None else blocked)
 
 def context(data, feed, sources, uae, about=None, company=None, android=None, archive=None):
     """Everything the page is rendered from. `company`: the company images news_images.run() prepared ({item id:
@@ -1066,8 +1078,9 @@ def context(data, feed, sources, uae, about=None, company=None, android=None, ar
         'about': about if about is not None else load_about(),
         # The Android app (android_app.load()): the About section's download card; None: no card.
         'android': android,
-        # Stories that left the AI news list (the archive), and the newest weekly page of each kind.
-        'archive': older, 'weeks': weekly.latest(items, older, sources),
+        # Stories that left the AI news list (the archive), and the newest weekly page of each kind (from the day the
+        # archive began: none before the first news run that archived).
+        'archive': older, 'weeks': weekly.latest(items, older, sources, since=news_archive.started()),
     }
 
 def prepare(data):
@@ -1347,7 +1360,7 @@ def write_weekly(out_dir,items,older,sources,feed,home='index.html'):
     """The weekly pages (scripts/weekly.py) into out_dir/weekly/, with the site's logo; their links back go to `home`.
     Returns the number of pages."""
     logo,_=brand_assets()
-    built,_=weekly.pages(items,older,sources,reference_time(feed),logo.replace('class="brand-logo" ','class="w-logo" '),home)
+    built,_=weekly.pages(items,older,sources,reference_time(feed),logo.replace('class="brand-logo" ','class="w-logo" '),home,since=news_archive.started())
     return len(weekly.write(out_dir,built))
 
 def main():

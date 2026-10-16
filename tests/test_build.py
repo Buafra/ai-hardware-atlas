@@ -983,7 +983,23 @@ class TopicShareMarkupTests(unittest.TestCase):
             cards=re.findall(r'<li class="nitem.*?</li>',view,re.S)
             for li in cards:self.assertEqual(li.count('data-share="story"'),1)
         self.assertEqual(h.count('data-share="product"'),len(self.data['products']))
-        self.assertIn('<button type="button" class="share-btn p-share js-only" data-share="product" aria-label="Share this product" data-i18n-aria="Share this product"><svg ',h)
+        self.assertIn('<button type="button" class="share-btn p-share js-only" data-share="product" aria-label="Share this product" data-i18n-aria="Share this product" id="psh-h200" aria-labelledby="psh-h200 pn-h200"><svg ',h)
+        # Each card's buttons are named after its product or headline, so a screen reader's list of buttons tells the 128
+        # "My hardware" and "Share" buttons apart: aria-labelledby names the button (its own label or text), then the title.
+        self.assertIn('<h3 id="pn-h200"><bdi lang="en">',h)
+        self.assertIn('aria-pressed="false" aria-labelledby="pmh-h200 pn-h200"><span id="pmh-h200" data-i18n>My hardware</span></button>',h)
+        ids=re.findall(r'\sid="([^"]+)"',self.html)
+        self.assertEqual(len(ids),len(set(ids)),[i for i in set(ids) if ids.count(i)>1][:5])  # every id once on the page
+        for view in (n,u):
+            named=re.findall(r'data-share="story"[^>]*\sid="(sb-[^"]+)" aria-labelledby="(sb-[^ "]+) (st-[^"]+)"',view)
+            self.assertEqual(len(named),view.count('data-share="story"'))
+            for own,first,title in named:
+                self.assertEqual(own,first);self.assertIn(f'id="{title}"',view)
+        if self.items:
+            i=self.items[0]
+            card=build.news_li(i,'en',self.src,view='uae')
+            self.assertIn(f'<h4 class="n-title" id="st-uae-en-{i["id"]}" lang="en" dir="ltr">',card)
+            self.assertIn(f'id="sb-uae-en-{i["id"]}" aria-labelledby="sb-uae-en-{i["id"]} st-uae-en-{i["id"]}"',card)
         self.assertEqual(u.count('data-share="fact"'),len(self.uae['facts']))
         self.assertIn('class="share-btn f-share js-only" data-share="fact" aria-label="Share this key fact" data-i18n-aria="Share this key fact"',u)
         self.assertIn('data-share="story" aria-label="Share this story" title="Share this story"',build.news_card(self.items[0],'en',self.src,share=True) if self.items else 'data-share="story" aria-label="Share this story" title="Share this story"')

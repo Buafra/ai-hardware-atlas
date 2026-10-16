@@ -1,10 +1,11 @@
 """Weekly pages (scripts/weekly.py): "AI this week" and "UAE AI this week" per ISO week in UAE time, in English and
 Arabic, from the current list and the archive, grouped by day and topic, rule-based, shareable and self-contained."""
 import html,re,sys,tempfile,unittest
+from unittest import mock
 from datetime import date,datetime,timezone
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-import build,lang_pages,topics,weekly
+import build,lang_pages,news_archive,topics,weekly
 
 SOURCES=[{'id':'g','name':'Global Pub','name_ar':'ناشر عالمي','homepage':'https://g.example/','region':'global','lang':'en'},
          {'id':'u','name':'Gulf Daily','name_ar':'صحيفة الخليج','homepage':'https://u.example/','region':'uae','lang':'en'},
@@ -21,11 +22,12 @@ ARCHIVED=[{'id':'s5','source':'g','lang':'en','uae':False,'topic':'research','pu
           {'id':'s1','source':'g','lang':'en','uae':False,'topic':'hardware','published':'2026-10-16T09:00:00+00:00','title':'Duplicate of the current story','title_ar':None,
            'url':'https://g.example/1','summary_en':None,'summary_ar':None,'excerpt':None}]
 NOW=datetime(2026,10,17,8,tzinfo=timezone.utc)
+SINCE=date(2026,10,6)  # the day the archive began (news_archive.started()): Tuesday of week 41
 
 class WeeklyTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.pages,cls.links=weekly.pages(CURRENT,ARCHIVED,SOURCES,NOW,logo='')
+        cls.pages,cls.links=weekly.pages(CURRENT,ARCHIVED,SOURCES,NOW,logo='',since=SINCE)
     def test_paths_ranges_and_weeks(self):
         # English pages in weekly/, Arabic ones in the site's Arabic folder (ar/weekly/), each language with its index.
         self.assertEqual(sorted(self.pages),['ar/weekly/2026-w41.html','ar/weekly/2026-w42.html','ar/weekly/index.html','ar/weekly/uae-2026-w42.html',
@@ -35,7 +37,7 @@ class WeeklyTests(unittest.TestCase):
         self.assertEqual(weekly.range_text(2026,40,'en'),'28 Sep – 4 Oct 2026');self.assertEqual(weekly.range_text(2026,53,'en'),'28 Dec 2026 – 3 Jan 2027')
         self.assertEqual(self.links['all'],{'en':'weekly/2026-w42.html','ar':'ar/weekly/2026-w42.html','week':42,'range_en':'12–18 Oct 2026','range_ar':'12–18 أكتوبر 2026'})
         self.assertEqual(self.links['uae']['en'],'weekly/uae-2026-w42.html')
-        self.assertEqual(weekly.latest(CURRENT,ARCHIVED,SOURCES),self.links)
+        self.assertEqual(weekly.latest(CURRENT,ARCHIVED,SOURCES,since=SINCE),self.links)
     def test_grouped_by_day_then_topic_with_summaries_and_links(self):
         page=self.pages['weekly/2026-w42.html']
         days=re.findall(r'<section class="w-day"><h2>([^<]+)</h2>',page)
@@ -76,7 +78,15 @@ class WeeklyTests(unittest.TestCase):
         w42,w41=self.pages['weekly/2026-w42.html'],self.pages['weekly/2026-w41.html']
         self.assertIn('<a class="w-prev" rel="prev" href="2026-w41.html">',self.pages['ar/weekly/2026-w42.html'])
         self.assertIn('This week is still in progress',w42);self.assertNotIn('still in progress',w41)
-        self.assertIn('This page starts on 6 Oct 2026, when the archive began.',w41)  # Monday 5 Oct is before the first story
+        self.assertIn('This page starts on 6 Oct 2026, when the archive began.',w41)  # Monday 5 Oct is before it
+        # The week the archive began does not claim the whole week; a full week does.
+        self.assertIn('<p class="w-lead">Every AI story we listed from the day the archive began, grouped by day and topic',w41)
+        self.assertNotIn('this week',w41[w41.index('w-lead'):w41.index('</p>',w41.index('w-lead'))])
+        self.assertIn('<p class="w-lead">Every AI story we listed this week, grouped by day and topic',w42)
+        self.assertNotIn('when the archive began',w42)
+        self.assertIn('كل خبر عن الذكاء الاصطناعي نشرناه منذ بدء الأرشيف، مرتباً حسب اليوم والموضوع',self.pages['ar/weekly/2026-w41.html'])
+        self.assertIn('تبدأ هذه الصفحة في 6 أكتوبر 2026، تاريخ بدء الأرشيف.',self.pages['ar/weekly/2026-w41.html'])
+        self.assertIn('كل خبر عن الذكاء الاصطناعي نشرناه هذا الأسبوع، مرتباً',self.pages['ar/weekly/2026-w42.html'])
         self.assertIn('<a class="w-prev" rel="prev" href="2026-w41.html">← Week 41</a>',w42)
         self.assertIn('<a class="w-next" rel="next" href="2026-w42.html">Week 42 →</a>',w41)
         self.assertIn('A study of AI benchmarks',w41)  # from the archive, with its AI summary
@@ -119,9 +129,34 @@ class WeeklyTests(unittest.TestCase):
             self.assertTrue((Path(d)/'ar'/'index.html').exists())  # only the weekly folders are tidied
             self.assertTrue((Path(d)/'weekly'/'weekly.css').exists());self.assertFalse((Path(d)/'ar'/'weekly'/'weekly.css').exists())
     def test_no_stories_no_weeks(self):
-        pages,links=weekly.pages([],[],SOURCES,NOW)
+        pages,links=weekly.pages([],[],SOURCES,NOW,since=SINCE)
         self.assertEqual(list(pages),['weekly/index.html','ar/weekly/index.html']);self.assertEqual(links,{})
         self.assertIn('No weeks yet.',pages['weekly/index.html']);self.assertIn('لا توجد أسابيع بعد.',pages['ar/weekly/index.html'])
+    def test_no_week_before_the_archive_began(self):
+        # Before the first news run that archived (no start day): stories that leave the list are not kept yet, so no
+        # week can be complete and there is no weekly page.
+        pages,links=weekly.pages(CURRENT,ARCHIVED,SOURCES,NOW)
+        self.assertEqual(list(pages),['weekly/index.html','ar/weekly/index.html']);self.assertEqual(links,{})
+        self.assertEqual(weekly.latest(CURRENT,ARCHIVED,SOURCES),{})
+        # The archive began on Wednesday 14 Oct: week 41 has no page, and week 42 lists only the stories from that day
+        # on (not Monday's), says so, and does not claim the whole week.
+        pages,links=weekly.pages(CURRENT,ARCHIVED,SOURCES,NOW,since=date(2026,10,14))
+        self.assertEqual(sorted(p for p in pages if not p.endswith('index.html')),
+                         ['ar/weekly/2026-w42.html','ar/weekly/uae-2026-w42.html','weekly/2026-w42.html','weekly/uae-2026-w42.html'])
+        w42=pages['weekly/2026-w42.html']
+        self.assertNotIn('Abu Dhabi opens an AI campus',w42);self.assertNotIn('A study of AI benchmarks',w42)  # 12 and 6 Oct
+        self.assertIn('NVIDIA ships a new GPU',w42);self.assertIn('<span>2 stories</span>',w42)
+        self.assertIn('This page starts on 14 Oct 2026, when the archive began.',w42)
+        self.assertIn('Every AI story we listed from the day the archive began',w42)
+        self.assertIn('دبي تطلق برنامجاً للذكاء الاصطناعي',pages['ar/weekly/uae-2026-w42.html'])  # 14 Oct: kept
+        self.assertIn('كل خبر عن الذكاء الاصطناعي في الإمارات نشرناه منذ بدء الأرشيف',pages['ar/weekly/uae-2026-w42.html'])
+        self.assertIn('Every UAE AI story we listed from the day the archive began',pages['weekly/uae-2026-w42.html'])
+        self.assertNotIn('2026-w41',pages['weekly/index.html'])
+        self.assertEqual(links['all']['en'],'weekly/2026-w42.html')
+        # The archive began on a Monday: its week is a whole week.
+        pages,_=weekly.pages(CURRENT,ARCHIVED,SOURCES,NOW,since=date(2026,10,12))
+        self.assertIn('Every AI story we listed this week',pages['weekly/2026-w42.html']);self.assertNotIn('when the archive began',pages['weekly/2026-w42.html'])
+        self.assertIn('Abu Dhabi opens an AI campus',pages['weekly/uae-2026-w42.html'])
     def test_css_is_rtl_safe(self):
         css=(build.ROOT/'web/weekly.css').read_text(encoding='utf-8')
         self.assertNotRegex(re.sub(r'/[*].*?[*]/','',css,flags=re.S),r'\b(?:margin|padding)-(?:left|right)\b|\b(?:left|right):')
@@ -130,7 +165,7 @@ class WeeklyTests(unittest.TestCase):
 class LinkTests(unittest.TestCase):
     """AI news and UAE AI link to the newest weekly page of their kind, in the page language, and to all weeks."""
     def test_week_links(self):
-        c={'weeks':weekly.latest(CURRENT,ARCHIVED,SOURCES)}
+        c={'weeks':weekly.latest(CURRENT,ARCHIVED,SOURCES,since=SINCE)}
         news=build.week_links(c,'all')
         self.assertIn('<a class="wk-this" data-lang="en" href="weekly/2026-w42.html"><span>AI this week</span><small>12–18 Oct 2026</small></a>',news)
         self.assertIn('<a class="wk-this" data-lang="ar" href="ar/weekly/2026-w42.html"><span>الذكاء الاصطناعي هذا الأسبوع</span>',news)
@@ -139,18 +174,24 @@ class LinkTests(unittest.TestCase):
         self.assertEqual(build.week_links({'weeks':{}},'all'),'')
     def test_page_links_to_the_weekly_pages(self):
         data,feed,sources,uae,models=build.load_all()
-        with tempfile.TemporaryDirectory() as d:
-            page,_=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d),archive=[])
         items=build.news_items(feed,sources)
         if not items:
             self.skipTest('no headlines in data/news.json')
+        # Before the archive began (no data/news-archive/started.json yet): no weekly page, so no link to one.
+        with tempfile.TemporaryDirectory() as d,mock.patch.object(news_archive,'started',return_value=None):
+            page,_=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d),archive=[])
+        self.assertNotIn('<div class="wk-links">',page)
+        since=min(build.to_uae(i['published']).date() for i in items)
+        with mock.patch.object(news_archive,'started',return_value=since):
+            with tempfile.TemporaryDirectory() as d:
+                page,_=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d),archive=[])
+            with tempfile.TemporaryDirectory() as d:
+                page_ar,_=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d),archive=[],lang='ar')
         news=page[page.index('id="news"'):page.index('id="uae"')]
         self.assertIn('<div class="wk-links">',news)
-        links=weekly.latest(items,[],sources)
+        links=weekly.latest(items,[],sources,since=since)
         self.assertIn(f'href="{links["all"]["en"]}"',news)
         # The Arabic overview (ar/index.html) links to the same pages, relative to its folder.
-        with tempfile.TemporaryDirectory() as d:
-            page_ar,_=build.render_page(data,feed,sources,uae,models,brand_dir=Path(d),archive=[],lang='ar')
         news_ar=page_ar[page_ar.index('id="news"'):page_ar.index('id="uae"')]
         self.assertIn(f'href="{links["all"]["ar"][len("ar/"):]}"',news_ar);self.assertIn(f'href="../{links["all"]["en"]}"',news_ar)
         self.assertIn('<a class="wk-all" data-lang="ar" href="weekly/index.html">',news_ar)

@@ -7,7 +7,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest import mock
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-import news,news_archive,policy,topics,build,app_data
+import blocklist,news,news_archive,policy,topics,build,app_data,weekly
 news.PENDING=Path(tempfile.mkdtemp())/'news-batches.json'
 
 NOW=datetime(2026,9,26,12,tzinfo=timezone.utc)
@@ -131,9 +131,52 @@ class ArchiveFileTests(unittest.TestCase):
             self.assertEqual([i['id'] for i in month['items']],['x1']);self.assertNotIn('policy_hash',json.dumps(month))
             raw=''.join(p.read_text(encoding='utf-8') for p in (Path(out)/'news-archive').iterdir())
             self.assertNotIn('feed',raw)  # the sources' feed addresses are not published
-    def test_app_items_last_60_days_newest_first(self):
-        items=[{'id':str(n),'published':(NOW-timedelta(days=n*10)).isoformat()} for n in range(9)]
-        self.assertEqual([i['id'] for i in news_archive.app_items(items,NOW)],['0','1','2','3','4','5','6'])
+    def test_app_items_last_14_days_newest_first(self):
+        self.assertEqual(news_archive.APP_DAYS,14)
+        items=[{'id':str(n),'published':(NOW-timedelta(days=n*4)).isoformat()} for n in range(9)]
+        self.assertEqual([i['id'] for i in news_archive.app_items(items,NOW)],['0','1','2','3'])
+    def test_drop_takes_blocked_stories_out_of_the_files(self):
+        with tempfile.TemporaryDirectory() as d:
+            a=verified();b=verified(id='x2',url='https://www.example-news.com/two',title='OpenAI releases a model')
+            news_archive.append([a,b],[SRC],d)
+            path=Path(d)/'2026-09.json';before=path.read_text(encoding='utf-8')
+            self.assertEqual(news_archive.drop({},d),0);self.assertEqual(news_archive.drop({'ffffffffffff':'2026-09-26'},d),0)
+            self.assertEqual(path.read_text(encoding='utf-8'),before)  # nothing blocked: not rewritten
+            # Blocked by any of its keys: the canonical link (a tracking query added), or the source and headline.
+            for blocked in ({k:'2026-09-26' for k in blocklist.block_keys(a['url']+'?utm_source=rss','ex','x')},
+                            {k:'2026-09-26' for k in blocklist.block_keys('https://elsewhere.example/a','ex',a['title'])}):
+                with self.subTest(blocked=sorted(blocked)):
+                    path.write_text(before,encoding='utf-8')
+                    self.assertEqual(news_archive.drop(blocked,d),1)
+                    self.assertEqual([i['id'] for i in json.loads(path.read_text(encoding='utf-8'))['items']],['x2'])
+            # A damaged month is left for a person to repair; shown() still hides the blocked story (the second guard).
+            (Path(d)/'2026-08.json').write_text('{broken',encoding='utf-8')
+            self.assertEqual(news_archive.drop(blocked,d),0)
+    def test_shown_never_shows_a_blocked_story(self):
+        with tempfile.TemporaryDirectory() as d:
+            news_archive.append([verified(),verified(id='x2',url='https://www.example-news.com/two',title='OpenAI releases a model')],[SRC],d)
+            blocked={k:'2026-09-26' for k in blocklist.block_keys('https://www.example-news.com/chip','ex','NVIDIA ships a new AI chip')}
+            self.assertEqual([i['id'] for i in news_archive.shown(news_archive.load(d),[SRC])],['x2','x1'])
+            self.assertEqual([i['id'] for i in news_archive.shown(news_archive.load(d),[SRC],blocked=blocked)],['x2'])
+            # The build reads data/news-blocked.json for it (build.older_stories).
+            with tempfile.NamedTemporaryFile('w',suffix='.json',delete=False,encoding='utf-8') as f:
+                json.dump({'ids':blocked},f)
+            try:
+                with mock.patch.object(blocklist,'PATH',Path(f.name)):
+                    self.assertEqual([i['id'] for i in build.older_stories([],news_archive.load(d),[SRC])],['x2'])
+            finally:
+                os.unlink(f.name)
+    def test_the_archive_start_is_recorded_once(self):
+        with tempfile.TemporaryDirectory() as d:
+            self.assertIsNone(news_archive.started(d))
+            # 21:30 UTC on 17 Oct is already 18 Oct in the UAE.
+            self.assertTrue(news_archive.begin(datetime(2026,10,17,21,30,tzinfo=timezone.utc),d))
+            self.assertEqual(news_archive.started(d),datetime(2026,10,18).date())
+            self.assertFalse(news_archive.begin(datetime(2026,11,2,tzinfo=timezone.utc),d))
+            self.assertEqual(news_archive.started(d),datetime(2026,10,18).date())
+            self.assertEqual(news_archive.months(d),[])  # started.json is not a month file
+            (Path(d)/news_archive.START).write_text('{broken',encoding='utf-8')
+            self.assertIsNone(news_archive.started(d))
 
 class FixedNow(datetime):
     @classmethod
@@ -199,7 +242,8 @@ class RunTests(unittest.TestCase):
             doc=json.loads((Path(d)/'news-archive'/'2026-09.json').read_text(encoding='utf-8'))
             ids=[i['id'] for i in doc['items']]
             self.assertIn('old1',ids);self.assertNotIn('old2',ids);self.assertIn(chip_id,ids)
-            self.assertEqual(data['archive'],{'archived':1,'reused':1,'damaged_months':0})
+            self.assertEqual(data['archive'],{'archived':1,'reused':1,'dropped':0,'damaged_months':0})
+            self.assertEqual(news_archive.started(Path(d)/'news-archive'),NOW.date())  # the day the archive began
             self.assertIn('News archive: 1 stories archived',log)
             # The next run: nothing left the window, the archive does not change.
             before=(Path(d)/'news-archive'/'2026-09.json').read_text(encoding='utf-8')
@@ -225,6 +269,31 @@ class RunTests(unittest.TestCase):
             self.assertEqual([i['id'] for i in data['items']],[chip_id])
             self.assertFalse((Path(d)/'news-archive'/'2026-09.json').exists())
             self.assertEqual(data['archive']['archived'],0)
+    def test_a_returning_story_that_fails_its_new_check_leaves_the_archive(self):
+        chip_id=news._hash('https://www.example-news.com/chip')
+        back=verified(id=chip_id)  # archived by an earlier run, now listed by the feed again
+        with tempfile.TemporaryDirectory() as d:
+            month=Path(d)/'news-archive'/'2026-09.json'
+            data,calls,log=self.run_main(d,[],[back],verdict=lambda i:i!=chip_id)
+            self.assertIn(chip_id,calls['policy'])
+            self.assertNotIn(chip_id,[i['id'] for i in data['items']])  # removed and blocked
+            blocked=news.load_blocked(Path(d)/'news-blocked.json')
+            self.assertTrue(news.is_blocked(back,blocked))
+            # Its archived copy is gone too: from the month file and so from everything built from it.
+            self.assertNotIn(chip_id,month.read_text(encoding='utf-8'))
+            self.assertNotIn('NVIDIA ships a new AI chip',month.read_text(encoding='utf-8'))
+            self.assertEqual(data['archive']['dropped'],1);self.assertIn('1 blocked stories taken out',log)
+            self.assertEqual(news_archive.shown(news_archive.load(Path(d)/'news-archive'),[SRC]),[])
+            # A copy that a damaged or older file still holds is hidden all the same (the build's second guard), from
+            # the older-stories search, the weekly pages and the app's archive.json alike.
+            stale=[{**news_archive.slim(back,SRC),'_pv':policy.POLICY_VERSION}]
+            with mock.patch.object(blocklist,'PATH',Path(d)/'news-blocked.json'):
+                older=build.older_stories([],stale,[SRC])
+                self.assertEqual(older,[])
+                built,_=weekly.pages([],older,[SRC],NOW,since=NOW.date()-timedelta(days=30))
+                self.assertNotIn('NVIDIA ships a new AI chip',''.join(built.values()))
+                self.assertEqual(app_data.archive_doc({'updated_at':NOW.isoformat()},older,[SRC])['items'],[])
+            self.assertEqual(news_archive.shown(stale,[SRC]),[news_archive.slim(back,SRC)])  # without the block list it would show
     def test_archive_dir_follows_news_json(self):
         with mock.patch.object(news,'OUT',Path('/tmp/x/news.json')),mock.patch.object(news,'ARCHIVE',None):
             self.assertEqual(news.archive_dir(),Path('/tmp/x/news-archive'))
@@ -239,16 +308,55 @@ class SiteAndAppTests(unittest.TestCase):
         cls.current=items[0]
         src={s['id']:s for s in cls.sources}
         # Two stories of the current list, as if archived; one of them is still in the list.
-        cls.gone={**items[-1],'id':'gone0001','url':items[-1]['url']+'?archived=1','published':(datetime.fromisoformat(items[-1]['published'])-timedelta(days=20)).isoformat()}
+        cls.gone={**items[-1],'id':'gone0001','url':items[-1]['url']+'?archived=1','published':(build.reference_time(cls.feed)-timedelta(days=3)).isoformat()}
         cls.archive=[{**news_archive.slim(cls.gone,src[cls.gone['source']]),'_pv':policy.POLICY_VERSION},
                      {**news_archive.slim(cls.current,src[cls.current['source']]),'_pv':policy.POLICY_VERSION}]
         cls.docs=build.learn.load()
         cls.out=app_data.payloads(cls.data,cls.feed,cls.sources,cls.uae,cls.models,*cls.docs,archive=cls.archive)
     def test_app_archive_json(self):
         a=self.out['archive.json']
-        self.assertEqual((a['schema'],a['days'],a['updated_at']),(app_data.APP_SCHEMA,60,self.feed.get('updated_at')))
+        self.assertEqual((a['schema'],a['days'],a['updated_at']),(app_data.APP_SCHEMA,14,self.feed.get('updated_at')))
         self.assertEqual([i['id'] for i in a['items']],['gone0001'])  # the story still in news.json is not repeated
         self.assertEqual(tuple(a['items'][0]),news_archive.FIELDS)
+        # Every followed source's names and region, as the site's news-archive/index.json: a story whose source has no
+        # headline in news.json still shows its publisher's names and its Global tag in the app.
+        self.assertEqual(a['sources'],news_archive.public_sources(self.sources))
+        for s in self.sources:
+            self.assertEqual(set(a['sources'][s['id']]),{'name','name_ar','region'})
+        self.assertNotIn('http',json.dumps(a['sources']))  # no feed or page addresses
+    def test_app_archive_json_stays_small(self):
+        # The app downloads archive.json beside news.json and refuses a file over 16 MiB: it is kept under
+        # APP_MAX_BYTES (4 MB) by leaving out its oldest stories, newest first.
+        self.assertLessEqual(news_archive.APP_MAX_BYTES,4_000_000)
+        src={s['id']:s for s in self.sources}
+        base=[news_archive.slim(i,src[i['source']]) for i in build.news_items(self.feed,self.sources)]
+        if not base:
+            self.skipTest('no headlines in data/news.json')
+        now=build.reference_time(self.feed)
+        def flood(per_day,days):
+            out=[]
+            for n in range(per_day*days):
+                i=base[n%len(base)]
+                out.append({**i,'id':f'z{n:06d}','url':i['url']+f'?n={n}','published':(now-timedelta(minutes=n*24*60//per_day+1)).isoformat(),'_pv':policy.POLICY_VERSION})
+            return out
+        # Today's volume (about 90 stories a day leave the list): the last 14 days fit whole, well under the cap.
+        normal=app_data.archive_doc(self.feed,news_archive.shown(flood(90,14),self.sources),self.sources)
+        size=len(app_data.encode(normal))
+        self.assertEqual(len(normal['items']),90*14);self.assertLess(size,news_archive.APP_MAX_BYTES)
+        self.assertEqual(normal['days'],14)
+        # Three times that volume: the newest stories that fit, never over the cap; "days" then says how far back the
+        # file really reaches (the app writes "from the last <days> days"), and every story of those days is in it.
+        flooded=news_archive.shown(flood(270,14),self.sources)
+        heavy=app_data.archive_doc(self.feed,flooded,self.sources)
+        self.assertLessEqual(len(app_data.encode(heavy)),news_archive.APP_MAX_BYTES)
+        self.assertLess(len(heavy['items']),270*14)
+        self.assertTrue(1<=heavy['days']<14,heavy['days'])
+        within={i['id'] for i in flooded if news_archive.uae_time(i['published'])>=now-timedelta(days=heavy['days'])}
+        self.assertLessEqual(within,{i['id'] for i in heavy['items']})
+        self.assertEqual([i['id'] for i in heavy['items']],sorted((i['id'] for i in heavy['items'])))  # newest first: z000000 ...
+        self.assertEqual(heavy['items'][0]['id'],'z000000')
+        tiny=app_data.archive_doc(self.feed,news_archive.shown(flood(90,1),self.sources),self.sources,max_bytes=len(app_data.encode(app_data.archive_doc(self.feed,[],self.sources)))+10)
+        self.assertEqual(tiny['items'],[])
     def test_app_news_items_carry_their_topic(self):
         src={s['id']:s for s in self.sources}
         for i,full in zip(self.out['news.json']['items'],build.news_items(self.feed,self.sources)):

@@ -15,15 +15,21 @@ title_ar is the AI translation of an English headline. `policy_version` is the l
              a passing content-policy verdict at the current version for their current texts (policy.verified), not
              judged "not mainly about AI", from a followed source, with an https link. Idempotent: one entry per id (and
              per link) in a month, rewritten only when something changed.
+  drop()     news.py, every run: archived stories now on the content-policy block list (scripts/blocklist.py,
+             data/news-blocked.json) are taken out of the newest REUSE_MONTHS month files. A story that comes back into
+             the window is checked again, and one that then fails is removed and blocked: its archived copy goes too.
+  begin()    news.py, every run: records the day the archive began (UAE time) in started.json, once, after the run's
+             stories were archived. started() reads it (None before the first run): the weekly pages start that day.
   lookup()   news.py: the newest months by id and by link. reuse() gives a story that comes back into the window (same id
              or link) its archived AI summary and Arabic headline, so Claude is not paid twice for them. The content
              check still runs on it like on any story entering the window: its verdict is not reused.
   shown()    build.py and app_data.py: the archived stories the site may still show (a story that mentions the UAE or a
              GCC state only from a source that may cover the region and only from a file checked under the current
-             policy version), without the stories already in the current list.
+             policy version, never a story on the block list), without the stories already in the current list.
   publish()  build.py: dist/news-archive/index.json and dist/news-archive/YYYY-MM.json, the same-origin files the AI news
              and UAE AI "Search older stories" option loads on demand.
-  app_items(): app_data.py: dist/app/archive.json, the last APP_DAYS days, newest first.
+  app_items(): app_data.py: dist/app/archive.json, the last APP_DAYS days, newest first (app_data keeps it under
+             APP_MAX_BYTES: the app downloads it beside news.json).
 """
 import json
 import re
@@ -31,6 +37,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
+import blocklist
 import policy
 import topics
 
@@ -39,10 +46,14 @@ DIR = ROOT / 'data' / 'news-archive'
 PUBLIC_DIR = 'news-archive'  # dist/news-archive/
 FIELDS = ('id', 'source', 'lang', 'uae', 'topic', 'published', 'title', 'title_ar', 'url', 'summary_en', 'summary_ar', 'excerpt')
 UAE_TZ = timezone(timedelta(hours=4))
-APP_DAYS = 60       # days of archived stories in the Android app's archive.json
+# The Android app's archive.json: the last APP_DAYS days (about 90 stories a day leave the window, about 2 KB each), and
+# never more than APP_MAX_BYTES (app_data drops the oldest stories beyond it; the app refuses a file over 16 MiB).
+APP_DAYS = 14
+APP_MAX_BYTES = 4_000_000
 REUSE_MONTHS = 3    # months read when a story comes back (a feed is read back KEEP_DAYS days only)
 MONTH = re.compile(r'^(\d{4})-(0[1-9]|1[0-2])$')
 SCHEMA = 1
+START = 'started.json'  # the day the archive began (begin / started)
 DAMAGED = set()  # months whose file could not be read by append() (news.py logs the count)
 
 def uae_time(iso):
@@ -151,6 +162,43 @@ def append(leaving, sources, folder=DIR, policy_version=None):
         _write(path, month, version, kept + list(entries.values()))
     return changed
 
+def drop(blocked, folder=DIR, limit=REUSE_MONTHS):
+    """Take the stories on the block list (`blocked`: {id: day}, blocklist.load()) out of the newest `limit` month files
+    (a blocked story was in the window within the last KEEP_DAYS days, so its archived copy is in one of them). A
+    damaged month is left as it is (shown() still hides its blocked stories). Returns the number of entries removed."""
+    if not blocked:
+        return 0
+    removed = 0
+    for month in months(folder)[:limit]:
+        path = Path(folder) / f'{month}.json'
+        doc = read(path)
+        if doc is None:
+            continue
+        kept = [i for i in doc['items'] if not blocklist.is_blocked(i, blocked)]
+        if len(kept) != len(doc['items']):
+            removed += len(doc['items']) - len(kept)
+            _write(path, month, doc['policy_version'], kept)
+    return removed
+
+def begin(now, folder=DIR):
+    """Record the day the archive began (UAE time) in started.json, once: from that day on, every story the site lists is
+    either still in news.json or archived when it leaves. Returns True when it was written now."""
+    path = Path(folder) / START
+    if started(folder) is not None:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    doc = {'about': 'The day the news archive began (UAE time): the weekly pages start on it.',
+           'started': now.astimezone(UAE_TZ).date().isoformat()}
+    path.write_text(json.dumps(doc, indent=1) + '\n', encoding='utf-8', newline='\n')
+    return True
+
+def started(folder=DIR):
+    """The day the archive began (a date), or None before the first run that archived (or a damaged started.json)."""
+    try:
+        return datetime.strptime(json.loads((Path(folder) / START).read_text(encoding='utf-8'))['started'], '%Y-%m-%d').date()
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
 def load(folder=DIR, limit=None):
     """Every archived story, newest month first, each with its file's policy version under '_pv' (a working key that
     shown() drops). `limit`: only the newest that many months."""
@@ -191,16 +239,19 @@ def reuse(items, archived, summary_version):
         n += got
     return n
 
-def shown(archived, sources, exclude=()):
+def shown(archived, sources, exclude=(), blocked=None):
     """The archived stories the site may show, newest first, each with exactly FIELDS: from a source still followed,
     with an https link; a story that mentions the UAE or a GCC state only from a source that may cover the region
-    (rule M1) and only from a file checked under the current policy version (fail closed when the policy changed).
-    One per id and per link; `exclude`: ids already in the current list."""
+    (rule M1) and only from a file checked under the current policy version (fail closed when the policy changed);
+    never a story on the block list (`blocked`, blocklist.load(): drop() takes those out of the files, this is the
+    second guard). One per id and per link; `exclude`: ids already in the current list."""
     src = {s['id']: s for s in sources}
     seen, out = set(exclude), []
     for item in _order(archived):
         s = src.get(item.get('source'))
         if not s or not _https(item.get('url')) or item.get('lang') not in ('en', 'ar') or not item.get('title'):
+            continue
+        if blocked and blocklist.is_blocked(item, blocked):
             continue
         if item['id'] in seen or ('url', item['url']) in seen:
             continue

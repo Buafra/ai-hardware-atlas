@@ -74,13 +74,15 @@ that the cap would leave out, so busy feeds cannot crowd out the quiet official 
 Each stored item carries its "topic" (scripts/topics.py, the rule behind its topic image). Stories that leave news.json
 (their feed no longer lists them, or the window's age or cap leaves them out) are kept in the news archive,
 data/news-archive/YYYY-MM.json (scripts/news_archive.py), only those with a passing content-policy verdict; a story that
-comes back (same id or link) gets its archived AI summary and Arabic headline again instead of new paid ones.
+comes back (same id or link) gets its archived AI summary and Arabic headline again instead of new paid ones. A story on
+the block list is taken out of the archive too (a returning story that fails its new check is removed and blocked like
+any other). The first run that archives records the day the archive began (data/news-archive/started.json).
 """
 import collections
 import concurrent.futures
 import difflib
 import gzip
-import hashlib
+import hashlib  # noqa: F401  (tests hash ids with news.hashlib)
 import html
 import json
 import os
@@ -103,6 +105,9 @@ from pydantic import BaseModel
 
 import ai_cost
 import news_archive
+# The block list's ids (scripts/blocklist.py, shared with the news archive).
+import blocklist
+from blocklist import TRACKING, _hash, block_keys, canonical_url, is_blocked  # noqa: F401
 import policy
 import topics
 
@@ -543,30 +548,6 @@ def fetch_once(url, cache=None, **options):
     if 'error' in entry:
         raise entry['error']
     return entry['raw']
-
-# Query parameters that only track where a click came from: the same story with any of them is the same story.
-TRACKING = re.compile(r'^(?:utm_\w*|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid|igshid|ref|ref_src|output|cmpid|ncid|smid|at_medium|at_campaign|__twitter_impression)$', re.I)
-
-def canonical_url(url):
-    """The URL with the host in lower case and without the fragment, tracking parameters and a trailing slash, the
-    path percent-decoded: https://X.com/a/?utm_source=rss#c and https://x.com/a are one story. A URL that is already
-    canonical is unchanged, so its hash is the item id."""
-    u = urlparse((url or '').strip())
-    host = (u.hostname or '').lower()
-    query = urlencode(sorted((k, v) for k, v in parse_qsl(u.query, keep_blank_values=True) if not TRACKING.match(k)))
-    return urlunparse(('https', host, unquote(u.path).rstrip('/') or '/', '', query, ''))
-
-def _hash(text):
-    return hashlib.sha1(text.encode('utf-8')).hexdigest()[:12]
-
-def block_keys(url, source_id, title):
-    """One-way ids a removed story is blocked by: the hash of its exact URL (the item id), of its canonical URL, and of
-    its source and normalised headline, so it does not come back with a tracking query or as a repost."""
-    headline = ' '.join(re.findall(r'\w+', policy.normalize(title).casefold()))
-    return {_hash(url), _hash(canonical_url(url)), _hash(f'title\x1f{source_id}\x1f{headline}')}
-
-def is_blocked(item, blocked):
-    return bool(blocked) and not blocked.keys().isdisjoint(block_keys(item.get('url', ''), item.get('source', ''), item.get('title', '')))
 
 def raw_limit(source):
     """How many of the feed's newest entries collect() scans (in this source's language, for a mixed sitemap)."""
@@ -1547,11 +1528,7 @@ def m1_violations(items, sources):
     return [(i, 'M1') for i in items if not policy.may_cover_region(src.get(i['source'])) and policy.item_mentions_region(i)]
 
 def load_blocked(path=None):
-    path = Path(path or BLOCKED)
-    try:
-        return dict(json.loads(path.read_text(encoding='utf-8')).get('ids') or {})
-    except (OSError, ValueError):
-        return {}
+    return blocklist.load(path or BLOCKED)
 
 def save_blocked(ids, today, path=None):
     """Write data/news-blocked.json: one-way ids (block_keys) with the day they were blocked; no titles, links or
@@ -1792,9 +1769,17 @@ def reuse_archived(items):
     payment for them. Returns the number of stories that got something back."""
     return news_archive.reuse(items, news_archive.lookup(archive_dir()), SUMMARY_VERSION)
 
-def archive_leaving(leaving, sources):
-    """Add the stories that left the window this run to the archive (news_archive.append: verified stories only)."""
-    return news_archive.append(leaving, sources, archive_dir())
+def archive_leaving(leaving, sources, now):
+    """Add the stories that left the window this run to the archive (news_archive.append: verified stories only), then
+    record the day the archive began (news_archive.begin, once: the weekly pages start that day)."""
+    archived = news_archive.append(leaving, sources, archive_dir())
+    news_archive.begin(now, archive_dir())
+    return archived
+
+def drop_blocked_archived(blocked):
+    """Take the stories on the block list out of the archive (news_archive.drop): a story removed under the content
+    policy is never shown again, not even from the copy archived before it was blocked."""
+    return news_archive.drop(blocked, archive_dir())
 
 def set_topics(items, sources):
     """Store each item's topic (scripts/topics.py, the same rule as its topic image), from its texts as saved."""
@@ -1905,12 +1890,13 @@ def main():
     set_topics(items, sources)
     # The archive first: if the run stopped between the two writes, the story is still in news.json and leaves again.
     news_archive.DAMAGED.clear()
-    archived = _optional(archive_leaving, leaving, sources)
+    dropped = _optional(drop_blocked_archived, blocked)
+    archived = _optional(archive_leaving, leaving, sources, now)
     data = {'updated_at': now.isoformat(), 'health': {'ok': len(fresh), 'failed': len(errors), 'sources': len(sources), 'duplicates': duplicates}, 'errors': errors,
             'ai': {'key_set': key, 'model': MODEL, 'summary_tries_rule': TRIES_RULE, 'translated': translated, 'summarised': summarized,
                    'not_ai_focus': sum(1 for i in items if i.get('ai_focus') is False), **counts, 'problems': dict(PROBLEMS),
                    'usage': usage_report(), 'batches_left_running': len([b for b in load_pending() if b['id'] not in FINISHED])},
-            'archive': {'archived': archived, 'reused': reused, 'damaged_months': len(news_archive.DAMAGED)},
+            'archive': {'archived': archived, 'reused': reused, 'dropped': dropped, 'damaged_months': len(news_archive.DAMAGED)},
             'items': items}
     tmp = OUT.with_suffix('.tmp')
     tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
@@ -1921,7 +1907,8 @@ def main():
           f"{sum(1 for i in items if i.get('excerpt'))} with excerpts ({added} new from article pages), {translated} translated, {summarized} summarised, "
           f"{sum(1 for i in items if i.get('ai_focus') is False)} hidden as not mainly about AI")
     print(f"News archive: {archived} stories archived as they left the window, {reused} returning stories took their archived "
-          f"summary or Arabic headline" + (f", {len(news_archive.DAMAGED)} damaged month file(s) left untouched" if news_archive.DAMAGED else ''))
+          f"summary or Arabic headline, {dropped} blocked stories taken out"
+          + (f", {len(news_archive.DAMAGED)} damaged month file(s) left untouched" if news_archive.DAMAGED else ''))
     print(f"Content policy v{counts['policy_version']}: {counts['policy_checked']} checked, {counts['policy_blocked']} removed, "
           f"{counts['m1_dropped']} dropped under M1, {counts['policy_pending']} of {counts['regional']} UAE/GCC items hidden until verified, "
           f"{counts['held_back']} unverified items not saved")
