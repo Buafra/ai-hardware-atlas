@@ -1038,6 +1038,25 @@ class BatchTests(unittest.TestCase):
         self.assertEqual((done,client.calls,len(fb.created)),(1,[],1))
         news.keep_batches_of_held_items(set())
         self.next_run();self.assertEqual(self.pending_batches(),[])
+    def test_a_batch_read_again_is_counted_once_in_the_cost_ledger(self):
+        # A held-back item keeps its batch in the file, and every later run reads the answer again: paid for once, so its
+        # tokens go into the run's usage (and the monthly ledger, data/ai-cost.json) on the first read only.
+        import ai_cost
+        self.remember('b1',{'r0':{'items':['i00'],'basis':{'i00':'article'},'version':news.SUMMARY_VERSION}})
+        fb=FakeBatches(polls=0)
+        fb.created.append([{'custom_id':'r0','params':{'system':news.SUMMARY_SYSTEM,'messages':[{'content':'<item id="i00">'}]}}])
+        ledger=Path(tempfile.mkdtemp())/'ai-cost.json'
+        for run in range(3):
+            done,client,_,use=self.run_step(news.summarize,[item(0)],[SRC],batches=fb)
+            self.assertEqual((done,client.calls,len(fb.created)),(1,[],1))  # answered every time, never asked again
+            self.assertEqual(use['requests'],1 if run==0 else 0,run)
+            ai_cost.add(use['estimated_usd'],use['requests'],NOW,f'run{run}',ledger)
+            self.assertTrue(self.pending_batches()[0]['counted'])
+            news.keep_batches_of_held_items({'i00'})
+            self.next_run()
+        self.assertEqual(json.loads(ledger.read_text(encoding='utf-8'))['2026-09'],
+                         {'usd':0.006,'runs':1,'from':'2026-09-26','last_run':'run0'})
+        self.assertEqual([b['id'] for b in self.pending_batches()],['b1'])
     def test_damaged_pending_file_does_not_stop_summaries(self):
         items=[item(n) for n in range(3)]
         for raw in ('{not json','[]','{"batches":[{"id":"b0","step":"summary","created_at":"yesterday","requests":{}}]}'):

@@ -797,9 +797,10 @@ def _ask_batch(client, step, system, output_format, max_tokens, prompts, carry=N
         return lost
     return {ids[cid]: answer for cid, answer in got.items() if cid in ids}
 
-def _read_results(client, step, output_format, batch_id):
+def _read_results(client, step, output_format, batch_id, count=True):
     """An ended batch's answers: {custom_id: ('ok', parsed) | ('bad', None) | ('retry', None)}, leaving out requests
-    that were cancelled or expired; None when the results cannot be read (noted)."""
+    that were cancelled or expired; None when the results cannot be read (noted). With count=False the tokens are not
+    added to USAGE again (a batch read again because its item was held back: it was paid for once)."""
     results = None
     for attempt in range(3):
         if attempt:
@@ -817,7 +818,8 @@ def _read_results(client, step, output_format, batch_id):
         key, result = row.custom_id, row.result
         if result.type == 'succeeded':
             message = result.message
-            _record(message.usage, True)
+            if count:
+                _record(message.usage, True)
             if message.stop_reason != 'end_turn':
                 note(f'{step}: stop reason {message.stop_reason}')
                 answers[key] = ('bad', None)
@@ -901,13 +903,15 @@ def collect_pending(step, output_format):
     items should wait for a batch still running). Batches are never cancelled: one still running (or not checkable, or
     ended with results not readable yet) stays, and its items wait for it until BUSY_HOURS after it was created; after
     that they are asked afresh. An entry the API does not know, or that still cannot be read after KEEP_HOURS, is given
-    up. Finished entries are marked in FINISHED and leave PENDING at commit_pending."""
+    up. Finished entries are marked in FINISHED and leave PENDING at commit_pending. A batch's tokens count in USAGE
+    (and so in the monthly cost ledger) on its first read only: the entry is marked "counted", so a batch kept for a
+    held-back item and read again by later runs is not counted again."""
     mine = [b for b in load_pending() if b['step'] == step and b['id'] not in FINISHED]
     if not mine:
         return [], []
     import anthropic
     client = anthropic.Anthropic(timeout=120.0, max_retries=1)
-    answers, waiting = [], []
+    answers, waiting, counted = [], [], set()
     now = datetime.now(timezone.utc)
     for b in mine:
         age_hours = (now - datetime.fromisoformat(b['created_at'])).total_seconds() / 3600
@@ -921,11 +925,13 @@ def collect_pending(step, output_format):
             note(f'{step}: earlier batch not checked ({type(exc).__name__})')
             status = None
         if status == 'ended':
-            got = _read_results(client, step, output_format, b['id'])
+            got = _read_results(client, step, output_format, b['id'], count=not b.get('counted'))
             if got is not None:
                 answers += [(b['id'], details, *got.get(cid, ('retry', None))) for cid, details in b['requests'].items()]
                 note(f'{step}: earlier batch collected')
                 FINISHED.add(b['id'])
+                if not b.get('counted'):
+                    counted.add(b['id'])
                 continue
         if age_hours > KEEP_HOURS:
             note(f'{step}: earlier batch given up after {age_hours / 24:.0f} days')
@@ -933,6 +939,11 @@ def collect_pending(step, output_format):
             continue
         if age_hours <= BUSY_HOURS:
             waiting += list(b['requests'].values())
+    if counted:
+        try:
+            save_pending([{**b, 'counted': True} if b['id'] in counted else b for b in load_pending()])
+        except Exception as exc:  # at worst a batch read again is counted again
+            note(f'{step}: batch not marked as counted ({type(exc).__name__})')
     return answers, waiting
 
 class Translation(BaseModel):
