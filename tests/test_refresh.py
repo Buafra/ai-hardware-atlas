@@ -33,6 +33,53 @@ class RefreshTests(unittest.TestCase):
             self.assertIn(pid,ids);self.assertTrue(official(rule['url']),pid);self.assertTrue(rule['title'].strip(),pid)
             self.assertTrue(rule['fields']);self.assertLessEqual(set(rule['fields']),{'memory_gb','power_w'},pid)
             for pattern in rule['fields'].values():self.assertEqual(re.compile(pattern).groups,1,pid)
+class FailedSourceTests(unittest.TestCase):
+    def test_short_safe_reasons(self):
+        import refresh
+        from urllib.error import HTTPError,URLError
+        self.assertEqual(refresh.reason(HTTPError('https://forums.developer.nvidia.com/t/x?token=abc',403,'Forbidden',{},None)),'HTTPError 403: Forbidden')
+        self.assertEqual(refresh.reason(URLError('[Errno -2] Name or service not known')),'URLError: [Errno -2] Name or service not known')
+        self.assertEqual(refresh.reason(ValueError('Source incomplete or blocked')),'ValueError: Source incomplete or blocked')
+        self.assertEqual(refresh.reason(TimeoutError('The read operation timed out')),'TimeoutError: The read operation timed out')
+        self.assertEqual(refresh.reason(TimeoutError()),'TimeoutError')
+        r=refresh.reason(ValueError('redirected to https://cdn.example/a?key=SECRET then\n  failed '+'x'*300))
+        self.assertNotIn('SECRET',r);self.assertNotIn('https',r);self.assertIn('<address>',r);self.assertLessEqual(len(r),120);self.assertNotIn('\n',r)
+    def test_script_rendered_pages_are_manual_checks(self):
+        import refresh
+        for u in ('https://marketplace.nvidia.com/en-us/products/rtx-spark/','https://Marketplace.nvidia.com/en-us/enterprise/robotics-edge/?category=igx_developer_kit'):
+            self.assertTrue(refresh.manual(u),u)
+        for u in ('https://www.nvidia.com/en-us/','https://nvidianews.nvidia.com/news/latest','https://marketplace.nvidia.com.example/x'):
+            self.assertFalse(refresh.manual(u),u)
+    def test_run_keeps_reasons_and_lists_manual_checks(self):
+        import refresh,shutil,tempfile
+        from unittest import mock
+        from urllib.error import HTTPError
+        fetched=[]
+        def fake(url):
+            fetched.append(url)
+            if 'forums.developer.nvidia.com' in url:raise HTTPError(url,403,'Forbidden',{},None)
+            page=Page();page.feed('<h1>Official page</h1><p>'+'Text. '*100+'</p>');return page
+        with tempfile.TemporaryDirectory() as d:
+            d=Path(d);(d/'data').mkdir()
+            for name in ('catalog.json','refresh-rules.json'):shutil.copy(ROOT/'data'/name,d/'data'/name)
+            # Sources of both kinds, whatever the real catalog cites today.
+            catalog=json.loads((d/'data/catalog.json').read_text(encoding='utf-8'))
+            catalog['products'][0]['sources']+=[{'label':'Marketplace','url':'https://marketplace.nvidia.com/en-us/products/test-item/'},
+                                                {'label':'Forum','url':'https://forums.developer.nvidia.com/t/test-thread/1'}]
+            (d/'data/catalog.json').write_text(json.dumps(catalog),encoding='utf-8')
+            with mock.patch.object(refresh,'ROOT',d),mock.patch.object(refresh,'fetch',fake),mock.patch('builtins.print'):
+                refresh.main()
+            report=json.loads((d/'data/refresh-report.json').read_text(encoding='utf-8'))
+            catalog=json.loads((d/'data/catalog.json').read_text(encoding='utf-8'))
+        manual=[m['url'] for m in report['manual_checks']]
+        self.assertIn('https://marketplace.nvidia.com/en-us/products/test-item/',manual);self.assertTrue(all(refresh.manual(u) for u in manual))
+        self.assertTrue(all(m['why']==refresh.MANUAL_WHY for m in report['manual_checks']))
+        self.assertFalse([u for u in fetched if refresh.manual(u)])  # never fetched ...
+        self.assertTrue(set(manual)<={s['url'] for p in catalog['products'] for s in p['sources']})  # ... but still sources
+        self.assertEqual(report['health']['attempted_sources'],len(fetched))
+        forum=[u for u in fetched if 'forums.developer.nvidia.com' in u]
+        self.assertIn('https://forums.developer.nvidia.com/t/test-thread/1',forum);self.assertEqual(report['errors'],{u:'HTTPError 403: Forbidden' for u in forum})
+        self.assertEqual(report['new_errors'],[])  # a first failure is not news yet
 if __name__=='__main__':unittest.main()
 class PriceViewTests(unittest.TestCase):
     def test_ranges_and_peg_fallback(self):

@@ -2,6 +2,8 @@
 
 Never infer availability from the calendar or let a failed request erase data.
 New product specifications and changes without a configured parser go to review.
+A failed source keeps a short, safe reason in data/refresh-report.json (HTTP status or error message, no addresses).
+Script-rendered pages (MANUAL_HOSTS) stay as sources but are listed as manual checks instead of being fetched.
 """
 import concurrent.futures
 import hashlib
@@ -11,6 +13,7 @@ import sys
 from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, urljoin, urldefrag
 from urllib.request import Request, build_opener, HTTPRedirectHandler
 
@@ -19,10 +22,27 @@ VENDORS=('nvidia.com','amd.com')
 DISCOVERY=['https://nvidianews.nvidia.com/news/latest','https://newsroom.amd.com/category/data-center/','https://newsroom.amd.com/category/client-computing/','https://newsroom.amd.com/category/ai/']
 KEYWORDS=re.compile(r'\b(DGX|RTX|Instinct|MI\d{3}|Radeon|Helios|Rubin|Blackwell|Ryzen AI)\b',re.I)
 FAILING_AFTER=2  # failed checks in a row before a source counts as newly failing in the review issue (one timeout is not news)
+# Pages drawn by scripts in the browser: a plain request gets no text, so they failed every run. They stay as sources
+# in the catalog; the report lists them as manual checks instead of monitoring them.
+MANUAL_HOSTS=('marketplace.nvidia.com',)
+MANUAL_WHY='Script-rendered page: no text without a browser, so not checked automatically. Check it by hand.'
 
 def official(url):
     u=urlparse(url)
     return u.scheme=='https' and not u.username and not u.password and u.port in (None,443) and any(u.hostname==v or (u.hostname or '').endswith('.'+v) for v in VENDORS)
+
+def manual(url):
+    return (urlparse(url).hostname or '').lower() in MANUAL_HOSTS
+
+def reason(exc):
+    """A short reason a source failed, safe for the public report and issue: the HTTP status, the network error or the
+    check that refused the page. Addresses are left out (a redirect target could carry a query), whitespace is
+    collapsed and the text is cut at 120 characters."""
+    if isinstance(exc,HTTPError):text=f'HTTPError {exc.code}: {exc.reason}'
+    elif isinstance(exc,URLError):text=f'{type(exc).__name__}: {exc.reason}'
+    else:text=f'{type(exc).__name__}: {exc}' if str(exc) else type(exc).__name__
+    text=re.sub(r'\s+',' ',re.sub(r'\b(?:https?|ftp)://\S+','<address>',text)).strip()
+    return text if len(text)<=120 else text[:119]+'…'
 
 class Redirects(HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):
@@ -106,10 +126,12 @@ def main():
     for p in data['products']:
         # Partner devices also cite their maker's site; only NVIDIA / AMD pages are monitored.
         urls.update(s['url'] for s in p['sources'] if official(s['url']) and not urlparse(s['url']).path.lower().endswith('.pdf'))
+    manual_checks=[{'url':u,'why':MANUAL_WHY} for u in sorted(urls) if manual(u)]
+    urls-={m['url'] for m in manual_checks}
     pages={};errors={}
     def load(url):
         try:return url,fetch(url),None
-        except Exception as exc:return url,None,type(exc).__name__
+        except Exception as exc:return url,None,reason(exc)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for url,page,error in pool.map(load,sorted(urls)):
             if error:errors[url]=error
@@ -148,11 +170,13 @@ def main():
     if changes:
         data['updated_at']=now
         data['changes']=([{'at':now,'summary':s} for s in changes]+data['changes'])[:80]
-    report={'at':now,'health':data['check_health'],'changes':changes,'review':review,'errors':errors,'new_errors':new_errors}
+    report={'at':now,'health':data['check_health'],'changes':changes,'review':review,'errors':errors,'new_errors':new_errors,
+            'manual_checks':manual_checks}
     report_path.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
     for path,obj in [(catalog_path,data),(state_path,state)]:
         temp=path.with_suffix('.tmp');temp.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n');temp.replace(path)
-    print(f'Checked {len(pages)}/{len(urls)} official sources; {len(changes)} verified field changes; {len(review)} items for review')
+    print(f'Checked {len(pages)}/{len(urls)} official sources; {len(changes)} verified field changes; {len(review)} items for review; '
+          f'{len(manual_checks)} pages left for a manual check')
     if not pages:print('No sources reachable. Existing catalog retained.',file=sys.stderr)
     return 0
 

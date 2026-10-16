@@ -57,7 +57,7 @@ class FakeGh:
 def report(**kw):
     r = {'at': '2026-10-16T10:09:44+00:00', 'health': {'successful_sources': 257, 'failed_sources': 2, 'attempted_sources': 259},
          'changes': [], 'review': [{'url': 'https://blogs.nvidia.com/blog/a/', 'reason': 'Official page changed; inspect timeline', 'at': 'x'}],
-         'errors': {'https://forums.developer.nvidia.com/t/1': 'HTTPError: 403 Forbidden', 'https://www.nvidia.com/x': 'ValueError: Source incomplete or blocked'},
+         'errors': {'https://forums.developer.nvidia.com/t/1': 'HTTPError 403: Forbidden', 'https://www.nvidia.com/x': 'ValueError: Source incomplete or blocked'},
          'new_errors': []}
     r.update(kw)
     return r
@@ -101,7 +101,7 @@ class ReviewIssueTests(unittest.TestCase):
         for text in ('257/259 reached', '2 failing', '**AI cost (estimate):** $4.12 in October 2026 over 20 runs (September: $9.80, 58 runs).',
                      'Content policy (UAE/GCC)', 'the last one started 12.5 min after its slot; median 30 min over the last 3',
                      '**AI drafts:** none open.', 'Official pages that changed', 'https://blogs.nvidia.com/blog/a/',
-                     'Failing sources', 'HTTPError: 403 Forbidden', 'no email'):
+                     'Failing sources', 'HTTPError 403: Forbidden', 'no email'):
             self.assertIn(text, body)
         self.assertNotIn('Approximate prices', body)
         for run in range(3):
@@ -147,7 +147,7 @@ class ReviewIssueTests(unittest.TestCase):
         fake = self.run_review(FakeGh())
         alert = fake.new_comments()[-1]
         for text in ('Verified specification change (already applied): H200: power_w changed from 600 to 700',
-                     f'Source failing in {refresh.FAILING_AFTER} checks in a row: https://forums.developer.nvidia.com/t/1 (HTTPError: 403 Forbidden)',
+                     f'Source failing in {refresh.FAILING_AFTER} checks in a row: https://forums.developer.nvidia.com/t/1 (HTTPError 403: Forbidden)',
                      'AI draft waiting for its pull request: Instinct MI999X', 'The pull request step failed'):
             self.assertIn(text, alert)
         self.assertIn('AI drafts waiting for a pull request', self.status(fake)['body'])
@@ -200,6 +200,17 @@ class ReviewIssueTests(unittest.TestCase):
         self.assertEqual(R.read_alerted(text), set(keys))
         self.assertEqual(text.count('-->'), text.count('<!--'))  # no key can end the hidden comment early
         self.assertNotIn('@', text.replace('github-actions[bot]', ''))  # no mention: an edit never notifies anyone
+
+    def test_failure_reasons_and_manual_checks_are_shown(self):
+        self.write('refresh-report.json', report(manual_checks=[{'url': 'https://marketplace.nvidia.com/en-us/products/rtx-spark/',
+                                                                 'why': refresh.MANUAL_WHY}]))
+        fake = self.run_review(FakeGh())
+        body = self.status(fake)['body']
+        for text in ('2 failing (below); 1 script-rendered pages to check by hand (below).', 'To check by hand (not fetched automatically) (1)',
+                     'https://marketplace.nvidia.com/en-us/products/rtx-spark/: Script-rendered page',
+                     'https://forums.developer.nvidia.com/t/1: HTTPError 403: Forbidden'):
+            self.assertIn(text, body)
+        self.assertEqual(fake.new_comments()[1:], [])  # nothing to act on: only the status comment
 
     def test_workflow_step(self):
         wf = (ROOT / '.github/workflows/publish.yml').read_text(encoding='utf-8')

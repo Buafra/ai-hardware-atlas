@@ -145,7 +145,8 @@ def status_text(report, draft_report, stale, keys, now, news_path=None, cost_pat
     lines = [MARKER, f"**Status, updated {now:%Y-%m-%d %H:%M} UTC.** Every run edits this comment (no email); a new comment "
              'appears only when something needs you.', '',
              f"- **Official sources:** {health['successful_sources']}/{health['attempted_sources']} reached at {report['at']}; "
-             f"{len(report.get('errors') or {})} failing (below)."]
+             f"{len(report.get('errors') or {})} failing (below)" +
+             (f"; {len(report['manual_checks'])} script-rendered pages to check by hand (below)." if report.get('manual_checks') else '.')]
     for line in (ai_cost.month_line(now, cost_path), ai_status(news_path or ROOT / 'data/news.json'),
                  policy_status(news_path or ROOT / 'data/news.json'), timing_status(timing_path)):
         if line:
@@ -164,7 +165,8 @@ def status_text(report, draft_report, stale, keys, now, news_path=None, cost_pat
         lines.append('- **Verified specification changes this run (already applied):** ' + '; '.join(report['changes']))
     folded = [_folded('Official pages that changed since the last check: inspect the timeline and unparsed specifications',
                       [f"- {r.get('product_id', 'page')}: {r['reason']} - {r['url']}" for r in report.get('review', [])]),
-              _folded('Failing sources (kept as they were)', [f'- {u}: {e}' for u, e in (report.get('errors') or {}).items()])]
+              _folded('Failing sources (kept as they were)', [f'- {u}: {e}' for u, e in (report.get('errors') or {}).items()]),
+              _folded('To check by hand (not fetched automatically)', [f"- {m['url']}: {m['why']}" for m in report.get('manual_checks', [])])]
     text = '\n'.join(lines) + ''.join('\n\n' + f for f in folded if f)
     # The announced keys; '>' is escaped so no key can end the HTML comment early.
     tail = '\n\n<!-- alerted: ' + json.dumps(sorted(set(keys)), ensure_ascii=False).replace('>', '\\u003e') + ' -->'

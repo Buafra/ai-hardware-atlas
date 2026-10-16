@@ -73,7 +73,7 @@ Old releases stay on GitHub as history; the site never links them. Deleting ever
 
 ## What updates automatically
 
-The workflow fetches official NVIDIA / AMD pages, discovers relevant official headlines, stores check health, and regenerates the website and PDF. Narrow, product-title-checked parsers update explicitly labeled specification fields configured in `data/refresh-rules.json`. Missing, conflicting or blocked source responses preserve existing data.
+The workflow fetches official NVIDIA / AMD pages, discovers relevant official headlines, stores check health, and regenerates the website and PDF. Narrow, product-title-checked parsers update explicitly labeled specification fields configured in `data/refresh-rules.json`. Missing, conflicting or blocked source responses preserve existing data. A source that fails keeps a short, safe reason in `data/refresh-report.json` (`errors`: the HTTP status, the network error or the check that refused the page; no addresses). NVIDIA Marketplace pages (`marketplace.nvidia.com`) are drawn by scripts in the browser, so a plain request gets no text: they stay as sources in the catalog but are not fetched, and the report lists them under `manual_checks` (shown in the review issue) to check by hand.
 
 Parsers exist for 19 products (`data/refresh-rules.json`); each was checked against the live official page. Pages that serve several variants only have the unambiguous fields configured.
 
