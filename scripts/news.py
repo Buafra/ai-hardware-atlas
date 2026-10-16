@@ -134,7 +134,7 @@ PAGE_TRIES = 2  # pages with no usable description are tried again once, then le
 SUMMARY_PER_RUN = 80
 SUMMARY_BATCH = 5
 SUMMARY_MAX = 1000  # longer answers are trimmed to whole sentences, not thrown away
-SUMMARY_TRIES = 2  # items the model (or the page) could not summarise are retried once, then left alone
+SUMMARY_TRIES = 2  # Claude requests for an item that gave no usable summary: retried once, then left alone
 # The summary prompt's version. Items summarised with an older one are summarised again (they keep the old summary
 # until a new one succeeds), and tries made with an older prompt don't count. 2: fuller summaries (3 to 5 sentences,
 # about 80-120 words) and the ai_focus verdict.
@@ -1263,7 +1263,10 @@ def summarize(items, sources):
     first within each group. Needs ANTHROPIC_API_KEY. API or
     network errors skip a batch without failing the run and are retried next run; a refusal, an unusable answer or an
     item left out of the answer counts as one of the item's SUMMARY_TRIES at this version (an older summary stays
-    meanwhile). Returns the number summarised."""
+    meanwhile). Only a Claude request counts as a try: an item with nothing to send (page text under 300 characters
+    and no excerpt) is not asked, uses no try and waits for a later run (WAM's text feed may carry it then; it leaves
+    the window after KEEP_DAYS anyway). Pages are read in rounds until SUMMARY_PER_RUN items have text to send, so
+    waiting items never take the places of others. Returns the number summarised."""
     if not os.environ.get('ANTHROPIC_API_KEY'):
         return 0
     src = {s['id']: s for s in sources}
@@ -1285,21 +1288,19 @@ def summarize(items, sources):
     busy = {i for details in waiting for i in details['items']}
     weak = lambda i: not i.get('excerpt') or (src.get(i['source']) or {}).get('prefer_ai_summary', False)
     todo = [i for i in items if not _current(i) and i.get('summary_attempts', 0) < SUMMARY_TRIES and i['id'] not in busy]
-    todo = sorted(todo, key=lambda i: (bool(i.get('summary_en')), not weak(i), not i.get('uae')))[:SUMMARY_PER_RUN]
+    todo = sorted(todo, key=lambda i: (bool(i.get('summary_en')), not weak(i), not i.get('uae')))
     if not todo:
         return done
+    ready, pos = [], 0
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-        # Pages already read for an excerpt this run are not fetched again.
-        pages = list(pool.map(lambda i: i['_page'] if i.get('_page') is not None else fetch_article(i, src.get(i['source'])), todo))
-    ready = []
-    for item, page in zip(todo, pages):
-        # Fall back to the headline and the publisher's excerpt when the page could not be read.
-        if len(page) < 300 and not item.get('excerpt'):
-            _tried(item)
-            continue
-        item['_basis'] = 'article' if len(page) >= 300 else 'excerpt'
-        text = page if len(page) >= 300 else '\n\n'.join(x for x in (item['title'], item.get('excerpt', '')) if x)
-        ready.append((item, text, (src.get(item['source']) or {}).get('name', item['source'])))
+        while len(ready) < SUMMARY_PER_RUN and pos < len(todo):
+            chunk = todo[pos:pos + SUMMARY_PER_RUN - len(ready)]
+            pos += len(chunk)
+            # Pages already read for an excerpt this run are not fetched again.
+            pages = list(pool.map(lambda i: i['_page'] if i.get('_page') is not None else fetch_article(i, src.get(i['source'])), chunk))
+            ready += _summary_inputs(chunk, pages, src)
+    if not ready:
+        return done
     batches = [ready[n:n + SUMMARY_BATCH] for n in range(0, len(ready), SUMMARY_BATCH)]
     carry = {n: {'items': [item['id'] for item, _, _ in batch], 'basis': {item['id']: item['_basis'] for item, _, _ in batch},
                  'version': SUMMARY_VERSION} for n, batch in enumerate(batches)}
@@ -1307,6 +1308,19 @@ def summarize(items, sources):
     for n, batch in enumerate(batches):
         done += _apply_summaries([item for item, _, _ in batch], *answers[n])
     return done
+
+def _summary_inputs(items, pages, src):
+    """(item, text, publisher) for the items that have something to summarise: the article page when it was read
+    (300 characters or more), else the headline and the publisher's excerpt. An item with neither is left out without
+    a try (nothing was asked): it waits for a later run."""
+    ready = []
+    for item, page in zip(items, pages):
+        if len(page) < 300 and not item.get('excerpt'):
+            continue
+        item['_basis'] = 'article' if len(page) >= 300 else 'excerpt'
+        text = page if len(page) >= 300 else '\n\n'.join(x for x in (item['title'], item.get('excerpt', '')) if x)
+        ready.append((item, text, (src.get(item['source']) or {}).get('name', item['source'])))
+    return ready
 
 def _apply_summaries(batch, kind, parsed, version=None):
     """Store one answer's summaries on the items it was asked about (`batch`, each with its _basis), stamped with the

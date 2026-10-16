@@ -220,10 +220,31 @@ class SummaryTests(unittest.TestCase):
         it=item(1);self.run_summaries([it],client)
         prompt=client.calls[0]['messages'][0]['content']
         self.assertIn('Headline number 1\n\nExcerpt for item 1',prompt)
-        # Nothing to go on (no page, no excerpt): not sent, counted as a try.
+        # Nothing to go on (no page, no excerpt): not sent and no try used (only a Claude request is a try); it waits.
         bare=item(2);bare.pop('excerpt')
-        client=FakeClient();self.run_summaries([bare],client)
-        self.assertEqual(client.calls,[]);self.assertEqual(bare['summary_attempts'],1)
+        client=FakeClient()
+        for _ in range(news.SUMMARY_TRIES+1):self.run_summaries([bare],client)
+        self.assertEqual(client.calls,[]);self.assertNotIn('summary_attempts',bare);self.assertNotIn('summary_attempts_version',bare)
+        # Once text arrives (here: WAM's text feed, read during collection as _page) it is summarised from the article.
+        bare['_page']='The full article from the agency text feed. '*10
+        done,_=self.run_summaries([bare],client)
+        self.assertEqual(done,1);self.assertEqual((bare['summary_basis'],len(client.calls)),('article',1))
+    def test_items_without_text_never_take_the_places_of_others(self):
+        # 20 items with nothing to send come first (no excerpt, UAE): pages are read in rounds until 80 items have text.
+        items=[item(n,uae=True) for n in range(20)]+[item(n) for n in range(20,120)]
+        for it in items[:20]:it.pop('excerpt')
+        read=[]
+        def page(i,s):read.append(i['id']);return ''
+        client=FakeClient()
+        with mock.patch.dict(os.environ,{'ANTHROPIC_API_KEY':'test-key'}),mock.patch('anthropic.Anthropic',return_value=client),\
+             mock.patch.object(news,'fetch_article',side_effect=page):
+            done=news.summarize(items,[SRC])
+        self.assertEqual(done,news.SUMMARY_PER_RUN)
+        self.assertEqual([i['id'] for i in items if i.get('summary_en')],[f'i{n:02d}' for n in range(20,100)])
+        self.assertTrue(all('summary_attempts' not in i for i in items))
+        self.assertEqual(len(read),100)  # 80 in the first round, then 20 more for the 20 places left; i100-i119 not read
+        self.assertEqual(sorted(set(read)),sorted(read))
+        self.assertEqual(len(client.calls),news.SUMMARY_PER_RUN//news.SUMMARY_BATCH)
     def test_validation(self):
         long_en='The company announced a new accelerator for data centres this week. '*20
         answers={'i00':{'summary_en':long_en,'summary_ar':'أعلنت الشركة عن مسرّع جديد لمراكز البيانات هذا الأسبوع. '*25},'i01':{'summary_en':'Fine English summary.','summary_ar':'No Arabic here.'},
