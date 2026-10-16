@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T18:53:27+00:00",
+ "updated_at": "2026-10-16T20:03:18+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1618,6 +1618,17 @@
    "params_b": 1024.22,
    "params_source": "huggingface",
    "moe": false
+  },
+  {
+   "id": "xingchen-agi/xing4.0-29b-a4b",
+   "name": "XingChen: Xing4.0 29B A4B",
+   "hf": "XingChen-AGI/Xing4.0-29B-A4B",
+   "context": 262144,
+   "created": 1792177496,
+   "open": true,
+   "params_b": 31.22,
+   "params_source": "huggingface",
+   "moe": true
   },
   {
    "id": "z-ai/glm-4.5",
