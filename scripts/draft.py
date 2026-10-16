@@ -13,6 +13,12 @@ the review issue through data/draft-report.json). Drafts in a pull request that 
 open are written again too, so a later run adds to that pull request instead of
 replacing its files. A draft leaves the state once its product is in the catalog or its
 pull request was merged or closed.
+
+Announcements the old code marked "drafted" before any pull request existed (none was
+opened, and their drafts were not kept) stay settled: they are never drafted again on their
+own, because that would pay Claude again, mostly for products already in the catalog under
+another name. The run that settles them lists them once for the owner (the review issue);
+`--redraft URL` drafts one again on the next run (one Claude request), only by choice.
 """
 import argparse
 import json
@@ -36,6 +42,7 @@ STATE = ROOT / 'data/draft-state.json'
 REPORT = ROOT / 'data/draft-report.json'
 CATALOG = ROOT / 'data/catalog.json'
 PENDING, DRAFTED = 'pending', 'drafted'  # waiting for a pull request / in one (done)
+LEGACY = 'drafted before pull requests were tracked'  # "closed" of an old "drafted" entry: settled, never drafted again
 PR_SETTING = ('Settings > Actions > General > Workflow permissions > "Allow GitHub Actions to create and approve '
               'pull requests"')
 MODEL = 'claude-sonnet-5-5'
@@ -196,16 +203,24 @@ def write_drafts(state, folder=None):
             (folder / f"{e['id']}.json").write_text(json.dumps(e['draft'], indent=2, ensure_ascii=False) + '\n', encoding='utf-8', newline='\n')
     return len(drafts)
 
+def settle_legacy(state):
+    """The old code marked an announcement "drafted" before any pull request existed; none was opened and the draft
+    was not kept. Such entries stay settled (closed = LEGACY, no draft): drafting them again would be a paid Claude
+    request nobody asked for, mostly for products already in the catalog under another name. Returns the URLs settled
+    now (each only once), for the owner to decide (--redraft)."""
+    urls = [u for u, e in state.items() if e.get('result') == DRAFTED and 'pr' not in e and 'closed' not in e]
+    for url in urls:
+        state[url].pop('draft', None)
+        state[url]['closed'] = LEGACY
+    return urls
+
 def run(client=None, get=fetch, ask=pr_state):
     """Settle drafts the owner dealt with, draft up to MAX_PER_RUN new announcements (needs ANTHROPIC_API_KEY) and
     write every open draft to data/drafts/. A new draft is "pending" until --pr-result sees its pull request."""
     catalog = json.loads(CATALOG.read_text(encoding='utf-8'))
     state = _load(STATE, {})
     now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    # The old code marked these "drafted" before any pull request existed, and the pull request was never opened: the
-    # drafts never reached the owner, so the announcements are drafted again.
-    for url in [u for u, e in state.items() if e.get('result') == DRAFTED and 'pr' not in e]:
-        del state[url]
+    legacy = settle_legacy(state)
     settle(state, catalog, ask)
     created, skipped = [], None
     if not os.environ.get('ANTHROPIC_API_KEY'):
@@ -246,6 +261,8 @@ def run(client=None, get=fetch, ask=pr_state):
     report = {'at': now, 'created': created, **_open_report(state), 'usage': usage_report()}
     if skipped:
         report['skipped'] = skipped
+    if legacy:  # listed once, on the run that settled them (the review issue tells the owner)
+        report['settled_without_pull_request'] = legacy
     _save_report(report)
     print(f'{written} open draft(s) written to data/drafts/.')
     return 0
@@ -278,6 +295,26 @@ def record_pr(outcome, number, now=None):
     _save_report(report)
     return 0
 
+def redraft(urls):
+    """The owner's choice: forget the outcome recorded for these announcement URLs, so the next run drafts them again
+    (one Claude request each, at most MAX_PER_RUN a run). A draft still open (waiting for or in a pull request) is
+    left as it is. Commit data/draft-state.json afterwards. Returns how many were cleared."""
+    state = _load(STATE, {})
+    cleared = 0
+    for url in urls:
+        e = state.get(url)
+        if e is None:
+            print(f'{url}: not in data/draft-state.json (a new announcement is drafted anyway)')
+        elif e.get('draft') and e.get('result') in (PENDING, DRAFTED):
+            print(f'{url}: its draft is still open ({e["result"]}); nothing to do')
+        else:
+            del state[url]
+            cleared += 1
+            print(f'{url}: cleared ({e.get("closed") or e.get("result")}); the next run drafts it again')
+    if cleared:
+        _save_state(state)
+    return cleared
+
 def promote(path):
     from build import validate
     draft = json.loads(Path(path).read_text(encoding='utf-8'))
@@ -301,9 +338,14 @@ if __name__ == '__main__':
     parser.add_argument('--promote', metavar='DRAFT', help='move a reviewed draft into data/catalog.json')
     parser.add_argument('--pr-result', action='store_true',
                         help="record the workflow's pull-request step (env PR_OUTCOME, PR_NUMBER): drafts count as done only once in a pull request")
+    parser.add_argument('--redraft', metavar='URL', nargs='+',
+                        help='draft these announcements again on the next run (one paid Claude request each); commit data/draft-state.json')
     args = parser.parse_args()
     if args.promote:
         sys.exit(promote(args.promote))
+    if args.redraft:
+        redraft(args.redraft)
+        sys.exit(0)
     if args.pr_result:
         sys.exit(record_pr(os.environ.get('PR_OUTCOME', ''), os.environ.get('PR_NUMBER', '')))
     try:

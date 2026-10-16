@@ -89,6 +89,7 @@ jobs:
         continue-on-error: true
         run: python scripts/models.py
       - name: Draft records for new announcements (optional, needs ANTHROPIC_API_KEY)
+        id: draft
         if: github.event_name == 'schedule' || inputs.ai
         continue-on-error: true
         env:
@@ -142,11 +143,14 @@ jobs:
           path: .cache/android
           key: android-apk-${{ hashFiles('.cache/android/latest.json') }}
       # Before the data is saved: a draft counts as done (data/draft-state.json) only once it is in a pull request.
-      # Only when draft.py wrote drafts (pending ones, and those of a pull request still open, so the branch keeps them).
+      # Only on a run where draft.py just ran without failing and wrote drafts (pending ones, and those of a pull request
+      # still open, so the branch keeps them). Without it (a push, a manual run without "ai", an Android release, a
+      # draft.py failure) the action would rebuild ai-drafts from main without the open drafts and empty their pull
+      # request. outcome is the step's result before continue-on-error.
       # Pinned to the commit of v8.1.1 (the v8 tag), not a movable tag: this third-party action gets the write token.
       - name: Open a pull request for AI drafts
         id: drafts-pr
-        if: github.event_name != 'push' && hashFiles('data/drafts/*.json') != ''
+        if: steps.draft.outcome == 'success' && hashFiles('data/drafts/*.json') != ''
         continue-on-error: true
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
@@ -157,8 +161,10 @@ jobs:
           body: |
             Drafted from newly discovered official announcements. Each file quotes the official page as evidence.
             Check every value against the source, then run `python scripts/draft.py --promote data/drafts/<file>.json` and commit. Merging this pull request alone does not change the public catalog.
+      # If recording fails, the drafts stay pending and the next run tries again: it never stops the save or the deploy.
       - name: Record whether the drafts pull request was opened (a failure is reported in the review issue)
         if: steps.drafts-pr.outcome == 'success' || steps.drafts-pr.outcome == 'failure'
+        continue-on-error: true
         env:
           PR_OUTCOME: ${{ steps.drafts-pr.outcome }}
           PR_NUMBER: ${{ steps.drafts-pr.outputs.pull-request-number }}

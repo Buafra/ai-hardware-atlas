@@ -93,14 +93,32 @@ class PullRequestFlowTests(unittest.TestCase):
         D.STATE.write_text('{}',encoding='utf-8')
         with mock.patch('builtins.print'):self.assertEqual(D.record_pr('failure',''),0)
         self.assertFalse(D.REPORT.exists())
-    def test_legacy_drafted_without_a_pull_request_is_drafted_again(self):
-        # The old code said "drafted" before any pull request existed; that draft never reached the owner.
+    def test_legacy_drafted_without_a_pull_request_stays_settled_and_is_listed_once(self):
+        # The old code said "drafted" before any pull request existed; drafting it again would be a paid request nobody
+        # asked for (mostly for products already in the catalog under another name), so it stays settled.
         D.STATE.write_text(json.dumps({URL:{'at':'2026-09-26T18:19:28+00:00','result':'drafted'}}),encoding='utf-8')
-        state,_=self.run_draft()
-        self.assertEqual(self.client.calls,1);self.assertEqual(state[URL]['result'],'pending')
+        state,report=self.run_draft()
+        self.assertEqual(self.client.calls,0)
+        self.assertEqual(state[URL],{'at':'2026-09-26T18:19:28+00:00','result':'drafted','closed':D.LEGACY})
+        self.assertEqual(report['settled_without_pull_request'],[URL]);self.assertFalse(self.file().exists())
+        self.assertEqual((report['waiting'],report['in_pull_request']),([],[]))
+        # Listed on that run only; never drafted again on its own, with or without a pull request step.
+        state,report=self.run_draft();self.record('success','7')
+        self.assertEqual(self.client.calls,0);self.assertNotIn('settled_without_pull_request',report)
+        self.assertEqual(json.loads(D.STATE.read_text(encoding='utf-8'))[URL]['closed'],D.LEGACY)
         # Other outcomes stay done.
         D.STATE.write_text(json.dumps({URL:{'at':'2026-09-26T18:19:28+00:00','result':'not a new product'}}),encoding='utf-8')
-        self.client.calls=0;state,_=self.run_draft();self.assertEqual(self.client.calls,0)
+        state,report=self.run_draft();self.assertEqual(self.client.calls,0);self.assertNotIn('settled_without_pull_request',report)
+    def test_redraft_is_the_owners_choice(self):
+        D.STATE.write_text(json.dumps({URL:{'at':'2026-09-26T18:19:28+00:00','result':'drafted','closed':D.LEGACY},
+                                       'https://newsroom.amd.com/news/z/':{'at':'2026-09-26T18:19:28+00:00','result':'not a new product'}}),encoding='utf-8')
+        with mock.patch('builtins.print'):self.assertEqual(D.redraft([URL,'https://newsroom.amd.com/news/unknown/']),1)
+        self.assertEqual(list(json.loads(D.STATE.read_text(encoding='utf-8'))),['https://newsroom.amd.com/news/z/'])
+        state,_=self.run_draft()  # the next run drafts it again: one Claude request
+        self.assertEqual(self.client.calls,1);self.assertEqual(state[URL]['result'],'pending')
+        # An open draft is left as it is.
+        with mock.patch('builtins.print'):self.assertEqual(D.redraft([URL]),0)
+        self.assertEqual(json.loads(D.STATE.read_text(encoding='utf-8'))[URL]['result'],'pending')
     def test_product_in_the_catalog_settles_its_draft(self):
         self.run_draft()
         self.catalog['products'].append({**self.catalog['products'][0],'id':'instinct-mi999x','model':'Instinct MI999X'})
@@ -132,10 +150,17 @@ class DraftWorkflowTests(unittest.TestCase):
         self.assertEqual(len(uses),1);self.assertRegex(uses[0],r'^[0-9a-f]{40}$')
         pr=wf.index('uses: peter-evans/create-pull-request@');step=wf[wf.rindex('- name:',0,pr):pr]
         self.assertIn('id: drafts-pr',step);self.assertIn("hashFiles('data/drafts/*.json') != ''",step)
-        # Recorded before the data is saved, so data/draft-state.json says whether the pull request exists.
+        # Only on a run where draft.py just wrote every open draft (it ran and did not fail): otherwise the action would
+        # rebuild ai-drafts from main without them and empty a pull request that is still open.
+        cond=re.search(r'\n\s+if: (.+)\n',step).group(1)
+        self.assertIn("steps.draft.outcome == 'success'",cond);self.assertNotIn('||',cond)
+        run=wf.index('run: python scripts/draft.py\n');dstep=wf[wf.rindex('- name:',0,run):run]
+        self.assertIn('id: draft\n',dstep);self.assertIn('continue-on-error: true',dstep)
+        # Recorded before the data is saved, so data/draft-state.json says whether the pull request exists. If recording
+        # fails, the drafts simply stay pending: it must never stop the data save, the review issue or the deploy.
         rec=wf.index('run: python scripts/draft.py --pr-result');rstep=wf[wf.rindex('- name:',0,rec):rec]
         self.assertIn('PR_NUMBER: ${{ steps.drafts-pr.outputs.pull-request-number }}',rstep);self.assertIn('PR_OUTCOME: ${{ steps.drafts-pr.outcome }}',rstep)
-        run=wf.index('run: python scripts/draft.py\n')
+        self.assertIn('continue-on-error: true',rstep)
         self.assertLess(run,pr);self.assertLess(pr,rec);self.assertLess(rec,wf.index('name: Save refreshed data'))
         self.assertLess(rec,wf.index('run: python scripts/review_issue.py'))
         self.assertIn('GH_TOKEN: ${{ github.token }}',wf[wf.rindex('- name:',0,run):run])
