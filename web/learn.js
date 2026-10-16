@@ -1,8 +1,9 @@
 (function () {
   'use strict';
   // Learn AI page. Everything is already in the HTML in both languages; this adds the tabs, topic filters, search,
-  // deep links (#concept/<id>, #stack/<id>, #report/<id>, #group/<id>, #concepts, #stacks, #reports) and the language and
-  // theme buttons, which share their localStorage keys with the overview page (atlas-lang, atlas-theme).
+  // deep links (#concept/<id>, #stack/<id>, #report/<id>, #group/<id>, #concepts, #stacks, #reports), the theme button and
+  // the language link, which share their localStorage keys with the overview page (atlas-theme, atlas-lang). The page's
+  // language is its address: learn.html is English, ar/learn.html Arabic (scripts/lang_pages.py).
   // Reports have three filters at once (source chips, topic and year menus); each choice counts what it would show.
   const d = document.documentElement;
   const $ = id => document.getElementById(id);
@@ -26,7 +27,7 @@
     const r = n % 100;
     return n + ' ' + (r >= 3 && r <= 10 ? f[2] : r >= 11 && r <= 99 ? f[3] : f[4]);
   }
-  let lang = d.lang === 'ar' ? 'ar' : 'en';
+  const lang = d.lang === 'ar' ? 'ar' : 'en';
   let theme = store.get('atlas-theme') || 'auto';
   const TABS = ['concepts', 'stacks', 'reports'];
   let tab = TABS.includes(d.dataset.ltab) ? d.dataset.ltab : 'concepts';
@@ -163,14 +164,13 @@
     return want ? (i < 0 ? h : h.slice(0, i)) + '?lang=' + want + (i < 0 ? '' : h.slice(i)) : h;
   };
   function langLinks() {
-    // The overview takes its language from ?lang= or the saved choice. A ?lang=ar visit saves nothing, so while the
-    // language shown here differs from the saved one, the links back carry it (app.js does the same for learn.html links).
-    const saved = store.get('atlas-lang') === 'ar' ? 'ar' : 'en';
-    const want = lang !== saved ? lang : '';
+    // The overview and qahwa.html exist in English and in Arabic beside each copy of this page (ar/learn.html links to
+    // ar/index.html), so their links already lead to this page's language. Only an English visit while Arabic is the saved
+    // choice (opened with ?lang=en, which saves nothing) says so, or the English pages would go to their Arabic copies
+    // (scripts/lang_pages.py; app.js does the same for its links to learn.html).
+    const want = lang === 'en' && store.get('atlas-lang') === 'ar' ? 'en' : '';
     homeLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, want)));
-    // qahwa.html: an Arabic visit always carries ?lang=ar, exactly like the overview's links to learn.html (app.js).
-    const wantQ = lang === 'ar' ? 'ar' : saved === 'ar' ? 'en' : '';
-    qahwaLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, wantQ)));
+    qahwaLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, want)));
   }
 
   function applyLang() {
@@ -256,16 +256,12 @@
     if (s && s.dataset.dim in filter.reports) { filter.reports[s.dataset.dim] = s.value; apply(); }
   });
   search.addEventListener('keydown', e => { if (e.key === 'Escape' && search.value) { search.value = ''; apply(); } });
-  $('lang').addEventListener('click', () => {
-    lang = lang === 'ar' ? 'en' : 'ar';
-    store.set('atlas-lang', lang);
-    // A ?lang= in the address (a shared link) would otherwise win again on reload.
-    try {
-      const u = new URL(location.href);
-      if (u.searchParams.has('lang')) { u.searchParams.set('lang', lang); history.replaceState(null, '', u.href); }
-    } catch (e) {}
-    applyLang();
-    apply();
+  // The language link opens this page in the other language (learn.html <-> ar/learn.html) at the same item or tab, and
+  // saves the choice, so the overview and the lessons page follow it.
+  const langLink = $('lang'), langHref = langLink.getAttribute('href') || '';
+  langLink.addEventListener('click', () => {
+    store.set('atlas-lang', lang === 'ar' ? 'en' : 'ar');
+    langLink.setAttribute('href', langHref + location.hash);
   });
   $('theme').addEventListener('click', () => { theme = {auto: 'light', light: 'dark', dark: 'auto'}[theme] || 'auto'; store.set('atlas-theme', theme); applyTheme(); });
   $('skip').addEventListener('click', e => { e.preventDefault(); $('learn-title').focus(); });

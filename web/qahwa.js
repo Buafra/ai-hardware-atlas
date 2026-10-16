@@ -1,6 +1,7 @@
 /* Qahwa & AI library (qahwa.html), ported from the approved mock A. Inlined into the page by scripts/qahwa.py.
    Data: the <script type="application/json" id="qahwa-data"> block (data/qahwa.json, published posts only).
-   Language and theme use the site's localStorage keys (atlas-lang, atlas-theme); ?lang=ar wins and saves nothing. */
+   The page's language is its address: qahwa.html is English, ar/qahwa.html Arabic (scripts/lang_pages.py); the theme
+   and the saved language use the site's localStorage keys (atlas-theme, atlas-lang). */
 (function () {
   'use strict';
   let DATA = {};
@@ -9,7 +10,9 @@
   const HOME = DATA.home || 'index.html';
   const LEARN = DATA.learn || 'learn.html';
   const CONCEPTS = DATA.concepts || {};
-  const BRAND = 'brand/qahwa/';
+  // The Arabic copy (ar/qahwa.html) sits one folder down and reuses the site's files: their paths get this prefix.
+  const ROOT = DATA.root || '';
+  const BRAND = `${ROOT}brand/qahwa/`;
   const PAGE_SIZE = 24;
   const DRINKS = ['v60', 'cortado', 'iced-americano', 'cappuccino', 'latte', 'espresso', 'flat-white', 'mocha', 'macchiato', 'turkish-coffee'];
 
@@ -209,12 +212,13 @@
   };
   const CL_LOGO = (document.querySelector('.cl img') || {}).src || '';
   function withLang(href) {
-    // Links to the rest of the site keep the language shown here (the overview and Learn AI read ?lang=, else the saved
-    // choice): an Arabic visit always adds ?lang=ar, an English visit adds ?lang=en only while Arabic is the saved choice
-    // (a ?lang= visit saves nothing). Same rule as app.js and learn.js.
+    // The overview and Learn AI exist in English and in Arabic beside each copy of this page (ar/qahwa.html links to
+    // ar/index.html), so these links already lead to the language shown here. Only an English visit while Arabic is the
+    // saved choice (opened with ?lang=en, which saves nothing) says so, or the English pages would go to their Arabic
+    // copies (scripts/lang_pages.py). Same rule as app.js and learn.js.
     let saved = null;
     try { saved = localStorage.getItem('atlas-lang'); } catch (e) { /* private mode */ }
-    const want = S.lang === 'ar' ? 'ar' : saved === 'ar' ? 'en' : '';
+    const want = S.lang === 'en' && saved === 'ar' ? 'en' : '';
     if (!want) return href;
     const i = href.indexOf('#');
     const base = i < 0 ? href : href.slice(0, i), hash = i < 0 ? '' : href.slice(i);
@@ -276,7 +280,7 @@
       <span>${single ? `${esc(t('guide'))}: ` : ''}<b>${esc(r[L] || r.en)}</b></span>${ICON.arrow}</a>`;
   }
   function thumbImg(it, eager) {
-    if (it.cover) return `<img src="${esc(it.cover)}" alt=""${eager ? '' : ' loading="lazy"'} width="480" height="600">`;
+    if (it.cover) return `<img src="${esc(ROOT + it.cover)}" alt=""${eager ? '' : ' loading="lazy"'} width="480" height="600">`;
     return `<span class="ph"><img src="${BRAND}bot-badge.webp" alt="" width="96" height="96"></span>`;
   }
 
@@ -531,15 +535,12 @@
     $('#library').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     $('#library').focus({ preventScroll: true });
   });
-  $('#langBtn').addEventListener('click', () => {
-    S.lang = other(S.lang);
-    try { localStorage.setItem('atlas-lang', S.lang); } catch (e) { /* private mode */ }
-    // A ?lang= in the address would override the choice on reload, so it goes.
-    if (/[?&]lang=/.test(location.search)) {
-      const u = new URL(location.href); u.searchParams.delete('lang');
-      history.replaceState(null, '', u.pathname + (u.search || '') + u.hash);
-    }
-    renderAll();
+  // The language link opens this page in the other language (qahwa.html <-> ar/qahwa.html) at the same lesson, and saves
+  // the choice, so the rest of the site follows it.
+  const langBtn = $('#langBtn'), langHref = langBtn.getAttribute('href') || '';
+  langBtn.addEventListener('click', () => {
+    try { localStorage.setItem('atlas-lang', other(S.lang)); } catch (e) { /* private mode */ }
+    langBtn.setAttribute('href', langHref + location.hash);
   });
   function isDark() {
     return html.dataset.theme ? html.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;

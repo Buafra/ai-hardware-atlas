@@ -84,7 +84,7 @@ svg .fill { fill: currentColor; stroke: none; }
 .bar-tools { display: flex; gap: 6px; align-items: center; }
 .icon-btn { min-width: 44px; min-height: 44px; display: inline-grid; place-items: center; padding: 0 12px; border-radius: 999px; border: 1px solid transparent; background: transparent; cursor: pointer; color: var(--ink); }
 .icon-btn:hover { background: var(--line); }
-.lang-btn { font-weight: 600; font-size: 15px; border-color: var(--line-2); }
+.lang-btn { font-weight: 600; font-size: 15px; border-color: var(--line-2); text-decoration: none; }
 .lang-btn[lang="ar"] { font-family: 'IBM Plex Sans Arabic', sans-serif; }
 .lang-btn[lang="en"] { font-family: 'Outfit', sans-serif; }
 #themeBtn .i-sun { display: none; }

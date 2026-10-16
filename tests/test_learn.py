@@ -51,7 +51,9 @@ class Page(HTMLParser):
         for k in ('src', 'srcset', 'poster', 'data'):
             if a.get(k) and not a[k].startswith(('data:', 'brand/')):
                 self.external.append((tag, k, a[k]))
-        if tag == 'link' and a.get('href') and not a['href'].startswith(('data:', 'brand/')):
+        # The canonical address and the hreflang pair name the page, they load nothing; the manifest is the site's own file.
+        names_page = a.get('rel') in ('canonical', 'alternate') and (a.get('href') or '').startswith(SITE)
+        if tag == 'link' and a.get('href') and not a['href'].startswith(('data:', 'brand/', 'site.webmanifest')) and not names_page:
             self.external.append((tag, 'href', a['href']))
         if tag not in ('br', 'img', 'meta', 'link', 'input', 'hr', 'source', 'wbr'):
             self.stack.append(a.get('data-lang'))
@@ -228,10 +230,12 @@ class PageTests(Quiet, unittest.TestCase):
         self.assertEqual(m['og:title'], 'Learn AI · Cipher Lacuna')
         self.assertEqual((m['og:locale'], m['og:locale:alternate']), ('en_US', 'ar_AE'))
         n_c, n_core, n_found = counts(self.concepts, self.stacks)
-        # The share text counts like the status bar: AI stacks plus foundations, not their sum.
-        self.assertIn(f'{n_c} key AI concepts', m['description'])
-        self.assertIn(f'{n_core} recommended AI stacks', m['description'])
-        self.assertIn(learn.cnt(n_found, 'foundation', 'en') + ' that apply to every stack', m['description'])
+        # The share text counts like the status bar (AI stacks, not stacks plus foundations) and fits a search result
+        # (about 155 characters).
+        self.assertIn(learn.cnt(n_c, 'concept', 'en') + ', ' + learn.cnt(n_core, 'stack', 'en'), m['description'])
+        self.assertLessEqual(len(m['description']), learn.DESC_MAX)
+        self.assertEqual(m['description'], m['og:description'])
+        self.assertEqual(m['description'], m['twitter:description'])
     def test_every_item_is_in_the_html_without_javascript(self):
         ids = [a.get('id') for a in self.page.items]
         concepts = [i for i in ids if i.startswith('concept/')]
@@ -378,10 +382,13 @@ class PageTests(Quiet, unittest.TestCase):
         self.assertEqual(len(re.findall(r'<a href=', header_nav[:header_nav.index('</nav>')])), 6)
         self.lacks('qahwa.html', header)
     def test_qahwa_links_carry_the_language(self):
-        # learn.js adds ?lang= to every qahwa.html link (card, footer, lesson chips) like app.js does for learn.html.
+        # qahwa.html and the overview have Arabic copies beside ar/learn.html, so the links lead to the page's language by
+        # themselves; learn.js adds ?lang=en to them (card, footer, lesson chips, links back) only on an English visit while
+        # Arabic is the saved choice, like app.js does for learn.html.
         js = (ROOT / 'web' / 'learn.js').read_text(encoding='utf-8')
         self.assertIn('a[href^="qahwa.html"]', js)
-        self.assertIn("const wantQ = lang === 'ar' ? 'ar' : saved === 'ar' ? 'en' : '';", js)
+        self.assertIn("const want = lang === 'en' && store.get('atlas-lang') === 'ar' ? 'en' : '';", js)
+        self.assertIn("qahwaLinks.forEach(([a, h]) => a.setAttribute('href', withLang(h, want)));", js)
     def test_data_is_escaped(self):
         c, s = copy.deepcopy(self.concepts), copy.deepcopy(self.stacks)
         c['concepts'][0]['title_en'] = '<script>alert(1)</script>'

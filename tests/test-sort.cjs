@@ -209,3 +209,21 @@ assert.equal(decodeState('').nq,'');assert.equal(decodeState('').uq,'');
 assert.ok(!HW_KEYS.includes('nq')&&!HW_KEYS.includes('uq'),'?q= stays the hardware search');
 assert.ok(tpl.includes("/[?&](region|nq)(=|&|$)/.test(s)?'news':/[?&]uq(=|&|$)/.test(s)?'uae':'home'"),'head script opens the news and UAE views for ?nq= and ?uq=');
 console.log('PASS: news search (normalizer, words, matching, URL state, implied views)');
+// Language pages (scripts/lang_pages.py): / is English and /ar/ Arabic, so the address app.js writes never repeats the
+// language (urlQuery() encodes the state with the default lang), and the language link carries the view and the filters
+// to the other page. A legacy ?lang=ar still decodes, so the head script can send it on.
+{
+  const st={...decodeState('?lang=ar&q=h100&vendor=NVIDIA&nq=openai'),lang:'en'};
+  const qs=encodeState(st);
+  assert.ok(!/(^|&)lang=/.test(qs),qs);assert.equal(qs,'q=h100&vendor=NVIDIA&nq=openai');
+  assert.equal(pageUrl('../',qs,'hardware'),'../?q=h100&vendor=NVIDIA&nq=openai#hardware');
+  assert.equal(pageUrl('ar/',encodeState({...decodeState(''),lang:'en'}),'news'),'ar/#news');
+  assert.equal(decodeState('?lang=ar').lang,'ar');assert.equal(decodeState('?lang=xx').lang,'en');
+  const app=require('node:fs').readFileSync(require('node:path').join(__dirname,'..','web','app.js'),'utf8');
+  assert.ok(app.includes('function urlQuery() { return encodeState({...state, lang: DEFAULTS.lang}); }'),'the URL never carries the language');
+  assert.ok(app.includes("langLink.setAttribute('href', pageUrl(langBase, urlQuery(), currentView));"),'the language link keeps the view and filters');
+  assert.ok(app.includes(String.raw`langHref.replace(/(^|\/)index\.html$/, '$1')`),'over http(s) the link is /ar/ or /, not index.html');
+  assert.ok(!tpl.includes("d.classList.add('i18n-wait')"),'no in-place Arabic: the head script sends the visit to /ar/');
+  assert.ok(tpl.includes('__LANG_JS__'),'the language rule runs first in the head script');
+}
+console.log('PASS: language pages (URL without lang, language link, legacy ?lang=)');

@@ -252,9 +252,12 @@ def publish(out_dir, info):
         return None
     target.mkdir(parents=True)
     shutil.copyfile(info['path'], target / ASSET)
-    latest = {**{k: info[k] for k in INFO_KEYS}, 'min_android': MIN_ANDROID, 'url': SITE_URL + PUBLIC_APK}
-    (target / 'latest.json').write_text(json.dumps(latest, indent=2) + '\n', encoding='utf-8', newline='\n')
+    (target / 'latest.json').write_text(json.dumps(latest(info), indent=2) + '\n', encoding='utf-8', newline='\n')
     return target / ASSET
+
+def latest(info):
+    """download/latest.json: what the site publishes about the APK it serves (the app share page's JSON-LD uses it too)."""
+    return {**{k: info[k] for k in INFO_KEYS}, 'min_android': MIN_ANDROID, 'url': SITE_URL + PUBLIC_APK}
 
 def size_mb(n):
     """2878160 -> '2.7' (MB, 1 MB = 1,048,576 bytes, as phones show it)."""

@@ -15,10 +15,13 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import android_app
 import apk_page
+import feeds
+import lang_pages
 import learn
 import news_images
 import policy
 import qahwa
+import seo
 import topics
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -371,11 +374,14 @@ def apk_share(out_dir, android, brand_dir=BRAND_DIR):
     """The Android app's share page, cipherlacuna.ae/apk (scripts/apk_page.py), with the logo, the favicon and the QR code
     (brand/app-qr.svg, from make_app_share.py) as data: images, tidied like the header logo. Written on every build; without a
     checked APK the page says the Android download is unavailable and keeps the iPhone Home Screen steps."""
-    def uri(name):
-        f = brand_dir / name
-        svg = sanitize_svg(f.read_text(encoding='utf-8'), prefix='') if f.exists() else ''
-        return svg_uri(svg) if svg else ''
+    uri = lambda name: brand_uri(name, brand_dir)
     return apk_page.build(out_dir, android, uri('logo.svg'), uri('favicon.svg'), uri('app-qr.svg'))
+
+def brand_uri(name, brand_dir=BRAND_DIR):
+    """A brand SVG as a data: image, tidied like the header logo ('' when the file is missing or empty)."""
+    f = Path(brand_dir) / name
+    svg = sanitize_svg(f.read_text(encoding='utf-8'), prefix='') if f.exists() else ''
+    return svg_uri(svg) if svg else ''
 
 def copy_brand_images(dest, brand_dir=BRAND_DIR):
     """Raster brand files (apple-touch-icon.png, icon-32.png, icon-512.png, og.png) are served as files next to the page:
@@ -570,6 +576,7 @@ ICON = {
     'clock': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     'phone': '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18h3"/></svg>',
     'download': '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>',
+    'rss': '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11a8 8 0 0 1 8 8M5 5a14 14 0 0 1 14 14"/><circle cx="6" cy="18" r="1.3" fill="currentColor" stroke="none"/></svg>',
 }
 NAV = {'hardware': 'Hardware', 'news': 'AI news', 'uae': 'UAE AI', 'contact': 'Contact'}
 CONTACT_LEAD = 'Questions, corrections or partnership ideas? Email us.'
@@ -742,6 +749,15 @@ def search_empty(view):
     return (f'<div class="empty slim js-only n-empty" id="{view}-empty" hidden><p id="{view}-empty-msg" aria-hidden="true"></p>'
             f'<button type="button" class="btn" data-clear-search="{view}" data-i18n>Clear search</button></div>')
 
+RSS_LABEL = {'en': 'RSS feed', 'ar': 'خلاصة RSS'}
+
+def rss_link(kind):
+    """The small RSS link under the side panel's counts in #news (kind 'news') and #uae ('uae'): the feed in the page's
+    language (scripts/feeds.py; CSS shows the link of the page's language)."""
+    a = lambda lang: (f'<a href="{feeds.FILES[kind, lang]}" type="application/rss+xml" data-lang="{lang}" lang="{lang}">'
+                      f'{ICON["rss"]}<span>{ar_text(RSS_LABEL[lang]) if lang == "ar" else RSS_LABEL[lang]}</span></a>')
+    return f'<p class="rss">{a("en")}{a("ar")}</p>'
+
 def news_view(c):
     src, items, feed = c['src'], c['items'], c['feed']
     if not c['sources']:
@@ -758,7 +774,7 @@ def news_view(c):
 <div class="split-layout"><aside class="side" aria-labelledby="n-side-h"><div class="panel"><h2 class="side-h" id="n-side-h" data-i18n>Headlines at a glance</h2>
 {search_box('news')}
 <div class="js-only"><span class="fl" id="fl-nreg" data-i18n>Region</span><div class="chips" role="group" aria-labelledby="fl-nreg">{chips}</div></div>
-<dl class="side-stats">{side}</dl></div></aside>
+<dl class="side-stats">{side}</dl>{rss_link('news')}</div></aside>
 <div class="main-col"><h2 class="sr-only" data-i18n>Headlines</h2><div class="bar"><p class="count" id="news-count" aria-live="polite">{L(cnt(len(en_items), "headline", "en"), cnt(len(ar_items), "headline", "ar"))}</p><p class="muted" data-i18n>Times in UAE time</p></div>
 {day_lists(items, src, 'No recent English headlines.', 'لا توجد عناوين عربية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="news-more" hidden data-i18n>Show more</button></div>
@@ -791,7 +807,7 @@ def uae_view(c):
 {ihead('uae', 'UAE AI', lead)}
 <div class="split-layout uae-heads"><aside class="side" aria-labelledby="u-side-h"><div class="panel"><h2 class="side-h" id="u-side-h" data-i18n>Headlines at a glance</h2>
 {search_box('uae')}
-<dl class="side-stats">{side}</dl></div></aside>
+<dl class="side-stats">{side}</dl>{rss_link('uae')}</div></aside>
 <div class="main-col"><div class="sec-h"><h2 id="uae-news-h" data-i18n>Latest UAE AI news</h2><p id="uae-count" aria-live="polite">{L(cnt(n_en, "headline", "en") + " · times in UAE time", cnt(n_ar, "headline", "ar") + " · الأوقات بتوقيت الإمارات")}</p></div>
 {day_lists(uae_items, src, 'No recent English UAE headlines.', 'لا توجد عناوين إماراتية حديثة.', c['pics'])}
 <div class="more-row js-only"><button type="button" class="btn" id="uae-more" hidden data-i18n>Show more</button></div>
@@ -824,10 +840,11 @@ def about_L(pair):
 
 META_DESC_MAX = 200  # characters; longer share texts are cut at a sentence boundary
 
-def meta_description(about):
-    """The page's meta, og: and twitter: description: "Cipher Lacuna: " and the approved promise from data/about.json,
-    word for word. If that runs past META_DESC_MAX it keeps whole sentences only (at least the first one)."""
-    sentences = re.findall(r'.+?[.!?](?=\s|$)', about['promise']['en'].strip()) or [about['promise']['en'].strip()]
+def meta_description(about, lang='en'):
+    """The page's meta, og: and twitter: description: "Cipher Lacuna: " and the approved promise from data/about.json in
+    the page's language, word for word. If that runs past META_DESC_MAX it keeps whole sentences only (at least the first)."""
+    promise = about['promise'][lang].strip()
+    sentences = re.findall(r'.+?[.!?؟](?=\s|$)', promise) or [promise]
     text = f'{SITE_NAME}: ' + sentences[0]
     for s in sentences[1:]:
         if len(text) + len(s) + 1 > META_DESC_MAX:
@@ -948,11 +965,39 @@ def load_all():
     load_about()  # the About text (hero promise, #contact/about): a bad file fails here too
     return data, load('news.json'), sources, uae, load('models.json') or {'models': []}
 
-def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None, android=None):
+HOME_TITLE = 'AI hardware, AI news and UAE AI'
+OG_ALT = {'en': 'Cipher Lacuna cube logo with the tagline Decoding the gaps in AI knowledge, in English and Arabic',
+          'ar': 'شعار Cipher Lacuna (المكعب) مع عبارة «كشف المجهول في عالم الذكاء الاصطناعي» بالعربية والإنجليزية'}
+_APP_AR = {}
+
+def app_ar():
+    """app.js's Arabic strings (its AR table), the one copy of the overview's translations."""
+    if not _APP_AR:
+        _APP_AR.update(lang_pages.js_strings((ROOT/'web/app.js').read_text(encoding='utf-8'), 'const AR = {'))
+    return _APP_AR
+
+def lang_link(lang, other):
+    """The language button: a link to this page in the other language (`other`); app.js keeps it pointing at the same
+    view with the same filters. Its text is in the language it leads to."""
+    if lang == 'ar':
+        return (f'<a class="btn-ghost" id="lang" href="{E(other)}" hreflang="en" lang="en"><span class="l-long">English</span>'
+                '<span class="l-short" aria-hidden="true">EN</span></a>')
+    return (f'<a class="btn-ghost" id="lang" href="{E(other)}" hreflang="ar" lang="ar"><span class="l-long">العربية</span>'
+            '<span class="l-short" aria-hidden="true">عربي</span></a>')
+
+def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=None, company=None, android=None, lang='en', other=None):
     """Return (index.html text, public catalog dict). Pure: writes nothing. `about` defaults to data/about.json;
     `company`: the company images of news_images.run() (none: every headline gets its topic image);
-    `android`: the checked APK of android_app.load() (none: no download card or footer link)."""
+    `android`: the checked APK of android_app.load() (none: no download card or footer link).
+    `lang`: 'en' for index.html, 'ar' for ar/index.html (lang_pages.py): the same page, served in Arabic (texts as app.js
+    would show them, its own links one folder down); `other`: the link to the other language's copy."""
     c = context(data, feed, sources, uae, about, company, android)
+    ar = lang == 'ar'
+    other = other or ('../index.html' if ar else f'{lang_pages.AR_DIR}/index.html')
+    desc = meta_description(c['about'], lang)
+    title = f'{SITE_NAME} | ' + (app_ar().get(HOME_TITLE, HOME_TITLE) if ar else HOME_TITLE)
+    head_links = (lang_pages.head_links('index.html', lang) + f'<link rel="manifest" href="{seo.MANIFEST}">'
+                  + (feeds.head_links(lang) if sources else ''))
     slim = {'updated_at': models.get('updated_at'), 'models': [{'n': m['name'], 'b': m['params_b'], 'o': m['open'], 's': m['params_source'], 'moe': m.get('moe', False), 'c': m['context'], 'hf': m['hf']} for m in models['models']]}
     # Backend-only fields stay in data/catalog.json (review issue, AI drafts) and are not published.
     public = {k: v for k, v in data.items() if k not in BACKEND_ONLY}
@@ -960,8 +1005,12 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=Non
     text = (ROOT/'web/template.html').read_text(encoding='utf-8')
     replacements = {
         'CSS': (ROOT/'web/style.css').read_text(encoding='utf-8'), 'JS': (ROOT/'web/app.js').read_text(encoding='utf-8'),
-        'META_DESC': html.escape(meta_description(c['about'])), 'FAVICON': favicon, 'LOGO': logo, 'HOME': home_view(c), 'HW_HEAD': hardware_head(c, data),
-        'PRODUCTS': ''.join(product(p) for p in data['products']), 'COUNT': E(cnt(len(data['products']), 'product', 'en')),
+        'LANG': lang, 'DIR': 'rtl' if ar else 'ltr', 'ROOT_ATTR': ' data-root="../"' if ar else '', 'TITLE': html.escape(title),
+        'OG_URL': lang_pages.url(lang_pages.twin('index.html', lang)), 'OG_ALT': html.escape(OG_ALT[lang]),
+        'OG_LOCALE': lang_pages.LOCALE[lang], 'OG_LOCALE_ALT': lang_pages.LOCALE['en' if ar else 'ar'], 'HEAD_LINKS': head_links,
+        'JSON_LD': lang_pages.json_ld(seo.website(lang, desc)), 'LANG_JS': lang_pages.lang_script(lang, other), 'LANG_LINK': lang_link(lang, other),
+        'META_DESC': html.escape(desc), 'FAVICON': favicon, 'LOGO': logo, 'HOME': home_view(c), 'HW_HEAD': hardware_head(c, data),
+        'PRODUCTS': ''.join(product(p) for p in data['products']), 'COUNT': E(cnt(len(data['products']), 'product', lang)),
         'CHANGES': '<ul>' + ''.join(f'<li><b>{ymd(x["at"], "en")}</b> - {E(change_text(x["summary"]))}</li>' for x in data['changes'][:8]) + '</ul>',
         'EDITION': E(data['edition_note']), 'XNAV_HW': xnav(c, ('news', 'uae')), 'NEWS': news_view(c), 'UAE': uae_view(c),
         'CONTACT_HEAD': contact_head(), 'ABOUT': about_section(c), 'XNAV_CONTACT': xnav(c, ('hardware', 'news', 'uae')),
@@ -974,6 +1023,8 @@ def render_page(data, feed, sources, uae, models, brand_dir=BRAND_DIR, about=Non
     assert not missing, f'Unfilled template placeholders: {sorted(missing)}'
     # One pass, so inserted data (headlines, JSON) is never scanned for placeholders.
     text = re.sub(r'__([A-Z][A-Z0-9_]*)__', lambda m: replacements[m.group(1)], text)
+    if ar:
+        text = lang_pages.relocate(lang_pages.translate_overview(text, app_ar()))
     return text, public
 
 def pdf(data):
@@ -1058,7 +1109,10 @@ def main():
     android_app.publish(OUT,android)
     apk_share(OUT,android)  # cipherlacuna.ae/apk: the link to share, which starts the download on Android
     text,public=render_page(data,feed,sources,uae,models,company=company,android=android)
+    page_ar,_=render_page(data,feed,sources,uae,models,company=company,android=android,lang='ar')  # ar/index.html: the same page in Arabic
     (OUT/'index.html').write_text(text,encoding='utf-8',newline='\n')
+    (OUT/lang_pages.AR_DIR).mkdir(exist_ok=True)
+    (OUT/lang_pages.AR_DIR/'index.html').write_text(page_ar,encoding='utf-8',newline='\n')
     (OUT/'catalog.json').write_text(json.dumps(public,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
     if (ROOT/'images').exists():shutil.copytree(ROOT/'images',OUT/'images',dirs_exist_ok=True)
     copy_brand_images(OUT/'brand')
@@ -1066,10 +1120,18 @@ def main():
     qahwa.build_safe(OUT)  # the Qahwa & AI lessons page: bad Qahwa data is logged and left out, never stops the build
     import app_data  # here, not at the top: learn.py loads this module without reportlab, and app_data imports it
     app_data.write(OUT,data,feed,sources,uae,models,company=company)  # dist/app/*.json for the Android app
+    feeds.write(OUT,feed,sources)  # news-en.xml, news-ar.xml, uae-en.xml, uae-ar.xml
     pdf(data)
+    # Last: the sitemap lists the pages now in dist/ (robots.txt, site.webmanifest, favicon.ico and 404.html with it).
+    seo.write(OUT,BRAND_DIR,meta_description(load_about()),brand_uri('logo.svg'),brand_uri('favicon.svg'))
     if args.standalone:
         target=args.standalone.resolve()
         shutil.copyfile(OUT/'index.html',target)
+        # Its Arabic copy beside it in ar/, whose language link goes back to the standalone file's name.
+        (target.parent/lang_pages.AR_DIR).mkdir(exist_ok=True)
+        (target.parent/lang_pages.AR_DIR/'index.html').write_text(render_page(data,feed,sources,uae,models,company=company,android=android,lang='ar',other='../'+target.name)[0],encoding='utf-8',newline='\n')
+        feeds.write(target.parent,feed,sources)
+        seo.assets(target.parent,BRAND_DIR,meta_description(load_about()))
         if (ROOT/'images').exists():shutil.copytree(ROOT/'images',target.parent/'images',dirs_exist_ok=True)
         if (OUT/news_images.OUT_DIR).exists():shutil.copytree(OUT/news_images.OUT_DIR,target.parent/news_images.OUT_DIR,dirs_exist_ok=True)
         news_images.copy_topic_images(target.parent)

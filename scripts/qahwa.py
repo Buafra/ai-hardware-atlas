@@ -1,7 +1,11 @@
 """Qahwa & AI library: validate data/qahwa.json and render the separate static page qahwa.html.
 
-    python scripts/qahwa.py                 # writes dist/qahwa.html (plus its covers, fonts and brand images)
+    python scripts/qahwa.py                 # writes dist/qahwa.html and dist/ar/qahwa.html (plus covers, fonts, brand images)
     python scripts/qahwa.py --out DIR       # another folder
+
+The page is written twice (scripts/lang_pages.py): qahwa.html in English and ar/qahwa.html in Arabic, each with its own
+title, description, canonical address and hreflang pair and a language link between them; the Arabic copy's fixed texts
+come from qahwa.js's own Arabic strings and its links to the covers, fonts and brand images go one folder up.
 
 build_safe(out_dir, home='index.html') is the entry point for scripts/build.py: it never stops the site build. When
 data/qahwa.json has a problem it logs it and leaves out only the posts at fault (or, if the file itself is broken, builds
@@ -40,6 +44,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lang_pages  # noqa: E402  (scripts/lang_pages.py: the English and Arabic copies of the page)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data' / 'qahwa.json'
@@ -343,13 +351,33 @@ def page_posts(doc):
     out.sort(key=lambda q: (q['published_at'], q.get('lesson') or 0), reverse=True)
     return out
 
-HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null,l=null,q=null;try{t=localStorage.getItem('atlas-theme');l=localStorage.getItem('atlas-lang')}catch(e){}"
-               "if(t==='light'||t==='dark')d.dataset.theme=t;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}if(q==='ar'||q==='en')l=q;"
-               "if(l!=='ar'&&l!=='en')l=/^ar\\b/i.test(navigator.language||'')?'ar':'en';"
-               "if(l==='ar'){d.lang='ar';d.dir='rtl'}})(document.documentElement)")
+# Before first paint (after the language rule of lang_pages.lang_script(), which here also reads the browser's language
+# when nothing is saved): the theme.
+HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null;try{t=localStorage.getItem('atlas-theme')}catch(e){}"
+               "if(t==='light'||t==='dark')d.dataset.theme=t})(document.documentElement)")
 DESCRIPTION = ('Every published Qahwa & AI lesson from @qahwa.w.ai, in Arabic and English, with the prompt to copy. '
                'Part of Cipher Lacuna.')
+DESCRIPTION_AR = 'كل دروس قهوة و AI المنشورة على ‎@qahwa.w.ai، بالعربية والإنجليزية، مع الأمر الجاهز للنسخ. جزء من Cipher Lacuna.'
 TITLE = 'Qahwa & AI Lessons · Cipher Lacuna'
+_STRINGS = {}
+
+def strings(lang):
+    """qahwa.js's own strings for a language (its T table): the Arabic copy's first paint uses them."""
+    if lang not in _STRINGS:
+        _STRINGS[lang] = lang_pages.js_strings(_asset('qahwa.js'), f'{lang}: {{', after='const T = {')
+    return _STRINGS[lang]
+
+def json_ld(posts, lang):
+    """ItemList of LearningResource: the published lessons on the page, in the page's language, each at its deep link and
+    with its Instagram post."""
+    page = lang_pages.url(lang_pages.twin(PAGE, lang))
+    lessons = [p for p in posts if p['kind'] == 'lesson']
+    items = [{'@type': 'ListItem', 'position': n, 'item': {
+        '@type': 'LearningResource', 'name': plain(p['title'][lang]), 'description': plain(p['summary'][lang]),
+        'url': f'{page}#{slug(p)}', 'sameAs': p['permalink'], 'datePublished': p['published_at'], 'inLanguage': ['ar', 'en'],
+        'learningResourceType': 'lesson', 'isAccessibleForFree': True}} for n, p in enumerate(lessons, 1)]
+    return {'@context': 'https://schema.org', '@type': 'ItemList', 'name': strings(lang).get('title', TITLE), 'url': page,
+            'numberOfItems': len(items), 'itemListElement': items}
 IG_SVG = ('<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/>'
           '<circle cx="17.3" cy="6.7" r="1.1" class="fill"/></svg>')
 
@@ -361,35 +389,49 @@ def _noscript(posts):
         f'<span class="ar" lang="ar" dir="rtl">{esc(plain(p["title"]["ar"]))}</span></li>' for p in posts)
     return f'<noscript><ul class="nojs">{items}</ul></noscript>'
 
-def render(doc, concepts=None, home='index.html'):
+def render(doc, concepts=None, home='index.html', lang='en', other=None):
     """Return the qahwa.html text for a validated document. Pure: writes nothing.
-    concepts: {id: {'en','ar'}} titles for the related Learn AI guides; `home` is the overview page beside it."""
+    concepts: {id: {'en','ar'}} titles for the related Learn AI guides; `home` is the overview page beside it.
+    lang: 'en' for qahwa.html, 'ar' for ar/qahwa.html (scripts/lang_pages.py): the same page served in Arabic (its fixed
+    texts from qahwa.js's own Arabic strings, its links to the site's files one folder up); `other`: the link to the
+    other language's copy."""
+    ar = lang == 'ar'
+    other = other or ('../' + PAGE if ar else f'{lang_pages.AR_DIR}/{PAGE}')
     concepts = concepts or {}
     posts = page_posts(doc)
     used = sorted({c for p in posts for c in p['related_concepts'] if c in concepts})
-    data = {'home': home, 'learn': LEARN_PAGE, 'concepts': {c: concepts[c] for c in used}, 'posts': posts}
+    # root: the Arabic copy's prefix for the site's files that qahwa.js names (brand images, covers).
+    data = {'home': home, 'learn': LEARN_PAGE, 'root': '../' if ar else '', 'concepts': {c: concepts[c] for c in used}, 'posts': posts}
     h = esc(home)
     logo = logo_uri()
     cl_img = f'<img src="{logo}" alt="" width="22" height="22">' if logo else ''
     cl_img20 = f'<img src="{logo}" alt="" width="20" height="20">' if logo else ''
     early_hidden = ' hidden' if posts else ''
-    head = (f'<!doctype html>\n<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
-            f'<meta name="color-scheme" content="light dark"><title>{esc(TITLE)}</title><meta name="description" content="{esc(DESCRIPTION)}">'
+    title = strings('ar').get('title', TITLE) if ar else TITLE
+    desc = DESCRIPTION_AR if ar else DESCRIPTION
+    page_url = lang_pages.url(lang_pages.twin(PAGE, lang))
+    locale, locale_alt = lang_pages.LOCALE[lang], lang_pages.LOCALE['en' if ar else 'ar']
+    head = (f'<!doctype html>\n<html lang="{lang}" dir="{"rtl" if ar else "ltr"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<meta name="color-scheme" content="light dark"><title>{esc(title)}</title><meta name="description" content="{esc(desc)}">'
             f'<meta name="author" content="Cipher Lacuna">'
             f'<meta name="theme-color" content="#FEFBF7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1C1413" media="(prefers-color-scheme: dark)">'
-            f'<link rel="icon" type="image/webp" href="brand/qahwa/bot-badge.webp"><link rel="canonical" href="{SITE_URL}{PAGE}">\n'
-            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Cipher Lacuna"><meta property="og:title" content="{esc(TITLE)}">'
-            f'<meta property="og:description" content="{esc(DESCRIPTION)}"><meta property="og:url" content="{SITE_URL}{PAGE}">'
-            f'<meta property="og:image" content="{SITE_URL}brand/og.png"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ar_AE">'
-            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(TITLE)}"><meta name="twitter:description" content="{esc(DESCRIPTION)}">\n'
-            f'<script>{HEAD_SCRIPT}</script>\n<style>{_asset("qahwa.css")}</style></head>\n')
+            f'<link rel="icon" type="image/webp" href="brand/qahwa/bot-badge.webp">{lang_pages.head_links(PAGE, lang)}\n'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Cipher Lacuna"><meta property="og:title" content="{esc(title)}">'
+            f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{page_url}">'
+            f'<meta property="og:image" content="{SITE_URL}brand/og.png"><meta property="og:locale" content="{locale}"><meta property="og:locale:alternate" content="{locale_alt}">'
+            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">\n'
+            f'<script>{lang_pages.lang_script(lang, other, navigator=True)}{HEAD_SCRIPT}</script>\n<style>{_asset("qahwa.css")}</style>'
+            f'{lang_pages.json_ld(json_ld(posts, lang))}</head>\n')
+    # The language button: a link to this page in the other language (qahwa.js adds the open lesson's #fragment).
+    lang_link = (f'<a class="icon-btn lang-btn" id="langBtn" href="{esc(other)}" hreflang="en" lang="en" aria-label="Read in English">English</a>' if ar else
+                 f'<a class="icon-btn lang-btn" id="langBtn" href="{esc(other)}" hreflang="ar" lang="ar" aria-label="اقرأ بالعربية">العربية</a>')
     body = f'''<body>
 <a class="skip" href="#library" data-i18n="skip">Skip to the lessons</a>
 <div class="sitebar">
   <div class="wrap sitebar-in">
     <a class="cl" data-home href="{h}">{cl_img}<span data-i18n-html="partOf">Part of <b>Cipher Lacuna</b></span></a>
     <div class="bar-tools js-only">
-      <button class="icon-btn lang-btn" id="langBtn" type="button" lang="ar">العربية</button>
+      {lang_link}
       <button class="icon-btn" id="themeBtn" type="button" aria-pressed="false">
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
@@ -468,7 +510,10 @@ def render(doc, concepts=None, home='index.html'):
 <script>{_asset("qahwa.js")}</script>
 </body></html>
 '''
-    return head + body
+    if not ar:
+        return head + body
+    # Arabic first paint: the fixed texts from qahwa.js's own Arabic strings, the site's files one folder up.
+    return lang_pages.relocate(lang_pages.translate_keys(head + body, strings('ar')))
 
 # ---------- build ----------
 
@@ -492,8 +537,11 @@ def build(out_dir=OUT, home='index.html', data_path=DATA, images_dir=IMAGES, con
     concepts = load_concepts(concepts_path)
     validate(doc, images_dir, set(concepts) if concepts else None, warnings=warnings)
     page = render(doc, concepts, home=home)
+    # The Arabic copy (ar/qahwa.html) links to the Arabic overview beside it and reuses the covers, brand images and
+    # fonts above it.
+    page_ar = render(doc, concepts, home='index.html', lang='ar')
     out_dir = Path(out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / lang_pages.AR_DIR).mkdir(parents=True, exist_ok=True)
     covers = out_dir / 'images' / 'qahwa'
     covers.mkdir(parents=True, exist_ok=True)
     wanted = {f'{p["id"]}.webp' for p in doc.get('posts') or [] if p.get('cover')}
@@ -506,6 +554,7 @@ def build(out_dir=OUT, home='index.html', data_path=DATA, images_dir=IMAGES, con
     _copy_tree(FONTS, out_dir / 'fonts' / 'qahwa', ('*.woff2', 'OFL.txt'))
     target = out_dir / PAGE
     target.write_text(page, encoding='utf-8', newline='\n')
+    (out_dir / lang_pages.twin(PAGE, 'ar')).write_text(page_ar, encoding='utf-8', newline='\n')
     return target
 
 def page_doc(data_path=DATA, images_dir=IMAGES, concepts_path=CONCEPTS, warnings=None):
