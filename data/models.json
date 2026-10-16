@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-16T08:13:53+00:00",
+ "updated_at": "2026-10-16T18:53:27+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1310,6 +1310,17 @@
    "params_b": 180.0,
    "params_source": "huggingface",
    "moe": false
+  },
+  {
+   "id": "reflection/beam-1.0-501b-a23b",
+   "name": "Reflection: Beam 1.0 501B A23B",
+   "hf": "reflection/Beam-1.0-501B-A23B",
+   "context": 1048576,
+   "created": 1792160499,
+   "open": true,
+   "params_b": 501.27,
+   "params_source": "huggingface",
+   "moe": true
   },
   {
    "id": "rekaai/reka-edge",
