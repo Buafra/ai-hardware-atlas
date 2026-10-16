@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-16T08:21:00+04:00",
+  "generated_at": "2026-10-16T08:25:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3679,6 +3679,10 @@
           },
           "en": {
             "title": "Save this before ==your next report=="
+          },
+          "next": {
+            "ar": "الدرس 13: ذاكر مع المساعد الذكي",
+            "en": "Lesson 13: Study with an AI assistant"
           }
         }
       ],
@@ -3764,6 +3768,139 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-16T08:21:00+04:00",
       "cover": "images/qahwa/week-03-day-16--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-17--1-learn-lesson-13",
+      "kind": "lesson",
+      "lesson": 13,
+      "code": "L13",
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "Study with an AI assistant",
+        "ar": "ذاكر مع المساعد الذكي"
+      },
+      "summary": {
+        "en": "Tell it who you are and what your level is: a high-school student, a beginner, or a specialist. One line can change the explanation a lot.",
+        "ar": "قل له من أنت وما مستواك: طالب في الثانوية، أو مبتدئ، أو متخصص. الشرح يتغيّر كثيراً بتغيّر هذه الجملة وحدها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ذاكر مع ==المساعد الذكي==",
+            "body": "اشرح لي بمستواي، واختبرني، ورتّب لي خطة مراجعة."
+          },
+          "en": {
+            "title": "Study with ==an AI assistant==",
+            "body": "Explain it at my level, quiz me, and plan my revision."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "==اشرح لي== بمستواي",
+            "body": "قل له من أنت وما مستواك: طالب في الثانوية، أو مبتدئ، أو متخصص. الشرح يتغيّر كثيراً بتغيّر هذه الجملة وحدها."
+          },
+          "en": {
+            "title": "==Explain it== at my level",
+            "body": "Tell it who you are and what your level is: a high-school student, a beginner, or a specialist. One line can change the explanation a lot."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ثلاث طرق للمذاكرة",
+            "items": [
+              "اشرح الفكرة بمثال من حياتي",
+              "اختبرني بعشرة أسئلة ثم صحّح لي",
+              "اشرح لي خطئي، لا الجواب فقط"
+            ]
+          },
+          "en": {
+            "title": "Three ways to study",
+            "items": [
+              "Explain the idea with an example from my life",
+              "Quiz me with ten questions, then mark them",
+              "Explain my mistake, not just the answer"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "خطة مراجعة عملية",
+            "items": [
+              "قسّم المادة على الأيام المتبقية",
+              "راجع القديم قبل الجديد كل يوم",
+              "اختبر نفسك بدل إعادة القراءة"
+            ]
+          },
+          "en": {
+            "title": "A practical revision plan",
+            "items": [
+              "Split the material across the days you have",
+              "Review the old before the new each day",
+              "Test yourself instead of rereading"
+            ]
+          },
+          "note": {
+            "ar": "قد يخطئ في التصحيح: راجع كتابك.",
+            "en": "It can mark a right answer wrong: check the book."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "القهوة ==على ذوقك أنت==",
+            "body": "تطلبها بالحليب أو سادة أو خفيفة. والشرح كذلك: اطلبه بالمستوى الذي يناسبك، لا بمستوى غيرك."
+          },
+          "en": {
+            "title": "Coffee ==made to your taste==",
+            "body": "You order it with milk, black or light. Explanations are the same: ask for the level that suits you, not someone else."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أنا [مستواي] وأذاكر [الموضوع]. اشرح ببساطة ومثال، ثم اختبرني سؤالاً واحداً وانتظر إجابتي ثم صحّحها. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "I'm [my level] studying [the topic]. Explain simply with an example. Then quiz me one at a time: wait for my answer, then correct it. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "إذا فهمت الشرح فقد حفظت المادة.",
+            "fact": "الفهم شيء والاسترجاع شيء آخر. اختبر نفسك من دون مساعدة، فالمعلومة تثبت حين تستخرجها من ذاكرتك."
+          },
+          "en": {
+            "myth": "If the explanation made sense, you've learned it.",
+            "fact": "Understanding and recall are two different things. Test yourself without help: you remember what you pull out of your own memory."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==اختبارك القادم=="
+          },
+          "en": {
+            "title": "Save this before ==your next exam=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I'm [my level] studying [the topic]. Explain simply with an example. Then quiz me one at a time: wait for my answer, then correct it. Answer in my language.",
+        "ar": "أنا [مستواي] وأذاكر [الموضوع]. اشرح ببساطة ومثال، ثم اختبرني سؤالاً واحداً وانتظر إجابتي ثم صحّحها. أجب بلغتي.",
+        "code": "L13"
+      },
+      "permalink": "https://www.instagram.com/p/Deiq1vajfNU/",
+      "published_at": "2026-10-16T08:25:00+04:00",
+      "cover": "images/qahwa/week-03-day-17--1-learn-lesson-13.webp",
       "related_concepts": []
     }
   ]
