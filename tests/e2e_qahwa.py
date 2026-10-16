@@ -17,8 +17,10 @@ links (#lesson-NN, #post-<id>), stories linking to the Instagram profile (their 
 atlas-lang / atlas-theme keys), links back to the site in the page language. Also: a synthetic page with 120 posts
 (Show more, week filter, lesson-number search), the early state with no posts, and the page without JavaScript.
 The synthetic and empty pages are built into a temporary folder and served under the same origin by request routing.
-Arriving from the rest of the site: a Learn AI lesson chip's link (qahwa.html#lesson-NN, with ?lang=ar in Arabic) opens
-that lesson in the page language without saving one, the round trip learn.html -> qahwa.html -> learn.html keeps Arabic,
+The page is in English at qahwa.html and in Arabic at ar/qahwa.html (scripts/lang_pages.py): the language button links
+the two, and ?lang= or the saved language sends a visit to the right one.
+Arriving from the rest of the site: a Learn AI lesson chip's link (qahwa.html#lesson-NN; a legacy ?lang=ar opens the Arabic
+copy) opens that lesson in the page language without saving one, the round trip learn.html -> qahwa.html -> learn.html keeps Arabic,
 an English visit (?lang=en) while Arabic is the saved choice links back to the overview and Learn AI with ?lang=en,
 and the footer stays tidy (every link on one line, no overflow) from 320 to 1920 px.
 """
@@ -103,7 +105,7 @@ def serve_dir(page, prefix, folder):
 
 def _fixture_url(url):
     u = urlparse(url)
-    return f'{u.scheme}://{u.netloc}' == ORIGIN and (u.path == '/qahwa.html' or u.path.startswith(FIXTURE_PREFIXES))
+    return f'{u.scheme}://{u.netloc}' == ORIGIN and (u.path in ('/qahwa.html', '/ar/qahwa.html') or u.path.startswith(FIXTURE_PREFIXES))
 
 def _fixture(route):
     f = Path(FIXTURE) / urlparse(route.request.url).path.lstrip('/')
@@ -149,9 +151,10 @@ def main_flow(browser, lang, width, scheme):
     check(page.evaluate("document.activeElement.classList.contains('skip') && document.activeElement.getBoundingClientRect().top >= 0"), f'{tag} skip link is not the first, visible Tab stop')
     # Hub links
     check(page.get_attribute('#followBtn', 'href') == PROFILE, f'{tag} follow button link')
-    home = 'index.html?lang=ar' if rtl else 'index.html'
-    check(page.get_attribute('.cl', 'href') == home, f'{tag} Part of Cipher Lacuna links to {page.get_attribute(".cl", "href")!r}')
-    check(page.get_attribute('[data-learn]', 'href') == ('learn.html?lang=ar' if rtl else 'learn.html'), f'{tag} Learn AI link')
+    # Plain links: from ar/qahwa.html they lead to ar/index.html and ar/learn.html.
+    check(page.url.split('#')[0].endswith('/ar/qahwa.html' if rtl else '/qahwa.html') and ('/ar/' in page.url) == rtl, f'{tag} address {page.url}')
+    check(page.get_attribute('.cl', 'href') == 'index.html', f'{tag} Part of Cipher Lacuna links to {page.get_attribute(".cl", "href")!r}')
+    check(page.get_attribute('[data-learn]', 'href') == 'learn.html', f'{tag} Learn AI link')
     # Tabs and counts
     counts = page.evaluate("[...document.querySelectorAll('#tabs .tab')].map(b => [b.dataset.tab, +b.querySelector('.n').textContent])")
     check(counts == [['lessons', N_LESSONS], ['more', N_MORE], ['prompts', N_PROMPTS]], f'{tag} tab counts {counts}')
@@ -227,10 +230,12 @@ def main_flow(browser, lang, width, scheme):
     check(page.evaluate('location.hash') == '', f'{tag} hash left after closing: {page.evaluate("location.hash")}')
     check(page.evaluate("document.activeElement && document.activeElement.classList.contains('primary')"), f'{tag} focus did not return to the opener')
     # Language and theme buttons (the site's keys).
-    page.click('#langBtn')
+    # The language button opens the other copy of the page and saves the choice; and back.
+    page.click('#langBtn'); page.wait_for_load_state('load'); page.wait_for_timeout(150)
     other = 'en' if rtl else 'ar'
-    check(page.evaluate('[document.documentElement.lang, localStorage.getItem("atlas-lang")]') == [other, other], f'{tag} language button')
-    page.click('#langBtn')
+    check(page.evaluate('[document.documentElement.lang, localStorage.getItem("atlas-lang")]') == [other, other] and ('/ar/' in page.url) == (other == 'ar'), f'{tag} language button {page.url}')
+    page.click('#langBtn'); page.wait_for_load_state('load'); page.wait_for_timeout(150)
+    check(page.evaluate('document.documentElement.lang') == lang, f'{tag} language button back')
     page.click('#themeBtn')
     flipped = 'light' if scheme == 'dark' else 'dark'
     check(page.evaluate('[document.documentElement.dataset.theme, localStorage.getItem("atlas-theme")]') == [flipped, flipped], f'{tag} theme button')
@@ -294,7 +299,7 @@ def many_flow(browser, folder, width):
     check(page.evaluate("document.getElementById('detail').open"), f'{tag} deep link #lesson-100')
     check(page.locator('#detail .guide').count() >= 1, f'{tag} related guide missing for lesson 100')
     href = page.get_attribute('#detail .guide', 'href') if page.locator('#detail .guide').count() else ''
-    check(href == 'learn.html?lang=ar#concept/tokens', f'{tag} guide link {href!r}')
+    check(href == 'learn.html#concept/tokens' and '/__many/ar/qahwa.html' in page.url, f'{tag} guide link {href!r} on {page.url}')
     check(not errors, f'{tag} console errors: {errors}')
     check(not foreign, f'{tag} requests to other hosts: {foreign[:5]}')
     ctx.close()
@@ -354,7 +359,7 @@ def site_links_flow(browser):
             page.wait_for_load_state('load')
             check(page.evaluate('document.documentElement.lang') == lang, f'{tag} Learn AI opened in {page.evaluate("document.documentElement.lang")}')
             href = page.get_attribute('a.l-qahwa', 'href')
-            check(href == 'qahwa.html' + q, f'{tag} Learn AI card links to {href!r}')
+            check(href == 'qahwa.html' and ('/ar/learn.html' in page.url) == (lang == 'ar'), f'{tag} Learn AI card links to {href!r} on {page.url}')
             page.click('a.l-qahwa')
             page.wait_for_url(lambda u: '/qahwa.html' in u)
             page.wait_for_load_state('load')
@@ -385,8 +390,8 @@ def site_links_flow(browser):
         page.goto(URL + '?lang=en')
         page.wait_for_load_state('networkidle')
     # After the language button the choice is saved, so no parameter is needed.
-    page.click('#langBtn')
-    page.click('#langBtn')
+    page.click('#langBtn'); page.wait_for_url('**/ar/qahwa.html'); page.wait_for_load_state('load')
+    page.click('#langBtn'); page.wait_for_url(lambda u: '/ar/' not in u); page.wait_for_load_state('networkidle')
     homes = page.evaluate("[...document.querySelectorAll('[data-home]')].map(a => a.getAttribute('href'))")
     check(page.evaluate("localStorage.getItem('atlas-lang')") == 'en' and all(h == 'index.html' for h in homes), f'{tag} after the language button {homes}')
     check(not errors and not foreign, f'{tag} errors {errors[:3]} foreign {foreign[:3]}')

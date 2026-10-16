@@ -250,6 +250,7 @@
     'Launch price':'سعر الإطلاق','Availability date':'تاريخ التوفر','Announcement date':'تاريخ الإعلان','Power rating':'استهلاك الطاقة',
     'Ascending ↑':'تصاعدي ↑','Descending ↓':'تنازلي ↓','Reset':'إعادة ضبط','Cards':'بطاقات','Table':'جدول','Timeline':'خط زمني','View':'العرض',
     '{n} of {m}':'{n} من أصل {m}','No matches. Try another search or reset the filters.':'لا توجد نتائج. جرّب بحثاً آخر أو أعد ضبط الفلاتر.',
+    'All products are visible. Enable JavaScript to search, sort, compare and export CSV.':'كل المنتجات ظاهرة. فعّل JavaScript للبحث والترتيب والمقارنة وتصدير CSV.',
     // AI models named in the hardware search
     'AI models ({n})':'نماذج الذكاء الاصطناعي ({n})','The atlas lists hardware. Pick a model to see which hardware can run it.':'الأطلس يعرض العتاد. اختر نموذجاً لترى العتاد القادر على تشغيله.',
     'Show all {n} models':'عرض كل النماذج ({n})','Show fewer':'عرض أقل','Show models':'عرض النماذج','Hide models':'إخفاء النماذج',
@@ -331,7 +332,16 @@
   const cards = new Map([...document.querySelectorAll('[data-product]')].map(el => [el.dataset.product, el]));
   const store = {get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
   const state = decodeState(location.search);
-  if (!new URLSearchParams(location.search).has('lang') && store.get('atlas-lang') === 'ar') state.lang = 'ar';
+  // The page's own language: index.html is English, ar/index.html Arabic (scripts/lang_pages.py). The head script has
+  // already sent a ?lang= of the other language, or Arabic saved on the English page, to the other page.
+  const PAGE_LANG = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+  state.lang = PAGE_LANG;
+  // The Arabic page sits one folder down and reuses the site's files: their paths in the data get this prefix.
+  const ROOT = document.documentElement.getAttribute('data-root') || '';
+  // The language link (#lang) leads to the other language's copy of this page (ar/index.html, or ../index.html from it);
+  // over http(s) without the final index.html, so the address is /ar/ or /.
+  const langLink = $('lang'), langHref = langLink.getAttribute('href') || '';
+  const langBase = location.protocol === 'file:' ? langHref : langHref.replace(/(^|\/)index\.html$/, '$1');
   state.cmp = state.cmp.filter(id => byId.has(id));
   let visible = data.products, theme = store.get('atlas-theme') || 'auto', currentView = 'home', lastHref = '', routeSeq = 0;
   // Until the load event the address is left exactly as opened (see syncUrl).
@@ -455,9 +465,10 @@
     document.documentElement.classList.remove('i18n-wait');
   }
   function learnLinks() {
-    // learn.html and qahwa.html are separate pages that take their language from ?lang= or the saved choice. A ?lang=ar
-    // visit (every Arabic link copied from this page has one) saves nothing, so the links to them carry the language shown here.
-    const want = state.lang === 'ar' ? 'ar' : store.get('atlas-lang') === 'ar' ? 'en' : '';
+    // learn.html and qahwa.html are separate pages, each in English and in Arabic (ar/learn.html beside ar/index.html), so
+    // their links already lead to this page's language. Only an English visit while Arabic is the saved choice (opened
+    // with ?lang=en, which saves nothing) says so, or those pages would go to their Arabic copies.
+    const want = PAGE_LANG === 'en' && store.get('atlas-lang') === 'ar' ? 'en' : '';
     document.querySelectorAll('a[href^="learn.html"], a[href^="qahwa.html"]').forEach(a => {
       if (a.dataset.baseHref == null) a.dataset.baseHref = a.getAttribute('href');
       const h = a.dataset.baseHref, i = h.indexOf('#'), path = i < 0 ? h : h.slice(0, i), frag = i < 0 ? '' : h.slice(i);
@@ -481,12 +492,15 @@
     // browser's Tab starting point into the page. Before the load event nothing is rewritten, because the browser scrolls
     // to the element named by the hash at load: shortening #hardware/p/<id> to #hardware earlier sends it to the top.
     if (booted) {
-      const hash = !location.hash && impliedView(encodeState(state)) === currentView ? '' : currentView;
-      try { history.replaceState(null, '', pageUrl(location.pathname, encodeState(state), hash)); } catch (e) {}
+      const hash = !location.hash && impliedView(urlQuery()) === currentView ? '' : currentView;
+      try { history.replaceState(null, '', pageUrl(location.pathname, urlQuery(), hash)); } catch (e) {}
     }
+    langLink.setAttribute('href', pageUrl(langBase, urlQuery(), currentView));
     lastHref = location.href;
   }
-  function shareUrl() { return pageUrl(location.href.split(/[?#]/)[0], encodeState(state), currentView); }
+  // The address says the language by its path (/ or /ar/), so the query string never repeats it.
+  function urlQuery() { return encodeState({...state, lang: DEFAULTS.lang}); }
+  function shareUrl() { return pageUrl(location.href.split(/[?#]/)[0], urlQuery(), currentView); }
 
   function render() {
     const n = need();
@@ -733,7 +747,7 @@
       ['Best fit', p => esc(state.lang === 'ar' && p.use_ar ? p.use_ar : p.use)],
       ['Official source', p => p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" lang="en">${esc(s.label)}</a>`).join('<br>')]
     ];
-    $('compare-body').innerHTML = `<div class="tablewrap" tabindex="0" role="region" aria-label="${esc(T('Side-by-side comparison'))}"><table class="cmp-table"><thead><tr><th scope="col"><span class="sr-only">${esc(T('Specification'))}</span></th>${ps.map(p => `<th scope="col" class="${p.vendor.toLowerCase()}">${p.image && p.image.file ? `<img src="${esc(p.image.file)}" alt="" loading="lazy">` : ''}<span lang="en">${esc(p.model)}</span></th>`).join('')}</tr></thead>
+    $('compare-body').innerHTML = `<div class="tablewrap" tabindex="0" role="region" aria-label="${esc(T('Side-by-side comparison'))}"><table class="cmp-table"><thead><tr><th scope="col"><span class="sr-only">${esc(T('Specification'))}</span></th>${ps.map(p => `<th scope="col" class="${p.vendor.toLowerCase()}">${p.image && p.image.file ? `<img src="${esc(ROOT + p.image.file)}" alt="" loading="lazy">` : ''}<span lang="en">${esc(p.model)}</span></th>`).join('')}</tr></thead>
       <tbody>${rows.map(([l, f]) => `<tr><th scope="row">${esc(T(l))}</th>${ps.map(p => `<td>${f(p)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
       <p class="tl-note">${esc(T(sameScope ? 'Highlighted: highest value among products with the same memory scope.' : 'Memory scopes differ, so totals are not directly comparable.'))}</p>`;
     const dlg = $('compare-dlg');
@@ -895,7 +909,9 @@
   $('compare-open').addEventListener('click', openCompare);
   $('compare-clear').addEventListener('click', () => { state.cmp = []; render(); });
   $('compare-close').addEventListener('click', closeCompare);
-  $('lang').addEventListener('click', () => { state.lang = state.lang === 'ar' ? 'en' : 'ar'; store.set('atlas-lang', state.lang); applyLang(); fillModelList(); render(); });
+  // The language link opens the same view with the same filters on the other language's page (syncUrl keeps its href);
+  // the choice is saved, so the English page sends a later visit to the Arabic one and back.
+  langLink.addEventListener('click', () => store.set('atlas-lang', PAGE_LANG === 'ar' ? 'en' : 'ar'));
   $('theme').addEventListener('click', () => { theme = {auto:'light', light:'dark', dark:'auto'}[theme]; store.set('atlas-theme', theme); applyTheme(); });
   $('share').addEventListener('click', async () => {
     // The shared link always names the view, even when the address bar has no hash.

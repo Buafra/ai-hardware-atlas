@@ -1,13 +1,15 @@
 """Learn AI: validate data/learn/*.json and render the separate static page learn.html.
 
-    python scripts/learn.py                      # writes dist/learn.html (and the brand PNGs beside it)
+    python scripts/learn.py                      # writes dist/learn.html and dist/ar/learn.html (and the brand PNGs)
     python scripts/learn.py --out DIR --home X   # another folder; links back to the overview go to X
 
 build(out_dir, home='index.html') is the entry point for scripts/build.py. The page shares the site's look: it inlines
 web/style.css (header, footer, tokens) plus web/learn.css and web/learn.js, and reuses build.py's brand files and icons.
 Every concept and stack is rendered in the HTML in both languages (CSS shows the one matching <html lang>), so the page
-reads completely without JavaScript; learn.js adds the tabs, topic filter, search, deep links and the language and theme
-buttons (same localStorage keys as the overview: atlas-lang, atlas-theme).
+reads completely without JavaScript; learn.js adds the tabs, topic filter, search, deep links and the theme button
+(same localStorage key as the overview, atlas-theme). The page is written twice (scripts/lang_pages.py): learn.html in
+English and ar/learn.html in Arabic, each with its own title, description, canonical address and hreflang pair, and a
+language link between them; the language rule in the head (atlas-lang, ?lang=) is the overview's.
 
 Qahwa & AI lessons (qahwa.html, scripts/qahwa.py): a card near the top and a footer link open that page, and a concept's
 lesson chips show only the lessons already published there (qahwa.page_doc()), each linking to qahwa.html#lesson-NN. A
@@ -173,8 +175,10 @@ def _arabic_prose(x, keys, where, errs):
 # neutrally or drop the country name.
 if str(ROOT / 'scripts') not in sys.path:
     sys.path.insert(0, str(ROOT / 'scripts'))
+import lang_pages  # noqa: E402  (scripts/lang_pages.py: the English and Arabic copies of the page)
 import policy  # noqa: E402  (scripts/policy.py: the region detection and normalisation the news check uses)
 import qahwa  # noqa: E402  (scripts/qahwa.py: which Qahwa & AI lessons are published, and their deep links)
+import seo  # noqa: E402  (scripts/seo.py: the web app manifest's name)
 
 _AR = 'ء-ي'  # Arabic letters (without diacritics)
 
@@ -897,10 +901,46 @@ def stacks_panel(stacks, concepts, home):
 
 TITLE = {'en': 'Learn AI · Cipher Lacuna', 'ar': 'تعلّم الذكاء الاصطناعي · Cipher Lacuna'}
 TAGLINE = ('Decoding the gaps in AI knowledge', 'كشف المجهول في عالم الذكاء الاصطناعي')
-# Before first paint: theme, language (same keys and ?lang= rule as the overview) and the open tab, so nothing flashes.
-HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null,l=null,q=null;try{t=localStorage.getItem('atlas-theme');l=localStorage.getItem('atlas-lang')}catch(e){}"
-               "if(t==='light'||t==='dark')d.dataset.theme=t;try{q=new URLSearchParams(location.search).get('lang')}catch(e){}if(q)l=q;"
-               "if(l==='ar'){d.lang='ar';d.dir='rtl'}d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':/^#report/.test(location.hash)?'reports':'concepts'})(document.documentElement)")
+OG_ALT = {'en': 'Cipher Lacuna cube logo with the tagline Decoding the gaps in AI knowledge, in English and Arabic',
+          'ar': 'شعار Cipher Lacuna (المكعب) مع عبارة «كشف المجهول في عالم الذكاء الاصطناعي» بالعربية والإنجليزية'}
+# Before first paint (after the language rule of lang_pages.lang_script()): theme and the open tab, so nothing flashes.
+HEAD_SCRIPT = ("(function(d){d.classList.add('js');var t=null;try{t=localStorage.getItem('atlas-theme')}catch(e){}"
+               "if(t==='light'||t==='dark')d.dataset.theme=t;"
+               "d.dataset.ltab=/^#(stack|group[/](core|foundation)$)/.test(location.hash)?'stacks':/^#report/.test(location.hash)?'reports':'concepts'})(document.documentElement)")
+DESC_MAX = 160  # search engines show about 155 characters
+
+def description(n_concepts, n_stacks, n_reports, lang='en'):
+    """The page's meta, og: and twitter: description (about 155 characters), counts from the data."""
+    if lang == 'ar':
+        return (f'تعلّم الذكاء الاصطناعي بلغة واضحة: {cnt(n_concepts, "concept", "ar")} و{cnt(n_stacks, "stack", "ar")} بخيارات محلية '
+                f'وسحابية ومستضافة في الإمارات، و{cnt(n_reports, "report", "ar")} بملخّصات من إعدادنا، بالعربية والإنجليزية.')
+    return (f'Learn AI in plain language: {cnt(n_concepts, "concept", "en")}, {cnt(n_stacks, "stack", "en")} with local, cloud '
+            f'and UAE-hosted options, and {cnt(n_reports, "report", "en")} summarised, in English and Arabic.')
+
+def json_ld(concepts, stacks, lang):
+    """ItemList of LearningResource: every concept and AI stack on the page, in the page's language, each at its deep link."""
+    page = lang_pages.url(lang_pages.twin(PAGE, lang))
+    def item(x, kind):
+        return {'@type': 'LearningResource', 'name': x[f'title_{lang}'], 'description': x[f'summary_{lang}'],
+                'url': f'{page}#{kind}/{x["id"]}', 'inLanguage': lang, 'learningResourceType': 'concept' if kind == 'concept' else 'guide',
+                'isAccessibleForFree': True}
+    things = [item(x, 'concept') for x in concepts] + [item(x, 'stack') for x in stacks]
+    return {'@context': 'https://schema.org', '@type': 'ItemList', 'name': TITLE[lang], 'url': page, 'numberOfItems': len(things),
+            'itemListElement': [{'@type': 'ListItem', 'position': n, 'item': x} for n, x in enumerate(things, 1)]}
+
+def _arabic_attributes(page):
+    """The Arabic copy's labels and placeholder in its HTML (learn.js would set them): aria-label from data-aria-ar and
+    placeholder from data-ph-ar, the English kept in data-aria-en / data-ph-en for learn.js."""
+    def tag(m):
+        t = m.group(0)
+        for src, target, keep in (('data-aria-ar', 'aria-label', 'data-aria-en'), ('data-ph-ar', 'placeholder', 'data-ph-en')):
+            ar = lang_pages._attr(t, src)
+            if ar is None:
+                continue
+            en = lang_pages._attr(t, target) or ''
+            t = lang_pages._set_attr(lang_pages._set_attr(t, keep, en), target, ar)
+        return t
+    return lang_pages._segments(page, lambda seg: lang_pages.START_TAG.sub(tag, seg))
 
 QAHWA_PAGE = qahwa.PAGE
 
@@ -913,11 +953,16 @@ def lessons_doc_safe():
         print(f'learn: Qahwa & AI data unreadable, no lesson chips ({type(e).__name__}: {e})', file=sys.stderr)
         return qahwa.empty_doc()
 
-def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None, android=False):
+def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=None, lessons_doc=None, reports_doc=None, android=False,
+           lang='en', other=None):
     """Return the learn.html text. Pure: writes nothing. `home` is the overview page the links go back to.
     android: the site serves the Android app (a footer link to its card in the overview's About section).
     lessons_doc: the published Qahwa & AI posts (qahwa.page_doc()); None means none are published (no lesson chips).
-    reports_doc: the Reports tab's data (default: data/learn/reports.json), shown newest first."""
+    reports_doc: the Reports tab's data (default: data/learn/reports.json), shown newest first.
+    lang: 'en' for learn.html, 'ar' for ar/learn.html (lang_pages.py): the same page served in Arabic, its links to the
+    site's files one folder up; `other`: the link to the other language's copy (default: the twin beside the overview)."""
+    ar = lang == 'ar'
+    other = other or ('../' + PAGE if ar else f'{lang_pages.AR_DIR}/{PAGE}')
     lessons_doc = lessons_doc if lessons_doc is not None else qahwa.empty_doc()
     reports = sorted_reports(load_reports() if reports_doc is None else reports_doc)
     n_r = len(reports)
@@ -937,26 +982,32 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
     follow = (f'<a class="ig follow-btn" href="{esc(instagram)}" {OUT_LINK}>{icon("ig")}{L("Follow Qahwa &amp; AI", f"تابع {QAHWA_AR}")} '
               '<bdi class="handle" lang="en">@qahwa.w.ai</bdi></a>')
     learn_name = L('Learn AI', 'تعلّم الذكاء الاصطناعي')
-    desc = (f'Learn AI with Cipher Lacuna: {n_c} key AI concepts in plain language with best practices, and {n_core} recommended AI stacks '
-            f'with local, cloud and UAE-hosted options, plus {cnt(n_found, "foundation", "en")} that apply to every stack, and '
-            f'{cnt(n_r, "report", "en")} on AI from consultancies and research bodies summarised in our own words, in English and Arabic.')
-    og_alt = 'Cipher Lacuna cube logo with the tagline Decoding the gaps in AI knowledge, in English and Arabic'
-    head = (f'<!doctype html>\n<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7"><title>{esc(TITLE["en"])}</title>'
+    desc = description(n_c, n_core, n_r, lang)
+    title, og_alt = TITLE[lang], OG_ALT[lang]
+    page_url = lang_pages.url(lang_pages.twin(PAGE, lang))
+    locale, locale_alt = lang_pages.LOCALE[lang], lang_pages.LOCALE['en' if ar else 'ar']
+    head = (f'<!doctype html>\n<html lang="{lang}" dir="{"rtl" if ar else "ltr"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+            f'<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7"><title>{esc(title)}</title>'
             f'<meta name="description" content="{esc(desc)}"><meta name="author" content="Cipher Lacuna">'
             f'<link rel="icon" type="image/png" sizes="32x32" href="brand/icon-32.png"><link rel="icon" type="image/svg+xml" href="{favicon}">'
-            f'<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">\n'
-            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Cipher Lacuna"><meta property="og:title" content="{esc(TITLE["en"])}">'
-            f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{SITE_URL}{PAGE}">'
+            f'<link rel="apple-touch-icon" href="brand/apple-touch-icon.png">{lang_pages.head_links(PAGE, lang)}<link rel="manifest" href="{seo.MANIFEST}">\n'
+            f'<meta property="og:type" content="website"><meta property="og:site_name" content="Cipher Lacuna"><meta property="og:title" content="{esc(title)}">'
+            f'<meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{page_url}">'
             f'<meta property="og:image" content="{SITE_URL}brand/og.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200">'
-            f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta property="og:locale" content="en_US">'
-            f'<meta property="og:locale:alternate" content="ar_AE">\n'
-            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(TITLE["en"])}"><meta name="twitter:description" content="{esc(desc)}">'
+            f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og_alt)}"><meta property="og:locale" content="{locale}">'
+            f'<meta property="og:locale:alternate" content="{locale_alt}">\n'
+            f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">'
             f'<meta name="twitter:image" content="{SITE_URL}brand/og.png"><meta name="twitter:image:alt" content="{esc(og_alt)}">\n'
-            f'<script>{HEAD_SCRIPT}</script>\n<style>{_asset("style.css")}\n{_asset("learn.css")}</style></head>\n')
-    lang_btn = ('<button type="button" class="btn-ghost js-only" id="lang"><span class="l-long"><span data-lang="en" lang="ar">العربية</span>'
-                '<span data-lang="ar" lang="en">English</span></span><span class="l-short" aria-hidden="true"><span data-lang="en" lang="ar">عربي</span>'
-                '<span data-lang="ar" lang="en">EN</span></span></button>')
+            f'<script>{lang_pages.lang_script(lang, other)}{HEAD_SCRIPT}</script>\n<style>{_asset("style.css")}\n{_asset("learn.css")}</style>'
+            f'{lang_pages.json_ld(json_ld(concepts, stacks, lang))}</head>\n')
+    # The language button: a link to this page in the other language (learn.js keeps the open item's #fragment on it).
+    if ar:
+        lang_btn = (f'<a class="btn-ghost" id="lang" href="{esc(other)}" hreflang="en" lang="en"><span class="l-long">English</span>'
+                    '<span class="l-short" aria-hidden="true">EN</span></a>')
+    else:
+        lang_btn = (f'<a class="btn-ghost" id="lang" href="{esc(other)}" hreflang="ar" lang="ar"><span class="l-long">العربية</span>'
+                    '<span class="l-short" aria-hidden="true">عربي</span></a>')
+    theme_label = 'المظهر: تلقائي' if ar else 'Theme: Auto'
     header = (f'<body><a class="skip" href="#main" id="skip">{L("Skip to content", "انتقل إلى المحتوى")}</a>\n'
               f'<header class="top"><div class="wrap top-in"><a class="brand" href="{h}">{logo}<span class="brand-text"><span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span>'
               f'<span class="brand-sec" id="brand-sec">{learn_name}</span><span class="tagline">{L(*TAGLINE)}</span></span></a>\n'
@@ -967,7 +1018,7 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
               f'<a href="{PAGE}" class="n-learn" aria-current="page"><i class="dot" aria-hidden="true"></i><span class="nl-full">{learn_name}</span><span class="nl-short" aria-hidden="true">{L("Learn", "تعلّم")}</span></a>'
               f'<a href="{h}#contact" class="n-contact">{icon("mail")}<span class="nl">{L("Contact", "تواصل معنا")}</span></a></nav>\n'
               f'<div class="ctrl"><a class="btn-ghost ig-mini" href="{esc(instagram)}" {OUT_LINK} aria-label="Instagram @qahwa.w.ai">{icon("ig")}<bdi lang="en">@qahwa.w.ai</bdi></a>'
-              f'{lang_btn}<button type="button" class="btn-ghost js-only" id="theme" aria-label="Theme: Auto">{icon("theme")}<span class="theme-label" id="theme-label">{L("Auto", "تلقائي")}</span></button></div></div></header>\n')
+              f'{lang_btn}<button type="button" class="btn-ghost js-only" id="theme" aria-label="{theme_label}">{icon("theme")}<span class="theme-label" id="theme-label">{L("Auto", "تلقائي")}</span></button></div></div></header>\n')
     lead = L('Plain-language guides to the ideas behind today\'s AI, and recommended stacks for building with it: local, cloud and UAE-hosted options, each with its sources.',
              'شروح واضحة للأفكار التي يقوم عليها الذكاء الاصطناعي اليوم، وتركيبات تقنية موصى بها للبناء به: خيارات محلية وسحابية ومستضافة في الإمارات، ولكل منها مصادرها.')
     status = (f'<p class="statusbar"><span>{L(esc(cnt(n_c, "concept", "en")), cnt(n_c, "concept", "ar"))} · {L(esc(cnt(n_core, "stack", "en")), cnt(n_core, "stack", "ar"))} · '
@@ -1013,7 +1064,8 @@ def render(concepts_doc, stacks_doc, catalog=None, home='index.html', brand_dir=
               f'<nav class="foot-links" aria-label="Footer" data-aria-ar="تذييل الصفحة"><a href="{h}">{L("Overview", "الرئيسية")}</a><a href="{h}#hardware">{L("Hardware", "العتاد")}</a>'
               f'<a href="{h}#news">{L("AI news", "أخبار الذكاء الاصطناعي")}</a><a href="{h}#uae">{L("UAE AI", "الذكاء الاصطناعي في الإمارات")}</a>'
               f'<a href="{PAGE}" aria-current="page">{learn_name}</a><a href="{QAHWA_PAGE}">{L("Qahwa &amp; AI lessons", f"دروس {QAHWA_AR}")}</a><a href="{h}#contact">{L("Contact", "تواصل معنا")}</a><a href="{h}#contact/about">{L("About", "عن الموقع")}</a>{android_link}</nav></div></div></footer>\n')
-    return head + header + main + footer + f'<script>{_asset("learn.js")}</script></body></html>\n'
+    page = head + header + main + footer + f'<script>{_asset("learn.js")}</script></body></html>\n'
+    return lang_pages.relocate(_arabic_attributes(page)) if ar else page
 
 def landing_card(data_dir=DATA, href=PAGE):
     """The overview's link card to this page, in both languages, using the overview's own .xcard styles (put it inside
@@ -1042,12 +1094,16 @@ def build(out_dir=OUT, home='index.html', data_dir=DATA, catalog_path=CATALOG, u
     reports_doc = load_reports(data_dir)
     catalog = json.loads(Path(catalog_path).read_text(encoding='utf-8'))
     validate(concepts_doc, stacks_doc, catalog['products'], uae_fact_ids(uae_path), reports_doc=reports_doc)
-    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc_safe() if lessons_doc is None else lessons_doc,
-                  reports_doc=reports_doc, android=android)
+    lessons_doc = lessons_doc_safe() if lessons_doc is None else lessons_doc
+    page = render(concepts_doc, stacks_doc, catalog, home=home, lessons_doc=lessons_doc, reports_doc=reports_doc, android=android)
+    # The Arabic copy (ar/learn.html) links to the Arabic overview beside it and reuses the brand files above it.
+    page_ar = render(concepts_doc, stacks_doc, catalog, home='index.html', lessons_doc=lessons_doc, reports_doc=reports_doc,
+                     android=android, lang='ar')
     out_dir = Path(out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / lang_pages.AR_DIR).mkdir(parents=True, exist_ok=True)
     target = out_dir / PAGE
     target.write_text(page, encoding='utf-8', newline='\n')
+    (out_dir / lang_pages.twin(PAGE, 'ar')).write_text(page_ar, encoding='utf-8', newline='\n')
     site().copy_brand_images(out_dir / 'brand')
     return target
 

@@ -276,8 +276,13 @@ class Page(unittest.TestCase):
             self.assertNotIn(word, low, word)
 
     def test_no_foreign_urls(self):
-        """Only instagram.com links and the site itself; everything the page loads is same-origin."""
-        for url in re.findall(r'https?://[^\s"\'<>)\\]+', self.page):
+        """Only instagram.com links and the site itself; everything the page loads is same-origin. The JSON-LD block names
+        its vocabulary (https://schema.org), which is never requested; its other addresses follow the same rule."""
+        ld = re.findall(r'<script type="application/ld\+json">(.*?)</script>', self.page, re.S)
+        self.assertEqual(len(ld), 1)
+        self.assertEqual(json.loads(ld[0])['@context'], 'https://schema.org')
+        page = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: m.group(0).replace('https://schema.org', ''), self.page, flags=re.S)
+        for url in re.findall(r'https?://[^\s"\'<>)\\]+', page):
             host = urlparse(url).hostname
             self.assertIn(host, ('www.instagram.com', 'instagram.com', SITE_HOST), url)
             if host == SITE_HOST:

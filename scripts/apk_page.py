@@ -19,6 +19,8 @@ import html
 from pathlib import Path
 
 import android_app
+import lang_pages
+import seo
 
 DIR = 'apk'                                    # dist/apk/index.html -> https://cipherlacuna.ae/apk/
 URL = android_app.SITE_URL + DIR               # the address people share (the server adds the final slash)
@@ -81,6 +83,19 @@ def android_sections(info, qr):
 </section>'''
 
 
+def json_ld(info):
+    """SoftwareApplication for the APK the site serves, from download/latest.json (android_app.latest()): name, version,
+    size, date, minimum Android version and the download address. Nothing without a checked APK."""
+    if not info:
+        return ''
+    app = android_app.latest(info)
+    return lang_pages.json_ld({
+        '@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': 'Cipher Lacuna', 'url': URL + '/',
+        'description': ABOUT_EN, 'operatingSystem': f'Android {app["min_android"]} or newer', 'softwareVersion': app['version'],
+        'datePublished': app['published'], 'fileSize': f'{android_app.size_mb(app["size"])} MB', 'downloadUrl': app['url'],
+        'installUrl': URL + '/', 'inLanguage': ['en', 'ar'], 'isAccessibleForFree': True, 'image': android_app.SITE_URL + seo.LOGO,
+        'publisher': seo.organization()})
+
 def render(info, logo_uri='', icon_uri='', qr_uri=''):
     """The page; `info` is the checked APK of android_app.load() (version, size, SHA-256), or None without one."""
     if info:
@@ -107,6 +122,7 @@ def render(info, logo_uri='', icon_uri='', qr_uri=''):
 <meta property="og:image" content="{OG_IMAGE}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Cipher Lacuna Android app, with a QR code for {SHOWN}"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ar_AE">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{E(desc)}"><meta name="twitter:image" content="{OG_IMAGE}">
+{json_ld(info)}
 <style>
 :root{{--bg:#F5F8FF;--card:#fff;--ink:#0E1222;--muted:#5A6380;--line:#E4E0F5;--accent:#6537d7;--accent-ink:#fff;--deep:#42208D;--soft:#F1ECFD;--warn:#FFF4DB;--warn-line:#F0D48A}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#0E1222;--card:#161b30;--ink:#EEF0FA;--muted:#A6AEC8;--line:#2A3150;--accent:#8A63F0;--deep:#B9A2FF;--soft:#211d3d;--warn:#3a2f14;--warn-line:#6b5520}}}}

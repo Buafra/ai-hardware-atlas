@@ -9,13 +9,14 @@ In English and Arabic at 375 and 1280 px: no console errors, no requests to othe
 the header nav without sideways scrolling, the logo, follow buttons and the current nav item, the tabs, the topic
 filter, search (including Arabic letter variants), opening a stack with its options table, flow arrows that flip in
 Arabic, related chips inside the page, Back after a chip, deep links on a fresh page, links to the hardware atlas,
-the language and theme buttons (shared localStorage keys), ?lang=ar (and its links back to the overview, which open it
-in Arabic), and the page without JavaScript. Also: the AI
+the language link between learn.html and ar/learn.html and the theme button (shared localStorage keys), a legacy ?lang=ar
+(it opens ar/learn.html, whose links back open the Arabic overview), and the page without JavaScript (the language link
+still works). Also: the AI
 stacks badge agrees with the status bar, topic chips count search matches, "No matches" sits under the chips, a stack's
 icon stays beside its title, #group/<id> links open their tab with the chip pressed, a UAE chip opens the fact it
 names on the overview, and the Arabic series name never breaks across lines.
-Qahwa & AI lessons (qahwa.html): the card near the top and the footer link (after Learn AI) open it, carrying ?lang=ar in
-Arabic; a concept's lesson chips show only the lessons published on that page (data/qahwa.json as the page shows it),
+Qahwa & AI lessons (qahwa.html): the card near the top and the footer link (after Learn AI) open it, in Arabic from
+ar/learn.html (ar/qahwa.html); a concept's lesson chips show only the lessons published on that page (data/qahwa.json as the page shows it),
 checked on the real data and on a copy of the page where a concept lists a published lesson (served by the test itself),
 whose chip opens that lesson on qahwa.html. The footer stays tidy from 320 to 1920 px.
 Reports tab (#reports, data/learn/reports.json): the tab and its badge, the source chips, topic and year menus (alone and
@@ -59,8 +60,8 @@ N_R = len(REPORTS)
 R_GROUP = {g: [r['id'] for r in REPORTS if learn.report_group(r) == g] for g, _, _ in learn.REPORT_GROUPS}
 R_DOMAINS = [d for _, _, ds in learn.REPORT_ORGS.values() for d in ds]
 
-def fixture_page():
-    """learn.html with the llm concept listing the first published lesson (next to its unpublished ones)."""
+def fixture_page(lang='en'):
+    """learn.html (or ar/learn.html) with the llm concept listing the first published lesson (next to its unpublished ones)."""
     import copy
     c = copy.deepcopy(CONCEPTS)
     n = PUBLISHED[0]
@@ -68,7 +69,7 @@ def fixture_page():
     llm = next(x for x in c['concepts'] if x['id'] == 'llm')
     llm['related_lessons'] = [x for x in llm['related_lessons'] if x['lesson'] != n] + [{'lesson': n, 'title_en': post['title']['en'], 'title_ar': post['title']['ar']}]
     catalog = json.loads((ROOT / 'data' / 'catalog.json').read_text(encoding='utf-8'))
-    return learn.render(c, STACKS, catalog, lessons_doc=QDOC), n, [x['lesson'] for x in llm['related_lessons'] if x['lesson'] != n]
+    return learn.render(c, STACKS, catalog, lessons_doc=QDOC, lang=lang), n, [x['lesson'] for x in llm['related_lessons'] if x['lesson'] != n]
 
 def footer_tidy(page, tag):
     """Every footer link on one line, at least 24 px tall (WCAG 2.2 SC 2.5.8) and inside the footer, the follow button's
@@ -140,8 +141,9 @@ def run(pw):
             nav = page.evaluate("[...document.querySelectorAll('.top .nav a')].map(a => a.getAttribute('href'))")
             check(nav == ['index.html', 'index.html#hardware', 'index.html#news', 'index.html#uae', 'learn.html', 'index.html#contact'], f'{tag} nav links {nav}')
             # Qahwa & AI lessons: the card under the page header and the footer link after Learn AI, in the page language
-            # (an Arabic visit always carries ?lang=ar to qahwa.html).
-            q = '?lang=ar' if rtl else ''
+            # (the saved Arabic sent this visit to ar/learn.html, whose plain links lead to ar/qahwa.html).
+            check(('/ar/learn.html' in page.url) == rtl, f'{tag} address {page.url}')
+            q = ''
             card = page.evaluate("""(a => a && [a.getAttribute('href'), a.querySelector('b').innerText.trim(), a.getClientRects().length > 0,
                 a.getBoundingClientRect().top < document.querySelector('.l-tools').getBoundingClientRect().top,
                 a.getBoundingClientRect().top > document.querySelector('.ihead').getBoundingClientRect().bottom - 1])(document.querySelector('a.l-qahwa'))""")
@@ -277,13 +279,14 @@ def run(pw):
                 # the header's follow button, the footer, and the note and chips when a lesson is published.
                 lines = page.evaluate("[...document.querySelectorAll('.l-nw')].filter(e => e.getClientRects().length).map(e => new Set([...e.getClientRects()].map(r => Math.round(r.top))).size)")
                 check(len(lines) >= 3 and set(lines) == {1}, f'{tag} series name breaks across lines: {lines}')
-            # Language and theme buttons share the overview's keys.
-            page.click('#lang')
+            # The language link opens the other copy of the page and saves the choice (the overview's key); and back.
+            page.click('#lang'); page.wait_for_load_state('load'); page.wait_for_timeout(150)
             other = 'en' if rtl else 'ar'
-            check(page.evaluate('document.documentElement.lang') == other, f'{tag} language button')
+            check(page.evaluate('document.documentElement.lang') == other and ('/ar/learn.html' in page.url) == (other == 'ar'), f'{tag} language link {page.url}')
             check(page.evaluate("localStorage.getItem('atlas-lang')") == other, f'{tag} atlas-lang not stored')
             check(overflow(page) <= 0, f'{tag} overflow after switching language')
-            page.click('#lang')
+            page.click('#lang'); page.wait_for_load_state('load'); page.wait_for_timeout(150)
+            check(page.evaluate('document.documentElement.lang') == lang, f'{tag} language link back')
             page.click('#theme')
             check(page.evaluate("[document.documentElement.dataset.theme, localStorage.getItem('atlas-theme')]") == ['light', 'light'], f'{tag} theme button (light)')
             page.click('#theme')
@@ -298,19 +301,20 @@ def run(pw):
     # A copy of the page where the llm concept lists a published lesson: its chip (and no unpublished one) opens that
     # lesson on qahwa.html, in the page language.
     if PUBLISHED:
-        html, n, hidden = fixture_page()
         for lang in ('en', 'ar'):
+            html, n, hidden = fixture_page(lang)
+            at = ('ar/' if lang == 'ar' else '') + FIXTURE  # the Arabic copy sits beside ar/learn.html
             for width in (375, 1280):
                 tag = f'[chip fixture {lang} {width}px]'
                 ctx = browser.new_context(viewport={'width': width, 'height': 900})
-                ctx.route(BASE + FIXTURE + '*', lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=html))
+                ctx.route(BASE + at + '*', (lambda body: lambda route: route.fulfill(status=200, content_type='text/html; charset=utf-8', body=body))(html))
                 page = ctx.new_page()
                 errors, foreign = [], []
                 watch(page, errors, foreign)
-                page.goto(BASE + FIXTURE + ('?lang=ar' if lang == 'ar' else '') + '#concept/llm')
+                page.goto(BASE + at + '#concept/llm')
                 page.wait_for_timeout(150)
                 hrefs = page.evaluate("[...document.getElementById('concept/llm').querySelectorAll('a.lchip.lesson')].map(a => a.getAttribute('href'))")
-                want = f'qahwa.html{"?lang=ar" if lang == "ar" else ""}#lesson-{n:02d}'
+                want = f'qahwa.html#lesson-{n:02d}'
                 check(hrefs == [want], f'{tag} llm lesson chips {hrefs}')
                 text = page.evaluate("document.getElementById('concept/llm').innerText")
                 check(not any(f'{k:02d}:' in text for k in hidden), f'{tag} an unpublished lesson is named: {[k for k in hidden if f"{k:02d}:" in text]}')
@@ -318,7 +322,7 @@ def run(pw):
                 page.wait_for_url(lambda u: '/qahwa.html' in u)
                 page.wait_for_function('document.getElementById("detail") && document.getElementById("detail").open', timeout=5000)
                 got = page.evaluate("[document.documentElement.lang, location.hash, localStorage.getItem('atlas-lang')]")
-                check(got == [lang, f'#lesson-{n:02d}', None], f'{tag} chip opened qahwa.html as {got}')
+                check(got == [lang, f'#lesson-{n:02d}', None] and ('/ar/qahwa.html' in page.url) == (lang == 'ar'), f'{tag} chip opened {page.url} as {got}')
                 check(not errors and not foreign, f'{tag} errors {errors[:3]} foreign {foreign[:3]}')
                 ctx.close()
     else:
@@ -331,14 +335,16 @@ def run(pw):
             page.goto(URL + ('?lang=ar' if lang == 'ar' else ''))
             footer_tidy(page, f'[{lang} {width}px footer]')
             ctx.close()
-    # ?lang=ar wins over the stored language, as on the overview.
+    # A legacy ?lang=ar opens ar/learn.html, as on the overview; ?lang=en there opens learn.html.
     ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
     page = ctx.new_page()
-    page.goto(URL + '?lang=ar')
-    check(page.evaluate('[document.documentElement.lang, document.documentElement.dir]') == ['ar', 'rtl'], '?lang=ar')
+    page.goto(URL + '?lang=ar#concept/rag'); page.wait_for_load_state('load')
+    check(page.evaluate('[document.documentElement.lang, document.documentElement.dir]') == ['ar', 'rtl'] and page.url.endswith('/ar/learn.html#concept/rag'), f'?lang=ar opened {page.url}')
+    page.goto(BASE + 'ar/learn.html?lang=en'); page.wait_for_load_state('load')
+    check(page.evaluate('document.documentElement.lang') == 'en' and page.url.endswith('/learn.html') and '/ar/' not in page.url, f'?lang=en opened {page.url}')
     ctx.close()
-    # A ?lang=ar visit saves nothing, so every link back to the overview carries ?lang=ar (before any #fragment) and the
-    # overview opens in Arabic, whichever link is used; after the language button they are plain again.
+    # A ?lang=ar visit saves nothing: it lands on ar/learn.html, whose plain links back open the Arabic overview
+    # (ar/index.html), whichever link is used; after the language link (English) they stay plain.
     home_links = "[...document.querySelectorAll('a[href]')].map(a => a.getAttribute('href')).filter(h => /^index\\.html([?#]|$)/.test(h))"
     for width in (375, 1280):
         tag = f'[?lang=ar {width}px]'
@@ -348,7 +354,7 @@ def run(pw):
         watch(page, errors, foreign)
         page.goto(URL + '?lang=ar')
         hrefs = page.evaluate(home_links)
-        check(hrefs and all(h == 'index.html?lang=ar' or h.startswith('index.html?lang=ar#') for h in hrefs), f'{tag} links back to the overview {[h for h in hrefs if "?lang=ar" not in h][:3]}')
+        check(hrefs and all(h == 'index.html' or h.startswith('index.html#') for h in hrefs), f'{tag} links back to the overview {[h for h in hrefs if "?lang=" in h][:3]}')
         for sel, want_hash in (('.top .nav a.n-home', ''), ('.top .nav a[href$="#hardware"]', '#hardware'), ('.foot a.brand', ''),
                                ('[id="stack/rag-memory"] a.lchip.hw[href*="#hardware/p/"] >> visible=true >> nth=0', '#hardware')):  # the overview then shortens it to #hardware
             page.goto(URL + '?lang=ar' + ('#stack/rag-memory' if 'rag-memory' in sel else ''))
@@ -358,8 +364,8 @@ def run(pw):
             page.locator(sel).first.click()
             page.wait_for_url(lambda u: '/index.html' in u)
             page.wait_for_load_state('load')
-            got = page.evaluate('[document.documentElement.lang, document.documentElement.dir, location.search, location.hash]')
-            check(got[:2] == ['ar', 'rtl'] and 'lang=ar' in got[2] and got[3].startswith(want_hash), f'{tag} {sel} opened the overview as {got}')
+            got = page.evaluate('[document.documentElement.lang, document.documentElement.dir, location.pathname, location.hash]')
+            check(got[:2] == ['ar', 'rtl'] and got[2].startswith('/ar/') and got[3].startswith(want_hash), f'{tag} {sel} opened the overview as {got}')
             check(page.evaluate("localStorage.getItem('atlas-lang')") is None, f'{tag} following {sel} saved a language')
         # The Qahwa & AI card and footer link open qahwa.html in Arabic too, without saving a language.
         for sel in ('a.l-qahwa', '.foot-links a[href^="qahwa.html"]'):
@@ -369,9 +375,9 @@ def run(pw):
             page.wait_for_url(lambda u: '/qahwa.html' in u)
             page.wait_for_load_state('load')
             got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
-            check(href == 'qahwa.html?lang=ar' and got == ['ar', 'rtl', None], f'{tag} {sel} ({href}) opened the lessons page as {got}')
+            check(href == 'qahwa.html' and got == ['ar', 'rtl', None] and '/ar/qahwa.html' in page.url, f'{tag} {sel} ({href}) opened the lessons page {page.url} as {got}')
         page.goto(URL + '?lang=ar')
-        page.click('#lang')
+        page.click('#lang'); page.wait_for_url(lambda u: '/ar/' not in u); page.wait_for_load_state('load')
         q_links = page.evaluate("[...document.querySelectorAll('a[href^=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
         check(q_links and not any('?lang=' in h for h in q_links), f'{tag} lessons links after switching to English {q_links[:3]}')
         hrefs = page.evaluate(home_links)
@@ -390,7 +396,9 @@ def run(pw):
         check(shown(page, 'concepts') == N_C and shown(page, 'stacks') == N_S and shown(page, 'reports') == N_R,
               f'{tag} items shown {shown(page, "concepts")}/{shown(page, "stacks")}/{shown(page, "reports")}')
         check(page.locator('.r-selects').is_hidden(), f'{tag} report menus visible without JavaScript')
-        check(page.locator('#lq').is_hidden() and page.locator('#lang').is_hidden(), f'{tag} JS-only controls visible')
+        check(page.locator('#lq').is_hidden(), f'{tag} JS-only controls visible')
+        # The language link needs no script: it is a plain link to the Arabic copy.
+        check(page.locator('#lang').is_visible() and page.get_attribute('#lang', 'href') == 'ar/learn.html', f'{tag} language link without JavaScript')
         page.click('[id="stack/arabic-first"] > summary')
         check(is_open(page, 'stack/arabic-first'), f'{tag} details do not open without JavaScript')
         check(overflow(page) <= 0, f'{tag} horizontal overflow {overflow(page)}px')

@@ -23,8 +23,8 @@ Review of that round: the UAE list in steps of 8 ("Show more"), and Arabic carri
 About Cipher Lacuna (data/about.json): the section under the contact card in both languages, its area links, no update
 schedule in it, the #contact/about deep link and the footer's About link landing on it, and no overflow at 375 and 1280 px.
 Qahwa & AI lessons page (qahwa.html, a separate page): the footer link after Learn AI in every view and the About link
-beside the follow button, both carrying ?lang=ar in Arabic like the links to learn.html (and opening the page in Arabic
-without saving a language), and a tidy footer (every link on one line, no overflow) from 320 to 1920 px.
+beside the follow button, both opening the Arabic copy (ar/qahwa.html) from the Arabic overview like the links to
+learn.html (also after a legacy ?lang=ar link, without saving a language), and a tidy footer (every link on one line, no overflow) from 320 to 1920 px.
 News images (the owner's hybrid plan): every headline card in #news, #uae and the overview's pillars has an image served
 from the site itself (a company image from an official company source with its "Image: <company>" credit, or the site's
 topic image), loaded lazily and loaded once scrolled into view, beside the text on wide screens (on the start side, so on
@@ -77,9 +77,13 @@ FOOT_LABELS = {'en': ['Overview', 'Hardware', 'AI news', 'UAE AI', 'Learn AI', '
                'ar': ['الرئيسية', 'العتاد', 'أخبار الذكاء الاصطناعي', 'الذكاء الاصطناعي في الإمارات', 'تعلّم الذكاء الاصطناعي', 'دروس قهوة و AI', 'تواصل معنا', 'عن الموقع'] + (['تطبيق Android'] if ANDROID else [])}
 
 def foot_hrefs(lang):
-    """The footer links after app.js has run: the separate pages carry ?lang=ar in an Arabic visit."""
-    q = '?lang=ar' if lang == 'ar' else ''
-    return ['#home', '#hardware', '#news', '#uae', 'learn.html' + q, 'qahwa.html' + q, '#contact', '#contact/about'] + (['#contact/android'] if ANDROID else [])
+    """The footer links after app.js has run: the separate pages have an Arabic copy beside ar/index.html, so the links
+    are the same in both languages (learn.html in ar/index.html is ar/learn.html)."""
+    return ['#home', '#hardware', '#news', '#uae', 'learn.html', 'qahwa.html', '#contact', '#contact/about'] + (['#contact/android'] if ANDROID else [])
+
+def home(lang):
+    """The overview's address in a language: / for English, ar/ for Arabic (scripts/lang_pages.py)."""
+    return 'ar/' if lang == 'ar' else ''
 
 def footer_tidy(page, tag):
     """Every footer link on one line, at least 24 px tall (WCAG 2.2 SC 2.5.8) and inside the footer, the follow button's
@@ -155,10 +159,10 @@ def route_checks(page, route, lang, width, hash=None):
     check(page.locator('.flag, .p-flag, .ih-flag, .j-flag').count() == 0, f'{tag} UAE flag still rendered')
     check(page.locator('.nav .n-uae > i.dot').count() == 1, f'{tag} UAE nav marker missing')
     # Learn AI is a separate page: a plain link in the header at every width, never marked as the current view here.
-    # In Arabic the link carries ?lang=ar (learn.html would otherwise open in the saved or default language).
+    # In Arabic the same link leads to ar/learn.html, the Arabic copy beside ar/index.html.
     ln = page.locator('.top .nav a.n-learn[href^="learn.html"]')
     check(ln.count() == 1 and ln.is_visible() and ln.get_attribute('aria-current') is None, f'{tag} Learn AI header link hidden or marked current')
-    check(ln.get_attribute('href') == ('learn.html', 'learn.html?lang=ar')[lang == 'ar'], f'{tag} Learn AI header link href {ln.get_attribute("href")}')
+    check(ln.get_attribute('href') == 'learn.html', f'{tag} Learn AI header link href {ln.get_attribute("href")}')
     shown = page.evaluate("[...document.querySelectorAll('.top .nav a.n-learn span')].filter(s => s.getBoundingClientRect().width > 2).map(s => s.textContent.trim())")
     check(len(shown) == 1 and shown[0] in (('Learn AI', 'Learn'), ('تعلّم الذكاء الاصطناعي', 'تعلّم'))[lang == 'ar'], f'{tag} Learn AI header label {shown}')
     # "Updated <date> · 6 times a day" (whatever the schedule says) appears once on the whole site, at the top of AI news.
@@ -254,14 +258,14 @@ def about_checks(page, tag, lang):
     check(got['title'] == ('About Cipher Lacuna', 'عن Cipher Lacuna')[lang == 'ar'], f'{tag} About title {got["title"]!r}')
     check(got['paras'] == ABOUT['about'][lang], f'{tag} About paragraphs not verbatim: {got["paras"]}')
     check([got['name'], got['trust'], got['qahwa']] == [ABOUT[k][lang] for k in ('name_story', 'trust', 'qahwa')], f'{tag} About name/trust/qahwa not verbatim')
-    hrefs = ['#hardware', '#news', '#uae', ('learn.html', 'learn.html?lang=ar')[lang == 'ar']]
+    hrefs = ['#hardware', '#news', '#uae', 'learn.html']
     check(got['areas'] == [[h, a[lang], True] for h, a in zip(hrefs, ABOUT['areas'])], f'{tag} About areas {got["areas"]}')
     check(got['follow'] and got['after'], f'{tag} About: follow button hidden or section not under the email card')
     # One follow button in the contact view (beside the Qahwa & AI line), not a second one on the email card.
     check(got['follows'] == 1, f'{tag} {got["follows"]} follow buttons in #contact, expected 1')
     check(got['over'] <= 0, f'{tag} About section overflows by {got["over"]}px')
     # Beside the follow button (same row, or the next one on a phone): the link to the Qahwa & AI lessons page.
-    want = [[('qahwa.html', 'qahwa.html?lang=ar')[lang == 'ar'], ('Qahwa & AI lessons', 'دروس قهوة و AI')[lang == 'ar'], True, True]]
+    want = [['qahwa.html', ('Qahwa & AI lessons', 'دروس قهوة و AI')[lang == 'ar'], True, True]]
     check(got['lessons'] == want, f'{tag} About lessons link {got["lessons"]}')
     left = [w for w in (PHRASE[0], PHRASE[1], 'Updated', 'آخر تحديث', 'a day', 'يومياً') if w in got['text']]
     check(not left, f'{tag} About mentions the update schedule: {left}')
@@ -286,7 +290,7 @@ def news_image_checks(browser):
                 page, errors, foreign = ctx.new_page(), [], []
                 watch(page, errors, foreign)
                 for view in ('news', 'uae', 'home'):
-                    go(page, ('?lang=ar' if lang == 'ar' else '') + '#' + view, view)
+                    go(page, home(lang) + '#' + view, view)
                     sel = {'news': '#news .nlist li.nitem', 'uae': '#uae .nlist li.nitem', 'home': '.pillar.p-news .heads li'}[view]
                     # Bring the first visible cards (the current language's list) into view one by one so their lazy images load.
                     n = page.evaluate("sel => Math.min([...document.querySelectorAll(sel)].filter(li => li.getClientRects().length).length, 4)", sel)
@@ -352,7 +356,7 @@ def main():
                 ctx = browser.new_context(viewport={'width': width, 'height': 900})
                 page, errors, foreign = ctx.new_page(), [], []
                 watch(page, errors, foreign)
-                page.goto(BASE + ('?lang=ar' if lang == 'ar' else ''))
+                page.goto(BASE + home(lang))
                 page.wait_for_load_state('networkidle')
                 route_checks(page, 'home', lang, width, hash='')  # a bare URL is not given #home (it would move the Tab start)
                 for route in ROUTES[1:] + ['home']:
@@ -468,9 +472,11 @@ def main():
         for _ in range(3):
             page.click('#theme'); themes.append(page.evaluate('document.documentElement.dataset.theme || "auto"'))
         check(themes == ['light', 'dark', 'auto'], f'theme cycle {themes}')
-        page.click('#lang')
-        check(page.evaluate('document.documentElement.dir') == 'rtl' and 'lang=ar' in page.url, 'language toggle')
-        page.click('#lang')
+        # The language link opens the same view on the other language's page (/ar/), and back.
+        page.click('#lang'); page.wait_for_url('**/ar/**'); page.wait_for_load_state('load')
+        check(page.evaluate('document.documentElement.dir') == 'rtl' and page.url.endswith('/ar/#home'), f'language link to Arabic: {page.url}')
+        page.click('#lang'); page.wait_for_url(lambda u: '/ar/' not in u); page.wait_for_load_state('load')
+        check(page.evaluate('document.documentElement.dir') == 'ltr' and page.url.endswith('/#home'), f'language link to English: {page.url}')
 
         # 9. Page source: contact address assembled in JS only; every new-tab link is noopener noreferrer.
         src = page.request.get(BASE).text()
@@ -531,7 +537,7 @@ def main():
                 ctx = browser.new_context(viewport={'width': width, 'height': height})
                 page, errors, foreign = ctx.new_page(), [], []
                 watch(page, errors, foreign)
-                q = '?lang=ar' if lang == 'ar' else ''
+                q = home(lang)
                 page.goto(BASE + q + '#contact/about'); page.wait_for_load_state('load')
                 page.wait_for_function('document.activeElement && document.activeElement.id === "about"', timeout=5000)
                 tag = f'[{lang} {width}px #contact/about]'
@@ -554,7 +560,7 @@ def main():
         # 10f. Arabic: the model note follows the page direction; dates and the footnote are in Arabic.
         ctx = browser.new_context(viewport={'width': 1280, 'height': 800})
         page = ctx.new_page()
-        page.goto(BASE + '?lang=ar&view=table#hardware'); page.wait_for_load_state('networkidle')
+        page.goto(BASE + 'ar/?view=table#hardware'); page.wait_for_load_state('networkidle')
         name = page.evaluate("JSON.parse(document.getElementById('models-data').textContent).models.find(m => !m.o).n")
         page.fill('#model', name); page.wait_for_timeout(150)
         check(page.evaluate("getComputedStyle(document.getElementById('model-note')).direction") == 'rtl' and page.locator('#model-note bdi').count() == 1, 'Arabic model note not in page direction')
@@ -607,21 +613,21 @@ def main():
                 watch(page, errors, foreign)
                 page.goto(BASE + '?lang=ar#home'); page.wait_for_load_state('networkidle')
                 href = page.get_attribute(sel, 'href')
-                page.click(sel); page.wait_for_url(lambda u: '/learn.html' in u); page.wait_for_load_state('load')
+                page.click(sel); page.wait_for_url(lambda u: '/ar/learn.html' in u); page.wait_for_load_state('load')
                 got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
-                check(got == ['ar', 'rtl', None] and re.match(r'^learn\.html\?lang=ar(#|$)', href or ''), f'[{width}px] {sel} ({href}) opened Learn AI as {got}')
+                check(got == ['ar', 'rtl', None] and re.match(r'^learn\.html(#|$)', href or ''), f'[{width}px] {sel} ({href}) opened Learn AI as {got}')
                 check(not errors and not foreign, f'[{width}px] Arabic Learn link: errors {errors[:3]} foreign {foreign[:3]}')
                 ctx.close()
-            # The same for the Qahwa & AI lessons page: the footer link and the About link carry ?lang=ar.
+            # The same for the Qahwa & AI lessons page: the footer link and the About link open ar/qahwa.html.
             for start, sel in (('#home', '.foot a[href^="qahwa.html"]'), ('#contact', '#about a.ab-lessons')):
                 ctx = browser.new_context(viewport={'width': width, 'height': 900})
                 page, errors, foreign = ctx.new_page(), [], []
                 watch(page, errors, foreign)
                 page.goto(BASE + '?lang=ar' + start); page.wait_for_load_state('networkidle')
                 href = page.get_attribute(sel, 'href')
-                page.click(sel); page.wait_for_url(lambda u: '/qahwa.html' in u); page.wait_for_load_state('load')
+                page.click(sel); page.wait_for_url(lambda u: '/ar/qahwa.html' in u); page.wait_for_load_state('load')
                 got = page.evaluate("[document.documentElement.lang, document.documentElement.dir, localStorage.getItem('atlas-lang')]")
-                check(got == ['ar', 'rtl', None] and href == 'qahwa.html?lang=ar', f'[{width}px] {sel} ({href}) opened the lessons page as {got}')
+                check(got == ['ar', 'rtl', None] and href == 'qahwa.html', f'[{width}px] {sel} ({href}) opened the lessons page as {got}')
                 check(not errors and not foreign, f'[{width}px] Arabic lessons link: errors {errors[:3]} foreign {foreign[:3]}')
                 ctx.close()
         # English (the default) keeps the plain links.
@@ -630,10 +636,10 @@ def main():
         hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"], a[href*=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
         check(len([h for h in hrefs if h.startswith('qahwa.html')]) == 2, f'links to the lessons page (footer, About): {hrefs}')
         check(hrefs and not any('lang=' in h for h in hrefs), f'English Learn/lessons links carry a language: {[h for h in hrefs if "lang=" in h][:3]}')
-        # Switching to Arabic on the overview updates the links too.
-        page.click('#lang'); page.wait_for_timeout(100)
+        # The language link opens the Arabic overview, whose plain links lead to the Arabic copies beside it.
+        page.click('#lang'); page.wait_for_url('**/ar/**'); page.wait_for_load_state('networkidle')
         hrefs = page.evaluate("[...document.querySelectorAll('a[href*=\"learn.html\"], a[href*=\"qahwa.html\"]')].map(a => a.getAttribute('href'))")
-        check(hrefs and all(re.match(r'^(learn|qahwa)\.html\?lang=ar(#|$)', h) for h in hrefs), f'Learn/lessons links after switching to Arabic: {hrefs[:3]}')
+        check(hrefs and all(re.match(r'^(learn|qahwa)\.html(#|$)', h) for h in hrefs), f'Learn/lessons links after switching to Arabic: {hrefs[:3]}')
         ctx.close()
 
         # 10i. The footer stays tidy from 320 to 1920 px, in both languages (eight links, each on one line).
@@ -641,7 +647,7 @@ def main():
             for width in (320, 375, 414, 768, 1024, 1280, 1440, 1920):
                 ctx = browser.new_context(viewport={'width': width, 'height': 900})
                 page = ctx.new_page()
-                page.goto(BASE + ('?lang=ar' if lang == 'ar' else '') + '#contact'); page.wait_for_load_state('networkidle')
+                page.goto(BASE + home(lang) + '#contact'); page.wait_for_load_state('networkidle')
                 footer_tidy(page, f'[{lang} {width}px footer]')
                 ctx.close()
 
