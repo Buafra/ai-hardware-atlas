@@ -140,10 +140,13 @@ class ScheduleAndLinkTests(unittest.TestCase):
         cron=re.search(r"cron:\s*'([^']+)'",(ROOT/'.github/workflows/publish.yml').read_text(encoding='utf-8')).group(1).split()
         uae=sorted(f'{(int(h)+4)%24:02d}:{int(cron[0]):02d}' for h in cron[1].split(','))
         self.assertEqual(sorted(build.schedule_times(data)),uae)
+        # 02:07 and 14:07 Dubai: twice a day, 12 hours apart, off the top and quarter of the hour (GitHub's busy times).
+        self.assertEqual(uae,['02:07','14:07'])
+        self.assertNotEqual(int(cron[0])%15,0)
         # The page says how often, not at what times (no run statistics in public).
         self.assertEqual(build.schedule_phrase(data,'en'),'twice a day')
         self.assertEqual(build.schedule_phrase(data,'ar'),'مرتين يومياً')
-        for times,en,ar in ((['07:15'],'once a day','مرة يومياً'),(['07:15','19:15'],'twice a day','مرتين يومياً')):
+        for times,en,ar in ((['02:07'],'once a day','مرة يومياً'),(['02:07','14:07'],'twice a day','مرتين يومياً'),(['02:07','10:07','18:07'],'3 times a day','3 مرات يومياً')):
             d={'schedule':' and '.join(times)+' Asia/Dubai'}
             self.assertEqual((build.schedule_phrase(d,'en'),build.schedule_phrase(d,'ar')),(en,ar))
         line=build.fresh_line({'updated_at':'2026-09-26T13:09:30+00:00'},data)

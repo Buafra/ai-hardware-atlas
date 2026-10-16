@@ -2,7 +2,7 @@
   "schema_version": 2,
   "updated_at": "2026-10-08",
   "last_check_at": "2026-10-16T18:48:39+00:00",
-  "schedule": "07:15 and 19:15 Asia/Dubai",
+  "schedule": "02:07 and 14:07 Asia/Dubai",
   "automation_status": "Configured in GitHub Actions",
   "edition_note": "Initial catalog reviewed 23 Sep; corrections, specifications and launch prices reviewed 26 Sep 2026.",
   "products": [

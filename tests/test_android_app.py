@@ -379,7 +379,10 @@ class WorkflowTests(unittest.TestCase):
             self.assertIn(ai_if, wf[wf.rfind('- name:', 0, at):at])
         self.assertEqual(wf.count('ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}'), 2)
         self.assertIn("NEWS_BATCH: '1'", wf[wf.rfind('- name:', 0, wf.index('run: python scripts/news.py')):wf.index('run: python scripts/news.py')])
-        self.assertRegex(wf, r"cron: '15 3,15 \* \* \*'")
+        # 02:07 and 14:07 Dubai (22:07 and 10:07 UTC): off the busy top and quarter of the hour, where GitHub started
+        # the 03:15 / 15:15 UTC runs hours late.
+        self.assertRegex(wf, r"cron: '7 22,10 \* \* \*'")
+        self.assertEqual(len(re.findall(r'(?m)^\s*- cron:', wf)), 1)
         rel = (ROOT / '.github' / 'workflows' / 'android-release.yml').read_text(encoding='utf-8')
         self.assertRegex(rel, r'release:\s*\n\s*types: \[published\]')
         self.assertIn("startsWith(github.event.release.tag_name, 'android-v')", rel)
