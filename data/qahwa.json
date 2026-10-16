@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-15T20:30:00+04:00",
+  "generated_at": "2026-10-16T08:21:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3729,6 +3729,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-15T20:30:00+04:00",
       "cover": "images/qahwa/week-03-day-16--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-16--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "If it summarized your file, it read every word.",
+        "ar": "إذا لخّص المساعد ملفاً فقد قرأ كل كلمة فيه"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "If it summarized your file, it ==read every word==.",
+            "body": "Answer: Myth ❌ Every model has a limit on how much text it handles at once, and some services read only parts of a long file. Check the numbers and dates in the document itself."
+          },
+          "ar": {
+            "title": "إذا لخّص المساعد ملفاً فقد ==قرأ كل كلمة فيه==",
+            "body": "الجواب: خرافة ❌ لكل نموذج حدّ لكمية النص التي يعالجها في المرة الواحدة، وبعض الخدمات تقرأ أجزاءً من الملف الطويل فقط. تحقّق من الأرقام والمواعيد في المستند نفسه."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-16T08:21:00+04:00",
+      "cover": "images/qahwa/week-03-day-16--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
