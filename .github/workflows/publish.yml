@@ -93,6 +93,8 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Read only: is the drafts' pull request still open (merged or closed drafts are not written again)?
+          GH_TOKEN: ${{ github.token }}
         run: python scripts/draft.py
       # Again after the data changed (sources, news, models, drafts): nothing untested is saved or published.
       - name: Test catalog and safeguards
@@ -139,6 +141,28 @@ jobs:
         with:
           path: .cache/android
           key: android-apk-${{ hashFiles('.cache/android/latest.json') }}
+      # Before the data is saved: a draft counts as done (data/draft-state.json) only once it is in a pull request.
+      # Only when draft.py wrote drafts (pending ones, and those of a pull request still open, so the branch keeps them).
+      # Pinned to the commit of v8.1.1 (the v8 tag), not a movable tag: this third-party action gets the write token.
+      - name: Open a pull request for AI drafts
+        id: drafts-pr
+        if: github.event_name != 'push' && hashFiles('data/drafts/*.json') != ''
+        continue-on-error: true
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          add-paths: data/drafts/*.json
+          branch: ai-drafts
+          title: 'Review AI-drafted hardware records'
+          commit-message: 'Add AI-drafted hardware records for review'
+          body: |
+            Drafted from newly discovered official announcements. Each file quotes the official page as evidence.
+            Check every value against the source, then run `python scripts/draft.py --promote data/drafts/<file>.json` and commit. Merging this pull request alone does not change the public catalog.
+      - name: Record whether the drafts pull request was opened (a failure is reported in the review issue)
+        if: steps.drafts-pr.outcome == 'success' || steps.drafts-pr.outcome == 'failure'
+        env:
+          PR_OUTCOME: ${{ steps.drafts-pr.outcome }}
+          PR_NUMBER: ${{ steps.drafts-pr.outputs.pull-request-number }}
+        run: python scripts/draft.py --pr-result
       - name: Save refreshed data
         run: |
           git config user.name 'github-actions[bot]'
@@ -153,18 +177,6 @@ jobs:
             done
             test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
           fi
-      - name: Open a pull request for AI drafts
-        if: github.event_name != 'push'
-        continue-on-error: true
-        uses: peter-evans/create-pull-request@v8
-        with:
-          add-paths: data/drafts/*.json
-          branch: ai-drafts
-          title: 'Review AI-drafted hardware records'
-          commit-message: 'Add AI-drafted hardware records for review'
-          body: |
-            Drafted from newly discovered official announcements. Each file quotes the official page as evidence.
-            Check every value against the source, then run `python scripts/draft.py --promote data/drafts/<file>.json` and commit. Merging this pull request alone does not change the public catalog.
       - name: Open or update the review issue
         if: github.event_name != 'push'
         continue-on-error: true

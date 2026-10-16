@@ -29,6 +29,14 @@ def body(report, drafts):
         lines += ['<details><summary>Fetch errors</summary>', ''] + [f'- {u}: {e}' for u, e in report['errors'].items()] + ['', '</details>']
     return '\n'.join(lines)
 
+def drafts_status(draft_report):
+    """The AI drafts that are not in a pull request because the workflow's pull-request step failed (from
+    data/draft-report.json, written by draft.py --pr-result), or ''."""
+    if not (draft_report or {}).get('pr_error'):
+        return ''
+    waiting = ''.join(f'\n- {m}' for m in draft_report.get('waiting', []))
+    return f"**AI drafts waiting for a pull request:** {draft_report['pr_error']}{waiting}"
+
 def ai_status(path=ROOT / 'data/news.json'):
     """One line on the optional AI news steps when they did not run cleanly (from news.json "ai"), else ''."""
     try:
@@ -59,14 +67,18 @@ def policy_status(path=ROOT / 'data/news.json'):
 def main():
     report = json.loads((ROOT / 'data/refresh-report.json').read_text(encoding='utf-8'))
     drafts_path = ROOT / 'data/draft-report.json'
-    drafts = json.loads(drafts_path.read_text(encoding='utf-8')).get('created', []) if drafts_path.exists() else []
+    draft_report = json.loads(drafts_path.read_text(encoding='utf-8')) if drafts_path.exists() else {}
+    drafts = draft_report.get('created', [])
     catalog = json.loads((ROOT / 'data/catalog.json').read_text(encoding='utf-8'))
     today = date.fromisoformat(report['at'][:10])
     stale = [p['model'] for p in catalog['products'] if (p.get('price') or {}).get('checked') and (today - date.fromisoformat(p['price']['checked'])).days > STALE_PRICE_DAYS]
-    if not (report['changes'] or report['review'] or drafts or stale):
+    pr_error = drafts_status(draft_report)
+    if not (report['changes'] or report['review'] or drafts or stale or pr_error):
         print('Nothing needs review.')
         return 0
     text = body(report, drafts)
+    if pr_error:
+        text += '\n\n' + pr_error
     for line in (ai_status(), policy_status()):
         if line:
             text += '\n\n' + line
