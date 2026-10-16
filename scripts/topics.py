@@ -227,3 +227,14 @@ def name(topic, lang):
     """The topic's name in 'en' or 'ar' (the topic image's alt text)."""
     en, ar = TOPICS.get(topic, TOPICS['general'])
     return ar if lang == 'ar' else en
+
+# Labels where topics are listed side by side (the topic chips of AI news, the weekly pages): "AI news" would read as the
+# whole list there, so the stories no other topic took are "Other AI news".
+LABELS = {'general': ('Other AI news', 'أخبار أخرى عن الذكاء الاصطناعي')}
+
+def label(topic, lang):
+    """The topic's label in a list of topics (its name, except LABELS)."""
+    if topic in LABELS:
+        en, ar = LABELS[topic]
+        return ar if lang == 'ar' else en
+    return name(topic, lang)

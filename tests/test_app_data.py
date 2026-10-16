@@ -12,7 +12,7 @@ class AppDataTests(unittest.TestCase):
         cls.out=app_data.payloads(cls.data,cls.feed,cls.sources,cls.uae,cls.models,*cls.docs)
 
     def test_files_and_schema(self):
-        self.assertEqual(set(self.out),{'catalog.json','news.json','uae.json','learn.json','models.json','about.json'})
+        self.assertEqual(set(self.out),{'catalog.json','news.json','uae.json','learn.json','models.json','about.json','archive.json'})
         for name,payload in self.out.items():self.assertEqual(payload['schema'],app_data.APP_SCHEMA,name)
 
     def test_catalog_keeps_backend_fields_out(self):

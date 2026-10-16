@@ -350,7 +350,7 @@ def run(pw):
         hrefs = page.evaluate(home_links)
         check(hrefs and all(h == 'index.html?lang=ar' or h.startswith('index.html?lang=ar#') for h in hrefs), f'{tag} links back to the overview {[h for h in hrefs if "?lang=ar" not in h][:3]}')
         for sel, want_hash in (('.top .nav a.n-home', ''), ('.top .nav a[href$="#hardware"]', '#hardware'), ('.foot a.brand', ''),
-                               ('[id="stack/rag-memory"] a.lchip.hw[href*="#hardware/p/"] >> visible=true >> nth=0', '#hardware')):  # the overview then shortens it to #hardware
+                               ('[id="stack/rag-memory"] a.lchip.hw[href*="#hardware/p/"] >> visible=true >> nth=0', '#hardware/p/')):  # a product keeps its deep link
             page.goto(URL + '?lang=ar' + ('#stack/rag-memory' if 'rag-memory' in sel else ''))
             page.wait_for_timeout(100)
             if 'rag-memory' in sel:

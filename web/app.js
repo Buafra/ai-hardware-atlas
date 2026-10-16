@@ -64,8 +64,9 @@
     return words.every(w => t.includes(w) || c.includes(w));
   }
   // nq and uq are the searches of AI news and UAE AI, one each (the UAE list is a part of the news, with its own context).
-  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',region:'',nq:'',uq:''};
-  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',region:'region',nq:'nq',uq:'uq'};
+  // nt is the topic chosen in AI news (a topic id of scripts/topics.py, as the cards' data-topic).
+  const DEFAULTS = {q:'',vendor:'',level:'',scope:'',sort:'level',dir:1,view:'cards',cmp:[],lang:'en',params:'',bits:'4',extra:'20',fit:false,model:'',region:'',nq:'',uq:'',nt:''};
+  const PARAMS = {q:'q',vendor:'vendor',level:'level',scope:'scope',sort:'sort',dir:'dir',view:'view',cmp:'cmp',lang:'lang',params:'p',bits:'bits',extra:'extra',fit:'fit',model:'m',region:'region',nq:'nq',uq:'uq',nt:'nt'};
   const NEWS_QUERIES = ['nq', 'uq'];
   function encodeState(state) {
     const qs = new URLSearchParams();
@@ -89,10 +90,12 @@
     if (!['cards','table','timeline'].includes(s.view)) s.view = 'cards';
     if (!['en','ar'].includes(s.lang)) s.lang = 'en';
     if (!['global','uae'].includes(s.region)) s.region = '';
+    if (!/^[a-z]{2,20}$/.test(s.nt)) s.nt = '';
     return s;
   }
   // Views live in the hash (#home, #hardware, #news, #uae, #contact); filters stay in the query string.
-  // Deep links such as #hardware/level/Personal, #uae/f/<id>, #contact/about or #contact/android are applied once, then the hash is reduced to the view.
+  // Deep links such as #hardware/level/Personal, #contact/about or #contact/android are applied once, then the hash is reduced to the view.
+  // A product or a key fact (#hardware/p/<id>, #uae/f/<id>) keeps its deep link in the address, so the address can be shared.
   const VIEWS = ['home','hardware','news','uae','contact'];
   const SUBS = {hardware: ['cards','table','timeline','compare','run','level','vendor','p'], news: ['all','global','uae'], uae: ['f'], contact: ['about', 'android']};
   const WITH_ARG = ['level','vendor','p','f'];
@@ -103,8 +106,8 @@
     let qs;
     try { qs = new URLSearchParams(search || ''); } catch (e) { return 'home'; }
     if (HW_KEYS.some(k => qs.has(k))) return 'hardware';
-    // Without a hash, a region or a news search opens AI news and a UAE search opens UAE AI (the head script agrees).
-    if (qs.has('region') || qs.has('nq')) return 'news';
+    // Without a hash, a region, a topic or a news search opens AI news and a UAE search opens UAE AI (the head script agrees).
+    if (qs.has('region') || qs.has('nq') || qs.has('nt')) return 'news';
     return qs.has('uq') ? 'uae' : 'home';
   }
   function parseRoute(hash, search) {
@@ -133,13 +136,14 @@
       if (['cards','table','timeline'].includes(route.sub)) out.patch = {view: route.sub};
       else if (route.sub === 'level' && has(known.levels, route.arg)) out.patch = {...clear, level: route.arg};
       else if (route.sub === 'vendor' && has(known.vendors, route.arg)) out.patch = {...clear, vendor: route.arg};
-      else if (route.sub === 'p' && has(known.products, route.arg)) { out.patch = {...clear, view: 'cards'}; out.focus = 'p-' + route.arg; }
+      else if (route.sub === 'p' && has(known.products, route.arg)) { out.patch = {...clear, view: 'cards'}; out.focus = 'p-' + route.arg; out.hash = 'hardware/p/' + route.arg; }
       else if (route.sub === 'run') out.focus = 'estimator';
       else if (route.sub === 'compare') out.focus = 'compare';
     } else if (route.view === 'news' && route.sub) {
       out.patch = {region: route.sub === 'all' ? '' : route.sub};
     } else if (route.view === 'uae' && route.sub === 'f' && has(known.facts, route.arg)) {
       out.focus = 'fact-' + route.arg;
+      out.hash = 'uae/f/' + route.arg;
     } else if (route.view === 'contact' && (route.sub === 'about' || route.sub === 'android')) {
       out.focus = route.sub;
     }
@@ -228,7 +232,45 @@
   }
   // What the hardware search offers: nothing below two characters.
   function modelSuggestions(models, query) { return String(query || '').trim().length < 2 ? [] : searchModels(models, query); }
-  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions,normText,searchWords,matchesWords};
+  // Share buttons: a story shares "<headline> — via cipherlacuna.ae" with the original article's link; a product or a key
+  // fact shares its own deep link. `copy` is what goes to the clipboard where the browser has no share sheet.
+  const VIA = {en: '{t} — via cipherlacuna.ae', ar: '{t} — عبر cipherlacuna.ae'};
+  function sharePayload(kind, title, url, lang) {
+    const t = String(title ?? '').replace(/\s+/g, ' ').trim(), u = String(url ?? '');
+    if (kind === 'story') { const text = VIA[lang === 'ar' ? 'ar' : 'en'].replace('{t}', () => t); return {title: t, text, url: u, copy: text + ' ' + u}; }
+    return {title: t, url: u, copy: u};
+  }
+  // The deep link of a product or a key fact: the page address with the language (Arabic only) and the route.
+  function deepLink(base, route, lang) { return pageUrl(base, lang === 'ar' ? 'lang=ar' : '', route); }
+  // Older stories (the news archive, dist/news-archive/): what a card shows in one language, as the site's own cards do
+  // (build.py headline_text and summary_of): the AI translation of an English headline in Arabic, the AI summary in that
+  // language, else the publisher's excerpt when the story is in that language.
+  function olderView(item, lang, sources) {
+    const src = (sources || {})[item.source] || {}, ar = lang === 'ar';
+    const title = ar && item.lang === 'en' && item.title_ar ? item.title_ar : item.title;
+    const ai = item['summary_' + lang], summary = ai || (item.excerpt && item.lang === lang ? item.excerpt : '');
+    return {title, summary, kind: ai ? 'ai' : summary ? 'publisher' : '', mt: ar && item.lang === 'en',
+            publisher: (ar ? src.name_ar : src.name) || src.name || item.source || ''};
+  }
+  // The older stories one view lists for a search: in the page language's list, UAE stories only in UAE AI, the region
+  // and topic chosen in AI news, every search word in the headline, summary or publisher shown (the same matcher as the
+  // current list). Newest first, as the archive files are.
+  function olderMatches(items, sources, o) {
+    const terms = o.terms || [];
+    if (!terms.length) return [];
+    return (items || []).filter(i => {
+      if (!(o.lang === 'ar' ? i.lang === 'ar' || !!i.title_ar : i.lang === 'en')) return false;
+      if (o.view === 'uae' && !i.uae) return false;
+      if (o.view === 'news') {
+        const region = ((sources || {})[i.source] || {}).region, regions = (region === 'global' ? ['global'] : []).concat(i.uae ? ['uae'] : []);
+        if (o.region && !(regions.length ? regions : ['global']).includes(o.region)) return false;
+        if (o.topic && i.topic !== o.topic) return false;
+      }
+      const v = olderView(i, o.lang, sources), norm = normText([v.title, v.summary, v.publisher].join(' '));
+      return matchesWords(norm, terms, norm.replace(/ /g, ''));
+    });
+  }
+  if (typeof module !== 'undefined') module.exports = {select,dateNumber,dateRange,estimateGB,fitStatus,encodeState,decodeState,parseRoute,routePatch,pageUrl,countLabel,when,releaseKind,HW_KEYS,searchModels,modelSuggestions,normText,searchWords,matchesWords,sharePayload,deepLink,olderView,olderMatches};
   if (!root.document) return;
 
   const AR = {
@@ -321,6 +363,13 @@
     'Search news…':'ابحث في الأخبار…','Clear search':'مسح البحث','Results: {m}':'النتائج: {m}','Results: {m} · showing {n}':'النتائج: {m} · المعروض منها {n}',
     'No results':'لا توجد نتائج','No matches. Try another word or clear the search.':'لا توجد نتائج. جرّب كلمة أخرى أو امسح البحث.',
     'No headlines in this region match this search. Choose All to search every region.':'لا توجد عناوين في هذا النطاق تطابق هذا البحث. اختر «الكل» للبحث في كل النطاقات.',
+    // Topic chips, older stories (the news archive) and share buttons
+    'Topic':'الموضوع','No headlines match these filters. Choose All to see every headline.':'لا توجد عناوين تطابق هذه الفلاتر. اختر «الكل» لعرض كل العناوين.',
+    'No headlines match this search with these filters. Choose All to search every headline.':'لا توجد عناوين تطابق هذا البحث مع هذه الفلاتر. اختر «الكل» للبحث في كل العناوين.',
+    'Search older stories':'ابحث في الأخبار الأقدم','Search earlier months':'ابحث في الأشهر السابقة','Older stories: {m}':'الأخبار الأقدم: {m}',
+    'No older stories match this search.':'لا توجد أخبار أقدم تطابق هذا البحث.','Loading older stories…':'جارٍ تحميل الأخبار الأقدم…',
+    'Older stories could not be loaded. Try again later.':'تعذّر تحميل الأخبار الأقدم. حاول مرة أخرى لاحقاً.',
+    'Share this product':'مشاركة المنتج','Share this key fact':'مشاركة الحقيقة الرئيسية','Share this story':'مشاركة الخبر',
     'Key facts':'حقائق رئيسية','Newest first. Hardware tags open the matching products.':'الأحدث أولاً. وسوم العتاد تفتح المنتجات المطابقة.','Sources':'المصادر',
     'Each product links to its evidence. Uses are editorial guidance. Power figures apply to the listed component or edition, not the whole server. Launch prices are vendor MSRPs at launch, not current street prices. Timing and stock vary by manufacturer and region. Approximate prices are dated snapshots of retail listings or reported estimates, not offers; UAE retail prices normally include 5% VAT. Product images belong to NVIDIA and AMD and link to their source pages.':'كل منتج مرتبط بمصدره. الاستخدامات المقترحة إرشاد تحريري. أرقام الطاقة تخص المكوّن أو الإصدار المذكور، لا الخادم كاملاً. أسعار الإطلاق هي الأسعار المقترحة من الشركة عند الإطلاق، وليست أسعار السوق الحالية. المواعيد والتوفر يختلفان حسب الشركة المصنّعة والمنطقة. الأسعار التقريبية لقطات مؤرّخة من قوائم المتاجر أو تقديرات منشورة، وليست عروض بيع، وأسعار متاجر الإمارات تشمل عادةً ضريبة القيمة المضافة 5%. صور المنتجات مملوكة لـ NVIDIA وAMD وترتبط بصفحات مصادرها.',
     'Llama, Qwen, DeepSeek, gpt-oss…':'مثل Llama وQwen وDeepSeek وgpt-oss…','Specification':'المواصفة','Selected for comparison':'المنتجات المختارة للمقارنة'
@@ -334,6 +383,10 @@
   if (!new URLSearchParams(location.search).has('lang') && store.get('atlas-lang') === 'ar') state.lang = 'ar';
   state.cmp = state.cmp.filter(id => byId.has(id));
   let visible = data.products, theme = store.get('atlas-theme') || 'auto', currentView = 'home', lastHref = '', routeSeq = 0;
+  // The part of a product or key-fact deep link that stays in the address ('p/<id>', 'f/<id>'), so it can be shared; it
+  // goes with the next navigation, or when the product leaves the cards (another filter, the table or the timeline).
+  let currentDeep = '';
+  const hashNow = () => currentDeep ? currentView + '/' + currentDeep : currentView;
   // Until the load event the address is left exactly as opened (see syncUrl).
   let booted = document.readyState === 'complete';
   const T = s => state.lang === 'ar' ? (AR[s] || s) : s;
@@ -481,17 +534,18 @@
     // browser's Tab starting point into the page. Before the load event nothing is rewritten, because the browser scrolls
     // to the element named by the hash at load: shortening #hardware/p/<id> to #hardware earlier sends it to the top.
     if (booted) {
-      const hash = !location.hash && impliedView(encodeState(state)) === currentView ? '' : currentView;
+      const hash = !location.hash && !currentDeep && impliedView(encodeState(state)) === currentView ? '' : hashNow();
       try { history.replaceState(null, '', pageUrl(location.pathname, encodeState(state), hash)); } catch (e) {}
     }
     lastHref = location.href;
   }
-  function shareUrl() { return pageUrl(location.href.split(/[?#]/)[0], encodeState(state), currentView); }
+  function shareUrl() { return pageUrl(location.href.split(/[?#]/)[0], encodeState(state), hashNow()); }
 
   function render() {
     const n = need();
     visible = select(data.products, {q:state.q, vendor:state.vendor, level:state.level, scope:state.scope, need:n, fitOnly:state.fit}, state.sort, state.dir);
     const ids = new Set(visible.map(p => p.id));
+    if (currentDeep.startsWith('p/') && (state.view !== 'cards' || !ids.has(currentDeep.slice(2)))) currentDeep = '';
     cards.forEach((el, id) => {
       el.hidden = !ids.has(id);
       const fit = el.querySelector('.fit'), s = fitStatus(byId.get(id), n);
@@ -521,30 +575,39 @@
   }
 
   function renderNews() {
-    // Filters the server-rendered list for the current language by the search and the region; "Show more" reveals the
-    // matches in steps. The region chips count the matches of the search in each region.
+    // Filters the server-rendered list for the current language by the search, the region and the topic; "Show more"
+    // reveals the matches in steps. The region chips count the matches of the search and the topic in each region, the
+    // topic chips the matches of the search and the region in each topic.
     const view = $('news');
     if (!view) return;
+    // A topic the page language has no headline in (the other language's, or one from an older shared link) is no choice.
+    const tchips = [...view.querySelectorAll('[data-topic-chip]')];
+    tchips.forEach(b => { b.hidden = !!b.dataset.topicChip && !(b.dataset.langs || '').split(' ').includes(state.lang); });
+    if (state.nt && !tchips.some(b => b.dataset.topicChip === state.nt && !b.hidden)) state.nt = '';
     view.querySelectorAll('[data-region-chip]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.regionChip === state.region)));
+    tchips.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.topicChip === state.nt)));
     const list = view.querySelector(`.nlist[data-lang="${state.lang}"]`), more = $('news-more'), terms = searchWords(state.nq);
-    if (!list) { if (more) more.hidden = true; searchUi('news', terms, 0, 0, null, false); return; }
-    const counts = {'': 0, global: 0, uae: 0};
-    let total = 0, shown = 0;
+    if (!list) { if (more) more.hidden = true; searchUi('news', terms, 0, 0, null, false); renderOlder('news'); return; }
+    const counts = {'': 0, global: 0, uae: 0}, topicCounts = {'': 0};
+    let total = 0, shown = 0, hits = 0;
     list.querySelectorAll('li[data-region]').forEach(li => {
-      const regions = li.dataset.region.split(' '), hit = !terms.length || newsHit(li, terms);
-      if (hit) { counts['']++; regions.forEach(r => { if (r in counts) counts[r]++; }); }
-      const match = hit && (!state.region || regions.includes(state.region));
+      const regions = li.dataset.region.split(' '), topic = li.dataset.topic || '', hit = !terms.length || newsHit(li, terms);
+      const inRegion = !state.region || regions.includes(state.region), inTopic = !state.nt || topic === state.nt;
+      if (hit) hits++;
+      if (hit && inTopic) { counts['']++; regions.forEach(r => { if (r in counts) counts[r]++; }); }
+      if (hit && inRegion) { topicCounts['']++; topicCounts[topic] = (topicCounts[topic] || 0) + 1; }
+      const match = hit && inRegion && inTopic;
       if (match) total++;
       li.hidden = !(match && shown < newsLimit);
       if (!li.hidden) shown++;
     });
     list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
-    view.querySelectorAll('[data-region-chip]').forEach(b => {
-      const n = b.querySelector(`.n [data-lang="${state.lang}"]`), v = String(counts[b.dataset.regionChip] ?? 0);
-      if (n && n.textContent !== v) n.textContent = v;
-    });
+    const setCount = (b, v) => { const n = b.querySelector(`.n [data-lang="${state.lang}"]`); if (n && n.textContent !== v) n.textContent = v; };
+    view.querySelectorAll('[data-region-chip]').forEach(b => setCount(b, String(counts[b.dataset.regionChip] ?? 0)));
+    tchips.forEach(b => setCount(b, String(topicCounts[b.dataset.topicChip] ?? 0)));
     if (more) more.hidden = shown >= total;
-    searchUi('news', terms, total, shown, counts, true);
+    searchUi('news', terms, total, shown, counts, true, {filtered: !!(state.region || state.nt), hits});
+    renderOlder('news');
   }
 
   function renderUae() {
@@ -562,6 +625,7 @@
     if (list) list.querySelectorAll('.nday').forEach(d => { d.hidden = !d.querySelector('li:not([hidden])'); });
     more.hidden = shown >= total;
     searchUi('uae', terms, total, shown, null, !!list);
+    renderOlder('uae');
   }
 
   // ---------- news search ----------
@@ -591,12 +655,16 @@
   // the one live region and holds the message (kept for screen readers only), so it is announced once; the box under the
   // list shows it on screen (aria-hidden, so it isn't read twice) with "Clear search". "No results" is left only for a
   // search where the page language has no headlines at all, above that language's own message (as in the app).
-  function searchUi(view, terms, total, shown, counts, hasList) {
-    const input = $(view + '-q'), searching = terms.length > 0, none = hasList && searching && total === 0;
+  // `f` (AI news): whether a region or a topic is chosen, and how many headlines match the search alone. A choice of chips
+  // with no headline says so too (with no "Clear search" button when nothing is searched).
+  function searchUi(view, terms, total, shown, counts, hasList, f) {
+    const input = $(view + '-q'), searching = terms.length > 0, filtered = !!(f && f.filtered), none = hasList && (searching || filtered) && total === 0;
     if (input) $(view + '-q-clear').hidden = !input.value;
     const count = countEl(view), m = countLabel(total, 'headline', state.lang);
-    const msg = none ? T(view === 'news' && state.region && counts && counts[''] > 0
-      ? 'No headlines in this region match this search. Choose All to search every region.' : 'No matches. Try another word or clear the search.') : '';
+    const msg = !none ? '' : T(!searching ? 'No headlines match these filters. Choose All to see every headline.'
+      : view === 'news' && state.region && !state.nt && counts && counts[''] > 0 ? 'No headlines in this region match this search. Choose All to search every region.'
+      : view === 'news' && filtered && f.hits > 0 ? 'No headlines match this search with these filters. Choose All to search every headline.'
+      : 'No matches. Try another word or clear the search.');
     if (none) setText(count, msg);
     else if (!hasList) { if (searching) setText(count, T('No results')); else setHtml(count, builtCount[view]); }
     else if (searching) setText(count, shown < total ? F('Results: {m} · showing {n}', {m, n: shown}) : F('Results: {m}', {m}));
@@ -609,7 +677,118 @@
     const empty = $(view + '-empty');
     if (!empty) return;
     empty.hidden = !none;
+    const clear = empty.querySelector('[data-clear-search]');
+    if (clear) clear.hidden = !searching;
     if (none) setText($(view + '-empty-msg'), msg);
+  }
+
+  // ---------- older stories (the news archive) ----------
+  // While a search is active, AI news and UAE AI offer "Search older stories": a press loads the archive's index and its
+  // newest month files (dist/news-archive/, same origin, written by build.py; OLDER_MONTHS at a time, "Search earlier
+  // months" for more) and lists the matches under the current results, with the same matcher (olderMatches). Loaded
+  // once per page and shared by both views. The list follows the search, the language, and in AI news the region and topic.
+  const OLDER_STEP = 20, OLDER_MONTHS = 3, MONTH_FILE = /^\d{4}-(0[1-9]|1[0-2])\.json$/;
+  const archive = {index: null, items: [], loaded: 0, loading: null, failed: false};
+  const older = {news: {open: false, limit: OLDER_STEP, key: ''}, uae: {open: false, limit: OLDER_STEP, key: ''}};
+  function loadArchive(view, more) {
+    if (archive.loading) return archive.loading;
+    const box = $(view + '-older'), base = new URL(box ? box.dataset.archive : 'news-archive/index.json', location.href);
+    archive.loading = (async () => {
+      try {
+        if (!archive.index) {
+          const r = await fetch(base.href, {credentials: 'same-origin'});
+          if (!r.ok) throw new Error('index ' + r.status);
+          archive.index = await r.json();
+        }
+        const months = (archive.index.months || []).filter(m => MONTH_FILE.test(m.file || ''));
+        if (archive.loaded === 0 || more) {
+          for (const m of months.slice(archive.loaded, archive.loaded + OLDER_MONTHS)) {
+            const r = await fetch(new URL(m.file, base).href, {credentials: 'same-origin'});
+            if (!r.ok) throw new Error('month ' + r.status);
+            const doc = await r.json();
+            archive.items.push(...(Array.isArray(doc.items) ? doc.items : []));
+            archive.loaded++;
+          }
+        }
+        archive.failed = false;
+      } catch (e) { archive.failed = true; }
+      archive.loading = null;
+      older.news.key = older.uae.key = '';
+    })();
+    return archive.loading;
+  }
+  const SUMMARY_BY = {ai: {en: 'AI summary', ar: 'ملخص بالذكاء الاصطناعي'}, publisher: {en: 'From the publisher', ar: 'من الناشر'}};
+  function olderCard(i) {
+    // The same card as the server's (build.py news_card), without an image; text only, escaped.
+    const lang = state.lang, ar = lang === 'ar', v = olderView(i, lang, archive.index && archive.index.sources), dir = `lang="${lang}" dir="${ar ? 'rtl' : 'ltr'}"`;
+    const url = /^https:\/\//.test(String(i.url || '')) ? i.url : '';
+    const sum = v.summary ? `<p class="n-sum" ${dir}>${esc(v.summary)}</p><p class="n-by">${esc(SUMMARY_BY[v.kind][lang])}</p>` : '';
+    const link = url ? `<a class="n-src" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(ar ? 'المصدر' : 'Source')}: ${esc(v.publisher)} <span class="n-ext" aria-hidden="true">↗</span></a>` : '';
+    const icon = (document.querySelector('.share-btn svg') || {}).outerHTML || '', label = esc(T('Share this story'));
+    const share = url ? `<button type="button" class="share-btn n-share" data-share="story" aria-label="${label}" title="${label}">${icon}</button>` : '';
+    return `<li class="nitem older-item" data-topic="${esc(i.topic || '')}"><h4 class="n-title" ${dir}>${esc(v.title)}</h4>${sum}`
+      + `<p class="n-meta">${link}<time datetime="${esc(i.published)}">${esc(day(i.published))}</time>${v.mt ? '<span class="mt">ترجمة بالذكاء الاصطناعي</span>' : ''}${share}</p></li>`;
+  }
+  function renderOlder(view) {
+    const box = $(view + '-older');
+    if (!box) return;
+    const o = older[view], terms = searchWords(state[view === 'news' ? 'nq' : 'uq']);
+    const btn = $(view + '-older-btn'), list = $(view + '-older-list'), count = $(view + '-older-count'), more = $(view + '-older-more'), back = $(view + '-older-back');
+    box.hidden = !terms.length;
+    if (!terms.length) { o.open = false; o.limit = OLDER_STEP; }
+    btn.hidden = o.open;
+    btn.setAttribute('aria-expanded', String(o.open));
+    if (!o.open || archive.loading || archive.failed || !archive.index) {
+      if (o.key) { list.innerHTML = ''; o.key = ''; }
+      more.hidden = back.hidden = true;
+      setText(count, !o.open ? '' : archive.failed ? T('Older stories could not be loaded. Try again later.') : T('Loading older stories…'));
+      if (o.open && archive.failed) btn.hidden = false;  // a press tries again
+      return;
+    }
+    const hits = olderMatches(archive.items, archive.index.sources, {lang: state.lang, terms, view, region: state.region, topic: state.nt});
+    const shown = hits.slice(0, o.limit), key = [state.lang, terms.join(' '), state.region, state.nt, o.limit, archive.items.length].join('|');
+    if (key !== o.key) { list.innerHTML = shown.map(olderCard).join(''); o.key = key; }
+    setText(count, hits.length ? F('Older stories: {m}', {m: countLabel(hits.length, 'headline', state.lang)}) : T('No older stories match this search.'));
+    more.hidden = shown.length >= hits.length;
+    back.hidden = archive.loaded >= (archive.index.months || []).length;
+  }
+  async function openOlder(view, more) {
+    const o = older[view];
+    o.open = true;
+    if (!more) o.limit = OLDER_STEP;
+    const loading = loadArchive(view, more);
+    renderOlder(view);
+    await loading;
+    renderOlder(view);
+    const count = $(view + '-older-count');
+    if (count && !more) { count.tabIndex = -1; count.focus({preventScroll: true}); }
+  }
+
+  // ---------- share buttons ----------
+  // The phone's share sheet where the browser has one (navigator.share), else the text is copied, with a toast.
+  async function shareFrom(btn) {
+    const kind = btn.dataset.share, base = location.href.split(/[?#]/)[0];
+    let title = '', url = '';
+    if (kind === 'story') {
+      const li = btn.closest('li'), a = li && li.querySelector('a.n-src'), h = li && li.querySelector('.n-title');
+      if (!a || !h) return;
+      title = h.textContent; url = a.href;
+    } else if (kind === 'product') {
+      const card = btn.closest('[data-product]'), p = card && byId.get(card.dataset.product);
+      if (!p) return;
+      title = p.model + ' · Cipher Lacuna'; url = deepLink(base, 'hardware/p/' + p.id, state.lang);
+    } else if (kind === 'fact') {
+      const card = btn.closest('[data-fact]'), h = card && (card.querySelector(`h3 [data-lang="${state.lang}"]`) || card.querySelector('h3'));
+      if (!h) return;
+      title = h.textContent + ' · Cipher Lacuna'; url = deepLink(base, 'uae/f/' + card.dataset.fact, state.lang);
+    } else return;
+    const s = sharePayload(kind, title, url, state.lang);
+    if (navigator.share) {
+      try { await navigator.share(kind === 'story' ? {title: s.title, text: s.text, url: s.url} : {title: s.title, url: s.url}); return; }
+      catch (e) { if (e && e.name === 'AbortError') return; }  // closed by the visitor; any other failure falls back to copying
+    }
+    try { await navigator.clipboard.writeText(s.copy); flash(T('Link copied')); }
+    catch (e) { window.prompt(T('Copy link'), s.copy); }
   }
   function searchInput(view, value) {
     const key = view === 'news' ? 'nq' : 'uq', before = searchWords(state[key]).join(' ');
@@ -759,7 +938,7 @@
     if (s.model && !findModel(s.model)) s.model = '';
     sizeFromModel(s);
     if (encodeState(s) === encodeState(state)) return;
-    if (s.region !== state.region) newsLimit = NEWS_STEP;
+    if (s.region !== state.region || s.nt !== state.nt) newsLimit = NEWS_STEP;
     // Paging restarts only when the search words change, not when another parameter does.
     const same = k => searchWords(s[k]).join(' ') === searchWords(state[k]).join(' ');
     if (!same('nq')) newsLimit = NEWS_STEP;
@@ -774,7 +953,8 @@
   }
   function route(first) {
     syncFromUrl();
-    const r = parseRoute(location.hash, location.search), {patch, focus} = routePatch(r, known);
+    const r = parseRoute(location.hash, location.search), {patch, focus, hash} = routePatch(r, known);
+    currentDeep = hash.includes('/') ? hash.slice(hash.indexOf('/') + 1) : '';
     if (Object.keys(patch).length) {
       if ('region' in patch && patch.region !== state.region) newsLimit = NEWS_STEP;
       Object.assign(state, patch);
@@ -851,7 +1031,7 @@
   ['vendor','level','scope','bits','fit-only'].forEach(id => $(id).addEventListener('change', () => { readControls(); render(); }));
   $('sort').addEventListener('change', () => { state.sort = $('sort').value; render(); });
   $('direction').addEventListener('click', () => { state.dir *= -1; render(); });
-  $('reset').addEventListener('click', () => { Object.assign(state, {...DEFAULTS, cmp: state.cmp, lang: state.lang, view: state.view, region: state.region, nq: state.nq, uq: state.uq}); writeControls(); render(); });
+  $('reset').addEventListener('click', () => { Object.assign(state, {...DEFAULTS, cmp: state.cmp, lang: state.lang, view: state.view, region: state.region, nq: state.nq, uq: state.uq, nt: state.nt}); writeControls(); render(); });
   ['cards','table','timeline'].forEach(v => $('view-' + v).addEventListener('click', () => { state.view = v; render(); }));
   document.querySelectorAll('[data-params]').forEach(b => b.addEventListener('click', () => { $('params').value = b.dataset.params; readControls(); render(); }));
   document.addEventListener('change', e => { if (e.target.classList.contains('cmp-toggle')) toggleCompare(e.target.value, e.target.checked, e.target); });
@@ -865,6 +1045,12 @@
     if (r) toggleCompare(r.dataset.remove, false);
     const rc = e.target.closest('[data-region-chip]');
     if (rc) { state.region = rc.dataset.regionChip; newsLimit = NEWS_STEP; render(); }
+    const tc = e.target.closest('[data-topic-chip]');
+    if (tc) { state.nt = tc.dataset.topicChip; newsLimit = NEWS_STEP; render(); }
+    const sh = e.target.closest('[data-share]');
+    if (sh) shareFrom(sh);
+    const ob = e.target.closest('[data-older]');
+    if (ob) openOlder(ob.dataset.older);
     // The (x) in a news search field and the "Clear search" button under a search without results. The (x) keeps the
     // focus in the field (pressing it never takes the focus, see below; from the keyboard it gives it back). The button
     // gives the focus to the field from the keyboard or a mouse (e.detail 0 is a keyboard click); after a tap it goes to
@@ -874,6 +1060,11 @@
   });
   $('news-more') && $('news-more').addEventListener('click', () => { newsLimit += NEWS_STEP; renderNews(); });
   $('uae-more') && $('uae-more').addEventListener('click', () => { uaeLimit += UAE_STEP; renderUae(); });
+  ['news', 'uae'].forEach(view => {
+    const more = $(view + '-older-more'), back = $(view + '-older-back');
+    if (more) more.addEventListener('click', () => { older[view].limit += OLDER_STEP; renderOlder(view); });
+    if (back) back.addEventListener('click', () => openOlder(view, true));
+  });
   ['news', 'uae'].forEach(view => {
     const input = $(view + '-q');
     if (!input) return;
