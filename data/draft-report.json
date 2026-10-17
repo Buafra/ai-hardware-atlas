@@ -1,6 +1,21 @@
 {
-  "at": "2026-10-16T18:53:28+00:00",
-  "created": [
-    "NVIDIA RTX Spark"
+  "at": "2026-10-17T00:31:03+00:00",
+  "created": [],
+  "waiting": [],
+  "in_pull_request": [],
+  "pull_requests": [],
+  "usage": {
+    "requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_usd": 0.0
+  },
+  "settled_without_pull_request": [
+    "https://newsroom.amd.com/news/amd-expands-ai-leadership-across-client-graphics/",
+    "https://newsroom.amd.com/news/aai-2026-ryzen-ai-embedded-x100/",
+    "https://newsroom.amd.com/news/aai-2026-mi400-instinct-update/",
+    "https://newsroom.amd.com/news/aai-2026-helios-update/",
+    "https://newsroom.amd.com/news/aai-2026-full-stack-compute-agentic-ai/",
+    "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs"
   ]
 }
