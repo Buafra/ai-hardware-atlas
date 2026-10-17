@@ -1,0 +1,90 @@
+{
+ "month": "2026-10",
+ "policy_version": 1,
+ "items": [
+  {
+   "id": "4e0d0b364fef",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-15T05:45:39+00:00",
+   "title": "Al Ansari Exchange tests AI in mobile app",
+   "title_ar": "الأنصاري للصرافة تختبر الذكاء الاصطناعي في تطبيقها للهاتف المحمول",
+   "url": "https://www.wam.ae/en/article/c2r7ir3-ansari-exchange-tests-mobile-app",
+   "summary_en": "Al Ansari Exchange, a subsidiary of Al Ansari Financial Services PJSC, is testing artificial intelligence in its mobile app and exploring ways to expand its use, WAM reported from Dubai on 15 October 2026. The step is part of the company's participation in a Dubai government programme in which 11 Dubai-based companies pledged to integrate agentic AI into their operations with the support of Dubai Chambers. Group CEO Rashed A. Al Ansari described the company's voice AI work as a stepping stone towards more advanced uses, including agentic AI. He added that the company works with the relevant UAE authorities on national priorities and regulatory requirements.",
+   "summary_ar": "تختبر «الأنصاري للصرافة»، التابعة لشركة «الأنصاري للخدمات المالية» (Al Ansari Financial Services PJSC)، استخدام الذكاء الاصطناعي في تطبيقها للهاتف المحمول، وتستكشف فرص توسيع هذا الاستخدام، بحسب وكالة أنباء الإمارات (وام) من دبي في 15 أكتوبر 2026. وتأتي الخطوة ضمن مشاركة الشركة في برنامج حكومي في دبي تعهدت بموجبه 11 شركة مقرها دبي بدمج الذكاء الاصطناعي الوكيلي (agentic AI) في عملياتها بدعم من غرف دبي. ووصف راشد الأنصاري، الرئيس التنفيذي للمجموعة، عمل الشركة في مجال الذكاء الاصطناعي الصوتي بأنه خطوة نحو تطبيقات أكثر تقدماً، منها الذكاء الاصطناعي الوكيلي. وأضاف أن الشركة تعمل بالتعاون مع الجهات المعنية في الإمارات لدعم الأولويات الوطنية وتنفيذ المتطلبات التنظيمية.",
+   "excerpt": null
+  },
+  {
+   "id": "66039df0fa2e",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-15T05:34:12+00:00",
+   "title": "AI influences 9% of Majid Al Futtaim customer transactions, CEO tells Sharjah Investment Forum 2026",
+   "title_ar": "الرئيس التنفيذي لماجد الفطيم لمنتدى الشارقة للاستثمار 2026: الذكاء الاصطناعي يؤثر في 9% من معاملات العملاء",
+   "url": "https://www.wam.ae/en/article/c2r7ir2-influences-majid-futtaim-customer-transactions-ceo",
+   "summary_en": "Ahmed Galal Ismail, CEO of Majid Al Futtaim Holding, said AI agents now play a role in around 9 percent of the group's customer transactions, up from virtually zero a few months ago. He spoke at the ninth Sharjah Investment Forum, held on 14 and 15 October 2026 under the theme \"Building Adaptive Economies\". He expected most commercial transactions in the coming years to involve AI agents, directly or indirectly, which would require businesses to rethink their operating models. He said 25 percent of the group's retail business is online, yet malls still matter because consumers seek social and entertainment experiences. He added that trust will grow in importance as AI improves price and product transparency, and that preparing for the consumer of 2035 means investing in people, data, algorithms and AI agents.",
+   "summary_ar": "قال أحمد جلال إسماعيل، الرئيس التنفيذي لشركة «مجموعة majid al futtaim القابضة» (Majid Al Futtaim Holding)، إن وكلاء الذكاء الاصطناعي يؤدون الآن دوراً في نحو 9 في المئة من معاملات عملاء المجموعة، بعد أن كانت النسبة شبه معدومة قبل أشهر قليلة. وجاء ذلك خلال الدورة التاسعة من ملتقى الشارقة للاستثمار، المنعقدة يومي 14 و15 أكتوبر 2026 تحت شعار «بناء اقتصادات مرنة». وتوقع أن تشمل غالبية المعاملات التجارية في السنوات المقبلة وكلاء الذكاء الاصطناعي بصورة مباشرة أو غير مباشرة، ما يتطلب من الشركات إعادة التفكير في نماذج عملها. وذكر أن 25 في المئة من أعمال التجزئة في المجموعة تتم عبر الإنترنت، لكن المراكز التجارية ما زالت مهمة لأن المستهلكين يبحثون عن تجارب اجتماعية وترفيهية. وأضاف أن الثقة سترتفع أهميتها مع تحسّن الذكاء الاصطناعي لشفافية الأسعار والمنتجات، وأن الاستعداد لمستهلك 2035 يعني الاستثمار في الكفاءات البشرية والبيانات والخوارزميات ووكلاء الذكاء الاصطناعي.",
+   "excerpt": null
+  },
+  {
+   "id": "398ea5a10cba",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-14T13:30:00+00:00",
+   "title": "Cisco, Nvidia team up to build fatter, faster pluggable",
+   "title_ar": "Cisco وNvidia تتعاونان لبناء وحدات قابلة للتوصيل أكبر سعة وأسرع",
+   "url": "https://www.theregister.com/networks/2026/10/14/cisco-nvidia-team-up-to-build-fatter-faster-pluggable/5302970",
+   "summary_en": "Cisco and Nvidia are working together on a larger, faster pluggable optical module. Cisco's USFP is aimed at 12.8 Tbps in a single optical pluggable, a big step up from the 1.6 Tbps figure the report uses as its point of comparison.",
+   "summary_ar": "تتعاون Cisco وNVIDIA لتطوير وحدة بصرية قابلة للتوصيل تكون أكبر حجماً وأسرع. وتستهدف وحدة USFP من Cisco تحقيق سرعة 12.8 Tbps في وحدة بصرية واحدة، وهو رقم يتجاوز كثيراً سرعة 1.6 Tbps التي يستخدمها التقرير للمقارنة.",
+   "excerpt": "If you thought 1.6 Tbps was fast, just wait, Cisco's USFP targets 12.8 Tbps in a single optical pluggable"
+  },
+  {
+   "id": "cb6feec1d474",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-14T06:01:00+00:00",
+   "title": "NVIDIA Commits $250 Million to Advance UK Agentic Safety and Security Research Over the Next Five Years",
+   "title_ar": "NVIDIA تلتزم بمبلغ 250 مليون دولار لدعم أبحاث أمن وسلامة الذكاء الاصطناعي الوكيلي في بريطانيا خلال السنوات الخمس المقبلة",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-commits-250-million-to-advance-uk-agentic-safety-and-security-research-over-the-next-five-years",
+   "summary_en": "NVIDIA announced a five-year compute donation worth $250 million to strengthen U.K. research on the safety and security of agentic AI, providing $50 million in compute access each year. Most of it will serve the wider U.K. AI safety and security research community, with a share going to the BOLD lab, the SOFAIR lab and Imperial College London. NVIDIA will fund the access through U.K.-based NVIDIA Cloud Partners, with infrastructure hosted in Britain, though provider selection and commercial terms are still to be agreed. Research will cover secure agents, open-model security and real-world threat mitigations. Jensen Huang said AI capability and safety must advance together, and U.K. ministers welcomed the commitment.",
+   "summary_ar": "أعلنت NVIDIA تقديم هبة من القدرات الحاسوبية لمدة خمس سنوات بقيمة 250 مليون دولار لتعزيز الأبحاث البريطانية في سلامة وأمن الذكاء الاصطناعي القائم على الوكلاء، بواقع 50 مليون دولار سنوياً من الوصول إلى الحوسبة. وسيخدم الجزء الأكبر مجتمع أبحاث سلامة الذكاء الاصطناعي وأمنه في المملكة المتحدة، مع حصة لمختبر BOLD ومختبر SOFAIR وجامعة «إمبريال كوليدج لندن». وستموّل NVIDIA هذا الوصول عبر شركاء NVIDIA Cloud Partners داخل بريطانيا، مع استضافة البنية التحتية هناك، على أن يُتفق لاحقاً على اختيار المزوّدين والشروط التجارية. وتشمل الأبحاث الوكلاء الآمنين وأمن النماذج المفتوحة والحدّ من التهديدات الواقعية. وقال «جينسن هوانغ» إن قدرات الذكاء الاصطناعي والسلامة يجب أن تتقدما معاً، ورحّب وزراء بريطانيون بهذا الالتزام.",
+   "excerpt": "NVIDIA today announced a five-year compute donation valued at $250 million to strengthen the United Kingdom’s agentic safety and security research capability."
+  },
+  {
+   "id": "5f7238246fc0",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-14T06:00:28+00:00",
+   "title": "European Cities Deploy NVIDIA-Powered AI Agents to Run Smarter Urban Operations",
+   "title_ar": "مدن أوروبية تنشر وكلاء ذكاء اصطناعي مدعومين بتقنيات NVIDIA لإدارة العمليات الحضرية بشكل أذكى",
+   "url": "https://blogs.nvidia.com/blog/european-cities-agents-urban-operations/",
+   "summary_en": "Cities across the EMEA region and their software, infrastructure and integration partners are using NVIDIA accelerated computing to build physical AI agents and digital twins for urban operations. These tools aim to anticipate maintenance needs, guide planning and make public services more responsive. In France, the Côte-d'Or department, Akila and ThinkDeep built agents for more than 500 public buildings that cut document search time from weeks to minutes and reduced operating costs by 10%. Other projects include an AI factory in Italy's Milan region, vision AI tests at the Port of Antwerp-Bruges and a digital twin for Gothenburg. Partners such as Dell Technologies, HPE and Cisco are packaging systems into locally operated AI factories so cities keep control of their data.",
+   "summary_ar": "تستخدم مدن في منطقة أوروبا والشرق الأوسط وأفريقيا، إلى جانب شركاء في البرمجيات والبنية التحتية والتكامل، الحوسبة المتسارعة من NVIDIA لبناء وكلاء ذكاء اصطناعي فيزيائي ونسخ رقمية توأم لإدارة العمليات الحضرية. وتهدف هذه الأدوات إلى توقّع احتياجات الصيانة وتوجيه التخطيط العمراني وجعل الخدمات العامة أكثر استجابة. وفي فرنسا، بنت مقاطعة كوت دور مع Akila وThinkDeep وكلاء لأكثر من 500 مبنى عام، قلّصوا زمن البحث في الوثائق من أسابيع إلى دقائق وخفّضوا تكاليف التشغيل بنسبة 10%. وتشمل المشاريع الأخرى مصنعاً للذكاء الاصطناعي في منطقة ميلانو الإيطالية، واختبارات للذكاء الاصطناعي البصري في ميناء أنتويرب-بروج، ونسخة رقمية توأم لمدينة غوتنبرغ. ويجري شركاء مثل Dell Technologies وHPE وCisco تجهيز أنظمة تُشغَّل محلياً لتحتفظ المدن بالسيطرة على بياناتها.",
+   "excerpt": "Keeping a city running means making decisions that affect residents every day — from when to repair a road to how to use energy more efficiently."
+  },
+  {
+   "id": "9c9e6971d300",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-14T06:00:08+00:00",
+   "title": "«الأنصاري للصرافة» تختبر الذكاء الاصطناعي الصوتي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/1558026",
+   "summary_en": "Al Ansari Exchange announced that it is testing voice-based AI technologies within its mobile phone app. The company also said it is exploring opportunities to widen the scope of their use. The available text is cut off before giving more details.",
+   "summary_ar": "أعلنت Al Ansari Exchange أنها تختبر تقنيات الذكاء الاصطناعي الصوتي ضمن تطبيقها على الهاتف المحمول. وذكرت الشركة أيضاً أنها تستكشف فرصاً لتوسيع نطاق استخدامها. ويتوقف النص المتاح قبل عرض تفاصيل أخرى.",
+   "excerpt": "أعلنت «الأنصاري للصرافة» عن اختبار تقنيات الذكاء الاصطناعي ضمن تطبيق الهاتف المحمول الخاص بها، واستكشاف فرص توسيع نطاق ا"
+  }
+ ]
+}
