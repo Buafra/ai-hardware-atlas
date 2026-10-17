@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-17T06:05:21+00:00",
+ "updated_at": "2026-10-17T13:48:43+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -173,6 +173,17 @@
    "hf": "deepseek-ai/DeepSeek-V4.1-Flash",
    "context": 1048576,
    "created": 1789021285,
+   "open": true,
+   "params_b": 763.21,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "deepseek/deepseek-v4.1-flash-1017",
+   "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+   "hf": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "context": 1048576,
+   "created": 1792225624,
    "open": true,
    "params_b": 763.21,
    "params_source": "huggingface",
