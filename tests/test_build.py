@@ -443,8 +443,8 @@ class OwnerRequestTests2(unittest.TestCase):
     def test_full_summaries_in_lists_clamped_on_the_landing(self):
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
         clamped=[sel.strip() for sel,body in re.findall(r'([^{}]+)\{([^{}]*)\}',css) if 'line-clamp' in body and 'n-sum' in sel]
-        self.assertEqual(clamped,['.heads .n-sum'])  # only the landing pillars clamp the summary
-        self.assertIn('.heads .n-sum{display:-webkit-box;-webkit-line-clamp:3;',css)
+        self.assertEqual(clamped,['.js .heads li:not(.open) .n-sum'])  # only the landing pillars clamp the summary, with "Show more"
+        self.assertIn('.js .heads li:not(.open) .n-sum{display:-webkit-box;-webkit-line-clamp:3;',css)
         long='The lab released an open model that runs on one GPU. '*12
         html,views=self.render(self.fixed_feed({'id':'g2','title':'A second AI story','lang':'en','uae':False,'published':'2026-09-26T09:00:00+00:00',
                                                 'summary_en':long.strip(),'summary_ar':'ملخص.','summary_source':'ai','summary_version':2,'ai_focus':True}))
@@ -597,6 +597,39 @@ class ReviewRoundTests(unittest.TestCase):
         for card in cards:
             self.assertIn(want,card)
             self.assertIsNone(re.search(r'from \d+ sources?|من \d+ مصدر',card),card)
+    def test_home_headlines_show_more(self):
+        # Owner, Oct 2026: "I can't click on the news article and expand it". Every landing headline card has one "Show
+        # more" in its language, before the source line; the AI news and UAE AI lists (full text) have none.
+        home=self.home
+        lists=re.findall(r'<ol class="heads" data-lang="(en|ar)">(.*?)</ol>',home)
+        self.assertTrue(lists)
+        for lang,body in lists:
+            cards=re.findall(r'<li\b[^>]*>(.*?)</li>',body)
+            self.assertTrue(cards,lang)
+            for card in cards:
+                self.assertEqual(card.count('class="n-more'),1,lang)
+                self.assertIn(build.more_btn(lang)+'<p class="n-meta">',card)
+        self.assertEqual(build.more_btn('en'),'<button type="button" class="n-more js-only" aria-expanded="false" hidden>'
+                                              '<span class="m-more">Show more</span><span class="m-less">Show less</span></button>')
+        self.assertIn('<span class="m-more">عرض المزيد</span><span class="m-less">عرض أقل</span>',build.more_btn('ar'))
+        main=self.html[self.html.index('<main'):self.html.index('</main>')]
+        self.assertNotIn('n-more',main.replace(self.home,''))  # hardware, AI news, UAE AI, contact
+        self.assertEqual(self.html.count('class="n-more'),sum(len(re.findall(r'<li\b',b)) for _,b in lists))
+    def test_home_headlines_cut_only_with_javascript(self):
+        css=(ROOT/'web/style.css').read_text(encoding='utf-8')
+        rules=[(sel.strip(),body) for sel,body in re.findall(r'([^{}]+)\{([^{}]*)\}',re.sub(r'/[*].*?[*]/','',css,flags=re.S))]
+        clamped=sorted(sel for sel,body in rules if 'line-clamp' in body and '.heads' in sel)
+        self.assertEqual(clamped,['.js .heads li:not(.open) .n-sum','.js .heads li:not(.open) .n-title'])  # no JS, no button: nothing cut
+        self.assertIn('.heads .n-more[aria-expanded="true"] .m-more,.heads .n-more[aria-expanded="false"] .m-less{display:none}',css)
+        self.assertIn('html:not(.js) .js-only{display:none!important}',css)
+        self.assertIn('[hidden]{display:none!important}',css)  # the button's own display never shows a hidden one
+        self.assertIn('.heads .n-title,.heads .n-sum{display:block!important;overflow:visible!important}',css)  # printed in full
+        js=(ROOT/'web/app.js').read_text(encoding='utf-8')
+        for text in ('function fitHead(li)','function toggleHead(li)','function watchHeads()','new ResizeObserver(',
+                     "e.target.closest('.heads .n-more')","b.setAttribute('aria-expanded', String(open));",
+                     "'.heads li.can-open:not(.open) .n-title, .heads li.can-open:not(.open) .n-sum'"):
+            self.assertIn(text,js)
+        self.assertIn('watchHeads();',js[js.index('function watchHeads()')+30:])
     def test_hero_quick_links_state_no_count(self):
         self.assertIn('<nav class="jump" aria-label="Quick links" data-i18n-aria="Quick links">',self.home)
         # Only the old label: headlines and summaries on the page may use the words freely.

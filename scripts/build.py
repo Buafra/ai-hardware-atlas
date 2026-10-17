@@ -562,11 +562,25 @@ def item_topic(i, src):
     """The story's topic id (scripts/topics.py): the same rule as its topic image and the topic stored by news.py."""
     return topics.topic_of(i, src.get(i['source']))
 
-def news_card(i, lang, src, tags='', pic=None, share=False, key=None):
+# Home headlines (owner request, Oct 2026: "I can't click on the news article and expand it"): the landing keeps a headline
+# to 2 lines and its summary to 3, as the app's home keeps a summary to 4. "Show more" / «عرض المزيد» reads the rest in
+# place and "Show less" / «عرض أقل» folds it again; app.js shows the button only when the text is actually cut, and a tap
+# on a cut headline or summary opens the card too. Without JavaScript nothing is cut (style.css clamps under .js only).
+MORE = {'en': ('Show more', 'Show less'), 'ar': ('عرض المزيد', 'عرض أقل')}
+
+def more_btn(lang):
+    """The home card's "Show more" button, in the card's language: both labels, style.css shows the one that fits
+    aria-expanded. Hidden until app.js finds the card's text cut."""
+    more, less = MORE[lang]
+    return (f'<button type="button" class="n-more js-only" aria-expanded="false" hidden>'
+            f'<span class="m-more">{more}</span><span class="m-less">{less}</span></button>')
+
+def news_card(i, lang, src, tags='', pic=None, share=False, key=None, expand=False):
     """One headline: the title as plain text, a short summary with who wrote it, then a small link to the original
     article with the publisher's name, and the date (UAE time). With `pic`, the story's image comes first (and a
     company image's credit line after the date); with `share`, a share button ends the line, named after the headline
-    when `key` (unique on the page: view, language and story id) gives the title and the button their ids."""
+    when `key` (unique on the page: view, language and story id) gives the title and the button their ids; with
+    `expand` (the home cards), "Show more" comes before the source line."""
     img, cred = news_pic(pic, lang)
     s, d = src[i['source']], to_uae(i['published'])
     title, mt = headline_text(i, lang)
@@ -579,17 +593,17 @@ def news_card(i, lang, src, tags='', pic=None, share=False, key=None):
     link = f'<a class="n-src" href="{E(i["url"])}" target="_blank" rel="noopener noreferrer">{"المصدر" if ar else "Source"}: {E(name)} <span class="n-ext" aria-hidden="true">↗</span></a>'
     title_id = f' id="st-{E(key)}"' if share and key else ''
     btn = share_btn('story', 'n-share', lang, own=f'sb-{E(key)}', of=f'st-{E(key)}') if share and key else share_btn('story', 'n-share', lang) if share else ''
-    return (f'{img}<h4 class="n-title"{title_id} {text_dir}>{E(title)}</h4>{summary}'
+    return (f'{img}<h4 class="n-title"{title_id} {text_dir}>{E(title)}</h4>{summary}{more_btn(lang) if expand else ""}'
             f'<p class="n-meta">{link}<time datetime="{E(i["published"])}">{when}</time>{tags}{mt}{cred}{btn}</p>')
 
 def heads(items, src, per, limit, pics=None):
     """Compact headline cards for the home pillars, one list per language, each with a small image when `pics`
-    (news_images.pictures()) has one."""
+    (news_images.pictures()) has one and "Show more" for a headline or summary cut short (MORE)."""
     out, pics = '', pics or {}
     def li(i, lang):
         if i['id'] in pics:
-            return f'<li class="has-img">{news_card(i, lang, src, pic=pics[i["id"]])}</li>'
-        return f'<li>{news_card(i, lang, src)}</li>'
+            return f'<li class="has-img">{news_card(i, lang, src, pic=pics[i["id"]], expand=True)}</li>'
+        return f'<li>{news_card(i, lang, src, expand=True)}</li>'
     for lang in ('en', 'ar'):
         pool = varied([i for i in items if in_lang(i, lang)], per, limit)
         out += f'<ol class="heads" data-lang="{lang}">{"".join(li(i, lang) for i in pool)}</ol>' if pool else f'<p class="muted" data-lang="{lang}">{"لا توجد عناوين حديثة." if lang == "ar" else "No recent headlines."}</p>'

@@ -910,6 +910,41 @@
     if (count && !more) { count.tabIndex = -1; count.focus({preventScroll: true}); }
   }
 
+  // ---------- home headlines ----------
+  // The landing's headline cards (.heads, scripts/build.py MORE) cut a headline to 2 lines and a summary to 3. "Show more"
+  // appears only on a card whose text is actually cut at the current width (measured whenever its headline or summary
+  // changes size: a view or language shown, a rotation, a resize) and stays as "Show less" while the card is open.
+  function fitHead(li) {
+    const b = li && li.querySelector('.n-more');
+    if (!b) return;
+    const open = li.classList.contains('open');
+    const cut = !open && [...li.querySelectorAll('.n-title, .n-sum')].some(el => el.scrollHeight > el.clientHeight + 1);
+    b.hidden = !(cut || open);
+    li.classList.toggle('can-open', cut || open);
+  }
+  function toggleHead(li) {
+    const b = li && li.querySelector('.n-more');
+    if (!b || b.hidden) return;
+    const open = !li.classList.contains('open'), had = document.activeElement === b;
+    li.classList.toggle('open', open);
+    b.setAttribute('aria-expanded', String(open));
+    fitHead(li);
+    // Closed after the window grew, the text may fit with no button left: the focus moves to the card's source link.
+    if (had && b.hidden) { const a = li.querySelector('a.n-src'); if (a) a.focus(); }
+  }
+  function watchHeads() {
+    const cards = [...document.querySelectorAll('.heads li')].filter(li => li.querySelector('.n-more'));
+    if (!cards.length) return;
+    if (!window.ResizeObserver) {  // no way to measure later: every card offers the button
+      cards.forEach(li => { li.querySelector('.n-more').hidden = false; li.classList.add('can-open'); });
+      return;
+    }
+    // The headline and the summary are observed, not the card: showing the button changes the card's height, not theirs.
+    const ro = new ResizeObserver(entries => new Set(entries.map(e => e.target.closest('li'))).forEach(fitHead));
+    cards.forEach(li => li.querySelectorAll('.n-title, .n-sum').forEach(el => ro.observe(el)));
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => cards.forEach(fitHead));
+  }
+
   // ---------- share buttons ----------
   // The phone's share sheet where the browser has one (navigator.share), else the text is copied, with a toast.
   async function shareFrom(btn) {
@@ -1204,6 +1239,11 @@
     if (tc) { state.nt = tc.dataset.topicChip; newsLimit = NEWS_STEP; render(); }
     const sh = e.target.closest('[data-share]');
     if (sh) shareFrom(sh);
+    // A home headline: its "Show more" / "Show less", or a tap on the headline or summary of a cut card, which only opens
+    // it (an open card closes with "Show less" only: a double or triple click selecting its text starts with a plain click).
+    const hm = e.target.closest('.heads .n-more');
+    const ht = !hm && e.target.closest('.heads li.can-open:not(.open) .n-title, .heads li.can-open:not(.open) .n-sum');
+    if (hm || (ht && !String(window.getSelection ? getSelection() : ''))) toggleHead((hm || ht).closest('li'));
     const ob = e.target.closest('[data-older]');
     if (ob) openOlder(ob.dataset.older);
     // The (x) in a news search field and the "Clear search" button under a search without results. The (x) keeps the
@@ -1213,6 +1253,7 @@
     const cs = e.target.closest('[data-clear-search]');
     if (cs) clearSearch(cs.dataset.clearSearch, cs.classList.contains('q-clear') || e.detail === 0 || matchMedia('(pointer: fine)').matches ? 'field' : 'list');
   });
+  watchHeads();
   $('news-more') && $('news-more').addEventListener('click', () => { newsLimit += NEWS_STEP; renderNews(); });
   $('uae-more') && $('uae-more').addEventListener('click', () => { uaeLimit += UAE_STEP; renderUae(); });
   ['news', 'uae'].forEach(view => {
