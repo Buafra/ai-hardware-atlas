@@ -1,11 +1,14 @@
 /* Weekly pages (weekly/*.html, scripts/weekly.py): "AI this week" and "UAE AI this week". The site's colours (style.css
-   tokens), light and dark from the system setting (these pages have no script), system fonts. Logical sides only (RTL). */
+   tokens), light and dark from the system setting or the visitor's saved choice (scripts/theme_toggle.py), system fonts. Logical sides only (RTL). */
 :root{color-scheme:light;--bg:#f4f6fc;--surface:#fff;--surface-2:#f5f7ff;--surface-3:#eaf0ff;--border:#dde4f3;--border-strong:#c6d0e8;
 --text:#172340;--strong:#0f1830;--muted:#56647f;--accent:#6537d7;--accent-text:#5531b0;--news:#c0247a;--news-ink:#a01a63;--news-soft:#fdeaf4;
 --uae:#0b7a55;--uae-ink:#08664a;--focus:#d6308a;--shadow-sm:0 1px 2px #1a254a0d,0 2px 6px #1a254a0a;--r:14px}
-@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0c1020;--surface:#151a2e;--surface-2:#1b2139;--surface-3:#222a4a;--border:#2a3254;--border-strong:#3a4470;
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c1020;--surface:#151a2e;--surface-2:#1b2139;--surface-3:#222a4a;--border:#2a3254;--border-strong:#3a4470;
 --text:#e6eaf6;--strong:#f5f7fd;--muted:#a0abc6;--accent:#a78bfa;--accent-text:#c4b5fd;--news:#c72a80;--news-ink:#f9a8d4;--news-soft:#35162c;
 --uae:#0b845a;--uae-ink:#6ee7b7;--focus:#f472b6;--shadow-sm:0 1px 2px #0000004d}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0c1020;--surface:#151a2e;--surface-2:#1b2139;--surface-3:#222a4a;--border:#2a3254;--border-strong:#3a4470;
+--text:#e6eaf6;--strong:#f5f7fd;--muted:#a0abc6;--accent:#a78bfa;--accent-text:#c4b5fd;--news:#c72a80;--news-ink:#f9a8d4;--news-soft:#35162c;
+--uae:#0b845a;--uae-ink:#6ee7b7;--focus:#f472b6;--shadow-sm:0 1px 2px #0000004d}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -21,7 +24,7 @@ a{color:var(--accent-text)}
 .w-brand img{width:30px;height:30px}
 .w-word{font-weight:800;font-size:18px;letter-spacing:-.01em}
 .w-word b{color:var(--accent)}
-.w-nav{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px;font-weight:700}
+.w-nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;font-size:14px;font-weight:700}
 .w-nav a{text-decoration:none;color:var(--muted);padding:4px 0}
 .w-nav a:hover{color:var(--strong)}
 .w-nav .w-lang{color:var(--accent-text)}
@@ -69,3 +72,6 @@ html[lang="ar"] .w-day>h2{letter-spacing:0;font-size:15px}
 .w-foot .w-wrap{padding-block:14px}
 .w-foot p{margin:4px 0}
 @media (max-width:639px){h1,.w-h1{font-size:25px}.w-item{padding:12px 14px}}
+/* The light/dark switch (scripts/theme_toggle.py), in the header beside the language link. */
+.theme-btn{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:3px 11px;border:1px solid var(--border-strong);border-radius:999px;background:none;color:var(--muted);font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.theme-btn:hover{color:var(--strong)}.theme-btn:focus-visible{outline:3px solid var(--focus);outline-offset:2px}.theme-btn svg{flex:none}

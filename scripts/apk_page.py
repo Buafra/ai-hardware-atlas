@@ -21,6 +21,7 @@ from pathlib import Path
 import android_app
 import lang_pages
 import seo
+import theme_toggle
 
 DIR = 'apk'                                    # dist/apk/index.html -> https://cipherlacuna.ae/apk/
 URL = android_app.SITE_URL + DIR               # the address people share (the server adds the final slash)
@@ -113,7 +114,7 @@ def render(info, logo_uri='', icon_uri='', qr_uri=''):
     return f'''<!doctype html>
 <html lang="en" dir="ltr" data-device="other"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7">
+<meta name="color-scheme" content="light dark"><meta name="theme-color" content="#6537d7">{theme_toggle.HEAD}
 <title>{title} | {title_ar}</title><meta name="description" content="{E(desc)}">
 <link rel="canonical" href="{URL}/"><link rel="icon" type="image/png" sizes="32x32" href="../brand/icon-32.png">{f'<link rel="icon" type="image/svg+xml" href="{icon_uri}">' if icon_uri else ''}<link rel="apple-touch-icon" href="../brand/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Cipher Lacuna"><meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -125,7 +126,9 @@ def render(info, logo_uri='', icon_uri='', qr_uri=''):
 {json_ld(info)}
 <style>
 :root{{--bg:#F5F8FF;--card:#fff;--ink:#0E1222;--muted:#5A6380;--line:#E4E0F5;--accent:#6537d7;--accent-ink:#fff;--deep:#42208D;--soft:#F1ECFD;--warn:#FFF4DB;--warn-line:#F0D48A}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#0E1222;--card:#161b30;--ink:#EEF0FA;--muted:#A6AEC8;--line:#2A3150;--accent:#8A63F0;--deep:#B9A2FF;--soft:#211d3d;--warn:#3a2f14;--warn-line:#6b5520}}}}
+{theme_toggle.dark_css('--bg:#0E1222;--card:#161b30;--ink:#EEF0FA;--muted:#A6AEC8;--line:#2A3150;--accent:#8A63F0;--deep:#B9A2FF;--soft:#211d3d;--warn:#3a2f14;--warn-line:#6b5520')}
+{theme_toggle.button_css()}
+.topbar{{display:flex;align-items:center;justify-content:space-between;gap:12px}}
 *{{box-sizing:border-box}}
 [hidden]{{display:none!important}}
 body{{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}}
@@ -166,7 +169,7 @@ code{{font:600 15px ui-monospace,Consolas,monospace;color:var(--deep)}}
 details{{margin-top:12px;font-size:13.5px;color:var(--muted)}} details code{{font-size:12px;overflow-wrap:anywhere;color:var(--muted)}}
 </style></head><body><div class="rule"></div>
 <main>
-<a class="brand" href="../">{logo}<span>Cipher <b>Lacuna</b></span></a>
+<div class="topbar"><a class="brand" href="../">{logo}<span>Cipher <b>Lacuna</b></span></a>{theme_toggle.button('both')}</div>{theme_toggle.script('both')}
 <section class="card">
 <h1>Cipher Lacuna on your phone<span lang="ar" dir="rtl">Cipher Lacuna على هاتفك</span></h1>
 <p>{ABOUT_EN}</p>

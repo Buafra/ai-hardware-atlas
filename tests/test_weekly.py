@@ -5,7 +5,7 @@ from unittest import mock
 from datetime import date,datetime,timezone
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-import build,lang_pages,news_archive,topics,weekly
+import build,lang_pages,news_archive,theme_toggle,topics,weekly
 
 SOURCES=[{'id':'g','name':'Global Pub','name_ar':'ناشر عالمي','homepage':'https://g.example/','region':'global','lang':'en'},
          {'id':'u','name':'Gulf Daily','name_ar':'صحيفة الخليج','homepage':'https://u.example/','region':'uae','lang':'en'},
@@ -97,7 +97,8 @@ class WeeklyTests(unittest.TestCase):
             for tag in ('og:title','og:description','og:url','og:image','twitter:card','twitter:title','twitter:image'):self.assertIn(tag,head,path)
             self.assertIn(f'<meta property="og:url" content="{lang_pages.url(path)}">',head)
             self.assertIn(f'<link rel="canonical" href="{lang_pages.url(path)}">',head)
-            self.assertNotRegex(page,r'<script|<iframe|<form|<img[^>]+src="(?:https?:)?//|<link[^>]+href="(?:https?:)?//(?!cipherlacuna\.ae)',path)
+            bare=page.replace(theme_toggle.HEAD,'',1).replace(theme_toggle.script(path.startswith('ar/') and 'ar' or 'en'),'',1)  # the light/dark switch only
+            self.assertNotRegex(bare,r'<script|<iframe|<form|<img[^>]+src="(?:https?:)?//|<link[^>]+href="(?:https?:)?//(?!cipherlacuna\.ae)',path)
             self.assertIn('<link rel="stylesheet" href="weekly.css">' if path.startswith('weekly/') else '<link rel="stylesheet" href="../../weekly/weekly.css">',head,path)
             for tag in re.findall(r'<a\b[^>]*target="_blank"[^>]*>',page):self.assertIn('rel="noopener noreferrer"',tag)
             self.assertNotIn('Updated',page)  # the freshness line belongs to AI news only

@@ -15,7 +15,7 @@ ar/weekly/uae-YYYY-wNN.html in Arabic, under the site's Arabic folder (scripts/l
 ar/weekly/index.html listing the weeks. Each English page and its Arabic twin name each other (canonical, hreflang en/ar,
 x-default English) and link to each other. A page exists for every week with at least one story of its kind; its
 other-language page exists too and says so when that language has no story. The Arabic pages link to the Arabic overview
-(ar/index.html), the English ones to the English one. The pages are static: no script, one same-origin stylesheet (weekly/weekly.css, from
+(ar/index.html), the English ones to the English one. The pages are static: no script but the light/dark switch (scripts/theme_toggle.py), one same-origin stylesheet (weekly/weekly.css, from
 web/weekly.css), the site's own icons and share preview, Open Graph and X card tags for sharing. Nothing is loaded from
 another host. The "Updated" line belongs to AI news only, so these pages have none.
 """
@@ -27,6 +27,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import lang_pages
+import theme_toggle
 import topics
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -168,7 +169,7 @@ def _head(path, lang, title, desc, alt_path, logo):
     locale, other = ('ar_AE', 'en_US') if lang == 'ar' else ('en_US', 'ar_AE')
     return (f'<!doctype html>\n<html lang="{lang}" dir="{"rtl" if lang == "ar" else "ltr"}"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark">'
-            f'<meta name="theme-color" content="#6537d7"><title>{E(title)}</title><meta name="description" content="{E(desc)}">'
+            f'<meta name="theme-color" content="#6537d7">{theme_toggle.HEAD}<title>{E(title)}</title><meta name="description" content="{E(desc)}">'
             f'<meta name="author" content="Cipher Lacuna"><link rel="canonical" href="{E(url)}">'
             f'<link rel="alternate" hreflang="en" href="{E(en_url)}"><link rel="alternate" hreflang="ar" href="{E(ar_url)}">'
             f'<link rel="alternate" hreflang="x-default" href="{E(en_url)}">'
@@ -194,7 +195,7 @@ def _top(path, lang, other_path, logo, home='index.html', weeks=True):
             f'<span class="w-word" lang="en" dir="ltr">Cipher <b>Lacuna</b></span></a>'
             f'<nav class="w-nav" aria-label="{"الأقسام" if ar else "Sections"}"><a href="{overview}#news">{"أخبار الذكاء الاصطناعي" if ar else "AI news"}</a>'
             f'<a href="{overview}#uae">{"الذكاء الاصطناعي في الإمارات" if ar else "UAE AI"}</a>'
-            f'{all_weeks}{switch}</nav></div></header>\n')
+            f'{all_weeks}{switch}{theme_toggle.button(lang)}</nav></div></header>{theme_toggle.script(lang)}\n')
 
 def _foot(lang, year):
     ar = lang == 'ar'

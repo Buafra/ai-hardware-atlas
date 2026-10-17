@@ -21,6 +21,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 import lang_pages
+import theme_toggle
 
 SITE_URL = lang_pages.SITE_URL
 ORG_ID = SITE_URL + '#organization'
@@ -130,12 +131,14 @@ def page_404(logo_uri='', icon_uri=''):
     icon = f'<link rel="icon" type="image/svg+xml" href="{icon_uri}">' if icon_uri else ''
     return f'''<!doctype html>
 <html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="{THEME}">
+<meta name="robots" content="noindex"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="{THEME}">{theme_toggle.HEAD}
 <title>{en[0]} · {NAME} | {ar[0]}</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/brand/icon-32.png">{icon}<link rel="apple-touch-icon" href="/brand/apple-touch-icon.png">
 <style>
 :root{{--bg:#F5F8FF;--card:#fff;--ink:#0E1222;--muted:#5A6380;--line:#E4E0F5;--accent:#6537d7;--deep:#42208D}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#0E1222;--card:#161b30;--ink:#EEF0FA;--muted:#A6AEC8;--line:#2A3150;--accent:#8A63F0;--deep:#B9A2FF}}}}
+{theme_toggle.dark_css('--bg:#0E1222;--card:#161b30;--ink:#EEF0FA;--muted:#A6AEC8;--line:#2A3150;--accent:#8A63F0;--deep:#B9A2FF')}
+{theme_toggle.button_css()}
+.topbar{{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}}.topbar .brand{{margin-bottom:0}}
 *{{box-sizing:border-box}}
 body{{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}}
 [lang="ar"]{{font-family:"Segoe UI",Tahoma,"Geeza Pro","Noto Sans Arabic","Noto Naskh Arabic",Arial,sans-serif;line-height:1.75}}
@@ -152,7 +155,7 @@ a.btn:focus-visible,.brand:focus-visible{{outline:3px solid var(--accent);outlin
 </style></head>
 <body><div class="rule"></div>
 <main>
-<a class="brand" href="/" lang="en" dir="ltr">{logo}<span>Cipher <b>Lacuna</b></span></a>
+<div class="topbar"><a class="brand" href="/" lang="en" dir="ltr">{logo}<span>Cipher <b>Lacuna</b></span></a>{theme_toggle.button('both')}</div>{theme_toggle.script('both')}
 <section class="card"><p class="code">404</p><h1>{en[0]}</h1><p>{en[1]}</p><a class="btn" href="/">{en[2]}</a></section>
 <section class="card" lang="ar" dir="rtl"><h2>{ar[0]}</h2><p>{ar[1]}</p><a class="btn" href="/ar/">{ar[2]}</a></section>
 </main>

@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import build  # noqa: E402
 import lang_pages  # noqa: E402
 import seo  # noqa: E402
+import theme_toggle  # noqa: E402
 
 SITE = 'https://cipherlacuna.ae/'
 BRAND = ROOT / 'web' / 'brand'
@@ -58,7 +59,8 @@ class FileTests(unittest.TestCase):
         for link in re.findall(r'\s(?:src|href)="([^"]+)"', page):
             self.assertTrue(link.startswith(('/', 'data:')), link)
         self.assertNotRegex(page, r'https?://(?!www\.w3\.org)')
-        self.assertNotIn('<script', page)
+        bare = page.replace(theme_toggle.HEAD, '', 1).replace(theme_toggle.script('both'), '', 1)  # the light/dark switch only
+        self.assertNotIn('<script', bare)
 
     def test_sitemap_is_built_from_the_pages(self):
         head = lambda links: f'<!doctype html><html><head>{links}</head><body></body></html>'
