@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-18T00:04:14+00:00",
+  "at": "2026-10-18T14:02:00+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 14,
@@ -8,9 +8,104 @@
   "changes": [],
   "review": [
     {
-      "url": "https://nvidianews.nvidia.com/news/latest",
+      "url": "https://blogs.nvidia.com/blog/ampere-rtx-a400-a1000-ai/",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-18T00:04:14+00:00"
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/blackwell-coreweave-gb200-nvl72-instances-cloud/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/dgx-h100-systems-shipping/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/dgx-superpod-rubin/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gigawatt-ai-factories-ocp-vera-rubin/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/#rtx-pro-4500",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/igx-thor-processor-physical-ai-industrial-medical-edge/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-generative-ai-supercomputer/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-thor-physical-ai-edge/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/jetson-thor-robotics-edge-ai-agent/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-2000-ada/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-a2000/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/rtx-tackle-pro-workflows/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-18T14:02:00+00:00"
     }
   ],
   "errors": {
