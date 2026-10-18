@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-17T13:44:50+00:00",
+  "at": "2026-10-18T00:04:14+00:00",
   "health": {
     "successful_sources": 257,
     "failed_sources": 14,
@@ -8,29 +8,9 @@
   "changes": [],
   "review": [
     {
-      "url": "https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/",
+      "url": "https://nvidianews.nvidia.com/news/latest",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-17T13:44:50+00:00"
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/ces-rtx-3080ti-laptops-gfn-att-tusimple/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-17T13:44:50+00:00"
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/igx-thor-processor-physical-ai-industrial-medical-edge/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-17T13:44:50+00:00"
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/rtx-a2000/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-17T13:44:50+00:00"
-    },
-    {
-      "url": "https://blogs.nvidia.com/blog/rtx-tackle-pro-workflows/",
-      "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-17T13:44:50+00:00"
+      "at": "2026-10-18T00:04:14+00:00"
     }
   ],
   "errors": {

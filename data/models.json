@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-17T13:48:43+00:00",
+ "updated_at": "2026-10-18T00:07:43+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -3633,6 +3633,17 @@
    "moe": false
   },
   {
+   "id": "unbiased/pareto-26.10",
+   "name": "Pareto 26.10",
+   "hf": null,
+   "context": 1048576,
+   "created": 1792073620,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "unbiased/pareto-26.9",
    "name": "Pareto 26.9",
    "hf": null,
@@ -3658,7 +3669,7 @@
    "id": "~unbiased/pareto-latest",
    "name": "Pareto Latest",
    "hf": null,
-   "context": 262144,
+   "context": 1048576,
    "created": 1791933050,
    "open": false,
    "params_b": null,
