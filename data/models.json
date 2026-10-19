@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-19T00:18:42+00:00",
+ "updated_at": "2026-10-19T17:08:18+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -186,17 +186,6 @@
    "created": 1792225624,
    "open": true,
    "params_b": 763.21,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "deepseek/deepseek-r1",
-   "name": "DeepSeek: R1",
-   "hf": "deepseek-ai/DeepSeek-R1",
-   "context": 64000,
-   "created": 1737381095,
-   "open": true,
-   "params_b": 684.49,
    "params_source": "huggingface",
    "moe": false
   },
@@ -446,7 +435,7 @@
    "id": "meta-llama/llama-4-maverick",
    "name": "Meta: Llama 4 Maverick",
    "hf": "meta-llama/Llama-4-Maverick-17B-128E-Instruct",
-   "context": 1048576,
+   "context": 524288,
    "created": 1743881822,
    "open": true,
    "params_b": 401.58,
@@ -1389,17 +1378,6 @@
    "moe": false
   },
   {
-   "id": "sao10k/l3.3-euryale-70b",
-   "name": "Sao10K: Llama 3.3 Euryale 70B",
-   "hf": "Sao10K/L3.3-70B-Euryale-v2.3",
-   "context": 131072,
-   "created": 1734535928,
-   "open": true,
-   "params_b": 70.55,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "stepfun/step-3.5-flash",
    "name": "StepFun: Step 3.5 Flash",
    "hf": "stepfun-ai/Step-3.5-Flash",
@@ -1574,17 +1552,6 @@
    "params_b": 24.01,
    "params_source": "huggingface",
    "moe": false
-  },
-  {
-   "id": "microsoft/wizardlm-2-8x22b",
-   "name": "WizardLM-2 8x22B",
-   "hf": "microsoft/WizardLM-2-8x22B",
-   "context": 65535,
-   "created": 1713225600,
-   "open": true,
-   "params_b": null,
-   "params_source": null,
-   "moe": true
   },
   {
    "id": "xiaomi/mimo-v2.5",
@@ -2632,6 +2599,17 @@
    "moe": false
   },
   {
+   "id": "inception/mercury-3",
+   "name": "Inception: Mercury 3",
+   "hf": null,
+   "context": 1000000,
+   "created": 1792158337,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "inclusionai/ling-3.1-flash",
    "name": "inclusionAI: Ling 3.1 Flash",
    "hf": null,
@@ -2736,6 +2714,17 @@
    "hf": null,
    "context": 65536,
    "created": 1769177239,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "minimax/minimax-m3.1-flash",
+   "name": "MiniMax: MiniMax M3.1 Flash",
+   "hf": null,
+   "context": 1000000,
+   "created": 1792379569,
    "open": false,
    "params_b": null,
    "params_source": null,
