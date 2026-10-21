@@ -76,5 +76,9 @@
     "at": "2026-10-16T18:53:28+00:00",
     "result": "drafted",
     "closed": "drafted before pull requests were tracked"
+  },
+  "https://newsroom.amd.com/news/amd-fsr-upscaling-4-1-boosts-frames-image-quality/": {
+    "at": "2026-10-21T00:50:55+00:00",
+    "result": "not a new product"
   }
 }

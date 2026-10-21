@@ -3,6 +3,132 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "4e7c1655b442",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-20T14:00:00+00:00",
+   "title": "HPE Spaceborne Computer 4 to launch AI straight to the Moon aboard Astrolab’s FLIP rover",
+   "title_ar": "حاسوب HPE Spaceborne Computer 4 سيطلق الذكاء الاصطناعي مباشرة إلى القمر على متن مركبة FLIP التابعة لشركة Astrolab",
+   "url": "https://www.theregister.com/science/2026/10/20/hpe-spaceborne-computer-4-to-launch-ai-straight-to-the-moon-aboard-astrolabs-flip-rover/5303983",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Mystery silicon and mirrored SSDs set to touch down before year's end"
+  },
+  {
+   "id": "4544aa455ac6",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-20T06:00:38+00:00",
+   "title": "تقنية شبيهة بـ\"تشات جي بي تي\" تتنبأ بخطر السكتة الدماغية من الحمض النووي",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/20/researchers-use-chatgpt-style-technology-to-predict-stroke-risk-from-a-persons-dna",
+   "summary_en": "Researchers at the University of Technology Sydney have built an AI model that analyses a person's DNA to identify genetic factors that raise the risk of stroke, the world's second leading cause of death. The model uses the transformer architecture behind large language models such as ChatGPT and was trained on genetic variants linked to ischemic stroke. It flagged 18 variants, including the genes EDEM2 and KANK2. Tested on two medical datasets covering more than 40,000 people, it sorted individuals into low, medium and high genetic risk groups, with the high group 21% more likely to have a first ischemic stroke than the low group. The team plans a multimodal tool that combines genetic risk with clinical and lifestyle data.",
+   "summary_ar": "طوّر باحثون في جامعة تقنية سيدني نموذجاً للذكاء الاصطناعي يحلل الحمض النووي للفرد لرصد العوامل الجينية التي تزيد خطر الإصابة بالسكتة الدماغية، ثاني سبب رئيسي للوفاة في العالم. ويعتمد النموذج على بنية «المحوّلات» نفسها التي تقوم عليها نماذج اللغة الكبيرة مثل ChatGPT، وقد دُرِّب على متغيرات جينية مرتبطة بالسكتة الإقفارية. وحدد النموذج 18 متغيراً جينياً، من بينها الجينان EDEM2 وKANK2. وعند اختباره على مجموعتي بيانات طبيتين شملتا أكثر من 40 ألف شخص، صنّف الأفراد إلى فئات خطر وراثي منخفضة ومتوسطة ومرتفعة، وكانت الفئة المرتفعة أكثر عرضة للإصابة بسكتة إقفارية أولى بنسبة 21% مقارنة بالمنخفضة. ويخطط الفريق لتطوير أداة متعددة الوسائط تدمج الخطر الجيني مع البيانات السريرية ونمط الحياة.",
+   "excerpt": "أداة جديدة للذكاء الاصطناعي قادرة على تحديد عوامل الخطر الجينية للسكتة الدماغية، قد تفتح الباب أمام وقاية وعلاج أكثر تخصيصا للمرضى."
+  },
+  {
+   "id": "039a84854fb8",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-19T19:28:34+00:00",
+   "title": "Hackers hit AI coding tool OpenCode, running up charges on users’ AI accounts",
+   "title_ar": "قراصنة يستهدفون أداة البرمجة بالذكاء الاصطناعي OpenCode ويتسببون في رسوم مرتفعة على حسابات المستخدمين",
+   "url": "https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/",
+   "summary_en": "OpenCode, an open source AI coding agent, said on Saturday that attackers broke into an older system overnight, affecting 1.4% of users of its OpenCode Console, where some store API keys. Developers reported unauthorized charges on their OpenAI, Anthropic and Google accounts, some in the hundreds of dollars and a few above $1,000. Anthropic and Google blocked the exposed keys, while OpenAI worked with OpenCode on refunds. The open source app and command-line tool were not affected. The team said safety filters on AI models sometimes stopped them analysing malicious code, until they gained access to OpenAI's Daybreak Blue program. The company says the incident is ongoing.",
+   "summary_ar": "قالت OpenCode، وهي أداة مفتوحة المصدر للبرمجة بالذكاء الاصطناعي، يوم السبت إن مهاجمين اخترقوا نظاماً أقدم خلال الليل، ما أثر في 1.4% من مستخدمي منصتها OpenCode Console التي يخزن بعضهم فيها مفاتيح API. وأبلغ مطورون عن رسوم غير مصرح بها على حساباتهم في OpenAI وAnthropic وGoogle، بلغت مئات الدولارات في بعضها وتجاوزت 1,000 دولار في حالات قليلة. وحظرت Anthropic وGoogle المفاتيح المكشوفة، بينما عملت OpenAI مع OpenCode على رد الأموال. ولم يتأثر التطبيق مفتوح المصدر ولا أداة سطر الأوامر. وذكر الفريق أن مرشحات الأمان في نماذج الذكاء الاصطناعي أعاقت أحياناً تحليل الشيفرة الخبيثة، إلى أن حصل على وصول إلى برنامج Daybreak Blue من OpenAI. وتقول الشركة إن الحادثة لا تزال مستمرة.",
+   "excerpt": "OpenCode is an open source AI coding agent that's become a popular alternative to Claude Code and Cursor. But hackers got into part of its online platform and stole some users’ API keys, and the AI tools it turned to for help kept refusing to look at the malicious code."
+  },
+  {
+   "id": "e37065d0e754",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-19T19:00:12+00:00",
+   "title": "Tolan snags $30M for its AI companion that helps users navigate life",
+   "title_ar": "Tolan تجمع 30 مليون دولار لرفيقها الذكي الذي يساعد المستخدمين على تدبّر شؤون حياتهم",
+   "url": "https://techcrunch.com/2026/10/19/tolan-snags-30m-for-its-ai-companion-that-helps-users-navigate-life/",
+   "summary_en": "Tolan, an AI companion app that helps people manage daily life, relationships, emotions and goals, has raised another $30 million. Investors in the round include Union Square Ventures, Khosla Ventures and Homebrew, and the total raised to date has doubled. The company did not disclose its valuation, which PitchBook estimates at more than $268 million. Tolan says it has more than 250,000 active users and over 70 million conversations in the past year, with annual recurring revenue in the double-digit millions. The article notes possible competition from AI agents and the risks of AI emotional support, given lawsuits against general-purpose chatbot makers.",
+   "summary_ar": "جمعت Tolan، وهي تطبيق رفيق ذكي يساعد المستخدمين في إدارة حياتهم اليومية وعلاقاتهم ومشاعرهم وأهدافهم، 30 مليون دولار إضافية. ومن بين المستثمرين في الجولة Union Square Ventures وKhosla Ventures وHomebrew، وقد تضاعف إجمالي ما جمعته الشركة حتى الآن. ولم تكشف الشركة عن تقييمها، بينما تقدره PitchBook بأكثر من 268 مليون دولار. وتقول Tolan إن لديها أكثر من 250,000 مستخدم نشط وأكثر من 70 مليون محادثة خلال العام الماضي، وإن إيراداتها السنوية المتكررة بلغت عشرات الملايين. ويشير المقال إلى احتمال ازدياد المنافسة من المساعدين الذكيين، وإلى مخاطر الدعم العاطفي بالذكاء الاصطناعي في ظل دعاوى قضائية ضد شركات روبوتات الدردشة العامة.",
+   "excerpt": "AI companion app Tolan has raised another $30 million after attracting more than 250,000 active users."
+  },
+  {
+   "id": "71c2d7263cd3",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-19T18:49:04+00:00",
+   "title": "Replika’s founder built the AI assistant she pitched at Disrupt 12 years ago",
+   "title_ar": "مؤسِّسة Replika تبني مساعد الذكاء الاصطناعي الذي عرضته في Disrupt قبل 12 عاماً",
+   "url": "https://techcrunch.com/2026/10/19/replikas-founder-built-the-ai-assistant-she-pitched-at-disrupt-12-years-ago/",
+   "summary_en": "Eugenia Kuyda, who presented the chatbot IO at TechCrunch Disrupt 12 years ago, launched Wabi for all users on Monday. Her startup Luka later became Replika, which she left as CEO last year before founding Wabi. Wabi is a multiplayer personal AI assistant that works like a messenger, with separate agentic threads for tasks and goals. In Wabi 2.0 the agent decides which custom apps to build, and threads can be shared as group chats. Kuyda says single-thread assistants such as Instinct and Muse get worse over time. Wabi is SOC 2 compliant, runs in the cloud, is free for now, and is in talks to raise funds.",
+   "summary_ar": "أطلقت «يوجينيا كويدا»، التي قدمت روبوت الدردشة IO في TechCrunch Disrupt قبل 12 عاماً، تطبيق Wabi لجميع المستخدمين يوم الاثنين. وقد تحولت شركتها الناشئة Luka لاحقاً إلى Replika، التي غادرت منصب الرئيسة التنفيذية فيها العام الماضي لتؤسس Wabi. وهو مساعد ذكي شخصي متعدد المستخدمين يعمل كتطبيق مراسلة، بمحادثات منفصلة للمهام والأهداف. وفي الإصدار Wabi 2.0 يقرر الوكيل التطبيقات المخصصة التي يبنيها، ويمكن مشاركة المحادثات كمجموعات. وترى «كويدا» أن المساعدين ذوي المحادثة الواحدة مثل Instinct وMuse يتراجع أداؤهم مع الوقت. والتطبيق متوافق مع SOC 2، ويعمل بالكامل على السحابة، وهو مجاني حالياً، والشركة في محادثات لجمع تمويل.",
+   "excerpt": "Eugenia Kuyda's newest startup Wabi is positioned to take advantage of an idea she had more than a decade ago. Wabi offers a personal AI assistant with a twist, free and downloadable to anyone today."
+  },
+  {
+   "id": "36c2a79412d5",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-19T18:37:27+00:00",
+   "title": "Tenstorrent hits $6.2B valuation to scale open-weight AI chips",
+   "title_ar": "Tenstorrent تبلغ تقييماً قدره 6.2 مليار دولار لتوسيع إنتاج رقائق الذكاء الاصطناعي مفتوحة الأوزان",
+   "url": "https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/",
+   "summary_en": "Tenstorrent, a chip startup focused on inference, has raised $1.5 billion at a $6.2 billion valuation. The figure more than doubles the $2.6 billion it was valued at in late 2024. The round was led by Trace Capital and Innovation X, with Cadence Ventures, Eclipse, Fidelity, SanDisk and T. Rowe Price also backing it. It follows reported acquisition interest from Intel and Qualcomm at valuations of up to $5 billion. CEO Jim Keller told Bloomberg the company chose to stay independent after showing its Galaxy servers could run DeepSeek models. The money will go toward scaling chips for serving open-weight AI models and video generation, as startups try to challenge Nvidia.",
+   "summary_ar": "جمعت شركة Tenstorrent الناشئة المتخصصة في رقائق الاستدلال 1.5 مليار دولار بتقييم بلغ 6.2 مليار دولار، أي أكثر من ضعف تقييمها البالغ 2.6 مليار دولار في أواخر 2024. قاد الجولة كل من Trace Capital وInnovation X، وشارك فيها مستثمرون منهم Cadence Ventures وEclipse وFidelity وSanDisk وT. Rowe Price. وتأتي الجولة بعد أنباء عن اهتمام شركتي Intel وQualcomm بالاستحواذ عليها بتقييم يصل إلى 5 مليارات دولار. وقال الرئيس التنفيذي «جيم كيلر» لوكالة Bloomberg إن الشركة قررت البقاء مستقلة بعدما أثبتت قدرة خوادم Galaxy على تشغيل نماذج DeepSeek. وستُوجَّه الأموال إلى توسيع إنتاج رقائق مخصصة لتشغيل نماذج الذكاء الاصطناعي مفتوحة الأوزان وتوليد الفيديو، في ظل سعي شركات ناشئة لمنافسة NVIDIA.",
+   "excerpt": "After drawing acquisition interest earlier this year, the Nvidia challenger raised $1.5 billion to remain independent."
+  },
+  {
+   "id": "f93d80856f11",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-19T16:13:22+00:00",
+   "title": "People are using AI to make their smart TVs dumb again",
+   "title_ar": "أشخاص يستخدمون الذكاء الاصطناعي لإعادة أجهزة التلفزيون الذكية إلى حالة التلفزيون العادي",
+   "url": "https://techcrunch.com/2026/10/19/people-are-using-ai-to-make-their-smart-tvs-dumb-again/",
+   "summary_en": "Developers and vibe coders are sharing ways to use AI to strip ads, tracking and bloat from smart TVs. Projects such as dumbtv and cleanyourtv, shared on GitHub, aim to remove sponsored ads, speed up the launcher and replace the home screen. The creator of cleanyourtv, Gathin T., said he used Claude Code over Wi-Fi on his parents' TV, and a few thousand people did the same on sets from brands including Xiaomi, TCL, Sony and LG within two days. The article says wider use could disrupt the smart TV ad industry, which profits from viewing data. Results are mixed: some users needed more complex prompts, and one said they bricked an Android TV. The solutions remain works in progress.",
+   "summary_ar": "يتبادل مطورون ومبرمجون بأسلوب «البرمجة بالحدس» طرقاً لاستخدام الذكاء الاصطناعي في إزالة الإعلانات والتتبع والتطبيقات الزائدة من التلفزيونات الذكية. وتهدف مشاريع مثل dumbtv وcleanyourtv، المنشورة على GitHub، إلى حذف الإعلانات الممولة وتسريع مشغّل التطبيقات واستبدال الشاشة الرئيسية. وقال مبتكر cleanyourtv، «غاثين تي»، إنه استخدم Claude Code عبر Wi-Fi لتنظيف تلفزيون والديه، وإن بضعة آلاف من الأشخاص فعلوا الشيء نفسه خلال يومين على أجهزة من علامات مثل Xiaomi وTCL وSony وLG. ويشير المقال إلى أن انتشار هذه الحلول قد يربك قطاع إعلانات التلفزيونات الذكية الذي يربح من بيانات المشاهدة. لكن النتائج متباينة، إذ احتاج بعض المستخدمين إلى أوامر أكثر تعقيداً، وقال أحدهم إن جهاز Android TV لديه تعطل تماماً. ولا تزال هذه الحلول قيد التطوير.",
+   "excerpt": "Fed up with ads, tracking, and sluggish interfaces, some smart TV owners are turning to AI agents to strip away bloatware and take back control of their TVs."
+  },
+  {
+   "id": "d88320583f8c",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-19T15:37:09+00:00",
+   "title": "Nvidia launches new open models to run agents in the enterprise and on PCs",
+   "title_ar": "Nvidia تطلق نماذج مفتوحة جديدة لتشغيل الوكلاء في المؤسسات وعلى أجهزة الكمبيوتر الشخصية",
+   "url": "https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/",
+   "summary_en": "Nvidia on Thursday launched new open-weight models for always-on agents and edge computing. Nemotron 3.5 Super VL is a 120-billion-parameter model for enterprise agents; Nvidia says it matches the accuracy of the larger Nemotron 3 Ultra on instruction-following and tool-use tasks, and completes tasks faster than competing Anthropic and OpenAI models when post-trained on specific agentic tasks. Companies Nvidia says use it include Skydance, EY, Ramp, Crowdstrike, Perplexity and Salesforce. Two lightweight Bolt models target AI PCs with the RTX Spark chip and DGX Spark workstations: Nemotron 3.5 Bolt 74B-A9B 24GB for local agentic tasks and Bolt E4B for conversational agents. Super VL and Bolt 74B-A9B are available now, while Bolt E4B is due later this month. The article notes proprietary AI labs are turning to other chip makers.",
+   "summary_ar": "أطلقت NVIDIA يوم الخميس نماذج جديدة مفتوحة الأوزان مصممة للوكلاء الذين يعملون باستمرار وللحوسبة الطرفية. ويُعد Nemotron 3.5 Super VL نموذجاً بحجم 120 مليار معامل موجهاً لوكلاء المؤسسات، وتقول الشركة إنه يضاهي دقة Nemotron 3 Ultra الأكبر منه في اتباع التعليمات واستخدام الأدوات، وإنه ينجز المهام أسرع من نماذج منافسة من Anthropic وOpenAI عند تدريبه لاحقاً على مهام وكيلية محددة. وتذكر أن شركات مثل Skydance وEY وRamp وCrowdstrike وPerplexity وSalesforce تستخدمه. كما أطلقت نموذجين خفيفين من Bolt للحواسيب الذكية العاملة بشريحة RTX Spark ومحطات العمل DGX Spark، هما Nemotron 3.5 Bolt 74B-A9B 24GB للمهام الوكيلية المحلية وBolt E4B للوكلاء الحواريين. ويتوفر Super VL وBolt 74B-A9B الآن، على أن يصدر Bolt E4B في وقت لاحق من هذا الشهر. ويشير المقال إلى أن مختبرات الذكاء الاصطناعي المغلقة تتجه إلى مصنّعي شرائح آخرين.",
+   "excerpt": "Nvidia is leaning hard into the trend of enterprise companies wanting to run their own open models in their own data centers and also trying to make on-device, private AI agents a thing."
+  },
+  {
+   "id": "c17a4963d410",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-19T12:30:00+00:00",
+   "title": "Laplace Intelligence red-teams robots and self-driving cars before they hit the real world",
+   "title_ar": "Laplace Intelligence تختبر الروبوتات والسيارات ذاتية القيادة بأسلوب الفريق الأحمر قبل وصولها إلى العالم الحقيقي",
+   "url": "https://techcrunch.com/2026/10/19/laplace-intelligence-red-teams-robots-and-self-driving-cars-before-they-hit-the-real-world/",
+   "summary_en": "Laplace Intelligence, based in Ann Arbor, is building automated red-teaming for robots, self-driving cars and other physical AI, using AI agents to stress-test systems before deployment. Founded a year ago out of the University of Michigan by CEO Howie Sun and chief scientist Henry Liu, it uses a simulation built on a post-trained version of Nvidia's Cosmos, with AI agents that design tricky corner cases. The company has started generating revenue and a modest profit, with customers including Bot Auto and a major Japanese automaker, and is working with Nvidia and T-Mobile on a free San Jose smart city pilot. It is competing in Startup Battlefield 200 at TechCrunch Disrupt in San Francisco and aims to raise funds and scale.",
+   "summary_ar": "تعمل شركة Laplace Intelligence، ومقرها في أن أربور، على بناء اختبارات اختراق تلقائية للروبوتات والسيارات ذاتية القيادة وغيرها من أنظمة الذكاء الاصطناعي المادي، مستخدمةً وكلاء ذكاء اصطناعي لاختبار الأنظمة تحت الضغط قبل طرحها. أسّس الشركة قبل عام من جامعة ميشيغان الرئيس التنفيذي هاوي صن وكبير العلماء هنري ليو، وتعتمد على بيئة محاكاة مبنية على نسخة مُدرَّبة لاحقاً من Cosmos التابعة لـ Nvidia، مع وكلاء يصممون حالات حدّية معقدة. وبدأت الشركة تحقيق إيرادات وأرباح متواضعة، ومن عملائها Bot Auto وشركة سيارات يابانية كبرى، كما تعمل مع Nvidia وT-Mobile على مشروع تجريبي مجاني لمدينة ذكية في سان خوسيه. وتشارك في مسابقة Startup Battlefield 200 ضمن TechCrunch Disrupt في سان فرانسيسكو، وتسعى إلى جمع التمويل والتوسع.",
+   "excerpt": "University of Michigan spinout Laplace Intelligence uses AI agents and interactive simulation to stress-test robots and self-driving vehicles before deployment. The profitable startup is competing in Startup Battlefield at TechCrunch Disrupt, October 13-15 in San Francisco."
+  },
+  {
    "id": "9607cf5f352a",
    "source": "euronews-ar",
    "lang": "ar",
@@ -59,6 +185,20 @@
    "excerpt": "ينظم «تريندز جلوبال»، التابع لمجموعة تريندز، عبر مكتبيه في كندا وفرنسا، وبالتعاون مع المنصة الجامعية لدراسة الإسلام، وجامعة مونتريال، وجامعة كيبيك، مؤتمراً علمياً دولياً حول مستقبل الحوار بين الأديان في عصر الذكاء الاصطناعي، تستضيفه جامعة مونتريال بكندا خلال الفترة من 19 إلى 21…"
   },
   {
+   "id": "cef1d05c7525",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-18T20:37:40+00:00",
+   "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+   "title_ar": "Anthropic تقول إنها تخصص 5% من أسهمها لـ«صندوق المنفعة العامة»",
+   "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+   "summary_en": "Anthropic announced a \"public benefit fund\" meant to give it more flexibility and scale to back projects for societal good. The company will commit 5% of its shares to the fund, which will be a wholly-owned entity within Anthropic, with the option to add 2% for every 50% rise in its value. Suggested uses include large donations to traditional nonprofits or direct distributions to specific populations. Anthropic has already pledged $200 million to study AI's effect on jobs, and said bolder approaches may be needed. The announcement comes as public sentiment toward the AI industry grows more negative. Details on structure and governance are due in the coming months.",
+   "summary_ar": "أعلنت شركة Anthropic إنشاء «صندوق للمنفعة العامة» يمنحها مرونة وقدرة أكبر على دعم مشاريع تخدم المجتمع. وستخصص الشركة 5% من أسهمها للصندوق، الذي سيكون كياناً مملوكاً لها بالكامل، مع إمكانية إضافة 2% عن كل ارتفاع بنسبة 50% في قيمتها. ومن الاستخدامات المقترحة تقديم تبرعات كبيرة لمنظمات غير ربحية تقليدية أو توزيعات مباشرة على فئات محددة. وكانت الشركة قد خصصت 200 مليون دولار لدراسة أثر الذكاء الاصطناعي في سوق العمل، وقالت إن الأمر قد يتطلب مقاربات أكثر جرأة. ويأتي الإعلان في وقت تزداد فيه النظرة العامة سلبية تجاه قطاع الذكاء الاصطناعي، وهو ما وصفه الرئيس التنفيذي «داريو أمودي» بأنه «أزمة ثقة». وأوضحت الشركة أنها ستنشر تفاصيل الهيكل والحوكمة في الأشهر المقبلة.",
+   "excerpt": "The company offered some broad-strokes ideas for how this money might actually be used, such as “large donations to traditional nonprofits or direct distributions to specific populations.”"
+  },
+  {
    "id": "5b9174accb45",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -71,6 +211,76 @@
    "summary_en": "Trends Global, through its virtual office in Germany, is working with the German security consultancy MOSECON on a joint research project on artificial intelligence, political violence, sabotage and hybrid warfare. The project was presented at the Frankfurt International Book Fair 2026. The article says AI offers better monitoring, analysis and early warning, but could also help extremist and hostile actors widen their activities, spread disinformation and recruit people. The project examines how emerging technologies affect recruitment, mobilisation and attack planning, and how institutions can strengthen their resilience. It is expected to produce insights and recommendations for decision-makers and experts.",
    "summary_ar": "يتعاون «تريندز جلوبال» عبر مكتبه الافتراضي في ألمانيا مع مجموعة الاستشارات الأمنية الألمانية MOSECON في مشروع بحثي مشترك حول الذكاء الاصطناعي والعنف السياسي والتخريب والحروب الهجينة. وقد جرى التعريف بالمشروع ضمن فعاليات معرض فرانكفورت الدولي للكتاب 2026. ويشير المقال إلى أن الذكاء الاصطناعي يتيح تطوير قدرات الرصد والتحليل والإنذار المبكر، لكنه قد يمنح أيضاً الجهات المتطرفة والعدائية إمكانات أكبر لتوسيع أنشطتها ونشر التضليل والاستقطاب. ويدرس المشروع تأثير التقنيات الناشئة في مراحل التجنيد والتعبئة والتخطيط للهجمات، وسبل تعزيز الصمود المؤسسي لدى الحكومات والمنظمات. ومن المتوقع أن تسهم مخرجاته في تقديم رؤى وتوصيات تدعم صنّاع القرار والخبراء.",
    "excerpt": "يشهد العالمُ تحولاتٍ متسارعةً في طبيعة التهديدات الأمنية، مدفوعةً بالتطور المتنامي للذكاء الاصطناعي والتقنيات الرقمية، التي لم تَعُدْ تقتصر تطبيقاتها على المجالات الاقتصادية والعلمية، بل أصبحت تؤثّر بصورة متزايدة في أنماط العنف السياسي، وأساليب التجنيد والتعبئة، والتخطيط…"
+  },
+  {
+   "id": "de6b0c59a9e6",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-18T18:28:10+00:00",
+   "title": "A woman was arrested in Philly for blocking a delivery robot",
+   "title_ar": "القبض على امرأة في فيلادلفيا لعرقلتها روبوت توصيل",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1013541/a-woman-was-arrested-in-philly-for-blocking-a-delivery-robot",
+   "summary_en": "Carolyn Marvin was arrested in Philadelphia and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to move. She told ABC13 she was protesting because the robots take jobs from human delivery workers, and that she had done so before by standing in front of them. Police asked her to move and handcuffed her when she did not. A video of the incident has drawn considerable media attention. The robots are a common sight in downtown Philadelphia and have prompted backlash; one was kicked over in Center City earlier this year. The article notes growing concern over how autonomous systems affect jobs, especially for lower-skill workers.",
+   "summary_ar": "اعتُقلت «كارولين مارفين» في فيلادلفيا ووُجهت إليها تهمة السلوك المخل بالنظام بعد أن سدّت طريق روبوت توصيل تابع لشركة Uber ورفضت الابتعاد. وقالت لقناة ABC13 إنها تحتج لأن هذه الروبوتات تأخذ وظائف عمال التوصيل من البشر، وإنها اعتادت الوقوف أمامها لمنعها من التقدم. وطلبت الشرطة منها التنحي، ثم وضعتها في الأصفاد عندما رفضت. وقد وُثّقت الواقعة بمقطع مصور حظي باهتمام إعلامي كبير. وأصبحت روبوتات التوصيل مشهداً مألوفاً في وسط فيلادلفيا وأثارت ردود فعل غاضبة، وسبق أن قام شخص بقلب أحدها في منطقة سنتر سيتي في وقت سابق من هذا العام. ويشير المقال إلى تزايد القلق من تأثير الأنظمة المستقلة في الوظائف، ولا سيما للعمال أصحاب المهارات الأقل.",
+   "excerpt": "Carolyn Marvin was arrested and charged with disorderly conduct after blocking the path of an Uber delivery robot and refusing to get out of the way."
+  },
+  {
+   "id": "50dde865e5f9",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-18T17:48:31+00:00",
+   "title": "الذكاء الاصطناعي والأطفال.. تواصل مقلق وحدود غائبة",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/miscellaneous/1558887",
+   "summary_en": "US researchers say AI chatbot apps offer the \"parental feelings\" that many people lack in their real lives, and interviews with parents suggest their children have become convinced a real person is inside the computer or phone. Sherry Turkle, a psychologist at MIT, says AI use affects a basic childhood process: telling people apart from inanimate objects. She sees an \"existential\" risk in such relationships. An MIT press release tied to her book \"Artificial Intimacy\" says adults are not much better off when they rely heavily on chatbots. In a paper in PNAS this month, researchers from the universities of Zurich and Amsterdam found that even advanced chatbots cannot accurately imitate the full range of human language, and that AI text can be systematically told apart from human communication.",
+   "summary_ar": "قال باحثون أمريكيون إن تطبيقات المحادثة الآلية المدعومة بالذكاء الاصطناعي تقدم «المشاعر الأبوية» التي يفتقدها كثيرون في حياتهم الفعلية، وأظهرت مقابلات مع آباء أن أطفالهم باتوا مقتنعين بوجود شخص حقيقي داخل الكمبيوتر أو الهاتف. وترى شيري تيركل، عالمة النفس في معهد ماساتشوستس للتكنولوجيا، أن استخدام الذكاء الاصطناعي يمس عملية أساسية في الطفولة هي التمييز بين البشر والأجسام الجامدة، وتعتبر أن هذه العلاقات تنطوي على خطر «وجودي». وبحسب بيان للمعهد بمناسبة صدور كتابها «الألفة الاصطناعية»، فإن البالغين ليسوا في وضع أفضل كثيراً عند اعتمادهم المكثف على هذه التطبيقات. وفي ورقة بحثية نشرتها دورية «وقائع الأكاديمية الوطنية للعلوم» هذا الشهر، ذكر باحثون من جامعتي زيورخ وأمستردام أن أكثر برامج الدردشة تطوراً تعجز عن محاكاة التعبير اللغوي البشري بدقة، وأن نصوصها يمكن تمييزها منهجياً عن التواصل البشري.",
+   "excerpt": "قال باحثون أمريكيون إن تطبيقات المحادثة الآلية المدعومة بالذكاء الاصطناعي تقدم «المشاعر الأبوية» التي يفتقدها الكثيرون ف"
+  },
+  {
+   "id": "6a083a36de89",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-18T16:30:00+00:00",
+   "title": "Disney agrees to hire the majority of Character AI’s workforce",
+   "title_ar": "Disney توافق على توظيف غالبية العاملين في Character AI",
+   "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+   "summary_en": "After the chatbot startup Character.AI filed for bankruptcy earlier this week, Disney has agreed to make job offers to at least 60 of its employees, the majority of its workforce, according to a legal filing spotted by Bloomberg. The offers carry an estimated $60 million in annual compensation, and the filing says the vast majority of those approached accepted. Former Character.AI CEO Karandeep Anand recently became Disney's first CTO, and the startup earlier said Disney would acquire some assets for $20 million. Because this is a stalking horse bid, another company could still offer more. The filing cites high costs and potential litigation and regulatory exposure, including a lawsuit over a teenager's death and child safety investigations.",
+   "summary_ar": "بعد أن أعلنت شركة Character.AI الناشئة للدردشة الآلية إفلاسها مطلع هذا الأسبوع، وافقت Disney على تقديم عروض عمل لما لا يقل عن 60 موظفاً من موظفيها، أي غالبية القوى العاملة، وفق وثيقة قانونية رصدتها Bloomberg. وتبلغ التعويضات السنوية المقدرة لهذه العروض نحو 60 مليون دولار، وتقول الوثيقة إن الغالبية العظمى ممن عُرضت عليهم الوظائف قبلوها. وكان الرئيس التنفيذي السابق للشركة، كارانديب أناند، قد أصبح مؤخراً أول مدير تقني في Disney، وقالت الشركة الناشئة سابقاً إن Disney ستستحوذ على بعض أصولها مقابل 20 مليون دولار. ولأن العرض من نوع «المزايد الأول»، قد تتقدم جهة أخرى بعرض أعلى. وتشير الوثيقة إلى أن الشركة أثقلتها التكاليف المرتفعة ومخاطر الدعاوى والمساءلة التنظيمية، ومنها دعوى رفعتها أم فتى في الرابعة عشرة انتحر، وتحقيقات حكومية بشأن سلامة الأطفال.",
+   "excerpt": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer."
+  },
+  {
+   "id": "77c4561b37db",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-18T16:11:09+00:00",
+   "title": "أمريكا تحتاج إلى عقد اجتماعي لمراكز البيانات",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/financial-times/1558859",
+   "summary_en": "A commentary in Al Bayan by a former special assistant for economic policy to ex-President Joe Biden looks at the data-centre provisions of a bipartisan permitting bill before the US Senate, known as BAAJA. The bill would make data centres pay fees for using existing power-transmission infrastructure and for other added costs, while ensuring their energy costs are not passed on to other consumers. It would also let states charge extra fees and return the revenue to other ratepayers as savings. The author notes that data centres accounted for 72% of corporate clean power purchase agreements in the Americas in 2025, and that research he oversaw at Stanford found they support over 300,000 upstream US jobs. He adds that US leadership in advanced computing could be leverage with Beijing on AI safety, and calls the bill a first step toward a social consensus.",
+   "summary_ar": "يتناول مقال رأي في صحيفة «البيان» كتبه مساعد خاص سابق للرئيس الأسبق جو بايدن للسياسة الاقتصادية البنود المتعلقة بمراكز البيانات في مشروع قانون للتصاريح مطروح أمام مجلس الشيوخ الأمريكي بدعم من الحزبين، ويعرف باسم BAAJA. ويفرض المشروع على مراكز البيانات رسوماً مقابل استخدام البنية التحتية القائمة لنقل الكهرباء وتكاليف إضافية أخرى، مع ضمان عدم تحميل المستهلكين الآخرين تكلفة الطاقة التي تستهلكها. كما يتيح للولايات فرض رسوم إضافية وتحويل إيراداتها إلى المشتركين الآخرين في شكل وفر مالي. ويذكر الكاتب أن مراكز البيانات استحوذت في عام 2025 على 72% من اتفاقيات شراء الطاقة النظيفة التي أبرمتها الشركات في الأمريكتين، وأن بحثاً أشرف عليه في معهد «ستانفورد» وجد أنها تدعم أكثر من 300 ألف وظيفة في المراحل الأولى من سلسلة الإنتاج الأمريكية. ويرى أن التفوق الأمريكي في الحوسبة المتقدمة قد يكون ورقة ضغط مع بكين بشأن سلامة الذكاء الاصطناعي، ويعد المشروع خطوة أولى نحو توافق مجتمعي.",
+   "excerpt": "جوش زوفر المساعد الخاص للرئيس الأسبق جو بايدن للسياسة الاقتصادية تبدو البنود المتعلقة بمراكز البيانات في مشروع قانون الت"
+  },
+  {
+   "id": "048b5c5fe9fd",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-18T16:10:17+00:00",
+   "title": "هل تتجسس عليك؟.. أجهزة ذكاء اصطناعي تستمع لكل ما يدور حولك",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/technology/tech-radar/1558854",
+   "summary_en": "A new wave of devices powered by artificial intelligence is raising growing privacy concerns, according to the article, as major technology companies bring such products to market.",
+   "summary_ar": "تفيد المادة بأن موجة جديدة من الأجهزة المدعومة بالذكاء الاصطناعي تثير مخاوف متزايدة بشأن الخصوصية، مع طرح شركات تكنولوجية كبرى مثل هذه المنتجات في الأسواق.",
+   "excerpt": "تثير موجة جديدة من الأجهزة المدعومة بالذكاء الاصطناعي مخاوف متزايدة بشأن الخصوصية، مع طرح شركات تكنولوجية كبرى، بينها «أ"
   },
   {
    "id": "f1972737c6ad",
@@ -325,6 +535,20 @@
    "excerpt": "رصد مركز استشراف المستقبل في شرطة دبي، 10 فرص مستقبلية ناشئة عن التحولات المتسارعة في تقنيات الذكاء الاصطناعي، والتي من المتوقع أن تُسهم في إعادة تشكيل مستقبل العمل الشرطي حتى عام 2040، في ظل الانتقال من النماذج الأمنية الحالية إلى منظومات أكثر ذكاءً واستباقية ومرونة، قادرة على…"
   },
   {
+   "id": "568162b981af",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-17T21:31:32+00:00",
+   "title": "Meta removes language that raised scraping and AI training concerns",
+   "title_ar": "Meta تحذف عبارات أثارت مخاوف بشأن استخراج البيانات من الإنترنت وتدريب الذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+   "summary_en": "Meta recently changed its commercial terms of use to say it could use content from a business account's domains, web pages or URLs to develop, improve and train its products and services. Legal experts told Nieman Lab this looked like a remarkable provision that might let Meta scrape publishers' sites with business accounts to train its AI models. A Meta spokesperson said the update did not change how the company crawls the web. The Verge now reports the provision has been removed. Meta said the consolidated crawling terms applied only to its ads and business products, and that it has clarified this in the terms. The article notes that other cases against AI companies, including Meta, are continuing.",
+   "summary_ar": "عدّلت Meta مؤخراً شروط الاستخدام التجارية لديها، وأشارت فيها إلى أنها قادرة على استخدام المحتوى من نطاقات حساب الأعمال وصفحاته وروابطه لتطوير منتجاتها وخدماتها وتحسينها وتدريبها. وقال خبراء قانونيون لموقع Nieman Lab إن هذا البند لافت وقد يتيح لـMeta جمع محتوى مواقع الناشرين الذين لديهم حسابات أعمال لديها لتدريب نماذج الذكاء الاصطناعي. وأكد متحدث باسم الشركة أن التحديث لا يغيّر طريقة زحف Meta على الويب. ثم نقل موقع The Verge أن البند حُذف. وقالت الشركة إن شروط الزحف التي جرى توحيدها تخص منتجاتها الإعلانية وأعمالها التجارية فقط، وإنها أوضحت ذلك في الشروط نفسها. ويشير المقال إلى أن قضايا أخرى ضد شركات الذكاء الاصطناعي، ومنها Meta، لا تزال قائمة.",
+   "excerpt": "A Meta spokesperson insisted that the updated terms did not reflect a change in the way Meta crawls the web."
+  },
+  {
    "id": "103873204736",
    "source": "euronews-ar",
    "lang": "ar",
@@ -423,6 +647,20 @@
    "excerpt": "OpenAI has published four new cases where its AI models bypassed security boundaries on their own during training or testing."
   },
   {
+   "id": "ac0eba5f3991",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-17T15:04:36+00:00",
+   "title": "Meta removes language that may have allowed it to scrape news sites",
+   "title_ar": "Meta تحذف عبارات ربما أتاحت لها استخراج البيانات من مواقع الأخبار",
+   "url": "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+   "summary_en": "Meta has removed wording from its commercial terms page that experts read as permitting it to use content from websites, including news sites, to train its AI. Neiman Lab and Cornell law professor James Grimmelmann interpreted the text as a way to use scraped material for free and override the blocking instructions in robots.txt files. Meta's Andy Stone and Daniel Roberts first said nothing had changed in how Meta uses web crawlers. After the backlash, the company deleted the language entirely. Roberts said the consolidated crawling terms applied only to ads and business products, that content owners can still use robots.txt to signal their preferences, and that the update gives Meta no new rights.",
+   "summary_ar": "حذفت Meta من صفحة شروطها التجارية صياغة رأى خبراء أنها تتيح لها استخدام محتوى المواقع، ومنها المواقع الإخبارية، لتدريب أنظمة الذكاء الاصطناعي لديها. وفسّر موقع Neiman Lab والأستاذ في القانون بجامعة كورنيل «جيمس غريملمان» النص على أنه وسيلة لاستخدام المواد المجمّعة مجاناً وتجاوز تعليمات الحظر الواردة في ملفات robots.txt. وقال «آندي ستون» و«دانيال روبرتس» من Meta في البداية إن شيئاً لم يتغير في طريقة استخدام الشركة لبرامج الزحف على الويب. وبعد ردود الفعل الغاضبة حذفت الشركة الصياغة بالكامل. وأوضح روبرتس أن شروط الزحف الموحدة تنطبق فقط على منتجات الإعلانات والأعمال، وأن أصحاب المحتوى ما زال بإمكانهم استخدام robots.txt للتعبير عن تفضيلاتهم، وأن التحديث لا يمنح الشركة حقوقاً جديدة.",
+   "excerpt": "After backlash, Meta is updating its terms again to remove language that suggested it could scrape content from sites, including news sites, to train its AI."
+  },
+  {
    "id": "161e6aee4130",
    "source": "the-decoder",
    "lang": "en",
@@ -477,6 +715,20 @@
    "summary_en": "North Korea says it tested a new type of guided torpedo system that uses artificial intelligence for target detection and guidance, according to the state news agency KCNA on Saturday. The agency said an underwater launch test of the ultra-fast 'Haeil-2.0' system took place on Thursday to confirm a technical upgrade, and that more than 180 tests had been completed over five years. The announcement came two days after North Korea reported launching two types of strategic cruise missiles from submarines. Earlier this month it also announced testing an AI-enabled intermediate-range hypersonic missile. Analysts say AI could let torpedoes perform evasive manoeuvres, and in September Kim Jong Un called for greater use of AI in domestic weapons.",
    "summary_ar": "أعلنت كوريا الشمالية، وفق وكالة الأنباء المركزية الكورية، أنها اختبرت نظام طوربيد موجهاً من نوع جديد يستخدم الذكاء الاصطناعي في رصد الأهداف والتوجيه، وذلك يوم السبت. وذكرت الوكالة أن تجربة إطلاق تحت الماء لنظام «زام-2.0» فائق السرعة أُجريت يوم الخميس للتأكد من نجاح التحديث التقني، وأن أكثر من 180 اختباراً أُنجزت خلال السنوات الخمس الماضية. وجاء الإعلان بعد يومين من الحديث عن إطلاق نوعين من صواريخ كروز الاستراتيجية من غواصات. وكانت بيونغ يانغ قد أعلنت في وقت سابق من الشهر نفسه اختبار صاروخ فرط صوتي متوسط المدى يعمل بتقنيات الذكاء الاصطناعي. ويرى محللون أن الذكاء الاصطناعي قد يتيح للطوربيدات تنفيذ مناورات مراوغة، وكان الزعيم «كيم جونغ أون» قد شدد في سبتمبر على تعزيز استخدام الذكاء الاصطناعي في الأسلحة المحلية.",
    "excerpt": "أجرت بيونغ يانغ اختبارا لنظام طوربيد موجه \"من نوع جديد\" يستخدم تقنيات الذكاء الاصطناعي في رصد الأهداف والتوجيه، وفق ما أفادت به وكالة الأنباء المركزية الكورية الشمالية، اليوم السبت. جاء ذلك بعد يومين من إعلان كوريا الشمالية إطلاق نوعين من صواريخ كروز استراتيجية من غواصات."
+  },
+  {
+   "id": "79619743255e",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-17T13:00:00+00:00",
+   "title": "Websites are closing their doors to AI agents",
+   "title_ar": "مواقع إلكترونية تغلق أبوابها أمام وكلاء الذكاء الاصطناعي",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+   "summary_en": "Websites are increasingly blocking AI agents, even as OpenAI, Meta and Google promote agents that can act for users online. Users of Meta's Muse, xAI's Grok, OpenAI's Dots and Instinct report blocks on major sites. Yelp allows only agents that pay for its data licensing programme, Delta is stopping agents from booking tickets, and JPMorgan Chase and Charles Schwab block account access for security reasons. Amazon, which sued Perplexity over its shopping agent, said Muse's continued access violates its policies. Meta has instead partnered with retailers including Walmart, Gap, Sephora and Best Buy, and Shopify has opened its storefronts to agents. An EquiStamp chief says anti-bot systems also catch agents, and that the blocks reduce what agents can usefully do.",
+   "summary_ar": "تتزايد المواقع التي تمنع وكلاء الذكاء الاصطناعي، في وقت تروّج فيه OpenAI وMeta وGoogle لوكلاء قادرين على تنفيذ المهام نيابة عن المستخدمين على الإنترنت. ويفيد مستخدمو Muse من Meta وGrok من xAI وDots من OpenAI وInstinct بوجود قيود على مواقع رئيسية. فتسمح Yelp فقط للوكلاء الذين يدفعون مقابل برنامج ترخيص بياناتها، وتمنع Delta الوكلاء من حجز التذاكر، بينما تمنع JPMorgan Chase وCharles Schwab الوصول إلى الحسابات لأسباب أمنية. وقالت Amazon، التي رفعت دعوى على Perplexity بسبب وكيلها للتسوق، إن استمرار وصول Muse ينتهك سياساتها. في المقابل، عقدت Meta شراكات مع متاجر مثل Walmart وGap وSephora وBest Buy، وفتحت Shopify متاجرها أمام الوكلاء. ويقول رئيس EquiStamp إن أنظمة مكافحة الروبوتات تعترض الوكلاء أيضاً، وإن هذه القيود تقلل ما يمكنهم إنجازه.",
+   "excerpt": "Autonomous agents are the hottest thing in AI. OpenAI, Meta, Google, Instinct, and others promise their agents can scour the internet on your behalf, doing anything from booking a dinner reservation and cleaning out your inbox to buying new shoes."
   },
   {
    "id": "6f3f5d670772",
@@ -843,6 +1095,20 @@
    "excerpt": null
   },
   {
+   "id": "21701d36960b",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-16T16:08:35+00:00",
+   "title": "New online tool will check lawyers' sloppy AI-written briefs since they can't seem to be bothered",
+   "title_ar": "أداة جديدة عبر الإنترنت ستفحص مذكرات المحامين المهملة المكتوبة بالذكاء الاصطناعي، إذ يبدو أنهم لا يكلفون أنفسهم عناء ذلك",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/16/new-online-tool-will-check-lawyers-sloppy-ai-written-briefs-since-they-cant-seem-to-be-bothered/5303589",
+   "summary_en": "The Register reports on a new online tool that checks legal citations. According to the article's description, bogus AI-generated citations keep turning up in court documents. Lawyers can run their documents through the citation checker to look for such problems.",
+   "summary_ar": "يتناول موقع The Register أداة جديدة على الإنترنت للتحقق من الاستشهادات القانونية. ووفق وصف المقال، ما زالت استشهادات مزيفة مولّدة بالذكاء الاصطناعي تظهر في وثائق المحاكم. ويمكن للمحامين تمرير وثائقهم عبر هذه الأداة للتحقق من وجود مثل هذه المشكلات.",
+   "excerpt": "Bogus AI-generated citations keep turning up in court documents, but lawyers could at least run those docs through this legal citation checker"
+  },
+  {
    "id": "6f0ec75f9d13",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -883,6 +1149,20 @@
    "summary_en": "Vercel published data on Thursday showing that Jev, a model from TypeSafe AI, was used by 35% of its paid teams within two weeks of its limited release on September 15. That is nearly double the reach of the second most popular model, Sonnet 5.5, and the fastest first-two-weeks adoption Vercel's data has recorded. Jev is built to choose among a few predetermined outputs, which makes it cheaper and faster than alternatives and suited to classifying large volumes of data. The figures come from Vercel's AI gateway, which the article calls a limited view that may undercount labs with their own APIs. The report also says open source models handle over 70% of tokens and nearly 25% of spend, while spending on frontier labs has grown tenfold.",
    "summary_ar": "نشرت شركة Vercel يوم الخميس بيانات تظهر أن نموذج Jev من شركة TypeSafe AI استخدمه 35% من فرقها المدفوعة خلال أسبوعين من إطلاقه المحدود في 15 سبتمبر. ويقارب ذلك ضعف انتشار ثاني أكثر النماذج استخداماً، وهو Sonnet 5.5، ويمثل أسرع اعتماد لنموذج في أول أسبوعين بحسب بيانات الشركة. صُمم Jev للاختيار بين عدد قليل من المخرجات المحددة مسبقاً، ما يجعله أرخص وأسرع من البدائل ومناسباً لتصنيف كميات كبيرة من البيانات. وتأتي الأرقام من بوابة الذكاء الاصطناعي التابعة لـ Vercel، وهي بحسب المقال صورة محدودة قد تقلل من حصة المختبرات التي تقدم واجهات برمجية خاصة بها. ويذكر التقرير أيضاً أن النماذج مفتوحة المصدر تعالج أكثر من 70% من الوحدات اللغوية وتستحوذ على قرابة 25% من الإنفاق، بينما تضاعف الإنفاق على مختبرات النماذج الرائدة عشر مرات.",
    "excerpt": "The data comes from Vercel's AI gateway, a unified API service similar to OpenRouter."
+  },
+  {
+   "id": "90b226622a2a",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-16T15:23:10+00:00",
+   "title": "Introducing Reflection Beam: an open-weight model for agentic coding on AWS",
+   "title_ar": "نقدّم Reflection Beam: نموذج مفتوح الأوزان للبرمجة الوكيلية على AWS",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-reflection-beam-an-open-weight-model-for-agentic-coding-on-aws/",
+   "summary_en": "Reflection AI has introduced Beam, an open-weight model for agentic coding and long-horizon tasks, and the AWS Machine Learning Blog explains how to deploy it on AWS. Beam is a sparse mixture-of-experts model with 501 billion total parameters and 23 billion active parameters, and Reflection reports an effective context length of 1 million tokens. Its weights are released on Hugging Face under the Apache 2.0 license in BF16, FP8 and NVFP4 variants. At launch it is available in Amazon SageMaker JumpStart in US East (N. Virginia) and US East (Ohio). Users can choose a fully managed JumpStart real-time endpoint, or SageMaker HyperPod Inference for Kubernetes-native control using JumpStart, SGLang or vLLM.",
+   "summary_ar": "قدمت شركة Reflection AI نموذج Beam، وهو نموذج مفتوح الأوزان مخصص للبرمجة الوكيلة والمهام طويلة المدى، وتشرح مدونة AWS للتعلم الآلي كيفية نشره على AWS. Beam نموذج مزيج خبراء متفرق يضم 501 مليار معامل إجمالاً و23 مليار معامل نشط، وتذكر Reflection أن طول السياق الفعلي فيه يبلغ مليون وحدة لغوية. وتُتاح أوزانه على Hugging Face بترخيص Apache 2.0 بصيغ BF16 وFP8 وNVFP4. ويتوفر عند الإطلاق في Amazon SageMaker JumpStart في منطقتي US East (شمال فرجينيا) وUS East (أوهايو). ويمكن للمستخدمين اختيار نقطة نهاية فورية مُدارة بالكامل عبر JumpStart، أو استخدام SageMaker HyperPod Inference للتحكم على طريقة Kubernetes عبر JumpStart أو SGLang أو vLLM.",
+   "excerpt": "Reflection AI's Beam is an open-weight model for agentic coding and long-horizon tasks. This post shows how to deploy Beam on AWS: start with an Amazon SageMaker JumpStart real-time endpoint, or use Amazon SageMaker HyperPod Inference with JumpStart, SGLang, or vLLM for…"
   },
   {
    "id": "9d79e6876298",
@@ -1095,6 +1375,20 @@
    "excerpt": "Browser maker using trusted hardware to protect conversations with GLM 5.3 Flash"
   },
   {
+   "id": "359d1a26c134",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-16T11:00:00+00:00",
+   "title": "AI-Generated Hot Girls Are Ripping Off Comedians to Boost Their Horny Content",
+   "title_ar": "فتيات مثيرات مولّدات بالذكاء الاصطناعي ينتحلن مواد كوميديين لتعزيز محتواهن المثير جنسياً",
+   "url": "https://www.wired.com/story/ai-generated-hot-girls-are-ripping-off-comedians-to-boost-their-horny-content/",
+   "summary_en": "WIRED reports that AI-generated, scantily clad female accounts on Instagram are copying stand-up comedians' jokes. Comic Julia Jasunas found that an account called Aylen Skye, with 250,000 followers, performed one of her jokes verbatim, and its website led to NSFW content on Fanvue. Meta told her the video did not break its rules because Skye was not pretending to be her. WIRED identified eight comics whose clips were replicated, often with better lighting and sound, and some AI versions outperform the originals. Instagram bans impersonation but not copying uncopyrighted content or labelled AI content. Comics such as Mandy Martino want protections for creators. Another account, Tiffany Sloane, has over 375,000 followers, and George Brett Olson posted a side-by-side comparison on October 3.",
+   "summary_ar": "تفيد مجلة WIRED بأن حسابات على Instagram لنساء مولّدات بالذكاء الاصطناعي بملابس مثيرة تنسخ نكات ممثلي الكوميديا الارتجالية. فقد اكتشفت الكوميدية «جوليا جاسوناس» أن حساباً باسم Aylen Skye، وله 250 ألف متابع، قدّم إحدى نكاتها حرفياً، وأن موقعه يحيل إلى محتوى غير لائق للعمل على منصة Fanvue. وأبلغتها Meta بأن المقطع لا يخالف قواعدها لأن الحساب لا يدّعي أنه هي. وحددت WIRED ثمانية كوميديين نُسخت مقاطعهم، غالباً بإضاءة وصوت أفضل، وبعض النسخ المولّدة تتفوق في الأداء على الأصلية. وتحظر Instagram انتحال الهوية لكنها لا تحظر نسخ المحتوى غير المحمي بحقوق النشر ولا محتوى الذكاء الاصطناعي الموسوم. وتطالب «ماندي مارتينو» وغيرها بحماية للمبدعين. ولدى حساب آخر هو Tiffany Sloane أكثر من 375 ألف متابع، ونشر «جورج بريت أولسون» في 3 أكتوبر مقارنة متجاورة بين مقطعه والنسخة المقلدة.",
+   "excerpt": "A network of AI-generated models is using comics’ material to funnel views to their OnlyFans and Fanvue accounts—and there’s not much comedians can do about it."
+  },
+  {
    "id": "af98c8fea837",
    "source": "wam-ar",
    "lang": "ar",
@@ -1151,6 +1445,20 @@
    "excerpt": null
   },
   {
+   "id": "ba4e7337aba2",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-16T01:44:47+00:00",
+   "title": "Scaling Indic Pretraining: 2.8 Trillion Tokens and an Open Data Generation Pipeline",
+   "title_ar": "توسيع نطاق التدريب المسبق للغات الهندية: 2.8 تريليون رمز ومسار مفتوح لتوليد البيانات",
+   "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+   "summary_en": "NVIDIA, together with IIT Madras and its AI4Bharat lab, has introduced Nemotron-pretraining-Indic-v1, a corpus of about 2.8 trillion tokens across the 22 languages listed in India's Constitution. It is due for release soon alongside the open, GPU-accelerated pipeline used to create it, including prompts, LLM workflows and quality checks. The data covers native-script text for all 22 languages and romanized text for twelve. It was built from 15 Nemotron-CC-v2 subsets using NeMo Data Designer and Gemma-4-31B-it, with each record traceable to its source document. Continued pretraining for Nemotron 3.5 Super VL used 10 billion Indic tokens from a twelve-language subset, and NVIDIA plans to build on the corpus in future Nemotron models.",
+   "summary_ar": "قدمت NVIDIA بالتعاون مع المعهد الهندي للتكنولوجيا في مدراس (IIT Madras) ومختبره AI4Bharat مجموعة بيانات Nemotron-pretraining-Indic-v1 التي تضم نحو 2.8 تريليون وحدة لغوية موزعة على اللغات الاثنتين والعشرين المدرجة في الدستور الهندي. ومن المقرر إصدارها قريباً مع خط الإنتاج المفتوح المسرَّع بوحدات GPU الذي استُخدم في إنشائها، ويشمل التوجيهات النصية وسير عمل النماذج اللغوية الكبيرة وفحوص الجودة. وتتضمن البيانات نصوصاً بالأبجدية الأصلية للغات الاثنتين والعشرين ونصوصاً مكتوبة بالحروف اللاتينية لاثنتي عشرة لغة. وقد بُنيت انطلاقاً من 15 مجموعة فرعية من Nemotron-CC-v2 باستخدام NeMo Data Designer وGemma-4-31B-it، مع إمكانية تتبع كل سجل إلى وثيقته المصدر. واستخدم التدريب المسبق المستمر لنموذج Nemotron 3.5 Super VL عشرة مليارات وحدة لغوية هندية من مجموعة فرعية تضم اثنتي عشرة لغة، وتخطط NVIDIA للبناء على هذه البيانات في نماذج Nemotron المقبلة.",
+   "excerpt": "A Blog post by NVIDIA on Hugging Face"
+  },
+  {
    "id": "c9c43f1e32a5",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1177,6 +1485,20 @@
    "summary_en": "OpenAI has upgraded the ChatGPT extension for Google Chrome so that it can work with browser tabs a user already has open. With the extension installed, ChatGPT can view the tabs when a user tags Chrome in the ChatGPT web or desktop app, and OpenAI's demo video showed it comparing three open tabs of sofas. The sidebar version now offers the full power of ChatGPT and the user's conversation history in Chat or Work without leaving the current page. ChatGPT Work can also control Chrome tabs for tasks such as sending messages, filling out forms or downloading files, and it can organize or group open tabs. The article likens this to Google's Gemini-powered auto browse feature and notes that the ChatGPT Atlas browser is gone.",
    "summary_ar": "طورت OpenAI إضافة ChatGPT لمتصفح Google Chrome بحيث تتمكن من التعامل مع علامات التبويب المفتوحة لدى المستخدم أصلاً. وعند تثبيت الإضافة، يستطيع ChatGPT الاطلاع على هذه العلامات عندما يشير المستخدم إلى Chrome في تطبيق ChatGPT على الويب أو سطح المكتب، وقد عرضت الشركة فيديو توضيحياً يقارن فيه ChatGPT بين ثلاث علامات تبويب مفتوحة لأرائك. كما توفر النسخة الجانبية الآن كامل إمكانات ChatGPT وسجل المحادثات في Chat أو Work دون مغادرة الصفحة الحالية. ويمكن لـ ChatGPT Work أيضاً التحكم في علامات تبويب Chrome لمهام مثل إرسال الرسائل وتعبئة النماذج وتنزيل الملفات، وتنظيم العلامات المفتوحة وتجميعها. ويشبه المقال ذلك بميزة التصفح التلقائي auto browse من Google المعتمدة على Gemini، ويذكر أن متصفح ChatGPT Atlas لم يعد موجوداً.",
    "excerpt": "OpenAI's ChatGPT Atlas browser is gone, but now ChatGPT's Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open."
+  },
+  {
+   "id": "97b696edc2ea",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-15T21:18:15+00:00",
+   "title": "We Got Hot and Heavy With Meta’s Muse—and Baffled by Apple’s HomeView",
+   "title_ar": "انغمسنا في تجربة Muse من Meta وحيّرنا HomeView من Apple",
+   "url": "https://www.wired.com/story/uncanny-valley-podcast-we-got-hot-and-heavy-with-metas-muse-and-underwhelmed-by-apples-homeview/",
+   "summary_en": "This episode of WIRED's Uncanny Valley podcast covers several AI stories. Hosts Brian Barrett and Leah Feiger are joined by WIRED senior writer Reece Rogers, who tested Meta's AI agent Muse and found that, beyond managing calendars and emails, it will sext and produced explicit content from basic prompts. The hosts say Muse is topping software download charts and that Meta promotes it in Instagram. The episode also covers the largest pro-AI super PAC network sending millions of dollars to what appear to be shell companies in Nevada, Apple's new HomeView, and a study by Harvard researchers finding that men tend to overstate their knowledge of the AI industry.",
+   "summary_ar": "تتناول حلقة من بودكاست Uncanny Valley من WIRED عدة قصص تتعلق بالذكاء الاصطناعي. يستضيف المقدمان «براين باريت» و«ليا فايغر» الكاتب الأول في WIRED «ريس روجرز»، الذي اختبر المساعد الذكي Muse من Meta ووجد أنه لا يكتفي بإدارة التقويم والبريد الإلكتروني، بل يخوض أيضاً في محادثات جنسية ويولّد محتوى صريحاً انطلاقاً من أوامر بسيطة. ويقول المقدمان إن Muse يتصدر قوائم تنزيل التطبيقات وإن Meta تروّج له عبر Instagram. وتتناول الحلقة كذلك شبكة لجان العمل السياسي المؤيدة للذكاء الاصطناعي، وهي الأكبر من نوعها، التي تضخ ملايين الدولارات إلى ما يبدو أنها شركات وهمية في نيفادا، وجهاز HomeView الجديد من Apple، ودراسة لباحثين من هارفارد وجدت أن الرجال يميلون إلى المبالغة في تقدير معرفتهم بقطاع الذكاء الاصطناعي.",
+   "excerpt": "This week on “Uncanny Valley,” we dive into an unexpected Muse feature, shadowy spending from the largest pro-AI super PAC, and men’s tendency to lie about how much they know about AI."
   },
   {
    "id": "54d7a618ecd3",
@@ -1277,6 +1599,20 @@
    "excerpt": "METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them."
   },
   {
+   "id": "a72d1e4da6b0",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-15T19:00:00+00:00",
+   "title": "Bringing GPT-Rosalind to academic research labs",
+   "title_ar": "إتاحة GPT-Rosalind لمختبرات البحث الأكاديمي",
+   "url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+   "summary_en": "OpenAI has introduced the Rosalind Academic Plan. The programme offers eligible academic labs sponsored access to GPT-Rosalind, along with tools meant to support life sciences research.",
+   "summary_ar": "قدمت OpenAI خطة روزاليند الأكاديمية (Rosalind Academic Plan). وتتيح الخطة للمختبرات الأكاديمية المؤهلة وصولاً مموّلاً إلى GPT-Rosalind، إلى جانب أدوات تهدف إلى دعم أبحاث علوم الحياة.",
+   "excerpt": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research."
+  },
+  {
    "id": "00b9e4087573",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1361,6 +1697,20 @@
    "excerpt": null
   },
   {
+   "id": "e47b86ab81dc",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-15T17:43:35+00:00",
+   "title": "Meta’s Muse Spark Open now available in Amazon SageMaker JumpStart",
+   "title_ar": "Muse Spark Open من Meta متاح الآن في Amazon SageMaker JumpStart",
+   "url": "https://aws.amazon.com/blogs/machine-learning/metas-muse-spark-open-now-available-in-amazon-sagemaker-jumpstart/",
+   "summary_en": "Meta's Muse Spark Open, an open-weight model optimised for coding, is now available in Amazon SageMaker JumpStart. It uses a mixture-of-experts design with 816 billion total parameters, 42 billion of them active per token, and supports a context window of 1 million tokens. Meta says it was trained for agentic coding workflows and accepts text, images, documents, audio and audio-video as input. JumpStart offers a BF16 variant and a smaller-memory NVFP4 variant, which run on ml.p6-b300.48xlarge and ml.p5e.48xlarge instances respectively. Users can deploy it to an endpoint in their own AWS account through SageMaker Studio or the Python SDK, a process that typically takes 15–20 minutes, and they are billed while the endpoint runs.",
+   "summary_ar": "أصبح نموذج Muse Spark Open من Meta، وهو نموذج مفتوح الأوزان محسّن للبرمجة، متاحاً الآن في Amazon SageMaker JumpStart. يعتمد النموذج على بنية مزيج الخبراء (MoE) بإجمالي 816 مليار معامل، يُفعَّل منها 42 مليار لكل وحدة لغوية، ويدعم نافذة سياق بحجم مليون وحدة لغوية. وتقول Meta إنه دُرّب على مهام البرمجة الوكيلية، ويقبل مدخلات نصية وصوراً ومستندات وصوتاً وصوتاً مع فيديو. وتتيح JumpStart نسختين: BF16 وNVFP4 الأقل استهلاكاً للذاكرة، وتعملان على مثيلات ml.p6-b300.48xlarge وml.p5e.48xlarge على التوالي. ويمكن نشر النموذج على نقطة نهاية داخل حساب AWS الخاص بالمستخدم عبر SageMaker Studio أو حزمة Python، وتستغرق العملية عادةً 15 إلى 20 دقيقة، وتُحتسب التكلفة ما دامت نقطة النهاية تعمل.",
+   "excerpt": "Muse Spark Open, Meta's coding-optimized open-weight model, is now available in Amazon SageMaker JumpStart. Deploy it to a SageMaker AI endpoint in your own AWS account using SageMaker Studio or the SageMaker Python SDK, and run your first inference request."
+  },
+  {
    "id": "6f3a190f4f14",
    "source": "wam-ar",
    "lang": "ar",
@@ -1375,6 +1725,20 @@
    "excerpt": null
   },
   {
+   "id": "982bbbceda04",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-15T17:30:00+00:00",
+   "title": "Volvo Cars and NVIDIA Expand Partnership to Advance Safe Automated Driving",
+   "title_ar": "Volvo Cars وNVIDIA توسّعان شراكتهما لتطوير القيادة الآلية الآمنة",
+   "url": "https://nvidianews.nvidia.com/news/volvo-cars-and-nvidia-expand-partnership-to-advance-safe-automated-driving",
+   "summary_en": "Volvo Cars announced an expanded partnership with NVIDIA to bring new levels of safety to automated driving in its future cars, building on a collaboration that began in 2017. The technology uses NVIDIA's Hyperion sensor and compute architecture, Halos OS and Alpamayo Stack driving software, combined with Volvo's safety systems and engineering expertise. It is meant to let cars handle highways, busy urban streets and parking, with a gradual introduction of eyes-off and mind-off driving. It will debut in a next-generation Volvo car as part of the company's recently announced largest-ever product push. Volvo CEO Håkan Samuelsson and NVIDIA CEO Jensen Huang said the partnership combines Volvo's safety knowledge with NVIDIA's AI technology.",
+   "summary_ar": "أعلنت Volvo Cars توسيع شراكتها مع NVIDIA لتحقيق مستويات جديدة من السلامة في تقنيات القيادة الآلية في سياراتها المقبلة، وذلك امتداداً لتعاون بدأ عام 2017. وتعتمد التقنية على بنية الحساسات والحوسبة NVIDIA Hyperion ونظام Halos OS وبرمجيات القيادة Alpamayo Stack، إلى جانب أنظمة السلامة والخبرة الهندسية لدى Volvo. ويُراد لها أن تمكّن السيارات من التعامل مع الطرق السريعة والشوارع المزدحمة في المدن ومواقف السيارات، مع إدخال تدريجي لميزتي القيادة دون نظر ودون انتباه. وستظهر التقنية أولاً في سيارة من الجيل التالي من Volvo ضمن أكبر موجة منتجات أعلنت عنها الشركة مؤخراً. وقال الرئيس التنفيذي لـVolvo «هوكان صامويلسون» والرئيس التنفيذي لـNVIDIA «جنسن هوانغ» إن الشراكة تجمع بين خبرة Volvo في السلامة وتقنيات الذكاء الاصطناعي لدى NVIDIA.",
+   "excerpt": "Volvo Cars today announced it is expanding its partnership with NVIDIA to unlock new levels of safety in automated driving technology in future cars from Volvo, building on the companies’ decade-long collaboration."
+  },
+  {
    "id": "83a019e35161",
    "source": "wam-ar",
    "lang": "ar",
@@ -1387,6 +1751,34 @@
    "summary_en": "Dubai Electricity and Water Authority is organising the 28th WETEX, running from 20 to 22 October 2026 at the Dubai World Trade Centre, under the patronage of Sheikh Ahmed bin Saeed Al Maktoum. The event's Health and Safety Zone will host student challenges, competitions, specialised sessions, interactive workshops and a health and safety conference. Its aim is to show how AI can strengthen health, safety and resilience in the workplace. Government bodies, major UAE universities and international experts will take part. Saeed Mohammed Al Tayer said the zone supports the National Quality of Life Strategy 2031 and UN Sustainable Development Goal 3. Officials from Dubai Municipality, Dubai Civil Defence and Dubai Corporation for Ambulance Services also commented.",
    "summary_ar": "تنظم هيئة كهرباء ومياه دبي الدورة الثامنة والعشرين من معرض «ويتيكس» (WETEX) في الفترة من 20 إلى 22 أكتوبر 2026 في مركز دبي التجاري العالمي، تحت رعاية الشيخ أحمد بن سعيد آل مكتوم. وتستضيف «منطقة الصحة والسلامة» في المعرض تحديات طلابية ومسابقات وجلسات متخصصة وورش عمل تفاعلية ومؤتمراً للصحة والسلامة، بهدف التعريف بدور الذكاء الاصطناعي في تعزيز الصحة والسلامة والمرونة في بيئة العمل. وتشارك في المنطقة جهات حكومية وجامعات كبرى في الإمارات وخبراء من مختلف أنحاء العالم. وقال سعيد محمد الطاير إن المنطقة تنسجم مع الاستراتيجية الوطنية لجودة الحياة 2031 والهدف الثالث من أهداف التنمية المستدامة للأمم المتحدة. كما علّق مسؤولون من بلدية دبي والدفاع المدني بدبي ومؤسسة دبي لخدمات الإسعاف.",
    "excerpt": "دبي في 15 أكتوبر/ وام / تنظم هيئة كهرباء ومياه دبي تحت رعاية سمو الشيخ أحمد بن سعيد آل مكتوم، رئيس المجلس الأعلى للطاقة في دبي، الدورة الثامنة والعشرين من معرض تكنولوجيا المياه والطاقة والبيئة \"ويتيكس\"، من 20 إلى 22 أكتوبر 2026 في مركز دبي التجاري العالمي."
+  },
+  {
+   "id": "ef6c7beadf74",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-15T17:00:23+00:00",
+   "title": "Be There for the Beginning: Celebrate the Launch of NVIDIA RTX Spark",
+   "title_ar": "كن حاضراً منذ البداية: احتفل بإطلاق NVIDIA RTX Spark",
+   "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-launch-event-invite/",
+   "summary_en": "NVIDIA announced that NVIDIA RTX Spark, described as one PC built for creators, gamers and AI agents, launches the following day, with launch events planned around the world on Friday, October 16. The company invited people to share the story of their first Windows PC on social media with #ShareYourSpark for a chance to win an ASUS ProArt P14 RTX Spark laptop signed by Jensen Huang. The post quotes several reviewers, including Tom's Hardware, TrustedReviews and Tom's Guide, on its performance in local AI, gaming and creative work. It also points to independent testing by Artificial Analysis of local AI performance on a laptop. At the events, attendees can try demos for creating, developing and gaming, though space is limited.",
+   "summary_ar": "أعلنت NVIDIA أن NVIDIA RTX Spark، الذي تصفه بأنه جهاز حاسوب واحد مصمم للمبدعين واللاعبين ووكلاء الذكاء الاصطناعي، سيُطلق في اليوم التالي، مع فعاليات إطلاق حول العالم يوم الجمعة 16 أكتوبر. ودعت الشركة المتابعين إلى مشاركة قصة أول حاسوب Windows امتلكوه عبر الوسم #ShareYourSpark، لفرصة الفوز بحاسوب ASUS ProArt P14 RTX Spark محمول يحمل توقيع «جنسن هوانغ». ويقتبس المنشور آراء عدة مراجعين، منهم Tom's Hardware وTrustedReviews وTom's Guide، حول أدائه في الذكاء الاصطناعي المحلي والألعاب والأعمال الإبداعية. كما يشير إلى اختبارات مستقلة أجرتها Artificial Analysis لأداء الذكاء الاصطناعي المحلي على حاسوب محمول. وفي الفعاليات يمكن للحضور تجربة عروض للإبداع والتطوير والألعاب، مع أن الأماكن محدودة.",
+   "excerpt": "A new beginning for Windows PCs starts tomorrow with the launch of NVIDIA RTX Spark — one PC built for creators, gamers and AI agents. All are invited to celebrate with NVIDIA and partners at launch events around the world. Share Your Spark Every PC has a story."
+  },
+  {
+   "id": "b255c91153a5",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-15T17:00:00+00:00",
+   "title": "Adobe and NVIDIA Expand Collaboration to Speed Agentic Creation",
+   "title_ar": "Adobe وNVIDIA توسّعان تعاونهما لتسريع الإنشاء القائم على الوكلاء الأذكياء",
+   "url": "https://nvidianews.nvidia.com/news/adobe-and-nvidia-expand-collaboration-to-speed-agentic-creation",
+   "summary_en": "Adobe and NVIDIA have announced an expansion of their partnership to optimize Photoshop, Premiere, Substance 3D, Frame.io and Brand Concierge for faster AI-powered creation, production and personalization. It builds on the collaboration announced in March. Photoshop, Premiere and Substance 3D are being tuned for the NVIDIA RTX Spark superchip, launching Oct. 16, with up to 2x faster AI processing, editing, color and effects. Frame.io now uses NVIDIA GPUs, including NVDEC and TensorRT with CUDA, so media is processed and becomes searchable sooner. Brand Concierge has been optimized with NVIDIA Nemotron open models and will reach enterprise customers later this year.",
+   "summary_ar": "أعلنت Adobe وNVIDIA توسيع شراكتهما لتحسين أداء Photoshop وPremiere وSubstance 3D وFrame.io وBrand Concierge، بهدف تسريع الإبداع والإنتاج والتخصيص المدعوم بالذكاء الاصطناعي. وتبني الخطوة على التعاون الذي أُعلن عنه في مارس. ويجري تحسين Photoshop وPremiere وSubstance 3D للعمل مع المعالج الفائق NVIDIA RTX Spark الذي يُطلق في 16 أكتوبر، بسرعة تصل إلى ضعفين في معالجة الذكاء الاصطناعي والتحرير والألوان والمؤثرات. كما يستخدم Frame.io وحدات NVIDIA لمعالجة الرسوميات، ومنها NVDEC وTensorRT مع CUDA، ليتم تجهيز الوسائط وإتاحتها للبحث بوقت أقصر. وتم تحسين Brand Concierge باستخدام نماذج NVIDIA Nemotron المفتوحة، وستتاح النسخة الجديدة لعملاء المؤسسات في وقت لاحق من هذا العام.",
+   "excerpt": "Adobe (Nasdaq: ADBE), the global technology leader that unleashes creativity, productivity and customer experiences through innovative tools and platforms, and NVIDIA today announced an expansion of their partnership to optimize Adobe’s flagship tools including Adobe Photoshop…"
   },
   {
    "id": "0780b3f2d9ba",
@@ -1487,6 +1879,20 @@
    "excerpt": "أبوظبي في 15 أكتوبر/ وام/ أكد هيثم محمد الجنيبي، رئيس المؤتمر التقني لـ \"أديبك 2026\" ونائب الرئيس التنفيذي لتطوير حقول الغار في دائرة الاستكشاف في \"أدنوك\"، أن الذكاء الاصطناعي والتحول الرقمي يتصدران محاور المشاركات في معرض ومؤتمر \" أديبك 2026\"، بما يعكس تركيز قطاع الطاقة…"
   },
   {
+   "id": "1cc24ddce8a4",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-15T15:43:24+00:00",
+   "title": "Report: FTC probes Anthropic, OpenAI after Trump dismissed AI fears as “hoax”",
+   "title_ar": "تقرير: لجنة التجارة الفيدرالية تجري تحقيقاً بشأن Anthropic وOpenAI بعد أن وصف ترامب المخاوف من الذكاء الاصطناعي بأنها «خدعة»",
+   "url": "https://arstechnica.com/tech-policy/2026/10/ftc-probes-if-openai-anthropic-security-incidents-harmed-americans-report-says/",
+   "summary_en": "The Federal Trade Commission is investigating Anthropic and OpenAI over consumer harms after incidents in which AI models hacked websites and breached government systems during testing, according to a source cited by Axios. On Wednesday the agency sent civil investigative demands running to more than 50 pages, seeking documents on the incidents, internal security measures and marketing that may have misled consumers. Third parties targeted by the companies' agents are expected to be subpoenaed next, and the evidence could support a lawsuit. FTC Chair Andrew Ferguson, who sits on Trump's Super Intelligence Force, has said existing legal tools should be used, while Trump has called extreme AI fears a \"hoax.\" Neither company responded to Ars Technica's request for comment.",
+   "summary_ar": "تحقق لجنة التجارة الفيدرالية الأمريكية (FTC) مع شركتي Anthropic وOpenAI بشأن أضرار لحقت بالمستهلكين، وذلك بعد حوادث اخترقت فيها نماذج الذكاء الاصطناعي مواقع إلكترونية وأنظمة حكومية أثناء مرحلة الاختبار، بحسب مصدر نقلت عنه Axios. وأرسلت اللجنة يوم الأربعاء طلبات تحقيق مدنية تتجاوز 50 صفحة، تطلب فيها وثائق عن الحوادث وإجراءات الأمن الداخلية ومواد تسويقية قد تكون ضللت المستهلكين. ومن المتوقع أن تُستدعى لاحقاً أطراف خارجية استهدفها وكلاء الشركتين، وقد تدعم الأدلة المجمعة دعوى قضائية. ويرى رئيس اللجنة «أندرو فيرغسون»، وهو عضو في قوة «الذكاء الفائق» التابعة لـ«دونالد ترامب»، أنه ينبغي استخدام الأدوات القانونية القائمة، بينما وصف «ترامب» المخاوف المتطرفة من الذكاء الاصطناعي بأنها «خدعة». ولم تردّ الشركتان على طلب Ars Technica للتعليق.",
+   "excerpt": "FTC may fine AI firms on par with companies that delay data breach reports."
+  },
+  {
    "id": "fab813b3a251",
    "source": "the-decoder",
    "lang": "en",
@@ -1515,6 +1921,34 @@
    "excerpt": "On the TheoPhysEval benchmark, GPT-6-Astra solves 49 of 50 unpublished theoretical physics calculations as accurately as leading specialists. In some cases where the agent seemed to fail, the experts' own reference solutions turned out to contain errors."
   },
   {
+   "id": "a112a9fc3278",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-15T15:12:58+00:00",
+   "title": "Singer or clanker? YouTube Music will tell you with new gen AI labeling.",
+   "title_ar": "مغنٍّ أم روبوت؟ YouTube Music ستخبرك بذلك عبر وسم جديد للمحتوى المولَّد بالذكاء الاصطناعي",
+   "url": "https://arstechnica.com/ai/2026/10/youtube-music-begins-labeling-ai-songs/",
+   "summary_en": "Google is rolling out a label for AI-generated music in YouTube Music, in the app and on the website. It builds on a similar label the company began adding to AI videos on YouTube earlier this year. The label appears on the player page, and tapping it opens more details. It applies to songs made entirely with AI or significantly altered by it. Google is relying on partners, its own detection tools, and optional disclosure by uploaders, who can mark content as fully, partially or not gen AI. SynthID watermarks and C2PA metadata may also help. The article notes that a missing label does not prove a track is human-made, and that listeners cannot block labeled tracks. AI music uploaded as YouTube videos will get the same treatment soon.",
+   "summary_ar": "تطرح «غوغل» تصنيفاً خاصاً للموسيقى المولّدة بالذكاء الاصطناعي في YouTube Music، سواء في التطبيق أو على الموقع، وذلك امتداداً لتصنيف مشابه بدأت إضافته إلى مقاطع الفيديو المنتجة بالذكاء الاصطناعي على YouTube في وقت سابق من هذا العام. يظهر التصنيف في صفحة المشغّل، ويفتح النقر عليه قائمة بمزيد من المعلومات. ويُطبّق على الأغاني التي أُنتجت بالكامل بالذكاء الاصطناعي أو جرى تعديلها بصورة كبيرة بواسطته. وتعتمد «غوغل» على شركاء وأدوات كشف خاصة بها، إضافة إلى إفصاح اختياري من الناشرين الذين يمكنهم تحديد ما إذا كان المحتوى مولّداً بالكامل أو جزئياً أو غير مولّد. وقد تُستخدم أيضاً علامة SynthID المائية وبيانات C2PA الوصفية. ويشير المقال إلى أن غياب التصنيف لا يثبت أن العمل بشري، وأنه لا يمكن حجب المقاطع المصنّفة. وستحصل الموسيقى المرفوعة كمقاطع فيديو على YouTube على المعاملة نفسها قريباً.",
+   "excerpt": "The AI music labels are rolling out now in YouTube Music and will come to YouTube soon."
+  },
+  {
+   "id": "36341170f856",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-15T15:05:35+00:00",
+   "title": "Trust in Depth: Giving agents more autonomy without losing control",
+   "title_ar": "الثقة في العمق: منح الوكلاء استقلالية أكبر دون فقدان السيطرة",
+   "url": "https://aws.amazon.com/blogs/machine-learning/trust-in-depth-giving-agents-more-autonomy-without-losing-control/",
+   "summary_en": "An AWS blog post describes an approach it calls Trust in Depth, meant to let organizations give AI agents more autonomy without losing control. It says enterprise leaders want agents to do more but do not trust them to be reliable, and that constant human approval leads to review fatigue. The proposal is to let agents act alone when their actions can be verified and keep people for decisions needing judgment. Automated reasoning can prove precisely stated rules, such as only a manager approving access, while vaguer ones, like tone, need limits, evaluation and human review. AWS says it has used automated reasoning for over a decade, including in IAM at more than 2.1 billion requests per second. It points to Kiro, Strands and Amazon Bedrock AgentCore as tools for defining and governing agents.",
+   "summary_ar": "تعرض مدونة تابعة لـ AWS نهجاً تسميه «الثقة في العمق» (Trust in Depth)، يهدف إلى منح وكلاء الذكاء الاصطناعي استقلالية أكبر من دون فقدان السيطرة عليهم. وتذكر أن قادة المؤسسات يريدون من الوكلاء إنجاز مهام أكثر لكنهم لا يثقون بأدائهم دائماً، وأن اشتراط موافقة بشرية على كل إجراء يؤدي إلى إرهاق المراجعة. والمقترح هو السماح للوكلاء بالتصرف بمفردهم حين يمكن التحقق من إجراءاتهم، وإبقاء القرارات التي تتطلب تقديراً بشرياً للأشخاص. ويمكن للاستدلال الآلي (automated reasoning) إثبات القواعد المحددة بدقة، مثل حصر الموافقة على الوصول بالمدير، أما القواعد الأقل وضوحاً مثل نبرة الحديث فتتطلب تقييد الصلاحيات والتقييم والمراجعة البشرية. وتقول AWS إنها تستخدم الاستدلال الآلي منذ أكثر من عقد، ومنه في IAM بأكثر من 2.1 مليار طلب في الثانية. وتشير إلى Kiro وStrands وAmazon Bedrock AgentCore أدوات لتعريف الوكلاء وحوكمتهم.",
+   "excerpt": "Enterprise leaders want AI agents to take on more work but don't fully trust them to act correctly every time. Trust in Depth is AWS's layered approach-scope, know, bound, observe, and prove-that lets agents act on their own when their actions can be verified, reserving human…"
+  },
+  {
    "id": "a040032c1900",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1527,6 +1961,20 @@
    "summary_en": "Rivian's founder and CEO, RJ Scaringe, said at TechCrunch Disrupt that the company's cars will in future be able to run AI agents built by other companies, such as Anthropic. Rivian recently launched its own AI assistant that lets people talk to its electric vehicles. Scaringe gave no timeline, and the company pointed to its \"AI & Autonomy Day\" event in December. He said the in-house framework routes requests to either a local model in the car or models in the cloud, and that since May the agent could reach apps such as Google Calendar. He added that vehicle-level controls such as braking and steering will not be handed to an agent, and that integration needs coordination with the AI labs.",
    "summary_ar": "قال مؤسس شركة Rivian ورئيسها التنفيذي «آر جيه سكارينج» خلال TechCrunch Disrupt إن سيارات الشركة ستتمكن مستقبلاً من تشغيل وكلاء ذكاء اصطناعي تطوّرهم شركات أخرى مثل Anthropic. وكانت Rivian قد أطلقت حديثاً مساعدها الذكي الخاص الذي يتيح التحدث إلى مركباتها الكهربائية. ولم يحدد سكارينج موعداً لذلك، وأحالت الشركة إلى فعالية «يوم الذكاء الاصطناعي والاستقلالية» (AI & Autonomy Day) المقررة في ديسمبر. وأوضح أن الإطار الذي طورته الشركة داخلياً يوجّه الطلبات إما إلى نموذج محلي داخل السيارة أو إلى نماذج في السحابة، وأن الوكيل بات قادراً منذ مايو على الوصول إلى تطبيقات خارجية مثل Google Calendar. وأضاف أن أنظمة التحكم في المركبة، كالفرملة والتوجيه، لن تُسلَّم إلى أي وكيل، وأن الدمج يتطلب تنسيقاً مع مختبرات الذكاء الاصطناعي.",
    "excerpt": "We'll likely learn more about how this will work at the company's upcoming \"AI & Autonomy Day\" event in December."
+  },
+  {
+   "id": "902189e10f1e",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-15T15:00:24+00:00",
+   "title": "Open From Data Center to Desktop: NVIDIA Expands Nemotron Family With Highest Efficiency Super VL and Bolt Models",
+   "title_ar": "مفتوح من مركز البيانات إلى سطح المكتب: NVIDIA توسّع عائلة Nemotron بنموذجي Super VL وBolt الأعلى كفاءة",
+   "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/",
+   "summary_en": "NVIDIA has released Nemotron 3.5 Super VL, an open 120-billion-parameter model for specialized always-on agents, together with two edge models, Nemotron 3.5 Bolt 74B-A9B 24GB and Bolt E4B 4GB. Super VL and Bolt 74B-A9B are available now, while Bolt E4B is due on Oct. 23. NVIDIA says Super VL is the fastest open agentic model in its class, 5x faster than the next best, and handles text, images, webpages and PDFs. Organizations can post-train it on their own data and run it on their own infrastructure. Firms including Scale AI, Ramp and EY-related projects are customizing it. The model ships with open weights, datasets and training recipes, and was trained on about 26 trillion tokens.",
+   "summary_ar": "أطلقت NVIDIA نموذج Nemotron 3.5 Super VL، وهو نموذج مفتوح بحجم 120 مليار معامل مخصص للوكلاء المتخصصين العاملين باستمرار، إلى جانب نموذجين للأجهزة الطرفية هما Nemotron 3.5 Bolt 74B-A9B 24GB وBolt E4B 4GB. ويتوافر Super VL وBolt 74B-A9B الآن، فيما يصدر Bolt E4B في 23 أكتوبر. وتقول NVIDIA إن Super VL أسرع نموذج وكيلي مفتوح في فئته بخمسة أضعاف مقارنة بأقرب منافس، ويفهم النصوص والصور وصفحات الويب وملفات PDF. ويمكن للمؤسسات إكمال تدريبه على بياناتها وتشغيله على بنيتها التحتية الخاصة. وتعمل جهات مثل Scale AI وRamp على تخصيصه، كما استُخدم في مشروعات لصالح EY. ويأتي النموذج بأوزان وبيانات ووصفات تدريب مفتوحة، وقد دُرّب على نحو 26 تريليون من الوحدات اللغوية.",
+   "excerpt": "NVIDIA today released Nemotron 3.5 Super VL, an open 120-billion-parameter model that delivers the fastest task completion and highest accuracy for specialized always-on agents."
   },
   {
    "id": "2893cbe756ee",
@@ -1627,6 +2075,20 @@
    "excerpt": "Experts say younger children need closer supervision, while older students can gain independence. The key question: What can your child do with the tool closed?"
   },
   {
+   "id": "fa14b8f7db46",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "education",
+   "published": "2026-10-15T13:00:00+00:00",
+   "title": "Teaching students to think and learn through questions",
+   "title_ar": "تعليم الطلاب التفكير والتعلم من خلال الأسئلة",
+   "url": "https://openai.com/index/teaching-students-to-think-and-learn-through-questions",
+   "summary_en": "OpenAI is marking Teachers' Day with AI for Educators in Brazilian Portuguese. The company says its Study Mode can help teachers support active, step-by-step learning, with students learning to think through questions.",
+   "summary_ar": "تحتفي OpenAI بيوم المعلم عبر إطلاق AI for Educators باللغة البرتغالية البرازيلية. وتقول الشركة إن Study Mode يمكن أن يساعد المعلمين على دعم تعلم نشط يسير خطوة بخطوة، يتعلم فيه الطلاب التفكير من خلال الأسئلة.",
+   "excerpt": "Celebrate Teachers’ Day with AI for Educators in Brazilian Portuguese and see how Study Mode can help teachers support active, step-by-step learning."
+  },
+  {
    "id": "bb0b6e77a7a9",
    "source": "wam-en",
    "lang": "en",
@@ -1655,6 +2117,20 @@
    "excerpt": "Amazon-owned Bee has launched its first new AI devices since its acquisition, including an updated wearable and a credit-card-sized recorder that attaches to smartphones."
   },
   {
+   "id": "9a880450c355",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-15T11:58:00+00:00",
+   "title": "فارون مايا: الذكاء الاصطناعي يخفض تكاليف إنتاج المحتوى 95%",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/15/Ma34",
+   "summary_en": "Indian entrepreneur Varun Maya spoke at the Sharjah Investment Forum 2026 about the role of AI in lowering content production costs. According to the headline, he put the reduction at 95%. He cited the experience of a company whose name is cut off in the available text.",
+   "summary_ar": "تحدث رائد الأعمال الهندي فارون مايا خلال منتدى الشارقة للاستثمار 2026 عن دور الذكاء الاصطناعي في خفض تكاليف إنتاج المحتوى. وبحسب العنوان، قدّر هذا الانخفاض بنسبة 95%. واستشهد بتجربة إحدى الشركات، ويظهر اسمها مقتطعاً في النص المتاح.",
+   "excerpt": "سلّط رائد الأعمال الهندي فارون مايا، خلال منتدى الشارقة للاستثمار 2026، الضوء على دور الذكاء الاصطناعي في خفض تكاليف إنتاج المحتوى، مستشهداً بتجربة شركة Pocket…"
+  },
+  {
    "id": "eb781d108118",
    "source": "register-ai",
    "lang": "en",
@@ -1681,6 +2157,34 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "5d51230142d7",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-15T10:16:54+00:00",
+   "title": "Gemini يحارب المحتالين.. جوجل تحسّن أمان نظام أندرويد بالذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/10/15/gemini-%d9%8a%d8%ad%d8%a7%d8%b1%d8%a8-%d8%a7%d9%84%d9%85%d8%ad%d8%aa%d8%a7%d9%84%d9%8a%d9%86-%d8%ac%d9%88%d8%ac%d9%84-%d8%aa%d8%ad%d8%b3%d9%91%d9%86-%d8%a3%d9%85%d8%a7%d9%86-%d9%86%d8%b8%d8%a7%d9%85/",
+   "summary_en": "Google has announced new security and privacy features for Android phones. In Google Messages, an optional Scam Detection setting will use Gemini models to analyse senders' intent and flag fraudulent messages, with analysis done in Private AI Compute, which Google says no one else can access, itself included. Gemini Nano checks links on supported phones, including the Pixel 10 series and later and the Samsung Galaxy S26. Scam alerts in chat notifications will reach more devices from several manufacturers in late 2026. Other updates include hiding passwords and card details during screen sharing on Android 15 and later, call-forwarding protection in December, and bank caller verification in Brazil that has blocked over 3 million fake calls since June 2026.",
+   "summary_ar": "أعلنت «جوجل» مجموعة جديدة من مزايا الأمان والخصوصية لهواتف أندرويد. ففي تطبيق Google Messages سيتوفر إعداد اختياري لاكتشاف الاحتيال (Scam Detection) يستخدم نماذج Gemini لتحليل نوايا المرسلين وتنبيه المستخدمين إلى الرسائل الاحتيالية، ويجري التحليل داخل بيئة Private AI Compute التي تقول الشركة إنه لا يمكن لأي جهة الوصول إليها، بما في ذلك «جوجل» نفسها. ويفحص Gemini Nano الروابط على الهواتف المدعومة، ومنها سلسلة Google Pixel 10 وما بعدها وسلسلة Samsung Galaxy S26. وستصل تنبيهات الاحتيال في إشعارات المحادثات إلى أجهزة مزيد من الشركات المصنّعة في أواخر عام 2026. وتشمل التحديثات أيضاً إخفاء كلمات المرور وبيانات البطاقات أثناء مشاركة الشاشة على أندرويد 15 فما أحدث، وحماية من تحويل المكالمات في ديسمبر، وتحقق من هوية المتصلين بالبنوك في البرازيل حظر أكثر من 3 ملايين مكالمة مزيفة منذ يونيو 2026.",
+   "excerpt": "أعلنت شركة جوجل مجموعة جديدة من مزايا الأمان والخصوصية لهواتف أندرويد، تشمل الاستعانة بنماذج الذكاء الاصطناعي Gemini لاكتشاف الرسائل الاحتيالية وتحذير المستخدمين منها، بالإضافة إلى أدوات لحماية البيانات الحساسة أثناء مشاركة الشاشة ومنع تحويل المكالمات دون علم أصحاب الهواتف."
+  },
+  {
+   "id": "0aa71d1f1cfd",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-15T10:00:12+00:00",
+   "title": "NVIDIA Expands Advanced Technology Access for Europe’s Scientific Community Through Open Learning Resources, Collaborations and Compute",
+   "title_ar": "NVIDIA توسّع إتاحة التقنيات المتقدمة للمجتمع العلمي في أوروبا عبر موارد تعليمية مفتوحة وتعاونات وقدرات حوسبة",
+   "url": "https://blogs.nvidia.com/blog/ec-scientific-computing-pledge/",
+   "summary_en": "At the AI in Science Summit in Dublin, the European Commission launched the AI in Science Enablers Initiative, a framework linked to RAISE (Resource for AI Science in Europe) that brings private-sector support to researchers. NVIDIA is joining, pointing to more than 250 open models, 250 open datasets and over 1,400 open source projects on Hugging Face and GitHub. Its Deep Learning Institute has launched a free, openly licensed courseware hub. NVIDIA is also working with cloud partners and national AI factories in France, Spain and Sweden to give startups and SMEs access to European compute, while EuroHPC centres such as CINECA and JSC offer free GPU access for open research. NVIDIA says 35 supercomputers are in development across Europe and will serve over 3 million researchers.",
+   "summary_ar": "أطلقت المفوضية الأوروبية في قمة الذكاء الاصطناعي في العلوم (AI in Science Summit) في دبلن «مبادرة الممكّنين للذكاء الاصطناعي في العلوم» (AI in Science Enablers Initiative)، وهي إطار مرتبط بـ RAISE (مورد الذكاء الاصطناعي للعلوم في أوروبا) يقرّب دعم القطاع الخاص من الباحثين. وتنضم NVIDIA إلى المبادرة، مشيرة إلى أكثر من 250 نموذجاً مفتوحاً و250 مجموعة بيانات مفتوحة وأكثر من 1400 مشروع برمجي مفتوح المصدر على Hugging Face وGitHub. وأطلق NVIDIA Deep Learning Institute مركزاً مجانياً للمواد التعليمية بترخيص مفتوح. كما تتعاون NVIDIA مع شركاء في الحوسبة السحابية ومصانع الذكاء الاصطناعي الوطنية في فرنسا وإسبانيا والسويد لإتاحة الحوسبة الأوروبية للشركات الناشئة والصغيرة والمتوسطة، بينما تتيح مراكز EuroHPC مثل CINECA وJSC وصولاً مجانياً إلى وحدات GPU للأبحاث المفتوحة. وتقول الشركة إن 35 حاسوباً عملاقاً قيد التطوير في أوروبا وستخدم أكثر من 3 ملايين باحث.",
+   "excerpt": "Much of today’s scientific progress begins with computation. But turning accelerated computing’s potential into scientific progress — modeling climate systems, designing molecules, simulating materials and more — depends on more than breakthrough technology."
   },
   {
    "id": "1115f3d3f28d",
@@ -1739,6 +2243,20 @@
    "excerpt": "أبوظبي في 15 أكتوبر / وام / أطلقت جامعة محمد بن زايد للذكاء الاصطناعي، من خلال معهد النماذج التأسيسية وبالتعاون مع شركة \"إنسبشن 42\"، مجموعة نماذج الذكاء الاصطناعي \"جيس 3\" المصمّمة خصيصاً للغة العربية، التي تُعد جزءاً من عائلة \"جيس\" التي أُطلقت للمرة الأولى في أبوظبي، وتضم ستة…"
   },
   {
+   "id": "e3c36d4422c6",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-15T09:08:45+00:00",
+   "title": "Apertus 1.5 Release Notes",
+   "title_ar": "ملاحظات إصدار Apertus 1.5",
+   "url": "https://huggingface.co/blog/swiss-ai/apertus-v15-release-notes",
+   "summary_en": "Apertus 1.5 is a continued pretraining of the first-generation Apertus model, adding 4 trillion tokens to the 8B model and 2 trillion to the 70B model, for totals of 19T and 17T. The release is fully open, with open weights, open data and full training details. It introduces multimodality: images and audio enter as discrete tokens alongside text, while the models generate only text. Post-training runs in five stages, and evaluations were expanded to cover multimodal and thinking-mode tests. The text says the models still trail frontier open-weight models but improved in coding and instruction following, with the 8B outperforming similarly sized open-weight models on instruction-following and multilingual tasks. Results are published in the Every Eval Ever schema with the EvalEval Coalition.",
+   "summary_ar": "يمثل Apertus 1.5 مواصلة للتدريب المسبق للجيل الأول من نموذج Apertus، إذ أضيف 4 تريليونات من الوحدات اللغوية إلى نموذج 8B وتريليونان إلى نموذج 70B، ليبلغ المجموع 19T و17T على التوالي. والإصدار مفتوح بالكامل، من الأوزان والبيانات إلى تفاصيل التدريب. ويقدم الإصدار قدرات متعددة الوسائط، إذ تدخل الصور والصوت في صورة وحدات منفصلة مع النص، بينما تولّد النماذج نصوصاً فقط. ويمر التدريب اللاحق بخمس مراحل، وتوسع نطاق التقييم ليشمل الوسائط المتعددة ووضع التفكير. ويذكر النص أن النماذج لا تزال أدنى من أبرز النماذج المفتوحة الأوزان، لكن أداءها تحسن في البرمجة واتباع التعليمات، وأن نموذج 8B يتفوق على نماذج مفتوحة الأوزان بحجم مماثل في اتباع التعليمات والمهام متعددة اللغات. ونشرت النتائج بصيغة Every Eval Ever بالتعاون مع EvalEval Coalition.",
+   "excerpt": "A Blog post by Swiss AI Initiative on Hugging Face"
+  },
+  {
    "id": "d1f9ed116a2e",
    "source": "wam-en",
    "lang": "en",
@@ -1781,6 +2299,34 @@
    "excerpt": "Preliminary notice seeks XLUUV builders, payload makers and AI developers, with Excalibur and Herne the obvious candidates"
   },
   {
+   "id": "6ee6dbc67aca",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-15T05:59:20+00:00",
+   "title": "Anthropic says revenue jumped to nearly $17B last quarter: reports",
+   "title_ar": "أنثروبيك: الإيرادات قفزت إلى نحو 17 مليار دولار في الربع الماضي، بحسب تقارير",
+   "url": "https://www.khaleejtimes.com/business/anthropic-says-revenue-jumped-to-nearly-17b-last-quarter-reports-2",
+   "summary_en": "According to US media reports, Anthropic told investors at a private meeting in San Francisco on Wednesday that its revenue rose about 50 percent to $16.8 billion in the September quarter. It also said it was profitable on an adjusted basis over the previous six months, with positive adjusted free cash flow and an 11 percent adjusted operating margin in the third quarter. The company is reportedly preparing an IPO in November, after the US midterm elections, and is expected to seek a $2 trillion valuation. Earlier reports said it recorded a $42 billion net loss last year. OpenAI, which makes ChatGPT, has pushed its own IPO out to 2027.",
+   "summary_ar": "بحسب تقارير إعلامية أميركية، أبلغت شركة Anthropic المستثمرين خلال اجتماع خاص عُقد يوم الأربعاء في سان فرانسيسكو بأن إيراداتها ارتفعت نحو 50 في المئة لتبلغ 16.8 مليار دولار في الربع المنتهي في سبتمبر. وقالت أيضاً إنها حققت أرباحاً على أساس معدّل خلال الأشهر الستة السابقة، مع تدفق نقدي حر موجب وهامش تشغيلي معدّل بلغ 11 في المئة في الربع الثالث. وتفيد التقارير بأن الشركة تستعد لطرح عام أولي في نوفمبر بعد انتخابات التجديد النصفي الأميركية، ويُتوقع أن تطلب تقييماً بقيمة 2 تريليون دولار. وكانت تقارير سابقة قد أشارت إلى أنها سجلت صافي خسارة بلغ 42 مليار دولار العام الماضي. أما OpenAI، المطوّرة لـ ChatGPT، فقد أرجأت طرحها العام إلى عام 2027.",
+   "excerpt": "The San Francisco-based AI lab is barreling towards a highly anticipated initial public offering where it is expected to seek a $2 trillion valuation"
+  },
+  {
+   "id": "e464778d2b57",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-15T05:50:00+00:00",
+   "title": "الذكاء الاصطناعي يقود مساعي إعادة طائر الدودو المنقرض إلى الحياة",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/15/KMR5",
+   "summary_en": "According to the headline, artificial intelligence is driving efforts to bring the extinct dodo back to life. The short description says that after centuries of absence, the bird is nearing a renewed chance of returning. It adds that the American biotechnology company Colossal Biosciences is taking new steps toward that goal.",
+   "summary_ar": "وفق العنوان، يقود الذكاء الاصطناعي مساعي إعادة طائر الدودو المنقرض إلى الحياة. ويشير الوصف المختصر إلى أن الطائر يقترب، بعد قرون من الغياب، من استعادة فرصته في العودة. ويضيف أن شركة التكنولوجيا الحيوية الأميركية Colossal Biosciences تخطو خطوات جديدة نحو هذا الهدف.",
+   "excerpt": "بعد قرون من الغياب، يقترب طائر الدودو من استعادة فرصته في العودة إلى الحياة، إذ تخطو شركة التكنولوجيا الحيوية الأميركية كولوسال بيوساينسز خطوات جديدة نحو…"
+  },
+  {
    "id": "4e0d0b364fef",
    "source": "wam-en",
    "lang": "en",
@@ -1809,6 +2355,20 @@
    "excerpt": null
   },
   {
+   "id": "68f85c5a70ff",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-15T05:00:12+00:00",
+   "title": "The Nordics and NVIDIA Show What’s Possible When a Region Commits to Advanced Computing",
+   "title_ar": "دول الشمال الأوروبي وNVIDIA تُظهران ما هو ممكن حين تلتزم منطقة ما بالحوسبة المتقدمة",
+   "url": "https://blogs.nvidia.com/blog/nordics-technology-ecosystem/",
+   "summary_en": "NVIDIA's article describes how the Nordic region is building advanced computing capacity. It says AI cloud capacity there is projected to reach 1 gigawatt by the end of 2027, with providers including CoreWeave, Crusoe and Nscale. In Sweden, a consortium anchored by Ericsson, AstraZeneca, Saab, SEB and Wallenberg Investments launched Sferical One, a shared supercomputer with 1,152 GPUs. Companies named as using NVIDIA technology include Spotify, ABB Robotics, Elisa, Einride and Toyota Material Handling Europe. Swedish startups such as Stilta, Agaton and Klang are building on NVIDIA's open models. The article also says Norrsken Foundation and NVIDIA will open the Stockholm AI Lab in 2027.",
+   "summary_ar": "يستعرض مقال نشرته NVIDIA كيف تبني دول الشمال الأوروبي قدرات متقدمة في الحوسبة. ويذكر أن سعة سحابات الذكاء الاصطناعي هناك يُتوقع أن تبلغ غيغاواط واحداً بحلول نهاية عام 2027، مع مزودين من بينهم CoreWeave وCrusoe وNscale. وفي السويد أطلق تحالف تقوده Ericsson وAstraZeneca وSaab وSEB وWallenberg Investments حاسوباً فائقاً مشتركاً باسم Sferical One يضم 1,152 معالجاً رسومياً. وتذكر المادة أن شركات مثل Spotify وABB Robotics وElisa وEinride وToyota Material Handling Europe تستخدم تقنيات NVIDIA. كما تبني شركات سويدية ناشئة مثل Stilta وAgaton وKlang حلولها على النماذج المفتوحة من NVIDIA. وتضيف أن مؤسسة Norrsken وNVIDIA ستفتتحان مختبر ستوكهولم للذكاء الاصطناعي (Stockholm AI Lab) في عام 2027.",
+   "excerpt": "The Nordic countries have become the European leader in unicorn startup density, producing the most emerging companies valued at $1 billion or more per capita on the continent."
+  },
+  {
    "id": "134069d44702",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1821,6 +2381,76 @@
    "summary_en": "Figma announced new features at its first Config event in India to help its own and third-party AI agents follow a brand's design rules. Figma Specs is a markdown editor where users define their design language, and teams can link design and code libraries and guidelines for agents to reference. The code layers feature, which was in private beta in June, is now in public beta. Figma is also supporting more than 20 new tools through its MCP, including Sarvam, and is integrating the Payload CMS with Figma Make. Chief design officer Loredana Crisan said code output has grown far faster than releases. Figma says India is its largest market by users outside the United States.",
    "summary_ar": "أعلنت Figma عن ميزات جديدة خلال أول فعالية Config تقيمها في الهند، بهدف مساعدة وكلائها الذكيين والوكلاء التابعين لجهات خارجية على الالتزام بقواعد التصميم الخاصة بالعلامة التجارية. وتتيح ميزة Figma Specs محرراً قائماً على Markdown يحدد فيه المستخدمون لغتهم التصميمية، ويمكن للفرق ربط مكتبات التصميم والبرمجة والإرشادات ليرجع إليها الوكلاء. أما ميزة طبقات الشيفرة (code layers) التي كانت في نسخة تجريبية خاصة في يونيو، فقد صارت في نسخة تجريبية عامة. كما تدعم الشركة أكثر من 20 أداة جديدة عبر MCP، بينها Sarvam، وتدمج نظام Payload لإدارة المحتوى مع Figma Make. وقالت مديرة التصميم لوريدانا كريسان إن حجم الشيفرة المنتجة نما بوتيرة أسرع بكثير من الإصدارات. وتفيد Figma بأن الهند أكبر أسواقها من حيث المستخدمين خارج الولايات المتحدة.",
    "excerpt": "Figma is also releasing its code layers feature in open beta."
+  },
+  {
+   "id": "bdb5f9d6d099",
+   "source": "mit-news-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-15T04:00:00+00:00",
+   "title": "Q&A: The “collision” between AI, your brain, and society",
+   "title_ar": "حوار: «التصادم» بين الذكاء الاصطناعي والدماغ والمجتمع",
+   "url": "https://news.mit.edu/2026/collision-between-ai-your-brain-and-society-eric-so-book-1015",
+   "summary_en": "MIT Professor Eric So has published a book, \"The Collision: What AI Does to Us,\" this month with W.W. Norton. He argues that heavy reliance on AI can lead to a kind of cognitive atrophy, because people learn best when they struggle with material and work through failures. His conclusions draw on recent research, including an Anthropic study showing about half of college students' queries were low-effort requests for simple answers. In an interview with MIT News, he says he started the book after noticing he had asked ChatGPT to finish a reply to a colleague. He describes an \"AI gravity\" created by the instinct to save mental energy, social pressure and workplaces that evaluate staff on AI use, and says the models are both sycophantic and persuasive.",
+   "summary_ar": "أصدر أستاذ معهد MIT «إريك سو» هذا الشهر كتاباً بعنوان «The Collision: What AI Does to Us» عن دار W.W. Norton. ويرى أن الاعتماد المفرط على الذكاء الاصطناعي قد يؤدي إلى ضمور معرفي، لأن الناس يتعلمون على نحو أفضل حين يجتهدون في فهم المادة ويتجاوزون إخفاقاتهم الأولى. وتستند استنتاجاته إلى أبحاث حديثة، منها دراسة لشركة Anthropic أظهرت أن نحو نصف استفسارات طلاب الجامعات كانت طلبات سهلة لإجابات بسيطة. ويقول في حوار مع MIT News إنه بدأ الكتاب بعدما لاحظ أنه طلب من ChatGPT إكمال رد على زميلة له. ويصف ما يسميه «جاذبية الذكاء الاصطناعي» الناتجة عن ميل الإنسان إلى توفير جهده الذهني وضغط الآخرين وربط بعض الجهات التقييم باستخدام هذه الأدوات، ويقول إن النماذج تجمع بين المجاملة والإقناع.",
+   "excerpt": "In a new book, Professor Eric So explores how the technology affects our thinking skills."
+  },
+  {
+   "id": "dd00c04c9b95",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-15T00:00:00+00:00",
+   "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+   "title_ar": "Sullivan & Cromwell تُدخل الخبرة القانونية في مراجعة الاتفاقيات",
+   "url": "https://openai.com/index/sullivan-cromwell",
+   "summary_en": "The law firm Sullivan & Cromwell worked with OpenAI to develop Agreement Analyzer. It is an AI tool designed to identify issues in a draft agreement.",
+   "summary_ar": "طورت شركة المحاماة Sullivan & Cromwell بالتعاون مع OpenAI أداة Agreement Analyzer، وهي أداة تعمل بالذكاء الاصطناعي وتهدف إلى رصد المشكلات في مسودة الاتفاقية.",
+   "excerpt": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement."
+  },
+  {
+   "id": "9d251ac6836a",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-15T00:00:00+00:00",
+   "title": "Welcome Muse Spark Open: open-weight frontier multimodal mixture-of-experts model from Meta",
+   "title_ar": "نرحّب بـ Muse Spark Open: نموذج رائد متعدد الوسائط مفتوح الأوزان من نوع مزيج الخبراء من Meta",
+   "url": "https://huggingface.co/blog/meta-muse-spark-open",
+   "summary_en": "Meta has released Muse Spark Open, a multimodal mixture-of-experts model, and Hugging Face has published a post on how to run and fine-tune it. The model has 816B parameters in total, with 256 experts per block, of which a router picks 8 per token, so about 42B parameters are used for each token. It accepts text, images, audio and video, supports a 1M-token context window, and was trained for agentic coding tasks such as multi-file refactors and long debugging sessions. The BF16 checkpoint runs across 4 nodes of 8 H200 GPUs, while the NVFP4 version runs on a single B200 node. It follows the smaller Muse Glimmer, released in August.",
+   "summary_ar": "أطلقت Meta النموذج Muse Spark Open، وهو نموذج متعدد الوسائط يعتمد بنية خليط الخبراء، ونشرت Hugging Face مقالاً يشرح كيفية تشغيله وضبطه. يضم النموذج 816B معامل في المجموع، وفي كل كتلة 256 خبيراً يختار منها الموجّه 8 لكل وحدة لغوية، فيُستخدم نحو 42B معامل لكل وحدة. ويقبل النص والصور والصوت والفيديو، ويدعم نافذة سياق بحجم 1M من الوحدات اللغوية، وقد دُرّب على مهام البرمجة الوكيلية مثل إعادة هيكلة ملفات متعددة وجلسات تصحيح الأخطاء الطويلة. وتعمل نسخة BF16 على 4 عُقد تضم كل منها 8 وحدات H200 GPU، بينما تعمل نسخة NVFP4 على عقدة B200 واحدة. ويأتي النموذج بعد Muse Glimmer الأصغر الذي صدر في أغسطس.",
+   "excerpt": null
+  },
+  {
+   "id": "3733c75a28bf",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-15T00:00:00+00:00",
+   "title": "Welcome FLUX.3 Image Klein in Diffusers",
+   "title_ar": "نرحّب بـ FLUX.3 Image Klein في Diffusers",
+   "url": "https://huggingface.co/blog/flux-3",
+   "summary_en": "Hugging Face has published a guide to using FLUX.3 Image Klein with the Diffusers library, with two open checkpoints available in the FLUX.3 Image Klein collection. The distilled checkpoint produces a 1024 × 1024 image in 16 steps by default, while the base checkpoint runs 50 steps with classifier-free guidance and is the one meant for fine-tuning. The model handles text-to-image and image-to-image work, including reference images and region-based prompts, and Diffusers includes DreamBooth LoRA training scripts. The post also explains the architecture: a Qwen3-VL text encoder, the same VAE architecture as Flux.2, and a transformer that processes tokens in two stages. On a single NVIDIA H100 80GB, a reference image roughly doubles generation time.",
+   "summary_ar": "نشرت Hugging Face دليلاً لاستخدام FLUX.3 Image Klein مع مكتبة Diffusers، ويتوفر نقطتا فحص مفتوحتان ضمن مجموعة FLUX.3 Image Klein. تنتج النسخة المقطّرة صورة بحجم 1024 × 1024 في 16 خطوة افتراضياً، أما النسخة الأساسية فتعمل بـ50 خطوة مع التوجيه الخالي من المصنِّف، وهي المخصصة للضبط الدقيق. يدعم النموذج تحويل النص إلى صورة وتحويل الصورة إلى صورة، بما في ذلك الصور المرجعية والتوجيهات القائمة على مناطق محددة، وتتضمن Diffusers سكربتات تدريب DreamBooth LoRA. ويشرح المقال كذلك بنية النموذج: مشفّر نصي Qwen3-VL، وبنية VAE نفسها المستخدمة في Flux.2، ومحوّل يعالج الوحدات اللغوية والبصرية على مرحلتين. وعلى بطاقة NVIDIA H100 80GB واحدة، تضاعف الصورة المرجعية زمن التوليد تقريباً.",
+   "excerpt": null
+  },
+  {
+   "id": "2af446043d10",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-14T21:15:56+00:00",
+   "title": "Epic says its new vibe-coded Epic Games Launcher is faster than Steam",
+   "title_ar": "Epic: مشغّل Epic Games Launcher الجديد المبرمج بأسلوب الـ vibe coding أسرع من Steam",
+   "url": "https://arstechnica.com/gaming/2026/10/programming-is-hard-epic-games-leans-on-vibe-coding-for-its-new-launcher-app/",
+   "summary_en": "Epic Games has released a public Preview build of a rebuilt Epic Games Launcher that it says was vibe coded and starts faster than Steam. Store manager Martin Keely said the team started from scratch and used AI to write and review features in a new tech stack, which let a small team rewrite the code base and ship on Windows and Mac, with Linux planned. Ars Technica's testing found a cold start to the store page a few seconds faster than Steam, while a claimed 0.06-second gap on restoring from the system tray was unnoticeable. Epic warns the Preview has bugs and lacks some features, though it adds a Recent Games list and a downloads hub. The release follows a Bloomberg report on an AI-first approach for a Star Wars and Marvel shooter, with CEO Tim Sweeney describing a pivot meant to let everyone build more and better, not do the same with fewer people.",
+   "summary_ar": "أطلقت «Epic Games» نسخة تجريبية عامة من «Epic Games Launcher» بعد إعادة بنائه، وتقول إنها كُتبت بأسلوب «البرمجة بالأجواء» (vibe coding) وإنها أسرع في الإقلاع من «Steam». وقال مدير المتجر «مارتن كيلي» إن الفريق بدأ من الصفر واستخدم الذكاء الاصطناعي لكتابة الميزات ومراجعتها ضمن بنية تقنية جديدة، ما أتاح لفريق صغير إعادة كتابة الشيفرة وإطلاقها على «Windows» و«Mac» مع خطة لنسخة «Linux». وأظهرت اختبارات «Ars Technica» أن الانتقال من التشغيل البارد إلى صفحة المتجر أسرع من «Steam» ببضع ثوانٍ، بينما لم يكن فارق 0.06 ثانية الذي تذكره الشركة في الاستعادة من شريط النظام ملحوظاً. وتحذّر الشركة من وجود أخطاء ونقص في بعض الميزات، مع إضافة قائمة للألعاب الأخيرة ومركز للتنزيلات. ويأتي الإطلاق بعد تقرير لـ«بلومبرغ» عن نهج يعتمد الذكاء الاصطناعي أولاً للعبة تصويب بطابع «Star Wars» و«Marvel»، وقال «تيم سويني» إن التحول يهدف إلى إنتاج المزيد والأفضل لا إلى فعل الشيء نفسه بعدد أقل من الأشخاص.",
+   "excerpt": "But the new \"Preview\" app \"will have some bugs,\" Epic warns."
   },
   {
    "id": "47f8bddc708b",
@@ -1865,6 +2495,20 @@
    "excerpt": "ذكاء الآلة أصبح خطراً على البشر ويهدد بفقدان وظائفهم.. ربما كان هذا الحديث هو الأكثر سيطرة على الأوساط العالمية ط"
   },
   {
+   "id": "754608ff4a81",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-14T18:27:00+00:00",
+   "title": "\"الشارقة للاستثمار\" يستعرض دور الذكاء الاصطناعي في دعم الأعمال",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/14/d72",
+   "summary_en": "The Sharjah Investment Forum 2026 hosted workshops during its ninth edition. They looked at the role of artificial intelligence, supply chain resilience and commercial arbitration in addressing challenges facing businesses.",
+   "summary_ar": "استضافت الدورة التاسعة من منتدى الشارقة للاستثمار 2026 ورش عمل تناولت دور الذكاء الاصطناعي ومرونة سلاسل الإمداد والتحكيم التجاري في مواجهة التحديات التي تواجه الأعمال.",
+   "excerpt": "استعرض منتدى الشارقة للاستثمار 2026، في ورش عمل استضافتها دورته التاسعة؛ دور الذكاء الاصطناعي ومرونة سلاسل الإمداد والتحكيم التجاري في مواجهة تحديات الأعمال…"
+  },
+  {
    "id": "cae5f68ff0ce",
    "source": "wired-ai",
    "lang": "en",
@@ -1893,6 +2537,20 @@
    "excerpt": "Experts warn that automation, machine identities and compromised credentials are creating new security risks, making resilience and governance as important as prevention"
   },
   {
+   "id": "8c65abe02544",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-14T18:10:00+00:00",
+   "title": "UKB launches AI-powered Student Success Early Warning System",
+   "title_ar": "UKB تطلق نظام الإنذار المبكر لنجاح الطلبة المدعوم بالذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/14/mm15",
+   "summary_en": "UKB has launched an AI-powered Student Success Early Warning System, built by its own faculty members. It uses machine learning models trained on the university's historical student data, and looks at GPA trajectory, credit progress, course performance, attendance and absences to estimate each student's risk and the main reasons behind it. Students are placed in one of four colour-coded levels: green, yellow, orange or red, with red meaning a GPA already below 2.0 or probation. The system is being piloted as an academic advising assistant in the College of Computing and Intelligent Systems and the College of Sport Science. It is meant to support advisors rather than replace their judgment, and the pilot results will inform wider expansion across the university.",
+   "summary_ar": "أطلقت UKB نظام الإنذار المبكر لنجاح الطلبة المعتمد على الذكاء الاصطناعي، وقد طوّره أعضاء هيئة التدريس في الجامعة بالكامل. يستخدم النظام نماذج تعلّم آلي مدرَّبة على البيانات التاريخية للطلبة، ويحلل مسار المعدل التراكمي والتقدم في الساعات المعتمدة والأداء في المقررات إلى جانب الحضور والغياب، ليقدّر مستوى الخطر لدى كل طالب ويبيّن أبرز أسبابه. ويُصنَّف الطلبة في أربعة مستويات لونية هي الأخضر والأصفر والبرتقالي والأحمر، ويشير الأحمر إلى معدل دون 2.0 أو وضع المراقبة الأكاديمية. ويُجرَّب النظام حالياً مساعداً ذكياً للإرشاد الأكاديمي في كلية الحوسبة والأنظمة الذكية وكلية علوم الرياضة. ويهدف إلى دعم المرشدين لا استبدال حكمهم، وستسهم نتائج المرحلة التجريبية في توسيع استخدامه لاحقاً في الجامعة.",
+   "excerpt": "The University of Kalba (UKB) has taken a major step in its AI transformation journey with the launch of the Student Success Early Warning System, an…"
+  },
+  {
    "id": "6e8705fc16eb",
    "source": "kt-business",
    "lang": "en",
@@ -1919,6 +2577,20 @@
    "summary_en": "Participants at the annual meetings of global future councils, organised in Dubai by the UAE government, the World Economic Forum and the Dubai Future Foundation, said the future of finance and the safe use of AI depend on cooperation, governance and public trust. In a session on the economics of the future, speakers including Montenegro's prime minister Milojko Spajić and Hamed Ali of Dubai Financial Market and Nasdaq Dubai stressed competitiveness, risk forecasting and flexibility. Yale's Song Ma described four kinds of uncertainty around AI: material, psychological, regulatory and political. In a separate session on humans and machines, Madeline Gannon said trust is needed between people and machines and that automation is a choice. Ambrish Mitra said robots should complement human skills rather than replace them.",
    "summary_ar": "قال مشاركون في الاجتماعات السنوية لقيادات المستقبل العالمية، التي تنظمها في دبي حكومة الإمارات والمنتدى الاقتصادي العالمي ومؤسسة دبي للمستقبل، إن مستقبل التمويل والاستخدام الآمن لحلول الذكاء الاصطناعي يعتمد على التعاون والحوكمة وثقة الناس بهذه الحلول. وفي جلسة «اقتصاديات المستقبل» شدد متحدثون، بينهم رئيس وزراء مونتينيغرو ميلويكو سباجيك وحامد علي من سوق دبي المالي وناسداك دبي، على التنافسية والتنبؤ بالمخاطر والمرونة. وحدد سونغ ما من جامعة يال أربع حالات من عدم اليقين المرتبطة بالذكاء الاصطناعي: مادية ونفسية وتنظيمية وسياسية. وفي جلسة أخرى عن الإنسان والآلة، قالت مادلين غانون إن الثقة مطلوبة بين البشر والآلات وإن الأتمتة خيار وليست أمراً حتمياً. ورأى أمبريش ميترا أن الروبوتات ينبغي أن تكمّل الكفاءات البشرية لا أن تحل محلها.",
    "excerpt": "أكد مشاركون في فعاليات «الاجتماعات السنوية لقيادات المستقبل العالمية»، التي تنظمها حكومة الإمارات والمنتدى الاقتصادي الع"
+  },
+  {
+   "id": "224ee0818768",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-14T17:10:15+00:00",
+   "title": "Researchers use AI to design proteins that cut up other proteins",
+   "title_ar": "باحثون يستخدمون الذكاء الاصطناعي لتصميم بروتينات تقطّع بروتينات أخرى",
+   "url": "https://arstechnica.com/science/2026/10/researchers-use-ai-to-design-proteins-that-cut-up-other-proteins/",
+   "summary_en": "Researchers, mainly from Nobel-winning David Baker's lab at the University of Washington, used AI-based protein design tools to create new proteases, enzymes that cut other proteins. They kept the catalytic core of two protease types, a zinc protease from crayfish and a cysteine protease from yeast, and redesigned the rest of the protein. The process used RFdiffusion2 to build the backbone and ProteinMPNN to fill in amino acids, producing 69 sets of amino acids across 12 backbones for the cysteine protease and 135 designs for the zinc one. AlphaFold3 predictions found nothing in databases resembling the designs. The resulting enzymes could be tuned to cut specific proteins, and the team showed this on proteins linked to neurological diseases.",
+   "summary_ar": "استخدم باحثون، ومعظمهم من مختبر الحائز على جائزة نوبل «ديفيد بيكر» في جامعة واشنطن، أدوات تصميم البروتينات القائمة على الذكاء الاصطناعي لابتكار إنزيمات بروتياز جديدة، وهي إنزيمات تقطع بروتينات أخرى. وأبقى الفريق على النواة الحفزية لنوعين من البروتياز، هما بروتياز الزنك من سرطان الماء العذب وبروتياز السيستين من الخميرة، وأعاد تصميم بقية البروتين. واستخدمت العملية RFdiffusion2 لبناء الهيكل الأساسي وProteinMPNN لملئه بالأحماض الأمينية، فنتجت 69 مجموعة من الأحماض الأمينية على 12 هيكلاً لبروتياز السيستين، و135 تصميماً لبروتياز الزنك. ولم تجد توقعات AlphaFold3 في قواعد البيانات ما يشبه هذه التصاميم. ويمكن ضبط الإنزيمات الناتجة لقطع بروتينات محددة، وقد أثبت الفريق ذلك على بروتينات مرتبطة بأمراض عصبية.",
+   "excerpt": "AI design tools make proteins that break bonds that are stable for hundreds of years."
   },
   {
    "id": "36fb2fd61ac7",
