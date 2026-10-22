@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-16T08:25:00+04:00",
+  "generated_at": "2026-10-22T13:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3901,6 +3901,119 @@
       "permalink": "https://www.instagram.com/p/Deiq1vajfNU/",
       "published_at": "2026-10-16T08:25:00+04:00",
       "cover": "images/qahwa/week-03-day-17--1-learn-lesson-13.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-07-falcon-emirati--1-ai-news",
+      "kind": "news",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "Falcon-Emirati speaks the dialect",
+        "ar": "Falcon-Emirati يتحدث اللهجة الإماراتية"
+      },
+      "summary": {
+        "en": "On answering in dialect it scored 52.1%; the next best scored 5.3%. It is the only one that usually replies in Emirati rather than MSA — though it still falls back to MSA about half the time.",
+        "ar": "في قياس الردّ باللهجة سجّل 52.1%، وأقرب منافس 5.3%. أي أنه الوحيد الذي يردّ بالإماراتية بدل الفصحى غالباً، وإن كان ما زال يردّ بالفصحى في نحو نصف الحالات."
+      },
+      "slides": [
+        {
+          "type": "news-cover",
+          "ar": {
+            "title": "نموذج يردّ ==باللهجة الإماراتية==",
+            "body": "أبوظبي تطلق Falcon-Emirati، ومعه نموذجان للصوت والصورة."
+          },
+          "en": {
+            "title": "A model that answers ==in Emirati Arabic==",
+            "body": "Abu Dhabi releases Falcon-Emirati, with two more for speech and images."
+          },
+          "source": "Source: TII · October 2026"
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا أُطلق؟",
+            "items": [
+              "==Falcon-Emirati==: 7 مليارات معامل، مبني على Falcon-H1-Arabic",
+              "==Falcon-ASR==: يحوّل الكلام إلى نص، ويشمل اللهجة الإماراتية",
+              "==Falcon-OCR-Arabic==: يستخرج النص من الصور"
+            ]
+          },
+          "en": {
+            "title": "What was released?",
+            "items": [
+              "==Falcon-Emirati==: 7 billion parameters, built on Falcon-H1-Arabic",
+              "==Falcon-ASR==: speech to text, Emirati included",
+              "==Falcon-OCR-Arabic==: pulls text out of images"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "الرقم ==اللافت==",
+            "body": "في قياس الردّ باللهجة سجّل 52.1%، وأقرب منافس 5.3%. أي أنه الوحيد الذي يردّ بالإماراتية بدل الفصحى غالباً، وإن كان ما زال يردّ بالفصحى في نحو نصف الحالات."
+          },
+          "en": {
+            "title": "The ==striking number==",
+            "body": "On answering in dialect it scored 52.1%; the next best scored 5.3%. It is the only one that usually replies in Emirati rather than MSA — though it still falls back to MSA about half the time."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اقرأ الأرقام بعين ناقدة",
+            "items": [
+              "كل النتائج من ==تقييم TII نفسها==، لا جهة مستقلة",
+              "مقياسان من ثلاثة ==حكم فيهما نموذج آخر==، لا بشر",
+              "الصفحة لا تذكر رخصة أو أوزاناً مفتوحة حتى الآن"
+            ]
+          },
+          "en": {
+            "title": "Read the numbers critically",
+            "items": [
+              "All results come from ==TII's own evaluation==, not an independent one",
+              "Two of three measures were ==judged by another model==, not people",
+              "The page states no licence or open weights so far"
+            ]
+          },
+          "note": {
+            "ar": "هذا لا ينفي الإنجاز، لكنه يحدّد ما نعرفه بثقة.",
+            "en": "That does not undo the achievement; it marks what we know with confidence."
+          }
+        },
+        {
+          "type": "hype",
+          "level": 4,
+          "ar": {
+            "low": "ضجة",
+            "high": "تغيير حقيقي",
+            "label": "4 من 5: مهم لنا تحديداً",
+            "body": "أغلب النماذج تفهم الفصحى وتتعثّر في لهجاتنا. نموذج يُبنى للهجة الإماراتية ويُتاح للتجربة اليوم خبر يخصّنا نحن، لا خبراً عالمياً نقرأه من بعيد."
+          },
+          "en": {
+            "low": "Hype",
+            "high": "Real change",
+            "label": "4 of 5: this one is ours",
+            "body": "Most models handle Modern Standard Arabic and stumble on our dialects. A model built for Emirati Arabic, available to try today, is news that belongs to us rather than news we read from far away."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "جرّبه واسأله بلهجتك: ==هل فهمك؟=="
+          },
+          "en": {
+            "title": "Try it in your dialect: ==did it understand you?=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DeynPTEgDun/",
+      "published_at": "2026-10-22T13:01:00+04:00",
+      "cover": "images/qahwa/news-2026-10-07-falcon-emirati--1-ai-news.webp",
       "related_concepts": []
     }
   ]
