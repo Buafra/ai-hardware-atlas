@@ -199,7 +199,7 @@ class PageTests(unittest.TestCase):
         for tag in re.findall(r'<a\b[^>]*target="_blank"[^>]*>',self.html):self.assertIn('rel="noopener noreferrer"',tag)
         self.assertIsNone(re.search(r'<script[^>]+src=|<link[^>]+stylesheet|<img[^>]+src="(?:https?:)?//|url\((?:["\'])?(?:https?:)?//|@import',self.html))
         self.assertIsNone(re.search(r'__[A-Z][A-Z0-9_]*__',self.html))
-        self.assertNotIn('brand-logo',self.html.split('<style>')[0]+self.html.split('</style>')[1])
+        self.assertNotIn('class="brand-logo',self.html.split('<style>')[0]+self.html.split('</style>')[1])  # the element, not a story's link
         self.assertIn('<span class="wordmark" lang="en" dir="ltr">Cipher <span class="wm-2">Lacuna</span></span>',self.html)
         self.assertIn('<span class="tagline" data-i18n>Decoding the gaps in AI knowledge</span>',self.html)
         # On phones the header has no room for the tagline, so the hero repeats it under the name (CSS shows it there only).
@@ -351,7 +351,9 @@ class OwnerRequestTests(unittest.TestCase):
         self.assertFalse(hasattr(build,'UAE_FLAG'));self.assertNotIn('flag',build.ICON)
         icon=build.ICON['uae']
         self.assertIn('<path d="M5 21V4"/><path d="M5 4h14v10H5"/><path d="M9 4v10"/>',icon)
-        for bad in ('class="flag"','#EF3340','#009739','p-flag','ih-flag','j-flag'):self.assertNotIn(bad,self.html,bad)
+        for bad in ('class="flag"','#EF3340','#009739'):self.assertNotIn(bad,self.html,bad)
+        # The old markers as class names only: a story's link can say ".../startup-flags-...".
+        self.assertIsNone(re.search(r'class="[^"]*\b(?:p|ih|j)-flag\b',self.html))
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
         for bad in ('.flag{','.flag ','p-flag','ih-flag','j-flag'):self.assertNotIn(bad,css,bad)
         self.assertIn('.j-uae{background:#5eead4}',css)
@@ -421,11 +423,13 @@ class OwnerRequestTests2(unittest.TestCase):
         ar=re.findall(r'آخر تحديث \d{1,2} \S+ \d{4} · مرتين يومياً',page)
         self.assertEqual((len(en),len(ar)),(1,1))
         self.assertRegex(self.views['news'],r'<p class="ifresh"><span class="pulse" aria-hidden="true"></span><span><span data-lang="en">Updated \d')
-        for v in ('home','hardware','uae','contact'):
-            self.assertNotIn('Updated ',self.views[v],v);self.assertNotIn('آخر تحديث',self.views[v],v);self.assertNotIn('ifresh',self.views[v],v)
+        for v in ('home','hardware','uae','contact'):self.assertNotIn('class="ifresh"',self.views[v],v)
         for bad in ('class="fresh"','class="live"'):self.assertNotIn(bad,self.html)
         # No other "twice a day" either (site text only: rendered from a fixed feed, the inline script checked separately).
         html,views=self.render(self.fixed_feed())
+        # The words themselves only on a page of known stories: a real headline may say "Updated" or «آخر تحديثات».
+        for v in ('home','hardware','uae','contact'):
+            self.assertNotIn('Updated ',views[v],v);self.assertNotIn('آخر تحديث',views[v],v);self.assertNotIn('ifresh',views[v],v)
         own=html.split('<style>')[0]+html.split('</style>')[1].split('<script type="application/json"')[0]
         self.assertEqual(len(re.findall(r'\b(?:once|twice|\d+ times) a day',own,re.I)),1)
         self.assertEqual(len(re.findall(r'(?:مرة|مرتين|\d+ مرات) يومياً',own)),1)
@@ -435,7 +439,10 @@ class OwnerRequestTests2(unittest.TestCase):
         self.assertNotIn('Schedule',self.views['hardware']);self.assertNotIn('GitHub Actions',self.views['hardware'])
     def test_ai_translation_label(self):
         for f in ('scripts/build.py','web/app.js','web/template.html','README.md'):self.assertNotIn('ترجمة آلية',(ROOT/f).read_text(encoding='utf-8'),f)
-        self.assertNotIn('ترجمة آلية',self.html)
+        # The site's own label on the real page; the words anywhere only on a page of known stories (a real story about
+        # machine translation may say «نموذج ترجمة آلية»).
+        self.assertNotIn('<span class="mt">ترجمة آلية',self.html)
+        self.assertNotIn('ترجمة آلية',self.render(self.fixed_feed())[0])
         self.assertEqual(build.MT_LABEL,{'en':'AI translation','ar':'ترجمة بالذكاء الاصطناعي'})
         self.assertIn('«ترجمة بالذكاء الاصطناعي»',build.NEWS_NOTE)
         if any(i['lang']=='en' and i.get('title_ar') for i in build.news_items(self.feed,self.sources)):
@@ -476,7 +483,8 @@ class OwnerRequestTests2(unittest.TestCase):
         self.assertLess(u.index('<div class="split-layout uae-heads">'),u.index('<section class="uae-facts"'))
         if 'class="nitem' in u:self.assertLess(u.index('class="nitem'),u.index('class="fact"'))
         self.assertLess(facts,u.index('class="fact"'))
-        self.assertEqual(u.count('class="f-date"'),len(self.uae['facts']));self.assertEqual(u.count('As of '),len(self.uae['facts']))  # each keeps its date
+        facts_part=u[u.index('<section class="uae-facts"'):]  # not the headlines above: a summary may start "As of October…"
+        self.assertEqual(u.count('class="f-date"'),len(self.uae['facts']));self.assertEqual(facts_part.count('As of '),len(self.uae['facts']))  # each keeps its date
         js=(ROOT/'web/app.js').read_text(encoding='utf-8')
         self.assertIn("'Latest UAE AI news':'أحدث أخبار الذكاء الاصطناعي في الإمارات'",js);self.assertIn("'Key facts':'حقائق رئيسية'",js)
         # The landing's UAE pillar: latest UAE headlines, then one highlighted fact.
@@ -748,8 +756,10 @@ class AboutTests(unittest.TestCase):
         self.assertTrue(p)
         self.assertEqual(self.langs(p.group(1)),[(self.about['promise']['en'],self.about['promise']['ar'])])
         self.assertIn(build.about_L(self.about['promise']),p.group(1))
+        # The old wording nowhere the site writes it; not the whole page, where a publisher's excerpt may say it.
         old='catch up on the latest AI news'
-        self.assertNotIn(old,self.html);self.assertNotIn(old,self.js)
+        self.assertNotIn(old,p.group(1));self.assertNotIn(old,self.js)
+        for f in ('web/template.html','scripts/build.py','data/about.json'):self.assertNotIn(old,(ROOT/f).read_text(encoding='utf-8'),f)
     def test_meta_descriptions(self):
         head=self.html[:self.html.index('<style>')]
         # Built from the approved promise, word for word: "Cipher Lacuna: " + whole sentences of promise.en from its start.

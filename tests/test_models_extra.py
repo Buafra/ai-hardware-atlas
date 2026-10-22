@@ -216,11 +216,20 @@ class AppTests(unittest.TestCase):
         cards = [m for m in out if 'country' in m]
         self.assertEqual(len(cards), len(EXTRA['models']))
         by = {m['id']: m for m in EXTRA['models']}
+        # As build.merge_models: a card model OpenRouter also lists keeps OpenRouter's name, size and context and gains
+        # the card's maker, country and flags. data/models.json is rewritten from OpenRouter on every scheduled run, so
+        # OpenRouter starting to list a card model under the card's id is no failure.
+        listed = {m['id']: m for m in OPENROUTER.get('models', [])}
         for m in cards:
             self.assertEqual(set(m), set(app_data.MODEL_KEYS) | set(app_data.EXTRA_MODEL_KEYS))
             want = by.get(m['id'])
-            for k in (app_data.MODEL_KEYS + app_data.EXTRA_MODEL_KEYS) if want else ():
+            if not want:
+                continue
+            for k in app_data.EXTRA_MODEL_KEYS:
                 self.assertEqual(m[k], want[k], (m['id'], k))
+            base = listed.get(m['id'], want)
+            for k in app_data.MODEL_KEYS:
+                self.assertEqual(m[k], base.get(k), (m['id'], k))
         self.assertTrue(any(m['runnable'] is False and m['params_b'] is None for m in cards), 'chat-only models are exported, unsized')
 
 if __name__ == '__main__':

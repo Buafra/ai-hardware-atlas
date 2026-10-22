@@ -339,17 +339,27 @@ class SiteAndAppTests(unittest.TestCase):
                 i=base[n%len(base)]
                 out.append({**i,'id':f'z{n:06d}','url':i['url']+f'?n={n}','published':(now-timedelta(minutes=n*24*60//per_day+1)).isoformat(),'_pv':policy.POLICY_VERSION})
             return out
-        # Today's volume (about 90 stories a day leave the list): the last 14 days fit whole, well under the cap.
-        normal=app_data.archive_doc(self.feed,news_archive.shown(flood(90,14),self.sources),self.sources)
+        # The volumes follow the size of today's stories (a story with AI summaries in both languages is about five times
+        # one without), so a week without summaries never makes the "too much" case fit, nor the normal one overflow:
+        # the scheduled run of the data would otherwise fail on a correct site.
+        empty=len(app_data.encode(app_data.archive_doc(self.feed,[],self.sources)))
+        sample=len(base)
+        per_story=(len(app_data.encode(app_data.archive_doc(self.feed,news_archive.shown(flood(sample,1),self.sources),self.sources)))-empty)/sample
+        # Today's volume (about 90 stories a day leave the list; fewer if today's stories are very large): the last 14
+        # days fit whole, well under the cap.
+        per_day=max(1,min(90,int(0.8*news_archive.APP_MAX_BYTES/(14*per_story))))
+        normal=app_data.archive_doc(self.feed,news_archive.shown(flood(per_day,14),self.sources),self.sources)
         size=len(app_data.encode(normal))
-        self.assertEqual(len(normal['items']),90*14);self.assertLess(size,news_archive.APP_MAX_BYTES)
+        self.assertEqual(len(normal['items']),per_day*14);self.assertLess(size,news_archive.APP_MAX_BYTES)
         self.assertEqual(normal['days'],14)
-        # Three times that volume: the newest stories that fit, never over the cap; "days" then says how far back the
-        # file really reaches (the app writes "from the last <days> days"), and every story of those days is in it.
-        flooded=news_archive.shown(flood(270,14),self.sources)
+        # At least three times that volume, and always about twice what fits: the newest stories that fit, never over the
+        # cap; "days" then says how far back the file really reaches (the app writes "from the last <days> days"), and
+        # every story of those days is in it.
+        heavy_day=max(270,-(-2*news_archive.APP_MAX_BYTES//int(14*per_story)))
+        flooded=news_archive.shown(flood(heavy_day,14),self.sources)
         heavy=app_data.archive_doc(self.feed,flooded,self.sources)
         self.assertLessEqual(len(app_data.encode(heavy)),news_archive.APP_MAX_BYTES)
-        self.assertLess(len(heavy['items']),270*14)
+        self.assertLess(len(heavy['items']),heavy_day*14)
         self.assertTrue(1<=heavy['days']<14,heavy['days'])
         within={i['id'] for i in flooded if news_archive.uae_time(i['published'])>=now-timedelta(days=heavy['days'])}
         self.assertLessEqual(within,{i['id'] for i in heavy['items']})
