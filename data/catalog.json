@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-08",
-  "last_check_at": "2026-10-21T15:15:33+00:00",
+  "last_check_at": "2026-10-22T00:42:46+00:00",
   "schedule": "02:07 and 14:07 Asia/Dubai",
   "automation_status": "Configured in GitHub Actions",
   "edition_note": "Initial catalog reviewed 23 Sep; corrections, specifications and launch prices reviewed 26 Sep 2026.",
@@ -50,7 +50,7 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 549,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/rtx-5070-out-now/geforce-rtx-5070-out-now-ogimage.jpg",
         "page": "https://www.nvidia.com/en-us/geforce/news/rtx-5070-out-now/",
@@ -140,7 +140,7 @@
       "form_factor": "PCIe card (partner designs; slot width varies by manufacturer)",
       "cooling": null,
       "msrp_usd": 749,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/5070-family/geforce-rtx-5070-ti-og-image.jpg",
         "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
@@ -226,7 +226,7 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 999,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5080/geforce-rtx-5080-og-1200x630.jpg",
         "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5080/",
@@ -320,7 +320,7 @@
       "form_factor": "PCIe card (Founders Edition 2-slot)",
       "cooling": "Air",
       "msrp_usd": 1999,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg",
         "page": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/",
@@ -446,7 +446,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -524,7 +524,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -610,7 +610,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -688,7 +688,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -762,7 +762,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -836,7 +836,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -914,7 +914,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1004,7 +1004,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1090,7 +1090,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1196,7 +1196,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1274,7 +1274,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1360,7 +1360,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1442,7 +1442,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1516,7 +1516,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1602,7 +1602,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1688,7 +1688,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1774,7 +1774,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1856,7 +1856,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -1942,7 +1942,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -2000,7 +2000,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -2086,7 +2086,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "NVIDIA",
@@ -2160,7 +2160,7 @@
           }
         ]
       },
-      "spec_checked_at": "2026-10-21T15:15:33+00:00"
+      "spec_checked_at": "2026-10-22T00:42:46+00:00"
     },
     {
       "vendor": "AMD",
@@ -2198,7 +2198,7 @@
       "form_factor": "PCIe card (board-partner designs)",
       "cooling": null,
       "msrp_usd": 549,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/radeon-rx-9070/2922918-radeon-rx-9070.jpg",
         "page": "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070.html",
@@ -2280,7 +2280,7 @@
       "form_factor": "PCIe card (board-partner designs)",
       "cooling": null,
       "msrp_usd": 599,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/radeon-rx-9070/2922918-radeon-rx-9070xt.jpg",
         "page": "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070xt.html",
@@ -2605,7 +2605,7 @@
       "form_factor": "PCIe dual-slot, full height (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/rtx-pro-4500-blackwell/nvidia-workstation-rtx4500-og-1200x630.jpg",
         "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-4500/",
@@ -2683,7 +2683,7 @@
       "form_factor": "PCIe dual-slot (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/nvidia-workstation-rtx-pro-5000-og-1200x630.jpg",
         "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-5000/",
@@ -2761,7 +2761,7 @@
       "form_factor": "PCIe dual-slot (4.4 x 10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-5000-blackwell/nvidia-workstation-rtx-pro-5000-og-1200x630.jpg",
         "page": "https://www.nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-5000/",
@@ -2843,7 +2843,7 @@
         }
       ],
       "notes": "Workstation Edition: 96 GB GDDR7 ECC and 1,792 GB/s bandwidth. Server and Max-Q editions are distinct products.",
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "use_ar": "نماذج كبيرة / ضبط دقيق",
       "bandwidth_tbs": 1.792,
       "bandwidth_note": null,
@@ -2921,7 +2921,7 @@
         }
       ],
       "notes": "32 GB dedicated GDDR6; 640 GB/s bandwidth. ECC is listed for Linux only. Standalone cards and partner workstations have different availability milestones.",
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "use_ar": "ذكاء اصطناعي محلي / محطة عمل متعددة المعالجات",
       "bandwidth_tbs": 0.64,
       "bandwidth_note": null,
@@ -3011,7 +3011,7 @@
       "form_factor": "PCIe triple-slot, full height, 11 in",
       "cooling": "Air",
       "msrp_usd": 3999,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/graphics/2198982-amd-radeon-pro-graphics.jpg",
         "page": "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w7900.html",
@@ -3154,7 +3154,7 @@
       "form_factor": "PCIe: air dual-slot FHFL or liquid single-slot FHXL",
       "cooling": "Air or liquid",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/rtx-pro-6000-blackwell-server-edition/nvidia-rtx-pro-6000-bw-server-edition-og.jpg",
         "page": "https://www.nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/",
@@ -3331,7 +3331,7 @@
       "form_factor": "PCIe dual-slot FHFL (10.5 in)",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/4711051-instinct-accelerator-mi350p-pcle-product.jpg",
         "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350p.html",
@@ -3425,7 +3425,7 @@
       "form_factor": "SXM (H200 NVL variant: PCIe dual-slot air-cooled)",
       "cooling": null,
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/h200/h200-tensor-og.jpg",
         "page": "https://www.nvidia.com/en-us/data-center/h200/",
@@ -3832,7 +3832,7 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/2325906-amd-instinct-mi300x.jpg",
         "page": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
@@ -3938,7 +3938,7 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/2909102-amd-instinct-mi325x-accelerator.jpg",
         "page": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html",
@@ -4030,7 +4030,7 @@
       "form_factor": "OAM module",
       "cooling": "Air",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/3366850-amd-instinct-mi350x-accelerator.jpg",
         "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html",
@@ -4130,7 +4130,7 @@
       "form_factor": "OAM module",
       "cooling": "Liquid",
       "msrp_usd": null,
-      "spec_checked_at": "2026-10-21T15:15:33+00:00",
+      "spec_checked_at": "2026-10-22T00:42:46+00:00",
       "image": {
         "url": "https://www.amd.com/content/dam/amd/en/images/products/data-centers/3366850-amd-instinct-mi350x-accelerator.jpg",
         "page": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html",
@@ -10487,7 +10487,7 @@
       "discovered_at": "2026-09-26T09:14:47+00:00"
     }
   ],
-  "last_attempt_at": "2026-10-21T15:15:33+00:00",
+  "last_attempt_at": "2026-10-22T00:42:46+00:00",
   "check_health": {
     "successful_sources": 260,
     "failed_sources": 11,

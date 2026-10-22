@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-21T15:19:51+00:00",
+ "updated_at": "2026-10-22T00:47:43+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1308,6 +1308,17 @@
    "created": 1787773060,
    "open": true,
    "params_b": 180.0,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "recursive/flint-v1.0",
+   "name": "Recursive: Flint",
+   "hf": "RecursiveSI/flint",
+   "context": 262144,
+   "created": 1792622765,
+   "open": true,
+   "params_b": 39.79,
    "params_source": "huggingface",
    "moe": false
   },
