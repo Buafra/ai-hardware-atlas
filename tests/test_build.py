@@ -449,6 +449,15 @@ class OwnerRequestTests2(unittest.TestCase):
         html,views=self.render(self.fixed_feed({'id':'g2','title':'A second AI story','lang':'en','uae':False,'published':'2026-09-26T09:00:00+00:00',
                                                 'summary_en':long.strip(),'summary_ar':'ملخص.','summary_source':'ai','summary_version':2,'ai_focus':True}))
         self.assertIn(f'<p class="n-sum" lang="en" dir="ltr">{long.strip()}</p><p class="n-by">AI summary</p>',views['news'])  # not cut
+    def test_show_more_only_on_the_landing_whatever_the_headlines_say(self):
+        # The scheduled run of 22 Oct 2026 failed here: a story's link held the letters "n-more" and the check looked for
+        # the letters instead of the button. A headline or link with them is news like any other.
+        html,views=self.render(self.fixed_feed({'id':'ten-billion-more-gpus','title':'Cloud firm buys ten billion-more GPUs (n-more)','lang':'en','uae':False,
+                                                'published':'2026-09-26T09:00:00+00:00','excerpt':'A class="n-more deal.','ai_focus':True}))
+        self.assertIn('ten-billion-more-gpus',views['news'])
+        self.assertIn('class=&quot;n-more',views['news'])  # escaped: it can never become markup
+        for v in ('hardware','news','uae','contact'):self.assertNotIn('class="n-more',views[v],v)
+        self.assertIn('class="n-more',views['home'])
     def test_items_not_mainly_about_ai_are_hidden(self):
         feed=self.fixed_feed({'id':'w1','title':'Weekend reads: gardens, jobs and AI','lang':'en','uae':True,'published':'2026-09-26T08:00:00+00:00',
                               'summary_en':'A digest of weekend stories. It mentions AI once.','summary_ar':'مجموعة من قصص نهاية الأسبوع.','summary_source':'ai','summary_version':2,'ai_focus':False},
@@ -600,9 +609,10 @@ class ReviewRoundTests(unittest.TestCase):
     def test_home_headlines_show_more(self):
         # Owner, Oct 2026: "I can't click on the news article and expand it". Every landing headline card has one "Show
         # more" in its language, before the source line; the AI news and UAE AI lists (full text) have none.
+        # The site's data changes twice a day: no headline (an empty pillar) is no failure, and only the button's own markup
+        # counts, never the letters "n-more" in a headline or a link (".../ten-billion-more-gpus").
         home=self.home
         lists=re.findall(r'<ol class="heads" data-lang="(en|ar)">(.*?)</ol>',home)
-        self.assertTrue(lists)
         for lang,body in lists:
             cards=re.findall(r'<li\b[^>]*>(.*?)</li>',body)
             self.assertTrue(cards,lang)
@@ -613,7 +623,7 @@ class ReviewRoundTests(unittest.TestCase):
                                               '<span class="m-more">Show more</span><span class="m-less">Show less</span></button>')
         self.assertIn('<span class="m-more">عرض المزيد</span><span class="m-less">عرض أقل</span>',build.more_btn('ar'))
         main=self.html[self.html.index('<main'):self.html.index('</main>')]
-        self.assertNotIn('n-more',main.replace(self.home,''))  # hardware, AI news, UAE AI, contact
+        self.assertNotIn('class="n-more',main.replace(self.home,''))  # hardware, AI news, UAE AI, contact
         self.assertEqual(self.html.count('class="n-more'),sum(len(re.findall(r'<li\b',b)) for _,b in lists))
     def test_home_headlines_cut_only_with_javascript(self):
         css=(ROOT/'web/style.css').read_text(encoding='utf-8')
