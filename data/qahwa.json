@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-22T13:01:00+04:00",
+  "generated_at": "2026-10-22T13:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4014,6 +4014,43 @@
       "permalink": "https://www.instagram.com/p/DeynPTEgDun/",
       "published_at": "2026-10-22T13:01:00+04:00",
       "cover": "images/qahwa/news-2026-10-07-falcon-emirati--1-ai-news.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-07-falcon-emirati--2-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "Global models understand our dialect as well as MSA",
+        "ar": "النماذج العالمية تفهم لهجتنا مثل الفصحى"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "news",
+          "ar": {
+            "title": "النماذج العالمية ==تفهم لهجتنا== مثل الفصحى",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Global models understand ==our dialect== as well as MSA",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-22T13:30:00+04:00",
+      "cover": "images/qahwa/news-2026-10-07-falcon-emirati--2-check-story.webp",
       "related_concepts": []
     }
   ]
