@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T20:30:00+04:00",
+  "generated_at": "2026-10-23T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4376,6 +4376,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-23T20:30:00+04:00",
       "cover": "images/qahwa/week-03-day-17--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-18--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "Detector tools spot AI text accurately.",
+        "ar": "أدوات الكشف تميّز النص المولّد بدقة"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "أدوات الكشف ==تميّز النص المولّد== بدقة",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Detector tools ==spot AI text== accurately.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-23T21:15:00+04:00",
+      "cover": "images/qahwa/week-03-day-18--3-check-story.webp",
       "related_concepts": []
     }
   ]
