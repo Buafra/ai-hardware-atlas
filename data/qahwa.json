@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-22T13:30:00+04:00",
+  "generated_at": "2026-10-23T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4051,6 +4051,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-22T13:30:00+04:00",
       "cover": "images/qahwa/news-2026-10-07-falcon-emirati--2-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-07-falcon-emirati--2-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "Global models understand our dialect as well as MSA",
+        "ar": "النماذج العالمية تفهم لهجتنا مثل الفصحى"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "Global models understand ==our dialect== as well as MSA",
+            "body": "Answer: Myth ❌ Most handle Modern Standard Arabic well, then stumble on local words and expressions, and reply in MSA even when you ask in dialect. That is why dialect-specific models are being built."
+          },
+          "ar": {
+            "title": "النماذج العالمية ==تفهم لهجتنا== مثل الفصحى",
+            "body": "الجواب: خرافة ❌ أغلبها يفهم الفصحى جيداً، ثم يتعثّر في المفردات والتعابير المحلية، ويردّ بالفصحى حتى لو سألته بلهجتك. ولهذا تُبنى نماذج للهجات."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-23T07:50:00+04:00",
+      "cover": "images/qahwa/news-2026-10-07-falcon-emirati--2-check-story-answer.webp",
       "related_concepts": []
     }
   ]
