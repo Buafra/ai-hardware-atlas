@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-23T00:47:07+00:00",
+ "updated_at": "2026-10-23T15:09:47+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -549,6 +549,17 @@
    "created": 1780245374,
    "open": true,
    "params_b": 427.04,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "minimax/minimax-m3.1-flash",
+   "name": "MiniMax: MiniMax M3.1 Flash",
+   "hf": "MiniMaxAI/MiniMax-M3.1-Flash",
+   "context": 1048576,
+   "created": 1792379569,
+   "open": true,
+   "params_b": 220.49,
    "params_source": "huggingface",
    "moe": false
   },
@@ -2725,17 +2736,6 @@
    "hf": null,
    "context": 65536,
    "created": 1769177239,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "minimax/minimax-m3.1-flash",
-   "name": "MiniMax: MiniMax M3.1 Flash",
-   "hf": null,
-   "context": 1000000,
-   "created": 1792379569,
    "open": false,
    "params_b": null,
    "params_source": null,
