@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T07:50:00+04:00",
+  "generated_at": "2026-10-23T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -3890,6 +3890,10 @@
           },
           "en": {
             "title": "Save this before ==your next exam=="
+          },
+          "next": {
+            "ar": "الدرس 14: اكتب ورُدّ بأسلوبك أنت",
+            "en": "Lesson 14: Write and reply in your own style"
           }
         }
       ],
@@ -4087,6 +4091,129 @@
       "published_at": "2026-10-23T07:50:00+04:00",
       "cover": "images/qahwa/news-2026-10-07-falcon-emirati--2-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-03-day-18--1-learn-lesson-14",
+      "kind": "lesson",
+      "lesson": 14,
+      "code": "L14",
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "Write and reply in your own style",
+        "ar": "اكتب ورُدّ بأسلوبك أنت"
+      },
+      "summary": {
+        "en": "Tell it: formal or friendly, short or detailed, and who it's for. Without that you get a cold, generic message that fits anyone.",
+        "ar": "قل له: رسمية أم ودّية، قصيرة أم مفصّلة، ولمن ترسل. من دون ذلك تأتيك رسالة عامة باردة تصلح لأي أحد."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "اكتب ورُدّ ==بأسلوبك==",
+            "body": "رسائل عمل مرتّبة بنبرة مناسبة، من دون كلام آلي."
+          },
+          "en": {
+            "title": "Write and reply ==in your own style==",
+            "body": "Tidy work messages in the right tone, without sounding robotic."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "حدّد ==النبرة== والطول",
+            "body": "قل له: رسمية أم ودّية، قصيرة أم مفصّلة، ولمن ترسل. من دون ذلك تأتيك رسالة عامة باردة تصلح لأي أحد."
+          },
+          "en": {
+            "title": "Set the ==tone== and the length",
+            "body": "Tell it: formal or friendly, short or detailed, and who it's for. Without that you get a cold, generic message that fits anyone."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "هيكل رسالة واضحة",
+            "items": [
+              "السطر الأول: ما المطلوب",
+              "التفاصيل في نقاط قصيرة",
+              "السطر الأخير: الخطوة والموعد"
+            ]
+          },
+          "en": {
+            "title": "The shape of a clear message",
+            "items": [
+              "First line: what you need",
+              "Details in short bullets",
+              "Last line: the next step and the date"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "احفظ ==أسلوبك==",
+            "body": "الصق رسالتين كتبتهما (بعد حذف الأسماء والتفاصيل) واطلب منه أن يحاكي أسلوبك. ثم أعد الصياغة بكلماتك."
+          },
+          "en": {
+            "title": "Keep ==your own style==",
+            "body": "Paste two messages you wrote (names and details removed) and ask it to match your style. Then rework it in your words."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "نفس القهوة ==بكوب مرتّب==",
+            "body": "الفكرة والمعلومة منك، والمساعد يرتّب التقديم فقط. أما الطعم فيبقى طعمك أنت."
+          },
+          "en": {
+            "title": "Same coffee, ==a tidier cup==",
+            "body": "The idea and the facts are yours; the assistant only arranges how it's served. The taste stays yours."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أعد صياغة [نص رسالتي] إلى [المستلم] بنبرة [رسمية أو ودّية]. أقصر وأوضح، ولا تضف وعوداً. بلغة الرسالة."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Rewrite [my message] for [the recipient] in a [formal or friendly] tone. Shorter, clearer, no new facts or promises. Same language."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "اقرأها ==قبل الإرسال==",
+            "body": "أنت من يوقّع الرسالة. تأكد من الأسماء والأرقام والوعود، ولا تلصق بيانات عملاء أو معلومات سرية."
+          },
+          "en": {
+            "title": "Read it ==before you send==",
+            "body": "You are the one signing it. Check names, numbers and promises, and never paste customer data or confidential information."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==رسالتك القادمة=="
+          },
+          "en": {
+            "title": "Save this before ==your next email=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Rewrite [my message] for [the recipient] in a [formal or friendly] tone. Shorter, clearer, no new facts or promises. Same language.",
+        "ar": "أعد صياغة [نص رسالتي] إلى [المستلم] بنبرة [رسمية أو ودّية]. أقصر وأوضح، ولا تضف وعوداً. بلغة الرسالة.",
+        "code": "L14"
+      },
+      "permalink": "https://www.instagram.com/p/De0p1HQCJDp/",
+      "published_at": "2026-10-23T08:03:00+04:00",
+      "cover": "images/qahwa/week-03-day-18--1-learn-lesson-14.webp",
+      "related_concepts": [
+        "prompt-engineering"
+      ]
     }
   ]
 }
