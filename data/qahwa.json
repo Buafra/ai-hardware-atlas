@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T08:03:00+04:00",
+  "generated_at": "2026-10-23T13:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4200,6 +4200,10 @@
           },
           "en": {
             "title": "Save this before ==your next email=="
+          },
+          "next": {
+            "ar": "الدرس 15: تدرّب قبل اللحظة الصعبة",
+            "en": "Lesson 15: Rehearse before the hard moment"
           }
         }
       ],
@@ -4211,6 +4215,129 @@
       "permalink": "https://www.instagram.com/p/De0p1HQCJDp/",
       "published_at": "2026-10-23T08:03:00+04:00",
       "cover": "images/qahwa/week-03-day-18--1-learn-lesson-14.webp",
+      "related_concepts": [
+        "prompt-engineering"
+      ]
+    },
+    {
+      "id": "week-03-day-19--1-learn-lesson-15",
+      "kind": "lesson",
+      "lesson": 15,
+      "code": "L15",
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "Rehearse before the hard moment",
+        "ar": "تدرّب قبل اللحظة الصعبة"
+      },
+      "summary": {
+        "en": "Tell it to be the hiring manager, the finance director or the colleague, and to ask you hard questions, one at a time.",
+        "ar": "اطلب منه أن يكون مدير التوظيف أو المدير المالي أو الزميل، وأن يسألك أسئلة صعبة، سؤالاً واحداً في كل مرة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تدرّب قبل ==اللحظة الصعبة==",
+            "body": "مقابلة عمل، أو عرض مهم، أو حديث مؤجّل مع زميل."
+          },
+          "en": {
+            "title": "Rehearse before ==the hard moment==",
+            "body": "An interview, a presentation, or a postponed talk with a colleague."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "اجعله ==يمثّل الطرف الآخر==",
+            "body": "اطلب منه أن يكون مدير التوظيف أو المدير المالي أو الزميل، وأن يسألك أسئلة صعبة، سؤالاً واحداً في كل مرة."
+          },
+          "en": {
+            "title": "Ask it to ==play the other side==",
+            "body": "Tell it to be the hiring manager, the finance director or the colleague, and to ask you hard questions, one at a time."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أعطه السياق",
+            "items": [
+              "الوظيفة أو الموضوع ومدة اللقاء",
+              "من أمامك وما الذي يهمه",
+              "السؤال الذي تخشى أن تُسأل عنه"
+            ]
+          },
+          "en": {
+            "title": "Give it the context",
+            "items": [
+              "The role or topic, and how long you have",
+              "Who you are facing and what they care about",
+              "The question you're afraid of"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "اطلب ==ملاحظات صريحة==",
+            "body": "بعد كل إجابة اسأله: ما الذي كان ضعيفاً؟ وكيف أقولها في ثلاثين ثانية؟ ثم أعد المحاولة مرة أخرى."
+          },
+          "en": {
+            "title": "Ask for ==honest feedback==",
+            "body": "After each answer ask it: what was weak here, and how would I say this in thirty seconds? Then try again."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "==بروفة== قبل فتح المقهى",
+            "body": "الباريستا يجرّب الخلطة قبل أول زبون. وتمرينك على الأسئلة الصعبة يجعل الحقيقية منها أهون."
+          },
+          "en": {
+            "title": "==A dry run== before the café opens",
+            "body": "The barista tests the blend before the first customer. Practicing the hard questions makes the real ones easier."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أستعد لـ[المقابلة أو العرض] أمام [الطرف الآخر]. مثّل دوره: سؤال صعب واحد، انتظر إجابتي ثم قيّمها. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Preparing for [the interview or talk] with [the other side]. Play their role: one hard question, wait for my answer, then judge it. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "احفظ الإجابات كما كتبها وكرّرها.",
+            "fact": "الإجابة المحفوظة تبدو مصطنعة أمام من يسمعك. اجعلها هيكلاً فقط، وتحدّث بكلماتك وأمثلتك أنت."
+          },
+          "en": {
+            "myth": "Memorize the answers it wrote and repeat them.",
+            "fact": "A memorized answer sounds artificial to whoever is listening. Use it as a skeleton only, and speak in your own words and examples."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==مقابلتك القادمة=="
+          },
+          "en": {
+            "title": "Save this before ==your next interview=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Preparing for [the interview or talk] with [the other side]. Play their role: one hard question, wait for my answer, then judge it. Answer in my language.",
+        "ar": "أستعد لـ[المقابلة أو العرض] أمام [الطرف الآخر]. مثّل دوره: سؤال صعب واحد، انتظر إجابتي ثم قيّمها. أجب بلغتي.",
+        "code": "L15"
+      },
+      "permalink": "https://www.instagram.com/p/De1MKGfgE9O/",
+      "published_at": "2026-10-23T13:02:00+04:00",
+      "cover": "images/qahwa/week-03-day-19--1-learn-lesson-15.webp",
       "related_concepts": [
         "prompt-engineering"
       ]
