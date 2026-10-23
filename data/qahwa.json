@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T13:02:00+04:00",
+  "generated_at": "2026-10-23T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4341,6 +4341,42 @@
       "related_concepts": [
         "prompt-engineering"
       ]
+    },
+    {
+      "id": "week-03-day-17--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows your exact syllabus.",
+        "ar": "المساعد الذكي يعرف منهجك الدراسي بالضبط"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي يعرف ==منهجك الدراسي== بالضبط",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant knows ==your exact syllabus==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-23T20:30:00+04:00",
+      "cover": "images/qahwa/week-03-day-17--3-check-story.webp",
+      "related_concepts": []
     }
   ]
 }
