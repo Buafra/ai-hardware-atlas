@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T21:15:00+04:00",
+  "generated_at": "2026-10-23T22:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4412,6 +4412,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-23T21:15:00+04:00",
       "cover": "images/qahwa/week-03-day-18--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-19--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows your interview questions in advance.",
+        "ar": "المساعد الذكي يعرف أسئلة مقابلتك مسبقاً"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي يعرف ==أسئلة مقابلتك== مسبقاً",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant knows ==your interview questions== in advance.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-23T22:00:00+04:00",
+      "cover": "images/qahwa/week-03-day-19--3-check-story.webp",
       "related_concepts": []
     }
   ]
