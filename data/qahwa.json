@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T08:02:00+04:00",
+  "generated_at": "2026-10-24T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4655,6 +4655,142 @@
       "permalink": "https://www.instagram.com/p/De3OjGujEmq/",
       "published_at": "2026-10-24T08:02:00+04:00",
       "cover": "images/qahwa/week-03-day-21--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-22--1-learn-lesson-16",
+      "kind": "lesson",
+      "lesson": 16,
+      "code": "L16",
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "What actually runs AI?",
+        "ar": "ما الذي يشغّل الذكاء الاصطناعي فعلياً؟"
+      },
+      "summary": {
+        "en": "Great at many different tasks: the operating system, apps, logic and sequential work. AI can run on a CPU, but large neural workloads are often slower.",
+        "ar": "ممتاز في أنواع كثيرة من المهام: تشغيل النظام والبرامج والمنطق والمهام المتسلسلة. يمكن تشغيل الذكاء الاصطناعي على CPU، لكنه غالباً أبطأ في أحمال الشبكات العصبية الكبيرة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "CPU, GPU ==or NPU?==",
+            "body": "What actually runs AI?"
+          },
+          "ar": {
+            "title": "CPU أم GPU ==أم NPU؟==",
+            "body": "ما الذي يشغّل الذكاء الاصطناعي فعلياً؟"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "CPU — the general-purpose processor",
+            "body": "Great at many different tasks: the operating system, apps, logic and sequential work. AI can run on a CPU, but large neural workloads are often slower."
+          },
+          "ar": {
+            "title": "CPU — المعالج العام",
+            "body": "ممتاز في أنواع كثيرة من المهام: تشغيل النظام والبرامج والمنطق والمهام المتسلسلة. يمكن تشغيل الذكاء الاصطناعي على CPU، لكنه غالباً أبطأ في أحمال الشبكات العصبية الكبيرة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "GPU — massive parallel work",
+            "body": "A GPU performs many calculations at the same time. That ==parallel design== makes GPUs especially useful for training and running many AI models."
+          },
+          "ar": {
+            "title": "GPU — عمل متوازٍ ضخم",
+            "body": "ينفّذ GPU ==عدداً كبيراً من العمليات في الوقت نفسه==، ولهذا يناسب تدريب وتشغيل كثير من نماذج الذكاء الاصطناعي."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "NPU — built for AI efficiency",
+            "body": "An NPU accelerates neural-network operations ==efficiently==, especially in laptops, phones and small edge devices like cameras."
+          },
+          "ar": {
+            "title": "NPU — مصمم لكفاءة الذكاء الاصطناعي",
+            "body": "معالج يسرّع الشبكات العصبية ==بكفاءة==، خاصة في الحواسيب المحمولة والهواتف وأجهزة الحافة مثل الكاميرات."
+          }
+        },
+        {
+          "type": "bullets",
+          "en": {
+            "title": "Which one should you use?",
+            "items": [
+              "CPU: flexibility",
+              "GPU: heavy parallel AI",
+              "NPU: efficient on-device AI"
+            ]
+          },
+          "ar": {
+            "title": "أي واحد تستخدم؟",
+            "items": [
+              "CPU: للمرونة",
+              "GPU: لأحمال الذكاء الاصطناعي المتوازية الثقيلة",
+              "NPU: للكفاءة على الجهاز"
+            ]
+          },
+          "note": {
+            "en": "Many modern systems use all three together.",
+            "ar": "كثير من الأنظمة الحديثة تستخدم الثلاثة معاً."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "CPU = ==a few skilled baristas==",
+            "body": "GPU = a large team preparing many parts at once. NPU = a machine optimized for one type of drink."
+          },
+          "ar": {
+            "title": "CPU = ==بضعة باريستا مهرة==",
+            "body": "وGPU مثل فريق كبير يعمل بالتوازي، وNPU مثل آلة مصممة خصيصاً لمشروب محدد."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "AI only works on GPUs.",
+            "fact": "AI can run on CPUs, GPUs, NPUs and specialized accelerators. The best choice depends on the workload."
+          },
+          "ar": {
+            "myth": "الذكاء الاصطناعي يعمل فقط على GPU.",
+            "fact": "يمكن تشغيله على CPU وGPU وNPU ومسرّعات متخصصة. الاختيار يعتمد على المهمة."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "For my AI task — [your task] — should I prioritize CPU, GPU, NPU or memory? Explain why in simple terms."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "لمهمتي في الذكاء الاصطناعي — [اكتب المهمة] — هل أركز على CPU أم GPU أم NPU أم الذاكرة؟ اشرح السبب ببساطة."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Save this before ==buying your next AI device=="
+          },
+          "ar": {
+            "title": "احفظ الدرس قبل ==شراء جهازك القادم=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "For my AI task — [your task] — should I prioritize CPU, GPU, NPU or memory? Explain why in simple terms.",
+        "ar": "لمهمتي في الذكاء الاصطناعي — [اكتب المهمة] — هل أركز على CPU أم GPU أم NPU أم الذاكرة؟ اشرح السبب ببساطة.",
+        "code": "L16"
+      },
+      "permalink": "https://www.instagram.com/p/De3xEexjiDX/",
+      "published_at": "2026-10-24T13:03:00+04:00",
+      "cover": "images/qahwa/week-04-day-22--1-learn-lesson-16.webp",
       "related_concepts": []
     }
   ]
