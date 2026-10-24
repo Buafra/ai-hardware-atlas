@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T21:01:00+04:00",
+  "generated_at": "2026-10-24T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4861,6 +4861,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T21:01:00+04:00",
       "cover": "images/qahwa/week-03-day-20--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-21--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never paste into an AI assistant?",
+        "ar": "أيّ هذه يجب ألّا تلصقه في المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "What should you never paste?",
+        "ar": "ما الذي يجب ألّا تلصقه؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "ar": {
+            "title": "أيّ هذه ==يجب ألّا== تلصقه في المساعد الذكي؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Which of these should you ==never== paste into an AI assistant?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T21:15:00+04:00",
+      "cover": "images/qahwa/week-03-day-21--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
