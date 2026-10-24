@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T21:15:00+04:00",
+  "generated_at": "2026-10-24T22:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4898,6 +4898,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T21:15:00+04:00",
       "cover": "images/qahwa/week-03-day-21--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-22--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "AI only works on a GPU.",
+        "ar": "الذكاء الاصطناعي يعمل فقط على GPU."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "AI ==only works on a GPU==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "الذكاء الاصطناعي ==يعمل فقط على GPU==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T22:00:00+04:00",
+      "cover": "images/qahwa/week-04-day-22--3-check-story.webp",
       "related_concepts": []
     }
   ]
