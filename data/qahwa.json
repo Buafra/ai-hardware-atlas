@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T07:55:00+04:00",
+  "generated_at": "2026-10-24T08:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4553,6 +4553,108 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T07:55:00+04:00",
       "cover": "images/qahwa/week-03-day-19--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-21--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "recap",
+      "title": {
+        "en": "Work and study week recap",
+        "ar": "ملخص أسبوع العمل والدراسة"
+      },
+      "summary": {
+        "en": "Five lessons that save you time. Review them with your coffee.",
+        "ar": "خمسة دروس تختصر وقتك، راجعها مع قهوتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "العمل والدراسة ==في بطاقات==",
+            "body": "خمسة دروس تختصر وقتك، راجعها مع قهوتك."
+          },
+          "en": {
+            "title": "Work and study ==in a few cards==",
+            "body": "Five lessons that save you time. Review them with your coffee."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (1)",
+            "items": [
+              "الملاحظات تتحوّل إلى ملخص ومهام ومواعيد",
+              "المستند الطويل: اسأل سؤالاً محدداً",
+              "تحقّق من الأرقام في المستند نفسه"
+            ]
+          },
+          "en": {
+            "title": "What we learned (1)",
+            "items": [
+              "Notes become a summary, tasks and dates",
+              "Long document: ask one specific question",
+              "Check the numbers in the document itself"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (2)",
+            "items": [
+              "في المذاكرة: اشرح لي بمستواي",
+              "اختبر نفسك بدل إعادة القراءة",
+              "في العمل: حدّد النبرة والطول",
+              "واحتفظ بأسلوبك وكلماتك"
+            ]
+          },
+          "en": {
+            "title": "What we learned (2)",
+            "items": [
+              "Studying: explain it at my level",
+              "Test yourself instead of rereading",
+              "At work: set the tone and the length",
+              "And keep your own style and words"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (3)",
+            "items": [
+              "تمرّن على المقابلة قبل موعدها",
+              "اطلب ملاحظات صريحة بعد كل إجابة",
+              "لا تلصق بيانات سرية أو شخصية"
+            ]
+          },
+          "en": {
+            "title": "What we learned (3)",
+            "items": [
+              "Rehearse the interview before the day",
+              "Ask for honest feedback after each answer",
+              "Never paste confidential or personal data"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظها وجرّب ==درساً واحداً هذا الأسبوع=="
+          },
+          "en": {
+            "title": "Save it and try ==one lesson this week=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/De3OjGujEmq/",
+      "published_at": "2026-10-24T08:02:00+04:00",
+      "cover": "images/qahwa/week-03-day-21--1-recap-carousel.webp",
       "related_concepts": []
     }
   ]
