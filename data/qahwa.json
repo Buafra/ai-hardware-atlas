@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-23T22:00:00+04:00",
+  "generated_at": "2026-10-24T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4448,6 +4448,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-23T22:00:00+04:00",
       "cover": "images/qahwa/week-03-day-19--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-17--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows your exact syllabus.",
+        "ar": "المساعد الذكي يعرف منهجك الدراسي بالضبط"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant knows ==your exact syllabus==.",
+            "body": "Answer: Myth ❌ It doesn't have your school's syllabus and can't see your exam. Give it the lesson titles or the syllabus file, and check its questions against your book and your teacher."
+          },
+          "ar": {
+            "title": "المساعد الذكي يعرف ==منهجك الدراسي== بالضبط",
+            "body": "الجواب: خرافة ❌ ليس لديه منهج مدرستك، ولا يطّلع على أسئلة اختبارك. أعطه عناوين الدروس أو المنهج، وراجع أسئلته مع كتابك ومعلمك."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T07:45:00+04:00",
+      "cover": "images/qahwa/week-03-day-17--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
