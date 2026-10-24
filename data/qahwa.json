@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T13:03:00+04:00",
+  "generated_at": "2026-10-24T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4791,6 +4791,76 @@
       "permalink": "https://www.instagram.com/p/De3xEexjiDX/",
       "published_at": "2026-10-24T13:03:00+04:00",
       "cover": "images/qahwa/week-04-day-22--1-learn-lesson-16.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-20--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "challenge",
+      "title": {
+        "en": "Turn your notes into tasks",
+        "ar": "حوّل ملاحظاتك إلى مهام"
+      },
+      "summary": {
+        "en": "Take the notes from your last meeting or class and let AI sort them.",
+        "ar": "خذ ملاحظات آخر اجتماع أو محاضرة ودع المساعد يرتّبها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحدّي الأسبوع: ==حوّل ملاحظاتك== إلى مهام",
+            "body": "خذ ملاحظات آخر اجتماع أو محاضرة ودع المساعد يرتّبها."
+          },
+          "en": {
+            "title": "Weekly challenge: ==turn your notes== into tasks",
+            "body": "Take the notes from your last meeting or class and let AI sort them."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات",
+            "items": [
+              "افتح أي مساعد ذكي: ChatGPT أو Claude أو Gemini",
+              "الصق ملاحظاتك بعد حذف أي معلومة سرية",
+              "انسخ الأمر في الشاشة التالية",
+              "شاركنا عدد المهام التي ظهرت لك"
+            ]
+          },
+          "en": {
+            "title": "How to play",
+            "items": [
+              "Open any AI assistant: ChatGPT, Claude or Gemini",
+              "Paste your notes after removing anything confidential",
+              "Copy the prompt on the next screen",
+              "Tell us how many tasks came out"
+            ]
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "انسخ هذا الأمر",
+            "prompt": "هذه ملاحظاتي من [نوع اللقاء]: [الصق ملاحظاتك]. حوّلها إلى ثلاث نقاط وقائمة مهام لكل منها مسؤول وموعد. أجب بلغتي."
+          },
+          "en": {
+            "title": "Copy this prompt",
+            "prompt": "Notes from [meeting type]: [paste your notes]. Turn them into three points and tasks with an owner and a date. Answer in my language."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Notes from [meeting type]: [paste your notes]. Turn them into three points and tasks with an owner and a date. Answer in my language.",
+        "ar": "هذه ملاحظاتي من [نوع اللقاء]: [الصق ملاحظاتك]. حوّلها إلى ثلاث نقاط وقائمة مهام لكل منها مسؤول وموعد. أجب بلغتي.",
+        "code": "C3"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T21:01:00+04:00",
+      "cover": "images/qahwa/week-03-day-20--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
