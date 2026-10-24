@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T07:50:00+04:00",
+  "generated_at": "2026-10-24T07:55:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4518,6 +4518,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T07:50:00+04:00",
       "cover": "images/qahwa/week-03-day-18--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-19--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows your interview questions in advance.",
+        "ar": "المساعد الذكي يعرف أسئلة مقابلتك مسبقاً"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant knows ==your interview questions== in advance.",
+            "body": "Answer: Myth ❌ It has no inside knowledge of the company; it suggests questions that are common for a role like yours. Useful for practice, but not a confirmed list."
+          },
+          "ar": {
+            "title": "المساعد الذكي يعرف ==أسئلة مقابلتك== مسبقاً",
+            "body": "الجواب: خرافة ❌ لا يملك معلومات داخلية عن الشركة، وإنما يقترح أسئلة شائعة لمثل هذه الوظيفة. هذا مفيد للتمرين، لكن لا تعدّه قائمة مؤكدة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T07:55:00+04:00",
+      "cover": "images/qahwa/week-03-day-19--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
