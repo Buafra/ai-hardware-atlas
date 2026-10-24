@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T07:45:00+04:00",
+  "generated_at": "2026-10-24T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4483,6 +4483,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T07:45:00+04:00",
       "cover": "images/qahwa/week-03-day-17--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-18--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "tools",
+      "title": {
+        "en": "Detector tools spot AI text accurately.",
+        "ar": "أدوات الكشف تميّز النص المولّد بدقة"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "Detector tools ==spot AI text== accurately.",
+            "body": "Answer: Myth ❌ Detectors are unreliable: they can flag human writing as generated, and generated text can slip past them. Never judge someone on that alone."
+          },
+          "ar": {
+            "title": "أدوات الكشف ==تميّز النص المولّد== بدقة",
+            "body": "الجواب: خرافة ❌ أدوات الكشف غير موثوقة: قد تتهم نصاً كتبه إنسان بأنه مولّد، وقد يمرّ عليها نص مولّد. لا تبنِ على نتيجتها وحدها حكماً في حق أحد."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-24T07:50:00+04:00",
+      "cover": "images/qahwa/week-03-day-18--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
