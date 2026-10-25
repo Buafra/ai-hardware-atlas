@@ -3,6 +3,20 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "cfc4a0c9a688",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-24T14:30:00+00:00",
+   "title": "الكشف عن روبوت \"المهام الصعبة\"",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/video/4701047/الكشف-عن-روبوت--المهام-الصعبة",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
    "id": "2fec986ad3d9",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -59,6 +73,34 @@
    "excerpt": "Ask LLMs for their most controversial take on humanity, and it turns out they have little nice to say about us, as one AI experiment found"
   },
   {
+   "id": "1d9c20fe16c2",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-23T15:21:07+00:00",
+   "title": "حشود لا وجود لها.. كيف بدأ الذكاء الاصطناعي باختراع «المظاهرات»؟",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/technology/science-technology/artificial-intelligence/1560077",
+   "summary_en": "A video that spread on Facebook appeared to show thousands of protesters outside Parliament in London, with British flags and the message \"Wake up England\". The British organisation Full Fact concluded it was AI-generated, citing an invisible SynthID marker pointing to Google's AI tools, plus errors such as distorted lettering on the road and landmarks like Westminster Bridge appearing in the wrong places. The article says Lead Stories documented several similar clips of supposed mass protests in British cities during 2026, and the outlet Misbar found that a pro-Israel rally video was also generated, with a Veo marker tied to Google's video model. It stresses that such crowds can create an impression of public opinion and political movement that does not exist.",
+   "summary_ar": "انتشر على فيسبوك مقطع فيديو بدا أنه يُظهر آلاف المتظاهرين أمام البرلمان في لندن، وتظهر فيه الأعلام البريطانية وعبارة «استيقظي يا إنجلترا». وخلصت مؤسسة Full Fact البريطانية إلى أن المقطع مولّد بالذكاء الاصطناعي، مشيرة إلى علامة SynthID غير المرئية الدالة على أدوات «قوقل» للذكاء الاصطناعي، إضافة إلى أخطاء مثل كتابة مشوهة على الطريق وظهور معالم مثل «جسر ويستمنستر» في أماكن غير صحيحة. ويذكر المقال أن منصة Lead Stories وثّقت خلال 2026 عدة مقاطع مشابهة تدّعي إظهار احتجاجات جماهيرية في مدن بريطانية، وأن منصة «مسبار» وجدت أن مقطع مظاهرة مؤيدة لإسرائيل مولّد أيضاً، وفيه علامة Veo المرتبطة بنموذج الفيديو من «قوقل». ويؤكد أن هذه الحشود قد تصنع انطباعاً بوجود رأي عام وحراك سياسي لا وجود لهما فعلاً.",
+   "excerpt": "في اللقطة الأولى، لا يبدو أن هناك ما يدعو للشك، آلاف الأشخاص يحتشدون في قلب لندن، الأعلام البريطانية تملأ المشهد، ومبنى"
+  },
+  {
+   "id": "17d83c8a47fd",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "health",
+   "published": "2026-10-23T15:18:42+00:00",
+   "title": "فيروس «صممه» الذكاء الاصطناعي يعالج حالات «عدوى بكتيرية مقاومة»",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/lifestyle/1560069",
+   "summary_en": "A California laboratory, Radical Numerics, says it used bacteriophages designed with artificial intelligence to treat a patient whose bacterial infection resisted conventional treatments. The therapy, called Omnii-1, draws on genetic data, including phage genomes and information about how they interact with bacteria, to design candidate viruses for a specific infection. The company describes three stages: AI-based design, production and testing, and using the results to refine later designs. It believes this could cut the time needed to find suitable phages. The phages were given under a compassionate-use programme with medical supervision, but the company withheld details of the patient's response, citing privacy. No peer-reviewed clinical results have been published, so the approach's effectiveness and safety still need independent evaluation.",
+   "summary_ar": "أعلن مختبر Radical Numerics في ولاية كاليفورنيا أنه استخدم عاثيات صُممت بالذكاء الاصطناعي لعلاج مريض يعاني عدوى بكتيرية لا تستجيب للعلاجات التقليدية. ويعتمد العلاج، المسمى Omnii-1، على بيانات جينية متنوعة، منها جينومات العاثيات ومعلومات عن تفاعلها مع البكتيريا، لتصميم فيروسات مرشحة لعلاج عدوى محددة. وتقول الشركة إن العملية تمر بثلاث مراحل هي التصميم بالذكاء الاصطناعي، ثم الإنتاج والاختبار، ثم الاستفادة من النتائج لتحسين التصاميم اللاحقة، وترى أن ذلك قد يقلل الوقت اللازم للعثور على عاثيات مناسبة. وقُدمت العاثيات ضمن برنامج للاستخدام الرحيم وتحت إشراف طبي، لكن الشركة لم تكشف عن استجابة المريض بحجة الخصوصية. ولم تُنشر نتائج سريرية خضعت لمراجعة الأقران، لذلك لا تزال فاعلية النهج وسلامته بحاجة إلى تقييم علمي مستقل.",
+   "excerpt": "دبي - البيان حقق علماء أمريكيون إنجازاً مهماً على صعيد تطوير علاجات جديدة لمواجهة البكتيريا المقاومة للمضادات الحيوية، ا"
+  },
+  {
    "id": "e77798947f46",
    "source": "indy-ar-new",
    "lang": "ar",
@@ -71,6 +113,76 @@
    "summary_en": "Microsoft researchers say they built an AI tool that diagnoses patients step by step as doctors do, and that it was more than twice as accurate as physicians on complex cases, according to a study published Thursday in the journal Science. The model uses an \"orchestrator\" that mimics a team of clinical experts, deciding which questions to ask, which tests to order and how to analyse the results, while continually updating its hypotheses. In a test of more than 300 complex and unusual cases, it beat general-practice doctors who could consult medical references and the internet. It also outperformed human doctors on scenarios drawn from a large emergency admissions database, and diagnosis cost less when the orchestrator set the steps. Dominic King of Microsoft AI's health unit said multiple-choice tests are far from real practice.",
    "summary_ar": "قال باحثون في شركة Microsoft إنهم طوروا أداة تعتمد على الذكاء الاصطناعي تشخّص المرضى خطوة بخطوة كما يفعل الأطباء، وإنها أظهرت دقة تزيد على ضعف دقة الأطباء في الحالات المعقدة، وفق دراسة نُشرت الخميس في مجلة «ساينس» (Science). ويعتمد النموذج على «منسّق» يحاكي فريقاً من الخبراء السريريين، فيحدد الأسئلة التي تُطرح على المريض والفحوص المطلوبة ويحلل نتائجها، مع تحديث فرضياته باستمرار. وفي اختبار شمل أكثر من 300 حالة معقدة وغير مألوفة، تفوق النموذج على أطباء التخصص العام الذين استعانوا بالمراجع الطبية والإنترنت. كما تفوق على الأطباء في سيناريوهات مأخوذة من قاعدة بيانات كبيرة لحالات الطوارئ، وكانت كلفة التشخيص أقل عندما تولى المنسق تحديد الخطوات. وقال دومينيك كينج من وحدة الصحة في Microsoft للذكاء الاصطناعي إن الاختبارات متعددة الخيارات بعيدة عن الواقع.",
    "excerpt": "قال باحثون في شركة \"مايكروسوفت\" إنهم طوروا أداة تعتمد على الذكاء الاصطناعي لتشخيص المرضى خطوة بخطوة تماماً كما يفعل الأطباء، وإن الأداة أظهرت دقة تفوق دقة الأطباء بأكثر من المثلين في التعامل مع الحالات الطبية المعقدة، وفقاً لدراسة نشرت أمس الخميس في مجلة \"ساينس\"."
+  },
+  {
+   "id": "918af775299f",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T14:21:26+00:00",
+   "title": "Fujairah Geographical Information Systems Center launches geospatial AI project",
+   "title_ar": "مركز الفجيرة لنظم المعلومات الجغرافية يطلق مشروعاً للذكاء الاصطناعي الجيومكاني",
+   "url": "https://www.wam.ae/en/article/c2vz0bo-fujairah-geographical-information-systems-center",
+   "summary_en": "The Fujairah Geographical Information Systems Center (FGISC) announced on 23rd October, 2026 the launch of a geospatial artificial intelligence project powered by AI agents. The project aims to develop three-dimensional digital models of buildings and roads and to support the smart urban planning system in the Emirate of Fujairah. AI agent technologies will automate the creation of 3D models of government buildings, which is meant to give more accurate digital representations, improve geospatial data quality and make decision-making more efficient. The tools will also allow visualising 3D buildings and analysing data on each structure, supporting urban planning, infrastructure management, government services, economic development and the security system. Director-General Ahmed Hassan Almurshidi said the launch supports the government's vision and the emirate's readiness for rapid advances in AI and digital twins.",
+   "summary_ar": "أعلن مركز الفجيرة لنظم المعلومات الجغرافية في 23 أكتوبر 2026 إطلاق مشروع للذكاء الاصطناعي الجيومكاني يعمل بوكلاء الذكاء الاصطناعي. ويهدف المشروع إلى تطوير نماذج رقمية ثلاثية الأبعاد للمباني والطرق ودعم منظومة التخطيط الحضري الذكي في إمارة الفجيرة. وستؤتمت تقنيات وكلاء الذكاء الاصطناعي إنشاء نماذج ثلاثية الأبعاد للمباني الحكومية، بما يتيح تمثيلاً رقمياً أكثر دقة ويحسّن جودة البيانات المكانية ويرفع كفاءة اتخاذ القرار. كما يوفر المشروع إمكانات لاستعراض المباني وتحليل بيانات كل مبنى، بما يدعم التخطيط العمراني وإدارة البنية التحتية والخدمات الحكومية والتنمية الاقتصادية والمنظومة الأمنية. وقال مدير عام المركز أحمد حسن المرشدي إن الإطلاق يدعم رؤية حكومة الفجيرة وجاهزية الإمارة لمواكبة التطورات المتسارعة في الذكاء الاصطناعي والتوائم الرقمية.",
+   "excerpt": "FUJAIRAH, 23rd October, 2026 (WAM) -- The Fujairah Geographical Information Systems Center (FGISC) has announced the launch of a geospatial artificial intelligence project powered by AI agents, aimed at developing three-dimensional digital models of buildings and roads and…"
+  },
+  {
+   "id": "bdcea5a465d5",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "cloud",
+   "published": "2026-10-23T14:15:02+00:00",
+   "title": "How AI is driving the future of clean water and energy at WETEX 2026",
+   "title_ar": "كيف يقود الذكاء الاصطناعي مستقبل المياه النظيفة والطاقة في WETEX 2026",
+   "url": "https://www.thenationalnews.com/in-focus/2026/10/23/how-ai-is-driving-the-future-of-clean-water-and-energy-at-wetex-2026/",
+   "summary_en": "Artificial intelligence dominated conversation on day two of WETEX, the Water, Energy, Technology and Environment Exhibition held at Dubai World Trade Centre. Attendees broadly accepted that AI uses too much water and electricity, but argued the answer is to develop solutions rather than stop using it. PwC Middle East's Wissam Mahfouz said AI speeds up consultants' analysis and expects it to become more efficient within a few years. Lucy Electric showed Synapse, a system that uses machine learning and digital twin simulation to predict cable failures, while Thermax presented its Edge Live platform and a desalination application. Sunten Electric's Chris Ren said it is developing transformers designed for AI data centres.",
+   "summary_ar": "هيمن الذكاء الاصطناعي على الأحاديث في اليوم الثاني من معرض «ويتيكس» (WETEX) للمياه والطاقة والتكنولوجيا والبيئة، المقام في مركز دبي التجاري العالمي. واتفق معظم المشاركين على أن الذكاء الاصطناعي يستهلك قدراً كبيراً من المياه والكهرباء، لكنهم رأوا أن الحل يكمن في تطوير حلول جديدة لا في التوقف عن استخدامه. وقال وسام مفوز من PwC Middle East إن الذكاء الاصطناعي يختصر زمن التحليل لدى المستشارين، وتوقع أن تزداد كفاءته خلال سنوات قليلة. وعرضت Lucy Electric نظام Synapse الذي يعتمد على التعلم الآلي ومحاكاة التوأم الرقمي للتنبؤ بأعطال الكابلات، بينما قدمت Thermax منصة Edge Live وتطبيقاً في تحلية المياه. وأفاد تشريس رين من Sunten Electric بأن شركته تعمل على محولات كهربائية مصممة لمراكز بيانات الذكاء الاصطناعي.",
+   "excerpt": "Exhibitors on day two of the Water, Energy, Technology and Environment Exhibition shared their views on AI – and most of them were building something with it"
+  },
+  {
+   "id": "a011453b28d9",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T14:04:00+00:00",
+   "title": "الفجيرة لنظم المعلومات الجغرافية يطلق الذكاء الاصطناعي الجيومكاني",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2vysmk-الفجيرة-لنظم-المعلومات-الجغرافية-يطلق-الذكاء",
+   "summary_en": "The Fujairah Geographical Information Systems Center has launched a geospatial artificial intelligence project built on AI agents, according to a 23rd October announcement. The project is meant to develop three-dimensional digital models of buildings and roads and to support smart urban planning in the Emirate of Fujairah. AI agent technologies will automate the creation of 3D models of government buildings, giving a more accurate digital picture of the built environment, better spatial data quality and more efficient decisions. It also offers tools to view 3D buildings and analyse data for each one, supporting planning, infrastructure management, government services, economic development and security. Director-General Ahmed Hassan Almurshidi said it advances the government's vision for a smart, sustainable urban environment.",
+   "summary_ar": "أعلن مركز الفجيرة لنظم المعلومات الجغرافية في 23 أكتوبر إطلاق مشروع الذكاء الاصطناعي الجيومكاني القائم على وكلاء الذكاء الاصطناعي. ويهدف المشروع إلى تطوير نماذج رقمية ثلاثية الأبعاد للمباني والطرق ودعم التخطيط الحضري الذكي في إمارة الفجيرة. وستُستخدم تقنيات وكلاء الذكاء الاصطناعي في أتمتة إنشاء نماذج ثلاثية الأبعاد للمباني الحكومية، بما يتيح تمثيلاً رقمياً أدق للبيئة العمرانية ويحسّن جودة البيانات المكانية ويرفع كفاءة اتخاذ القرار. كما يوفر المشروع أدوات لاستعراض المباني وتحليل بيانات كل مبنى، بما يدعم التخطيط وإدارة البنية التحتية والخدمات الحكومية والتنمية الاقتصادية والمنظومة الأمنية. وأكد مدير عام المركز الدكتور أحمد حسن المرشدي أن المشروع يدعم رؤية حكومة الفجيرة لبناء بيئة عمرانية ذكية ومستدامة.",
+   "excerpt": "الفجيرة في 23 أكتوبر/ وام/ أعلن مركز الفجيرة لنظم المعلومات الجغرافية، عن إطلاق مشروع الذكاء الاصطناعي الجيومكاني القائم على وكلاء الذكاء الاصطناعي بهدف تطوير نماذج رقمية ثلاثية الأبعاد للمباني والطرق، ودعم منظومة التخطيط الحضري الذكي في إمارة الفجيرة."
+  },
+  {
+   "id": "310cd2d012d9",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T13:41:34+00:00",
+   "title": "DIFC Innovation Hub establishes Geospatial Accelerator advances Dubai’s ambition to lead converging space, AI economy",
+   "title_ar": "مركز دبي المالي العالمي للابتكار يؤسس مسرّعاً جيومكانياً يعزز طموح دبي للريادة في اقتصاد الفضاء والذكاء الاصطناعي المتقارب",
+   "url": "https://www.wam.ae/en/article/c2vz08q-difc-innovation-hub-establishes-geospatial",
+   "summary_en": "DIFC Innovation Hub and the Mohammed Bin Rashid Space Centre announced on 23 October 2026 that the Geospatial Accelerator, the first programme under the Space for Earth Labs platform, has selected ten international scale-ups. Launched at the Dubai Airshow in November 2025, the programme received 73 applications from 24 countries, and 45 reached the interview stage. The chosen firms, including AtlasAI, FlyPix AI and GHGSat, will be matched with three UAE public bodies and two private companies to build proof-of-concept pilots in areas such as maritime, insurance, public safety and the built environment. The text says the initiative supports the National Space Strategy 2030, and the firms will present their pilots at the Dubai AI Festival in October 2026.",
+   "summary_ar": "أعلن مركز «إنوفيشن هب» التابع لمركز دبي المالي العالمي ومركز محمد بن راشد للفضاء في 23 أكتوبر 2026 اختيار عشر شركات ناشئة عالمية ضمن «برنامج المسرّع الجغرافي الفضائي» (Geospatial Accelerator)، وهو أول برامج منصة «مختبرات الفضاء من أجل الأرض» (Space for Earth Labs). وكان البرنامج قد أُطلق خلال معرض دبي للطيران في نوفمبر 2025، وتلقى 73 طلباً من 24 دولة، وبلغ 45 منها مرحلة المقابلات. وستُوزَّع الشركات المختارة، ومنها AtlasAI وFlyPix AI وGHGSat، على ثلاث جهات حكومية إماراتية وجهتين من القطاع الخاص لتطوير مشاريع تجريبية لإثبات المفهوم في مجالات تشمل الملاحة البحرية والتأمين والسلامة العامة والبيئة المبنية. ويذكر النص أن المبادرة تدعم «الاستراتيجية الوطنية للفضاء 2030»، وأن الشركات ستعرض حلولها في مهرجان دبي للذكاء الاصطناعي في أكتوبر 2026.",
+   "excerpt": "DUBAI, 23rd October, 2026 (WAM) -- DIFC Innovation Hub and the Mohammed Bin Rashid Space Centre (MBRSC), today announced significant progress in the Geospatial Accelerator, the inaugural programme under the Space for Earth Labs platform, marked by the selection of several…"
+  },
+  {
+   "id": "1853c4f82499",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T13:34:59+00:00",
+   "title": "\"برنامج المسرع الجغرافي الفضائي\" يعزز طموح دبي لقيادة تكامل اقتصاد الفضاء والذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2vysjn-برنامج-المسرع-الجغرافي-الفضائي-يعزز-طموح-دبي",
+   "summary_en": "On 23 October in Dubai, the Innovation Hub of the Dubai International Financial Centre and the Mohammed Bin Rashid Space Centre selected 10 start-ups for the Geospatial Accelerator Programme, the first initiative of the Space Labs for Earth platform. The platform, which also involves Realm Insurance, aims to link space and Earth-observation technology with AI and sector needs. Since its launch at the Dubai Airshow in November 2025, the programme drew applications from 73 companies in 24 countries. The chosen firms will work with UAE public and private bodies on proof-of-concept projects in areas such as maritime navigation, infrastructure, insurance, public safety and geospatial intelligence. They are due to present results at Dubai AI Festival in October 2026.",
+   "summary_ar": "اختار مركز Innovation Hub التابع لمركز دبي المالي العالمي ومركز محمد بن راشد للفضاء، في دبي يوم 23 أكتوبر، عشر شركات ناشئة للمشاركة في «برنامج المسرّع الجغرافي الفضائي»، وهو أول مبادرات منصة «مختبرات الفضاء من أجل الأرض» (Space Labs for Earth). وتشارك في المنصة أيضاً شركة Realm Insurance، وتهدف إلى ربط تقنيات الفضاء والرصد الأرضي بالذكاء الاصطناعي واحتياجات مختلف القطاعات. ومنذ إطلاق البرنامج خلال معرض دبي للطيران في نوفمبر 2025، تلقى طلبات من 73 شركة تنتمي إلى 24 دولة. وستعمل الشركات المختارة مع جهات حكومية وخاصة في دولة الإمارات على مشاريع تجريبية لإثبات المفهوم في مجالات مثل الملاحة البحرية والبنية التحتية والتأمين والسلامة العامة والاستخبارات الجيومكانية. ومن المقرر أن تعرض نتائجها خلال مهرجان دبي للذكاء الاصطناعي (Dubai AI Festival) في أكتوبر 2026.",
+   "excerpt": "دبي في 23 أكتوبر / وام / اختار مركز \"إنوفيشن هب\" التابع لمركز دبي المالي العالمي، ومركز محمد بن راشد للفضاء، 10 شركات عالمية ناشئة واعدة، محققين بذلك تقدما نوعيا وإستراتيجيا في \"برنامج المسرع الجغرافي الفضائي\"، الذي يمثل أولى مبادرات منصة \"مختبرات الفضاء من أجل الأرض\"."
   },
   {
    "id": "d71cac7aef9c",
@@ -87,6 +199,34 @@
    "excerpt": "ديفيد سولومون رئيس مجلس الإدارة والرئيس التنفيذي لشركة غولدمان ساكس. يعد سرطان البنكرياس أحد أكثر الأمراض فتكاً في الط"
   },
   {
+   "id": "6d2a1c2dd227",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-23T11:36:30+00:00",
+   "title": "Canva launches Craft, its first in-house image model",
+   "title_ar": "Canva تطلق Craft، أول نموذج صور تطوره داخلياً",
+   "url": "https://the-decoder.com/canva-launches-craft-its-first-in-house-image-model/",
+   "summary_en": "Design platform Canva has released Canva Craft, its first in-house image generation model, which it says can compete with comparable models from Google, OpenAI, ByteDance and Meta. Canva Research trained it from scratch, mainly on millions of design templates rather than photos. The model plans composition, proportions and text first, then produces images up to 2K resolution in more than 30 aspect ratios, and it can render text in 55 languages. Canva says Craft ranked fourth overall on DesignArena and first in portraits and landscapes. It is available to all users through Dream Lab and the public API, with MCP integration for ChatGPT and Gemini planned later, and two cheaper variants, Craft-fast and Craft-ultrafast, are expected soon.",
+   "summary_ar": "أطلقت منصة التصميم Canva نموذج Canva Craft، وهو أول نموذج لتوليد الصور تطوره داخلياً، وتقول الشركة إنه قادر على منافسة نماذج مماثلة من Google وOpenAI وByteDance وMeta. وقد درّب مختبر Canva Research النموذج من الصفر، معتمداً بصورة رئيسية على ملايين قوالب التصميم بدلاً من الصور الفوتوغرافية. يخطط النموذج أولاً للتكوين والنسب والنص، ثم ينتج صوراً بدقة تصل إلى 2K بأكثر من 30 نسبة أبعاد، ويستطيع كتابة النصوص بـ55 لغة. وتقول Canva إن Craft حلّ رابعاً بصورة عامة في تصنيف DesignArena وأولاً في الصور الشخصية والمناظر الطبيعية. والنموذج متاح لجميع المستخدمين عبر Dream Lab وواجهة API العامة، مع تكامل MCP مع ChatGPT وGemini لاحقاً، ومن المتوقع قريباً طرح نسختين أرخص هما Craft-fast وCraft-ultrafast.",
+   "excerpt": "Design platform Canva has released Canva Craft, its first in-house image generation model."
+  },
+  {
+   "id": "970c9920af05",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-23T11:32:19+00:00",
+   "title": "Anthropic's Claude now writes code and proves it safe automatically",
+   "title_ar": "Claude من Anthropic يكتب الآن الأكواد البرمجية ويثبت أمانها تلقائياً",
+   "url": "https://the-decoder.com/anthropics-claude-now-writes-code-and-proves-it-safe-automatically/",
+   "summary_en": "Anthropic used Claude to mathematically prove that existing code is correct. Its Frontier Red Team, working with partner Theorem, had the model produce roughly 180 million lines of proof code within a few weeks, drawing on test programs from 123 open-source libraries in Google's OSS-Fuzz project. Claude translated crash tests into mathematical problems and analyzed compiled machine code, while the independent program Rocq checked the proofs automatically. Along the way it found hundreds of bugs, including as many security bugs in a PDF reader in one week as are usually reported in a year. Anthropic notes strict limits: a specific processor architecture, single-threaded programs and inputs under 64 MB. Individual proofs also consume hundreds of millions of tokens.",
+   "summary_ar": "استخدمت Anthropic نموذج Claude لإثبات صحة شيفرات برمجية قائمة رياضياً. وقد جعل فريق Frontier Red Team، بالتعاون مع شريكته Theorem، النموذج ينتج نحو 180 مليون سطر من شيفرة الإثبات خلال أسابيع قليلة، مستفيداً من برامج اختبار في 123 مكتبة مفتوحة المصدر ضمن مشروع OSS-Fuzz التابع لـGoogle. حوّل Claude اختبارات الانهيار إلى مسائل رياضية وحلّل الشيفرة الآلية المترجمة، فيما تولى برنامج Rocq المستقل التحقق من الإثباتات تلقائياً. وخلال ذلك اكتشف مئات الأخطاء، منها عدد من الثغرات الأمنية في قارئ PDF خلال أسبوع واحد يعادل ما يُبلَّغ عنه عادةً في سنة كاملة. وتشير Anthropic إلى قيود صارمة، منها بنية معالج محددة وبرامج أحادية المسار ومدخلات أقل من 64 ميغابايت. كما يستهلك كل إثبات مئات الملايين من الوحدات اللغوية.",
+   "excerpt": "Anthropic had Claude generate mathematical proofs that existing code is correct, producing roughly 180 million lines of proof code for 123 open-source libraries. Along the way, the model caught bugs that years of testing had missed."
+  },
+  {
    "id": "897243d44f51",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -99,6 +239,62 @@
    "summary_en": "Liwa University and the Dubai-based AI Journalism Research and Foresight Foundation (AIJRF) signed an academic and research cooperation agreement to promote agentic AI in university education and scientific research. The plan is to develop specialised AI agents that support faculty, researchers and students, and to build applications in five sectors: media and communication, social sciences and humanities, medical and health sciences, business management, and research and academic publishing. The agreement also includes training programmes and workshops for academic staff on designing and managing the agents. Liwa University president Prof. Mohamed Mahjoub Diaf called it a strategic step, while AIJRF chief executive Dr. Mohamed Abdel Zaher said the aim is an applied model for integrating agentic AI into higher education.",
    "summary_ar": "وقّعت جامعة ليوا ومؤسسة صحافة الذكاء الاصطناعي للبحث والاستشراف (AIJRF) ومقرها دبي اتفاقية تعاون أكاديمي وبحثي تهدف إلى تعزيز توظيف الذكاء الاصطناعي الوكيل (Agentic AI) في التعليم الجامعي والبحث العلمي. وتقوم الخطة على تطوير وكلاء ذكاء اصطناعي متخصصين يدعمون أعضاء هيئة التدريس والباحثين والطلاب، وبناء تطبيقات في خمسة قطاعات هي الإعلام والاتصال، والعلوم الاجتماعية والإنسانية، والعلوم الطبية والصحية، وإدارة الأعمال، والبحث العلمي والنشر الأكاديمي. كما تتضمن الاتفاقية برامج تدريبية وورش عمل لتأهيل الكوادر الأكاديمية على تصميم الوكلاء وإدارتهم. ووصف رئيس جامعة ليوا البروفيسور محمد محجوب ضياف التعاون بأنه خطوة استراتيجية، فيما قال الرئيس التنفيذي للمؤسسة الدكتور محمد عبد الظاهر إن الهدف بناء نموذج تطبيقي لدمج الذكاء الاصطناعي الوكيل في مؤسسات التعليم العالي.",
    "excerpt": "وقّعت جامعة ليوا ومؤسسة صحافة الذكاء الاصطناعي للبحث والاستشراف (AIJRF) ومقرها دبي اتفاقية تعاون أكاديمي وبحثي تستهدف تعزيز توظيف الذكاء الاصطناعي الوكيل (Agentic AI) في التعليم الجامعي والبحث العلمي، من خلال تطوير وكلاء ذكاء اصطناعي متخصصين يدعمون أعضاء هيئة التدريس والباحثين…"
+  },
+  {
+   "id": "dd1f9602d733",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T10:59:52+00:00",
+   "title": "G42 signs strategic agreements to explore AI infrastructure and applications in Greece",
+   "title_ar": "G42 توقع اتفاقيات استراتيجية لاستكشاف البنية التحتية وتطبيقات الذكاء الاصطناعي في اليونان",
+   "url": "https://www.wam.ae/en/article/c2vyzzu-g42-signs-strategic-agreements-explore",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "2ea453a273ae",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T10:53:52+00:00",
+   "title": "جي 42 توقّع اتفاقيات لاستكشاف فرص تطوير البنية التحتية للذكاء الاصطناعي وتطبيقاته في اليونان",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2vysa8-توقع-اتفاقيات-لاستكشاف-فرص-تطوير-البنية-التحتية",
+   "summary_en": "G42, the Abu Dhabi-based technology group, and five of its portfolio companies signed memorandums of understanding in Athens on 23 October with Greek government bodies and private partners, covering AI infrastructure, government services, life sciences and smart cities. The signings took place during an official visit led by the UAE Ministry of Foreign Trade, which included the UAE-Greece business forum. Under the agreements with Copelouzos Group, Khazna and Core42 will explore an AI factory in Greece. Presight and Inception 42 will work with Greece's digital governance ministry on urban analytics and agentic AI, and M42 signed with Athens LifeTech Park on genomics and life-sciences research. The text says each initiative's scope and timeline will be set later, subject to final agreements and regulatory approvals.",
+   "summary_ar": "وقّعت مجموعة G42، المجموعة التقنية التي تتخذ من أبوظبي مقراً لها، وخمس من شركات محفظتها الاستثمارية، مذكرات تفاهم في أثينا يوم 23 أكتوبر مع جهات حكومية وشركاء من القطاع الخاص في اليونان، تشمل البنية التحتية للذكاء الاصطناعي والخدمات الحكومية وعلوم الحياة والمدن الذكية. وجاء التوقيع خلال زيارة رسمية قادتها وزارة التجارة الخارجية في دولة الإمارات وشهدت انعقاد منتدى الأعمال الإماراتي اليوناني. وبموجب الاتفاقيات مع Copelouzos Group، ستستكشف Khazna وCore42 فرص إنشاء مصنع للذكاء الاصطناعي في اليونان. وستتعاون Presight وInception 42 مع وزارة الحوكمة الرقمية اليونانية في التحليلات الحضرية والذكاء الاصطناعي الوكيل، فيما وقّعت M42 مذكرة مع مجمع أثينا للتكنولوجيا وعلوم الحياة في مجال الجينوم وأبحاث علوم الحياة. ويشير النص إلى أن نطاق كل مبادرة وإطارها الزمني سيُحدَّدان لاحقاً، رهناً بإبرام الاتفاقيات النهائية والحصول على الموافقات التنظيمية.",
+   "excerpt": "أثينا في 23 أكتوبر/وام/ وقّعت مجموعة جي 42، مجموعة التكنولوجيا الرائدة التي تتخذ من أبوظبي مقراً لها، وخمس من شركات محفظتها الاستثمارية، مذكرات تفاهم مع جهات حكومية وشركاء من القطاع الخاص في اليونان، تشمل مجالات البنية التحتية للذكاء الاصطناعي، والخدمات الحكومية، وعلوم الحياة…"
+  },
+  {
+   "id": "429932869208",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-23T10:12:41+00:00",
+   "title": "M42’s Healthpoint, Proximie partner to bring AI technology to operating rooms",
+   "title_ar": "Healthpoint التابعة لـM42 وProximie تتشاركان لإدخال تقنية الذكاء الاصطناعي إلى غرف العمليات",
+   "url": "https://www.wam.ae/en/article/c2vyzzp-m42’s-healthpoint-proximie-partner-bring",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "a46af7ac79ad",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-23T10:00:12+00:00",
+   "title": "الإمارات تعزز توظيف الذكاء الاصطناعي في الجراحة لتحسين كفاءة غرف العمليات",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2vysa1-الإمارات-تعزز-توظيف-الذكاء-الاصطناعي-الجراحة",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "6d4439f21105",
@@ -115,6 +311,34 @@
    "excerpt": "كشف استطلاع جديد لـ\"يوغوف\" أن آباء فرنسا يستهينون باستخدام أطفالهم للذكاء الاصطناعي؛ 40% من أطفال 11 و12 عاما يستخدمون خدمات مثل \"تشات جي بي تي\" أسبوعيا، مقابل إدراك 26% فقط من الآباء لذلك."
   },
   {
+   "id": "e48d7e446831",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-23T08:04:38+00:00",
+   "title": "Manus on Markets: Chip-mageddon as AI and tech stocks drop",
+   "title_ar": "Manus on Markets: اضطراب في أسهم الرقائق مع تراجع أسهم الذكاء الاصطناعي والتكنولوجيا",
+   "url": "https://www.thenationalnews.com/business/markets/2026/10/23/manus-on-markets-chip-mageddon-as-ai-and-tech-stocks-drop/",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "a70a06446431",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-23T06:01:00+00:00",
+   "title": "China's first AI-generated film debuts amid weak ticket sales",
+   "title_ar": "أول فيلم صيني مُنشأ بالذكاء الاصطناعي يبدأ عرضه وسط مبيعات تذاكر ضعيفة",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/23/Chinas-first-AI-generated-film-debuts-amid-weak-ticket-sales",
+   "summary_en": "China's first AI-generated feature film, the science-fiction thriller \"Sanxingdui: Future Past\", was set to open in cinemas on Friday to weak sales. According to Maoyan, presale revenue stood at 80,000 yuan ($11,980), and total box-office takings were forecast to stay below 150,000 yuan, far short of the production cost of more than 10 million yuan ($1.5 million). Bona Film Group CEO Jiang Defu acknowledged the lukewarm response but said the project was pushing boundaries; nearly 100 people worked on it for over two years, and its actors, voices and backdrops are all AI-generated. An independent AI director and some online users doubted audiences would pay, even though AI short dramas drew over 200 billion views on Douyin in September.",
+   "summary_ar": "كان من المقرر أن يُعرض يوم الجمعة أول فيلم روائي صيني مولَّد بالذكاء الاصطناعي، وهو فيلم الإثارة العلمي \"Sanxingdui: Future Past\"، وسط مبيعات ضعيفة. وبحسب منصة Maoyan بلغت إيرادات الحجز المسبق 80 ألف يوان (11,980 دولاراً)، وتوقعت المنصة أن تبقى إجمالي إيرادات شباك التذاكر دون 150 ألف يوان، أي أقل بكثير من كلفة الإنتاج التي تجاوزت 10 ملايين يوان (1.5 مليون دولار). وأقرّ الرئيس التنفيذي لشركة Bona Film Group، جيانغ ديفو، بفتور الاستقبال، لكنه قال إن المشروع يتجاوز الحدود المألوفة، فقد عمل عليه نحو 100 شخص لأكثر من عامين، وجميع ممثليه وأصواتهم وخلفياته مولَّدة بالذكاء الاصطناعي. وشكّك مخرج مستقل في مجال الذكاء الاصطناعي ومستخدمون على الإنترنت في استعداد الجمهور للدفع، رغم أن الدراما القصيرة المولَّدة بالذكاء الاصطناعي حصدت أكثر من 200 مليار مشاهدة على Douyin في سبتمبر وحده.",
+   "excerpt": "China’s first fully AI-generated feature film, Sanxingdui: Future Past, debuted in cinemas on Friday amid weak ticket sales and mixed public reactions. Despite…"
+  },
+  {
    "id": "a2ffa28be042",
    "source": "gn-uae",
    "lang": "en",
@@ -129,6 +353,20 @@
    "excerpt": "Technology reshapes healthcare in Abu Dhabi, prioritizing meaningful doctor-patient time"
   },
   {
+   "id": "1437b0ebe886",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-22T21:51:25+00:00",
+   "title": "Canva’s first AI image model plans designs before generating them",
+   "title_ar": "أول نموذج لتوليد الصور بالذكاء الاصطناعي من Canva يخطط للتصاميم قبل إنشائها",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+   "summary_en": "Canva has launched Canva Craft, its first image generation model, which competes with models from OpenAI, Microsoft and Google. According to Thursday's announcement, it uses a two-stage architecture that plans a design before generating the image, aiming for greater precision, consistency and control. It can produce images at up to 2K resolution and in more than 30 aspect ratios, and Canva says it handles legible text and precise object placement better. Canva says it trained the model on millions of human-made templates from its content library. The model currently ranks fourth on Design Arena's crowdsourced leaderboard, behind three OpenAI models, and follows Canva's April launch of prompt-based editing and layers for AI-generated images.",
+   "summary_ar": "أطلقت Canva نموذج Canva Craft، وهو أول نموذج لتوليد الصور لديها، ويتنافس مع نماذج من OpenAI وMicrosoft وGoogle. وبحسب الإعلان الذي صدر يوم الخميس، يعتمد النموذج بنية من مرحلتين تخطط للتصميم قبل توليد الصورة، بهدف تحقيق دقة واتساق وتحكم أكبر. ويستطيع إنتاج صور بدقة تصل إلى 2K وبأكثر من 30 نسبة أبعاد، وتقول الشركة إنه يتعامل بصورة أدق مع النصوص المقروءة وتحديد مواضع العناصر. وتفيد Canva بأنها درّبته على ملايين القوالب التي صنعها بشر من مكتبة المحتوى لديها. ويحتل النموذج حالياً المرتبة الرابعة في لوحة صدارة Design Arena المعتمدة على تصويت الجمهور، خلف ثلاثة نماذج من OpenAI. ويأتي ذلك بعد أن أطلقت الشركة في أبريل التحرير بالأوامر النصية والطبقات للصور المولدة بالذكاء الاصطناعي.",
+   "excerpt": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google."
+  },
+  {
    "id": "e5ebd10b0875",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -141,6 +379,20 @@
    "summary_en": "M42 has announced Ossi, a next-generation clinical platform powered by multiple AI agents and built on Microsoft's Azure cloud and AI infrastructure. It is designed to reduce clinical documentation and administrative work so doctors have more time with patients, while supplying prior medical data and evidence-based guidelines at the point of care. Ossi is already running in seven M42 healthcare facilities in the UAE and Bahrain, including Emirates Amanat, Bahrain Amanat, Health Point, Healthplus, Mubadala Health Dubai, Sheikh Sultan bin Zayed Hospital and the Imperial College London Diabetes Centre in Abu Dhabi. It launches with four AI agents, the first of a growing set of capabilities. M42 says that, with Microsoft, it ensured compliance with global health data security and privacy standards and regional data governance rules, including the UAE's.",
    "summary_ar": "أعلنت M42 إطلاق «Ossi»، وهي منصة سريرية من الجيل الجديد تعمل بوكلاء متعددين للذكاء الاصطناعي، وقد بُنيت على البنية التحتية للحوسبة السحابية والذكاء الاصطناعي في Azure من Microsoft. وتهدف المنصة إلى تقليل أعباء التوثيق السريري والمهام الإدارية لإتاحة وقت أطول للتواصل بين الأطباء والمرضى، مع توفير البيانات الطبية السابقة والإرشادات القائمة على الأدلة عند نقطة تقديم الرعاية. وقد بدأ تشغيلها في سبعة مرافق صحية تابعة لـ M42 في الإمارات والبحرين، منها «أمانة الإمارات» و«أمانة البحرين» و«هيلث بوينت» و«هيلث بلس» و«مبادلة للرعاية الصحية دبي» ومستشفى الشيخ سلطان بن زايد ومركز إمبريال كوليدج لندن للسكري والغدد الصماء في أبوظبي. وتنطلق المنصة بأربعة وكلاء ذكاء اصطناعي، تمثل الدفعة الأولى من حزمة إمكانات متنامية. وتقول M42 إنها ضمنت بالشراكة مع Microsoft الالتزام بمعايير أمن وخصوصية بيانات الصحة عالمياً وبأنظمة حوكمة البيانات الإقليمية، ومنها أنظمة الإمارات.",
    "excerpt": "أعلنت M42، إطلاق «Ossi»، منصّتها السريرية من الجيل الجديد المدعومة بوكلاء متعددين للذكاء الاصطناعي، وقد تمّ تطويرها على البنية التحتية الآمنة للحوسبة السحابية والذكاء الاصطناعي لدى مايكروسوفت «أزور»، وصُمّمت لتحقيق توازن سلس بين الدقة السريرية والتواصل الإنساني من خلال تقليل…"
+  },
+  {
+   "id": "29a87826b845",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-22T20:32:05+00:00",
+   "title": "Meta’s AI could still scrape news sites, legal experts say",
+   "title_ar": "خبراء قانونيون: ذكاء Meta الاصطناعي قد يظل قادراً على سحب البيانات من مواقع الأخبار",
+   "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns",
+   "summary_en": "Meta has changed its new business terms, which take effect on October 30th, after criticism that they seemed to let it train AI on content from news sites such as The Verge. The original wording said Meta could use any content from sites linked to a business account to develop, research and train its products. After backlash from publishers, Meta removed the reference to training, but legal experts told Nieman Lab the revision is not enough. Cornell's James Grimmelmann said the language on content tied to products or services could still permit scraping whole sites, and attorney Matt Topic said \"develop\" is probably broad enough to cover training. Meta spokesperson Daniel Roberts said publishers can use robots.txt to signal their preferences and that the update is not about scraping news sites.",
+   "summary_ar": "عدّلت Meta شروطها التجارية الجديدة، التي تسري في 30 أكتوبر، بعد انتقادات رأت أنها تتيح لها تدريب نماذج الذكاء الاصطناعي على محتوى المواقع الإخبارية مثل The Verge. وكانت الصيغة الأولى تنص على أن بإمكان الشركة استخدام أي محتوى من المواقع المرتبطة بحساب تجاري لتطوير منتجاتها وبحثها وتدريبها. وبعد ردود فعل غاضبة من قطاع النشر، حذفت Meta الإشارة إلى التدريب، لكن خبراء قانونيين قالوا لموقع Nieman Lab إن التعديل غير كافٍ. فقد رأى جيمس غريملمان من كلية الحقوق بجامعة كورنيل أن العبارات المتعلقة بالمحتوى المرتبط بمنتجات الشركة أو خدماتها قد تتيح جمع مواقع كاملة، وقال المحامي مات توبيك إن كلمة «تطوير» واسعة بما يكفي لتشمل التدريب. وأكد المتحدث باسم Meta دانيال روبرتس أن بإمكان أصحاب المحتوى استخدام ملف robots.txt للتعبير عن تفضيلاتهم، وأن التحديث لا يتعلق بجمع محتوى المواقع الإخبارية.",
+   "excerpt": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns."
   },
   {
    "id": "afeec198fbf5",
@@ -493,6 +745,20 @@
    "excerpt": "طوّرت هيئة الطرق والمواصلات في دبي (محبوب)، نسخة محدّثة من المساعد الافتراضي الخاص بالهيئة، باستخدام الذكاء الاصطناعي ال"
   },
   {
+   "id": "be57a8289c69",
+   "source": "kt-business",
+   "lang": "en",
+   "uae": true,
+   "topic": "business",
+   "published": "2026-10-22T14:17:29+00:00",
+   "title": "82% of GCC workers use AI weekly, but only 39% feel confident, study finds",
+   "title_ar": "دراسة: 82% من العاملين في دول الخليج يستخدمون الذكاء الاصطناعي أسبوعياً، لكن 39% فقط يشعرون بالثقة",
+   "url": "https://www.khaleejtimes.com/business/82-of-gcc-workers-use-ai-weekly-but-only-39-feel-confident-study-finds",
+   "summary_en": "A study by Al-Futtaim found that 82 per cent of surveyed professionals in the GCC's consumer economy use AI daily or weekly, yet only 39 per cent feel very or extremely confident using it. The findings were presented at the Unlocking AI for the GCC Workforce event in Dubai on Thursday, and the survey covered 1,143 professionals across the six GCC countries in March 2026. Some 73 per cent of regular users said AI improved their productivity, but while 53 per cent said their organisations encourage its use, only 20 per cent had received extensive training. Those with extensive training were 2.5 times more likely to report high confidence. Data security was the most cited barrier, at 36 per cent, and adoption was three times higher where senior leaders used AI themselves.",
+   "summary_ar": "أظهرت دراسة أجرتها Al-Futtaim أن 82 في المئة من المهنيين الذين شملهم الاستطلاع في اقتصاد المستهلك بدول مجلس التعاون الخليجي يستخدمون الذكاء الاصطناعي يومياً أو أسبوعياً، بينما يشعر 39 في المئة فقط بثقة كبيرة أو كبيرة جداً عند استخدامه. وعُرضت النتائج في فعالية «إطلاق الذكاء الاصطناعي لقوى العمل في دول الخليج» (Unlocking AI for the GCC Workforce) في دبي يوم الخميس، وشمل الاستطلاع 1,143 مهنياً في دول المجلس الست في مارس 2026. وقال 73 في المئة من المستخدمين المنتظمين إن إنتاجيتهم تحسنت، لكن 20 في المئة فقط تلقوا تدريباً مكثفاً رغم أن 53 في المئة قالوا إن مؤسساتهم تشجع الاستخدام. وكان من تلقوا تدريباً مكثفاً أكثر احتمالاً بـ2.5 مرة للشعور بثقة عالية. وجاء أمن البيانات في صدارة العوائق بنسبة 36 في المئة، وكان اعتماد الذكاء الاصطناعي أعلى بثلاث مرات حيث يستخدمه كبار القادة بأنفسهم.",
+   "excerpt": "A new Al-Futtaim study reveals a gap between AI adoption and workplace readiness, as business leaders in Dubai call for practical training, stronger trust and a shift in how employees work"
+  },
+  {
    "id": "b6b5728d0ff6",
    "source": "albayan",
    "lang": "ar",
@@ -505,6 +771,34 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "تتجه شركات الذكاء الاصطناعي الكبرى إلى تخصيص مئات المليارات من الدولارات للأعمال الخيرية، في خطوة غير مسبوقة تهدف إلى تق"
+  },
+  {
+   "id": "779cc50e4b9b",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-22T13:11:13+00:00",
+   "title": "DeepSeek reportedly raises $15B days after US restrictions",
+   "title_ar": "DeepSeek تجمع 15 مليار دولار بعد أيام من القيود الأمريكية، بحسب تقارير",
+   "url": "https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/",
+   "summary_en": "Chinese AI lab DeepSeek has reportedly raised about $15 billion, roughly 100 billion yuan, according to Bloomberg, just two days after the U.S. ordered federal civilian agencies to remove its AI technology from their systems over security concerns. Potential investors reportedly include CATL and Tencent. The round follows one in June that raised more than $7 billion at a $50 billion valuation, and a reported July effort to raise $1.5 billion at about $71 billion, with a possible IPO in China as early as next year. The Hangzhou-based startup is increasing spending on AI infrastructure and open models. The article presents the round as part of a wave of investment in AI companies worldwide.",
+   "summary_ar": "ذكرت وكالة Bloomberg أن مختبر الذكاء الاصطناعي الصيني DeepSeek جمع نحو 15 مليار دولار، أي قرابة 100 مليار يوان، بعد يومين فقط من أمر أصدرته الولايات المتحدة للوكالات الفيدرالية المدنية بإزالة تقنياته من أنظمتها لدواعٍ أمنية. ومن بين المستثمرين المحتملين شركتا CATL وTencent بحسب التقرير. وتأتي الجولة بعد جولة في يونيو جمعت أكثر من 7 مليارات دولار بتقييم بلغ 50 مليار دولار، وبعد سعي أفادت التقارير بأنه جرى في يوليو لجمع 1.5 مليار دولار بتقييم نحو 71 مليار دولار، مع احتمال طرح عام أولي في الصين بحلول العام المقبل. وتزيد الشركة الناشئة، ومقرها «هانغتشو»، إنفاقها على البنية التحتية للذكاء الاصطناعي والنماذج المفتوحة. ويعرض المقال هذه الجولة ضمن موجة استثمارات في شركات الذكاء الاصطناعي حول العالم.",
+   "excerpt": "DeepSeek has reportedly raised $15 billion in one of China's largest funding rounds, just days after the U.S. ordered federal agencies to remove its technology over national security concerns."
+  },
+  {
+   "id": "4e3a22447934",
+   "source": "kt-business",
+   "lang": "en",
+   "uae": true,
+   "topic": "policy",
+   "published": "2026-10-22T12:57:22+00:00",
+   "title": "Commentary: Why financial centres must go beyond adopting AI",
+   "title_ar": "تعليق: لماذا يجب أن تتجاوز المراكز المالية مجرد اعتماد الذكاء الاصطناعي",
+   "url": "https://www.khaleejtimes.com/business/commentary-dubai-financial-hubs-35-billion-bet-on-everything-ai",
+   "summary_en": "The chief executive of DIFC Authority writes that the Dubai financial centre aims to become the world's first AI-native international financial centre, embedding intelligence across its legal and regulatory frameworks, operations, talent, infrastructure and physical district. He points to a five-year AI strategy launched in 2023 and Regulation 10 of the DIFC Data Protection Regulations, which covers personal data processing by autonomous and semi-autonomous systems. DIFC already uses AI for client compliance and relationship management, with AI agents assisting staff, and plans smart district features by 2030. The centre hosts 10,000 active companies, and the transformation is projected to generate $3.5 billion in economic value and 25,000 jobs, depending on trusted governance and capable people.",
+   "summary_ar": "يكتب الرئيس التنفيذي لسلطة مركز دبي المالي العالمي (DIFC) أن المركز يسعى إلى أن يصبح أول مركز مالي دولي في العالم قائم أصلاً على الذكاء الاصطناعي، عبر دمج الذكاء في أطره القانونية والتنظيمية وعملياته ومواهبه وبنيته التحتية ومقره المادي. ويشير إلى إطلاق استراتيجية للذكاء الاصطناعي لمدة خمس سنوات في عام 2023، وإلى المادة 10 من لوائح حماية البيانات في المركز، التي تنظم معالجة البيانات الشخصية بواسطة الأنظمة المستقلة وشبه المستقلة. ويستخدم المركز الذكاء الاصطناعي حالياً في الامتثال للأنظمة وإدارة العلاقات مع العملاء، فيما يساعد وكلاء الذكاء الاصطناعي الموظفين، ويخطط لميزات الأحياء الذكية بحلول عام 2030. ويضم المركز 10 آلاف شركة نشطة، ويُتوقع أن يحقق التحول قيمة اقتصادية قدرها 3.5 مليار دولار و25 ألف وظيفة، بشرط وجود حوكمة موثوقة وكفاءات قادرة.",
+   "excerpt": "Building world’s first AI-native global financial centre means rebuilding the foundation that connects legal and regulatory frameworks, business operations, talent, ecosystem and the physical district"
   },
   {
    "id": "cd2f879ee3c5",
@@ -1277,6 +1571,20 @@
    "excerpt": "حضر لورانس وونغ رئيس وزراء جمهورية سنغافورة، حوار أعمال ثنائياً رفيع المستوى، أُقيم في متحف زايد الوطني بأبوظبي، استضاف"
   },
   {
+   "id": "e50d33e77f8a",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-21T14:00:00+00:00",
+   "title": "AI Guardrails Aren’t Stopping Criminal Hackers",
+   "title_ar": "ضوابط الحماية في الذكاء الاصطناعي لا توقف القراصنة المجرمين",
+   "url": "https://www.wired.com/story/ai-guardrails-arent-stopping-criminal-hackers/",
+   "summary_en": "Researchers at CrowdStrike analysed attacks carried out between May and August by four previously unreported groups, operating in Chinese, Spanish and English, Indonesian and Russian. All four used agentic AI, mostly versions of Anthropic's Claude and Deepseek models, and left their infrastructure openly accessible, which let the researchers study it. The groups got around safeguards, often by convincing models that the work was authorized security testing, and used several models to exploit differences in guardrails. Targets included Argentine health care organizations, government bodies in Brazil and Colombia, and Indonesian and Bangladeshi government domains. CrowdStrike's Adam Meyers said the attacks used no new exploits but relied on AI's speed and volume against preventable security weaknesses. Anthropic did not comment before publication.",
+   "summary_ar": "حلل باحثو شركة CrowdStrike هجمات نُفذت بين مايو وأغسطس على يد أربع مجموعات لم يُبلَّغ عنها سابقاً، تعمل باللغات الصينية والإسبانية والإنجليزية والإندونيسية والروسية. واستخدمت المجموعات الأربع الذكاء الاصطناعي الوكيل، ومعظمه إصدارات من Claude التابع لشركة Anthropic ونماذج Deepseek، وتركت بنيتها التحتية متاحة علناً، مما سمح للباحثين بدراستها. والتفّت المجموعات على إجراءات الحماية، غالباً بإقناع النماذج بأن العمل اختبار أمني مصرّح به، واستعانت بعدة نماذج للاستفادة من اختلاف ضوابط الحماية. وشملت الأهداف جهات صحية في الأرجنتين وجهات حكومية في البرازيل وكولومبيا ونطاقات حكومية في إندونيسيا وبنغلاديش. وقال «آدم مايرز» من CrowdStrike إن الهجمات لم تستخدم ثغرات جديدة، بل اعتمدت على سرعة الذكاء الاصطناعي وحجمه في استغلال نقاط ضعف أمنية كان يمكن تفاديها. ولم تعلق Anthropic قبل النشر.",
+   "excerpt": "Hackers around the world are all-in on using agentic AI to wage attacks—and manipulating tools like Anthropic’s Claude to help them carry out their crimes."
+  },
+  {
    "id": "0b138e9a1d82",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1429,6 +1737,20 @@
    "summary_en": "NVIDIA Kumo Forecast, formerly called NV-Tesseract Forecasting, is a multi-variate time-series forecasting model. It pairs a pretrained Transformer backbone, based on MOMENT-1-large with an approximately 340-million-parameter encoder and a trainable forecasting head, with a mode called DARR that blends direct predictions with patterns retrieved from historical data. An interpretability framework produces explanations for each forecast horizon without changing the underlying forecaster. The library offers a DataFrame-first API and supports input lengths of 256, 512, 1024 and 2048 observations. It is released under the Apache 2.0 license, and the Kumo-TS repository includes an example for fine-tuning on a user's own CSV data.",
    "summary_ar": "Kumo Forecast من NVIDIA، المعروف سابقاً باسم NV-Tesseract Forecasting، هو نموذج للتنبؤ بالسلاسل الزمنية متعددة المتغيرات. يجمع النموذج بين هيكل Transformer مدرَّب مسبقاً مبني على MOMENT-1-large بمشفّر يضم نحو 340 مليون معامل ورأس تنبؤ قابل للتدريب، وبين وضع يُسمى DARR يمزج التنبؤات المباشرة بأنماط مسترجعة من البيانات التاريخية. ويتيح إطار للتفسير توليد شروحات لكل أفق تنبؤ دون تعديل النموذج الأساسي. وتوفر المكتبة واجهة برمجية تعتمد على DataFrame وتدعم أطوال إدخال تبلغ 256 و512 و1024 و2048 ملاحظة. ويصدر النموذج بترخيص Apache 2.0، ويضم مستودع Kumo-TS مثالاً لضبطه على ملف CSV يقدمه المستخدم.",
    "excerpt": "A Blog post by NVIDIA on Hugging Face"
+  },
+  {
+   "id": "28d3e6678b60",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-21T12:43:00+00:00",
+   "title": "AI cuts coding time, but it's also filling open source's inbox with crap",
+   "title_ar": "الذكاء الاصطناعي يقلل وقت البرمجة، لكنه يملأ أيضاً صناديق بريد المشاريع مفتوحة المصدر بمحتوى رديء",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/21/ai-cuts-coding-time-but-its-also-filling-open-sources-inbox-with-crap/5304389",
+   "summary_en": "The Register reports that AI tools are cutting the time needed to write code, but they are also sending open source projects a stream of low-quality contributions. According to the article, maintainers estimate that about a quarter of incoming pull requests are \"slop\". The share rises to 31% on larger projects.",
+   "summary_ar": "يفيد موقع The Register بأن أدوات الذكاء الاصطناعي تقلل الوقت اللازم لكتابة الشيفرة البرمجية، لكنها ترسل أيضاً إلى مشاريع المصادر المفتوحة سيلاً من المساهمات المتدنية الجودة. وبحسب المقال، يقدّر القائمون على صيانة هذه المشاريع أن نحو ربع طلبات الدمج (pull requests) الواردة إليهم رديء المستوى، وترتفع النسبة إلى 31% في المشاريع الأكبر.",
+   "excerpt": "Maintainers reckon a quarter of incoming pull requests are slop, rising to 31% on larger projects"
   },
   {
    "id": "a992bae2e2d7",
