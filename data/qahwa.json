@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T07:50:00+04:00",
+  "generated_at": "2026-10-25T08:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5004,6 +5004,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-25T07:50:00+04:00",
       "cover": "images/qahwa/week-04-day-22--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-22--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "Same AI task — CPU vs GPU",
+        "ar": "مهمة واحدة — CPU مقابل GPU"
+      },
+      "summary": {
+        "en": "Same model. Same prompt. CPU vs GPU.",
+        "ar": "النموذج والسؤال نفسهما. CPU مقابل GPU."
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "Same model. Same prompt. ==CPU vs GPU.=="
+          },
+          "ar": {
+            "title": "النموذج والسؤال نفسهما. ==CPU مقابل GPU.=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain why this AI workload is faster on a GPU than a CPU, in 3 simple points.",
+        "ar": "اشرح لماذا هذه المهمة أسرع على GPU منها على CPU في 3 نقاط بسيطة.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/De5zJKxAHLF/",
+      "published_at": "2026-10-25T08:00:00+04:00",
+      "cover": "images/qahwa/week-04-day-22--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
