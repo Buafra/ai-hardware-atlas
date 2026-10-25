@@ -3,6 +3,34 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "2fec986ad3d9",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "health",
+   "published": "2026-10-24T09:48:00+00:00",
+   "title": "في «هيلث بوينت».. منصة مدعومة بالذكاء الاصطناعي في غرف العمليات",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الإمارات/4700997/في--هيلث-بوينت----منصة-مدعومة-بالذكاء-الاصطناعي-في-غرف-العمل",
+   "summary_en": "Healthpoint hospital, part of M42, has announced a collaboration with Proximie to use an AI-powered surgical data platform in its main operating rooms in Abu Dhabi. The platform analyses the stages of operations in real time and predicts the next steps. It aims to help medical and operational teams spot possible delays, improve scheduling and make better use of available capacity. Proximie's AI models run on Amazon Web Services' secure cloud infrastructure and AI technologies. Healthpoint CEO Omar Al Naqbi said real-time visibility helps teams anticipate challenges, coordinate more effectively and reduce avoidable delays from preparation through recovery.",
+   "summary_ar": "أعلن مستشفى «هيلث بوينت»، التابع لمجموعة M42، عن تعاونه مع شركة Proximie لتطبيق منصة بيانات جراحية مدعومة بالذكاء الاصطناعي في غرف العمليات الرئيسية بالمستشفى في أبوظبي. وتحلل المنصة مراحل العمليات لحظياً وتتنبأ بالخطوات التالية، بهدف مساعدة الفرق الطبية والتشغيلية على رصد التأخيرات المحتملة وتحسين جدولة العمليات والاستفادة من الطاقة الاستيعابية المتاحة. وتعتمد نماذج الذكاء الاصطناعي لدى Proximie على البنية التحتية السحابية الآمنة وتقنيات الذكاء الاصطناعي التي توفرها Amazon Web Services. وقال عمر النقبي، الرئيس التنفيذي للمستشفى، إن الرؤية الفورية لسير العمل الجراحي تساعد الفرق على استباق التحديات والتنسيق بصورة أكثر فاعلية والحد من التأخيرات التي يمكن تجنبها، من التحضير للعملية حتى التعافي.",
+   "excerpt": "أبوظبي (الاتحاد) أعلن مستشفى «هيلث بوينت»، التابع لمجموعة «M42»، عن تعاونه مع شركة «بروكسيمي» لتطبيق منصة للبيانات الجراحية المدعومة بالذكاء الاصطناعي في غرف العمليات الرئيسية بالمستشفى في أبوظبي، بهدف تحليل مراحل العمليات لحظياً، والتنبؤ بالخطوات التالية، ومساعدة الفرق الطبية…"
+  },
+  {
+   "id": "0aff3f3ec6e7",
+   "source": "emaratalyoum",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-24T00:05:00+00:00",
+   "title": "«ذكريات المستقبل» يختبر قدرة الذكاء الاصطناعي على صناعة السينما",
+   "title_ar": null,
+   "url": "https://www.emaratalyoum.com/life/cinema/2026-10-24-1.2095621",
+   "summary_en": "A Chinese feature film made with AI generation tools, \"Sanxingdui: Future Memories\", is drawing attention in Shanghai. According to Chinese media reports, the film is produced by the Bona Film group and has received a public screening licence from China's National Film Administration, described as a milestone for AI-produced films reaching commercial cinemas. The roughly 100-minute film took about two years to develop, involving more than 1.2 million reference images and over 100 full reviews. A human team handled the idea, story and artistic decisions, and all characters are original digital creations. The article says the trend also raises questions about intellectual property, the use of images and voices, and jobs for film workers, and that technology alone does not guarantee a good story.",
+   "summary_ar": "يلفت الأنظار في شنغهاي فيلم روائي طويل صيني أُنتج بأدوات توليد تعتمد على الذكاء الاصطناعي، هو «سانشينغدوي: ذكريات المستقبل». وبحسب تقارير إعلامية صينية، تنتج الفيلم مجموعة Bona Film، وحصل على ترخيص العرض العام من الهيئة الوطنية للأفلام في الصين، في خطوة وُصفت بأنها محطة بارزة في وصول الأفلام المنتجة بالذكاء الاصطناعي إلى دور العرض التجارية. استغرق تطوير الفيلم، ومدته نحو 100 دقيقة، قرابة عامين، وشمل أكثر من 1.2 مليون صورة مرجعية وأكثر من 100 مراجعة شاملة. وتولى فريق بشري الفكرة والبناء السردي والقرارات الفنية، فيما صُممت جميع الشخصيات بوصفها شخصيات رقمية أصلية. ويشير المقال إلى أن هذا التوجه يثير أسئلة حول الملكية الفكرية واستخدام الصور والأصوات ووظائف العاملين في الصناعة، وإلى أن التقنية وحدها لا تضمن جودة الحكاية.",
+   "excerpt": "لم يعد الذكاء الاصطناعي مجرد أداة لإنتاج مقاطع قصيرة أو صور مبهرة على الشاشات، بل بدأ يشق طريقه إلى الأفلام الطويلة وصالات السينما، في تحول يفتح فصلاً جديداً في صناعة الصورة، ويعيد طرح أسئلة جوهرية حول حدود التكنولوجيا ودور الإنسان في الإبداع. وفي شنغهاي،"
+  },
+  {
    "id": "c3e784a73312",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -15,6 +43,34 @@
    "summary_en": "Researchers found two serious flaws in the PHP programming language, known as PHP2Shell, which Google-owned Wiz said could have affected about 70% of websites worldwide. The flaws had persisted for over a decade and allowed remote code execution. They were found in August with the help of advanced AI models from labs including OpenAI, under a coordinated initiative called Patch the Planet. The PHP team prepared a fix in secret, and firms such as Amazon Web Services and Cloudflare were notified. The update was released a day early after details leaked, and Cloudflare reported early attacks before it was available. The author argues the episode shows the value of specialist cybersecurity firms, noting that Cloudflare shares rose about 7% after the announcement.",
    "summary_ar": "اكتشف باحثون ثغرتين أمنيتين خطيرتين في لغة البرمجة «بي إتش بي»، عُرفتا باسم PHP2Shell، وقالت شركة Wiz التابعة لـ Google إنهما كانتا ستؤثران في نحو 70% من مواقع الويب في العالم. وقد استمرت الثغرتان أكثر من عقد وسمحتا بتنفيذ تعليمات برمجية عن بُعد. واكتُشفتا في أغسطس بمساعدة نماذج ذكاء اصطناعي متطورة من مختبرات منها OpenAI، ضمن مبادرة منسقة باسم «باتش ذا بلانيت» (Patch the Planet). وأعد فريق «بي إتش بي» الإصلاح سراً، وأُخطرت شركات كبرى للبنية التحتية للإنترنت مثل Amazon Web Services وCloudflare. وصدر التحديث قبل موعده بيوم بعد تسرب بعض التفاصيل، وذكرت Cloudflare أنها رصدت بدايات هجمات قبل توفره. ويرى كاتب المقال أن الواقعة تُظهر قيمة شركات الأمن السيبراني المتخصصة، مشيراً إلى أن أسهم Cloudflare ارتفعت نحو 7% بعد الإعلان.",
    "excerpt": "لم تكن العناوين الإخبارية مثيرة للاهتمام عندما كتبت أن باحثين اكتشفوا ثغرتين أمنيتين في لغة البرمجة «بي إتش بي»، المستخدمة في إنشاء المواقع والتطبيقات، حيث دُعيت الشركات إلى تثبيت تحديث أمني للتعامل معهما."
+  },
+  {
+   "id": "04be27f210cc",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-23T16:26:13+00:00",
+   "title": "AI models think humans are a bunch of amoral sheep",
+   "title_ar": "نماذج الذكاء الاصطناعي تعتقد أن البشر قطيع من الخراف عديمة الأخلاق",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/23/ai-models-think-humans-are-a-bunch-of-amoral-sheep/5305123",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Ask LLMs for their most controversial take on humanity, and it turns out they have little nice to say about us, as one AI experiment found"
+  },
+  {
+   "id": "e77798947f46",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-23T14:54:43+00:00",
+   "title": "طبيب ذكاء اصطناعي أدق من البشري بضعفين",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661100/%D8%B9%D9%84%D9%88%D9%85/%D8%B7%D8%A8%D9%8A%D8%A8-%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%A3%D8%AF%D9%82-%D9%85%D9%86-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A-%D8%A8%D8%B6%D8%B9%D9%81%D9%8A%D9%86",
+   "summary_en": "Microsoft researchers say they built an AI tool that diagnoses patients step by step as doctors do, and that it was more than twice as accurate as physicians on complex cases, according to a study published Thursday in the journal Science. The model uses an \"orchestrator\" that mimics a team of clinical experts, deciding which questions to ask, which tests to order and how to analyse the results, while continually updating its hypotheses. In a test of more than 300 complex and unusual cases, it beat general-practice doctors who could consult medical references and the internet. It also outperformed human doctors on scenarios drawn from a large emergency admissions database, and diagnosis cost less when the orchestrator set the steps. Dominic King of Microsoft AI's health unit said multiple-choice tests are far from real practice.",
+   "summary_ar": "قال باحثون في شركة Microsoft إنهم طوروا أداة تعتمد على الذكاء الاصطناعي تشخّص المرضى خطوة بخطوة كما يفعل الأطباء، وإنها أظهرت دقة تزيد على ضعف دقة الأطباء في الحالات المعقدة، وفق دراسة نُشرت الخميس في مجلة «ساينس» (Science). ويعتمد النموذج على «منسّق» يحاكي فريقاً من الخبراء السريريين، فيحدد الأسئلة التي تُطرح على المريض والفحوص المطلوبة ويحلل نتائجها، مع تحديث فرضياته باستمرار. وفي اختبار شمل أكثر من 300 حالة معقدة وغير مألوفة، تفوق النموذج على أطباء التخصص العام الذين استعانوا بالمراجع الطبية والإنترنت. كما تفوق على الأطباء في سيناريوهات مأخوذة من قاعدة بيانات كبيرة لحالات الطوارئ، وكانت كلفة التشخيص أقل عندما تولى المنسق تحديد الخطوات. وقال دومينيك كينج من وحدة الصحة في Microsoft للذكاء الاصطناعي إن الاختبارات متعددة الخيارات بعيدة عن الواقع.",
+   "excerpt": "قال باحثون في شركة \"مايكروسوفت\" إنهم طوروا أداة تعتمد على الذكاء الاصطناعي لتشخيص المرضى خطوة بخطوة تماماً كما يفعل الأطباء، وإن الأداة أظهرت دقة تفوق دقة الأطباء بأكثر من المثلين في التعامل مع الحالات الطبية المعقدة، وفقاً لدراسة نشرت أمس الخميس في مجلة \"ساينس\"."
   },
   {
    "id": "d71cac7aef9c",
@@ -87,6 +143,62 @@
    "excerpt": "أعلنت M42، إطلاق «Ossi»، منصّتها السريرية من الجيل الجديد المدعومة بوكلاء متعددين للذكاء الاصطناعي، وقد تمّ تطويرها على البنية التحتية الآمنة للحوسبة السحابية والذكاء الاصطناعي لدى مايكروسوفت «أزور»، وصُمّمت لتحقيق توازن سلس بين الدقة السريرية والتواصل الإنساني من خلال تقليل…"
   },
   {
+   "id": "afeec198fbf5",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-22T20:24:04+00:00",
+   "title": "Meta turns Muse sharing back on",
+   "title_ar": "Meta تعيد تفعيل المشاركة في Muse",
+   "url": "https://www.theverge.com/tech/1017066/meta-muse-sharing-back-on-artifiacts",
+   "summary_en": "Meta has turned Muse sharing back on after security researchers reported that public links to shared conversations could be easy to find. Researchers at Claroc said the addresses were named after conversation titles and written into public DNS, and they found pages such as a company's internal revenue review and a business owner's loan application. Ars Technica reported that Meta paused sharing after being contacted. In a post on X, Meta's David Singleton said the underlying issue was fixed and sharing was back on. He said the problem concerned URLs for shared artifacts, such as documents and images in Muse, not chat sharing. Artifacts shared earlier now have new URLs, and old links show a note asking visitors to get the new one.",
+   "summary_ar": "أعادت Meta تفعيل ميزة المشاركة في Muse بعد أن أفاد باحثون أمنيون بأن الروابط العامة للمحادثات المشتركة يسهل العثور عليها. وقال باحثون في Claroc إن عناوين الصفحات سُمّيت وفق عناوين المحادثات وكُتبت في نظام DNS العام، وإنهم عثروا على صفحات مثل مراجعة داخلية للإيرادات لدى شركة تسويق وطلب قرض لصاحب عمل صغير. وذكر موقع Ars Technica أن Meta أوقفت المشاركة بعد التواصل معها. وفي منشور على X قال ديفيد سينغلتون من Meta إن المشكلة الأساسية عولجت وإن المشاركة عادت للعمل. وأوضح أن الخلل كان في عناوين الملفات المشتركة داخل Muse، مثل المستندات والصور، وليس في مشاركة المحادثات. وحصلت الملفات التي شُوركت سابقاً على روابط جديدة، أما الروابط القديمة فتعرض ملاحظة تطلب من الزائر الحصول على الرابط الجديد من صاحبه.",
+   "excerpt": "Meta has re-enabled Muse sharing after security researchers had reported that public conversation links could be easy to find."
+  },
+  {
+   "id": "6fbe48f0c2ba",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-22T20:21:25+00:00",
+   "title": "حالة استنفار عالمية.. الذكاء الاصطناعي يكتشف ثغرتين أمنيتين تهددان ملايين المواقع الإلكترونية",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/technology/1559889",
+   "summary_en": "According to Al Bayan, artificial intelligence has uncovered two serious security vulnerabilities said to threaten millions of websites. The report links them to a flaw in the PHP language, which is used in about 70% of websites. It says the flaw has been followed by millions of attempted intrusions and has put the world on alert.",
+   "summary_ar": "بحسب صحيفة البيان، كشف الذكاء الاصطناعي عن ثغرتين أمنيتين خطيرتين يُقال إنهما تهددان ملايين المواقع الإلكترونية. وتربط الصحيفة الأمر بخلل في لغة PHP التي تُستخدم في نحو 70% من المواقع. وتشير إلى أن هذا الخلل أعقبته ملايين محاولات الاختراق، ما وضع العالم في حالة استنفار.",
+   "excerpt": "ملايين من محاولات الاختراق بعد اكتشاف خلل في لغة ‏‎«PHP»‎‏ المستخدمة في نحو 70% من المواقع دفعت ثغرتان أمنيتان خطيرتا"
+  },
+  {
+   "id": "66c76dd869fd",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-22T20:02:46+00:00",
+   "title": "RTA enhances Mahboub to enable integrated services using Agentic AI",
+   "title_ar": "هيئة الطرق والمواصلات تطوّر Mahboub لتمكين خدمات متكاملة باستخدام الذكاء الاصطناعي الوكيلي",
+   "url": "https://www.wam.ae/en/article/17hlhw1-rta-enhances-mahboub-enable-integrated-services",
+   "summary_en": "Dubai's Roads and Transport Authority (RTA) has upgraded its virtual assistant Mahboub with Agentic AI, aiming to let customers complete services in a single conversation. According to WAM on 23 October 2026, the enhanced version is being prepared for public rollout under RTA's Artificial Intelligence Strategy 2030. Depending on the request, the system activates specialised Agentic AI to carry out linked steps, such as paying vehicle fines and then renewing registration, using UAE PASS for verification and Dubai Sadad for payment. The first phase covers vehicle licensing services: registration renewal, fines payment, clearance certificates and number plate reservation renewals. Mahboub supports Arabic and English, and development follows RTA's governance and cybersecurity procedures.",
+   "summary_ar": "طوّرت هيئة الطرق والمواصلات في دبي (RTA) مساعدها الافتراضي Mahboub باستخدام الذكاء الاصطناعي الوكيلي (Agentic AI)، بهدف تمكين المتعاملين من إنجاز الخدمات ضمن محادثة واحدة. وبحسب وكالة أنباء الإمارات (وام) في 23 أكتوبر 2026، تُجهَّز النسخة المحدّثة لإتاحتها للجمهور ضمن استراتيجية الهيئة للذكاء الاصطناعي 2030. وبحسب طلب المتعامل، يفعّل النظام أدوات ذكاء اصطناعي وكيلي متخصصة لتنفيذ إجراءات مترابطة، مثل سداد مخالفات المركبة ثم تجديد تسجيلها، مع استخدام UAE PASS للتحقق ومنصة Dubai Sadad للدفع. ويشمل النطاق الأولي خدمات ترخيص المركبات، ومنها تجديد التسجيل وسداد المخالفات وإصدار شهادة براءة الذمة وتجديد حجز رقم اللوحة. ويدعم Mahboub العربية والإنجليزية، ويجري تطويره وفق إجراءات الحوكمة والأمن السيبراني في الهيئة.",
+   "excerpt": null
+  },
+  {
+   "id": "3992fc4ed3eb",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-22T19:45:00+00:00",
+   "title": "Sure, let’s smoosh SpaceX and Tesla together, who cares",
+   "title_ar": "حسناً، لندمج SpaceX وTesla معاً، فمن يهتم؟",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1016879/spacex-tesla-cursed-katamari",
+   "summary_en": "SpaceX and Tesla have formed special committees to discuss a possible merger. Elon Musk said on SpaceX's earnings call that combining them has merit because of cooperation on superintelligence software. SpaceX reported $7.56 billion in revenue from its AI division for the third quarter, with its solutions and infrastructure line rising to $7 billion, more than triple the previous quarter. Cursor added $608 million, and analyst Gil Luria says much of the rest likely came from renting compute to Anthropic and Google. Tesla reported a second consecutive quarter of declining profits. The companies already share the Terafab chip venture and the Macrohard project, though SpaceX's filing says key terms are not finalized.",
+   "summary_ar": "شكّلت SpaceX وTesla لجاناً خاصة لبحث اندماج محتمل بينهما. وقال «إيلون ماسك» خلال مكالمة أرباح SpaceX إن للجمع بينهما وجاهة بسبب التعاون في تطوير برمجيات الذكاء الفائق. وأعلنت SpaceX عن إيرادات بلغت 7.56 مليار دولار من قسم الذكاء الاصطناعي في الربع الثالث، وارتفع بند الحلول والبنية التحتية إلى 7 مليارات دولار، أي أكثر من ثلاثة أضعاف الربع السابق. وأضافت Cursor نحو 608 ملايين دولار، ويرى المحلل «غيل لوريا» أن الجزء الأكبر من الباقي جاء على الأرجح من تأجير القدرة الحاسوبية لشركتي Anthropic وGoogle. أما Tesla فسجلت ربع سنة ثانياً على التوالي من تراجع الأرباح. وتشترك الشركتان أصلاً في مشروع Terafab لصناعة الرقائق ومشروع Macrohard، لكن وثيقة SpaceX المقدمة للجهات التنظيمية تقول إن شروطاً أساسية لم تُحسم بعد.",
+   "excerpt": "Oh sure, SpaceX's credit risk is pretty high because it's about to borrow another $40 billion to spend on Nvidia chips, but who cares about that? SpaceX and Tesla have formed special committees to discuss a merger!"
+  },
+  {
    "id": "a9e7d308cf23",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -99,6 +211,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "d2f83690a55d",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-22T18:26:02+00:00",
+   "title": "Major US banks are locking out AI agents that log in with customer credentials",
+   "title_ar": "بنوك أمريكية كبرى تمنع وكلاء الذكاء الاصطناعي الذين يسجلون الدخول ببيانات اعتماد العملاء",
+   "url": "https://the-decoder.com/major-us-banks-are-locking-out-ai-agents-that-log-in-with-customer-credentials/",
+   "summary_en": "Several major US banks, including Morgan Stanley, JPMorgan, Bank of America and Wells Fargo, are restricting outside AI agents that log in to accounts using customers' own credentials, Axios reports. Bank policies require account holders to sign in personally, and some agents appear to act without direct user instructions. Morgan Stanley already blocks AI agents entirely, and JPMorgan, Bank of America and Citi are doing likewise, though Morgan Stanley says it has seen no rogue agents. Most banks want to limit agents to read-only access. They say customers want to use agents but the security risks are currently too high, and many cannot tell whether an agent acts for a user or on its own. Blocking access through browsers or tools like OpenClaw will be hard, and OpenAI has launched a read-only ChatGPT financial service in the US.",
+   "summary_ar": "تقيّد عدة مصارف أمريكية كبرى، من بينها Morgan Stanley وJPMorgan وBank of America وWells Fargo، وصول وكلاء الذكاء الاصطناعي الخارجيين الذين يسجلون الدخول إلى الحسابات باستخدام بيانات اعتماد العملاء، بحسب ما أوردت Axios. وتشترط سياسات المصارف أن يسجل أصحاب الحسابات دخولهم بأنفسهم، كما يبدو أن بعض الوكلاء يتصرفون دون تعليمات مباشرة من المستخدمين. وتحظر Morgan Stanley وكلاء الذكاء الاصطناعي بالكامل، وتفعل JPMorgan وBank of America وCiti الأمر نفسه، مع تأكيد Morgan Stanley أنها لم ترصد وكلاء خارجين عن السيطرة. وتريد معظم المصارف حصر الوكلاء في صلاحية القراءة فقط. وتقول إن العملاء يرغبون في استخدامهم لكن المخاطر الأمنية مرتفعة حالياً، وإن كثيراً منها لا يستطيع التمييز بين وكيل يعمل نيابة عن المستخدم وآخر يتصرف من تلقاء نفسه. ومن الصعب منع الوصول عبر المتصفحات أو أدوات مثل OpenClaw، وقد أطلقت OpenAI خدمة مالية في ChatGPT بصلاحية قراءة فقط في الولايات المتحدة.",
+   "excerpt": "Customers are letting AI agents use their credentials to access accounts at Morgan Stanley, JPMorgan, and other major U.S. banks, sometimes without direct instructions. Morgan Stanley has blocked agents, while other banks are restricting access."
   },
   {
    "id": "2c1b17b37189",
@@ -129,6 +255,20 @@
    "excerpt": "For years, AI leaders have touted healthcare as one of the clearest examples of where their technology will improve lives. Now \"it is finally here,\" Microsoft AI CEO Mustafa Suleyman tells The Verge."
   },
   {
+   "id": "da7a07ed5f16",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T17:50:09+00:00",
+   "title": "Google's Agent Compute Engine gives every Gemini agent its own hardware-isolated micro virtual machine",
+   "title_ar": "Agent Compute Engine من Google يمنح كل وكيل Gemini جهازاً افتراضياً مصغراً معزولاً عتادياً خاصاً به",
+   "url": "https://the-decoder.com/googles-agent-compute-engine-gives-every-gemini-agent-its-own-hardware-isolated-micro-virtual-machine/",
+   "summary_en": "Google has announced Agent Compute Engine, a service that places each AI agent in its own isolated virtual machine. The company says every agent runs in a microVM secured by its Titanium chip, and the service already powers Gemini, with a preview due in the coming months. Idle VMs pause automatically to free the machine for others, and shared memory between VMs lowers the cost of each. Google also open-sourced Agent Substrate, a Kubernetes runtime that it says fits ten times as many agents on one server; a 200,000-agent test showed suspend and resume in under 500 milliseconds. Google is adding token tracking, model routing and support for identity providers such as Ping Identity and SailPoint, with controls reaching Cloud Run, GKE and managed endpoints.",
+   "summary_ar": "أعلنت Google عن Agent Compute Engine، وهي خدمة تضع كل وكيل ذكاء اصطناعي داخل جهاز افتراضي معزول خاص به. وتقول الشركة إن كل وكيل يعمل داخل microVM مؤمَّن بشريحة Titanium الخاصة بها، وإن الخدمة تشغّل Gemini بالفعل، على أن تُتاح بنسخة معاينة خلال الأشهر المقبلة. ويتوقف الجهاز الافتراضي الخامل مؤقتاً بصورة تلقائية ليُفسح المجال لغيره، كما تقلّل الذاكرة المشتركة بين الأجهزة كلفة تشغيل كل منها. وفتحت Google أيضاً مصدر Agent Substrate، وهو بيئة تشغيل لـ Kubernetes تقول إنها تتسع لعدد أكبر بعشر مرات من الوكلاء على الخادم الواحد، وأظهر اختبار شمل 200,000 وكيل أن الإيقاف والاستئناف يستغرقان أقل من 500 ميلي ثانية. وتضيف الشركة تتبّع الوحدات اللغوية وتوجيه النماذج ودعم مزوّدي الهوية مثل Ping Identity وSailPoint، مع امتداد الضوابط إلى Cloud Run وGKE ونقاط النهاية المُدارة.",
+   "excerpt": "With Agent Compute Engine, Google is introducing a runtime environment designed specifically for AI agents, while also expanding the governance capabilities that enable companies to manage agents in cloud, hybrid, and on-premises environments."
+  },
+  {
    "id": "7b213ad205a3",
    "source": "verge-ai",
    "lang": "en",
@@ -141,6 +281,62 @@
    "summary_en": "A modder has reportedly jailbroken the Nintendo Switch 2 and shown a custom version of Mario Kart World with characters such as Cinnamoroll, the red Angry Bird, Peter Griffin and Steve from Minecraft. According to Sammy Hajhamid, known as pepsipu, OpenAI's Codex helped create the ns2jb jailbreak. It is software-only and tethered, so it must be run from a game each time the console starts, and it uses SmileBASIC 4, although another modder says that game is not strictly needed. The article says the method still looks very complex for most people and its full impact is unclear, with Reddit users debating how significant it is. It adds that more Switch 2 exploits could follow, especially if modders use AI.",
    "summary_ar": "يُقال إن أحد المبرمجين الهواة نجح في كسر حماية جهاز Nintendo Switch 2، وعرض نسخة معدّلة من Mario Kart World تضم شخصيات مثل Cinnamoroll وطائر Angry Bird الأحمر وPeter Griffin وSteve من Minecraft. وبحسب «سامي حجازي»، المعروف باسم pepsipu، ساعد Codex من OpenAI في إنشاء أداة ns2jb لكسر الحماية. وهي برمجية فقط وغير مستقلة، أي يجب تشغيلها من داخل لعبة كلما شُغّل الجهاز، وتعتمد على SmileBASIC 4، مع أن مبرمجاً آخر يقول إن اللعبة ليست ضرورية تماماً. وتذكر المقالة أن الطريقة ما زالت معقدة جداً لمعظم المستخدمين وأن أثرها الكامل غير واضح، بينما يتناقش مستخدمو Reddit حول أهميتها. وتضيف أن ثغرات أخرى قد تظهر في الجهاز، خصوصاً إذا استعان المبرمجون بالذكاء الاصطناعي.",
    "excerpt": "The Nintendo Switch 2 has apparently been jailbroken, and a modder has already shown the console running a custom version of Mario Kart World featuring new playable characters like Cinnamoroll, the red Angry Bird, Peter Griffin, and Steve from Minecraft."
+  },
+  {
+   "id": "3fb030b07e71",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-10-22T16:33:32+00:00",
+   "title": "الثقة والمهارات.. الوقود الحقيقي لثورة الذكاء الاصطناعي خليجياً",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/uae-economy/1559840",
+   "summary_en": "A new report from Al-Futtaim Group found that 82% of workers in consumer-economy sectors across the GCC use AI at least once a week, and one in three uses it daily. While 73% say it has improved their productivity, only 39% feel highly confident using it. The survey covered 1,143 employees in six Gulf markets, with input from IBM, Microsoft and Inception42, a G42 company. Although 53% of organisations encourage AI use, only 20% of employees have had intensive training, which raises confidence 2.5 times. Data security worries were the top barrier at 36%. Executives from the group, IBM, Inception42 and Microsoft said value depends on skills, redesigned processes and trust, not tools alone.",
+   "summary_ar": "كشف تقرير جديد صادر عن مجموعة الفطيم (Al-Futtaim) أن 82% من العاملين في قطاعات الاقتصاد الاستهلاكي بدول مجلس التعاون الخليجي يستخدمون الذكاء الاصطناعي مرة أسبوعياً على الأقل، وأن موظفاً من كل ثلاثة يعتمد عليه يومياً. وقال 73% إنه حسّن إنتاجيتهم، بينما يشعر 39% فقط بثقة عالية في استخدامه. وشمل الاستطلاع 1143 موظفاً في ستة أسواق خليجية، بمساهمات من IBM وMicrosoft وInception42 التابعة لـG42. ورغم أن 53% من المؤسسات تشجع موظفيها على الاستخدام، لم يحصل سوى 20% منهم على تدريب مكثف يرفع الثقة 2.5 مرة. وجاءت مخاوف أمن البيانات في صدارة المعوقات بنسبة 36%. وأكد مسؤولون من هذه الجهات أن القيمة تتطلب مهارات وإعادة تصميم للعمليات وبناء الثقة، وليس الأدوات وحدها.",
+   "excerpt": "موزة الفطيم: تحدي جاهزية الموظفين للذكاء الاصطناعي بشري وليس تقنياً لولا موهانتي: القيمة الحقيقية تتحقق عند دمج التكنولو"
+  },
+  {
+   "id": "4b508543bc0e",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-22T16:19:09+00:00",
+   "title": "«ديب سيك» الصينية تجمع 15 مليار دولار لمنافسة عمالقة الذكاء الاصطناعي الأمريكيين",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1559832",
+   "summary_en": "China's DeepSeek, based in Hangzhou, has raised about 100 billion yuan (15 billion dollars) in its latest funding round, one of the largest ever in China, according to people familiar with the matter. The company twice raised its target during talks with investors, from 50 billion to 80 billion yuan, before reaching the final figure. Contemporary Amperex Technology and Tencent Holdings were among the largest investors. The round paves the way for an anticipated public offering, as with rival Moonshot. DeepSeek is also stepping up spending on AI data centres and open-source models. It remains far behind Anthropic and OpenAI, each of which has raised more than 100 billion dollars.",
+   "summary_ar": "جمعت شركة DeepSeek الصينية، ومقرها هانغتشو، نحو 100 مليار يوان (15 مليار دولار) في أحدث جولة تمويل لها، وهي من أكبر الجولات في تاريخ الصين، وفق أشخاص مطلعين على الأمر. ورفعت الشركة هدف الجولة مرتين خلال محادثاتها مع المستثمرين، من 50 مليار يوان إلى 80 ملياراً، قبل أن تبلغ الرقم النهائي. وكانت Contemporary Amperex Technology وTencent Holdings بين أكبر المستثمرين. وتمهد الجولة لطرح عام أولي مرتقب، على غرار منافستها Moonshot. كما تكثف الشركة إنفاقها على مراكز بيانات الذكاء الاصطناعي والنماذج مفتوحة المصدر. ومع ذلك، لا تزال بعيدة عن القوة المالية لشركتي Anthropic وOpenAI، إذ جمعت كل منهما أكثر من 100 مليار دولار.",
+   "excerpt": "جمعت شركة «ديب سيك» (DeepSeek)، إحدى أبرز الشركات الصينية الرائدة في مجال الذكاء الاصطناعي، نحو 100 مليار يوان (15 مليار"
+  },
+  {
+   "id": "7193f81b802a",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-22T16:18:02+00:00",
+   "title": "Only 13 percent of companies see real returns from AI, Gartner survey finds",
+   "title_ar": "استطلاع لـ Gartner: 13 بالمئة فقط من الشركات تحقق عوائد حقيقية من الذكاء الاصطناعي",
+   "url": "https://the-decoder.com/only-13-percent-of-companies-see-real-returns-from-ai-gartner-survey-finds/",
+   "summary_en": "A Gartner survey of 2,002 CIOs and other technology leaders, presented at the Gartner IT Symposium in Orlando, found that only 13 percent report major or transformative returns from AI. Some 58 percent of CIOs are asked to deliver cost savings through AI, yet 51 percent expect it to raise the total operating costs of their tech stack. Also, 44 percent of CEOs struggle to show stakeholders AI-driven financial returns. Analyst Alicia Mullery describes a widening gap between vendors' innovation race and companies' outcomes race. Bloomberg CEO Vlad Kliatchko says it is too early to measure AI's payoff, and 75 percent of CEOs plan to raise technology spending.",
+   "summary_ar": "أظهر استطلاع أجرته Gartner على 2002 من كبار مسؤولي المعلومات وقادة التقنية الآخرين، وعُرض في مؤتمر Gartner IT Symposium في أورلاندو، أن 13% فقط يحققون عوائد كبيرة أو تحويلية من الذكاء الاصطناعي. ويُطلب من 58% من مديري المعلومات تحقيق وفورات في التكاليف عبر الذكاء الاصطناعي، بينما يتوقع 51% أن يرفع التكلفة التشغيلية الإجمالية لبنيتهم التقنية. كما يواجه 44% من الرؤساء التنفيذيين صعوبة في إثبات العوائد المالية للذكاء الاصطناعي أمام أصحاب المصلحة. وتصف المحللة أليسيا موليري فجوة متنامية بين «سباق الابتكار» لدى الموردين و«سباق النتائج» لدى الشركات. ويرى فلاد كلياتشكو، الرئيس التنفيذي لـBloomberg، أن الوقت مبكر لقياس العائد، فيما تخطط 75% من الرؤساء التنفيذيين لزيادة إنفاقهم التقني.",
+   "excerpt": "Only 13 percent of companies are getting real business value from their AI investments, according to a Gartner survey of 2,002 CIOs. At the same time, 51 percent expect AI to actually increase their operating costs."
+  },
+  {
+   "id": "b4390490811d",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-22T16:17:44+00:00",
+   "title": "مورو: البنية المستدامة تدعم الذكاء الاصطناعي والاقتصاد الأخضر",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3csppn7s-مورو-البنية-المستدامة-تدعم-الذكاء-الاصطناعي",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "2a8e11324f4e",
@@ -213,6 +409,20 @@
    "excerpt": "New technology can verify reported incident before emergency team is sent"
   },
   {
+   "id": "4974b521c731",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-22T15:26:59+00:00",
+   "title": "إنجاز خدمات «طرق دبي» بالذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1559819",
+   "summary_en": "Dubai's Roads and Transport Authority has developed an updated version of its virtual assistant, Mahboub, using Agentic AI. The aim is to simplify how customers complete RTA services in one unified conversation, ahead of making it available to the public under the authority's Artificial Intelligence Strategy 2030. Depending on the request, the system activates specialised AI assistants to coordinate steps such as paying vehicle fines and then renewing registration, with UAE PASS used for verification and Dubai Sadad for payment. It starts with vehicle licensing services, supports Arabic and English, and uses language models tuned to the local context. It is expected to cut steps, time and effort, and development follows the authority's governance and cybersecurity procedures.",
+   "summary_ar": "طورت هيئة الطرق والمواصلات في دبي نسخة محدّثة من مساعدها الافتراضي Mahboub باستخدام الذكاء الاصطناعي الوكيلي. ويهدف التطوير إلى تبسيط رحلة المتعامل في إنجاز خدمات الهيئة ضمن محادثة موحّدة، تمهيداً لإتاحته للجمهور في إطار استراتيجية الهيئة للذكاء الاصطناعي 2030. وبحسب طلب المتعامل، يفعّل النظام مساعدين أذكياء متخصصين لتنسيق خطوات مثل سداد مخالفات المركبة ثم تجديد تسجيلها، مع استخدام UAE PASS للتحقق ومنصة Dubai Sadad للدفع. ويبدأ النظام بخدمات ترخيص المركبات، ويدعم العربية والإنجليزية، ويعتمد نماذج لغوية مضبوطة لتلائم السياق المحلي. ومن المتوقع أن يقلل الخطوات والوقت والجهد، ويجري التطوير وفق إجراءات الحوكمة والأمن السيبراني المعمول بها في الهيئة.",
+   "excerpt": "دبي - البيان طوّرت هيئة الطرق والمواصلات في دبي (محبوب)، نسخة محدّثة من المساعد الافتراضي الخاص بالهيئة، باستخدام الذكاء"
+  },
+  {
    "id": "21e0d797d536",
    "source": "gn-uae",
    "lang": "en",
@@ -253,6 +463,20 @@
    "summary_en": "NVIDIA's GTC conference in Berlin is offering visitors live demonstrations, including robotic arms that sort items and fruit into boxes, real-time face recognition systems, humanoid robots and the company's newest AI computing hardware. The Vera Rubin NVL72 supercomputer rack and RTX Spark devices are drawing attention, and NVIDIA also unveiled Vera Rubin DSK Pod, a modular AI data center the size of a shipping container, designed to cut deployment time from months to days. CEO Jensen Huang spoke to about 3,000 developers, analysts and journalists about extending AI into factories, vehicles and robots, and said everyone will become an AI company. The event runs until 22 October.",
    "summary_ar": "يتيح مؤتمر GTC الذي تنظمه NVIDIA في برلين للزوار مشاهدة عروض حية، منها أذرع روبوتية تفرز الأغراض والفاكهة في صناديق، وأنظمة للتعرّف على الوجوه في الزمن الحقيقي، وروبوتات شبيهة بالبشر، وأحدث عتاد الشركة لحوسبة الذكاء الاصطناعي. ويجذب رف الحاسوب الفائق Vera Rubin NVL72 وأجهزة RTX Spark الأنظار، كما كشفت الشركة عن Vera Rubin DSK Pod، وهو مركز بيانات معياري للذكاء الاصطناعي بحجم حاوية شحن، صُمم لتقليص زمن النشر من أشهر إلى أيام. وتحدث الرئيس التنفيذي «جنسن هوانغ» أمام نحو 3000 من المطورين والمحللين والصحفيين عن توسيع الذكاء الاصطناعي ليشمل المصانع والمركبات والروبوتات، وقال إن الجميع سيصبح شركة للذكاء الاصطناعي. ويستمر الحدث حتى 22 أكتوبر.",
    "excerpt": "تتصدر الروبوتات الشبيهة بالبشر والآلات الذكية والحواسيب الفائقة مشهد فعالية \"إنفيديا\" في برلين، حيث توقّع الرئيس التنفيذي جنسن هوانغ اقتصادا مزدهرا للذكاء الاصطناعي في أوروبا."
+  },
+  {
+   "id": "5cabb389fd3b",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-22T14:40:16+00:00",
+   "title": "Recursive shows first result of its AI-driven research process with Flint",
+   "title_ar": "Recursive تعرض أول نتيجة لعملية البحث المدعومة بالذكاء الاصطناعي لديها باستخدام Flint",
+   "url": "https://the-decoder.com/recursive-shows-first-result-of-its-ai-driven-research-process-with-flint/",
+   "summary_en": "AI startup Recursive has released Flint, its first language model, developed with an AI system called Eureka Machine that proposed, tested and evaluated experiments through nearly every stage. Flint is a mixture-of-experts model for agentic coding on local hardware, with 40 billion total parameters and 2.5 billion active per token. Recursive claims it leads coding benchmarks among MoE models under 50 billion parameters, though the results are not independently verified. It reportedly exceeds 125 tokens per second on a MacBook Pro with M4 Pro. The weights are on Hugging Face under Apache 2.0. Recursive admits Flint needs more guidance on complex tasks than large proprietary models. The company, founded by Richard Socher and others, raised $650 million and aims eventually at self-improving superintelligence.",
+   "summary_ar": "أطلقت شركة Recursive الناشئة نموذج Flint، أول نماذجها اللغوية، بمشاركة نظام ذكاء اصطناعي يسمى Eureka Machine اقترح التجارب ونفذها وقيّمها في معظم مراحل التطوير. وFlint نموذج من نوع مزيج الخبراء (MoE) مخصص للبرمجة الوكيلة على الأجهزة المحلية، ويضم 40 مليار معامل إجمالاً، منها 2.5 مليار نشطة لكل وحدة لغوية. وتقول الشركة إنه يتصدر اختبارات البرمجة بين نماذج MoE التي تقل عن 50 مليار معامل، لكن النتائج لم يتحقق منها طرف مستقل بعد. ويتجاوز النموذج بحسب الشركة 125 وحدة لغوية في الثانية على MacBook Pro بمعالج M4 Pro. وأوزانه متاحة على Hugging Face بترخيص Apache 2.0. وتقر Recursive بأنه يحتاج توجيهاً أكبر في المهام المعقدة من النماذج التجارية الكبيرة. وتأسست الشركة على يد «ريتشارد سوشر» وآخرين، وجمعت 650 مليون دولار، وتسعى في النهاية إلى ذكاء فائق يحسّن نفسه.",
+   "excerpt": "The AI startup Recursive is unveiling Flint, its first language model, a 40-billion-parameter MoE for local coding developed by former DeepMind researchers."
   },
   {
    "id": "ad224da4af7f",
@@ -633,6 +857,34 @@
    "excerpt": "Adipec survey finds growing electricity requirements could strain infrastructure as technology companies gain influence over global energy markets"
   },
   {
+   "id": "25443172439e",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-21T22:51:22+00:00",
+   "title": "Blackstone’s Jas Khaira says fears over AI-buildout debt are overblown",
+   "title_ar": "جاس خيرا من Blackstone: المخاوف بشأن ديون بناء البنية التحتية للذكاء الاصطناعي مبالغ فيها",
+   "url": "https://techcrunch.com/2026/10/21/blackstones-jas-khaira-says-fears-over-ai-buildout-debt-are-overblown/",
+   "summary_en": "Jas Khaira of Blackstone said at TechCrunch Disrupt that the firm is placing itself at the center of the AI boom, from lending to data centers to investing in AI models and applications. Blackstone, with $1.3 trillion in assets under management, launched BXN1, a San Francisco hub for its AI work, earlier this year, and Khaira calls it the largest owner of compute outside the hyperscalers. Its 2023 loan of $2.3 billion to CoreWeave became a financing template for neoclouds. Recently, debt concerns have grown: CoreWeave's debt is about $50 billion, its shares fell over 20%, and Firmus cancelled its planned IPO. Khaira acknowledged higher rates and credit spreads but downplayed fears of a credit crisis, noting that most data centers are built for hyperscalers.",
+   "summary_ar": "قال «جاس خايرا» من شركة Blackstone خلال مؤتمر TechCrunch Disrupt إن الشركة تضع نفسها في قلب طفرة الذكاء الاصطناعي، من خلال إقراض مراكز البيانات والاستثمار في نماذج وتطبيقات الذكاء الاصطناعي. وأطلقت الشركة، التي تدير أصولاً بقيمة 1.3 تريليون دولار، مركز BXN1 في «سان فرانسيسكو» مطلع هذا العام لأعمالها في هذا المجال، ووصفها خايرا بأنها أكبر مالك للقدرة الحاسوبية خارج الشركات العملاقة في الحوسبة السحابية. وقد أصبح قرضها بقيمة 2.3 مليار دولار لشركة CoreWeave عام 2023 نموذجاً لتمويل شركات neoclouds. وفي الآونة الأخيرة تصاعدت المخاوف من الديون، إذ بلغت ديون CoreWeave نحو 50 مليار دولار وتراجعت أسهمها أكثر من 20%، وألغت Firmus طرحها العام الأولي المخطط. وأقرّ خايرا بارتفاع الفائدة وهوامش الائتمان، لكنه قلّل من المخاوف من أزمة ائتمانية، مشيراً إلى أن معظم مراكز البيانات تُبنى لصالح الشركات العملاقة.",
+   "excerpt": "Blackstone’s AI head on why the PE giant isn't panicked by market jitters."
+  },
+  {
+   "id": "c1d080de5b43",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-21T22:45:34+00:00",
+   "title": "Meta wants to pay for its broad AI buildout with a newly created class of stock",
+   "title_ar": "Meta تريد تمويل توسعها الواسع في الذكاء الاصطناعي بفئة جديدة من الأسهم أُنشئت حديثاً",
+   "url": "https://techcrunch.com/2026/10/21/meta-wants-to-pay-for-its-broad-ai-buildout-with-a-newly-created-class-of-stock/",
+   "summary_en": "Meta confirmed on Wednesday, alongside its third-quarter earnings, that it will create a new class of non-voting capital stock and distribute it to existing shareholders as a stock dividend. CFO Susan Li said it can be used for capital raising, employee pay and acquisitions while preserving the voting power of Class A and B holders, and the company ties it to its AI push. Revenue reached $64 billion, up 26%, while costs rose 68%. Reality Labs losses are expected to narrow to $18–19 billion. Mark Zuckerberg said over 10 million people in the U.S. and Canada set up Muse personal agents in six weeks. Meta also flagged legal and regulatory matters, including youth-related trials.",
+   "summary_ar": "أكدت Meta يوم الأربعاء، مع إعلان نتائجها للربع الثالث، أنها ستنشئ فئة جديدة من الأسهم غير ذات حق التصويت وتوزعها على المساهمين الحاليين كتوزيعات أسهم. وقالت المديرة المالية «سوزان لي» إنه يمكن استخدامها في جمع رأس المال ومكافآت الموظفين والاستحواذات مع الحفاظ على القوة التصويتية لحملة الفئتين A وB، وربطت الشركة الخطوة بتوجهها نحو الذكاء الاصطناعي. وبلغت الإيرادات 64 مليار دولار بزيادة 26%، فيما ارتفعت التكاليف 68%. ومن المتوقع أن تتقلص خسائر Reality Labs إلى ما بين 18 و19 مليار دولار. وقال «مارك زوكربيرغ» إن أكثر من 10 ملايين شخص في الولايات المتحدة وكندا أعدّوا وكلاء Muse الشخصيين خلال شهر ونصف. كما أشارت الشركة إلى قضايا قانونية وتنظيمية، منها محاكمات تتعلق بالشباب.",
+   "excerpt": "The social media giant is planning a new stock strategy to help power its broad investments in AI models and services."
+  },
+  {
    "id": "eaa3fbf80042",
    "source": "verge-ai",
    "lang": "en",
@@ -687,6 +939,20 @@
    "summary_en": "Meta said it will issue a new class of non-voting shares to fund its AI initiatives, announcing the plan with its third-quarter earnings report on Wednesday. The shares will also go toward potential acquisitions and employee compensation, and trading is due to begin in 2027. The company's press release cited the scale of investment needed to compete amid the industry's AI transformation, and CFO Susan Li said the shares would expand its funding tools. The article notes Meta has put billions into data centers, talent and AI models, and now expects capital expenditures of $135 billion to $145 billion this year, up from an earlier $130 billion to $145 billion estimate.",
    "summary_ar": "أعلنت Meta أنها ستصدر فئة جديدة من الأسهم غير المصحوبة بحق التصويت لتمويل مبادراتها في مجال الذكاء الاصطناعي، وجاء ذلك ضمن تقرير أرباح الربع الثالث الصادر يوم الأربعاء. وستُستخدم الأسهم أيضاً في عمليات استحواذ محتملة وتعويضات الموظفين، على أن يبدأ تداولها في عام 2027. وأشار بيان الشركة إلى ضخامة الاستثمارات المطلوبة للمنافسة في ظل التحول الذي يشهده القطاع بفعل الذكاء الاصطناعي، وقالت المديرة المالية «سوزان لي» إن الأسهم ستوسّع أدوات التمويل لدى الشركة. ويذكر المقال أن Meta أنفقت مليارات الدولارات على مراكز البيانات والكفاءات ونماذج الذكاء الاصطناعي، وتتوقع الآن نفقات رأسمالية بين 135 و145 مليار دولار هذا العام، مقابل تقدير سابق بين 130 و145 مليار دولار.",
    "excerpt": "Meta says it's issuing a new class of shares to fund its AI initiatives. As part of its third-quarter earnings report released on Wednesday, the company says the non-voting stock will also go toward potential acquisitions and employee compensation, with trading beginning in 2027."
+  },
+  {
+   "id": "21039cf53586",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-21T21:14:19+00:00",
+   "title": "Meta says Muse has over 10M users, with shopping a top activity",
+   "title_ar": "Meta تقول إن Muse يضم أكثر من 10 ملايين مستخدم، والتسوق من أبرز الأنشطة فيه",
+   "url": "https://techcrunch.com/2026/10/21/meta-says-muse-has-over-10m-users-with-shopping-a-top-activity/",
+   "summary_en": "Meta said on its third-quarter earnings call on Wednesday that its AI app Muse has passed 10 million users, in line with estimates Sensor Tower released earlier in the week. CEO Mark Zuckerberg said about 25% of people who set up Muse use it daily, and that over a quarter of engaged users shopping through the agent had an average purchase above $200. Meta plans to keep Muse free for most users while taking a share of commerce, and to charge power users who want advanced models or more tokens. Zuckerberg said the focus now turns to scaling, revenue and compute costs, which he expects to improve by more than 10x within a year, and he teased a Muse network where users' agents work with those of friends and family.",
+   "summary_ar": "أعلنت Meta خلال مكالمة نتائج الربع الثالث يوم الأربعاء أن تطبيقها Muse للذكاء الاصطناعي تجاوز 10 ملايين مستخدم، وهو ما يتوافق مع تقديرات نشرتها Sensor Tower في وقت سابق من الأسبوع. وقال الرئيس التنفيذي «مارك زوكربيرغ» إن نحو 25% ممن أعدّوا Muse يستخدمونه يومياً، وإن أكثر من ربع المستخدمين النشطين الذين يتسوقون عبر الوكيل بلغ متوسط مشترياتهم أكثر من 200 دولار. وتنوي Meta إبقاء Muse مجانياً لمعظم المستخدمين مع اقتطاع نسبة من عمليات التجارة، وفرض رسوم على المستخدمين المكثفين الراغبين في نماذج متقدمة أو مزيد من الوحدات اللغوية. وأوضح «زوكربيرغ» أن التركيز سينتقل الآن إلى التوسع والإيرادات وتكاليف الحوسبة التي يتوقع تحسين كفاءتها أكثر من عشرة أضعاف خلال عام، كما لمّح إلى «شبكة Muse» تتعاون فيها وكلاء المستخدمين مع وكلاء أصدقائهم وعائلاتهم.",
+   "excerpt": "Meta Muse users are adopting the app for shopping and personal productivity, the company said during its Q3 earnings call. The AI app now has over 10M users."
   },
   {
    "id": "dc1c99f7973e",
@@ -6441,6 +6707,20 @@
    "summary_en": "On 15 October 2026 in Dubai, Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, witnessed the signing of an MoU between the World Economic Forum and Dubai Municipality to launch the Global Innovation Challenge and the Agentic AI Award. The initiative, announced on the sidelines of the Annual Meeting of Global Future Leaders 2026, aims to enable 10,000 Global Shapers across 150 countries to build agentic AI solutions that improve urban services and quality of life. A US$1 million prize will be shared among three winners, to be named at the 2027 meeting. Participants can submit entries by March 2027 and will get expert support and AI training from Mohamed bin Zayed University of Artificial Intelligence.",
    "summary_ar": "في 15 أكتوبر 2026 بدبي، شهد الشيخ حمدان بن محمد بن راشد آل مكتوم، ولي عهد دبي، توقيع مذكرة تفاهم بين المنتدى الاقتصادي العالمي وبلدية دبي لإطلاق التحدي الدولي للابتكار وجائزة الذكاء الاصطناعي الوكيلي (Agentic AI Award). وأُعلنت المبادرة على هامش الاجتماعات السنوية لقيادات المستقبل العالمية 2026، وتهدف إلى تمكين 10 آلاف من صُنّاع التغيير العالميين في 150 دولة من تطوير حلول قائمة على الذكاء الاصطناعي الوكيلي لتحسين الخدمات الحضرية وجودة الحياة. وتبلغ قيمة الجائزة مليون دولار أمريكي يتقاسمها ثلاثة فائزين يُعلن عنهم في اجتماعات 2027. ويمكن للمشاركين تقديم حلولهم حتى مارس 2027، مع دعم من خبراء وتدريب في الذكاء الاصطناعي تقدمه جامعة محمد بن زايد للذكاء الاصطناعي.",
    "excerpt": "DUBAI, 15th October, 2026 (WAM) -- H.H. Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, Deputy Prime Minister and Minister of Defence of the UAE, and Chairman of The Executive Council of Dubai, witnessed the signing of a Memorandum of Understanding (MoU)…"
+  },
+  {
+   "id": "1e16daa42e02",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-15T13:46:00+00:00",
+   "title": "SIF 2026: AI cuts content costs by 95%, but loyalty remains key",
+   "title_ar": "SIF 2026: الذكاء الاصطناعي يخفض تكاليف المحتوى بنسبة 95%، لكن الولاء يظل أساسياً",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/15/Ma34",
+   "summary_en": "At SIF 2026, Mayya, founder and CEO of Aeos, said AI is sharply lowering the cost of producing content, citing Pocket FM, where he estimated costs fell from about $1,000 to $50 per hour. He argued that AI cannot create distribution, so an engaged audience is a business's main lasting advantage. Aeos makes roughly 2,000 AI-assisted videos a month and, he said, drew 1.5 billion English views last month across 10 channels without outside investors. He warned that wide access to AI tools could make content look alike, and that human judgment and creative input remain central. The ninth SIF runs on October 14–15 at Al Jawaher Reception and Convention Centre under the theme \"Building Adaptive Economies\".",
+   "summary_ar": "قال «مايا»، مؤسس شركة Aeos ورئيسها التنفيذي، في كلمة ألقاها خلال SIF 2026، إن الذكاء الاصطناعي يخفض تكلفة إنتاج المحتوى بصورة كبيرة، مستشهداً بشركة Pocket FM التي قدّر أن تكلفة الإنتاج فيها انخفضت من نحو 1000 دولار إلى 50 دولاراً للساعة. ورأى أن الذكاء الاصطناعي لا يستطيع صناعة التوزيع، وأن الجمهور المتفاعل هو الميزة الدائمة الأهم للشركات. وتنتج Aeos نحو 2000 مقطع فيديو شهرياً بمساعدة الذكاء الاصطناعي، وذكر أنها حققت الشهر الماضي 1.5 مليار مشاهدة بالإنجليزية عبر 10 قنوات دون مستثمرين. وحذّر من أن انتشار هذه الأدوات قد يجعل المحتوى متشابهاً، وأن الحكم البشري والمدخلات الإبداعية يبقيان أساسيين. وتُعقد النسخة التاسعة من SIF يومي 14 و15 أكتوبر في «مركز الجواهر للمناسبات والمؤتمرات» تحت شعار «بناء اقتصادات مرنة».",
+   "excerpt": "Artificial intelligence is reducing content production costs by as much as 95%, but the ability to attract and retain an engaged audience is becoming an…"
   },
   {
    "id": "cfbf1ae18cfa",

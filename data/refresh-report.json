@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-24T14:04:40+00:00",
+  "at": "2026-10-25T00:23:29+00:00",
   "health": {
     "successful_sources": 260,
     "failed_sources": 11,
@@ -10,47 +10,67 @@
     {
       "url": "https://forums.developer.nvidia.com/t/introducing-the-jetson-orin-nx-series-and-jetson-agx-orin-developer-kit-availability/209139",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/jetson-orin-modules-and-developer-kit-announcements/209137",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
       "url": "https://forums.developer.nvidia.com/t/release-date-for-jetson-agx-orin-64gb-developer-kit/254524",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
-      "url": "https://www.amd.com/en/blogs/2025/amd-radeon-ai-pro-r9700-to-be-available-in-workstation.html",
+      "url": "https://www.amd.com/en/blogs/2025/amd-ryzen-ai-max-395-processor-breakthrough-ai-.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
       "url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
-      "url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi325x.html",
+      "url": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350p.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
-      "url": "https://www.amd.com/en/products/accelerators/instinct/mi400.html",
+      "url": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi350x.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
-      "url": "https://www.amd.com/en/products/accelerators/instinct/mi400/mi455x.html",
+      "url": "https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
+    },
+    {
+      "url": "https://www.amd.com/en/products/graphics/workstations/radeon-ai-pro/ai-9000-series/amd-radeon-ai-pro-r9700.html",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-25T00:23:29+00:00"
+    },
+    {
+      "url": "https://www.amd.com/en/products/graphics/workstations/radeon-pro/w7900.html",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-25T00:23:29+00:00"
     },
     {
       "url": "https://www.amd.com/en/products/processors/laptop/ryzen-pro/ai-max-pro-300-series/amd-ryzen-ai-max-plus-pro-395.html",
       "reason": "Official page changed; inspect timeline and unparsed specifications",
-      "at": "2026-10-24T14:04:40+00:00"
+      "at": "2026-10-25T00:23:29+00:00"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-25T00:23:29+00:00"
+    },
+    {
+      "url": "https://www.nvidia.com/en-us/titan/titan-rtx/",
+      "reason": "Official page changed; inspect timeline and unparsed specifications",
+      "at": "2026-10-25T00:23:29+00:00"
     }
   ],
   "errors": {
