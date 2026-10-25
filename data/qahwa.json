@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-24T22:00:00+04:00",
+  "generated_at": "2026-10-25T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4934,6 +4934,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-24T22:00:00+04:00",
       "cover": "images/qahwa/week-04-day-22--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-03-day-21--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 3,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never paste into an AI assistant?",
+        "ar": "أيّ هذه يجب ألّا تلصقه في المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Answer: What should you never paste?",
+        "ar": "الجواب: ما الذي يجب ألّا تلصقه؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which of these should you ==never== paste into an AI assistant?",
+            "body": "Answer: Your password ✅ Never type passwords, ID numbers or bank details into any chat. Study questions and general drafts are fine."
+          },
+          "ar": {
+            "title": "أيّ هذه ==يجب ألّا== تلصقه في المساعد الذكي؟",
+            "body": "الجواب: كلمة المرور ✅ لا تكتب كلمات المرور ولا أرقام الهوية ولا البيانات البنكية في أي محادثة. أما أسئلة المذاكرة والمسوّدات العامة فلا بأس بها."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-25T07:45:00+04:00",
+      "cover": "images/qahwa/week-03-day-21--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
