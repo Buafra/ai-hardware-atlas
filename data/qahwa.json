@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T07:45:00+04:00",
+  "generated_at": "2026-10-25T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4969,6 +4969,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-25T07:45:00+04:00",
       "cover": "images/qahwa/week-03-day-21--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-22--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "AI only works on a GPU.",
+        "ar": "الذكاء الاصطناعي يعمل فقط على GPU."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "AI ==only works on a GPU==.",
+            "body": "Answer: Myth ❌ AI can run on CPUs, GPUs, NPUs and specialized accelerators."
+          },
+          "ar": {
+            "title": "الذكاء الاصطناعي ==يعمل فقط على GPU==.",
+            "body": "الجواب: خرافة ❌ يمكن تشغيله على CPU وGPU وNPU ومسرّعات متخصصة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-25T07:50:00+04:00",
+      "cover": "images/qahwa/week-04-day-22--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
