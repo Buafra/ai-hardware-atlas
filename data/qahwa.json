@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T08:00:00+04:00",
+  "generated_at": "2026-10-25T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -4780,6 +4780,10 @@
           },
           "ar": {
             "title": "احفظ الدرس قبل ==شراء جهازك القادم=="
+          },
+          "next": {
+            "en": "Lesson 17: VRAM, RAM & unified memory",
+            "ar": "الدرس 17: VRAM وRAM والذاكرة الموحّدة"
           }
         }
       ],
@@ -5042,6 +5046,145 @@
       "published_at": "2026-10-25T08:00:00+04:00",
       "cover": "images/qahwa/week-04-day-22--2-try-reel-cover.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-04-day-23--1-learn-lesson-17",
+      "kind": "lesson",
+      "lesson": 17,
+      "code": "L17",
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "VRAM, RAM & unified memory",
+        "ar": "VRAM وRAM والذاكرة الموحّدة"
+      },
+      "summary": {
+        "en": "VRAM is high-speed memory used directly by a discrete GPU. For best speed, the model's parameters and working data must fit there.",
+        "ar": "ذاكرة سريعة يستخدمها كرت الشاشة المنفصل مباشرة. ولأفضل سرعة يجب أن تكفي لمعاملات النموذج وبيانات العمل."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Want to run AI locally?\n==Look at the memory first.==",
+            "body": "VRAM, RAM & unified memory"
+          },
+          "ar": {
+            "title": "تريد تشغيل الذكاء الاصطناعي محلياً؟\n==انظر إلى الذاكرة أولاً.==",
+            "body": "VRAM وRAM والذاكرة الموحّدة"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What is VRAM?",
+            "body": "VRAM is ==high-speed memory== used directly by a discrete GPU. For best speed, the model's parameters and working data must fit there."
+          },
+          "ar": {
+            "title": "ما هي VRAM؟",
+            "body": "==ذاكرة سريعة== يستخدمها كرت الشاشة المنفصل مباشرة. ولأفضل سرعة يجب أن تكفي لمعاملات النموذج وبيانات العمل."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why does capacity matter?",
+            "body": "A larger model usually needs more memory. If it does not fit: a smaller model, more compression, a GPU and RAM split (slower), or other hardware."
+          },
+          "ar": {
+            "title": "لماذا السعة مهمة؟",
+            "body": "النموذج الأكبر يحتاج عادةً ذاكرة أكبر. إذا لم تكفِ، قد تحتاج نموذجاً أصغر، أو نسخة أكثر ضغطاً، أو تقسيمه بين GPU والنظام (أبطأ) أو عتاد آخر."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "More memory ≠ ==automatically faster==",
+            "body": "Capacity tells you what can fit. Speed also depends on compute, memory bandwidth, software, precision and the workload."
+          },
+          "ar": {
+            "title": "ذاكرة أكبر ≠ ==سرعة أعلى تلقائياً==",
+            "body": "السعة تحدد ما تتّسع له. أما السرعة فتعتمد أيضاً على قوة المعالجة وعرض النطاق والبرمجيات والدقة والمهمة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "RAM vs VRAM vs unified memory",
+            "body": "RAM is general system memory. VRAM belongs to a discrete GPU. Unified memory is ==one shared pool== used by CPU and GPU in certain architectures."
+          },
+          "ar": {
+            "title": "RAM وVRAM والذاكرة الموحّدة",
+            "body": "RAM ذاكرة النظام العامة، وVRAM ذاكرة كرت الشاشة المنفصل، والذاكرة الموحّدة ==مساحة مشتركة== للـCPU والـGPU في بعض المعماريات."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Simple example",
+            "body": "A very fast 8 GB GPU may fail to load a model that fits on a slower 24 or 32 GB GPU. ==Fit comes first==; then compare speed."
+          },
+          "ar": {
+            "title": "مثال بسيط",
+            "body": "قد يفشل GPU سريع بسعة 8 GB في تحميل نموذج تتّسع له GPU أبطأ بسعة 24 أو 32 GB. ==أولاً: هل تتّسع؟== ثم قارن السرعة."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "GPU speed = ==how fast the barista works==",
+            "body": "Memory capacity = how large the counter is. A fast barista still needs enough counter space."
+          },
+          "ar": {
+            "title": "سرعة GPU مثل ==سرعة الباريستا==",
+            "body": "وسعة الذاكرة مثل مساحة الطاولة. حتى أسرع باريستا يحتاج مساحة كافية للعمل."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "More VRAM always means more speed.",
+            "fact": "More VRAM mainly gives you room for larger workloads. Performance depends on several other factors too."
+          },
+          "ar": {
+            "myth": "VRAM أكبر تعني دائماً سرعة أعلى.",
+            "fact": "VRAM الأكبر تمنحك مساحة لأحمال أكبر، لكن الأداء يعتمد على عوامل أخرى أيضاً."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "I want to run [model/workload] locally. Estimate the memory I should plan for and explain the assumptions."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أريد تشغيل [النموذج/المهمة] محلياً. قدّر الذاكرة التي أحتاجها واشرح الافتراضات."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "For local AI, ==memory is often the first filter=="
+          },
+          "ar": {
+            "title": "في الذكاء الاصطناعي المحلي، ==الذاكرة غالباً أول شيء تنظر إليه=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I want to run [model/workload] locally. Estimate the memory I should plan for and explain the assumptions.",
+        "ar": "أريد تشغيل [النموذج/المهمة] محلياً. قدّر الذاكرة التي أحتاجها واشرح الافتراضات.",
+        "code": "L17"
+      },
+      "permalink": "https://www.instagram.com/p/De6V3bWjlE3/",
+      "published_at": "2026-10-25T13:03:00+04:00",
+      "cover": "images/qahwa/week-04-day-23--1-learn-lesson-17.webp",
+      "related_concepts": [
+        "quantization",
+        "local-vs-cloud",
+        "parameters"
+      ]
     }
   ]
 }
