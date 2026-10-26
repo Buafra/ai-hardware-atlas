@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-26T13:00:00+04:00",
+  "generated_at": "2026-10-26T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5431,6 +5431,42 @@
       "permalink": "https://www.instagram.com/reel/De86Re5CZtI/",
       "published_at": "2026-10-26T13:00:00+04:00",
       "cover": "images/qahwa/week-04-day-24--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-24--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "A gaming GPU is useless for AI.",
+        "ar": "كرت الألعاب لا يفيد في AI."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "A gaming GPU is ==useless for AI==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "كرت الألعاب ==لا يفيد في AI==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-26T20:30:00+04:00",
+      "cover": "images/qahwa/week-04-day-24--3-check-story.webp",
       "related_concepts": []
     }
   ]
