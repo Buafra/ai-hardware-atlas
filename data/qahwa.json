@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-26T07:49:00+04:00",
+  "generated_at": "2026-10-26T08:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5169,6 +5169,10 @@
           },
           "ar": {
             "title": "في الذكاء الاصطناعي المحلي، ==الذاكرة غالباً أول شيء تنظر إليه=="
+          },
+          "next": {
+            "en": "Lesson 18: Why RTX GPUs are popular for AI",
+            "ar": "الدرس 18: لماذا تُستخدم RTX كثيراً في الذكاء الاصطناعي؟"
           }
         }
       ],
@@ -5255,6 +5259,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-26T07:49:00+04:00",
       "cover": "images/qahwa/week-04-day-23--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-24--1-learn-lesson-18",
+      "kind": "lesson",
+      "lesson": 18,
+      "code": "L18",
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "Why RTX GPUs are popular for AI",
+        "ar": "لماذا تُستخدم RTX كثيراً في الذكاء الاصطناعي؟"
+      },
+      "summary": {
+        "en": "A huge amount of AI software is optimized for NVIDIA CUDA and related libraries. Software support can matter as much as raw hardware specs.",
+        "ar": "الكثير من برمجيات الذكاء الاصطناعي محسّن لـNVIDIA CUDA ومكتباتها. دعم البرمجيات قد يكون مهماً بقدر المواصفات."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Why do so many AI PCs use ==NVIDIA RTX?==",
+            "body": "Gaming is only part of the story."
+          },
+          "ar": {
+            "title": "لماذا تكثر ==بطاقات NVIDIA RTX== في أجهزة AI؟",
+            "body": "الألعاب ليست كل شيء."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "CUDA ecosystem",
+            "body": "A huge amount of AI software is optimized for NVIDIA CUDA and related libraries. ==Software support== can matter as much as raw hardware specs."
+          },
+          "ar": {
+            "title": "منظومة CUDA",
+            "body": "الكثير من برمجيات الذكاء الاصطناعي محسّن لـNVIDIA CUDA ومكتباتها. ==دعم البرمجيات== قد يكون مهماً بقدر المواصفات."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Tensor Cores",
+            "body": "RTX GPUs include Tensor Cores designed to accelerate ==matrix operations== used heavily in modern AI."
+          },
+          "ar": {
+            "title": "Tensor Cores",
+            "body": "تحتوي بطاقات RTX على أنوية Tensor لتسريع ==عمليات المصفوفات== المستخدمة بكثرة في الذكاء الاصطناعي."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "RTX 5090 example",
+            "body": "NVIDIA lists the GeForce RTX 5090 with ==32 GB of GDDR7 memory==, a 512-bit interface and Blackwell architecture."
+          },
+          "ar": {
+            "title": "مثال RTX 5090",
+            "body": "تذكر NVIDIA أن RTX 5090 فيها ==ذاكرة GDDR7 بسعة 32 GB== وواجهة 512-bit ومعمارية Blackwell."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What can you do locally?",
+            "body": "Run LLMs, generate images, transcribe audio, experiment with vision models, fine-tune smaller models and power local agents — ==depending on memory and software==."
+          },
+          "ar": {
+            "title": "ماذا يمكنك تشغيله محلياً؟",
+            "body": "نماذج لغوية، توليد صور، تحويل صوت إلى نص، نماذج رؤية، تجارب Fine-tuning محدودة، ووكلاء محليون — ==حسب الذاكرة والبرمجيات==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Do not buy by model number alone",
+            "body": "For AI, compare memory capacity, bandwidth, software support, power, thermals and price — not just “5090 vs 5080”."
+          },
+          "ar": {
+            "title": "لا تشترِ حسب رقم البطاقة فقط",
+            "body": "للذكاء الاصطناعي قارن السعة وعرض النطاق ودعم البرمجيات والطاقة والتبريد والسعر، وليس رقم البطاقة فقط."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "The GPU is ==the espresso machine==",
+            "body": "CUDA and libraries are the tools, recipes and accessories that make the workflow easier."
+          },
+          "ar": {
+            "title": "GPU هو ==آلة الإسبريسو==",
+            "body": "وCUDA والمكتبات هي الأدوات والوصفات والملحقات التي تجعل العمل أسهل."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "A gaming GPU is useless for AI.",
+            "fact": "Many GeForce RTX GPUs are very capable for local AI. The main limits are memory, workload, power and software support."
+          },
+          "ar": {
+            "myth": "كرت الألعاب لا يفيد في الذكاء الاصطناعي.",
+            "fact": "كثير من بطاقات GeForce RTX قوية جداً للذكاء الاصطناعي المحلي، والحدود الأساسية هي الذاكرة والمهمة والطاقة والبرمجيات."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "Compare [GPU 1] vs [GPU 2] for local AI using VRAM, bandwidth, software, power and value — not gaming FPS."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "قارن [البطاقة 1] و[البطاقة 2] للذكاء الاصطناعي المحلي حسب VRAM وعرض النطاق والبرمجيات والطاقة — لا FPS الألعاب."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Memory + CUDA + software: ==not just raw speed=="
+          },
+          "ar": {
+            "title": "الذاكرة + CUDA + البرمجيات: ==ليست سرعة فقط=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Compare [GPU 1] vs [GPU 2] for local AI using VRAM, bandwidth, software, power and value — not gaming FPS.",
+        "ar": "قارن [البطاقة 1] و[البطاقة 2] للذكاء الاصطناعي المحلي حسب VRAM وعرض النطاق والبرمجيات والطاقة — لا FPS الألعاب.",
+        "code": "L18"
+      },
+      "permalink": "https://www.instagram.com/p/De8YVURDMH9/",
+      "published_at": "2026-10-26T08:04:00+04:00",
+      "cover": "images/qahwa/week-04-day-24--1-learn-lesson-18.webp",
       "related_concepts": []
     }
   ]
