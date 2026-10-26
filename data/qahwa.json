@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-26T08:04:00+04:00",
+  "generated_at": "2026-10-26T13:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5394,6 +5394,43 @@
       "permalink": "https://www.instagram.com/p/De8YVURDMH9/",
       "published_at": "2026-10-26T08:04:00+04:00",
       "cover": "images/qahwa/week-04-day-24--1-learn-lesson-18.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-24--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "RTX GPU → local AI",
+        "ar": "RTX GPU ← ذكاء اصطناعي محلي"
+      },
+      "summary": {
+        "en": "This “gaming GPU” is running AI locally.",
+        "ar": "هذا «كرت الألعاب» يشغّل AI محلياً."
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "This “gaming GPU” is ==running AI locally==."
+          },
+          "ar": {
+            "title": "هذا «كرت الألعاب» ==يشغّل AI محلياً==."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Tell me which parts of this local AI workflow use GPU memory and which use system memory.",
+        "ar": "اشرح أي أجزاء من تشغيل AI المحلي تستخدم ذاكرة GPU وأيها تستخدم RAM.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/De86Re5CZtI/",
+      "published_at": "2026-10-26T13:00:00+04:00",
+      "cover": "images/qahwa/week-04-day-24--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
