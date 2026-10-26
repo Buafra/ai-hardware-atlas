@@ -1,18 +1,7 @@
 {
- "updated_at": "2026-10-26T00:21:55+00:00",
+ "updated_at": "2026-10-26T16:57:58+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
-  {
-   "id": "arcee-ai/trinity-large-thinking",
-   "name": "Arcee AI: Trinity Large Thinking",
-   "hf": "arcee-ai/Trinity-Large-Thinking",
-   "context": 262144,
-   "created": 1775058318,
-   "open": true,
-   "params_b": 398.64,
-   "params_source": "huggingface",
-   "moe": false
-  },
   {
    "id": "bytedance/ui-tars-1.5-7b",
    "name": "ByteDance: UI-TARS 7B",
