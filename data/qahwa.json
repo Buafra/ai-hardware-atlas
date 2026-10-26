@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T20:30:00+04:00",
+  "generated_at": "2026-10-26T07:49:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5220,6 +5220,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-25T20:30:00+04:00",
       "cover": "images/qahwa/week-04-day-23--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-23--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "More VRAM always makes AI faster.",
+        "ar": "VRAM أكبر تجعل AI أسرع دائماً."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "More VRAM ==always makes AI faster==.",
+            "body": "Answer: Myth ❌ VRAM capacity mainly determines what can fit. Speed depends on many other factors."
+          },
+          "ar": {
+            "title": "VRAM أكبر ==تجعل AI أسرع دائماً==.",
+            "body": "الجواب: خرافة ❌ السعة تحدد أساساً ما تتّسع له، أما السرعة فتعتمد على عوامل أخرى."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-26T07:49:00+04:00",
+      "cover": "images/qahwa/week-04-day-23--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
