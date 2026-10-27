@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-27T20:30:00+04:00",
+  "generated_at": "2026-10-27T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5808,6 +5808,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-27T20:30:00+04:00",
       "cover": "images/qahwa/week-04-day-25--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-26--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "128 GB unified memory is exactly the same as 128 GB dedicated VRAM.",
+        "ar": "ذاكرة موحّدة بسعة 128 GB هي نفسها VRAM بسعة 128 GB مخصصة."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "128 GB unified memory is ==exactly the same== as 128 GB dedicated VRAM.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 128 GB ==هي نفسها== VRAM بسعة 128 GB مخصصة.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-27T21:15:00+04:00",
+      "cover": "images/qahwa/week-04-day-26--3-check-story.webp",
       "related_concepts": []
     }
   ]
