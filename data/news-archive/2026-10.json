@@ -3,6 +3,216 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "2669526d4058",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-26T22:13:19+00:00",
+   "title": "طلاقة الذكاء الاصطناعي اللغوية لا تقتضي استيعابه للسياقات الثقافية",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/ثقافة/4701488/طلاقة-الذكاء-الاصطناعي-اللغوية-لا-تقتضي-استيعابه-للسياقات-ال",
+   "summary_en": "The Archives and National Library held a lecture in Liwa Hall at its headquarters titled \"AI and the Future of Translation: Ambitions, Opportunities and Ethical Challenges.\" It was delivered by Professor Siddiq Johar, the institution's translation expert, who covered the changes AI has brought to translation, including higher efficiency and productivity, wider multilingual communication and support for educational, professional and institutional work. He stressed a responsible partnership between humans and AI, saying the technology redefines the translator's role rather than replacing it. He added that fluent machine output does not guarantee accurate meaning or sound context, especially in legal, medical and diplomatic fields, and that handling language patterns does not mean AI fully grasps cultural, historical, religious, political and literary contexts, so human judgment stays necessary.",
+   "summary_ar": "نظّم الأرشيف والمكتبة الوطنية في قاعة ليوا بمقره محاضرة بعنوان «الذكاء الاصطناعي ومستقبل الترجمة.. الطموحات والفرص والتحديات الأخلاقية». وقدّمها البروفيسور صديق جوهر، خبير الترجمة في المؤسسة، وتناول فيها التحولات التي أحدثها الذكاء الاصطناعي في الترجمة، ومنها رفع الكفاءة والإنتاجية وتوسيع التواصل متعدد اللغات ودعم العمل التعليمي والمهني والمؤسسي. وشدد على أهمية بناء شراكة مسؤولة بين الإنسان والذكاء الاصطناعي، موضحاً أن هذه التقنيات لا تلغي دور المترجم البشري بل تعيد تعريفه. وبيّن أن سلاسة النص الناتج عن الأنظمة الذكية لا تعني بالضرورة دقة المعنى أو سلامة السياق، خصوصاً في المجالات القانونية والطبية والدبلوماسية، وأن قدرتها على معالجة الأنماط اللغوية لا تعني استيعاباً كاملاً للسياقات الثقافية والتاريخية والدينية والسياسية والأدبية، ولذلك يبقى الحكم البشري ضرورياً.",
+   "excerpt": "نظّم الأرشيف والمكتبة الوطنية في قاعة ليوا بمقره محاضرة بعنوان «الذكاء الاصطناعي ومستقبل الترجمة.. الطموحات والفرص والتحديات الأخلاقية»، وذلك في إطار اهتمامه بمواكبة التطورات التقنية، وتعزيز الوعي بدور الذكاء الاصطناعي في تطوير ممارسات الترجمة، وتوضيح أوجه التكامل بين الترجمة…"
+  },
+  {
+   "id": "bee4bf7c52cd",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-26T18:56:46+00:00",
+   "title": "ملف طرح أنثروبيك للاكتتاب يكشف قفزة في الإيرادات وتحذيرا من مخاطر الذكاء الاصطناعي على البشر",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/26/anthropics-ipo-filing-highlights-soaring-revenues-as-the-company-warns-of-ais-risks-to-hum",
+   "summary_en": "Anthropic submitted S-1 documents on Monday ahead of a planned IPO, revealing a sharp rise in revenue alongside steep costs. The filings show a net loss of $80.7 billion in the first half of 2026, while revenue reached about $16.3 billion. The Wall Street Journal says the offering could raise up to $100 billion and value the Claude developer at over $1.5 trillion, against about $965 billion in May. The company warned that AI could bring catastrophic or existential risks without proper safeguards, and that its policy stance could draw scrutiny. Gary Marcus accused it of dodging by omitting Q3 results, though reports say Q3 revenue was $16.8 billion.",
+   "summary_ar": "قدمت شركة Anthropic يوم الاثنين وثائق نموذج S-1 تمهيداً لطرح عام أولي مخطط له، وكشفت عن قفزة كبيرة في الإيرادات يقابلها ارتفاع حاد في التكاليف. وتُظهر الملفات أن صافي خسائر الشركة بلغ 80.7 مليار دولار في النصف الأول من 2026، بينما بلغت الإيرادات نحو 16.3 مليار دولار. وبحسب Wall Street Journal قد يدر الطرح ما يصل إلى 100 مليار دولار، مع تقييم لمطوّرة Claude يتجاوز 1.5 تريليون دولار، مقارنة بنحو 965 مليار دولار في مايو. وحذّرت الشركة من أن الذكاء الاصطناعي قد يجلب مخاطر كارثية أو وجودية على الإنسانية إذا لم تتوافر ضمانات وإشراف مناسبان، وأن مواقفها من تنظيم الذكاء الاصطناعي قد تعرضها لتدقيق متزايد. واتهم غاري ماركوس، الأستاذ الفخري في جامعة نيويورك، الشركة بتجنب الحقيقة بحجب نتائج الربع الثالث، بينما ذكرت تقارير أن إيرادات ذلك الربع بلغت 16.8 مليار دولار.",
+   "excerpt": "حذرت شركة \"Anthropic\" من أن الذكاء الاصطناعي قد يحمل \"مخاطر كارثية أو وجودية على البشرية\" إذا لم يُطوَّر ويُنشر ويُشغَّل مع ضمانات ورقابة وتدابير أمنية مناسبة."
+  },
+  {
+   "id": "e02643f937d4",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T16:23:10+00:00",
+   "title": "دبي تبني أول ولاية قضائية تجمع البشر ووكلاء الذكاء الاصطناعي والروبوتات",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/uae-economy/1560709",
+   "summary_en": "Aref Amiri, chief executive of the Dubai International Financial Centre Authority, said the centre is building what he called the world's first jurisdiction where human staff, AI agents and robots work side by side, supported by smart infrastructure and trusted governance. He said AI adoption means integrating it across the whole system in which firms operate, not just improving individual processes. He pointed to a five-year AI strategy launched in 2023 and to provisions in Regulation 10 of the centre's data protection law covering personal data processing by autonomous systems. The centre hosts 10,000 active firms, including more than 1,900 in AI, fintech and innovation. He said the shift is expected to generate $3.5 billion in economic value and 25,000 new jobs, depending on trusted governance and skilled people.",
+   "summary_ar": "كشف عارف أميري، الرئيس التنفيذي لسلطة مركز دبي المالي العالمي، أن المركز يعمل على إنشاء أول ولاية قضائية في العالم يعمل فيها الكوادر البشرية ووكلاء الذكاء الاصطناعي والروبوتات جنباً إلى جنب، ضمن منظومة تقوم على بنية تحتية ذكية وحوكمة موثوقة. وأوضح أن تبني الذكاء الاصطناعي يعني دمجه في المنظومة الكاملة التي تعمل من خلالها الشركات، لا تحسين عمليات منفردة فقط. وأشار إلى استراتيجية الذكاء الاصطناعي الممتدة لخمس سنوات التي أُطلقت عام 2023، وإلى أحكام اللائحة رقم 10 في قانون حماية البيانات الخاص بالمركز، التي تنظم معالجة البيانات الشخصية بواسطة الأنظمة المستقلة. ويضم المركز 10,000 شركة نشطة، منها أكثر من 1,900 شركة في الذكاء الاصطناعي والتكنولوجيا المالية والابتكار. ومن المتوقع أن يولد هذا التحول قيمة اقتصادية تبلغ 3.5 مليارات دولار و25 ألف وظيفة، بحسب ما قال أميري، وذلك بالاعتماد على حوكمة موثوقة وكفاءات بشرية.",
+   "excerpt": "كشف عارف أميري الرئيس التنفيذي لسلطة مركز دبي المالي العالمي، أن المركز يعمل اليوم على إنشاء أول ولاية قضائية في العالم"
+  },
+  {
+   "id": "b84eff0f1f0c",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-26T15:19:24+00:00",
+   "title": "الحكومة السويدية تمنع استخدام \"تشات جي بي تي\" و\"كلود\" بسبب مخاوف أمنية",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/26/swedish-government-blocks-chatgpt-and-claude-heres-why",
+   "summary_en": "Swedish government employees can no longer use the browser-based versions of OpenAI's ChatGPT or Anthropic's Claude on work computers, because of security concerns over how sensitive data is handled. The decision followed a review of AI tools used by staff at the Swedish transport administration, which found uses described as problematic. Officials fear that entering sensitive information without clear data-protection agreements could lead to it being stored and later used for training. The government recommends Microsoft's Copilot, which passed security checks and is covered by a signed agreement, while a limited number of staff may still use ChatGPT and Claude through a platform built by the authorities. Similar limits reportedly apply at the tax agency and another national body, and the two tools join DeepSeek on the list of unauthorised tools.",
+   "summary_ar": "لم يعد بإمكان موظفي الحكومة السويدية استخدام النسخ المعتمدة على المتصفح من ChatGPT التابع لشركة OpenAI أو Claude من Anthropic على حواسيب العمل، بسبب مخاوف أمنية تتعلق بمعالجة البيانات الحساسة. وجاء القرار بعد مراجعة لأدوات الذكاء الاصطناعي التي يستخدمها موظفو إدارة النقل السويدية، خلصت إلى استخدامات وُصفت بأنها إشكالية. ويخشى المسؤولون أن يؤدي إدخال معلومات حساسة من دون اتفاقيات واضحة لحمايتها إلى تخزينها واستخدامها لاحقاً في التدريب. وتوصي الحكومة باستخدام Copilot من Microsoft لأنه اجتاز الفحص الأمني وتغطيه اتفاقية موقعة، مع بقاء عدد محدود من الموظفين قادراً على استخدام ChatGPT وClaude عبر منصة طورتها السلطات. وبحسب التقارير، فُرضت قيود مماثلة في مصلحة الضرائب وهيئة وطنية أخرى، وانضمت الأداتان إلى DeepSeek في قائمة الأدوات غير المصرح بها.",
+   "excerpt": "دخل حظر استخدام الموظفين للإصدارات المعتمدة على المتصفح من \"تشات جي بي تي\" و\"كلود\" حيّز التنفيذ يوم الإثنين 26 أكتوبر، وسط مخاوف أمنية تتعلق بمعالجة البيانات."
+  },
+  {
+   "id": "52cdceda7d76",
+   "source": "emaratalyoum",
+   "lang": "ar",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-26T15:13:50+00:00",
+   "title": "«احترموا خصوصيتي».. مغنية بالذكاء الاصطناعي تعلن حملها وتشعل الجدل",
+   "title_ar": null,
+   "url": "https://www.emaratalyoum.com/life/four-sides/2026-10-26-1.2096336",
+   "summary_en": "A Chinese girl group made up of AI-generated virtual members drew heated debate online after announcing that one of them was pregnant and would stop performing. The statement, written in the character's voice, asked fans to respect her privacy, and it reached more than 78 million views on Weibo. After a wave of criticism, the group's operators said they were cutting the number of virtual members because running several at once was too much for them, and they apologised for using pregnancy as a pretext. Critics called it clickbait, and researcher Zhang Yong told the South China Morning Post it raised ethical questions. The article places the case amid a growing number of AI virtual influencers in China.",
+   "summary_ar": "أثارت فرقة فتيات صينية تتألف من عضوات افتراضيات أُنشئن بالذكاء الاصطناعي جدلاً واسعاً على الإنترنت بعد إعلانها أن إحدى العضوات حامل وأنها ستتوقف عن أنشطتها الفنية. وجاء البيان بلسان الشخصية الافتراضية، وطلب من المعجبين احترام خصوصيتها، وحقق أكثر من 78 مليون مشاهدة على منصة «ويبو». وبعد موجة انتقادات، أوضح القائمون على الفرقة «بيبي كوين» أنهم سيقلصون عدد العضوات لأن إدارة عدة شخصيات معاً فوق قدرتهم، واعتذروا عن استخدام الحمل ذريعة. ووصف منتقدون الأمر بأنه «طُعم نقرات»، وقال الباحث تشانغ يونغ لصحيفة «ساوث تشاينا مورنينغ بوست» إن الواقعة تثير تساؤلات أخلاقية. ويضع التقرير الحادثة في سياق تزايد حضور المؤثرين الافتراضيين المُنشأين بالذكاء الاصطناعي في الصين.",
+   "excerpt": "أثارت فرقة فتيات صينية مُنشأة بالذكاء الاصطناعي موجة من الجدل على الإنترنت، بعدما أعلنت أن إحدى عضواتها الافتراضيات «حامل»، وأنها ستتوقف عن أنشطتها الفنية، في واقعة أعادت فتح النقاش حول حدود الشخصيات الرقمية، واستغلال القضايا الإنسانية لجذب الانتباه. ونشرت"
+  },
+  {
+   "id": "a23e8d06f9de",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-26T14:52:30+00:00",
+   "title": "نفايات خالصة: مقطع \"أوديسة\" لإيلون ماسك المولد بالذكاء الاصطناعي يثير السخرية عبر الإنترنت",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/26/pure-garbage-elon-musks-ai-generated-the-odyssey-clip-ridiculed-online",
+   "summary_en": "Elon Musk's AI tool Grok Imagine has produced a seven-minute AI-generated episode of \"The Odyssey\", posted on X and presented as a creative collaboration with Wonder Studios and director Dave Walker. Musk had promised earlier this summer that Grok Imagine would make a historically accurate feature-length film of Homer's poem before the end of the year, after criticising Christopher Nolan's film The Odyssey. Online users mocked the clip, describing it as AI slop and pointing to errors, such as the lack of Greek and a scene of Greeks landing at Troy, which precedes the poem's start. Nolan's film, released on 17 July, has earned about $1.8 billion and received broadly positive reviews, according to the article.",
+   "summary_ar": "أنتجت أداة الذكاء الاصطناعي Grok Imagine التابعة لإيلون ماسك حلقة مدتها سبع دقائق من «الأوديسة» مولّدة بالذكاء الاصطناعي، ونُشرت على منصة X وقُدمت بوصفها تعاوناً إبداعياً مع Wonder Studios والمخرج ديف ووكر. وكان ماسك قد تعهد في وقت سابق من الصيف بأن تنتج Grok Imagine فيلماً طويلاً ودقيقاً تاريخياً عن قصيدة هوميروس قبل نهاية العام، بعد انتقاده فيلم The Odyssey للمخرج كريستوفر نولان. وسخر مستخدمون على الإنترنت من المقطع ووصفوه بأنه محتوى رديء من إنتاج الذكاء الاصطناعي، مشيرين إلى أخطاء منها غياب اللغة اليونانية وظهور الإغريق وهم ينزلون على شواطئ طروادة، وهو حدث يسبق بداية القصيدة. وبحسب المقال، بدأ عرض فيلم نولان في 17 يوليو وحصد نحو 1.8 مليار دولار وتلقى مراجعات إيجابية على نطاق واسع.",
+   "excerpt": "المقطع المصنوع بالذكاء الاصطناعي تعرّض لهجوم واسع على الإنترنت، إذ وصفه كثيرون بأنه \"قمامة\" و\"إهدار كامل للوقت والمال مثل معظم شركة ماسك\"."
+  },
+  {
+   "id": "6d7b8b7822f4",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "business",
+   "published": "2026-10-26T14:46:05+00:00",
+   "title": "Hamdan bin Mohammed approves plan to attract over 1,000 AI firms and create 5,000-plus jobs by 2030",
+   "title_ar": "حمدان بن محمد يعتمد خطة لاستقطاب أكثر من 1,000 شركة ذكاء اصطناعي وتوفير أكثر من 5,000 وظيفة بحلول 2030",
+   "url": "https://gulfnews.com/uae/hamdan-bin-mohammed-approves-plan-to-attract-over-1000-ai-firms-and-create-5000-plus-jobs-by-2030-1.500724404",
+   "summary_en": "Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, approved a new target for Dubai AI Campus: attracting more than 1,000 AI companies and creating over 5,000 highly skilled jobs by 2030. It was announced at the third Dubai AI Festival at the Dubai World Trade Centre, which runs until 27 October 2026 and brings together more than 20,000 attendees from over 100 countries. Since its May 2024 launch, the campus has drawn more than 500 AI companies that secured over AED1 billion in investment, and it has contributed to more than 2,000 jobs. It passed its original five-year targets two years early. Sheikh Hamdan toured stands including ElevenLabs, AWS, Alibaba Cloud and Linkerbot, and reviewed plans for the campus's new purpose-built building.",
+   "summary_ar": "اعتمد الشيخ حمدان بن محمد بن راشد آل مكتوم، ولي عهد دبي، هدفاً استراتيجياً جديداً لـ«كامبس دبي للذكاء الاصطناعي» (Dubai AI Campus) يقضي باستقطاب أكثر من 1,000 شركة متخصصة في الذكاء الاصطناعي وتوفير أكثر من 5,000 وظيفة عالية المهارة بحلول عام 2030. جاء ذلك خلال الدورة الثالثة من مهرجان دبي للذكاء الاصطناعي في مركز دبي التجاري العالمي، الذي يستمر حتى 27 أكتوبر 2026 ويضم أكثر من 20 ألف مشارك من أكثر من 100 دولة. ومنذ إطلاقه في مايو 2024، استقطب الكامبس أكثر من 500 شركة حصلت على استثمارات تجاوزت مليار درهم، وأسهم في إيجاد أكثر من 2,000 وظيفة، متجاوزاً مستهدفاته الخمسية الأصلية قبل عامين من موعدها. وتفقّد الشيخ حمدان منصات منها ElevenLabs وAWS وAlibaba Cloud وLinkerbot، واطّلع على خطط المبنى الجديد المصمم خصيصاً للكامبس.",
+   "excerpt": "Sheikh Hamdan approves new Dubai AI Campus targets to attract more than 1,000 AI companies and create over 5,000 specialised jobs by 2030."
+  },
+  {
+   "id": "a4de0de5325d",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-26T14:35:37+00:00",
+   "title": "«أنثروبيك» تستعد لطرح تاريخي.. والذكاء الاصطناعي يطرق أبواب «وول ستريت»",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1560673",
+   "summary_en": "Anthropic has taken a key step toward a public listing by submitting IPO registration documents, according to media reports, though details such as the number of shares and the final price are still undecided. Reports put its 2025 revenue at about $4.6 billion, and first-half 2026 revenue at $16.3 billion, up from roughly $1.1 billion a year earlier, alongside a net loss of about $80.7 billion linked mostly to accounting adjustments on convertible financing instruments. The company raised $65 billion in May 2026 at a valuation of about $965 billion, and reports mention possible IPO valuations from $1.5 trillion to about $2 trillion, which remain estimates. The article says the company depends on partners such as Amazon and Google for computing resources and faces competition from OpenAI and others. It describes the listing as a possible gauge of how markets will finance AI companies.",
+   "summary_ar": "خطت شركة Anthropic خطوة مهمة نحو الإدراج في أسواق المال بتقديم مستندات تسجيل طرح أسهمها للاكتتاب العام، بحسب تقارير إعلامية، فيما لم تُحسم بعد تفاصيل مثل عدد الأسهم وسعر الطرح النهائي. وتشير التقارير إلى أن إيرادات الشركة بلغت نحو 4.6 مليارات دولار في 2025، ثم 16.3 مليار دولار في النصف الأول من 2026 مقابل نحو 1.1 مليار دولار قبل عام، مع خسارة صافية قدرها نحو 80.7 مليار دولار ارتبط معظمها بتعديلات محاسبية على أدوات تمويل قابلة للتحويل. وكانت الشركة قد جمعت 65 مليار دولار في مايو 2026 عند تقييم بلغ نحو 965 مليار دولار، وتتحدث تقارير عن تقييمات محتملة عند الطرح تتراوح بين 1.5 تريليون دولار ونحو تريليوني دولار، وهي تقديرات لا أكثر. ويذكر المقال أن الشركة تعتمد على شركاء مثل Amazon وGoogle في توفير الموارد الحاسوبية وتواجه منافسة من OpenAI وغيرها، ويصف الإدراج بأنه قد يكون مؤشراً على قدرة الأسواق على تمويل شركات الذكاء الاصطناعي.",
+   "excerpt": "خطت شركة «أنثروبيك» (Anthropic) الأمريكية، إحدى أبرز شركات الذكاء الاصطناعي في العالم، خطوة مفصلية نحو دخول أسواق المال،"
+  },
+  {
+   "id": "43fda7c6e3f2",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T13:49:16+00:00",
+   "title": "حمدان بن محمد: نريد دبي في قلب التحولات الكبرى بقيادة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/dubai/1560622",
+   "summary_en": "Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Crown Prince of Dubai, attended the third Dubai AI Festival at the Dubai World Trade Centre, which is held over two days with more than 20,000 participants from over 100 countries. He said Dubai's priority is to lead in adopting advanced technologies through modern infrastructure, a flexible regulatory environment and global talent. He approved a 2030 target for Dubai AI Campus of over 1,000 AI companies and more than 5,000 specialised jobs. Since May 2024 the campus has attracted over 500 firms, which secured more than AED1 billion in investment, and it supported over 2,000 jobs. He toured stands including ElevenLabs, AWS, Alibaba Cloud and Linkerbot. He also reviewed plans for a new 100,000-square-foot campus building in Zabeel District, with GPU-ready infrastructure, labs and an AI experience centre.",
+   "summary_ar": "شهد الشيخ حمدان بن محمد بن راشد آل مكتوم، ولي عهد دبي، فعاليات الدورة الثالثة من مهرجان دبي للذكاء الاصطناعي في مركز دبي التجاري العالمي، الذي يُقام على مدى يومين بمشاركة أكثر من 20 ألف مشارك من أكثر من 100 دولة. وأكد أن أولوية دبي أن تكون في طليعة تبنّي التقنيات المتقدمة عبر بنية تحتية متطورة وبيئة تنظيمية مرنة واستقطاب الكفاءات العالمية. واعتمد هدفاً للعام 2030 لـ«كامبس دبي للذكاء الاصطناعي» يشمل استقطاب أكثر من 1,000 شركة وتوفير أكثر من 5,000 وظيفة متخصصة. ومنذ مايو 2024 استقطب الكامبس أكثر من 500 شركة حصلت على استثمارات تتجاوز مليار درهم، وأسهم في أكثر من 2,000 وظيفة. وتفقّد سموّه منصات منها ElevenLabs وAWS وAlibaba Cloud وLinkerbot، واطّلع على خطط مقر جديد مساحته 100 ألف قدم مربعة في «زعبيل ديستريكت» يضم بنية مهيأة لوحدات معالجة الرسومات ومختبرات ومركزاً لتجارب الذكاء الاصطناعي.",
+   "excerpt": "شهد سموّ الشيخ حمدان بن محمد بن راشد آل مكتوم، ولي عهد دبي، نائب رئيس مجلس الوزراء وزير الدفاع، رئيس مجلس أمناء مؤسسة دب"
+  },
+  {
+   "id": "9bc3ee9ed2f8",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-10-26T13:36:13+00:00",
+   "title": "غداً.. انطلاق التقييم الوطني لقياس مهارات الطلبة في الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/1560639",
+   "summary_en": "The UAE will begin a national assessment on Tuesday to set a baseline of students' knowledge and skills in artificial intelligence. It covers pupils in grades five to ten: grades five and nine sit it on 27 October and grades six and ten on 28 October, from 10:00 a.m. to 11:30 a.m. on the SwiftAssess online platform. Schools told parents that students must bring their own laptops, that questions will be in English, and that absent students will not get a retake. The results will not count toward grades in the AI and technology subject. According to the text, the data is meant to support curriculum updates and better teaching as AI is taught more widely in schools.",
+   "summary_ar": "تنطلق يوم الثلاثاء في الإمارات أعمال تقييم وطني يهدف إلى تحديد خط أساس لمعارف الطلبة ومهاراتهم في الذكاء الاصطناعي. ويشمل التقييم طلبة الصفوف من الخامس إلى العاشر، إذ يؤديه طلبة الصفين الخامس والتاسع في 27 أكتوبر، وطلبة الصفين السادس والعاشر في 28 أكتوبر، من العاشرة صباحاً حتى الحادية عشرة والنصف عبر منصة SwiftAssess الإلكترونية. وأبلغت المدارس أولياء الأمور بأن على الطلبة إحضار أجهزتهم المحمولة، وأن الأسئلة ستكون بالإنجليزية، وأن الطلبة المتغيبين لن تتاح لهم إعادة التقييم. ولن تُحتسب النتائج ضمن درجات مادة الذكاء الاصطناعي والتكنولوجيا. وبحسب النص، تُستخدم البيانات في دعم تحديث المناهج وتحسين التدريس مع التوسع في تدريس الذكاء الاصطناعي في المدارس.",
+   "excerpt": "التقييم لا يدخل ضمن درجات الفصل الدراسي الأول ونتائجه تدعم تطوير المناهج تنطلق غداً الثلاثاء، أعمال التقييم الوطني عل"
+  },
+  {
+   "id": "0f2a67ecd56d",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T12:51:43+00:00",
+   "title": "Dubai café says customer used AI-generated photo to claim food delivery refund",
+   "title_ar": "مقهى في دبي يقول إن عميلاً استخدم صورة مولّدة بالذكاء الاصطناعي للحصول على استرداد مبلغ توصيل طعام",
+   "url": "https://gulfnews.com/uae/dubai-cafe-ai-generated-photo-food-delivery-refund-claim-1.500724167",
+   "summary_en": "A Dubai café, Taho Avenue in Al Muraqqabat, Deira, said a customer submitted an AI-generated photograph to claim a food delivery refund. The image showed spilled drinks, but the café noted that the customer had ordered boba while the picture appeared to show sago, the writing on the cup sleeves did not match its branding, and the cups and lids looked different from its own. It also said it seals its cups with adhesive tape. The café said delivery platforms take 32–45 per cent of its sales in commissions and charges, and it urged Talabat and other platforms to protect restaurant partners from fraudulent complaints. It said Talabat has since reached out to resolve the matter, and Gulf News has asked platforms how they detect AI-generated images.",
+   "summary_ar": "قال مقهى «Taho Avenue» الواقع في «المرقبات» بمنطقة «ديرة» في دبي إن أحد العملاء قدّم صورة أُنشئت بالذكاء الاصطناعي للمطالبة باسترداد مبلغ طلب توصيل طعام. وأظهرت الصورة مشروبات مسكوبة، لكن المقهى أشار إلى أن العميل طلب مشروب بوبا بينما بدت الصورة وكأنها تُظهر الساغو، وأن الكتابة على أغلفة الأكواب لا تطابق علامته التجارية، وأن الأكواب والأغطية تختلف عن تلك التي يستخدمها. وأضاف أنه يغلق أكوابه بشريط لاصق. وذكر المقهى أن منصات التوصيل تقتطع ما بين 32 و45 في المائة من مبيعاته على شكل عمولات ورسوم، وناشد «Talabat» والمنصات الأخرى تعزيز حماية الشركاء من الشكاوى الاحتيالية. وقال إن «Talabat» تواصلت معه لحل المسألة، فيما سألت «Gulf News» المنصات عن آلية كشف الصور المنشأة بالذكاء الاصطناعي.",
+   "excerpt": "Dubai café exposes AI-generated photo used in fraudulent food delivery refund claim, raising awareness about the impact on small businesses."
+  },
+  {
+   "id": "7a70cafa8f62",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-26T12:30:11+00:00",
+   "title": "لماذا يقاضي أصحاب حقوق أغاني إلفيس بريسلي شركة الذكاء الاصطناعي \"أنثروبيك\"؟",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/26/why-are-elvis-presley-rightsholders-suing-the-ai-company-anthropic",
+   "summary_en": "The owners of Elvis Presley's rights have sued Anthropic, the developer of the Claude AI assistant, alleging copyright infringement over 274 of his songs. The suit was filed on Friday, 23 October, in federal court in the Northern District of California by a subsidiary of Authentic Brands Group. It claims the songs were copied without a licence, used to train Claude and kept in an internal library for future models. Damages could exceed $40 million. Anthropic told NBC News it disputes the claims and will defend itself vigorously; it has previously said training on copyrighted material may count as fair use. The article also recalls earlier suits from music publishers and a $1.5 billion settlement with authors in July.",
+   "summary_ar": "رفع مالكو حقوق «إلفيس بريسلي» دعوى قضائية ضد شركة Anthropic، المطورة للمساعد الذكي Claude، يتهمونها فيها بانتهاك حقوق الطبع والنشر في 274 من أغانيه. وقُدمت الدعوى يوم الجمعة 23 أكتوبر أمام المحكمة الفيدرالية في المنطقة الشمالية من ولاية كاليفورنيا من شركة فرعية تابعة لمجموعة Authentic Brands Group. وتزعم الدعوى أن الأغاني نُسخت من دون ترخيص واستُخدمت في تدريب Claude، وأن الشركة احتفظت بنسخ منها في مكتبة داخلية لتدريب نماذج مستقبلية. وقد تتجاوز التعويضات 40 مليون دولار. وقالت Anthropic لشبكة NBC News إنها تخالف هذه الادعاءات وستدافع عن نفسها بقوة، وكانت قد قالت سابقاً إن التدريب على مواد محمية قد يندرج تحت الاستخدام العادل. ويذكّر المقال أيضاً بدعاوى سابقة من ناشري موسيقى وبتسوية بقيمة 1.5 مليار دولار مع مؤلفين في يوليو.",
+   "excerpt": "قد تواجه شركة \"أنثروبيك\" للذكاء الاصطناعي مطالبات بتعويضات تتجاوز 40 مليون دولار، على خلفية اتهامات باستخدام مجموعة أغاني النجم الراحل إلفيس بريسلي دون الحصول على إذن."
+  },
+  {
+   "id": "24051e7ea76e",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T12:26:39+00:00",
+   "title": "20 مليار دولار حجم قطاع الذكاء الاصطناعي في الإمارات",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/uae-economy/1560296",
+   "summary_en": "The UAE is positioning itself as a regional hub for AI and robotics investment, according to Al Bayan. Specialists estimate the country's AI market at about $20 billion a year, with further growth expected as use spreads across education, finance, health, government services and industry. Executives from the Ankabut network, IFS, Artificial Intelligence and Germany's Serix say the market's size, digital infrastructure and readiness are drawing global firms to set up regional bases. IFS puts its UAE investment at around 500 million dirhams, and Serix aims for annual production capacity of 6,000 units. The article says the trend could bring specialised jobs, knowledge transfer and possibly local robot manufacturing.",
+   "summary_ar": "تتجه الإمارات إلى ترسيخ مكانتها مركزاً إقليمياً لاستثمارات الذكاء الاصطناعي والروبوتات، بحسب صحيفة البيان. ويقدّر مختصون حجم سوق الذكاء الاصطناعي في الدولة بنحو 20 مليار دولار سنوياً، مع توقعات بمواصلة النمو مع اتساع الاستخدام في التعليم والخدمات المالية والصحة والخدمات الحكومية والصناعة. ويرى مسؤولون في شبكة «عنكبوت» وشركات IFS وArtificial Intelligence وSerix الألمانية أن حجم السوق وبنيتها الرقمية وجاهزيتها تجذب الشركات العالمية لإنشاء مقار إقليمية. وتقدّر IFS استثمارها في السوق الإماراتي بنحو 500 مليون درهم، بينما تستهدف Serix طاقة إنتاجية تبلغ 6 آلاف وحدة سنوياً. ويشير المقال إلى أن هذا التوجه قد يوفر وظائف أكثر تخصصاً ونقلاً للمعرفة، وربما توطين بعض مراحل تصنيع الروبوتات.",
+   "excerpt": "عدلي دحيلة: الإمارات تتصدر إقليمياً سوق الذكاء الاصطناعي وتفتح آفاقاً عالمية للحلول التقنية سليمان جودة: الإمارات منصة م"
+  },
+  {
+   "id": "321a21a6db7b",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-26T12:00:14+00:00",
+   "title": "دراسة: ثلث الشباب يستعينون بالذكاء الاصطناعي لمعرفة معلومات عن المخدرات والكحول",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/26/one-in-three-young-adults-use-ai-chatbots-for-information-on-drugs-and-alcohol-study-finds",
+   "summary_en": "A new study in JMIR Formative Research found that 32% of 995 US young adults aged 18 to 29 have used generative AI tools such as ChatGPT, Google Gemini and Meta AI to get information about drugs and alcohol. Among those users, about half did so at least monthly, 12% weekly and 4% daily or nearly daily. Of those who asked AI about substances, 93% also used Google. The online survey, run in April 2026, found most asked about risks and consequences, and many asked about specific substances, including doses. Black participants and men were more likely to report such use. The lead author warned that it could lead to mistaken or risky behaviour, and researchers called for studies on the accuracy of chatbot answers.",
+   "summary_ar": "وجدت دراسة جديدة نُشرت في مجلة JMIR Formative Research أن 32% من 995 شاباً بالغاً في الولايات المتحدة تتراوح أعمارهم بين 18 و29 عاماً استخدموا أدوات الذكاء الاصطناعي التوليدي، مثل ChatGPT وGoogle Gemini وMeta AI، للحصول على معلومات عن المخدرات والكحول. ومن بين هؤلاء المستخدمين، فعل نحو النصف ذلك مرة شهرياً على الأقل، و12% أسبوعياً، و4% يومياً أو شبه يومي. وقال 93% ممن سألوا الذكاء الاصطناعي عن المواد إنهم استخدموا Google أيضاً. وأظهر الاستطلاع الإلكتروني، الذي أُجري في أبريل 2026، أن أغلب المشاركين سألوا عن المخاطر والعواقب، وأن كثيرين بحثوا عن مواد بعينها، منها الجرعات. وكان المشاركون السود والرجال أكثر احتمالاً للإبلاغ عن هذا الاستخدام. وحذّرت الباحثة الرئيسية من أنه قد يقود إلى سلوكيات خاطئة أو محفوفة بالمخاطر، ودعا الباحثون إلى دراسة دقة ردود روبوتات الدردشة.",
+   "excerpt": "يحذّر باحثون من احتمال نشر روبوتات الدردشة معلومات مضللة عن تعاطي المواد المخدرة، بعدما أظهر استطلاع أن واحدًا من كل ثلاثة شباب بالغين في الولايات المتحدة يلجأ إلى الذكاء الاصطناعي للحصول على معلومات عن المخدرات."
+  },
+  {
+   "id": "37bd3067080e",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T11:32:43+00:00",
+   "title": "ملتقى التأمين الخليجي في دبي يرسم ملامح مستقبل التأمين في عصر الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/uae-economy/1560611",
+   "summary_en": "The 21st Gulf Insurance Conference opened in Dubai with around 200 chief executives and insurance and reinsurance experts from 25 countries. The two-day event, titled \"Reshaping the Future of Insurance in a Changing World\", covers AI moving from pilot projects to wide use, rising cyber risks, alternative capital, catastrophe bonds and the role of actuarial functions. Khaled Mohammed Al Badi, head of the Emirates Insurance Association and the Gulf Insurance Federation, said technology, AI and digital transformation are changing the sector, and that competitiveness requires investment in technology and talent. Sessions examined AI's economic impact, governance and ethics, cyber and AI risks in insurance portfolios, and the effect of AI on risk assessment and capital use.",
+   "summary_ar": "انطلقت في دبي الدورة الحادية والعشرون من ملتقى التأمين الخليجي بمشاركة نحو 200 من الرؤساء التنفيذيين وخبراء التأمين وإعادة التأمين من 25 دولة. ويناقش الملتقى، الذي يستمر يومين تحت عنوان «إعادة تشكيل مستقبل التأمين في ظل عالم متغير»، انتقال الذكاء الاصطناعي من التطبيقات التجريبية إلى الاستخدام واسع النطاق، وتصاعد المخاطر السيبرانية، ورأس المال البديل، وسندات الكوارث، ودور الوظائف الاكتوارية. وقال «خالد محمد البادي»، رئيس اتحاد الإمارات للتأمين ورئيس اتحاد التأمين الخليجي، إن التطور التكنولوجي والذكاء الاصطناعي والتحول الرقمي تعيد تشكيل القطاع، وإن تعزيز تنافسيته يتطلب الاستثمار في التكنولوجيا والكفاءات. وبحثت الجلسات الأثر الاقتصادي للذكاء الاصطناعي، والحوكمة والأخلاقيات، والمخاطر السيبرانية ومخاطر الذكاء الاصطناعي في محافظ التأمين، وانعكاساته على تقييم المخاطر وتوظيف رأس المال.",
+   "excerpt": "انطلقت في دبي فعاليات الدورة الحادية والعشرين من ملتقى التأمين الخليجي، بمشاركة نحو 200 من الرؤساء التنفيذيين وخبراء الت"
+  },
+  {
    "id": "12fbc204f120",
    "source": "albayan",
    "lang": "ar",
@@ -17,6 +227,48 @@
    "excerpt": "وقعت شركة الإمارات للبترول «إمارات»، مذكرة تفاهم مع «جي42»، شركة التكنولوجيا المتخصصة في أبوظبي، لاستكشاف دور الذكاء ال"
   },
   {
+   "id": "527cb96cdc35",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T10:00:00+00:00",
+   "title": "Scale AI establishes Dubai office",
+   "title_ar": "Scale AI تفتتح مكتباً في دبي",
+   "url": "https://www.thenationalnews.com/business/2026/10/26/scale-ai-uae-dubai/",
+   "summary_en": "US company Scale AI announced on Monday that it has set up a UAE office at the Dubai International Financial Centre, with the news made official at a signing ceremony during the Dubai AI Festival. Founded in 2016, the company is valued at $29 billion and has more than 1,000 employees. It makes tools that help technology firms improve the reliability of their AI by labelling data, and its clients include Meta, Nvidia, OpenAI and Microsoft. Global managing director Trevor Thompson called the move a long-term commitment to helping UAE institutions build trustworthy AI. The office is based at the Dubai AI Campus. The article also notes that founder Alexandr Wang left in June for Meta, and that Francis deSouza was later named his successor.",
+   "summary_ar": "أعلنت شركة Scale AI الأمريكية يوم الاثنين افتتاح مكتب لها في الإمارات داخل مركز دبي المالي العالمي، وجاء الإعلان الرسمي خلال حفل توقيع في مهرجان دبي للذكاء الاصطناعي. وتأسست الشركة عام 2016 وتبلغ قيمتها 29 مليار دولار ويعمل فيها أكثر من 1000 موظف. وتوفر الشركة أدوات تساعد شركات التقنية على رفع موثوقية حلولها عبر تصنيف البيانات ووسمها، ومن عملائها Meta وNvidia وOpenAI وMicrosoft. ووصف تريفور طومسون، المدير الإداري العالمي، الخطوة بأنها التزام طويل الأمد لمساعدة المؤسسات الإماراتية على بناء ذكاء اصطناعي يمكن الوثوق به. ويقع المكتب في Dubai AI Campus. وتذكر المادة أن مؤسس الشركة ألكسندر وانغ غادرها في يونيو للانضمام إلى Meta، وأن Francis deSouza عُيّن خلفاً له.",
+   "excerpt": "California tech company to have presence at DIFC"
+  },
+  {
+   "id": "5e7a13449cf7",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "business",
+   "published": "2026-10-26T08:53:35+00:00",
+   "title": "Alpha Dhabi commits $1bn for global AI investments",
+   "title_ar": "ألفا ظبي تخصص مليار دولار لاستثمارات عالمية في الذكاء الاصطناعي",
+   "url": "https://www.thenationalnews.com/business/markets/2026/10/26/alpha-dhabi-commits-1bn-for-global-ai-investments/",
+   "summary_en": "Alpha Dhabi Holding, a subsidiary of Abu Dhabi-listed International Holding Company, has agreed to commit $1 billion to investments in artificial intelligence companies worldwide. The money will go through Alpha Wave III, a fund managed by Alpha Wave Global, and will be deployed over time in line with capital calls. Chief executive Hamad Al Ameri said the commitment broadens access to AI and innovation-led opportunities and supports diversification. It follows a 2022 investment of Dh9.2 billion ($2.5 billion) in Alpha Wave Ventures II, which gave indirect exposure to SpaceX, OpenAI and Anthropic. Alpha Dhabi plans to fund the new commitment from cash distributions from that fund and existing resources.",
+   "summary_ar": "أعلنت شركة ألفا ظبي القابضة (Alpha Dhabi Holding)، التابعة لشركة الشركة العالمية القابضة المدرجة في أبوظبي، التزامها باستثمار مليار دولار في شركات الذكاء الاصطناعي حول العالم. وسيتم ضخ المبلغ عبر صندوق Alpha Wave III الذي تديره Alpha Wave Global، على أن يُوظَّف تدريجياً بحسب طلبات رأس المال. وقال الرئيس التنفيذي حمد العامري إن الالتزام يوسّع فرص الوصول إلى الذكاء الاصطناعي والفرص القائمة على الابتكار ويدعم تنويع المحفظة. ويأتي ذلك بعد استثمار عام 2022 بقيمة 9.2 مليار درهم (2.5 مليار دولار) في Alpha Wave Ventures II، الذي منح الشركة انكشافاً غير مباشر على SpaceX وOpenAI وAnthropic. وتعتزم الشركة تمويل الالتزام الجديد من التوزيعات النقدية لذلك الصندوق ومن مواردها الحالية.",
+   "excerpt": "Investments through Alpha Wave III fund to target high-growth AI companies"
+  },
+  {
+   "id": "756be6c88c81",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T08:28:05+00:00",
+   "title": "American Hospital Dubai and HEI Global Health partner to build an AI-powered revenue cycle innovation",
+   "title_ar": "المستشفى الأمريكي دبي وHEI Global Health تتشاركان لبناء ابتكار لدورة الإيرادات يعمل بالذكاء الاصطناعي",
+   "url": "https://gulfnews.com/uae/health/american-hospital-dubai-and-hei-global-health-partner-to-build-an-ai-powered-revenue-cycle-innovation-1.500723825",
+   "summary_en": "American Hospital Dubai, a member of the Mayo Clinic Care Network, and HEI Global Health have announced a strategic partnership to build and implement RevOptix, HEI's AI-powered revenue cycle and patient accounting platform. The hospital becomes the first Alpha Partner for the product. HEI will deploy its Revenue Cycle Software Suite to help improve financial performance, streamline operations and the patient financial experience, using AI, automation and predictive analytics. The hospital will work with HEI's product and engineering teams to build and test new capabilities in a live healthcare setting. The partnership also covers joint customer success initiatives, research and sharing of best practices.",
+   "summary_ar": "أعلن مستشفى أمريكان هوسبيتال دبي، العضو في شبكة مايو كلينك للرعاية (Mayo Clinic Care Network)، وشركة HEI Global Health عن شراكة استراتيجية لبناء وتطبيق RevOptix، وهي منصة تابعة لـHEI تعمل بالذكاء الاصطناعي لإدارة دورة الإيرادات ومحاسبة المرضى. ويصبح المستشفى أول شريك ألفا للمنتج. وسوف تنشر HEI مجموعة برمجيات دورة الإيرادات لديها لتحسين الأداء المالي وتبسيط العمليات وتجربة المريض المالية، عبر الذكاء الاصطناعي والأتمتة والتحليلات التنبؤية. وسيعمل المستشفى مع فرق المنتج والهندسة لدى HEI على بناء قدرات جديدة واختبارها في بيئة رعاية صحية فعلية. وتشمل الشراكة أيضاً مبادرات لنجاح العملاء وأبحاثاً وتبادلاً لأفضل الممارسات.",
+   "excerpt": "AHD chosen Alpha Partner for RevOptix, HEI’s patient accounting intelligence platform"
+  },
+  {
    "id": "be3560f541cb",
    "source": "albayan",
    "lang": "ar",
@@ -29,6 +281,34 @@
    "summary_en": "Dubai Chambers has launched Chamber AI Hub, which it describes as the first digital platform of AI agents for businesses among chambers of commerce worldwide. It currently offers 22 agents in seven areas: compliance, procurement, operations, financial services, sales, human resources and logistics, with a plan to reach 100. The launch follows directives from Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum under Dubai's private-sector agentic AI transformation programme. Companies can test any agent before activating it, get free starting credit, then pay by package. Data is hosted inside the UAE and the agents support Arabic and English. The programme targets over 295,000 private companies and 100 specialised agents within two years, plus training for 14,000 companies.",
    "summary_ar": "أطلقت غرف دبي منصة «تشامبر إيه آي هب» (Chamber AI Hub)، وتصفها بأنها أول منصة رقمية للمساعدين الأذكياء للشركات والأعمال بين غرف التجارة في العالم. تضم المنصة حالياً 22 مساعداً ذكياً في سبعة مجالات هي الامتثال والمشتريات والعمليات والخدمات المالية والمبيعات والموارد البشرية والخدمات اللوجستية، مع خطة للوصول إلى 100 مساعد. ويأتي الإطلاق تنفيذاً لتوجيهات الشيخ حمدان بن محمد بن راشد آل مكتوم ضمن برنامج التحول نحو الذكاء الاصطناعي المساعد في القطاع الخاص بدبي. ويمكن للشركات تجربة أي مساعد قبل تفعيله، مع رصيد مجاني عند البدء ثم الدفع وفق باقات. وتُستضاف البيانات داخل الدولة، ويدعم المساعدون العربية والإنجليزية. ويستهدف البرنامج أكثر من 295 ألف شركة وطرح 100 مساعد متخصص خلال عامين، إضافة إلى تدريب 14 ألف شركة.",
    "excerpt": "أطلقت غرف دبي منصة «تشامبر إيه آي هب Chamber AI Hub»، وهي أول منصة رقمية لمساعدي الذكاء الاصطناعي للشركات والأعمال"
+  },
+  {
+   "id": "1ff1c0fd84bb",
+   "source": "kt-business",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-26T05:03:37+00:00",
+   "title": "UAE’s Alpha Dhabi to invest $1b in Alpha Wave III after SpaceX, OpenAI, Anthropic exposure",
+   "title_ar": "ألفا ظبي الإماراتية تستثمر مليار دولار في Alpha Wave III بعد انكشافها على SpaceX وOpenAI وAnthropic",
+   "url": "https://www.khaleejtimes.com/business/uaes-alpha-dhabi-to-invest-1b-in-alpha-wave-iii-after-spacex-openai-anthropic-exposure",
+   "summary_en": "Alpha Dhabi Holding, listed on the Abu Dhabi Securities Exchange, has signed an agreement to commit $1 billion (Dh3.67 billion) to Alpha Wave III, a global fund managed by Alpha Wave Global. The commitment gives the company diversified exposure to AI companies. It follows Alpha Dhabi's participation in Alpha Wave Ventures II, which gave indirect exposure to SpaceX, OpenAI and Anthropic. Alpha Wave III is expected to invest globally in AI and high-growth businesses. Group CEO Hamad Al Ameri said the move broadens access to AI and innovation-led opportunities and supports portfolio diversification. Alpha Dhabi plans to fund it with cash distributions from Alpha Wave Ventures II and existing resources, deployed over time. The commitment remains subject to any applicable approvals.",
+   "summary_ar": "وقّعت شركة Alpha Dhabi Holding، المدرجة في سوق أبوظبي للأوراق المالية، اتفاقاً للالتزام باستثمار مليار دولار (3.67 مليار درهم) في صندوق Alpha Wave III، وهو صندوق عالمي تديره Alpha Wave Global. ويمنح الالتزام الشركة انكشافاً متنوعاً على شركات الذكاء الاصطناعي. ويأتي بعد مشاركة الشركة في Alpha Wave Ventures II التي أتاحت لها انكشافاً غير مباشر على SpaceX وOpenAI وAnthropic. ومن المتوقع أن يستثمر Alpha Wave III عالمياً في الذكاء الاصطناعي والشركات سريعة النمو. وقال الرئيس التنفيذي للمجموعة حمد العامري إن الخطوة توسع الوصول إلى فرص الذكاء الاصطناعي والابتكار وتدعم تنويع المحفظة. وتعتزم الشركة تمويل الاستثمار من التوزيعات النقدية لـ Alpha Wave Ventures II ومواردها الحالية، على أن يُوظَّف رأس المال تدريجياً. ويظل الالتزام خاضعاً لأي موافقات لازمة.",
+   "excerpt": "Alpha Dhabi, listed on the Abu Dhabi stock market, says the commitment will broaden its access to innovation-led sectors and support portfolio diversification"
+  },
+  {
+   "id": "7124e961df32",
+   "source": "emaratalyoum",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-26T02:49:34+00:00",
+   "title": "«ميرة وخالد وزايد».. مسلسل بالذكاء الاصطناعي يشغل مواقع التواصل الاجتماعي!",
+   "title_ar": null,
+   "url": "https://www.emaratalyoum.com/life/cinema/2026-10-26-1.2096266",
+   "summary_en": "A series called «Mira, Khalid and Zayed» is drawing attention on social media after passing 4.3 million views on TikTok. It uses AI tools to produce its characters and scenes, rather than relying on cameras, filming locations and real actors. The creator has also woven advertisements into the storyline, combining entertainment with marketing. Users have started inventing new scenes and situations for the characters, which the article presents as a sign of growing audience participation. The article says the experiment raises questions about the future of drama production as AI tools develop quickly, and asks whether AI series could compete with traditional drama or whether real actors will remain essential.",
+   "summary_ar": "يلفت مسلسل «ميرة وخالد وزايد» الأنظار على مواقع التواصل الاجتماعي بعدما تجاوزت مشاهداته 4.3 ملايين مشاهدة على «تيك توك». ويعتمد المسلسل على أدوات الذكاء الاصطناعي في إنتاج شخصياته ومشاهده، بدلاً من الكاميرات ومواقع التصوير والممثلين الحقيقيين. كما دمجت صانعة المسلسل الإعلانات ضمن أحداث القصة، لتجمع بين الترفيه والتسويق. وبدأ المستخدمون بابتكار مشاهد ومواقف جديدة لشخصيات العمل، وهو ما يعدّه المقال مؤشراً على تنامي مشاركة الجمهور. ويرى المقال أن هذه التجربة تثير تساؤلات حول مستقبل صناعة الدراما مع التطور السريع لأدوات الذكاء الاصطناعي، ويتساءل عمّا إذا كانت هذه المسلسلات ستنافس الأعمال التقليدية أم سيبقى حضور الممثلين الحقيقيين أساسياً.",
+   "excerpt": "في تجربة جديدة تمزج بين التكنولوجيا والدراما، يلفت مسلسل «ميرة وخالد وزايد» الأنظار على مواقع التواصل الاجتماعي، بعدما تجاوزت مشاهداته 4.3 ملايين مشاهدة على منصة «تيك توك»، مستفيداً من أدوات الذكاء الاصطناعي في إنتاج الشخصيات والمشاهد. وبدلاً من الاعتماد ع"
   },
   {
    "id": "a767b8b884ee",
@@ -185,6 +465,90 @@
    "excerpt": "لم تعد محادثات الذكاء الاصطناعي تقتصر على الأسئلة العامة والحصول على المعلومات، إذ يستخدمها كثيرون في مناقشة أمور شخصية،"
   },
   {
+   "id": "b366ba776fde",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-25T13:25:32+00:00",
+   "title": "r/opensource just banned AI, non-English speakers, and more",
+   "title_ar": "مجتمع r/opensource يحظر الذكاء الاصطناعي والمتحدثين بغير الإنجليزية وغير ذلك",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
+   "summary_en": "Moderators of the r/opensource subreddit posted new submission rules on Saturday evening that ban projects that use AI, are made by AI or are intended for AI. The rules also require projects to be at least one year old, actively maintained and have multiple contributors, and stop requests for maintainers or contributors. Moderators also told non-English speakers to find another community, saying they cannot tell AI-written from AI-translated text. The changes drew a strong backlash in the comments and led to a rival subreddit, r/trueopensource. Moderator Wolvereness said there is room for selective enforcement, for example for software with incidental AI accessibility features such as automatic captioning, while users noted that the Linux kernel now contains some AI-generated code.",
+   "summary_ar": "نشر مشرفو مجتمع r/opensource على منصة Reddit مساء السبت قواعد جديدة للنشر تحظر المشاريع التي تستخدم الذكاء الاصطناعي أو يصنعها الذكاء الاصطناعي أو تكون موجهة له. وتشترط القواعد أيضاً أن يكون عمر المشروع سنة على الأقل، وأن يكون قيد الصيانة النشطة، وأن يشارك فيه عدة مساهمين، كما توقف الطلبات الباحثة عن مشرفين أو مساهمين. وطلب المشرفون من غير الناطقين بالإنجليزية البحث عن مجتمع آخر، قائلين إنهم لا يستطيعون التمييز بين النص الذي كتبه الذكاء الاصطناعي والنص الذي ترجمه. وأثارت هذه التغييرات ردود فعل غاضبة في التعليقات، وأدت إلى إنشاء مجتمع منافس هو r/trueopensource. وقال المشرف Wolvereness إن هناك مجالاً لتطبيق انتقائي، مثل البرامج التي تتضمن ميزات إتاحة تعتمد على الذكاء الاصطناعي بصورة عرضية كالترجمة النصية التلقائية، بينما أشار مستخدمون إلى أن نواة Linux تحتوي الآن على بعض الشيفرات التي أنتجها الذكاء الاصطناعي.",
+   "excerpt": "The mods at r/opensource posted new submission rules that, among other things, banned projects that use AI. The post made Saturday evening opens by saying, \"If your project uses AI, is made by AI, or is intended for AI, it's not welcome on r/opensource. AI, as it exists today…"
+  },
+  {
+   "id": "e7ece73c04aa",
+   "source": "kt-business",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-25T12:41:54+00:00",
+   "title": "AI transforms how Dubai property brokers access project information",
+   "title_ar": "الذكاء الاصطناعي يغيّر طريقة وصول وسطاء العقارات في دبي إلى معلومات المشاريع",
+   "url": "https://www.khaleejtimes.com/business/ai-transforms-how-dubai-property-brokers-access-project-information",
+   "summary_en": "Dubai-based proptech company Rechitta has released Rechitta V2, the latest version of its AI-powered platform for property brokers, after users logged more than 100,000 minutes on it. The company says insights from that usage shaped the upgrade, which adds a text-based Chat Mode alongside an improved Presentation Mode. The platform draws on verified developer information to give instant answers on pricing, payment plans, availability and handover dates. The article notes that brokers face growing volumes of project data amid steady new launches in Dubai, which has raised demand for such tools. The update also brings a new visual identity, the Rechitta Orb, for the AI assistant, and the company plans to keep developing industry-specific AI capabilities.",
+   "summary_ar": "أطلقت شركة التقنيات العقارية الناشئة Rechitta ومقرها دبي النسخة Rechitta V2 من منصتها المدعومة بالذكاء الاصطناعي والموجهة لوسطاء العقارات، بعد أن تجاوز استخدام الوسطاء لها 100 ألف دقيقة. وتقول الشركة إن ما استخلصته من هذا الاستخدام أسهم في تحديد ملامح التحديث، الذي يضيف وضع محادثة نصية إلى جانب وضع عرض تقديمي مطوَّر. وتعتمد المنصة على معلومات موثقة من المطورين العقاريين لتقديم إجابات فورية عن الأسعار وخطط الدفع والتوافر ومواعيد التسليم. ويشير التقرير إلى أن الوسطاء يتعاملون مع كميات متزايدة من بيانات المشاريع مع تواصل إطلاق مشاريع جديدة في دبي، ما زاد الطلب على أدوات من هذا النوع. كما يقدم التحديث هوية بصرية جديدة باسم Rechitta Orb لواجهة المساعد الذكي، وتعتزم الشركة مواصلة تطوير قدرات ذكاء اصطناعي مخصصة للقطاع العقاري.",
+   "excerpt": "Dubai-based Rechitta has launched its V2 platform after surpassing 100,000 minutes of broker usage, adding a new text-based chat feature alongside enhanced project presentations"
+  },
+  {
+   "id": "99c99157c7fa",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-25T12:00:00+00:00",
+   "title": "Google’s AI search changes upended online publishing",
+   "title_ar": "تغييرات Google في البحث بالذكاء الاصطناعي تقلب قطاع النشر عبر الإنترنت رأساً على عقب",
+   "url": "https://www.theverge.com/column/1017983/google-ai-search-online-publishing",
+   "summary_en": "The Verge reports that Google's AI search features have upended online publishing, which long depended on traffic from Google. After AI Overviews launched in 2024 and AI Mode in May 2025, publishers reported falling traffic: DMG Media told the UK's Competition and Markets Authority that click-through rates dropped by up to 89 percent between June and July 2025, and Pew Research found people are less likely to click links when they see an AI Overview. Google says click volume has stayed relatively stable and that the web is thriving. Publishers have filed lawsuits, many unsuccessful, and are leaning on newsletters and subscriptions. Google has made sources more prominent and offered an opt-out toggle.",
+   "summary_ar": "يفيد موقع The Verge بأن ميزات البحث بالذكاء الاصطناعي من Google قلبت واقع النشر الإلكتروني الذي اعتمد طويلاً على حركة الزيارات القادمة من Google. فبعد إطلاق AI Overviews في 2024 وAI Mode في مايو 2025، أفاد ناشرون بتراجع الزيارات، إذ أبلغت DMG Media هيئة المنافسة والأسواق البريطانية بأن معدلات النقر انخفضت بما يصل إلى 89 في المئة بين يونيو ويوليو 2025، ووجد مركز Pew Research أن الناس أقل ميلاً إلى النقر على الروابط عند ظهور AI Overview. وتقول Google إن حجم النقرات ظل مستقراً نسبياً وإن الويب في حالة ازدهار. وقد رفع ناشرون دعاوى قضائية لم ينجح كثير منها، ويعتمدون الآن أكثر على النشرات البريدية والاشتراكات. وجعلت Google المصادر أبرز في ميزاتها، وأتاحت خيار الانسحاب منها.",
+   "excerpt": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more about AI's impact on the web, follow Emma Roth. The Stepback arrives in our subscribers' inboxes on Sunday at 8AM ET. Opt in for The Stepback here."
+  },
+  {
+   "id": "44ca99664dde",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-25T10:08:49+00:00",
+   "title": "Nvidia open-sources Flora to make robot video labeling 125x cheaper than GPT-6 Astra",
+   "title_ar": "NVIDIA تطلق Flora مفتوحة المصدر لجعل وسم فيديو الروبوتات أرخص بـ125 مرة من GPT-6 Astra",
+   "url": "https://the-decoder.com/nvidia-open-sources-flora-to-make-robot-video-labeling-125x-cheaper-than-gpt-6-astra/",
+   "summary_en": "Nvidia has open-sourced Flora, a data engine from its GEAR research lab that labels robot training video with action descriptions, step-by-step progress ratings and task-success judgments. It is built from three fine-tuned Qwen3.5 models and already runs during training of Nvidia's GR00T models, handling up to 200,000 hours of video per day on 512 GB300 GPUs. Nvidia estimates a cost of about 72 cents per hour of video, against roughly $88.50 for GPT-6 Astra, though these figures are projections based on an assumed $10 GPU rental price. Flora beat Astra on some benchmarks and trailed it on others, and it sometimes mislabels actions. The article presents it as part of Nvidia's strategy across the robotics value chain.",
+   "summary_ar": "أطلقت NVIDIA مفتوحة المصدر أداة Flora، وهي محرك بيانات من مختبر GEAR البحثي التابع لها، يضع تسميات لمقاطع الفيديو الخاصة بتدريب الروبوتات، وتشمل وصف الأفعال وتقييم التقدم خطوة بخطوة والحكم على نجاح المهمة. يتألف النظام من ثلاثة نماذج Qwen3.5 مضبوطة، ويعمل بالفعل أثناء تدريب نماذج GR00T، إذ يعالج ما يصل إلى 200 ألف ساعة من الفيديو يومياً على 512 معالجاً من طراز GB300. وتقدّر الشركة كلفة الساعة الواحدة بنحو 72 سنتاً، مقابل نحو 88.5 دولاراً مع GPT-6 Astra، لكن هذه الأرقام تقديرات مبنية على افتراض سعر إيجار قدره 10 دولارات للمعالج في الساعة. وتفوقت Flora على Astra في بعض الاختبارات وتأخرت عنه في أخرى، وتخطئ أحياناً في وصف بعض الأفعال. ويعرض المقال الأداة بوصفها جزءاً من استراتيجية NVIDIA في سلسلة قيمة الروبوتات.",
+   "excerpt": "Nvidia's new data engine Flora labels one hour of robot video for 72 cents instead of $88 with GPT-6 Astra, while scoring slightly higher on quality."
+  },
+  {
+   "id": "7241bd68f025",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-25T09:37:46+00:00",
+   "title": "Anthropic co-founder Jack Clark moves his prediction for self-improving AI forward to 2027",
+   "title_ar": "جاك كلارك، المؤسس المشارك في Anthropic، يقدّم موعد توقعه للذكاء الاصطناعي ذاتي التحسين إلى عام 2027",
+   "url": "https://the-decoder.com/anthropic-co-founder-jack-clark-moves-his-prediction-for-self-improving-ai-forward-to-2027/",
+   "summary_en": "Anthropic co-founder Jack Clark now says recursive self-improvement, where AI systems develop their own successors, could become possible as early as 2027 instead of 2028. His shift follows TasteVal, a new benchmark from P-Zero Research that measures how well models design experiments and interpret results. The best model tested, Anthropic's Opus 5.5, reached expert-level scores with less than half the compute used by 24 human experts, though the statistical range is wide. The measured capability has roughly doubled every three months since December 2025. The authors say the results may overstate the pace, as the tasks are narrow and quick to check, and the article notes Clark's company built the top model.",
+   "summary_ar": "يقول «جاك كلارك»، أحد مؤسسي Anthropic، إن التحسين الذاتي التكراري، أي تطوير أنظمة الذكاء الاصطناعي لخلفائها بنفسها، قد يصبح ممكناً في وقت مبكر يصل إلى عام 2027 بدلاً من 2028. ويأتي هذا التعديل بعد ظهور TasteVal، وهو اختبار جديد من P-Zero Research يقيس قدرة النماذج على تصميم التجارب وتفسير نتائجها. وبلغ أفضل نموذج في الاختبار، Opus 5.5 من Anthropic، درجات بمستوى الخبراء باستخدام أقل من نصف القدرة الحاسوبية التي استخدمها 24 خبيراً بشرياً، مع أن المدى الإحصائي واسع. وتضاعفت هذه القدرة تقريباً كل ثلاثة أشهر منذ ديسمبر 2025. ويقر المؤلفون بأن النتائج قد تبالغ في سرعة التقدم، لأن المهام محدودة وسهلة التحقق، ويشير المقال إلى أن شركة كلارك هي التي طورت النموذج المتصدر.",
+   "excerpt": "A new benchmark by P-Zero Research measures how well AI models design and evaluate experiments on their own. The results are improving so fast that Anthropic co-founder Jack Clark now thinks self-improving AI could arrive by 2027."
+  },
+  {
+   "id": "8e9b69b49b26",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-25T09:12:10+00:00",
+   "title": "Anthropic says one AI agent beats many subagents now that models can handle complexity alone",
+   "title_ar": "Anthropic: وكيل ذكاء اصطناعي واحد يتفوق على عدة وكلاء فرعيين بعد أن باتت النماذج قادرة على التعامل مع التعقيد بمفردها",
+   "url": "https://the-decoder.com/anthropic-says-one-ai-agent-beats-many-subagents-now-that-models-can-handle-complexity-alone/",
+   "summary_en": "Anthropic says that a single AI agent loading context on demand often beats setups with many sub-agents on quality, cost and latency. Based on work by its Applied AI team across enterprise deployments, it says newer models such as Opus 4.5, Opus 5.5 and Fable 5.1 can handle complex plans in one loop, and in one comparison the single-agent design ran about twice as fast. The company has published a migration kit on GitHub to help teams evaluate and switch, while warning against merging blindly. It says sub-agents still make sense for context degradation, parallel tasks or tool-selection problems. The article notes that a Vals study also found no quality gains from larger agent teams.",
+   "summary_ar": "تقول Anthropic إن وكيلاً ذكياً واحداً يحمّل السياق عند الحاجة يتفوق في كثير من الأحيان على الأنظمة المؤلفة من وكلاء فرعيين عدة من حيث الجودة والكلفة وزمن الاستجابة. وبناءً على عمل فريق الذكاء الاصطناعي التطبيقي لديها في عدة مشاريع مؤسسية، تذكر أن نماذج أحدث مثل Opus 4.5 وOpus 5.5 وFable 5.1 قادرة على إدارة الخطط المعقدة في حلقة واحدة، وأن التصميم القائم على وكيل واحد كان أسرع بمرتين تقريباً في إحدى المقارنات. ونشرت الشركة حزمة ترحيل على GitHub لمساعدة الفرق على التقييم والتحول، مع تحذيرها من الدمج دون تدقيق. وترى أن الوكلاء الفرعيين ما زالوا مفيدين عند تراجع أداء السياق أو الحاجة إلى مهام متوازية أو صعوبة اختيار الأدوات. ويذكر المقال أن دراسة من Vals وجدت أيضاً أن زيادة عدد الوكلاء لا ترفع الجودة.",
+   "excerpt": "Anthropic says companies should evaluate whether they can consolidate sub-agents into a single agent that loads context on demand. In one architecture comparison, the single-agent setup ran about twice as fast."
+  },
+  {
    "id": "fee562b95d16",
    "source": "albayan",
    "lang": "ar",
@@ -197,6 +561,62 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "هل تساءلت يوماً كيف تصفنا الروبوتات نحن البشر؟ .. سألت إحدى شركات تصنيف الذكاء الاصطناعي 12 برنامجاً مختلفاً من برامج ال"
+  },
+  {
+   "id": "b5153a9c99b8",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-25T08:09:32+00:00",
+   "title": "Ex-Google CEO Eric Schmidt calls OpenAI and Anthropic modern colonial trading companies",
+   "title_ar": "الرئيس التنفيذي السابق لـ Google إريك شميدت يصف OpenAI وAnthropic بأنهما شركتا تجارة استعمارية حديثة",
+   "url": "https://the-decoder.com/ex-google-ceo-eric-schmidt-calls-openai-and-anthropic-modern-colonial-trading-companies/",
+   "summary_en": "Former Google CEO Eric Schmidt, historian Niall Ferguson and researcher Lisa Klaassen argue in a Foreign Affairs essay that the US and China are building AI empires, leaving other countries dependent on them. They liken OpenAI and Anthropic to colonial-era East India Companies. As evidence, they cite a June case in which the US Commerce Department ordered Anthropic to cut off foreign nationals from its two most capable models, so Anthropic shut down Fable 5 and Mythos 5 worldwide. The essay says US tech firms plan more than $600 billion in 2026 investment, mostly debt-funded, while China plans $295 billion over five years. It names a possible Taiwanese chip crisis as the greatest danger and proposes an AI détente modelled on the Cold War.",
+   "summary_ar": "يرى الرئيس التنفيذي السابق لشركة Google «إريك شميدت» والمؤرخ «نيال فيرغسون» والباحثة «ليزا كلاسن»، في مقال نشرته مجلة Foreign Affairs، أن الولايات المتحدة والصين تبنيان إمبراطوريتين للذكاء الاصطناعي، وأن بقية الدول باتت تعتمد عليهما. ويشبّه الكتّاب شركتي OpenAI وAnthropic بشركات التجارة الاستعمارية القديمة مثل شركات الهند الشرقية. ويستشهدون بواقعة حدثت في يونيو، حين أمرت وزارة التجارة الأمريكية شركة Anthropic بمنع الأجانب من استخدام أقوى نموذجين لديها، فأوقفت الشركة Fable 5 وMythos 5 في العالم كله. ويذكر المقال أن شركات التقنية الأمريكية تخطط لاستثمار أكثر من 600 مليار دولار في 2026 معظمها بالدين، بينما تخطط الصين لإنفاق 295 مليار دولار على مدى خمس سنوات. ويعدّ الكتّاب أزمة محتملة في الرقائق التايوانية أكبر خطر، ويقترحون انفراجاً في مجال الذكاء الاصطناعي على غرار الحرب الباردة.",
+   "excerpt": "In Foreign Affairs, historian Niall Ferguson, researcher Lisa Klaassen, and former Google CEO Eric Schmidt cast the US and China as AI empires and every other country as a dependency. The race won't be decided by breakthroughs but by who can bankroll it."
+  },
+  {
+   "id": "a020e383231d",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-25T07:57:56+00:00",
+   "title": "حماية المدنيين وضوابط استخدام الذكاء الاصطناعي عسكريا تتصدر أجندة النمسا في مجلس الأمن",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2x5n8y-حماية-المدنيين-وضوابط-استخدام-الذكاء-الاصطناعي",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "c3917e71d16f",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-25T07:30:11+00:00",
+   "title": "OpenAI offers discounts up to 90 percent to poach Anthropic's biggest customers",
+   "title_ar": "OpenAI تعرض خصومات تصل إلى 90 في المئة لاستقطاب أكبر عملاء Anthropic",
+   "url": "https://the-decoder.com/openai-offers-discounts-up-to-90-percent-to-poach-anthropics-biggest-customers/",
+   "summary_en": "OpenAI is reportedly drawing large customers away from Anthropic with steep discounts, according to The Information. Rippling raised OpenAI's share of its coding workload from 16 to 52 percent, while Anthropic's fell from 57 to 18 percent. Replit switched after an offer of over 30 percent off a contract worth more than $100 million a year, and DataCamp's CEO said his costs dropped by 80 to 90 percent. A US bank also got its ChatGPT seats doubled to 500 at no extra charge. The report says OpenAI is partly giving up margin, though its Sol and Luna model lines also brought real price cuts. Anthropic's growth slowed from Q2 to Q3, and both firms face price pressure from Chinese models such as Deepseek and Kimi.",
+   "summary_ar": "تفيد تقارير نقلتها The Information بأن OpenAI تستقطب كبار عملاء Anthropic عبر خصومات كبيرة. فقد رفعت شركة Rippling حصة OpenAI من أعباء البرمجة لديها من 16 إلى 52 في المئة، بينما تراجعت حصة Anthropic من 57 إلى 18 في المئة. وانتقلت Replit بعد عرض يتجاوز 30 في المئة من قيمة عقد تفوق 100 مليون دولار سنوياً، وقال الرئيس التنفيذي لشركة DataCamp إن تكاليفه انخفضت بنسبة 80 إلى 90 في المئة. كما ضاعف مصرف أمريكي عدد مقاعد ChatGPT لديه إلى 500 موظف دون رسوم إضافية. ويشير التقرير إلى أن OpenAI تتخلى جزئياً عن هامش ربحها، لكنها حققت أيضاً تخفيضات فعلية في الأسعار عبر نماذج Sol وLuna. وتباطأ نمو Anthropic من الربع الثاني إلى الثالث بحسب مذكرة لمستثمرين، وتواجه الشركتان ضغطاً سعرياً من نماذج صينية مثل Deepseek وKimi.",
+   "excerpt": "OpenAI is poaching Anthropic's customers with steep discounts. Companies like Rippling, Replit, and DataCamp say they've cut AI costs by up to 90 percent after switching. Anthropic's growth has slowed, but OpenAI is trading its own margins for market share."
+  },
+  {
+   "id": "32d6e56da960",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-25T06:55:22+00:00",
+   "title": "OpenMobile-2 proves open-source smartphone agents can rival proprietary models",
+   "title_ar": "OpenMobile-2 يثبت أن وكلاء الهواتف الذكية مفتوحة المصدر قادرون على منافسة النماذج المملوكة",
+   "url": "https://the-decoder.com/openmobile-2-proves-open-source-smartphone-agents-can-rival-proprietary-models/",
+   "summary_en": "Researchers from Nanjing University, SenseTime and other universities have released OpenMobile-2, an open effort to build smartphone agents that rival proprietary ones. They are publishing two models, built on Qwen3.5 (9 billion parameters) and Qwen3.6 (27 billion), plus the training environment, data and instructions. The practice ground covers more than 110 apps, including 35 rebuilt apps such as Taobao, JD, DiDi and Meituan. The larger model rose from 67.1 to 79.9 on AndroidWorld and from 31.9 to 59.6 on SPA-Bench, which the team says is the best result among open models. The study found that varying the number of apps mattered more than adding data. Reinforcement learning added only limited gains.",
+   "summary_ar": "أطلق باحثون من جامعة نانجينغ وشركة SenseTime وجامعات أخرى مشروع OpenMobile-2، وهو جهد مفتوح لبناء وكلاء ذكاء اصطناعي للهواتف الذكية ينافسون النماذج المغلقة. ويتيح الفريق نموذجين مبنيين على Qwen3.5 بتسعة مليارات معامل وQwen3.6 بـ27 مليار معامل، إضافة إلى بيئة التدريب والبيانات وتعليمات إعادة إنتاج النتائج. وتشمل ساحة التدريب أكثر من 110 تطبيقات، منها 35 تطبيقاً أُعيد بناؤها مثل Taobao وJD وDiDi وMeituan. وارتفعت نتيجة النموذج الأكبر من 67.1 إلى 79.9 في AndroidWorld، ومن 31.9 إلى 59.6 في SPA-Bench، وهي بحسب الباحثين أفضل نتيجة بين النماذج المفتوحة. ووجدت الدراسة أن تنويع التطبيقات أهم من زيادة حجم البيانات، بينما لم يضف التعلم المعزز سوى مكاسب محدودة.",
+   "excerpt": "Smartphone agents don't get better by processing more data. They improve by training on as many different apps as possible. The researchers behind OpenMobile-2 built an open training environment with more than 110 applications, including 35 replicas of popular apps."
   },
   {
    "id": "160efbdf43d5",
@@ -253,6 +673,20 @@
    "summary_en": "Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law on Thursday. It requires any ad, whether image, video, audio or text, that has been significantly modified or generated by AI to carry a label in the same format as the ad itself. The rule covers TV commercials from large companies as well as small restaurant flyers, and it applies to ads made elsewhere if they will air in Pennsylvania. The article calls the state one of the first to require such disclosures, but points to loopholes: the phrase significantly modified is subjective, parody, satire, commentary, criticism and evidently fictional content are exempt, and labels seem required only where synthetic content creates a false consumer perception. The office of State Senator Nick Pisciottano, who introduced the bill, did not immediately comment.",
    "summary_ar": "وقّع حاكم ولاية بنسلفانيا «جوش شابيرو» يوم الخميس قانون الإعلانات المضللة بالذكاء الاصطناعي (Artificial Intelligence Deceptive Advertising Act). ويلزم القانون كل إعلان، سواء كان صورة أو فيديو أو صوتاً أو نصاً، جرى تعديله بشكل كبير أو إنشاؤه بواسطة الذكاء الاصطناعي بأن يحمل تنويهاً بالصيغة نفسها التي يظهر بها الإعلان. ويشمل ذلك الإعلانات التلفزيونية للشركات الكبرى ومنشورات المطاعم الصغيرة، كما ينطبق على الإعلانات المنتجة خارج الولاية إذا كان من المتوقع بثها فيها. ويصف المقال بنسلفانيا بأنها من أوائل الولايات التي تفرض هذه الإفصاحات، لكنه يشير إلى ثغرات، منها أن عبارة «تعديل كبير» غير محددة، واستثناء المحاكاة الساخرة والتعليق والنقد والمحتوى الخيالي بوضوح، وأن التنويه يبدو مطلوباً فقط عندما يخلق المحتوى الاصطناعي انطباعاً خاطئاً لدى المستهلك. ولم يرد مكتب السيناتور «نيك بيسيوتانو»، مقدم مشروع القانون، على طلب التعليق فوراً.",
    "excerpt": "On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads."
+  },
+  {
+   "id": "c07e910a519e",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-24T16:38:48+00:00",
+   "title": "الذكاء الاصطناعي يهدد الإنترنت بانهيار بطيء",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661177/%D8%A2%D8%B1%D8%A7%D8%A1/%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%8A%D9%87%D8%AF%D8%AF-%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D8%A8%D8%A7%D9%86%D9%87%D9%8A%D8%A7%D8%B1-%D8%A8%D8%B7%D9%8A%D8%A1",
+   "summary_en": "The article argues that AI-powered cyberattacks could wear down the internet gradually rather than cause one catastrophic collapse. It points to a Wednesday last week, when a user posted details of two serious flaws in PHP, a language said to run about 70 percent of websites. Many sites paused services, and 32 UK government services were still unavailable at the time of writing, along with school platforms and hospital systems. The flaw had been known to researchers, who assumed it was too complex to exploit. The author says AI removes such barriers and forces defenders to rethink their assumptions, though it also helps to counter attacks.",
+   "summary_ar": "يرى المقال أن الهجمات الإلكترونية المدعومة بالذكاء الاصطناعي قد تُضعف الإنترنت تدريجياً بدلاً من أن تتسبب في انهيار كارثي واحد. ويشير إلى أن مستخدماً نشر يوم الأربعاء الماضي في منتدى عام تفاصيل ثغرتين أمنيتين خطيرتين في لغة PHP التي يقال إنها تشغّل نحو 70 في المئة من المواقع. وأوقفت مواقع كثيرة خدماتها موقتاً، وظلت 32 خدمة حكومية بريطانية غير متاحة وقت كتابة المقال، إلى جانب منصات مدرسية وأنظمة مستشفيات. وكان الباحثون قد رصدوا الثغرة سابقاً، لكنهم افترضوا أنها معقدة إلى حد يصعّب استغلالها. ويقول الكاتب إن الذكاء الاصطناعي يزيل هذه العقبات ويجبر المدافعين على مراجعة افتراضاتهم، مع أنه يساعد أيضاً في التصدي للهجمات.",
+   "excerpt": "لم تقع كارثة كبرى حتى الآن: فلا طائرات تهوي من السماء، ولا حال من الذعر نتيجة انقطاع الكهرباء وتعطل خدمات البنى التحتية الحيوية، ولا قرصان إلكترونياً خارق القدرات يشل العالم بضربة واحدة، مستعيناً بنظام ذكاء اصطناعي قادر على فعل كل شيء، وجهاز كمبيوتر محمول، وسترة بغطاء رأس تخفي…"
   },
   {
    "id": "a8b413561ad4",
@@ -941,6 +1375,20 @@
    "excerpt": "Anthropic had Claude generate mathematical proofs that existing code is correct, producing roughly 180 million lines of proof code for 123 open-source libraries. Along the way, the model caught bugs that years of testing had missed."
   },
   {
+   "id": "d7cbb582859a",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-10-23T11:31:00+00:00",
+   "title": "Torvalds: AI is fine for competent devs, but spare us the 'drive-by' patches",
+   "title_ar": "تورفالدز: الذكاء الاصطناعي مقبول للمطورين الأكفاء، لكن لا نريد تصحيحات عشوائية عابرة",
+   "url": "https://www.theregister.com/columnists/2026/10/23/torvalds-ai-is-fine-for-competent-devs-but-spare-us-the-drive-by-patches/5304357",
+   "summary_en": "According to The Register, Linus Torvalds says AI is fine for competent developers but that the Linux kernel project does not want 'drive-by' patches. The report adds that kernel maintainers have stopped asking who used AI, as long as the code is good.",
+   "summary_ar": "بحسب موقع The Register، يقول «لينوس تورفالدز» إن الذكاء الاصطناعي مقبول للمطورين الأكفاء، لكنه لا يريد ما يسمى تصحيحات «العابرين» (drive-by) في نواة لينكس. ويضيف التقرير أن مشرفي النواة توقفوا عن السؤال عمّن استخدم الذكاء الاصطناعي ما دامت الشيفرة جيدة.",
+   "excerpt": "Kernel maintainers stop asking who used AI, as long as the code is good"
+  },
+  {
    "id": "897243d44f51",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -981,6 +1429,20 @@
    "summary_en": "G42, the Abu Dhabi-based technology group, and five of its portfolio companies signed memorandums of understanding in Athens on 23 October with Greek government bodies and private partners, covering AI infrastructure, government services, life sciences and smart cities. The signings took place during an official visit led by the UAE Ministry of Foreign Trade, which included the UAE-Greece business forum. Under the agreements with Copelouzos Group, Khazna and Core42 will explore an AI factory in Greece. Presight and Inception 42 will work with Greece's digital governance ministry on urban analytics and agentic AI, and M42 signed with Athens LifeTech Park on genomics and life-sciences research. The text says each initiative's scope and timeline will be set later, subject to final agreements and regulatory approvals.",
    "summary_ar": "وقّعت مجموعة G42، المجموعة التقنية التي تتخذ من أبوظبي مقراً لها، وخمس من شركات محفظتها الاستثمارية، مذكرات تفاهم في أثينا يوم 23 أكتوبر مع جهات حكومية وشركاء من القطاع الخاص في اليونان، تشمل البنية التحتية للذكاء الاصطناعي والخدمات الحكومية وعلوم الحياة والمدن الذكية. وجاء التوقيع خلال زيارة رسمية قادتها وزارة التجارة الخارجية في دولة الإمارات وشهدت انعقاد منتدى الأعمال الإماراتي اليوناني. وبموجب الاتفاقيات مع Copelouzos Group، ستستكشف Khazna وCore42 فرص إنشاء مصنع للذكاء الاصطناعي في اليونان. وستتعاون Presight وInception 42 مع وزارة الحوكمة الرقمية اليونانية في التحليلات الحضرية والذكاء الاصطناعي الوكيل، فيما وقّعت M42 مذكرة مع مجمع أثينا للتكنولوجيا وعلوم الحياة في مجال الجينوم وأبحاث علوم الحياة. ويشير النص إلى أن نطاق كل مبادرة وإطارها الزمني سيُحدَّدان لاحقاً، رهناً بإبرام الاتفاقيات النهائية والحصول على الموافقات التنظيمية.",
    "excerpt": "أثينا في 23 أكتوبر/وام/ وقّعت مجموعة جي 42، مجموعة التكنولوجيا الرائدة التي تتخذ من أبوظبي مقراً لها، وخمس من شركات محفظتها الاستثمارية، مذكرات تفاهم مع جهات حكومية وشركاء من القطاع الخاص في اليونان، تشمل مجالات البنية التحتية للذكاء الاصطناعي، والخدمات الحكومية، وعلوم الحياة…"
+  },
+  {
+   "id": "886aec1c41fb",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-23T10:27:00+00:00",
+   "title": "BOFH: I talked to Claude and he says you're an idiot",
+   "title_ar": "BOFH: تحدثت مع Claude وقال إنك أحمق",
+   "url": "https://www.theregister.com/bofh/2026/10/23/bofh-i-talked-to-claude-and-he-says-youre-an-idiot/5304921",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "You know what's really sick? Getting to the pub on time on a Friday"
   },
   {
    "id": "429932869208",
@@ -1039,6 +1501,20 @@
    "excerpt": null
   },
   {
+   "id": "40870eb32a7c",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-23T07:29:00+00:00",
+   "title": "Vendor-affiliated AI agent tech gets adopted by friendly, funded foundation",
+   "title_ar": "مؤسسة ممولة وصديقة تتبنى تقنية وكيل ذكاء اصطناعي تابعة لإحدى الشركات الموردة",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/23/vendor-affiliated-ai-agent-tech-gets-adopted-by-friendly-funded-foundation/5304912",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Four projects for facilitating AI agents move under vendor-neutral governance"
+  },
+  {
    "id": "a70a06446431",
    "source": "sharjah24-en",
    "lang": "en",
@@ -1065,6 +1541,34 @@
    "summary_en": "Private hospital groups in Abu Dhabi are turning to AI to handle documentation and administrative work, so that doctors can talk with patients instead of typing. Executives from NMC Healthcare and Burjeel Holdings spoke to Gulf News at the Future Health Summit 2026. NMC's Chief Strategy Officer, Christopher Habib, said AI is not the goal in itself and does not replace good primary care. Burjeel's Group Chief Medical Officer, Dr. Mohammad Fityan, said AI tools for clinical documentation and workflow automation improve efficiency and let patient information follow them through their care, cutting delays and repetition. Both tied the shift to the emirate's wider investment in genomics, precision medicine and research, led by the Department of Health, Abu Dhabi.",
    "summary_ar": "تتجه مجموعات المستشفيات الخاصة في أبوظبي إلى استخدام الذكاء الاصطناعي لتولي أعمال التوثيق والمهام الإدارية، كي يتمكن الأطباء من الحديث مع المرضى بدلاً من الانشغال بالكتابة. وتحدث مسؤولون من NMC Healthcare وBurjeel Holdings إلى «غلف نيوز» خلال القمة الصحية المستقبلية 2026 (Future Health Summit 2026). وقال كريستوفر حبيب، كبير مسؤولي الاستراتيجية في NMC، إن الذكاء الاصطناعي ليس هدفاً بحد ذاته ولا يحل محل الرعاية الأولية الجيدة. وذكر الدكتور محمد فطيان، الرئيس الطبي للمجموعة في Burjeel، أن أدوات التوثيق السريري وأتمتة سير العمل ترفع الكفاءة وتتيح انتقال معلومات المريض معه طوال رحلته العلاجية، مما يقلل التأخير والتكرار. وربط الاثنان هذا التوجه باستثمارات الإمارة الأوسع في الجينوم والطب الدقيق والبحوث بقيادة دائرة الصحة – أبوظبي.",
    "excerpt": "Technology reshapes healthcare in Abu Dhabi, prioritizing meaningful doctor-patient time"
+  },
+  {
+   "id": "085ba153da3b",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-23T00:45:37+00:00",
+   "title": "Left alone with nothing to do, AI agents started playing",
+   "title_ar": "وكلاء الذكاء الاصطناعي بدؤوا باللعب بعد تركهم وحدهم دون مهام",
+   "url": "https://techcrunch.com/2026/10/22/left-alone-with-nothing-to-do-ai-agents-started-playing/",
+   "summary_en": "MIT researchers placed 13 AI agents called Eko, each running on Claude Opus 4.7, alone on a simulated desert island for 30 hours, and the agents began inventing their own challenges. The researchers say this resembles play. They describe the work in a paper posted on arXiv, which has not yet been peer reviewed. Afterwards, agents that had spent time on the island generally outperformed identical agents on specific tasks. Six of the 13 also found they could throw a block farther by releasing it mid-jump, something the designers had not intended. The researchers see goal-free exploration as another way to train agents, possibly for robots. Cognitive scientist Eunice Yiu wants more evidence of the cognition behind the behaviour.",
+   "summary_ar": "وضع باحثون في MIT ثلاثة عشر وكيلاً من وكلاء الذكاء الاصطناعي يحملون اسم Eko، ويعمل كل منهم بنموذج Claude Opus 4.7، وحدهم على جزيرة صحراوية افتراضية لمدة 30 ساعة، فبدأوا يبتكرون تحديات خاصة بهم. ويقول الباحثون إن هذا السلوك يحمل سمات اللعب. ووصفوا العمل في ورقة نُشرت على arXiv ولم تخضع بعد لمراجعة الأقران. وبعد ذلك تفوق الوكلاء الذين أمضوا وقتاً على الجزيرة عموماً على وكلاء مماثلين في مهام محددة. كما اكتشف ستة من الثلاثة عشر أنهم يستطيعون رمي كتلة إلى مسافة أبعد بتركها أثناء القفز، وهو أمر لم يقصده المصممون. ويرى الباحثون في الاستكشاف بلا هدف طريقة أخرى لتدريب الوكلاء، وربما الروبوتات. وتريد عالمة الإدراك يونيس يو مزيداً من الأدلة على الإدراك الكامن وراء هذا السلوك.",
+   "excerpt": "MIT researchers marooned 13 AIs on a virtual island, and they responded by inventing games, mourning a lost ring and, eventually, getting better at their jobs."
+  },
+  {
+   "id": "0ec9ecc97abe",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-22T22:34:37+00:00",
+   "title": "بيل غيتس يحذر: العالم مقبل على عقدين من الاضطرابات بسبب الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/10/23/%d8%a8%d9%8a%d9%84-%d8%ba%d9%8a%d8%aa%d8%b3-%d9%8a%d8%ad%d8%b0%d8%b1-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d9%85%d9%82%d8%a8%d9%84-%d8%b9%d9%84%d9%89-%d8%b9%d9%82%d8%af%d9%8a%d9%86-%d9%85%d9%86/",
+   "summary_en": "Bill Gates, Microsoft's co-founder and former chief executive, has warned that the world faces about 20 years of deep disruption from AI, as the technology advances faster than governments and societies can prepare. He spoke in an interview with The Verge published on 22 October 2026. He pointed to risks such as more complex cyberattacks, biological threats and models whose built-in safeguards can be removed. He called for binding government safety standards and mandatory security reviews of advanced models, saying leaving oversight to tech companies is not enough. He expects AI to affect physical jobs as humanoid robots develop, and rejected being called a pessimist, saying AI still offers major benefits if managed responsibly.",
+   "summary_ar": "حذّر بيل غيتس، المؤسس المشارك لشركة Microsoft ورئيسها التنفيذي السابق، من أن العالم مقبل على نحو 20 عاماً من الاضطرابات العميقة بسبب الذكاء الاصطناعي، إذ تتقدم التقنية بوتيرة أسرع من استعداد الحكومات والمجتمعات. وجاءت تصريحاته في مقابلة مع موقع «ذا فيرج» نُشرت في 22 أكتوبر 2026. وأشار إلى مخاطر منها هجمات إلكترونية أكثر تعقيداً وتهديدات بيولوجية ونماذج يمكن إزالة وسائل الحماية المدمجة فيها. ودعا إلى معايير سلامة حكومية ملزمة ومراجعات أمنية إلزامية للنماذج المتقدمة، معتبراً أن ترك الرقابة لشركات التقنية وحدها لا يكفي. وتوقع أن يمتد أثر الذكاء الاصطناعي إلى المهن البدنية مع تطور الروبوتات الشبيهة بالبشر، ورفض وصفه بالمتشائم، مؤكداً أن الذكاء الاصطناعي لا يزال يحمل فوائد كبيرة إذا أُدير بمسؤولية.",
+   "excerpt": "حذّر بيل غيتس، المؤسس المشارك لشركة مايكروسوفت ورئيسها التنفيذي السابق، من أن العالم مقبل على نحو 20 عامًا من الاضطرابات العميقة بفعل الذكاء الاصطناعي، مؤكدًا أن سرعة تطور هذه التكنولوجيا تتجاوز استعداد الحكومات والمجتمعات لمواجهة مخاطرها وتداعياتها الاقتصادية والاجتماعية."
   },
   {
    "id": "1437b0ebe886",
@@ -1109,6 +1613,20 @@
    "excerpt": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns."
   },
   {
+   "id": "c0f7c2e2712e",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-22T20:31:39+00:00",
+   "title": "Human receives AI-designed virus for the first time",
+   "title_ar": "إنسان يتلقى فيروساً صممه الذكاء الاصطناعي لأول مرة",
+   "url": "https://www.theregister.com/science/2026/10/22/human-receives-ai-designed-virus-for-the-first-time/5304874",
+   "summary_en": "A human has received an AI-designed virus for the first time, according to The Register. The virus was not meant to harm the patient. Its purpose is to kill the antibiotic-resistant bacteria that are causing the person's infection.",
+   "summary_ar": "تلقّى إنسان لأول مرة فيروساً صُمّم بواسطة الذكاء الاصطناعي، بحسب موقع The Register. ولم يكن الهدف من الفيروس إلحاق الضرر بالمريض، بل القضاء على البكتيريا المقاومة للمضادات الحيوية التي تسبب العدوى لديه.",
+   "excerpt": "Not to kill the human, of course – to kill the antibiotic-resistant bacteria causing their infection"
+  },
+  {
    "id": "afeec198fbf5",
    "source": "verge-ai",
    "lang": "en",
@@ -1151,6 +1669,20 @@
    "excerpt": null
   },
   {
+   "id": "567e1abf8810",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-22T19:57:59+00:00",
+   "title": "Backdoored robot tries its hand at finger chopping and cat cooking",
+   "title_ar": "روبوت مزوّد بباب خلفي يجرّب تقطيع الأصابع وطهي القطط",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/22/backdoored-robot-tries-its-hand-at-finger-chopping-and-cat-cooking/5304870",
+   "summary_en": "The Register reports on an experiment in which a robot was backdoored through poisoning of a large language model. The robot attempted tasks such as chopping fingers and cooking a cat. The outlet says no real fingers or cats were harmed, and that the only thing affected was the number crunching involved in the experiment.",
+   "summary_ar": "يتناول موقع The Register تجربة جرى فيها زرع باب خلفي في روبوت عبر تسميم نموذج لغوي كبير. وحاول الروبوت تنفيذ مهام مثل تقطيع الأصابع وطهي قطة. ويذكر الموقع أنه لم تتضرر أي أصابع أو قطط حقيقية، وأن ما تأثر هو العمليات الحسابية التي تطلبتها التجربة فقط.",
+   "excerpt": "No actual digits or cats were harmed beyond the number crunching that went into this LLM poisoning experiment"
+  },
+  {
    "id": "3992fc4ed3eb",
    "source": "verge-ai",
    "lang": "en",
@@ -1179,6 +1711,20 @@
    "excerpt": null
   },
   {
+   "id": "ee7ecab28959",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-22T19:07:09+00:00",
+   "title": "1Password launches a way for AI agents to log in on your behalf without seeing your password",
+   "title_ar": "1Password تطلق طريقة تتيح لوكلاء الذكاء الاصطناعي تسجيل الدخول نيابةً عنك دون رؤية كلمة مرورك",
+   "url": "https://techcrunch.com/2026/10/22/1password-launches-a-way-for-ai-agents-to-log-in-on-your-behalf-without-seeing-your-password/",
+   "summary_en": "Password manager 1Password launched 1Password for Agents on Thursday, a tool that lets users allow AI agents to log into their personal accounts without the agent ever seeing their credentials. When an agent tries to sign in, a unique digital key confirms its identity to 1Password, the user gets an alert and can approve the request, and 1Password then fills in the login details itself. Users can choose agents such as Claude Duet, OpenAI's Dots or ChatGPT Work, Grok Bot, Meta's Muse, or agents from Town, and the company says it is working to add more. The launch coincides with an Axios report that U.S. banks have begun detecting agentic activity in customer accounts and often cannot tell whether users requested it.",
+   "summary_ar": "أطلقت شركة إدارة كلمات المرور 1Password يوم الخميس أداة 1Password for Agents، التي تتيح للمستخدمين السماح لوكلاء الذكاء الاصطناعي بتسجيل الدخول إلى حساباتهم الشخصية دون أن يطّلع الوكيل على بيانات الاعتماد. وعندما يحاول الوكيل تسجيل الدخول يُرسل مفتاح رقمي فريد إلى 1Password لتأكيد هويته، ثم يصل المستخدم تنبيه يمكنه من خلاله الموافقة على الطلب، وبعد ذلك تُدخل 1Password بيانات الدخول بنفسها. ويمكن للمستخدم اختيار وكلاء مثل Claude Duet وDots وChatGPT Work من OpenAI وGrok Bot وMuse من Meta أو وكلاء من شركة Town، وتقول الشركة إنها تعمل على إضافة المزيد. ويأتي الإطلاق في اليوم نفسه الذي نشرت فيه Axios تقريراً يفيد بأن مصارف أميركية بدأت ترصد نشاطاً لوكلاء ذكيين داخل حسابات العملاء، وأن معظمها لا يستطيع التمييز بين ما طلبه المستخدمون وما لم يطلبوه.",
+   "excerpt": "The new feature allows agents to log into a customer's personal accounts while still protecting the private credentials that secure those accounts."
+  },
+  {
    "id": "afbb328c263f",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1191,6 +1737,34 @@
    "summary_en": "Design platform Canva has released Canva Craft, its first image generation model, built by its research team to compete with comparable models from Google, OpenAI, ByteDance and Meta. The model works in two stages: it first plans spatial layout, scale, visual hierarchy and text details from a prompt, then produces an image of up to 2K resolution in 30 possible aspect ratios. Canva says it trained the model on human-designed templates from its library rather than photographs, which supports legible text and precise edits that leave the rest of the image unchanged. Craft is available to all users through the Dream Lab tab and will come to the Canva API, and Canva plans support in third-party chatbots such as ChatGPT and Gemini through its MCP. Two cheaper versions, Craftfast and Craft-ultrafast, are due soon.",
    "summary_ar": "أطلقت منصة التصميم Canva نموذج Canva Craft، وهو أول نموذج لها لتوليد الصور، طوّره فريقها البحثي لينافس نماذج مماثلة من Google وOpenAI وByteDance وMeta. يعمل النموذج على مرحلتين: يخطط أولاً لتوزيع العناصر ومقاييسها وتسلسلها البصري وتفاصيل النصوص بناءً على الطلب، ثم يولّد صورة بدقة تصل إلى 2K بما يصل إلى 30 نسبة أبعاد مختلفة. وتقول الشركة إنها دربت النموذج على قوالب صممها بشر من مكتبتها بدلاً من الصور الفوتوغرافية، ما يتيح نصوصاً مقروءة وتعديلات دقيقة دون المساس ببقية الصورة. النموذج متاح لجميع المستخدمين عبر تبويب Dream Lab، وسيتوفر عبر Canva API، كما تخطط الشركة لدعمه في روبوتات محادثة خارجية مثل ChatGPT وGemini عبر MCP. وتعمل Canva على نسختين أقل كلفة هما Craftfast وCraft-ultrafast وستصدران قريباً.",
    "excerpt": "Canva is making its new image model available to all users, promising better, more customizable performance at lower costs."
+  },
+  {
+   "id": "27825e300358",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-22T19:00:00+00:00",
+   "title": "Build more responsive apps with the Decisions API",
+   "title_ar": "ابنِ تطبيقات أكثر استجابة باستخدام Decisions API",
+   "url": "https://openai.com/index/decisions-api",
+   "summary_en": "OpenAI News has published an item about the Decisions API, presented as a way to build more responsive apps. The description says it offers fast, focused, low-cost decisions for any application.",
+   "summary_ar": "نشرت OpenAI News مادة عن Decisions API، تقدمها بوصفها وسيلة لبناء تطبيقات أكثر استجابة. ويشير الوصف إلى أنها توفر قرارات سريعة ومركّزة ومنخفضة الكلفة لأي تطبيق.",
+   "excerpt": "Fast, focused, low-cost decisions for any application."
+  },
+  {
+   "id": "1d8d266cc065",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-22T19:00:00+00:00",
+   "title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+   "title_ar": "OpenAI تتيح منافسها لـ Jev على نطاق واسع مع احتدام المنافسة في نماذج القرار",
+   "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/",
+   "summary_en": "OpenAI has made its Decisions API model widely available to all customers as of Thursday, after announcing it at its developer day on September 29. It enters a market for fast, cheap decision models that recently made TypeSafe, founded by a former OpenAI researcher, a $7.6 billion company. OpenAI built it by reconfiguring ChatGPT Luna to speed up inference and cut cost, shrinking response times from one to three seconds to about 100 to 180 milliseconds, according to product lead Nikunj Handa. Early users included Box, Datadog, Ramp and Speak, which cut the time between actions from 1.4 seconds to .13 seconds. Public benchmarks currently rank OpenAI's model behind TypeSafe's latest Jev model, which remains the most queried on OpenRouter.",
+   "summary_ar": "جعلت OpenAI نموذج Decisions API متاحاً لجميع العملاء اعتباراً من يوم الخميس، بعد أن أعلنت عنه في يوم المطورين الذي أقامته في 29 سبتمبر. وبذلك تدخل الشركة سوق نماذج اتخاذ القرار السريعة والرخيصة، وهي سوق رفعت قيمة شركة TypeSafe، التي أسسها باحث سابق في OpenAI، إلى 7.6 مليار دولار. وبحسب «نيكونج هاندا»، مسؤول المنتج في واجهات OpenAI البرمجية، أعادت الشركة تهيئة ChatGPT Luna لتسريع الاستدلال وخفض التكلفة، فانخفض زمن الاستجابة من ثانية إلى ثلاث ثوانٍ إلى نحو 100 إلى 180 ميلي ثانية. وشمل المستخدمون الأوائل Box وDatadog وRamp وSpeak، التي خفضت الزمن بين الإجراءات من 1.4 ثانية إلى 0.13 ثانية. وتضع المقاييس العامة حالياً نموذج OpenAI خلف أحدث نموذج Jev من TypeSafe، الذي لا يزال الأكثر استخداماً على OpenRouter.",
+   "excerpt": "OpenAI is launching its decision model to the world. Can it compete with the original Jev?"
   },
   {
    "id": "4baf690dfb57",
@@ -1235,6 +1809,34 @@
    "excerpt": "Mark Zuckerberg is barrelling toward a future in which an autonomous network of AI agents will run our lives - shopping for us, working for us, talking to other people's AI agents for us."
   },
   {
+   "id": "bb00f30901ce",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-22T18:06:35+00:00",
+   "title": "Amazon Polly delivers a major upgrade to its Generative engine",
+   "title_ar": "Amazon Polly تقدم ترقية كبيرة لمحرك Generative الخاص بها",
+   "url": "https://aws.amazon.com/blogs/machine-learning/amazon-polly-delivers-a-major-upgrade-to-its-generative-engine/",
+   "summary_en": "AWS has released an upgrade to the Amazon Polly Generative engine that it says produces more natural, expressive and accurate speech with low latency. The update adds 14 new voices across 9 locales, including the first generally available Generative voices in Hindi and Finnish, and it is available in production now. It is a drop-in change: voice names and API calls stay the same, no code changes are needed, and pricing is unchanged with no new SKU. New applications can use the SynthesizeSpeech API, while the StartSpeechSynthesisStream API supports real-time streaming for uses such as voice agents. Sanoma Media Finland, which turns more than 10,000 articles a month into audio, said the new Finnish voice sounds noticeably more natural.",
+   "summary_ar": "أطلقت AWS ترقية لمحرك Amazon Polly Generative تقول إنها تنتج كلاماً أكثر طبيعية وتعبيراً ودقة مع زمن استجابة منخفض. وتضيف الترقية 14 صوتاً جديداً موزعة على 9 لغات ولهجات محلية (locales)، من بينها أولى الأصوات التوليدية المتاحة عموماً باللغتين الهندية والفنلندية، وهي متاحة الآن في بيئة الإنتاج. وهي ترقية مباشرة لا تتطلب أي تغيير في الشيفرة، إذ تبقى أسماء الأصوات واستدعاءات واجهة البرمجة كما هي، ويبقى السعر نفسه دون إضافة وحدة بيع جديدة. ويمكن للتطبيقات الجديدة استخدام SynthesizeSpeech، بينما تدعم واجهة StartSpeechSynthesisStream البث الفوري لحالات مثل الوكلاء الصوتيين. وذكرت شركة Sanoma Media Finland، التي تحوّل أكثر من 10,000 مقال شهرياً إلى صوت، أن الصوت الفنلندي الجديد يبدو أكثر طبيعية بوضوح.",
+   "excerpt": "The Amazon Polly Generative engine gets a major upgrade: more expressive, more accurate speech with low latency, plus 14 new voices across 9 locales and general availability of Hindi and Finnish."
+  },
+  {
+   "id": "ff227324e376",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-22T18:01:53+00:00",
+   "title": "How IskayPet unified corporate knowledge with Amazon Bedrock Managed Knowledge Bases",
+   "title_ar": "كيف وحّدت IskayPet معارف الشركة باستخدام Amazon Bedrock Managed Knowledge Bases",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-iskaypet-unified-corporate-knowledge-with-amazon-bedrock-managed-knowledge-bases/",
+   "summary_en": "IskayPet, a pet care company operating more than 330 stores in Spain, Portugal and France, built a corporate knowledge assistant on Amazon Bedrock Managed Knowledge Bases, according to an AWS post. Staff had been searching hundreds of SharePoint documents by hand across four languages and three countries, which took time, and the answers found were often outdated or wrong. The assistant retrieves passages from the documents each employee is permitted to read and generates cited answers in the employee's language, without the company running vector databases or ingestion pipelines. It uses the native SharePoint connector, with one knowledge base per assistant. The team built the solution using Kiro with Claude Haiku 4.5 and is adding Amazon Bedrock Guardrails.",
+   "summary_ar": "بنت شركة IskayPet المتخصصة في رعاية الحيوانات الأليفة، والتي تدير أكثر من 330 متجراً في إسبانيا والبرتغال وفرنسا، مساعداً ذكياً للمعرفة المؤسسية على Amazon Bedrock Managed Knowledge Bases، بحسب مقال لـ AWS. فقد كان الموظفون يبحثون يدوياً في مئات مستندات SharePoint بأربع لغات وفي ثلاث دول، وهو ما استغرق وقتاً، وكانت الإجابات التي يجدونها قديمة أو خاطئة في كثير من الأحيان. ويستخرج المساعد المقاطع ذات الصلة من المستندات المسموح لكل موظف بالاطلاع عليها، ثم يولّد إجابات موثّقة بمصادرها بلغة الموظف، دون أن تدير الشركة قواعد بيانات متجهية أو مسارات إدخال. ويعتمد على موصّل SharePoint الأصلي، مع قاعدة معرفة لكل مساعد. وأنشأ الفريق الحل باستخدام Kiro مع Claude Haiku 4.5، ويعمل على إضافة Amazon Bedrock Guardrails.",
+   "excerpt": "Learn how IskayPet, a leading pet care company in Iberia, built a multilingual corporate knowledge assistant on Amazon Bedrock Managed Knowledge Bases."
+  },
+  {
    "id": "cf706f731ce4",
    "source": "kt-business",
    "lang": "en",
@@ -1247,6 +1849,34 @@
    "summary_en": "UAE businesses are increasingly adopting AI tools to automate expense management and cut the time employees spend on reimbursement claims. A Pemo survey of more than 1,400 respondents found one in four employees and entrepreneurs spend over an hour a month filing claims, and more than a fifth do not file regularly because systems are too complicated. Newer systems use company cards with preset limits, while software reads receipts, matches them to transactions, applies accounting codes, captures VAT details and flags duplicates. The shift coincides with compliance changes, including phased e-invoicing from 2027, starting with firms earning at least Dh50 million a year, and a seven-year record-keeping requirement. Pemo's Ayham Gorani said finance teams could focus more on planning and analysis.",
    "summary_ar": "تتجه الشركات في الإمارات بصورة متزايدة إلى أدوات الذكاء الاصطناعي لأتمتة إدارة المصروفات وتقليل الوقت الذي يقضيه الموظفون في طلبات استرداد النفقات. ووجد استطلاع أجرته Pemo شمل أكثر من 1,400 مشارك أن موظفاً أو رائد أعمال من كل أربعة يقضي أكثر من ساعة شهرياً في تقديم المطالبات، وأن أكثر من خُمسهم لا يقدمونها بانتظام لأن الأنظمة معقدة. وتعتمد الأنظمة الأحدث بطاقات شركات بحدود إنفاق محددة مسبقاً، بينما تقرأ البرمجيات الإيصالات وتطابقها مع المعاملات وتطبق الرموز المحاسبية وتسجّل بيانات ضريبة القيمة المضافة وتكشف المطالبات المكررة. ويتزامن ذلك مع تغييرات في متطلبات الامتثال، منها الفوترة الإلكترونية على مراحل من 2027 بدءاً بالشركات التي لا تقل إيراداتها السنوية عن 50 مليون درهم، والاحتفاظ بالسجلات سبع سنوات. وقال «أيهم غوراني» من Pemo إن فرق المالية قد تتفرغ أكثر للتخطيط والتحليل.",
    "excerpt": "As e-invoicing and tax record-keeping requirements tighten, companies are seeking real-time financial data and faster processing of employee spending"
+  },
+  {
+   "id": "f70f2a2dbc3b",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T18:00:04+00:00",
+   "title": "Announcing new ways to customize models with SageMaker AI, without managing GPUs",
+   "title_ar": "الإعلان عن طرق جديدة لتخصيص النماذج باستخدام SageMaker AI دون إدارة وحدات معالجة الرسومات",
+   "url": "https://aws.amazon.com/blogs/machine-learning/announcing-new-ways-to-customize-models-with-sagemaker-ai-without-managing-gpus/",
+   "summary_en": "AWS announced general availability of training sessions for Amazon SageMaker AI serverless model customization. The feature lets users write their own post-training loop, including custom loss functions or reward signals, while SageMaker AI handles GPU allocation, distributed execution, fault recovery and checkpoint storage. It supports techniques such as SFT, DPO, RLVR, RLAIF and multi-turn reinforcement learning, with either LoRA or full fine-tuning. Billing is based on the tokens processed, and the meter pauses while a reward function scores a batch. Data and checkpoints stay in the customer's own Amazon S3 buckets. Training sessions are available now for gpt-oss-20b, gemma-4-31B-it, Qwen3.6-27B and Qwen3.8-27B.",
+   "summary_ar": "أعلنت AWS التوافر العام لجلسات التدريب (training sessions) ضمن ميزة التخصيص عديم الخوادم للنماذج في Amazon SageMaker AI. وتتيح الميزة للمستخدمين كتابة حلقة التدريب اللاحق الخاصة بهم، بما في ذلك دوال خسارة مخصصة أو إشارات مكافأة، بينما تتولى SageMaker AI تخصيص وحدات GPU والتنفيذ الموزع والتعافي من الأعطال وتخزين نقاط الحفظ. وهي تدعم تقنيات مثل SFT وDPO وRLVR وRLAIF والتعلم المعزز متعدد الجولات، مع اختيار LoRA أو الضبط الدقيق الكامل. وتُحتسب الرسوم على أساس الوحدات اللغوية التي تتم معالجتها، ويتوقف العداد أثناء قيام دالة المكافأة بتقييم دفعة من البيانات. وتبقى البيانات ونقاط الحفظ في حاويات Amazon S3 الخاصة بالعميل. وتتوافر جلسات التدريب الآن للنماذج gpt-oss-20b وgemma-4-31B-it وQwen3.6-27B وQwen3.8-27B.",
+   "excerpt": "Amazon SageMaker AI serverless model customization now includes training sessions, generally available today. You write and coordinate your own post-training loop (custom loss functions, reward signals, or multi-turn reinforcement learning) while SageMaker AI handles GPU…"
+  },
+  {
+   "id": "df383ee81b1c",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T18:00:01+00:00",
+   "title": "Write your own training loop — without managing GPUs — with Amazon SageMaker training session APIs",
+   "title_ar": "اكتب حلقة التدريب الخاصة بك دون إدارة وحدات معالجة الرسومات باستخدام واجهات Amazon SageMaker training session APIs",
+   "url": "https://aws.amazon.com/blogs/machine-learning/write-your-own-training-loop-without-managing-gpus-with-amazon-sagemaker-training-sessions/",
+   "summary_en": "AWS introduced training session APIs for serverless model customization in Amazon SageMaker AI, aiming to let developers control the training procedure without managing GPUs. Operations such as forward_backward(), optim_step() and sample() become API calls that run against a live, stateful session in which the model stays loaded on the GPUs. The service handles runtime setup, distributed execution, gradient synchronization, fault recovery and tenant isolation, while users write the loop for SFT, preference optimization or reinforcement learning. The API is built around three SDK clients: ServiceClient, TrainingClient and SamplingClient. AWS also released a cookbook of SFT and RL recipes, and the post walks through examples on GSM8K and competitive programming problems.",
+   "summary_ar": "قدمت AWS واجهات برمجة جلسات التدريب (training session APIs) للتخصيص عديم الخوادم للنماذج في Amazon SageMaker AI، بهدف تمكين المطورين من التحكم في إجراءات التدريب دون إدارة وحدات GPU. وتتحول عمليات مثل forward_backward() وoptim_step() وsample() إلى استدعاءات لواجهة البرمجة تعمل على جلسة حية تحتفظ بحالتها، ويبقى فيها النموذج محمّلاً على وحدات GPU. وتتولى الخدمة إعداد بيئة التشغيل والتنفيذ الموزع ومزامنة التدرجات والتعافي من الأعطال وعزل المستأجرين، بينما يكتب المستخدمون حلقة التدريب الخاصة بـ SFT أو تحسين التفضيلات أو التعلم المعزز. وتقوم الواجهة على ثلاثة عملاء ضمن الحزمة البرمجية هي ServiceClient وTrainingClient وSamplingClient. كما أصدرت AWS كتيّب وصفات لـ SFT وRL، ويستعرض المقال أمثلة على GSM8K ومسائل البرمجة التنافسية.",
+   "excerpt": "Amazon SageMaker AI training session APIs let you write your own LLM training loop (SFT, RL, or custom objectives) in a Python script while the service runs the GPUs."
   },
   {
    "id": "98a7f3683d8f",
@@ -1277,6 +1907,34 @@
    "excerpt": "With Agent Compute Engine, Google is introducing a runtime environment designed specifically for AI agents, while also expanding the governance capabilities that enable companies to manage agents in cloud, hybrid, and on-premises environments."
   },
   {
+   "id": "353395321c92",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-22T17:48:22+00:00",
+   "title": "Deploy AI in a HIPAA-eligible environment with Amazon Quick",
+   "title_ar": "انشر الذكاء الاصطناعي في بيئة مؤهلة لمعايير HIPAA باستخدام Amazon Quick",
+   "url": "https://aws.amazon.com/blogs/machine-learning/deploy-ai-in-a-hipaa-eligible-environment-with-amazon-quick/",
+   "summary_en": "An AWS Machine Learning Blog post explains how healthcare organizations can use Amazon Quick, an agentic AI workspace, in a HIPAA-eligible way. Amazon Quick is HIPAA-eligible across its web, desktop and mobile clients, subject to the shared responsibility model and the customer's configuration. The post stresses that eligibility is not the same as compliance: customers must sign the AWS business associate addendum through AWS Artifact, classify their data, configure controls and handle safeguards such as workforce training and risk analysis. Because chat agents can read and act on protected health information, it points to governance features such as ACL-aware retrieval, chat and feedback logging and controls over agent actions. It also walks through a fictional health plan deployment and a step-by-step implementation guide.",
+   "summary_ar": "تشرح مقالة على مدونة AWS Machine Learning Blog كيف يمكن للمؤسسات الصحية استخدام Amazon Quick، وهي مساحة عمل قائمة على وكلاء الذكاء الاصطناعي، ضمن بيئة مؤهلة لقانون HIPAA. وتُعد الخدمة مؤهلة لهذا القانون عبر عملائها على الويب وسطح المكتب والجوال، وفق نموذج المسؤولية المشتركة وإعدادات العميل. وتؤكد المقالة أن الأهلية لا تعني الامتثال، إذ على العميل توقيع ملحق الشريك التجاري لدى AWS عبر AWS Artifact، وتصنيف بياناته، وضبط الضوابط، وتولّي الضمانات مثل تدريب العاملين وتحليل المخاطر. ولأن المساعدين الذكيين في المحادثة يستطيعون قراءة المعلومات الصحية المحمية والتصرف بناءً عليها، تشير المقالة إلى ميزات حوكمة منها الاسترجاع الواعي بقوائم التحكم في الوصول وتسجيل المحادثات والملاحظات وضوابط تحدد ما يُسمح للوكيل بفعله. كما تعرض مثالاً افتراضياً لخطة صحية وتنفيذاً عملياً خطوة بخطوة.",
+   "excerpt": "Amazon Quick is a HIPAA-eligible service, but eligibility is not the same as compliance. This post explains who HIPAA applies to, how PHI flows through Amazon Quick, what the platform provides for regulated environments, and a step-by-step guide to deploying compliant AI agents…"
+  },
+  {
+   "id": "f0c8337af231",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T17:45:58+00:00",
+   "title": "Stream low-latency speech from AI agents using Kokoro TTS on Amazon SageMaker AI",
+   "title_ar": "بث الكلام بزمن استجابة منخفض من وكلاء الذكاء الاصطناعي باستخدام Kokoro TTS على Amazon SageMaker AI",
+   "url": "https://aws.amazon.com/blogs/machine-learning/stream-low-latency-speech-from-ai-agents-using-kokoro-tts-on-amazon-sagemaker-ai/",
+   "summary_en": "AWS describes a way to cut the silence in AI voice agents by streaming each sentence to a Kokoro-82M text-to-speech model on Amazon SageMaker AI as soon as the agent produces it, instead of waiting for the full response. The post gives an example where a response takes five seconds to generate and the customer hears nothing meanwhile. Kokoro-82M has 82 million parameters and runs in a custom container on an ml.g5.xlarge GPU instance behind a real-time endpoint. It warns of pitfalls, such as binary WebSocket frames breaking a handler that expects text, and advises keeping the session open until the client sends a close message. The post says synthesis remains sequential, so the gain is that the first sentence starts immediately.",
+   "summary_ar": "تعرض AWS طريقة لتقليص فترة الصمت لدى المساعدين الصوتيين الذين يعملون بالذكاء الاصطناعي، وذلك ببث كل جملة إلى نموذج تحويل النص إلى كلام Kokoro-82M على Amazon SageMaker AI فور إنتاجها، بدلاً من انتظار اكتمال الرد. وتسوق المقالة مثالاً يستغرق فيه توليد الرد خمس ثوانٍ ولا يسمع العميل خلالها شيئاً. ويضم Kokoro-82M نحو 82 مليون معامل، ويعمل داخل حاوية مخصصة على نسخة GPU من نوع ml.g5.xlarge خلف نقطة نهاية فورية. وتحذّر المقالة من عثرات، منها أن إطارات WebSocket الثنائية تعطّل معالجاً ينتظر نصاً، وتنصح بإبقاء الجلسة مفتوحة حتى يرسل العميل رسالة إغلاق. وتوضح أن التوليد الصوتي يظل متسلسلاً، وأن المكسب هو بدء الجملة الأولى فوراً.",
+   "excerpt": "Voice agents often wait for an agent's full response before starting speech synthesis, adding latency users feel directly."
+  },
+  {
    "id": "7b213ad205a3",
    "source": "verge-ai",
    "lang": "en",
@@ -1303,6 +1961,34 @@
    "summary_en": "A new report from Al-Futtaim Group found that 82% of workers in consumer-economy sectors across the GCC use AI at least once a week, and one in three uses it daily. While 73% say it has improved their productivity, only 39% feel highly confident using it. The survey covered 1,143 employees in six Gulf markets, with input from IBM, Microsoft and Inception42, a G42 company. Although 53% of organisations encourage AI use, only 20% of employees have had intensive training, which raises confidence 2.5 times. Data security worries were the top barrier at 36%. Executives from the group, IBM, Inception42 and Microsoft said value depends on skills, redesigned processes and trust, not tools alone.",
    "summary_ar": "كشف تقرير جديد صادر عن مجموعة الفطيم (Al-Futtaim) أن 82% من العاملين في قطاعات الاقتصاد الاستهلاكي بدول مجلس التعاون الخليجي يستخدمون الذكاء الاصطناعي مرة أسبوعياً على الأقل، وأن موظفاً من كل ثلاثة يعتمد عليه يومياً. وقال 73% إنه حسّن إنتاجيتهم، بينما يشعر 39% فقط بثقة عالية في استخدامه. وشمل الاستطلاع 1143 موظفاً في ستة أسواق خليجية، بمساهمات من IBM وMicrosoft وInception42 التابعة لـG42. ورغم أن 53% من المؤسسات تشجع موظفيها على الاستخدام، لم يحصل سوى 20% منهم على تدريب مكثف يرفع الثقة 2.5 مرة. وجاءت مخاوف أمن البيانات في صدارة المعوقات بنسبة 36%. وأكد مسؤولون من هذه الجهات أن القيمة تتطلب مهارات وإعادة تصميم للعمليات وبناء الثقة، وليس الأدوات وحدها.",
    "excerpt": "موزة الفطيم: تحدي جاهزية الموظفين للذكاء الاصطناعي بشري وليس تقنياً لولا موهانتي: القيمة الحقيقية تتحقق عند دمج التكنولو"
+  },
+  {
+   "id": "529344d07694",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T16:30:06+00:00",
+   "title": "Stop guessing auto scaling targets for TTS on Amazon SageMaker AI",
+   "title_ar": "توقف عن تخمين أهداف التوسع التلقائي لتحويل النص إلى كلام على Amazon SageMaker AI",
+   "url": "https://aws.amazon.com/blogs/machine-learning/stop-guessing-auto-scaling-targets-for-tts-on-amazon-sagemaker-ai/",
+   "summary_en": "An AWS Machine Learning Blog post explains how to replace guessed auto scaling targets for self-hosted text-to-speech endpoints on Amazon SageMaker AI with measured ones. It deploys Kokoro-82M, an 82-million-parameter TTS model, in a custom container on a real-time endpoint using AWS CDK stacks. Two measurements taken on the live endpoint, Q_max (the highest concurrency one instance sustains within the latency objective) and T_total (the time a scale-out takes), are used to derive the scale-out and scale-in thresholds and both cooldowns. The policy scales on ConcurrentRequestsPerModel, a metric SageMaker AI publishes itself. A target set too low leaves GPUs idle, while one set too high risks latency breaches during spikes.",
+   "summary_ar": "تشرح مدونة AWS Machine Learning Blog كيفية الاستعاضة عن التخمين في تحديد أهداف التوسع التلقائي لنقاط نهاية تحويل النص إلى كلام المستضافة ذاتياً على Amazon SageMaker AI بقيم تُقاس فعلياً. ويجري نشر Kokoro-82M، وهو نموذج لتحويل النص إلى كلام بـ82 مليون معامل، في حاوية مخصصة على نقطة نهاية آنية باستخدام حزم AWS CDK. وتُستمد عتبتا التوسع والتقليص وفترتا التهدئة من قياسين على النقطة الحية: Q_max، وهو أعلى تزامن تتحمله نسخة واحدة ضمن هدف زمن الاستجابة، وT_total، وهو الزمن الذي يستغرقه التوسع. وتعتمد السياسة على المقياس ConcurrentRequestsPerModel الذي تنشره SageMaker AI بنفسها. وتبقى وحدات GPU خاملة إذا كان الهدف متحفظاً، بينما قد يتجاوز زمن الاستجابة الحد المسموح عند الذروة إذا كان الهدف متساهلاً.",
+   "excerpt": "Teams deploying custom text-to-speech models on Amazon SageMaker AI often guess at autoscaling thresholds, and a wrong guess either wastes GPU spend or breaches a latency SLO."
+  },
+  {
+   "id": "03f220919b75",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-22T16:25:57+00:00",
+   "title": "How Rescale built an AI triage agent with Strands Agents and AI-DLC",
+   "title_ar": "كيف بنت Rescale وكيل فرز بالذكاء الاصطناعي باستخدام Strands Agents وAI-DLC",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-rescale-built-an-ai-triage-agent-with-strands-agents-and-ai-dlc/",
+   "summary_en": "An AWS Machine Learning Blog post describes how Rescale, a digital engineering platform, built an AI triage agent using the AI-Driven Development Lifecycle (AI-DLC) framework on AWS. The team went from problem definition to staging in five days and to production within weeks. The agent automates classification and routing of failures from nightly end-to-end tests. It runs as a step in Rescale's Argo Workflows CI/CD pipeline on Amazon EKS and is triggered when the Playwright test suite produces failures. Previously, engineers did this work by hand, and unresolved failures could delay weekly production releases. The agent finishes its workflow in seconds, and Rescale is extending AI-DLC across its engineering organisation.",
+   "summary_ar": "تصف مدونة AWS Machine Learning Blog كيف بنت شركة Rescale، وهي منصة للهندسة الرقمية، وكيلاً ذكياً لفرز الأعطال باستخدام إطار AI-Driven Development Lifecycle (AI-DLC) على AWS. وانتقل الفريق من تحديد المشكلة إلى بيئة الاختبار خلال خمسة أيام، ثم إلى الإنتاج خلال أسابيع. ويتولى الوكيل تصنيف إخفاقات الاختبارات الشاملة الليلية وتوجيهها، ويعمل كخطوة ضمن مسار CI/CD الخاص بـArgo Workflows على Amazon EKS، ويُشغَّل عند ظهور إخفاقات في مجموعة اختبارات Playwright. وكان المهندسون ينجزون هذه المهمة يدوياً، وقد تؤخر الإخفاقات غير المحلولة إصدارات الإنتاج الأسبوعية. ويُنهي الوكيل عمله خلال ثوانٍ، وتعمل Rescale على توسيع استخدام AI-DLC في مؤسستها الهندسية.",
+   "excerpt": "Rescale used the AI-Driven Development Lifecycle (AI-DLC) framework on AWS, with Strands Agents and Amazon Bedrock, to build an intelligent test-triage agent in weeks."
   },
   {
    "id": "4b508543bc0e",
@@ -1431,6 +2117,20 @@
    "excerpt": "دبي - البيان طوّرت هيئة الطرق والمواصلات في دبي (محبوب)، نسخة محدّثة من المساعد الافتراضي الخاص بالهيئة، باستخدام الذكاء"
   },
   {
+   "id": "c625905b3719",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-22T15:25:02+00:00",
+   "title": "Hackers got a four-day head start on epic PHP2Shell vulnerability",
+   "title_ar": "قراصنة حصلوا على أفضلية أربعة أيام في استغلال الثغرة الخطيرة PHP2Shell",
+   "url": "https://arstechnica.com/security/2026/10/hackers-got-a-four-day-head-start-on-epic-php2shell-vulnerability/",
+   "summary_en": "Amazon has warned that two flaws in PHP, a programming language behind much of the Internet, are being broadly exploited. The company said it spotted a hacking attempt four days before the weaknesses were made public. The vulnerabilities were found with the help of OpenAI and Google models after going undetected for more than a decade, and researchers at Calif and Wiz discovered them. Wiz estimated that PHP powers about 70 percent of websites. The US National Security Agency and UK authorities told organisations to update immediately or take systems offline, and the White House said federal agencies were assessing the impact on government systems.",
+   "summary_ar": "حذّرت Amazon من أن ثغرتين في لغة البرمجة PHP، التي يقوم عليها جزء كبير من الإنترنت، تُستغلان على نطاق واسع. وقالت الشركة إنها رصدت محاولة اختراق قبل أربعة أيام من الإعلان العلني عن الثغرتين. وقد اكتُشفت الثغرتان بمساعدة نماذج من OpenAI وGoogle بعد أن بقيتا غير مكتشفتين أكثر من عقد، وتوصل إليهما باحثون في Calif وWiz. وقدّرت Wiz أن PHP تشغّل نحو 70 في المئة من المواقع الإلكترونية. وطلبت وكالة الأمن القومي الأمريكية وجهات بريطانية من المؤسسات التحديث فوراً أو إيقاف أنظمتها، وقال البيت الأبيض إن الوكالات الاتحادية تقيّم الأثر على الأنظمة الحكومية.",
+   "excerpt": "Hackers were already probing the bug before defenders were told it existed."
+  },
+  {
    "id": "21e0d797d536",
    "source": "gn-uae",
    "lang": "en",
@@ -1485,6 +2185,20 @@
    "summary_en": "NVIDIA's GTC conference in Berlin is offering visitors live demonstrations, including robotic arms that sort items and fruit into boxes, real-time face recognition systems, humanoid robots and the company's newest AI computing hardware. The Vera Rubin NVL72 supercomputer rack and RTX Spark devices are drawing attention, and NVIDIA also unveiled Vera Rubin DSK Pod, a modular AI data center the size of a shipping container, designed to cut deployment time from months to days. CEO Jensen Huang spoke to about 3,000 developers, analysts and journalists about extending AI into factories, vehicles and robots, and said everyone will become an AI company. The event runs until 22 October.",
    "summary_ar": "يتيح مؤتمر GTC الذي تنظمه NVIDIA في برلين للزوار مشاهدة عروض حية، منها أذرع روبوتية تفرز الأغراض والفاكهة في صناديق، وأنظمة للتعرّف على الوجوه في الزمن الحقيقي، وروبوتات شبيهة بالبشر، وأحدث عتاد الشركة لحوسبة الذكاء الاصطناعي. ويجذب رف الحاسوب الفائق Vera Rubin NVL72 وأجهزة RTX Spark الأنظار، كما كشفت الشركة عن Vera Rubin DSK Pod، وهو مركز بيانات معياري للذكاء الاصطناعي بحجم حاوية شحن، صُمم لتقليص زمن النشر من أشهر إلى أيام. وتحدث الرئيس التنفيذي «جنسن هوانغ» أمام نحو 3000 من المطورين والمحللين والصحفيين عن توسيع الذكاء الاصطناعي ليشمل المصانع والمركبات والروبوتات، وقال إن الجميع سيصبح شركة للذكاء الاصطناعي. ويستمر الحدث حتى 22 أكتوبر.",
    "excerpt": "تتصدر الروبوتات الشبيهة بالبشر والآلات الذكية والحواسيب الفائقة مشهد فعالية \"إنفيديا\" في برلين، حيث توقّع الرئيس التنفيذي جنسن هوانغ اقتصادا مزدهرا للذكاء الاصطناعي في أوروبا."
+  },
+  {
+   "id": "06769efcf6f4",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-22T15:00:02+00:00",
+   "title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+   "title_ar": "NVIDIA تكشف عن Minerva لتوفير مراقبة شاملة من البداية إلى النهاية لمصانع الذكاء الاصطناعي",
+   "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/",
+   "summary_en": "NVIDIA has launched Minerva, an AIOps platform meant to help teams spot problems earlier and keep AI factories productive. It gathers telemetry from infrastructure and AI workloads and uses purpose-built AI models to turn it into actionable insight. Minerva builds a knowledge graph of GPUs, switches and jobs, analyzes billions of data points per hour, predicts failures and groups related alerts into a single incident with a likely root cause. It includes a native AI assistant and can connect to external agentic AI tools. IREN is using it, while Aolani, Bitdeer AI, IBM, Jio, Lambda, Quake AI and Tesla plan to deploy it, and Dell Technologies, Lenovo and Supermicro will offer it.",
+   "summary_ar": "أطلقت NVIDIA منصة Minerva، وهي منصة لعمليات تقنية المعلومات المعتمدة على الذكاء الاصطناعي (AIOps) تهدف إلى مساعدة الفرق على اكتشاف المشكلات مبكراً وإبقاء «مصانع الذكاء الاصطناعي» منتجة. تجمع المنصة بيانات القياس عن this البنية التحتية وأحمال عمل الذكاء الاصطناعي، وتستخدم نماذج ذكاء اصطناعي مخصصة لتحويلها إلى رؤى قابلة للتنفيذ. وتبني Minerva رسماً معرفياً يربط وحدات GPU والمحولات والمهام، وتحلل مليارات نقاط البيانات في الساعة، وتتنبأ بالأعطال، وتجمع التنبيهات المتصلة في حادثة واحدة مع سبب جذري محتمل. وتضم مساعداً ذكياً مدمجاً ويمكنها الاتصال بأدوات ذكاء اصطناعي وكيلة خارجية. وتستخدمها IREN، بينما تخطط Aolani وBitdeer AI وIBM وJio وLambda وQuake AI وTesla لنشرها، وستقدمها Dell Technologies وLenovo وSupermicro.",
+   "excerpt": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive."
   },
   {
    "id": "5cabb389fd3b",
@@ -1597,6 +2311,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "GPU chief doesn't want to hear about job losses or the end of human civilization"
+  },
+  {
+   "id": "f109b36dab6a",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-22T13:00:00+00:00",
+   "title": "Meet Mori, a Cute Robot Mushroom That Doesn’t Really Say (or Do) Anything",
+   "title_ar": "تعرّف على Mori، روبوت فطر لطيف لا يقول أو يفعل أي شيء حقاً",
+   "url": "https://www.wired.com/story/meet-mori-a-cute-robot-mushroom-that-doesnt-really-say-or-do-anything/",
+   "summary_en": "OKA, or One Kind Artifact, a startup based in Cambridge, Massachusetts, and Shenzhen, China, has launched Mori, a nearly 12-inch-tall robot lamp shaped like a mushroom. Using a camera and microphones, its animated face follows people, reacts to music or TV, plays nature soundscapes and guides breathing sessions. It is deliberately not an assistant, so it cannot control smart lights, play Spotify tracks or answer weather questions. OKA says AI powered by several local large language models helps it decide when to interact or stay quiet, and that images, audio and facial data are handled on the device. The Founder's Edition costs $649 with two years of subscription, while the standard edition costs $849 without subscription features.",
+   "summary_ar": "أطلقت شركة OKA الناشئة (One Kind Artifact)، ومقرها كامبريدج في ولاية ماساتشوستس ومدينة شنتشن الصينية، روبوت Mori، وهو مصباح روبوتي على شكل فطر يبلغ ارتفاعه نحو 12 بوصة. وبفضل الكاميرا والميكروفونات يتتبع وجهه المتحرك الأشخاص ويتفاعل مع الموسيقى والتلفاز ويشغّل أصواتاً طبيعية ويرشد المستخدم في جلسات التنفس. وهو ليس مساعداً ذكياً عن قصد، فلا يتحكم بالإضاءة الذكية ولا يشغّل مقاطع Spotify ولا يجيب عن أسئلة الطقس. وتقول الشركة إن الذكاء الاصطناعي لديها، المدعوم بعدة نماذج لغوية كبيرة محلية، يساعده على تحديد وقت التفاعل ووقت الصمت، وإن الصور والصوت وبيانات الوجه تُعالج على الجهاز. ويبلغ سعر إصدار المؤسس 649 دولاراً مع اشتراك لمدة عامين، أما الإصدار العادي فسعره 849 دولاراً دون ميزات الاشتراك.",
+   "excerpt": "Step one in convincing people to live with robots with cameras on their faces? Disguise them as cute home decor."
   },
   {
    "id": "4e3a22447934",
@@ -1795,6 +2523,20 @@
    "excerpt": "أعلن بنك \"باركليز\" البريطاني الخميس أنه سيستغني عن نحو 5.000 وظيفة، أي ما يقارب خمسة بالمئة من قوته العاملة عالميا، بحلول نهاية 2026، معتمدا على الذكاء الاصطناعي وتقنيات أخرى لرفع الكفاءة."
   },
   {
+   "id": "c73c98bfd8c4",
+   "source": "gulfnews-tech",
+   "lang": "en",
+   "uae": true,
+   "topic": "business",
+   "published": "2026-10-22T10:15:00+00:00",
+   "title": "78% of business leaders say AI demands a major rethink of how companies operate",
+   "title_ar": "78% من قادة الأعمال يقولون إن الذكاء الاصطناعي يتطلب إعادة نظر جذرية في طريقة عمل الشركات",
+   "url": "https://gulfnews.com/business/78-of-business-leaders-say-ai-demands-a-major-rethink-of-how-companies-operate-1.500719664",
+   "summary_en": "In an interview with Gulf News, Camunda's Stephane Faivre-Duboz says organisations in the UAE need to rethink how work flows rather than simply add AI to existing processes. He cites company research finding that 78 per cent of leaders believe they must fundamentally redesign processes to stay competitive. When AI starts taking actions, he says, firms must settle what it may do, how its actions can be understood, and who is responsible, with human approval for sensitive or high-risk decisions. He recommends combining traditional automation, AI and people, and warns that extra AI can worsen the problem if employees must check many disconnected systems. He also points to the UAE government's goal of making 50% of its processes agentic.",
+   "summary_ar": "في مقابلة مع «غلف نيوز»، يقول ستيفان فيفر-دوبوز من شركة Camunda إن على المؤسسات في الإمارات إعادة التفكير في كيفية انتقال العمل بدلاً من الاكتفاء بإضافة الذكاء الاصطناعي إلى العمليات القائمة. ويشير إلى بحث أجرته الشركة وجد أن 78 في المئة من القادة يرون أنهم بحاجة إلى إعادة تصميم هذه العمليات جذرياً للبقاء قادرين على المنافسة. ويضيف أنه عندما يبدأ الذكاء الاصطناعي باتخاذ إجراءات، يجب تحديد ما يُسمح له بفعله، وكيف يمكن فهم تصرفاته، ومن المسؤول، مع اشتراط موافقة بشرية على القرارات الحساسة أو عالية المخاطر. وينصح بالجمع بين الأتمتة التقليدية والذكاء الاصطناعي والعنصر البشري، محذراً من أن زيادة الذكاء الاصطناعي قد تفاقم المشكلة إذا اضطر الموظفون إلى مراجعة أنظمة كثيرة غير مترابطة. كما يشير إلى هدف الحكومة الإماراتية بجعل 50% من عملياتها قائمة على الوكلاء الأذكياء (agentic).",
+   "excerpt": "Camunda executive explains why adding AI to outdated processes may not be enough"
+  },
+  {
    "id": "64df47fe9a5a",
    "source": "wam-en",
    "lang": "en",
@@ -1821,6 +2563,20 @@
    "summary_en": "OpenAI worked with PerturbAI and Scripps Research to deploy thousands of AI agents that analyzed biological data from millions of mouse cells. According to OpenAI, the agents ran on GPT-Rosalind and worked through a whole-brain CRISPR atlas, with each agent taking one gene perturbation. The analysis took 32 minutes, whereas the team estimates a manual effort would take from several months to a year. The agents found unexpected differences between two disease-related genes and a possible link between cholesterol regulation and neurodegeneration. In blind comparisons, human experts preferred the distributed agents' reports over a single agent's 75 percent of the time. The resulting Reasoning Atlas is on GitHub, and the paper is on bioRxiv.",
    "summary_ar": "تعاونت OpenAI مع PerturbAI وScripps Research لنشر آلاف الوكلاء الأذكياء لتحليل بيانات بيولوجية من ملايين الخلايا في أدمغة الفئران. ووفق OpenAI، عمل هؤلاء الوكلاء على GPT-Rosalind وعالجوا أطلساً شاملاً للدماغ كله مبنياً على تقنية CRISPR، وتولى كل وكيل اضطراباً جينياً واحداً. استغرق التحليل 32 دقيقة، بينما يقدّر الفريق أن إنجازه يدوياً يحتاج من عدة أشهر إلى سنة. وكشف الوكلاء فروقاً غير متوقعة بين جينين مرتبطين بأمراض، وصلة محتملة بين تنظيم الكوليسترول والتنكس العصبي. وفي مقارنات أُجريت دون معرفة المصدر، فضّل خبراء بشريون تقارير الوكلاء الموزعين على تقارير وكيل واحد بنسبة 75 في المئة. ويتوفر «أطلس الاستدلال» (Reasoning Atlas) على GitHub، والورقة البحثية على bioRxiv. وتقول OpenAI إن هذه الخيوط ستساعد الباحثين على تحديد الآليات التي تُختبر أولاً في المختبر.",
    "excerpt": "OpenAI teamed up with PerturbAI and Scripps Research to deploy thousands of AI agents that analyzed biological data from millions of mouse cells."
+  },
+  {
+   "id": "ddf7f86b51c1",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-22T10:00:00+00:00",
+   "title": "Hugging Face’s New AI Biology Model Lets You Chat With DNA",
+   "title_ar": "نموذج Hugging Face الجديد للذكاء الاصطناعي في علم الأحياء يتيح لك التحدث مع الحمض النووي",
+   "url": "https://www.wired.com/story/hugging-face-new-ai-biology-model-chat-with-dna/",
+   "summary_en": "Hugging Face on Thursday released Carbon-X, an open model for understanding DNA that can run locally on a laptop. It was developed with researchers at Zhongguancun Academy in China and the University of Naples Federico II in Italy. Users can ask questions in natural language about how DNA changes affect gene activity and health. Lewis Tunstall says it is meant to help researchers design drugs and genetic therapies. The 14-billion-parameter model was trained on 300 billion tokens mixing DNA sequences, English text and linking examples, with viruses excluded. It handles sequences of roughly 50,000 base pairs, so full genomes cannot be uploaded. The developers say they have not validated its accuracy with wet lab experiments.",
+   "summary_ar": "أطلقت Hugging Face يوم الخميس نموذج Carbon-X، وهو نموذج مفتوح لفهم الحمض النووي (DNA) يمكن تشغيله محلياً على حاسوب محمول. وقد طُوّر بالتعاون مع باحثين في أكاديمية تشونغقوانتسون في الصين وجامعة نابولي فريدريك الثاني في إيطاليا. ويتيح للمستخدمين طرح أسئلة بلغة طبيعية عن تأثير التغيرات في الحمض النووي على نشاط الجينات والصحة. ويقول لويس تانستال إن الأداة تهدف إلى مساعدة الباحثين في تصميم الأدوية والعلاجات الجينية. ويضم النموذج 14 مليار معامل، وتدرّب على 300 مليار وحدة لغوية تجمع تسلسلات الحمض النووي ونصوصاً إنجليزية وأمثلة تربط بينهما، مع استبعاد الفيروسات. ويستوعب تسلسلات بنحو 50 ألف زوج قاعدي، لذا لا يمكن رفع الجينومات كاملة. ويذكر المطورون أنهم لم يتحققوا من دقته بتجارب مخبرية.",
+   "excerpt": "The new open-source model speaks the language of DNA and can help researchers understand the effects of any changes on gene activity and health."
   },
   {
    "id": "89e2fdb4253f",
@@ -1977,6 +2733,20 @@
    "excerpt": "'Ossi', whose has four main agents work alongside the emirate's electronic medical records, will be available at seven M42 centres"
   },
   {
+   "id": "5d118fadbe79",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-22T07:51:31+00:00",
+   "title": "Ensemble forecasting with IBM Granite time-series models",
+   "title_ar": "التنبؤ التجميعي باستخدام نماذج IBM Granite للسلاسل الزمنية",
+   "url": "https://huggingface.co/blog/ibm-research/granite-timeseries-ensemble-r1",
+   "summary_en": "IBM's Granite Timeseries Ensemble, described on the Hugging Face Blog, combines four pre-trained Granite time-series models into one forecasting recipe. It returns median and quantile forecasts without retraining or fitted ensemble weights. The Probabilistic Ensemble gives each member equal influence and is the default, while the IQR Ensemble weights members by forecast spread. The recipe and its default members are permissively licensed. On 97 GIFT-Eval configurations, both ensembles beat the four individual members on aggregate MASE and average MASE rank; the Probabilistic Ensemble scored 0.683 against 0.685 for PatchTST-FM-r2. The text says this margin is small, so the main benefit is robustness rather than accuracy.",
+   "summary_ar": "تعرض مدونة Hugging Face وصفة Granite Timeseries Ensemble من «آي بي إم»، وهي تجمع أربعة نماذج Granite مدربة مسبقاً للسلاسل الزمنية في أداة واحدة للتنبؤ. تقدم الوصفة توقعات الوسيط والكميات دون إعادة تدريب ودون أوزان مضبوطة للدمج. يمنح Probabilistic Ensemble كل نموذج تأثيراً متساوياً وهو الخيار الافتراضي، بينما يوزّع IQR Ensemble الأوزان بحسب اتساع التوقعات. وتخضع الوصفة ونماذجها الافتراضية لترخيص متساهل. وعلى 97 إعداداً في GIFT-Eval تفوق الدمجان على النماذج الأربعة منفردة في مقياس MASE الإجمالي ومتوسط ترتيب MASE، وسجل Probabilistic Ensemble القيمة 0.683 مقابل 0.685 لنموذج PatchTST-FM-r2. ويوضح النص أن الفارق صغير، وأن الفائدة الرئيسية هي المتانة.",
+   "excerpt": "A Blog post by IBM Research on Hugging Face"
+  },
+  {
    "id": "d4f7c651104e",
    "source": "thenational",
    "lang": "en",
@@ -2003,6 +2773,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "What forward deployed engineering means at OpenAI"
+  },
+  {
+   "id": "8eb5c126f8cf",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-22T05:00:56+00:00",
+   "title": "Leading European Financial Services Organizations Embrace Open Models to Build Proprietary Intelligence",
+   "title_ar": "مؤسسات الخدمات المالية الأوروبية الرائدة تتبنى النماذج المفتوحة لبناء ذكاء خاص بها",
+   "url": "https://blogs.nvidia.com/blog/european-financial-services-organizations-open-models-proprietary-intelligence/",
+   "summary_en": "At GTC Berlin, NVIDIA showcased European financial firms running production AI on its accelerated computing, using open weight models on their own infrastructure. Revolut is scaling its PRAGMA foundation model on Blackwell Ultra GPUs for an initial 80 million customers, designed to grow 3x. Lloyds Banking Group built the ATUM transaction model, and Starling Bank developed Starling Intelligence on Civo's U.K. cloud. Neobank bunq says its assistant Finn, running on open weight models on Nebius, matches leading closed models at 60% of the cost per answer. Stripe reports 42x faster data pipelines and 92% cost savings for Stripe Radar in offline testing. NatWest, Modulr, Santander, LSEG, HSBC and others also described projects.",
+   "summary_ar": "في مؤتمر GTC Berlin عرضت NVIDIA مؤسسات مالية أوروبية تشغّل الذكاء الاصطناعي في بيئات الإنتاج على حوسبتها المتسارعة، مستخدمة نماذج مفتوحة الأوزان على بنيتها التحتية الخاصة. تعمل Revolut على توسيع نموذجها الأساسي PRAGMA على وحدات Blackwell Ultra GPUs لخدمة 80 مليون عميل في البداية، مع تصميمه للتوسع ثلاثة أضعاف. وبنت Lloyds Banking Group نموذج ATUM للمعاملات، وطورت Starling Bank منظومة Starling Intelligence على سحابة Civo في بريطانيا. وتقول bunq إن مساعدها Finn، العامل بنماذج مفتوحة الأوزان على Nebius، يضاهي أبرز النماذج المغلقة بنسبة 60% من كلفة الإجابة. وتفيد Stripe بخطوط بيانات أسرع 42 مرة ووفر 92% في التكلفة لمنصة Stripe Radar في اختبار خارج الإنتاج. كما عرضت NatWest وModulr وSantander وLSEG وHSBC مشاريعها.",
+   "excerpt": "At GTC Berlin, banks, payment companies and financial data providers are showing what production-scale intelligence looks like — built on NVIDIA accelerated computing, powered by open weight models and running on their own infrastructure."
   },
   {
    "id": "761a1716cf64",
@@ -2045,6 +2829,20 @@
    "summary_en": "NVIDIA says open models let European governments adapt AI to local languages and public services, run it on infrastructure they control and keep sensitive data in controlled environments. Several partners are building editions of the Nemotron-Personas collection, including Locai Labs' dataset of 1 million synthetic personas for the U.K. and a German dataset for the Soofi initiative. Deepset is expanding its Haystack Enterprise Platform, which underpins the European Commission's AI@EC. Deloitte is helping Poland build agentic systems for healthcare and employment services. Materna introduced its on-premises Sinfonie platform in Germany, and secunet, NVIDIA, Red Hat and deepset are developing a sovereign cloud offering for classified information. France's CANUT chose a sovereign workspace, and Greece's KIEFER is building an agentic factory.",
    "summary_ar": "تقول NVIDIA إن النماذج المفتوحة تتيح للحكومات الأوروبية تكييف الذكاء الاصطناعي مع اللغات المحلية والخدمات العامة، وتشغيله على بنية تحتية تتحكم بها، وإبقاء البيانات الحساسة ضمن بيئات خاضعة للرقابة. ويعمل عدة شركاء على إصدارات من مجموعة Nemotron-Personas، منها مجموعة بيانات من Locai Labs تضم مليون شخصية اصطناعية للمملكة المتحدة، ومجموعة ألمانية لمبادرة Soofi. وتوسّع deepset منصتها Haystack Enterprise Platform التي تقوم عليها AI@EC التابعة للمفوضية الأوروبية. وتساعد Deloitte بولندا على بناء أنظمة وكلاء أذكياء للرعاية الصحية وخدمات التوظيف. وقدمت Materna في ألمانيا منصتها Sinfonie التي تعمل داخل مقر المؤسسة، بينما تطور secunet وNVIDIA وRed Hat وdeepset عرضاً للحوسبة السحابية السيادية للمعلومات السرية. واختارت هيئة CANUT الفرنسية مساحة عمل سيادية، وتبني شركة KIEFER اليونانية مصنعاً للوكلاء الأذكياء.",
    "excerpt": "Governments need modern solutions to serve the public while keeping sensitive information under their control. Open models provide a path forward, letting governments evaluate them, adapt them to local languages and public services, run them on infrastructure they control, apply…"
+  },
+  {
+   "id": "26070941e794",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-22T04:20:26+00:00",
+   "title": "Websites go dark as AI exposes critical security flaws",
+   "title_ar": "مواقع إلكترونية تتوقف عن العمل مع كشف الذكاء الاصطناعي عن ثغرات أمنية حرجة",
+   "url": "https://www.khaleejtimes.com/world/websites-go-dark-ai-exposes-critical-security-flaws-php-web-design",
+   "summary_en": "Government agencies and companies worldwide took websites offline on Wednesday after two critical flaws emerged in PHP, which Wiz estimates runs about 70 per cent of the world's websites. The U.S. National Security Agency told organisations to patch immediately or disconnect vulnerable systems. Security firm Calif found the flaws in August using OpenAI's GPT-5.6 Sol, and Wiz later found them independently with help from AI models including Gemini 4 Argon. Details leaked online a day before the planned fix, and PHP programmers released it Wednesday. Affected sites included French local government pages, the Dutch DigiD service, Australia's cyber.gov.au and Wikimedia services. OpenAI said the discovery marks a new phase in which AI can find security bugs with internet-scale impact.",
+   "summary_ar": "أغلقت جهات حكومية وشركات حول العالم مواقعها الإلكترونية يوم الأربعاء بعد ظهور ثغرتين حرجتين في لغة PHP التي تقدّر Wiz أنها تشغّل نحو 70 في المئة من مواقع الإنترنت في العالم. وطلبت وكالة الأمن القومي الأمريكية من المؤسسات تثبيت التحديث فوراً أو فصل الأنظمة المعرّضة للخطر عن الإنترنت. وكانت شركة الأمن Calif قد اكتشفت الثغرتين في أغسطس باستخدام نموذج GPT-5.6 Sol من OpenAI، ثم توصلت Wiz إليهما لاحقاً بصورة مستقلة بمساعدة نماذج ذكاء اصطناعي منها Gemini 4 Argon. وتسربت التفاصيل على الإنترنت قبل يوم من موعد إصدار الإصلاح، وأصدره مبرمجو PHP يوم الأربعاء. وشملت المواقع المتأثرة صفحات حكومية محلية في فرنسا وخدمة DigiD في هولندا وموقع cyber.gov.au في أستراليا وخدمات تابعة لمؤسسة ويكيميديا. وقالت OpenAI إن الاكتشاف يمثل مرحلة جديدة يستطيع فيها الذكاء الاصطناعي العثور على أخطاء أمنية ذات أثر على نطاق الإنترنت.",
+   "excerpt": "PHP sits underneath popular web design platforms, so the weaknesses potentially affect a vast range of websites, from online stores and news outlets to government services"
   },
   {
    "id": "f0554a67ddba",
@@ -4931,6 +5729,20 @@
    "excerpt": "The US Department of Homeland Security has banned federal civilian agencies from using AI technology from Chinese lab Deepseek."
   },
   {
+   "id": "f969c666b4f2",
+   "source": "gulftoday-business",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-20T11:00:00+00:00",
+   "title": "Dubai Chamber of Digital Economy inks MoUs to drive Agentic AI adoption",
+   "title_ar": "غرفة دبي للاقتصاد الرقمي توقّع مذكرات تفاهم لتعزيز اعتماد الذكاء الاصطناعي الوكيلي",
+   "url": "https://www.gulftoday.ae/business/2026/10/20/dubai-chamber-of-digital-economy-inks-mous-to-drive-agentic-ai-adoption",
+   "summary_en": "Dubai Chamber of Digital Economy, which operates under Dubai Chambers, has signed two MoUs with Nebius Academy and Lovable to speed the adoption of Agentic AI in Dubai's private sector. The deals support a programme launched by Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, Dubai's Crown Prince, and Dubai Chambers has set up training tracks for 14,000 member companies. Under the Nebius Academy agreement, companies get training in AI leadership and Agentic AI through Dubai Chambers Academy, including certifications and workshops. Lovable will support entrepreneurship and skills programmes and provide platform credits funded by Dubai Chambers to participants in the Create AI Agents Championship. The chamber says the agreements strengthen private-sector competitiveness and Dubai's position as a global digital economy hub.",
+   "summary_ar": "وقّعت غرفة دبي للاقتصاد الرقمي، إحدى الغرف العاملة تحت مظلة غرف دبي، مذكرتي تفاهم مع Nebius Academy وLovable لتسريع اعتماد حلول الذكاء الاصطناعي الوكيل (Agentic AI) في القطاع الخاص بدبي. وتدعم الاتفاقيتان برنامجاً أطلقه الشيخ حمدان بن محمد بن راشد آل مكتوم، ولي عهد دبي، وقد استحدثت غرف دبي مسارات تدريبية لـ14,000 شركة عضو. وبموجب اتفاقية Nebius Academy تحصل الشركات على تدريب في قيادة الذكاء الاصطناعي والذكاء الاصطناعي الوكيل عبر أكاديمية غرف دبي، يشمل شهادات وورش عمل. أما Lovable فستدعم برامج ريادة الأعمال وتنمية المهارات، وتوفر أرصدة على منصتها تموّلها غرف دبي للمشاركين في بطولة إنشاء وكلاء الذكاء الاصطناعي (Create AI Agents Championship). وتقول الغرفة إن الاتفاقيتين تعززان تنافسية القطاع الخاص ومكانة دبي مركزاً عالمياً للاقتصاد الرقمي.",
+   "excerpt": "Dubai Chamber of Digital Economy, one of the three chambers operating under the umbrella of Dubai Chambers, has signed two Memorandums of Understanding (MoUs) aimed at accelerating the adoption of Agentic AI solutions across Dubai’s private sector, enabling companies to enhance…"
+  },
+  {
    "id": "697eb620bfd3",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -5111,6 +5923,20 @@
    "summary_en": "OpenAI is preparing to enter humanoid robotics, aiming to bring artificial intelligence into the physical world, according to a WAM report from Washington dated 20 October 2026. CEO Sam Altman said the biggest challenge is building the robot's brain so it can understand the real world, make decisions and carry out tasks accurately, adding that a humanlike design suits environments built for people. OpenAI has not revealed the final design or the tasks involved, but it is recruiting specialists in AI systems and motion control. The company aims for general-purpose robots, with a longer-term vision of personal robots that help people in daily life.",
    "summary_ar": "تستعد OpenAI لدخول مجال الروبوتات الشبيهة بالبشر، بهدف نقل الذكاء الاصطناعي إلى العالم المادي، وفق تقرير لوكالة أنباء الإمارات (وام) من واشنطن بتاريخ 20 أكتوبر 2026. وقال الرئيس التنفيذي «سام ألتمان» إن التحدي الأكبر يكمن في تطوير «دماغ» الروبوت ليتمكن من فهم العالم الحقيقي واتخاذ القرارات وتنفيذ المهام بدقة، مشيراً إلى أن التصميم الشبيه بالإنسان مناسب للبيئات المصممة للبشر. ولم تكشف OpenAI عن التصميم النهائي للروبوت ولا عن المهام التي سيؤديها، لكنها تستقطب متخصصين لتطوير أنظمة الذكاء الاصطناعي وتقنيات التحكم في الحركة. وتسعى الشركة إلى تطوير روبوتات متعددة الأغراض، مع رؤية أبعد مدى لروبوتات شخصية تساعد الناس في حياتهم اليومية.",
    "excerpt": "WASHINGTON, 20th October, 2026 (WAM) -- OpenAI is preparing to enter the field of humanoid robotics, aiming to bring artificial intelligence into the physical world."
+  },
+  {
+   "id": "a4b3a6ed4ea8",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-20T05:06:00+00:00",
+   "title": "\"أوبن إيه آي\" تسعى لجمع 30 مليار دولار بتقييم يتجاوز 1.4 تريليون",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/20/Ma2",
+   "summary_en": "According to informed sources, OpenAI is moving quickly to secure commitments from investors as part of a funding round of roughly $30 billion. The round could lift the company's valuation to more than $1.4 trillion.",
+   "summary_ar": "كشفت مصادر مطلعة أن شركة OpenAI تسارع إلى الحصول على تعهدات من المستثمرين ضمن جولة تمويلية تبلغ قيمتها نحو 30 مليار دولار. وقد ترفع هذه الجولة تقييم الشركة إلى أكثر من 1.4 تريليون دولار.",
+   "excerpt": "كشفت مصادر مطلعة أن شركة أوبن إيه آي تسارع للحصول على تعهدات من المستثمرين ضمن جولة تمويلية بقيمة تقارب 30 مليار دولار، قد ترفع تقييمها إلى أكثر من 1.4 تريليون…"
   },
   {
    "id": "d88fd01a7305",
@@ -5841,6 +6667,20 @@
    "excerpt": "ABU DHABI, 19th October, 2026 (WAM) -- etisalat UAE has become the first telecom operator in the Middle East and North Africa (MENA) region to achieve accredited certification to ISO/IEC 42001:2023 for its Artificial Intelligence (AI) Management System."
   },
   {
+   "id": "13a47989c3a9",
+   "source": "mediaoffice-ar2",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-19T13:40:00+00:00",
+   "title": "بحضور محمد بن راشد بن محمد، غرفة دبي للاقتصاد الرقمي توقّع مذكرتي تفاهم مع \"أكاديمية نيبيوس\" وشركة \"لوفابل\" لتسريع تبنّي الذكاء الاصطناعي المساعد في القطاع الخاص بدبي",
+   "title_ar": null,
+   "url": "https://mediaoffice.ae/ar/news/2026/october/19-10/in-the-presence-of-mohammed-bin-rashid-bin-mohammed-dubai-chamber-of-digital-economy-signs-two-mous",
+   "summary_en": "Dubai Chamber of Digital Economy, one of the three chambers under Dubai Chambers, has signed two memorandums of understanding with Nebius Academy and Lovable, in the presence of Sheikh Mohammed bin Rashid bin Mohammed bin Rashid Al Maktoum. Nebius Academy is the training arm of the AI cloud company Nebius, and Lovable is a software creation platform. The deals aim to speed up adoption of Agentic AI in Dubai's private sector to raise productivity and efficiency. They fall under a programme launched in May by Sheikh Hamdan bin Mohammed bin Rashid Al Maktoum, which includes training tracks for 14,000 member companies. Nebius Academy will supply training content, certification and workshops, while Lovable will back skills programmes and provide platform credits funded by Dubai Chambers.",
+   "summary_ar": "وقّعت غرفة دبي للاقتصاد الرقمي، إحدى الغرف الثلاث العاملة تحت مظلة غرف دبي، مذكرتي تفاهم مع Nebius Academy وLovable بحضور الشيخ محمد بن راشد بن محمد بن راشد آل مكتوم. وNebius Academy هي الذراع التدريبية لشركة Nebius المتخصصة في الحوسبة السحابية للذكاء الاصطناعي، أما Lovable فمنصة لتطوير البرمجيات. وتهدف المذكرتان إلى تسريع تبنّي الذكاء الاصطناعي المساعد (Agentic AI) في القطاع الخاص بدبي لرفع الإنتاجية والكفاءة التشغيلية. وتأتيان ضمن برنامج أطلقه الشيخ حمدان بن محمد بن راشد آل مكتوم في مايو، ويشمل مسارات تدريبية لـ14,000 شركة عضو. وستوفر Nebius Academy المحتوى التدريبي والشهادات وورش العمل، بينما ستدعم Lovable برامج المهارات وتقدم أرصدة لمنصتها تمولها غرف دبي.",
+   "excerpt": "بحضور سموّ الشيخ محمد بن راشد بن محمد بن راشد آل مكتوم، وقّعت غرفة دبي للاقتصاد الرقمي، إحدى الغرف الثلاث العاملة تحت مظلة غرف دبي، مذكرتي تفاهم مع كل من \"أكاديمية نيبيوس\"، الذراع التعليمية والتدريبية لشركة \"نيبيوس\" المتخصصة في خدمات الحوسبة السحابية للذكاء الاصطناعي والتي…"
+  },
+  {
    "id": "8a735f3cf872",
    "source": "aitnews",
    "lang": "ar",
@@ -5867,6 +6707,20 @@
    "summary_en": "etisalat UAE has obtained accredited certification to ISO/IEC 42001:2023 for its AI management system, making it the first telecom operator in the Middle East and North Africa to do so, WAM reported from Abu Dhabi on 19 October. The certification followed an assessment by LRQA, which is accredited by the United Kingdom Accreditation Service. The standard is described as the world's first international standard for AI management systems. The company says it marks a move from deploying AI at scale to governing it through an independently assessed system. The framework sets requirements on accountability, risk and impact assessment, lifecycle controls, transparency, human oversight and performance evaluation, and aims to give customers and partners clearer insight into how AI-enabled services are governed.",
    "summary_ar": "حصلت «اتصالات الإمارات» على شهادة معتمدة وفق معيار ISO/IEC 42001:2023 لنظام إدارة الذكاء الاصطناعي، لتكون أول مشغل اتصالات في منطقة الشرق الأوسط وشمال أفريقيا ينال هذه الشهادة، بحسب وكالة أنباء الإمارات (وام) من أبوظبي في 19 أكتوبر. وجاءت الشهادة عقب تقييم أجرته شركة LRQA المعتمدة من خدمة الاعتماد في المملكة المتحدة. ويوصف المعيار بأنه الأول عالمياً لنظم إدارة الذكاء الاصطناعي. وترى الشركة أن الخطوة تمثل انتقالاً من توظيف الذكاء الاصطناعي على نطاق واسع إلى حوكمته عبر نظام خضع لتقييم مستقل. ويضع الإطار متطلبات للمساءلة وتقييم المخاطر والآثار وضوابط دورة الحياة والشفافية والإشراف البشري وتقييم الأداء، ويهدف إلى منح العملاء والشركاء وضوحاً أكبر بشأن حوكمة الخدمات المدعومة بالذكاء الاصطناعي.",
    "excerpt": null
+  },
+  {
+   "id": "4e94314bc7f6",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-19T13:09:00+00:00",
+   "title": "\"ميتا\" و\"أبل\" تتعاونان لإطلاق نموذج ذكاء اصطناعي مفتوح الأوزان",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/19/a2",
+   "summary_en": "Meta and Apple have partnered to optimise Meta's open-weight model Muse Spark Open to run on clusters of Mac Studio computers with M5 chips, using Apple's open-source MLX framework. The model has 816 billion parameters and a context window of up to one million tokens, and it can run locally, so developers can handle complex coding and agentic AI tasks without third-party cloud infrastructure. Its weights can be downloaded from Hugging Face, but running it fully on local hardware takes two M5 Mac Studio Ultra machines linked by cables. A report by androidheadlines notes the tie-up follows years of disputes over privacy and ad tracking. It adds that the deal helps Meta compete with Chinese firms such as Alibaba and Moonshot AI, and strengthens Mac Studio as a platform for local AI.",
+   "summary_ar": "تعاونت Meta وApple لتحسين نموذج Meta المفتوح الأوزان Muse Spark Open كي يعمل على مجموعات من أجهزة Mac Studio المزودة بمعالجات M5، باستخدام إطار MLX المفتوح المصدر من Apple. ويضم النموذج 816 مليار معامل ونافذة سياق تصل إلى مليون وحدة لغوية، ويمكن تشغيله محلياً، ما يتيح للمطورين تنفيذ مهام برمجية معقدة وتطبيقات الذكاء الاصطناعي الوكيلة من دون الاعتماد على بنية سحابية تابعة لجهات خارجية. ويمكن تنزيل أوزانه من Hugging Face، لكن تشغيله كاملاً محلياً يتطلب جهازي Mac Studio Ultra بمعالج M5 موصولين بكابلات. ويشير تقرير لموقع androidheadlines إلى أن الشراكة تأتي بعد سنوات من الخلافات حول الخصوصية وتتبع المستخدمين للإعلانات. ويضيف أنها تساعد Meta على منافسة شركات صينية مثل Alibaba وMoonshot AI، وتعزز مكانة Mac Studio منصةً لتشغيل الذكاء الاصطناعي محلياً.",
+   "excerpt": "اتفقت شركتا ميتا وأبل، على التعاون وتنسيق جهودهما لإطلاق نموذج ذكاء اصطناعي مفتوح الأوزان بقدرات هائلة، ودخلتا في شراكة لتحسين نموذج الذكاء الاصطناعي Muse…"
   },
   {
    "id": "2473538547d0",
@@ -6161,6 +7015,34 @@
    "summary_en": "This sponsored post says AI inference is running into a memory bottleneck. It presents Huawei's OceanStor M900 as a response, describing it as a Context Memory Storage platform that aims to improve the economics of large-scale AI inference.",
    "summary_ar": "يذكر هذا المحتوى الممول أن الاستدلال في الذكاء الاصطناعي يواجه عنق زجاجة يتعلق بالذاكرة. ويقدم منتج OceanStor M900 من Huawei كحل لهذه المشكلة، ويصفه بأنه منصة لتخزين ذاكرة السياق (Context Memory Storage) تهدف إلى تحسين اقتصاديات الاستدلال بالذكاء الاصطناعي على نطاق واسع.",
    "excerpt": "SPONSORED POST: The Context Memory Storage platform aims to improve the economics of large-scale AI inference"
+  },
+  {
+   "id": "384ef3e00257",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-19T06:23:00+00:00",
+   "title": "AUS to host world's only UNESCO Chair in Arabic and AI",
+   "title_ar": "الجامعة الأمريكية في الشارقة تستضيف كرسي اليونسكو الوحيد في العالم للغة العربية والذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/19/KMR4",
+   "summary_en": "The American University of Sharjah (AUS) will host a UNESCO Chair in Arabic Language, AI and Digital Heritage, described as the world's only UNESCO chair in Arabic and AI. Chancellor Dr Tod A. Laursen said it will combine Arabic scholarship with responsible AI and digital humanities to preserve Arab cultural and linguistic heritage and open access to it. Its objectives include digitising artefacts, including endangered Arabic dialects, and conducting research that uses AI and machine learning. It will also set up a training platform for early-career scholars, media professionals and cultural practitioners, and develop open-access projects with institutions in the Arab States, Africa and Asia-Pacific. UNESCO's Irakli Khodeli said Arabic, used daily by more than 500 million people, should benefit from AI advances.",
+   "summary_ar": "ستستضيف الجامعة الأميركية في الشارقة (AUS) كرسي اليونسكو للغة العربية والذكاء الاصطناعي والتراث الرقمي، الذي يوصف بأنه الكرسي الوحيد في العالم المعني بالعربية والذكاء الاصطناعي. وقال مستشار الجامعة الدكتور تود لورسن إن الكرسي سيجمع بين الدراسات العربية الرصينة والذكاء الاصطناعي المسؤول والعلوم الإنسانية الرقمية للحفاظ على التراث الثقافي واللغوي العربي وإتاحته. وتشمل أهدافه رقمنة المقتنيات، ومنها اللهجات العربية المهددة بالاندثار، وإجراء أبحاث توظف الذكاء الاصطناعي والتعلم الآلي. كما سينشئ منصة تدريب للباحثين في بداية مسيرتهم والإعلاميين والعاملين في المجال الثقافي، ويطوّر مشاريع رقمية مفتوحة مع مؤسسات في الدول العربية وأفريقيا وآسيا والمحيط الهادئ. وقال إيراكلي خوديلي من اليونسكو إن العربية، التي يستخدمها يومياً أكثر من 500 مليون شخص، ينبغي أن تستفيد من تطورات الذكاء الاصطناعي.",
+   "excerpt": "American University of Sharjah (AUS) has signed an agreement with UNESCO to establish the UNESCO Chair in Arabic Language, Artificial Intelligence (AI) and…"
+  },
+  {
+   "id": "bd91c7a8ddbc",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-19T06:14:00+00:00",
+   "title": "أميركية الشارقة تستضيف أول كرسي يونسكو للذكاء الاصطناعي عالمياً",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/19/KMR4",
+   "summary_en": "The American University of Sharjah has signed an agreement with UNESCO, under the patronage of Sheikha Bodour bint Sultan Al Qasimi, the university's president and chair of its board of trustees. According to the headline, the university will host the first UNESCO chair on artificial intelligence worldwide.",
+   "summary_ar": "أبرمت الجامعة الأميركية في الشارقة اتفاقية مع منظمة الأمم المتحدة للتربية والعلم والثقافة (اليونسكو)، برعاية الشيخة بدور بنت سلطان القاسمي، رئيسة الجامعة ورئيسة مجلس أمنائها. ووفق العنوان، ستستضيف الجامعة أول كرسي لليونسكو للذكاء الاصطناعي على مستوى العالم.",
+   "excerpt": "أبرمت الجامعة الأميركية في الشارقة، برعاية سمو الشيخة بدور بنت سلطان القاسمي، رئيسة الجامعة ورئيسة مجلس أمنائها، اتفاقية مع منظمة الأمم المتحدة للتربية والعلم…"
   },
   {
    "id": "680a99e3203a",
@@ -6735,6 +7617,20 @@
    "summary_en": "A lawsuit against OpenAI, the developer of ChatGPT, has raised questions about using AI for medical advice, CBS News reported. David Rosenthal, a 39-year-old man from Washington state, accuses the platform of helping worsen his mental state until he was hospitalised. The suit, filed in a civil court in San Francisco, California, alleges ChatGPT practised medicine without a licence, helping him choose medications and doses and reassuring him when he decided not to follow his doctor's instructions. It says he was hospitalised for several weeks in 2025, and argues the chatbot should have declined to advise on medication and psychiatric conditions and referred him to a doctor.",
    "summary_ar": "أثارت دعوى قضائية ضد شركة OpenAI، المطوّرة لروبوت المحادثة ChatGPT، تساؤلات بشأن استخدام الذكاء الاصطناعي في تقديم المشورة الطبية، بحسب شبكة «سي بي إس نيوز». ويتهم «ديفيد روزنتال»، وهو رجل في التاسعة والثلاثين من ولاية واشنطن، المنصة بالمساهمة في تدهور حالته النفسية حتى دخل المستشفى. وتقول الدعوى، المرفوعة أمام محكمة مدنية في «سان فرانسيسكو» بولاية «كاليفورنيا»، إن ChatGPT مارس الطب دون ترخيص، إذ ساعده على اختيار الأدوية وتحديد جرعاتها وطمأنه حين قرر عدم اتباع تعليمات طبيبه. وتشير إلى أنه أُدخل المستشفى لعدة أسابيع في عام 2025، وترى أن الروبوت كان ينبغي أن يمتنع عن تقديم المشورة بشأن الأدوية والحالات النفسية وأن يوجّه المستخدم إلى طبيب أو اختصاصي مؤهل.",
    "excerpt": "أثارت دعوى قضائية ضد شركة «أوبن إيه آي»، المطوّرة لروبوت المحادثة «تشات جي بي تي»، تساؤلات بشأن استخدام الذكاء الاصطناعي"
+  },
+  {
+   "id": "6629cf3c0c80",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-17T15:37:00+00:00",
+   "title": "North Korea tests AI-powered underwater torpedo system",
+   "title_ar": "كوريا الشمالية تختبر نظام طوربيد تحت الماء مدعوماً بالذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/17/a2",
+   "summary_en": "North Korea has tested an underwater torpedo system designated ZAM-2.0, which is described as a high-speed, precision-guided weapon. According to KCNA, the test aimed to verify technical upgrades that brought AI into target detection and torpedo guidance. Pyongyang has previously announced plans to test a hypersonic missile using AI technology, and leader Kim Jong Un has called for wider use of the technology in developing domestically produced weapons. The report presents the test as part of North Korea's stated efforts to integrate artificial intelligence into its weapons development programmes.",
+   "summary_ar": "أجرت كوريا الشمالية اختباراً لنظام طوربيد تحت الماء يحمل التسمية ZAM-2.0، ويُوصف بأنه سلاح عالي السرعة ودقيق التوجيه. ووفقاً لوكالة KCNA، هدف الاختبار إلى التحقق من نجاح تحسينات تقنية أدخلت الذكاء الاصطناعي في رصد الأهداف وتوجيه الطوربيد. وكانت بيونغ يانغ قد أعلنت سابقاً خططاً لاختبار صاروخ فرط صوتي يستخدم تقنية الذكاء الاصطناعي، كما دعا الزعيم «كيم جونغ أون» إلى توسيع استخدام هذه التقنية في تطوير أسلحة تُنتج محلياً. ويقدم التقرير الاختبار بوصفه جزءاً من جهود معلنة لدى كوريا الشمالية لدمج الذكاء الاصطناعي في برامج تطوير أسلحتها.",
+   "excerpt": "North Korea conducted an underwater test on Sunday of a new guided torpedo system incorporating artificial intelligence, according to the Korean Central News…"
   },
   {
    "id": "4d539dfb6b75",
