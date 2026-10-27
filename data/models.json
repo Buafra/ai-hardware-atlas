@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T16:57:58+00:00",
+ "updated_at": "2026-10-27T01:38:09+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -252,17 +252,6 @@
    "created": 1775148486,
    "open": true,
    "params_b": 31.27,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "ibm-granite/granite-4.0-h-micro",
-   "name": "IBM: Granite 4.0 Micro",
-   "hf": "ibm-granite/granite-4.0-h-micro",
-   "context": 131000,
-   "created": 1760927695,
-   "open": true,
-   "params_b": 3.19,
    "params_source": "huggingface",
    "moe": false
   },
@@ -3506,6 +3495,28 @@
    "hf": null,
    "context": 1050000,
    "created": 1790702886,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "openai/gpt-6.1-terra",
+   "name": "OpenAI: GPT-6.1 Terra",
+   "hf": null,
+   "context": 1050000,
+   "created": 1793038409,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "openai/gpt-6.1-terra-pro",
+   "name": "OpenAI: GPT-6.1 Terra Pro",
+   "hf": null,
+   "context": 1050000,
+   "created": 1793038556,
    "open": false,
    "params_b": null,
    "params_source": null,
