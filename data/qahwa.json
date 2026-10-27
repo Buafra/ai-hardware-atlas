@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-27T08:04:00+04:00",
+  "generated_at": "2026-10-27T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5637,6 +5637,141 @@
       "permalink": "https://www.instagram.com/p/De-9MEjCMPR/",
       "published_at": "2026-10-27T08:04:00+04:00",
       "cover": "images/qahwa/week-04-day-25--1-learn-lesson-19.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-26--1-learn-lesson-20",
+      "kind": "lesson",
+      "lesson": 20,
+      "code": "L20",
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "CPU + GPU + NPU + 128 GB",
+        "ar": "CPU + GPU + NPU + 128 GB"
+      },
+      "summary": {
+        "en": "A 16-core / 32-thread Zen 5 CPU (Ryzen AI Max+ 395) plus integrated Radeon 8060S graphics (RDNA 3.5, 40 compute units) that share the same memory pool.",
+        "ar": "معالج Zen 5 بـ16 نواة و32 مساراً (Ryzen AI Max+ 395) مع رسوميات Radeon 8060S مدمجة (RDNA 3.5 و40 وحدة حوسبة) تتشارك الذاكرة نفسها."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Another compact ==128 GB AI platform==",
+            "body": "Meet AMD Ryzen AI Halo."
+          },
+          "ar": {
+            "title": "منصة AI صغيرة أخرى ==بذاكرة 128 GB==",
+            "body": "تعرّف على AMD Ryzen AI Halo."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "CPU + GPU in one chip",
+            "body": "A ==16-core / 32-thread Zen 5== CPU (Ryzen AI Max+ 395) plus integrated Radeon 8060S graphics (RDNA 3.5, 40 compute units) that ==share the same memory pool==."
+          },
+          "ar": {
+            "title": "CPU وGPU في شريحة واحدة",
+            "body": "معالج ==Zen 5 بـ16 نواة و32 مساراً== (Ryzen AI Max+ 395) مع رسوميات Radeon 8060S مدمجة (RDNA 3.5 و40 وحدة حوسبة) ==تتشارك الذاكرة نفسها==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "NPU: XDNA 2",
+            "body": "The platform also includes an XDNA 2 NPU rated by AMD at ==up to 50 TOPS== for efficient AI acceleration."
+          },
+          "ar": {
+            "title": "NPU: XDNA 2",
+            "body": "تتضمن المنصة NPU من XDNA 2، وتذكر AMD أنه يصل ==إلى 50 TOPS== لتسريع AI بكفاءة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "128 GB LPDDR5x unified memory",
+            "body": "AMD lists 128 GB at 8000 MT/s with 256 GB/s memory bandwidth. A ==large shared pool== can help with memory-hungry local models."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة 128 GB",
+            "body": "تذكر AMD ذاكرة 128 GB بسرعة 8000 MT/s وعرض نطاق 256 GB/s. ==السعة الكبيرة== تساعد على تشغيل نماذج محلية ضخمة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Developer-friendly I/O",
+            "body": "The platform includes 10 GbE, Wi‑Fi 7, 2 TB SSD and support for Linux or Windows 11."
+          },
+          "ar": {
+            "title": "توصيلات مناسبة للمطورين",
+            "body": "تتضمن 10 GbE وWi‑Fi 7 وSSD بسعة 2 TB ودعم Linux أو Windows 11."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Unified memory ==is not VRAM==",
+            "body": "The GPU can access a large shared memory pool, but this architecture behaves differently from a discrete GPU with dedicated GDDR memory."
+          },
+          "ar": {
+            "title": "الذاكرة الموحّدة ==ليست VRAM==",
+            "body": "يمكن للـGPU الوصول إلى ذاكرة كبيرة ومشتركة، لكن هذه المعمارية تختلف عن GPU منفصل بذاكرة GDDR مخصصة."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Instead of separate counters ==for CPU and GPU==",
+            "body": "Halo puts several workers behind one large shared counter."
+          },
+          "ar": {
+            "title": "بدل طاولات منفصلة ==للـCPU والـGPU==",
+            "body": "تضع Halo عدة «عمال» خلف طاولة مشتركة كبيرة."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "128 GB unified memory equals 128 GB of dedicated GPU VRAM.",
+            "fact": "It is one shared memory pool. Capacity is large, but architecture, bandwidth and software still affect performance."
+          },
+          "ar": {
+            "myth": "ذاكرة موحّدة بسعة 128 GB = VRAM بسعة 128 GB مخصصة.",
+            "fact": "هي ذاكرة مشتركة واحدة. السعة كبيرة، لكن المعمارية وعرض النطاق والبرمجيات ما زالت تؤثر في الأداء."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "I run [model name and size] on [my device]. Is the memory enough, and what are the alternatives? Use official specs; say what you are unsure of."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أشغّل [اسم النموذج وحجمه] على [جهازي]. هل تكفيه الذاكرة؟ وما البدائل؟ اعتمد على المواصفات الرسمية وقل ما لا تعرفه."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "128 GB in a compact system — ==but architecture matters=="
+          },
+          "ar": {
+            "title": "128 GB داخل جهاز صغير — ==لكن المعمارية مهمة=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I run [model name and size] on [my device]. Is the memory enough, and what are the alternatives? Use official specs; say what you are unsure of.",
+        "ar": "أشغّل [اسم النموذج وحجمه] على [جهازي]. هل تكفيه الذاكرة؟ وما البدائل؟ اعتمد على المواصفات الرسمية وقل ما لا تعرفه.",
+        "code": "L20"
+      },
+      "permalink": "https://www.instagram.com/p/De_fdg0Da8p/",
+      "published_at": "2026-10-27T13:03:00+04:00",
+      "cover": "images/qahwa/week-04-day-26--1-learn-lesson-20.webp",
       "related_concepts": []
     }
   ]
