@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-26T20:30:00+04:00",
+  "generated_at": "2026-10-27T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5467,6 +5467,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-26T20:30:00+04:00",
       "cover": "images/qahwa/week-04-day-24--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-24--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "A gaming GPU is useless for AI.",
+        "ar": "كرت الألعاب لا يفيد في AI."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "A gaming GPU is ==useless for AI==.",
+            "body": "Answer: Myth ❌ Many GeForce RTX GPUs are excellent for local AI, depending on memory."
+          },
+          "ar": {
+            "title": "كرت الألعاب ==لا يفيد في AI==.",
+            "body": "الجواب: خرافة ❌ كثير من بطاقات RTX قوية للذكاء الاصطناعي المحلي حسب الذاكرة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-27T07:45:00+04:00",
+      "cover": "images/qahwa/week-04-day-24--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
