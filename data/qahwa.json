@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-27T13:03:00+04:00",
+  "generated_at": "2026-10-27T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5772,6 +5772,42 @@
       "permalink": "https://www.instagram.com/p/De_fdg0Da8p/",
       "published_at": "2026-10-27T13:03:00+04:00",
       "cover": "images/qahwa/week-04-day-26--1-learn-lesson-20.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-25--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "DGX Spark has a 128 GB graphics card.",
+        "ar": "DGX Spark لديه كرت شاشة 128 GB."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "DGX Spark has a ==128 GB graphics card==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "DGX Spark لديه ==كرت شاشة 128 GB==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-27T20:30:00+04:00",
+      "cover": "images/qahwa/week-04-day-25--3-check-story.webp",
       "related_concepts": []
     }
   ]
