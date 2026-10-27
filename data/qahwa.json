@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-27T07:45:00+04:00",
+  "generated_at": "2026-10-27T08:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5502,6 +5502,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-27T07:45:00+04:00",
       "cover": "images/qahwa/week-04-day-24--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-25--1-learn-lesson-19",
+      "kind": "lesson",
+      "lesson": 19,
+      "code": "L19",
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "A compact personal AI supercomputer",
+        "ar": "حاسوب ذكاء اصطناعي فائق بحجم مكتبي"
+      },
+      "summary": {
+        "en": "DGX Spark has 128 GB of LPDDR5x memory shared by its CPU and GPU. It is not the same thing as 128 GB of discrete GPU VRAM.",
+        "ar": "يضم DGX Spark ذاكرة LPDDR5x بسعة 128 GB يتشاركها CPU وGPU. وهي ليست 128 GB من VRAM في بطاقة منفصلة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "A tiny box built for ==serious local AI==",
+            "body": "Meet NVIDIA DGX Spark."
+          },
+          "ar": {
+            "title": "جهاز صغير مصمَّم ==للذكاء الاصطناعي المحلي الاحترافي==",
+            "body": "تعرّف على NVIDIA DGX Spark."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "128 GB of unified memory",
+            "body": "DGX Spark has 128 GB of LPDDR5x memory shared by its CPU and GPU. It is ==not the same thing as 128 GB of discrete GPU VRAM==."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 128 GB",
+            "body": "يضم DGX Spark ذاكرة LPDDR5x بسعة 128 GB يتشاركها CPU وGPU. وهي ==ليست 128 GB من VRAM في بطاقة منفصلة==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "GB10 Grace Blackwell",
+            "body": "NVIDIA’s GB10 platform combines a ==Blackwell GPU== with a ==20-core Arm CPU==. NVIDIA specifies up to 1 PFLOP of FP4 AI performance with sparsity — a theoretical peak that drops at higher precision — and 273 GB/s bandwidth."
+          },
+          "ar": {
+            "title": "GB10 Grace Blackwell",
+            "body": "تجمع منصة GB10 بين ==GPU بمعمارية Blackwell== و==CPU من Arm بـ20 نواة==. تذكر NVIDIA أداءً يصل إلى 1 PFLOP بدقة FP4 مع sparsity، وهو رقم نظري ينخفض عند دقة أعلى، وعرض نطاق 273 GB/s."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why 128 GB matters",
+            "body": "Big models need far more memory than a typical consumer GPU has. NVIDIA says Spark can run models ==up to 200B parameters== and fine-tune up to 70B, depending on format."
+          },
+          "ar": {
+            "title": "لماذا 128 GB مهمة؟",
+            "body": "النماذج الكبيرة تحتاج ذاكرة أكبر بكثير من بطاقات المستهلك. تذكر NVIDIA أنه يشغّل نماذج ==تصل إلى 200 مليار مُعامِل== ويدرّب حتى 70 مليار حسب الصيغة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Built like a workstation",
+            "body": "4 TB NVMe, 10 GbE, Wi‑Fi 7, ConnectX‑7 networking and NVIDIA DGX OS are part of the platform."
+          },
+          "ar": {
+            "title": "مصمم مثل محطة عمل",
+            "body": "يتضمن NVMe بسعة 4 TB و10 GbE وWi‑Fi 7 وConnectX‑7 ونظام NVIDIA DGX OS."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What it is not",
+            "body": "Not “a 5090 in a small box.” Its 273 GB/s bandwidth is far below the RTX 5090's 1,792 GB/s, so models that ==fit on both== run faster on the 5090. Spark fits bigger ones."
+          },
+          "ar": {
+            "title": "ما الذي لا يمثّله الجهاز؟",
+            "body": "ليس «RTX 5090 في صندوق صغير». عرض نطاقه 273 GB/s مقابل 1792 GB/s في RTX 5090، فما ==تتّسع له الذاكرتان== أسرع عليه. وقوته في الحجم."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "RTX desktop: ==an extremely fast espresso station==",
+            "body": "DGX Spark: a compact professional kitchen with a much larger shared workspace."
+          },
+          "ar": {
+            "title": "جهاز RTX المكتبي ==محطة إسبريسو سريعة جداً==",
+            "body": "بينما DGX Spark مثل مطبخ احترافي صغير بمساحة عمل مشتركة أكبر."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "DGX Spark has a 128 GB graphics card.",
+            "fact": "It has 128 GB of unified system memory shared by the CPU and GPU."
+          },
+          "ar": {
+            "myth": "DGX Spark يحتوي على كرت شاشة بذاكرة 128 GB.",
+            "fact": "لديه ذاكرة نظام موحّدة بسعة 128 GB يتشاركها CPU وGPU."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "For [describe your workload], when would 128 GB of unified memory beat a faster 32 GB GPU?"
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "لـ[صف مهمتك]، متى تكون ذاكرة موحّدة 128 GB أهم من GPU أسرع بسعة 32 GB؟"
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Don’t compare it to a gaming GPU ==using one number only=="
+          },
+          "ar": {
+            "title": "لا تقارنه بكرت ألعاب ==اعتماداً على رقم واحد فقط=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "For [describe your workload], when would 128 GB of unified memory beat a faster 32 GB GPU?",
+        "ar": "لـ[صف مهمتك]، متى تكون ذاكرة موحّدة 128 GB أهم من GPU أسرع بسعة 32 GB؟",
+        "code": "L19"
+      },
+      "permalink": "https://www.instagram.com/p/De-9MEjCMPR/",
+      "published_at": "2026-10-27T08:04:00+04:00",
+      "cover": "images/qahwa/week-04-day-25--1-learn-lesson-19.webp",
       "related_concepts": []
     }
   ]
