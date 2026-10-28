@@ -80,5 +80,49 @@
   "https://newsroom.amd.com/news/amd-fsr-upscaling-4-1-boosts-frames-image-quality/": {
     "at": "2026-10-21T00:50:55+00:00",
     "result": "not a new product"
+  },
+  "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure": {
+    "at": "2026-10-28T01:25:07+00:00",
+    "result": "drafted",
+    "id": "nvidia-vera-rubin-nvl72",
+    "model": "NVIDIA Vera Rubin NVL72",
+    "draft": {
+      "vendor": "NVIDIA",
+      "model": "NVIDIA Vera Rubin NVL72",
+      "level": "Rack scale",
+      "type": "Rack",
+      "architecture": "Vera Rubin",
+      "memory": "Not stated",
+      "memory_gb": null,
+      "memory_scope": "Rack total",
+      "announcement": "2026-10-27",
+      "release": "2026-10-27",
+      "release_kind": "Released (generally available on OCI)",
+      "power_w": null,
+      "use": "Frontier model training, inference, agentic AI",
+      "notes": "Availability stated is general availability on Oracle Cloud Infrastructure, not necessarily wider availability. The page gives no memory or power figures for the rack. HGX Rubin NVL8 on OCI is only a plan, with no date given.",
+      "id": "nvidia-vera-rubin-nvl72",
+      "source_reviewed": null,
+      "power_note": "Not documented in this edition",
+      "sources": [
+        {
+          "label": "Announcement",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure"
+        }
+      ],
+      "_draft": {
+        "model": "claude-sonnet-5-5",
+        "created_at": "2026-10-28T01:25:07+00:00",
+        "source_url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+        "evidence": [
+          "NVIDIA Vera Rubin NVL72 and NVIDIA Vera CPUs Are Now Generally Available on OCI",
+          "general availability of NVIDIA Vera Rubin NVL72 and NVIDIA Vera CPUs on OCI",
+          "October 27, 2026",
+          "Each rack connects 72 GPUs through NVIDIA NVLink"
+        ]
+      }
+    },
+    "pr": 3,
+    "pr_at": "2026-10-28T01:30:18+00:00"
   }
 }

@@ -1,13 +1,19 @@
 {
-  "at": "2026-10-27T16:06:14+00:00",
-  "created": [],
+  "at": "2026-10-28T01:25:07+00:00",
+  "created": [
+    "NVIDIA Vera Rubin NVL72"
+  ],
   "waiting": [],
-  "in_pull_request": [],
-  "pull_requests": [],
+  "in_pull_request": [
+    "NVIDIA Vera Rubin NVL72"
+  ],
+  "pull_requests": [
+    3
+  ],
   "usage": {
-    "requests": 0,
-    "input_tokens": 0,
-    "output_tokens": 0,
-    "estimated_usd": 0.0
+    "requests": 1,
+    "input_tokens": 8514,
+    "output_tokens": 1059,
+    "estimated_usd": 0.0276
   }
 }
