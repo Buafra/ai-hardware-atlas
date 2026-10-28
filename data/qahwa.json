@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-27T21:15:00+04:00",
+  "generated_at": "2026-10-28T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5844,6 +5844,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-27T21:15:00+04:00",
       "cover": "images/qahwa/week-04-day-26--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-25--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "DGX Spark has a 128 GB graphics card.",
+        "ar": "DGX Spark لديه كرت شاشة 128 GB."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "DGX Spark has a ==128 GB graphics card==.",
+            "body": "Answer: Myth ❌ It has 128 GB of unified system memory shared by the CPU and GPU."
+          },
+          "ar": {
+            "title": "DGX Spark لديه ==كرت شاشة 128 GB==.",
+            "body": "الجواب: خرافة ❌ لديه ذاكرة نظام موحّدة بسعة 128 GB يتشاركها CPU وGPU."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-28T07:45:00+04:00",
+      "cover": "images/qahwa/week-04-day-25--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
