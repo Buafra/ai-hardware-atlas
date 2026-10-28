@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-28T07:50:00+04:00",
+  "generated_at": "2026-10-28T08:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5914,6 +5914,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-28T07:50:00+04:00",
       "cover": "images/qahwa/week-04-day-26--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-26--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "What 128 GB changes",
+        "ar": "ماذا تغيّر 128 GB؟"
+      },
+      "summary": {
+        "en": "128 GB in a compact AI box — why care?",
+        "ar": "128 GB داخل جهاز AI صغير — لماذا تهم؟"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "128 GB in a compact AI box — ==why care?=="
+          },
+          "ar": {
+            "title": "128 GB داخل جهاز AI صغير — ==لماذا تهم؟=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain unified memory vs dedicated VRAM using one simple example.",
+        "ar": "اشرح الفرق بين الذاكرة الموحّدة وVRAM المخصصة بمثال واحد بسيط.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/DfBhhwXjzzI/",
+      "published_at": "2026-10-28T08:00:00+04:00",
+      "cover": "images/qahwa/week-04-day-26--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
