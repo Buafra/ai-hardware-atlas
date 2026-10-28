@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-28T13:01:00+04:00",
+  "generated_at": "2026-10-28T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6015,6 +6015,66 @@
       "permalink": "https://www.instagram.com/p/DfCD-nMDdbG/",
       "published_at": "2026-10-28T13:01:00+04:00",
       "cover": "images/qahwa/week-04-day-28--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-27--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "challenge",
+      "title": {
+        "en": "Build your dream local AI machine",
+        "ar": "ابنِ جهاز AI المحلي الذي تحلم به"
+      },
+      "summary": {
+        "en": "Pick a budget: AED 5k / 10k / 20k / no limit.",
+        "ar": "اختر ميزانية: 5 آلاف / 10 آلاف / 20 ألف درهم / بلا حد."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Challenge 4: ==Build your dream local AI machine==",
+            "body": "Choose one goal: local LLMs, image/video generation, coding agents or everything."
+          },
+          "ar": {
+            "title": "التحدّي 4: ==ابنِ جهاز AI المحلي الذي تحلم به==",
+            "body": "اختر هدفاً واحداً: نماذج لغوية محلية، صور/فيديو، وكلاء برمجة، أو كل شيء."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Your budget",
+            "body": "Pick a budget: AED 5k / 10k / 20k / no limit."
+          },
+          "ar": {
+            "title": "ميزانيتك",
+            "body": "اختر ميزانية: 5 آلاف / 10 آلاف / 20 ألف درهم / بلا حد."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Copy this prompt",
+            "prompt": "Build me a local AI PC for [goal] with a budget of [AED]. Prioritize memory, software compatibility, power and upgrade path."
+          },
+          "ar": {
+            "title": "انسخ هذا الأمر",
+            "prompt": "صمّم لي جهاز AI محلياً لهدف [الهدف] بميزانية [الميزانية]. أعطِ الأولوية للذاكرة والتوافق والطاقة وقابلية الترقية."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Build me a local AI PC for [goal] with a budget of [AED]. Prioritize memory, software compatibility, power and upgrade path.",
+        "ar": "صمّم لي جهاز AI محلياً لهدف [الهدف] بميزانية [الميزانية]. أعطِ الأولوية للذاكرة والتوافق والطاقة وقابلية الترقية.",
+        "code": "C4"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-28T21:01:00+04:00",
+      "cover": "images/qahwa/week-04-day-27--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
