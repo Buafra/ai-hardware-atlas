@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-28T08:00:00+04:00",
+  "generated_at": "2026-10-28T13:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5951,6 +5951,70 @@
       "permalink": "https://www.instagram.com/reel/DfBhhwXjzzI/",
       "published_at": "2026-10-28T08:00:00+04:00",
       "cover": "images/qahwa/week-04-day-26--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-28--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "recap",
+      "title": {
+        "en": "Week 4 recap",
+        "ar": "ملخص الأسبوع الرابع"
+      },
+      "summary": {
+        "en": "The hardware behind AI, with your coffee.",
+        "ar": "العتاد خلف الذكاء الاصطناعي، مع قهوتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Week 4 ==in a few cards==",
+            "body": "The hardware behind AI, with your coffee."
+          },
+          "ar": {
+            "title": "الأسبوع الرابع ==في بطاقات==",
+            "body": "العتاد خلف الذكاء الاصطناعي، مع قهوتك."
+          }
+        },
+        {
+          "type": "bullets",
+          "en": {
+            "title": "What we learned",
+            "items": [
+              "CPU, GPU and NPU are different kinds of processors for different AI jobs",
+              "Memory capacity often decides what local models can fit",
+              "RTX GPUs combine hardware with a mature AI software ecosystem",
+              "DGX Spark and Ryzen AI Halo use large unified memory pools"
+            ]
+          },
+          "ar": {
+            "title": "ما تعلّمناه",
+            "items": [
+              "CPU وGPU وNPU معالجات مختلفة لأدوار مختلفة في AI",
+              "سعة الذاكرة غالباً تحدد ما تتّسع له محلياً",
+              "بطاقات RTX تجمع العتاد مع منظومة برمجيات AI قوية",
+              "DGX Spark وRyzen AI Halo يستخدمان ذاكرة موحّدة كبيرة"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Next week: ==safety and checking answers=="
+          },
+          "ar": {
+            "title": "الأسبوع القادم: ==الأمان والتحقق من الإجابات=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DfCD-nMDdbG/",
+      "published_at": "2026-10-28T13:01:00+04:00",
+      "cover": "images/qahwa/week-04-day-28--1-recap-carousel.webp",
       "related_concepts": []
     }
   ]
