@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T01:25:07+00:00",
+ "updated_at": "2026-10-28T16:44:53+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1141,17 +1141,6 @@
    "hf": "Qwen/Qwen3-Next-80B-A3B-Instruct",
    "context": 262144,
    "created": 1757612213,
-   "open": true,
-   "params_b": 81.32,
-   "params_source": "huggingface",
-   "moe": true
-  },
-  {
-   "id": "qwen/qwen3-next-80b-a3b-thinking",
-   "name": "Qwen: Qwen3 Next 80B A3B Thinking",
-   "hf": "Qwen/Qwen3-Next-80B-A3B-Thinking",
-   "context": 262144,
-   "created": 1757612284,
    "open": true,
    "params_b": 81.32,
    "params_source": "huggingface",
@@ -2624,7 +2613,7 @@
    "id": "inclusionai/ling-3.1-flash",
    "name": "inclusionAI: Ling 3.1 Flash",
    "hf": null,
-   "context": 262144,
+   "context": 1000000,
    "created": 1790950024,
    "open": false,
    "params_b": null,
@@ -3007,7 +2996,7 @@
   },
   {
    "id": "openai/gpt-4-turbo",
-   "name": "OpenAI: GPT-4 Turbo",
+   "name": "OpenAI: GPT-4 Turbo (batch)",
    "hf": null,
    "context": 128000,
    "created": 1712620800,
@@ -3534,28 +3523,6 @@
    "moe": false
   },
   {
-   "id": "openai/o1",
-   "name": "OpenAI: o1",
-   "hf": null,
-   "context": 200000,
-   "created": 1734459999,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "openai/o1-pro",
-   "name": "OpenAI: o1-pro",
-   "hf": null,
-   "context": 200000,
-   "created": 1742423211,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "openai/o3",
    "name": "OpenAI: o3",
    "hf": null,
@@ -3568,21 +3535,10 @@
   },
   {
    "id": "openai/o3-mini",
-   "name": "OpenAI: o3 Mini",
+   "name": "OpenAI: o3 Mini (batch)",
    "hf": null,
    "context": 200000,
    "created": 1738351721,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "openai/o3-mini-high",
-   "name": "OpenAI: o3 Mini High",
-   "hf": null,
-   "context": 200000,
-   "created": 1739372611,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -3601,21 +3557,10 @@
   },
   {
    "id": "openai/o4-mini",
-   "name": "OpenAI: o4 Mini",
+   "name": "OpenAI: o4 Mini (batch)",
    "hf": null,
    "context": 200000,
    "created": 1744820942,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "openai/o4-mini-high",
-   "name": "OpenAI: o4 Mini High",
-   "hf": null,
-   "context": 200000,
-   "created": 1744824212,
    "open": false,
    "params_b": null,
    "params_source": null,
