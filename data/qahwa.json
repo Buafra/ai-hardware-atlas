@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-28T07:45:00+04:00",
+  "generated_at": "2026-10-28T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -5879,6 +5879,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-28T07:45:00+04:00",
       "cover": "images/qahwa/week-04-day-25--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-26--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "hardware",
+      "title": {
+        "en": "128 GB unified memory is exactly the same as 128 GB dedicated VRAM.",
+        "ar": "ذاكرة موحّدة بسعة 128 GB هي نفسها VRAM بسعة 128 GB مخصصة."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "128 GB unified memory is ==exactly the same== as 128 GB dedicated VRAM.",
+            "body": "Answer: Myth ❌ The capacity may be shared and large, but the architecture and bandwidth are different."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 128 GB ==هي نفسها== VRAM بسعة 128 GB مخصصة.",
+            "body": "الجواب: خرافة ❌ السعة كبيرة ومشتركة، لكن المعمارية وعرض النطاق مختلفان."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-28T07:50:00+04:00",
+      "cover": "images/qahwa/week-04-day-26--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
