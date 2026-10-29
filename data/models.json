@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-29T01:57:30+00:00",
+ "updated_at": "2026-10-29T17:02:36+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -595,6 +595,17 @@
    "params_b": 8.92,
    "params_source": "huggingface",
    "moe": false
+  },
+  {
+   "id": "mistralai/mistral-large-4-0",
+   "name": "Mistral: Mistral Large 4",
+   "hf": "mistralai/Mistral-Large-4-1T-A52B",
+   "context": 1048576,
+   "created": 1791294122,
+   "open": true,
+   "params_b": null,
+   "params_source": null,
+   "moe": true
   },
   {
    "id": "mistralai/mistral-nemo",
@@ -2764,17 +2775,6 @@
    "moe": false
   },
   {
-   "id": "mistralai/mistral-large-4-0",
-   "name": "Mistral: Mistral Large 4",
-   "hf": null,
-   "context": 1048576,
-   "created": 1791294122,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "mistralai/mistral-medium-3",
    "name": "Mistral: Mistral Medium 3",
    "hf": null,
@@ -4034,17 +4034,6 @@
    "hf": null,
    "context": 524288,
    "created": 1790160358,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "upstage/solar-pro-3",
-   "name": "Upstage: Solar Pro 3",
-   "hf": null,
-   "context": 131072,
-   "created": 1769481200,
    "open": false,
    "params_b": null,
    "params_source": null,
