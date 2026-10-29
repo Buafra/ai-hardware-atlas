@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-28T21:15:00+04:00",
+  "generated_at": "2026-10-29T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6112,6 +6112,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-28T21:15:00+04:00",
       "cover": "images/qahwa/week-04-day-28--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-04-day-28--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 4,
+      "topic": "quiz",
+      "title": {
+        "en": "Which spec most directly tells you how much model data can fit in GPU memory?",
+        "ar": "أي مواصفة تخبرك مباشرةً بحجم ما تتّسع له ذاكرة GPU؟"
+      },
+      "summary": {
+        "en": "Answer: Which spec tells you what can fit?",
+        "ar": "الجواب: أي مواصفة تخبرك بما يمكن أن يتسع؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which spec most directly tells you ==how much model data can fit== in GPU memory?",
+            "body": "Answer: Memory capacity (GB) ✅"
+          },
+          "ar": {
+            "title": "أي مواصفة تخبرك مباشرةً ==بحجم ما تتّسع له== ذاكرة GPU؟",
+            "body": "الجواب: سعة الذاكرة (GB) ✅"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-29T07:45:00+04:00",
+      "cover": "images/qahwa/week-04-day-28--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
