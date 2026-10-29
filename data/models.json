@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T16:44:53+00:00",
+ "updated_at": "2026-10-29T01:57:30+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -864,7 +864,7 @@
    "id": "nvidia/nemotron-3-super-120b-a12b",
    "name": "NVIDIA: Nemotron 3 Super",
    "hf": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-   "context": 262144,
+   "context": 1048576,
    "created": 1773245239,
    "open": true,
    "params_b": 123.61,
@@ -3616,6 +3616,17 @@
    "hf": null,
    "context": 1048576,
    "created": 1791933050,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "particle-ai/particle-1",
+   "name": "Particle AI: Particle-1",
+   "hf": null,
+   "context": 1048576,
+   "created": 1793207893,
    "open": false,
    "params_b": null,
    "params_source": null,
