@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-29T07:45:00+04:00",
+  "generated_at": "2026-10-29T13:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6147,6 +6147,121 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-29T07:45:00+04:00",
       "cover": "images/qahwa/week-04-day-28--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-21-claude-duet--1-ai-news",
+      "kind": "news",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "Claude Duet, an agent that comes to you",
+        "ar": "Claude Duet وكيل يأتي إليك"
+      },
+      "summary": {
+        "en": "A normal assistant waits for your question. This one starts on its own and decides what deserves your attention and what can wait. It is the second announcement of its kind in a month, after OpenAI's agents.",
+        "ar": "المساعد المعتاد ينتظر سؤالك. أما هذا فيبدأ هو، ويقرّر ما الذي يستحق انتباهك وما يمكن تأجيله. هذا ثاني إعلان من هذا النوع خلال شهر، بعد وكلاء OpenAI."
+      },
+      "slides": [
+        {
+          "type": "news-cover",
+          "ar": {
+            "title": "وكيل ==يأتي إليك== بدل أن تسأله",
+            "body": "Anthropic تفتح معاينة بحثية لتطبيق Claude Duet."
+          },
+          "en": {
+            "title": "An agent that ==comes to you==",
+            "body": "Anthropic opens a research preview of Claude Duet."
+          },
+          "source": "Source: Anthropic · 21 Oct 2026"
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا يفعل؟",
+            "items": [
+              "موجز كل صباح لأهم ما يحتاج انتباهك",
+              "يراقب تطبيقاتك المربوطة ولا ==يزعجك إلا عند الضرورة==",
+              "يكمل المهمة حتى لو تركت الجهاز",
+              "==يستأذنك== قبل أن يتصرف نيابةً عنك"
+            ]
+          },
+          "en": {
+            "title": "What does it do?",
+            "items": [
+              "A short brief each morning on what needs you",
+              "Watches your connected apps and ==messages you only when it matters==",
+              "Keeps working after you step away",
+              "==Checks with you== before acting on your behalf"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما الذي ==يتغيّر== هنا؟",
+            "body": "المساعد المعتاد ينتظر سؤالك. أما هذا فيبدأ هو، ويقرّر ما الذي يستحق انتباهك وما يمكن تأجيله. هذا ثاني إعلان من هذا النوع خلال شهر، بعد وكلاء OpenAI."
+          },
+          "en": {
+            "title": "What is ==different== here?",
+            "body": "A normal assistant waits for your question. This one starts on its own and decides what deserves your attention and what can wait. It is the second announcement of its kind in a month, after OpenAI's agents."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "قبل أن تتحمّس",
+            "items": [
+              "==معاينة محدودة== بقائمة انتظار، وليست إطلاقاً عاماً",
+              "تبدأ بمشتركي Pro وMax ==في الولايات المتحدة==",
+              "ضمانات الأمان ==وعود الشركة نفسها==، لا تقييم مستقل"
+            ]
+          },
+          "en": {
+            "title": "Before you get excited",
+            "items": [
+              "A ==limited preview== by waitlist, not a general launch",
+              "Starting with Pro and Max subscribers ==in the United States==",
+              "The safety guarantees are ==the company's own claims==, not an independent review"
+            ]
+          },
+          "note": {
+            "ar": "تقول الشركة إنه لا يرى كلمات المرور، ويُمنع من مشاركة أرقام البطاقات والهوية.",
+            "en": "The company says it never sees passwords, and is blocked from sharing card and ID numbers."
+          }
+        },
+        {
+          "type": "hype",
+          "level": 3,
+          "ar": {
+            "low": "ضجة",
+            "high": "تغيير حقيقي",
+            "label": "3 من 5: الفكرة مهمة، والوصول محدود",
+            "body": "انتقال المساعد من «ينتظر سؤالك» إلى «يبدأ هو» تحوّل حقيقي في طريقة العمل. لكنه اليوم معاينة لفئة واحدة في بلد واحد، ولا يمكن الحكم على أدائه قبل أن يجرّبه الناس."
+          },
+          "en": {
+            "label": "3 of 5: the idea matters, the access does not reach us",
+            "low": "Hype",
+            "high": "Real change",
+            "body": "Moving from an assistant that waits to one that starts on its own is a real shift in how work gets done. But today it is a preview for one tier in one country, and nobody can judge it until people use it."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "هل تترك وكيلاً ==يتابع بريدك==؟ اكتب رأيك"
+          },
+          "en": {
+            "title": "Would you let an agent ==watch your inbox==? Tell us"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DfEo54GjSiQ/",
+      "published_at": "2026-10-29T13:02:00+04:00",
+      "cover": "images/qahwa/news-2026-10-21-claude-duet--1-ai-news.webp",
       "related_concepts": []
     }
   ]
