@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-29T13:02:00+04:00",
+  "generated_at": "2026-10-29T13:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6262,6 +6262,43 @@
       "permalink": "https://www.instagram.com/p/DfEo54GjSiQ/",
       "published_at": "2026-10-29T13:02:00+04:00",
       "cover": "images/qahwa/news-2026-10-21-claude-duet--1-ai-news.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-21-claude-duet--2-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "An agent that reads your inbox sees your password",
+        "ar": "الوكيل الذي يقرأ بريدك يرى كلمة مرورك"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "news",
+          "ar": {
+            "title": "الوكيل الذي يقرأ بريدك ==يرى كلمة مرورك==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An agent that reads your inbox ==sees your password==",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-29T13:30:00+04:00",
+      "cover": "images/qahwa/news-2026-10-21-claude-duet--2-check-story.webp",
       "related_concepts": []
     }
   ]
