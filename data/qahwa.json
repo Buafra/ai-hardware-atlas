@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-30T13:03:00+04:00",
+  "generated_at": "2026-10-30T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6638,6 +6638,42 @@
         "human-in-the-loop",
         "rag"
       ]
+    },
+    {
+      "id": "week-05-day-29--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "An AI assistant keeps nothing of what you type.",
+        "ar": "المساعد الذكي لا يحتفظ بشيء مما تكتبه"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي ==لا يحتفظ== بشيء مما تكتبه",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant ==keeps nothing== of what you type.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-30T20:30:00+04:00",
+      "cover": "images/qahwa/week-05-day-29--3-check-story.webp",
+      "related_concepts": []
     }
   ]
 }
