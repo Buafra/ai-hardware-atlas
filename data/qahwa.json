@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-30T20:30:00+04:00",
+  "generated_at": "2026-10-30T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6673,6 +6673,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-30T20:30:00+04:00",
       "cover": "images/qahwa/week-05-day-29--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-30--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "If it gives you a source, the source exists.",
+        "ar": "إذا ذكر لك مصدراً فالمصدر موجود"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "إذا ذكر لك ==مصدراً== فالمصدر موجود",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "If it gives you ==a source==, the source exists.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-30T21:15:00+04:00",
+      "cover": "images/qahwa/week-05-day-30--3-check-story.webp",
       "related_concepts": []
     }
   ]
