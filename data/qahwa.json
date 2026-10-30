@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-29T13:30:00+04:00",
+  "generated_at": "2026-10-30T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6299,6 +6299,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-29T13:30:00+04:00",
       "cover": "images/qahwa/news-2026-10-21-claude-duet--2-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-10-21-claude-duet--2-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "An agent that reads your inbox sees your password",
+        "ar": "الوكيل الذي يقرأ بريدك يرى كلمة مرورك"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An agent that reads your inbox ==sees your password==",
+            "body": "Answer: Myth ❌ Apps are connected with access tokens, not your password, and companies design agents not to see it. But an agent does see the content of whatever you connect — so choose what you connect carefully."
+          },
+          "ar": {
+            "title": "الوكيل الذي يقرأ بريدك ==يرى كلمة مرورك==",
+            "body": "الجواب: خرافة ❌ الربط يتم برموز وصول لا بكلمة مرورك، والشركات تصمّم وكلاءها ليعملوا دون رؤيتها. لكن الوكيل يرى محتوى ما تربطه به، فاختر ما تربطه بعناية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-30T07:50:00+04:00",
+      "cover": "images/qahwa/news-2026-10-21-claude-duet--2-check-story-answer.webp",
       "related_concepts": []
     }
   ]
