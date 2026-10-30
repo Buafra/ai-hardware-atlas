@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-30T08:04:00+04:00",
+  "generated_at": "2026-10-30T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6489,6 +6489,154 @@
         "ai-governance",
         "training-vs-inference",
         "local-vs-cloud"
+      ]
+    },
+    {
+      "id": "week-05-day-30--1-learn-lesson-22",
+      "kind": "lesson",
+      "lesson": 22,
+      "code": "L22",
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "Why a confident answer can be wrong",
+        "ar": "لماذا قد تكون الإجابة واثقة وخاطئة؟"
+      },
+      "summary": {
+        "en": "The model predicts the most likely text. It doesn't look anything up unless the app shows a search with sources. A confident tone is a writing style, not evidence.",
+        "ar": "النموذج يتنبأ بالنص الأرجح، ولا يبحث إلا إذا أظهر التطبيق بحثاً ومصادر. والنبرة الواثقة أسلوب كتابة، لا دليل على الصحة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "إجابة واثقة… ==وقد تكون خاطئة==",
+            "body": "لماذا يحدث هذا، وكيف تكتشفه؟"
+          },
+          "en": {
+            "title": "A confident answer ==can still be wrong==",
+            "body": "Why it happens, and how to spot it."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "السبب في طريقة عمله",
+            "body": "النموذج يتنبأ بالنص الأرجح، ولا يبحث إلا إذا أظهر التطبيق بحثاً ومصادر. والنبرة الواثقة أسلوب كتابة، لا دليل على الصحة."
+          },
+          "en": {
+            "title": "It's how the model works",
+            "body": "The model predicts the most likely text. It doesn't look anything up unless the app shows a search with sources. A confident tone is a writing style, not evidence."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "علامات تستدعي التحقّق",
+            "items": [
+              "أرقام وتواريخ دقيقة بلا مصدر",
+              "اسم كتاب أو دراسة لا تجدها",
+              "رابط لا يفتح أو يقود إلى صفحة أخرى",
+              "تفاصيل تتغيّر إذا أعدت السؤال"
+            ]
+          },
+          "en": {
+            "title": "Signs you should check",
+            "items": [
+              "Exact numbers or dates with no source",
+              "A book or study you can't find",
+              "A dead link, or one to another page",
+              "Details that change when you ask again"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "متى يكون الخطأ مكلفاً؟",
+            "items": [
+              "الصحة والدواء",
+              "المال والعقود",
+              "الأنظمة والإجراءات الرسمية",
+              "الأسماء والاقتباسات"
+            ]
+          },
+          "en": {
+            "title": "When a mistake costs you",
+            "items": [
+              "Health and medicine",
+              "Money and contracts",
+              "Rules and official procedures",
+              "Names and quotations"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "اسأله: ==ما الذي قد يخطئ؟==",
+            "body": "اطلب منه أن يحدد الأجزاء الأكثر عرضة للخطأ وما يجب أن تتحقق منه. استخدم ردّه قائمةً للتحقق، لا ضماناً."
+          },
+          "en": {
+            "title": "Ask what ==might be wrong==",
+            "body": "Ask which parts are most likely to be wrong and what you should check. Use its reply as a checklist, not a guarantee."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "باريستا ==لا يقول لا أعرف==",
+            "body": "يصف لك قهوة ليست في القائمة بثقة تامة. الثقة في الصوت لا تعني أن الكوب موجود."
+          },
+          "en": {
+            "title": "A barista who ==never says I don't know==",
+            "body": "He describes a coffee that isn't on the menu, with total confidence. A sure voice doesn't mean the cup exists."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "المساعد الذكي يبحث في الإنترنت في كل إجابة.",
+            "fact": "المساعدات الذكية تبحث في بعض الأسئلة فقط، ويُظهر التطبيق خطوة بحث وروابط تفتحها. وإلا فالإجابة من أنماط تعلّمها النموذج."
+          },
+          "en": {
+            "myth": "An AI assistant searches the internet for every answer.",
+            "fact": "AI assistants search only for some questions. When they do, the app shows a search step and links you can open. Otherwise it answers from learned patterns."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "سؤالي: [السؤال]. أجب عنه، ثم اذكر الأجزاء الأكثر عرضة للخطأ وما أتحقّق منه. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "My question: [question]. Answer it, then list the parts most likely to be wrong and what I should verify. Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، وشاركه مع من ==يصدّق كل إجابة=="
+          },
+          "en": {
+            "title": "Save this and share it with someone who ==believes every answer=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My question: [question]. Answer it, then list the parts most likely to be wrong and what I should verify. Answer in my language.",
+        "ar": "سؤالي: [السؤال]. أجب عنه، ثم اذكر الأجزاء الأكثر عرضة للخطأ وما أتحقّق منه. أجب بلغتي.",
+        "code": "L22"
+      },
+      "permalink": "https://www.instagram.com/p/DfHNzGUjcL1/",
+      "published_at": "2026-10-30T13:03:00+04:00",
+      "cover": "images/qahwa/week-05-day-30--1-learn-lesson-22.webp",
+      "related_concepts": [
+        "hallucination",
+        "human-in-the-loop",
+        "rag"
       ]
     }
   ]
