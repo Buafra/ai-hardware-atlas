@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-30T07:50:00+04:00",
+  "generated_at": "2026-10-30T08:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6008,6 +6008,10 @@
           },
           "ar": {
             "title": "الأسبوع القادم: ==الأمان والتحقق من الإجابات=="
+          },
+          "next": {
+            "ar": "الدرس 21: ما الذي لا تشاركه مع المساعد الذكي",
+            "en": "Lesson 21: What not to share with an AI assistant"
           }
         }
       ],
@@ -6335,6 +6339,157 @@
       "published_at": "2026-10-30T07:50:00+04:00",
       "cover": "images/qahwa/news-2026-10-21-claude-duet--2-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-05-day-29--1-learn-lesson-21",
+      "kind": "lesson",
+      "lesson": 21,
+      "code": "L21",
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "What not to share with an AI assistant",
+        "ar": "ما الذي لا تشاركه مع المساعد الذكي"
+      },
+      "summary": {
+        "en": "Your text is sent to the service's servers to produce the answer. How long it is kept, and whether it is used to improve the service, depends on the service and your settings.",
+        "ar": "ما تكتبه يُرسل إلى خوادم الخدمة لتوليد الإجابة. أما مدة حفظه واستخدامه في تحسين الخدمة فتختلف حسب الخدمة وإعداداتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ما الذي ==لا تكتبه== في المساعد الذكي؟",
+            "body": "بعض المعلومات لا مكان لها في أي محادثة."
+          },
+          "en": {
+            "title": "What ==not to type== into an AI assistant",
+            "body": "Some information doesn't belong in any chat."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ماذا يحدث لما تكتبه؟",
+            "body": "ما تكتبه يُرسل إلى خوادم الخدمة لتوليد الإجابة. أما مدة حفظه واستخدامه في تحسين الخدمة فتختلف حسب الخدمة وإعداداتك."
+          },
+          "en": {
+            "title": "What happens to what you type?",
+            "body": "Your text is sent to the service's servers to produce the answer. How long it is kept, and whether it is used to improve the service, depends on the service and your settings."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "لا تكتب هذه أبداً",
+            "items": [
+              "كلمات المرور ورموز التحقق",
+              "أرقام الهوية وجواز السفر",
+              "أرقام البطاقات والحسابات البنكية",
+              "بيانات الآخرين الشخصية دون إذنهم"
+            ]
+          },
+          "en": {
+            "title": "Never type these",
+            "items": [
+              "Passwords and verification codes",
+              "ID and passport numbers",
+              "Card and bank account numbers",
+              "Other people's data without their consent"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "وفي العمل؟",
+            "items": [
+              "المستندات السرية وعقود العملاء",
+              "بيانات الموظفين والمرضى",
+              "الأكواد والأسرار التجارية"
+            ]
+          },
+          "en": {
+            "title": "And at work?",
+            "items": [
+              "Confidential documents and client contracts",
+              "Employee and patient records",
+              "Source code and trade secrets"
+            ]
+          },
+          "note": {
+            "ar": "اتبع سياسة جهة عملك أولاً.",
+            "en": "Follow your employer's policy first."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "البديل ==بسيط==",
+            "body": "احذف الأسماء والأرقام قبل اللصق، أو اكتب مثالاً افتراضياً مشابهاً. ستحصل على المساعدة نفسها دون أن تكشف بيانات أحد."
+          },
+          "en": {
+            "title": "There's an ==easy swap==",
+            "body": "Remove names and numbers before you paste, or write a similar made-up example. You get the same help without exposing anyone."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "المقهى ==مكان عام==",
+            "body": "تتحدث فيه بحرية، لكنك لا تقرأ رقم بطاقتك بصوت عالٍ. تعامل مع المحادثة بالمنطق نفسه."
+          },
+          "en": {
+            "title": "A café is ==a public place==",
+            "body": "You chat freely there, but you don't read your card number out loud. Treat the chat the same way."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "حذف المحادثة يعني اختفاءها فوراً من كل مكان.",
+            "fact": "الحذف يزيلها من أمامك، أما مدة بقائها في أنظمة الخدمة فتختلف حسب الخدمة وسياستها. افتح صفحة الخصوصية واقرأها مرة واحدة."
+          },
+          "en": {
+            "myth": "Deleting a chat makes it vanish everywhere, instantly.",
+            "fact": "Deleting removes it from your view. How long it stays in the service's systems depends on the service and its policy. Read its privacy page once."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "هذا نص أريد مشاركته بعد أن حذفت منه الأسماء والأرقام: [النص]. هل بقي فيه ما قد يكشف هوية شخص أو جهة؟ أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Here is a text I want to share, with names and numbers already removed: [text]. Is anything left that could still identify a person or a company? Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل أن ==تلصق أي معلومة حساسة=="
+          },
+          "en": {
+            "title": "Save this before you ==paste anything sensitive=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Here is a text I want to share, with names and numbers already removed: [text]. Is anything left that could still identify a person or a company? Answer in my language.",
+        "ar": "هذا نص أريد مشاركته بعد أن حذفت منه الأسماء والأرقام: [النص]. هل بقي فيه ما قد يكشف هوية شخص أو جهة؟ أجب بلغتي.",
+        "code": "L21"
+      },
+      "permalink": "https://www.instagram.com/p/DfGrhTTCNiG/",
+      "published_at": "2026-10-30T08:04:00+04:00",
+      "cover": "images/qahwa/week-05-day-29--1-learn-lesson-21.webp",
+      "related_concepts": [
+        "data-privacy",
+        "ai-governance",
+        "training-vs-inference",
+        "local-vs-cloud"
+      ]
     }
   ]
 }
