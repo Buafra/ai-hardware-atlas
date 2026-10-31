@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-31T20:30:00+04:00",
+  "generated_at": "2026-10-31T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7106,6 +7106,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-31T20:30:00+04:00",
       "cover": "images/qahwa/week-05-day-31--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-32--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "A video is proof enough, because faking one is hard.",
+        "ar": "الفيديو دليل كافٍ، لأن تزييفه صعب"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "الفيديو ==دليل كافٍ==، لأن تزييفه صعب",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "A video ==is proof enough==, because faking one is hard.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-31T21:15:00+04:00",
+      "cover": "images/qahwa/week-05-day-32--3-check-story.webp",
       "related_concepts": []
     }
   ]
