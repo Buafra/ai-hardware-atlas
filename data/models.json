@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-31T01:40:52+00:00",
+ "updated_at": "2026-10-31T15:53:40+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -956,28 +956,6 @@
    "created": 1761752836,
    "open": true,
    "params_b": 21.51,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "poolside/laguna-s-2.1",
-   "name": "Poolside: Laguna S 2.1",
-   "hf": "poolside/Laguna-S-2.1",
-   "context": 1048576,
-   "created": 1784652683,
-   "open": true,
-   "params_b": 117.56,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "poolside/laguna-xs-2.1",
-   "name": "Poolside: Laguna XS 2.1",
-   "hf": "poolside/Laguna-XS-2.1",
-   "context": 262144,
-   "created": 1783002429,
-   "open": true,
-   "params_b": 33.44,
    "params_source": "huggingface",
    "moe": false
   },

@@ -3,6 +3,48 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "da7bf57625f8",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-30T21:04:43+00:00",
+   "title": "تقرير لـ«التمكين الحكومي - أبوظبي»: تبنّي «الذكاء الاصطناعي» يزيد أهمية دور الإنسان في صنع القرار",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الإمارات/4702547/تقرير-لـ-التمكين-الحكومي---أبوظبي---تبني--الذكاء-الاصطناعي",
+   "summary_en": "The Abu Dhabi Department of Government Enablement has released a report introducing the \"leaner workforce paradox\": as AI takes over routine tasks, people make fewer decisions, but each decision carries more weight. The report calls managing this one of the main governance challenges of the next decade. It outlines four scenarios for the future of work up to 2040 and favours one in which AI handles administrative tasks while humans keep judgement, creativity and relationship management. It notes that over 95% of Abu Dhabi government employees have completed AI training, and that more than 100 AI use cases run across over 40 government entities. Among its recommendations are naming a specific person responsible for key public decisions and piloting redesigned roles in vital services.",
+   "summary_ar": "أصدرت دائرة التمكين الحكومي في أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، أي أن الأفراد يتخذون قرارات أقل مع تولّي الذكاء الاصطناعي المهام الروتينية، بينما تزداد أهمية كل قرار. ويعدّ التقرير التعامل مع هذه الظاهرة من أبرز تحديات الحوكمة خلال العقد المقبل. ويرسم أربعة سيناريوهات لمستقبل العمل حتى عام 2040، ويفضّل سيناريو يتولى فيه الذكاء الاصطناعي الأعباء الإدارية، فيما يحتفظ الإنسان بالحكم والإبداع وإدارة العلاقات. ويشير إلى أن أكثر من 95% من موظفي حكومة أبوظبي أكملوا تدريباً في الذكاء الاصطناعي، وأن أكثر من 100 حالة استخدام تعمل في أكثر من 40 جهة حكومية. ومن توصياته تحديد شخص بعينه يتحمّل مسؤولية القرارات العامة الأساسية، وإطلاق مشاريع تجريبية لإعادة تصميم الأدوار في الخدمات الحيوية.",
+   "excerpt": "أطلقت دائرة التمكين الحكومي- أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، وهي ظاهرة يتخذ فيها الأفراد قرارات أقل مع تولّي الذكاء الاصطناعي مزيداً من المهام الروتينية، بينما تزداد أهمية كل قرار وتبعاته."
+  },
+  {
+   "id": "6e68c0014c21",
+   "source": "kt-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-30T09:41:13+00:00",
+   "title": "UAE AI Office debunks social media claims about fake government website",
+   "title_ar": "مكتب الذكاء الاصطناعي في الإمارات ينفي ما تردد على وسائل التواصل الاجتماعي بشأن موقع حكومي مزيف",
+   "url": "https://www.khaleejtimes.com/uae/ai-office-debunks-social-media-posts-about-fake-government-website",
+   "summary_en": "The UAE AI Office has said social media claims that a government website is fraudulent are false, confirming that the site belongs to an official government entity. It urged the public to verify information before sharing it and to rely on official sources. The office, launched in June 2026 as a federal body overseeing artificial intelligence and data, reposted users' posts on its Instagram page. The website was linked to an SMS inviting residents to join UAE Vibe Codes, an AI learning initiative tied to UAE Codes Day on October 29, themed 'Vibe Coding'. One user said the site offers a 10-minute coding course followed by a certificate. The office also shared photos of certificates from residents who completed the AI for All course.",
+   "summary_ar": "أكد مكتب الذكاء الاصطناعي في دولة الإمارات أن ما يتداول على وسائل التواصل الاجتماعي من ادعاءات بأن موقعاً حكومياً احتيالي غير صحيح، مشيراً إلى أن الموقع يتبع جهة حكومية رسمية. ودعا المكتب الجمهور إلى التحقق من المعلومات قبل نشرها والاعتماد على المصادر الرسمية. وأعاد المكتب، الذي أُطلق في يونيو 2026 كجهة اتحادية للإشراف على الذكاء الاصطناعي والبيانات، نشر عدد من منشورات المستخدمين عبر صفحته على إنستغرام. وكان الموقع مرتبطاً برسالة نصية تدعو السكان إلى المشاركة في مبادرة «UAE Vibe Codes» للتعلم في مجال الذكاء الاصطناعي، المرتبطة بيوم الإمارات للبرمجة في 29 أكتوبر بشعار «البرمجة بالإحساس» (Vibe Coding). وذكر أحد المستخدمين أن الموقع يتيح دورة برمجة مدتها 10 دقائق تليها شهادة. كما نشر المكتب صور شهادات لسكان أتموا دورة «الذكاء الاصطناعي للجميع» (AI for All).",
+   "excerpt": "The UAE announced plans to train 80,000 government employees in Agentic AI. This will equip the public sector workforce with skills to integrate AI into daily operations and service delivery."
+  },
+  {
+   "id": "74c93e9892b0",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-30T09:38:44+00:00",
+   "title": "شركات التكنولوجيا تتكبد خسائر جديدة مع نتائج مخيبة تعزز مخاوف الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/10/30/tech-firms-suffer-another-blow-as-disappointing-earnings-increase-fears-around-ai",
+   "summary_en": "Tech companies tied to AI suffered sharp losses after Amazon's quarterly results missed analysts' expectations for profit and revenue, and Intel's profit forecast fell short because of weak demand for PC processors and supply chain problems. This followed Alphabet's report of slower growth in advertising and search revenue alongside plans to raise capital spending. Alphabet's shares dropped more than 12 percent, Intel's fell 23 percent, and the selling spread to Asia, where SK Hynix lost more than seven percent and Seoul's index fell over three percent. Anna Wu of Fundstrat-style firm Flowlines Research said demand for AI has not slowed, but higher financing costs and credit risk could eventually force cloud giants to slow infrastructure investment. Earlier gains, including a 632 percent jump in SK Hynix operating profit and Anthropic's roughly 1,300 percent first-half revenue rise, did not calm investor concerns.",
+   "summary_ar": "تكبدت شركات التكنولوجيا المرتبطة بالذكاء الاصطناعي خسائر حادة بعدما جاءت نتائج Amazon الفصلية دون توقعات المحللين في الأرباح والإيرادات، وجاءت توقعات أرباح Intel دون التقديرات بسبب ضعف الطلب على معالجات الحواسيب الشخصية ومشكلات في سلاسل التوريد. وجاء ذلك بعد إعلان Alphabet تباطؤ نمو إيرادات الإعلانات والبحث مع عزمها زيادة الإنفاق الرأسمالي. وهوى سهم Alphabet بأكثر من 12 في المئة وسهم Intel بنسبة 23 في المئة، وامتدت موجة البيع إلى آسيا، إذ خسرت SK Hynix أكثر من سبعة في المئة وتراجع مؤشر «سيول» بأكثر من ثلاثة في المئة. وقالت «آنا وو» من Flowlines Research إن الطلب على الذكاء الاصطناعي لم يتباطأ، لكن ارتفاع تكاليف التمويل ومخاطر الائتمان قد يجبران شركات الحوسبة السحابية العملاقة على إبطاء استثماراتها في البنية التحتية. ولم تهدئ المكاسب السابقة، ومنها قفزة أرباح SK Hynix التشغيلية بنسبة 632 في المئة وارتفاع إيرادات Anthropic في النصف الأول بنحو 1,300 في المئة، مخاوف المستثمرين.",
+   "excerpt": "شركات التكنولوجيا عادت تحت الضغط يوم الجمعة بعد جولة جديدة من نتائج الأرباح المخيبة لعمالقة وول ستريت، وسط تنامي المخاوف من طفرة الاستثمار في الذكاء الاصطناعي."
+  },
+  {
    "id": "8f2362ced8df",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -31,6 +73,20 @@
    "excerpt": "حصد مركز النقل المتكامل (أبوظبي للتنقل)، التابع لدائرة البلديات والنقل، جائزة الذكاء الاصطناعي في الحكومة والمدن الذكية عن نظام أولوية مركبات الطوارئ على تقاطعات الإشارات الضوئية، وذلك ضمن الدورة الرابعة عشرة من قمة الشرق الأوسط للذكاء الاصطناعي والتحليلات."
   },
   {
+   "id": "ce070d919f5d",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T21:17:55+00:00",
+   "title": "Tech stocks slide as Alphabet’s record plunge revives AI fears",
+   "title_ar": "أسهم التكنولوجيا تتراجع مع إحياء الهبوط القياسي لأسهم Alphabet المخاوف بشأن الذكاء الاصطناعي",
+   "url": "https://www.thenationalnews.com/business/markets/2026/10/29/alphabet-google-stocks-ai/",
+   "summary_en": "Tech stocks fell on Thursday after Alphabet dropped 13%, its worst day on record and the second-largest one-day market value loss for any US stock, following disappointing search and advertising sales that deepened worries about AI's threat to its core business. The Nasdaq 100 lost 1.4% and the S&P 500 lost 0.3%, ending a three-day winning run. The Philadelphia Semiconductor Index fell 1.4%, ServiceNow dropped 27% and Fortinet 20% after weak quarterly results, and Caterpillar slid 9.3%. Microsoft eased 0.2% despite strong cloud growth and heavy demand for its $25 billion bond offering. Around 400 S&P 500 stocks gained, and the article says damage to the broad market has so far been limited.",
+   "summary_ar": "تراجعت أسهم التكنولوجيا يوم الخميس بعدما هبطت أسهم «ألفابت» بنسبة 13%، في أسوأ أداء يومي لها على الإطلاق وثاني أكبر خسارة في القيمة السوقية خلال يوم واحد لأي سهم أميركي، إثر مبيعات البحث والإعلانات المخيبة للآمال التي زادت المخاوف من تهديد الذكاء الاصطناعي لنشاطها الرئيسي. وخسر مؤشر ناسداك 100 نسبة 1.4% وانخفض مؤشر ستاندرد أند بورز 500 بنسبة 0.3%، ما أنهى سلسلة مكاسب دامت ثلاثة أيام. وتراجع مؤشر فيلادلفيا لأشباه الموصلات 1.4%، وهبط سهم «ServiceNow» بنسبة 27% وسهم «Fortinet» بنسبة 20% بعد نتائج فصلية ضعيفة، كما انخفض سهم «Caterpillar» بنسبة 9.3%. أما «مايكروسوفت» فتراجع سهمها 0.2% رغم نمو قوي في أعمال الحوسبة السحابية وطلب كبير على سنداتها البالغة 25 مليار دولار. وارتفعت أسهم نحو 400 شركة في مؤشر ستاندرد أند بورز 500، وتشير المقالة إلى أن الضرر الذي لحق بالسوق الأوسع ظل محدوداً حتى الآن.",
+   "excerpt": "(Bloomberg) -- Tech stocks were dragged lower by a record drop in Alphabet Inc. after disappointing results renewed investor concerns about the threat that artificial intelligence poses to its core business."
+  },
+  {
    "id": "76e3f8d331e0",
    "source": "euronews-ar",
    "lang": "ar",
@@ -43,6 +99,34 @@
    "summary_en": "Two Democratic members of Congress, Jamie Raskin and Robert Garcia, have written a letter, seen by Politico, urging President Donald Trump to keep full records of his official exchanges with AI chatbots. They argue that questions from Trump and his aides, and the answers generated, count as presidential records under federal law. They cite reports that Trump spent hours using Elon Musk's Grok in a December 2025 Oval Office meeting, including asking how Venezuelans would react to Nicolás Maduro's arrest. The article says no evidence shows the chatbot shaped that operation. The lawmakers want a closed briefing by November 11 on safeguards and handling of classified information. A White House official told AFP that all required records are kept.",
    "summary_ar": "وجّه النائبان الديمقراطيان في الكونغرس «جيمي راسكين» و«روبرت غارسيا» رسالة اطلعت عليها «بوليتيكو» (Politico) يطالبان فيها الرئيس «دونالد ترامب» بالاحتفاظ بسجلات كاملة لمراسلاته الرسمية مع روبوتات الدردشة العاملة بالذكاء الاصطناعي. ويريان أن أسئلة ترامب ومساعديه والإجابات الناتجة عنها تُعد سجلات رئاسية يحميها القانون الفدرالي. واستندا إلى تقارير تفيد بأن ترامب أمضى ساعات في استخدام Grok التابع لـ«إيلون ماسك» خلال اجتماع في المكتب البيضاوي في كانون الأول/ديسمبر 2025، وسأل عن ردة فعل الفنزويليين على اعتقال «نيكولاس مادورو». ويذكر المقال أنه لا دليل على أن الروبوت وجّه تلك العملية. ويطلب المشرعان جلسة إحاطة مغلقة قبل 11 تشرين الثاني/نوفمبر حول الضمانات والتعامل مع المعلومات السرية. وقال مسؤول في البيت الأبيض لوكالة فرانس برس إن جميع السجلات المطلوبة محفوظة.",
    "excerpt": "حذر المشرعان من المخاطر الكامنة خلف اعتماد الرئيس المفترض على برنامج دردشة تديره جهة خاصة في قضايا السياسة الخارجية، مؤكدين أن المخرجات التي يولدها الذكاء الاصطناعي قد تكون غير دقيقة أو خاضعة للتلاعب."
+  },
+  {
+   "id": "3d1dae4369e8",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T19:58:00+00:00",
+   "title": "\"إنفيديا\" تطلق نموذجاً للذكاء الاصطناعي يحول الصوت لنص يدعم 40 لغة",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a14",
+   "summary_en": "NVIDIA has announced a new AI model called Nemotron 3.5 Transcribe, which turns audio recordings into written text and supports 40 languages. Developers can use it for free, as it comes with open weights. The company says it also handles translation between English and 31 other languages, processes recordings of up to an hour, and can tell apart as many as eight speakers in one recording. NVIDIA says it is aimed at apps for transcribing recordings and medical conversations, and it can recognise specialised technical terms. The model has 30 billion parameters and can run on a single chip across a range of computing platforms, so multiple systems are not needed.",
+   "summary_ar": "أعلنت شركة NVIDIA إطلاق نموذج جديد للذكاء الاصطناعي باسم Nemotron 3.5 Transcribe، يحوّل التسجيلات الصوتية إلى نصوص مكتوبة ويدعم 40 لغة. ويمكن للمطورين استخدامه مجاناً لأنه يأتي بأوزان مفتوحة. وتقول الشركة إن النموذج يدعم أيضاً الترجمة بين الإنجليزية و31 لغة أخرى، ويعالج تسجيلات تصل مدتها إلى ساعة، ويميّز بين أصوات ما يصل إلى ثمانية متحدثين في التسجيل الواحد. ويستهدف تطبيقات تفريغ التسجيلات والمحادثات الطبية، ويستطيع التعرف على المصطلحات الفنية المتخصصة. ويضم النموذج 30 مليار معامل، ويمكن تشغيله على شريحة واحدة عبر منصات حوسبة متنوعة، دون الحاجة إلى أنظمة حوسبة متعددة.",
+   "excerpt": "أطلقت شركة إنفيديا الأميركية، نموذجاً جديداً للذكاء الاصطناعي لتحويل التسجيلات الصوتية إلى نصوص مكتوبة، يدعم 40 لغة، ويتيح للمطورين استخدامه مجاناً بأوزان…"
+  },
+  {
+   "id": "2a1a8a7c88a0",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-29T18:45:31+00:00",
+   "title": "You can generate and edit Google Docs files directly in Gemini chats now",
+   "title_ar": "يمكنك الآن إنشاء ملفات Google Docs وتحريرها مباشرة داخل محادثات Gemini",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs",
+   "summary_en": "Google now lets users generate, preview and edit files directly inside Gemini chats without leaving the app. Supported formats include PDFs, Google Docs, Google Sheets, slide decks, Markdown files, TXT files and code. The feature is available from today to all Gemini users, but only PDF previews and editing work on both web and mobile, while the other formats are web-only for now. Users can expand documents to full-screen mode and highlight text to ask Gemini questions or request changes, such as turning a highlighted table into a graph. Gemini added file generation and downloads earlier this year, and Anthropic launched a similar feature in Claude chats.",
+   "summary_ar": "باتت Google تتيح للمستخدمين إنشاء الملفات ومعاينتها وتحريرها مباشرة داخل محادثات Gemini دون مغادرة التطبيق. وتشمل الصيغ المدعومة ملفات PDF وGoogle Docs وGoogle Sheets والعروض التقديمية وملفات Markdown وTXT والشيفرة البرمجية. وتتوفر الميزة اعتباراً من اليوم لجميع مستخدمي Gemini، لكن معاينة PDF وتحريره يعملان على الويب والجوال معاً، بينما تقتصر الصيغ الأخرى على نسخة الويب حالياً. ويمكن للمستخدمين توسيع المستندات إلى وضع ملء الشاشة وتحديد النص لطرح أسئلة على Gemini أو طلب تعديلات، مثل تحويل جدول محدد إلى رسم بياني. وكانت Gemini قد أضافت إنشاء الملفات وتنزيلها في وقت سابق من هذا العام، كما أطلقت Anthropic ميزة مشابهة في محادثات Claude.",
+   "excerpt": "Now you can generate, preview, and edit PDFs, Google Docs, Google Sheets, slide decks, Markdown files, TXT files, and code directly within Google Gemini."
   },
   {
    "id": "bcae5e5bffd4",
@@ -59,6 +143,34 @@
    "excerpt": "Mistral says its new model can afford organizations a kind of control over its cyber defenses that closed models can't."
   },
   {
+   "id": "0334b943369e",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T16:35:00+00:00",
+   "title": "Sharjah Quran Academy explores AI’s role in Quranic studies",
+   "title_ar": "أكاديمية القرآن الكريم بالشارقة تبحث دور الذكاء الاصطناعي في الدراسات القرآنية",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/29/mm12",
+   "summary_en": "A symposium organised by the Holy Quran Academy in Sharjah examined the achievements of the Encyclopaedia of Rhetorical Exegesis and looked at future directions for rhetorical studies after the encyclopaedia. Participants also discussed how artificial intelligence could deepen appreciation of the rhetoric of Quranic parables, including methods for identifying rhetorical meanings and digital applications of rhetorical exegesis. Academy Secretary-General Abdullah Khalaf Al Hosani said AI could link the heritage of Arabic rhetoric with modern knowledge tools and open new avenues for research. Mohammed Safi Al-Mustghanemi, the encyclopaedia's scientific director, described its scholarly methodology, and university deans praised its contribution. Senior officials, researchers and professors attended, and Al Hosani honoured the participants at the close.",
+   "summary_ar": "ناقشت ندوة نظمتها أكاديمية القرآن الكريم في الشارقة إنجازات موسوعة التفسير البلاغي، واستعرضت آفاق الدراسات البلاغية في مرحلة ما بعد الموسوعة. كما بحث المشاركون دور الذكاء الاصطناعي في تعميق تذوق بلاغة الأمثال القرآنية، ومن ذلك طرق استخراج المعاني البلاغية وإمكانات التطبيق الرقمي للتفسير البلاغي. وقال الأمين العام للأكاديمية الدكتور عبدالله خلف الحوسني إن الذكاء الاصطناعي يربط تراث البلاغة العربية بأدوات المعرفة الحديثة ويفتح آفاقاً جديدة للبحث. وعرض الدكتور محمد صافي المستغانمي، المدير العلمي للموسوعة، المنهج العلمي المتبع فيها، فيما أشاد عميدا كليتين جامعيتين بإسهامها. وحضر الندوة مسؤولون وباحثون وأساتذة جامعات، وكرّم الحوسني المتحدثين والمشاركين في ختامها.",
+   "excerpt": "Sharjah’s Holy Quran Academy hosted a scientific symposium exploring the achievements of the Encyclopaedia of Rhetorical Exegesis and future research…"
+  },
+  {
+   "id": "216ba6a50c0a",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-29T16:32:45+00:00",
+   "title": "وكلاء الذكاء الاصطناعي يحتاجون إلى مديري الإدارة الوسطى",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/financial-times/1561474",
+   "summary_en": "In this opinion piece, Kai-Fu Lee, CEO of 01.ai and former head of Google China, argues that AI may finally succeed in flattening corporate hierarchies, after earlier predictions about computers and Silicon Valley efforts fell short. He says companies are essentially information systems and that AI can reach primary sources such as meeting notes and support tickets directly, giving top executives transparency. He describes using such a system at his own company, which revealed two teams building the same feature for three months. He expects flatter structures in which some middle managers become directly responsible individuals, as Apple calls them. He adds that human skills remain necessary, and that as AI takes on more tasks, managers' value will shift to building trust, nurturing relationships and guiding teams amid uncertainty.",
+   "summary_ar": "في هذا المقال الرأي، يرى كاي-فو لي، الرئيس التنفيذي لشركة 01.ai والرئيس السابق لـ«جوجل الصين»، أن الذكاء الاصطناعي قد ينجح هذه المرة في تسطيح الهياكل التنظيمية للشركات، بعد أن لم تتحقق توقعات سابقة بشأن الحواسيب ولا محاولات شركات «وادي السيليكون». ويقول إن المؤسسة في جوهرها نظام للمعلومات، وإن الذكاء الاصطناعي يستطيع الوصول مباشرة إلى المصادر الأولية مثل محاضر الاجتماعات وتذاكر الدعم الفني، مما يمنح الإدارة العليا شفافية كبيرة. ويذكر أنه يستخدم نظاماً كهذا في شركته، وقد كشف أن فريقين عملا ثلاثة أشهر على الميزة نفسها. ويتوقع هياكل أكثر تسطحاً يتحول فيها بعض مديري الإدارة الوسطى إلى «أفراد مسؤولين مباشرة»، وهو مصطلح تستخدمه «أبل». ويضيف أن السمات البشرية تظل ضرورية، وأنه كلما تولى الذكاء الاصطناعي مهام أكثر، تحولت قيمة المديرين إلى بناء الثقة وتعزيز العلاقات وتوجيه الفرق وسط عدم اليقين.",
+   "excerpt": "كاي-فو لي الرئيس التنفيذي لشركة 01.ai والرئيس السابق لجوجل الصين في عام 1958 تنبأ باحثان في مجال الإدارة، يتمتعان برؤية"
+  },
+  {
    "id": "88294416a4cb",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -71,6 +183,34 @@
    "summary_en": "Dream, a startup founded by former Palantir executives Andy Elder and Arjun Mathur, has come out of stealth with $17 million in seed funding led by Andreessen Horowitz. SV Angel, XYZ and Zigg Capital also backed it. The company is building world models that automate building design and engineering, and it aims to replace older architecture, engineering and construction tools such as AutoCAD and Revit. Its model is trained on more than 100 million square feet of building data from US permit archives and accounts for internal elements like plumbing and HVAC. Dream is already selling to professionals and developers, and its platform is deployed across 10 active projects in Texas and California. Rivals include Motif, Snaptrude and Arcol.",
    "summary_ar": "خرجت شركة Dream الناشئة من مرحلة التخفي بتمويل أولي قيمته 17 مليون دولار بقيادة Andreessen Horowitz، بمشاركة SV Angel وXYZ وZigg Capital. أسس الشركة المديران التنفيذيان السابقان في Palantir، آندي إلدر وأرجون ماثور. وتطور الشركة نماذج عالمية (world models) تؤتمت تصميم المباني وهندستها، وتسعى إلى الحلول محل أدوات قديمة في قطاع العمارة والهندسة والبناء مثل AutoCAD وRevit. ويتدرب نموذجها على أكثر من 100 مليون قدم مربعة من بيانات المباني المأخوذة من أرشيفات التراخيص في الولايات المتحدة، ويراعي عناصر داخلية مثل السباكة وأنظمة التدفئة والتهوية. وتبيع الشركة منتجها فعلاً لمتخصصين ومطورين، وتعمل منصتها في 10 مشاريع قائمة في تكساس وكاليفورنيا. ومن المنافسين Motif وSnaptrude وArcol.",
    "excerpt": "Dream is grounded in real physics and construction standards. Just as LLMs learn from text, Dream's world model is trained on more than 100 million square feet of building data gathered from permit archives across the United States."
+  },
+  {
+   "id": "9957776b3e42",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-29T16:02:54+00:00",
+   "title": "«أكتوبر الأسود».. كيف يحوّل الذكاء الاصطناعي القراصنة إلى تهديد للبنية التحتية العالمية؟",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/technology/science-technology/artificial-intelligence/1561483",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "لم تعد الهجمات الإلكترونية تتطلب خبراء في البرمجة أو أدوات معقدة؛ فالذكاء الاصطناعي بات يمنح المجرمين قدرة أكبر على اكتش"
+  },
+  {
+   "id": "45b4ef0b726f",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T16:00:00+00:00",
+   "title": "Microsoft’s AI future has fewer jobs",
+   "title_ar": "مستقبل Microsoft في الذكاء الاصطناعي يتضمن وظائف أقل",
+   "url": "https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad",
+   "summary_en": "Microsoft is offering voluntary buyouts to about 60,000 employees in the US, UK, Canada and India, the first time it has made such an offer to so many people. It follows a retirement offer to around 9,000 staff earlier this year and comes months after 4,800 layoffs. The article links the move to CEO Satya Nadella's earlier remark that people costs would fall while GPU per researcher rises, and says the aim is to cut costs without reducing AI infrastructure investment. Headcount fell to about 223,000 as of June 30th from 228,000 in 2025, the first yearly drop in a decade. Eligible employees have until December to decide.",
+   "summary_ar": "تعرض «مايكروسوفت» برنامج خروج طوعي على نحو 60 ألف موظف في الولايات المتحدة وبريطانيا وكندا والهند، وهي المرة الأولى التي تقدم فيها عرضاً كهذا لهذا العدد الكبير. ويأتي ذلك بعد عرض تقاعد شمل نحو 9 آلاف موظف في وقت سابق من هذا العام، وبعد أشهر من تسريح 4800 موظف. ويربط المقال الخطوة بتصريح سابق للرئيس التنفيذي «ساتيا ناديلا» بأن تكاليف الموظفين ستنخفض بينما يرتفع نصيب كل باحث من وحدات معالجة الرسوميات، ويقول إن الهدف خفض التكاليف دون تقليص الاستثمار في البنية التحتية للذكاء الاصطناعي. وانخفض عدد العاملين إلى نحو 223 ألفاً في 30 يونيو من 228 ألفاً في 2025، وهو أول تراجع سنوي منذ عقد. وأمام الموظفين المؤهلين حتى ديسمبر لاتخاذ قرارهم.",
+   "excerpt": "To anyone listening closely to what Microsoft CEO Satya Nadella has been saying over the past couple of years, this week felt like the clearest sign yet that AI is about to fundamentally change the size of Microsoft's workforce."
   },
   {
    "id": "f132d9f8a48d",
@@ -87,6 +227,34 @@
    "excerpt": "Two thirds expect AI to pay for itself, but pressure on power grid remains concern"
   },
   {
+   "id": "ebe626b69149",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T15:33:00+00:00",
+   "title": "Five AI Camp entries shortlisted for SGCA",
+   "title_ar": "إدراج خمس مشاركات من AI Camp في القائمة المختصرة لـ SGCA",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/29/a6",
+   "summary_en": "Five entries from an AI camp have been shortlisted for the Sharjah Government Communication Award. The camp aims to let participants develop innovative solutions that use AI technologies to improve communication between individuals and government bodies. Participants worked on specialised projects applying AI in four areas: public health, education, environmental transformation and food security. The qualifying teams are still refining their projects at the Al Majaz Amphitheatre ahead of a final presentation scheduled for November 1st. Al Abqash thanked the Sharjah Government Media Bureau and the award for the opportunity to take part.",
+   "summary_ar": "تأهلت خمسة مشاريع من معسكر للذكاء الاصطناعي إلى القائمة المختصرة لجائزة الشارقة للاتصال الحكومي. ويهدف المعسكر إلى تمكين المشاركين من تطوير حلول مبتكرة توظف تقنيات الذكاء الاصطناعي لتحسين التواصل بين الأفراد والجهات الحكومية. وعمل المشاركون على مشاريع متخصصة تطبق الذكاء الاصطناعي في أربعة مجالات رئيسية هي الصحة العامة والتعليم والتحول البيئي والأمن الغذائي. وما زالت الفرق المتأهلة تواصل تحسين مشاريعها في مسرح المجاز تمهيداً للعرض النهائي المقرر في الأول من نوفمبر. وقدمت الأبقش الشكر للمكتب الإعلامي لحكومة الشارقة وللجائزة على فرصة المشاركة.",
+   "excerpt": "Hoor Al Abqash, Technical Supervisor of the Artificial Intelligence (AI) Camp at the Rubu’ Qarn Center for Science and Technology, confirmed that the Center is…"
+  },
+  {
+   "id": "3b4fe0946b63",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-29T15:25:27+00:00",
+   "title": "Paris-based Mistral releases \"Le Chonk,\" a strong coding model that still trails China overall",
+   "title_ar": "شركة Mistral ومقرها باريس تطلق «Le Chonk»، وهو نموذج قوي في البرمجة لكنه لا يزال متأخراً عن الصين بوجه عام",
+   "url": "https://the-decoder.com/paris-based-mistral-releases-le-chonk-a-strong-coding-model-that-still-trails-china-overall/",
+   "summary_en": "Mistral has published the weights of Mistral Large 4, nicknamed Le Chonk, on Hugging Face, three weeks after a public preview. The model has about one trillion parameters, 52 billion of them active per step, and extra reinforcement learning lifted its Terminal-Bench 4.0 score from 28 to 41 percent. The report says it leads open models on some coding tests and is fast and fairly cheap, at $0.70 per million input tokens and $2.10 per million output tokens. Artificial Analysis gives it 26 points on its Intelligence Index, behind Chinese models such as DeepSeek V4.1 Flash and GLM-5.3, which score 32. It uses a modified MIT license, and commercial cloud providers need a separate license.",
+   "summary_ar": "نشرت «ميسترال» أوزان نموذج Mistral Large 4، الملقب Le Chonk، على منصة Hugging Face بعد ثلاثة أسابيع من المعاينة العامة. ويضم النموذج نحو تريليون مُعامل، منها 52 مليارًا نشطة في كل خطوة، وقد رفع التدريب التعزيزي الإضافي نتيجته في اختبار Terminal-Bench 4.0 من 28 إلى 41 بالمئة. ويذكر التقرير أنه يتصدر النماذج المفتوحة في بعض اختبارات البرمجة، وأنه سريع ومنخفض التكلفة نسبياً، إذ يبلغ سعره 0.70 دولار لكل مليون وحدة لغوية مدخلة و2.10 دولار لكل مليون وحدة مخرجة. وتمنحه Artificial Analysis 26 نقطة في مؤشرها للذكاء، خلف نماذج صينية مثل DeepSeek V4.1 Flash وGLM-5.3 التي تسجل 32 نقطة. ويُطرح بترخيص MIT معدّل، ويحتاج مزودو الخدمات السحابية التجارية إلى ترخيص منفصل.",
+   "excerpt": "Mistral has released the weights for Large 4, aka \"Le Chonk,\" a trillion-parameter model trained entirely in Europe. Mistral says it beats its open rivals at coding, and independent testing shows it's fast and fairly cheap."
+  },
+  {
    "id": "a5b72ef9e679",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -99,6 +267,62 @@
    "summary_en": "ADNOC, XRG and Microsoft have issued the third annual Powering Possible report, titled Energy Resilience in the Intelligence Era, in Abu Dhabi. The survey of about 400 energy and finance leaders finds a move from trying out AI to applying it, with 62 per cent ranking it among their top two priorities, up from 42 per cent in 2025. Some 89 per cent increased AI investment spending, and 63 per cent expect returns to cover or exceed costs. Also, 74 per cent expect AI to raise energy consumption by 2030, but only 52 per cent trust current infrastructure to meet the extra demand. The report calls for energy and digital infrastructure to be developed together. It precedes the fourth ENACT Majlis and ADIPEC 2026, held from 2 to 5 November.",
    "summary_ar": "أصدرت ADNOC و XRG و Microsoft في أبوظبي النسخة الثالثة من تقرير «تعزيز الإمكانات» السنوي بعنوان «صمود ومرونة قطاع الطاقة في عصر الذكاء الاصطناعي». ويظهر الاستطلاع، الذي شمل نحو 400 من قيادات الطاقة والتمويل، انتقالاً من تجربة الذكاء الاصطناعي إلى تطبيقه، إذ اعتبره 62% ضمن أهم أولويتين مقابل 42% في عام 2025. وزاد 89% من المشاركين إنفاقهم الاستثماري على الذكاء الاصطناعي، وتوقع 63% أن تغطي العوائد التكاليف أو تتجاوزها. كما يتوقع 74% أن يرتفع استهلاك الطاقة بحلول عام 2030، بينما يثق 52% فقط بقدرة البنية التحتية الحالية على تلبية الطلب الإضافي. ودعا التقرير إلى تطوير البنية التحتية للطاقة والبنية الرقمية بالتزامن. ويسبق صدوره الدورة الرابعة من مجلس ENACT ومعرض «أديبك 2026» من 2 إلى 5 نوفمبر.",
    "excerpt": "أبوظبي (الاتحاد) أصدرت «أدنوك» و«XRG» و«مايكروسوفت» النسخة الثالثة من تقرير «تعزيز الإمكانات» السنوي بعنوان «صمود ومرونة قطاع الطاقة في عصر الذكاء الاصطناعي» والذي يسلط الضوء على التسارع المتزايد لاستثمارات قطاع الطاقة العالمي في الذكاء الاصطناعي واعتماد حلوله وأدواته، استناداً…"
+  },
+  {
+   "id": "d6f344ff2c8a",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T15:12:37+00:00",
+   "title": "الرئيس التنفيذي لمجموعة «G42»: الإمارات تتجه من تصدير الطاقة إلى تصدير الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdys8-الرئيس-التنفيذي-لمجموعة-«g42»-الإمارات-تتجه-تصدير",
+   "summary_en": "Peng Xiao, chief executive of G42, said on 29 October that the UAE aims to strengthen its place in the global AI landscape by drawing on its computing capacity and advanced infrastructure, as worldwide demand for AI grows. He described the country's ambition as moving from exporting energy to exporting intelligence. He noted that a number of G42's partners in the United States are turning to the UAE to use its computing capabilities. Xiao also said AI is already able to outperform humans at thinking. The report adds that his remarks reflect the growing link between energy and AI, as data centres and digital infrastructure need more power and computing capacity.",
+   "summary_ar": "قال بينغ شياو، الرئيس التنفيذي لمجموعة G42، في 29 أكتوبر إن دولة الإمارات تتطلع إلى تعزيز حضورها في مشهد الذكاء الاصطناعي العالمي مستفيدة من قدراتها الحوسبية وبنيتها التحتية المتقدمة، في ظل تنامي الطلب العالمي على هذه التقنيات. ووصف طموح الدولة بالانتقال من تصدير الطاقة إلى تصدير الذكاء. وأشار إلى أن عدداً من شركاء G42 في الولايات المتحدة يتجهون إلى الإمارات للاستفادة من قدراتها الحوسبية. وقال شياو أيضاً إن الذكاء الاصطناعي بات قادراً بالفعل على التفوق على الإنسان في التفكير. ويضيف التقرير أن هذه التصريحات تعكس تنامي الترابط بين قطاع الطاقة والذكاء الاصطناعي، مع ازدياد حاجة مراكز البيانات والبنية التحتية الرقمية إلى الطاقة والقدرات الحوسبية.",
+   "excerpt": null
+  },
+  {
+   "id": "c52eaf46e880",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T15:08:43+00:00",
+   "title": "Powering Possible report: 62% of energy leaders now rank AI among their top two priorities",
+   "title_ar": "تقرير Powering Possible: 62% من قادة قطاع الطاقة يضعون الذكاء الاصطناعي الآن ضمن أهم أولويتين لديهم",
+   "url": "https://www.wam.ae/en/article/c2zjm1p-powering-possible-report-62-energy-leaders-now",
+   "summary_en": "ADNOC, XRG and Microsoft published their third annual Powering Possible report, Energy Resilience in the Intelligence Era, on 29 October 2026. Based on a survey of almost 400 senior energy and finance leaders, it shows 62 per cent ranking AI among their top two corporate priorities, up from 42 per cent in 2025. Deployment of integrated agentic AI workflows rose from 15 to 33 per cent, and 89 per cent of respondents raised AI spending. Supply stability and reliability is now the most cited measure of AI's contribution, at 39 per cent, while cost savings fell to 13 per cent. Although 74 per cent expect higher energy use by 2030, only 52 per cent are confident infrastructure can cope. The report came out ahead of the fourth ENACT Majlis and ADIPEC 2026 in Abu Dhabi.",
+   "summary_ar": "نشرت ADNOC و XRG و Microsoft في 29 أكتوبر 2026 النسخة الثالثة من تقرير «تعزيز الإمكانات» (Powering Possible) بعنوان «صمود ومرونة قطاع الطاقة في عصر الذكاء الاصطناعي». واستند التقرير إلى استطلاع شمل نحو 400 من كبار قادة الطاقة والتمويل، وأظهر أن 62% منهم يضعون الذكاء الاصطناعي ضمن أهم أولويتين لمؤسساتهم مقابل 42% في عام 2025. وارتفعت نسبة المؤسسات التي تطبق مسارات عمل متكاملة قائمة على الذكاء الاصطناعي الوكيلي من 15% إلى 33%، وزاد 89% من المشاركين إنفاقهم عليه. وأصبح استقرار الإمدادات وموثوقيتها أكثر المعايير ذكراً لقياس مساهمة الذكاء الاصطناعي بنسبة 39%، بينما تراجع خفض التكاليف إلى 13%. ورغم أن 74% يتوقعون ارتفاع استهلاك الطاقة بحلول 2030، فإن 52% فقط واثقون بقدرة البنية التحتية. وصدر التقرير قبل الدورة الرابعة من مجلس ENACT ومعرض ADIPEC 2026 في أبوظبي.",
+   "excerpt": null
+  },
+  {
+   "id": "b4a9cacc5709",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T15:02:36+00:00",
+   "title": "تقرير \"تعزيز الإمكانات\": 62% من قيادات الطاقة تضع الذكاء الاصطناعي أولوية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdys7-تقرير-تعزيز-الإمكانات-62-قيادات-الطاقة-تضع-الذكاء",
+   "summary_en": "ADNOC, XRG and Microsoft released the third edition of their annual \"Enhancing Potential\" report in Abu Dhabi on 29 October, titled on energy-sector resilience and flexibility in the age of AI. Based on a survey of about 400 leaders in energy and finance, it found that 62% of energy leaders rank AI among their organisation's top two priorities, up from 42% in 2025, and 89% raised AI investment spending last year. Some 74% expect AI to increase energy consumption by 2030, but only 52% are confident current infrastructure can meet the extra electricity demand. The report appears ahead of the fourth ENACT council in Abu Dhabi and ADIPEC 2026, running 2 to 5 November.",
+   "summary_ar": "أصدرت ADNOC وXRG وMicrosoft في أبوظبي يوم 29 أكتوبر النسخة الثالثة من تقرير «تعزيز الإمكانات» السنوي، بعنوان «صمود ومرونة قطاع الطاقة في عصر الذكاء الاصطناعي». ويستند التقرير إلى استطلاع شمل نحو 400 من القيادات في قطاعي الطاقة والتمويل، وبيّن أن 62% من قيادات الطاقة يضعون الذكاء الاصطناعي ضمن أهم أولويتين لمؤسساتهم مقابل 42% في عام 2025، وأن 89% زادوا إنفاقهم الاستثماري عليه خلال العام الماضي. وتوقع 74% أن يرتفع استهلاك الطاقة بسبب الذكاء الاصطناعي بحلول عام 2030، بينما أبدى 52% فقط ثقتهم بقدرة البنية التحتية الحالية على تلبية الطلب الإضافي على الكهرباء. ويصدر التقرير قبل الدورة الرابعة من مجلس ENACT في أبوظبي وقبل ADIPEC 2026 الذي يُقام من 2 إلى 5 نوفمبر.",
+   "excerpt": null
+  },
+  {
+   "id": "a9a9614048f3",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T14:56:00+00:00",
+   "title": "SGCA launches AI Skills Challenge",
+   "title_ar": "SGCA تطلق تحدي مهارات الذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/29/a4",
+   "summary_en": "The Sharjah Government Communication Award has launched an AI Skills Challenge, which forms part of the Best Innovators Competition in Smart Communication Award, one of the award's categories. Al Dhahri said the top five teams have been shortlisted. The winners will be announced on November 2nd during the award ceremony. The challenge highlights the use of artificial intelligence skills to enhance creativity and innovation in government communication.",
+   "summary_ar": "أطلقت جائزة الشارقة للاتصال الحكومي تحدي مهارات الذكاء الاصطناعي، وهو جزء من مسابقة أفضل المبتكرين في جائزة التواصل الذكي، إحدى فئات الجائزة. وقالت الظاهري إنه تم ترشيح أفضل خمسة فرق للمنافسة. وسيُعلن عن الفائزين في الثاني من نوفمبر خلال حفل الجائزة. ويسلّط التحدي الضوء على توظيف مهارات الذكاء الاصطناعي لتعزيز الإبداع والابتكار في الاتصال الحكومي.",
+   "excerpt": "Aysha Abdullah Al Dhahri, Head of the Government Communication Network Department at the Sharjah Government Media Bureau, announced the launch of the…"
   },
   {
    "id": "24929e4a8bee",
@@ -115,6 +339,34 @@
    "excerpt": "تقول شركة الذكاء الاصطناعي الفرنسية إن نموذجها \"Large 4\" يوفر قدرات متقدمة في البرمجة والدفاع السيبراني، ويمكن تشغيله على حواسيب وخوادم المؤسسة نفسها."
   },
   {
+   "id": "0a74b4480445",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T14:43:48+00:00",
+   "title": "SEWA explores AI projects to improve services",
+   "title_ar": "SEWA تستكشف مشاريع للذكاء الاصطناعي لتحسين الخدمات",
+   "url": "https://www.wam.ae/en/article/c2zjlyt-sewa-explores-projects-improve-services",
+   "summary_en": "The Sharjah Electricity, Water and Gas Authority (SEWA) held an interactive workshop to identify and develop projects using artificial intelligence, as part of its push to speed up digital transformation and adopt smart solutions. The session produced six proposed projects aimed at improving services and operational efficiency. They cover corporate knowledge management, faster water connection services, proactive services that check application requirements before submission, and AI-assisted cybersecurity alerts and responses. The remaining two address smart consumption and sustainability through analysis of electricity, water and gas use, and automated review of no-objection certificate applications. SEWA describes the proposals as a step towards turning ideas into practical initiatives for further assessment.",
+   "summary_ar": "نظمت هيئة كهرباء ومياه وغاز الشارقة (SEWA) ورشة عمل تفاعلية لتحديد وتطوير مشاريع وفرص مبتكرة قائمة على الذكاء الاصطناعي، وذلك في إطار جهودها لتسريع التحول الرقمي واعتماد الحلول الذكية. وأسفرت الورشة عن ستة مشاريع مقترحة تستهدف تحسين الخدمات المقدمة ورفع الكفاءة التشغيلية. وتشمل هذه المشاريع إدارة المعرفة المؤسسية، وتسريع خدمات توصيل المياه، وخدمات استباقية تتحقق من متطلبات الطلبات قبل تقديمها، واستخدام الذكاء الاصطناعي في الأمن السيبراني لتسريع الاستجابة للحوادث والتنبيه إليها. ويتناول مشروعان آخران الاستهلاك الذكي والاستدامة عبر تحليل استهلاك الكهرباء والمياه والغاز، وأتمتة مراجعة طلبات شهادات عدم الممانعة. وتعدّ الهيئة هذه المقترحات خطوة نحو تحويل الأفكار إلى مبادرات عملية تخضع لمزيد من التقييم والتطوير.",
+   "excerpt": "SHARJAH, 29th October, 2026 (WAM) -- The Sharjah Electricity, Water and Gas Authority (SEWA) organised an interactive workshop to identify and develop innovative opportunities and projects using artificial intelligence (AI) , as part of its efforts to accelerate digital…"
+  },
+  {
+   "id": "9d92d4ec6e5e",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-29T14:39:37+00:00",
+   "title": "The NYT Cooking app is testing AI recipe modifications",
+   "title_ar": "تطبيق NYT Cooking يختبر تعديلات على الوصفات بالذكاء الاصطناعي",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1022193/nyt-cooking-app-ai-recipe-modification-tool",
+   "summary_en": "The New York Times is testing an AI feature in its Cooking app that helps users modify recipes, according to an announcement last Friday by senior editor Genevieve Ko. It can suggest substitutions for ingredients and equipment and scale a recipe to any number of servings. Customized versions stay private and cannot be published or shared. The rollout is gradual, currently covering all Cooking subscribers on iOS, with wider availability promised soon. Some readers objected in the comments, citing AI's environmental impact and its effect on the user experience. Ko said the feature cannot be turned off for now but is optional. Spokesperson Jordan Cohen said comments stayed open four days and that users report good results.",
+   "summary_ar": "تختبر صحيفة The New York Times ميزة قائمة على الذكاء الاصطناعي في تطبيق Cooking تساعد المستخدمين على تعديل الوصفات، بحسب إعلان نشرته الأسبوع الماضي المحررة الأولى جينيفيف كو. وتستطيع الميزة اقتراح بدائل للمكونات والأدوات، وتعديل كميات الوصفة لتناسب أي عدد من الحصص. وتبقى النسخ المعدّلة خاصة ولا يمكن نشرها أو مشاركتها. ويجري الطرح تدريجياً، وهو متاح حالياً لجميع مشتركي Cooking على نظام iOS، مع وعد بإتاحته على نطاق أوسع قريباً. واعترض بعض القراء في التعليقات، مشيرين إلى الأثر البيئي للذكاء الاصطناعي وتأثيره في تجربة الاستخدام. وقالت كو إنه لا يمكن إيقاف الميزة حالياً، لكن استخدامها اختياري. وذكر المتحدث جوردان كوهين أن التعليقات بقيت مفتوحة أربعة أيام، وأن المستخدمين يفيدون بنتائج جيدة.",
+   "excerpt": "The New York Times is testing a new AI feature for its Cooking app that helps users to modify recipes, and it has sparked some drama among users."
+  },
+  {
    "id": "60c269dfa54e",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -129,6 +381,48 @@
    "excerpt": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation."
   },
   {
+   "id": "ff0f8e36cc17",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-10-29T14:27:22+00:00",
+   "title": "تطوير قدرات 250 كفاءة وطنية في الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561441",
+   "summary_en": "The UAE Government's AI Office is running the 2026 edition of the Samsung Innovation Programme with Samsung Gulf Electronics, involving more than 250 Emirati participants. It aims to build their skills in artificial intelligence, machine learning and deep learning, and coincides with the Emirates Codes day on 29 October. The curriculum covers Python programming, probability and statistics, and machine and deep learning, and this year adds a track on generative AI. Shafi Alam of Samsung Gulf Electronics said the programme reflects the company's commitment to equipping young Emiratis with skills. The article says the programme supports the UAE National Strategy for Artificial Intelligence 2031.",
+   "summary_ar": "ينظم مكتب الذكاء الاصطناعي في حكومة دولة الإمارات، بالتعاون مع Samsung Gulf Electronics، نسخة عام 2026 من «برنامج سامسونغ للابتكار» بمشاركة أكثر من 250 كفاءة وطنية. ويهدف البرنامج إلى تطوير قدراتهم في الذكاء الاصطناعي وتعلّم الآلة والتعلّم العميق، ويتزامن مع يوم «الإمارات تبرمج» الذي يصادف 29 أكتوبر. ويشمل المنهج البرمجة بلغة Python والاحتمالات والإحصاء وتعلّم الآلة والتعلّم العميق، كما تضيف نسخة هذا العام مساراً تدريبياً في الذكاء الاصطناعي التوليدي. وقال شافي عالم من Samsung Gulf Electronics إن البرنامج يعكس التزام الشركة بتمكين الشباب الإماراتي من المهارات اللازمة. ويذكر المقال أن البرنامج يدعم مستهدفات الاستراتيجية الوطنية للذكاء الاصطناعي 2031.",
+   "excerpt": "ينظم مكتب الذكاء الاصطناعي في حكومة دولة الإمارات، بالتعاون مع شركة سامسونغ جلف للإلكترونيات، النسخة الجديدة من «برنامج"
+  },
+  {
+   "id": "52780c153c98",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T14:22:06+00:00",
+   "title": "ندوة بالشارقة تبحث توظيف الذكاء الاصطناعي لتطوير التفسير البلاغي للقرآن",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdy06-ندوة-بالشارقة-تبحث-توظيف-الذكاء-الاصطناعي-لتطوير",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "a5980a6c5a8c",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-29T14:07:49+00:00",
+   "title": "US antitrust regulators are scrutinizing Nvidia's Hugging Face deal and sales practices",
+   "title_ar": "جهات تنظيمية أمريكية لمكافحة الاحتكار تدقق في صفقة Nvidia مع Hugging Face وفي ممارساتها في المبيعات",
+   "url": "https://the-decoder.com/us-antitrust-regulators-are-scrutinizing-nvidias-hugging-face-deal-and-sales-practices/",
+   "summary_en": "The US Justice Department is examining Nvidia's planned $12.93 billion purchase of the open-source platform Hugging Face, according to two sources cited by Reuters. Officials are asking whether the deal could give Nvidia control of a key hub for distributing AI and harm competitors. Nvidia expects the deal to close in the first half of 2027 and says Hugging Face will keep supporting partnerships with various chip, cloud and AI providers. Regulators are also investigating Nvidia's acquisitions, investments and sales practices, a probe begun under Joe Biden and continued under Donald Trump. In France, the competition authority is investigating alleged anticompetitive practices, including concerns about reliance on CUDA and Nvidia's stakes in cloud providers such as CoreWeave.",
+   "summary_ar": "تدرس وزارة العدل الأمريكية صفقة استحواذ NVIDIA المزمعة على منصة Hugging Face مفتوحة المصدر بقيمة 12.93 مليار دولار، وفق مصدرين نقلت عنهما رويترز. ويتساءل المسؤولون عمّا إذا كانت الصفقة قد تمنح NVIDIA سيطرة على مركز رئيسي لتوزيع الذكاء الاصطناعي وتضر بمنافسيها. وتتوقع NVIDIA إتمام الصفقة في النصف الأول من عام 2027، وتقول إن Hugging Face ستواصل دعم شراكاتها مع مزودين مختلفين للرقائق والحوسبة السحابية والذكاء الاصطناعي. كما تحقق الجهات التنظيمية في عمليات الاستحواذ والاستثمار وممارسات البيع لدى الشركة، وهو تحقيق بدأ في عهد جو بايدن واستمر في عهد دونالد ترامب. وفي فرنسا تحقق هيئة المنافسة في ممارسات يُزعم أنها مخالفة للمنافسة، من بينها الاعتماد على برمجيات CUDA وحصص NVIDIA في مزودي الحوسبة السحابية مثل CoreWeave.",
+   "excerpt": "The US Justice Department is looking into Nvidia's planned acquisition of open-source platform Hugging Face."
+  },
+  {
    "id": "079251699e8e",
    "source": "verge-ai",
    "lang": "en",
@@ -141,6 +435,20 @@
    "summary_en": "This Decoder episode features Joey Brookhart, an analyst at SemiAnalysis, discussing the S-1 that Anthropic filed to go public on the Nasdaq. The article says trading could begin as soon as next month at a valuation between $1.5 trillion and $2 trillion. Brookhart calls the filing strong, citing more than $70 billion in annualized recurring revenue and healthy margins and free cash flow. He notes that spending is still concentrated in a narrow market, much of it coding-related. In his view, reaching $1 trillion in revenue would require moving into white-collar work, where AI shifts from augmenting to replacing labor. The host also raises competition from other labs and open-weight models.",
    "summary_ar": "تستضيف حلقة Decoder المحلل جو بروكهارت من SemiAnalysis لمناقشة نموذج S-1 الذي قدمته Anthropic تمهيداً لطرح أسهمها في بورصة ناسداك. ويذكر المقال أن التداول قد يبدأ في أقرب وقت الشهر المقبل بتقييم يتراوح بين 1.5 و2 تريليون دولار. ويصف بروكهارت الملف بأنه قوي، مشيراً إلى إيرادات سنوية متكررة تتجاوز 70 مليار دولار وهوامش وتدفقات نقدية حرة جيدة. ويلاحظ أن الإنفاق لا يزال متركزاً في سوق ضيقة، ويرتبط جزء كبير منه بالبرمجة. ويرى أن بلوغ إيرادات بقيمة تريليون دولار يتطلب التوسع في أعمال ذوي الياقات البيضاء، حيث ينتقل الذكاء الاصطناعي من دعم العمل البشري إلى الحلول محله. ويطرح المقدم أيضاً مسألة المنافسة من مختبرات أخرى ونماذج الأوزان المفتوحة.",
    "excerpt": "Today on Decoder, I’m joined by Joey Brookhart, an analyst at the chip and AI research firm SemiAnalysis, to help me dig into the story inside the numbers of the Anthropic IPO filing — a document known as an S-1."
+  },
+  {
+   "id": "3ea21a1c2b5b",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T13:48:00+00:00",
+   "title": "5 مشاريع لمخيم الذكاء الاصطناعي تتأهل لـ\"جائزة الشارقة للاتصال\"",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a6",
+   "summary_en": "Five projects from the AI camp at the Rubu Qarn Centre for Science and Technology have qualified for the Sharjah Government Communication Award, according to Hour Saleh Al Abqash, the camp's technical supervisor. Participants developed projects that apply artificial intelligence in four areas: public health, education, environmental transformation and food security. The aim is to offer innovative solutions that support communication between individuals and government bodies. The qualified teams are continuing to work on their projects at Al Majaz Theatre ahead of a final presentation scheduled for 1 November. Al Abqash thanked the award and the Sharjah Government Media Office for the opportunity.",
+   "summary_ar": "أعلنت حور صالح الأبقش، المشرف التقني على مخيم الذكاء الاصطناعي في مركز ربع قرن للعلوم والتكنولوجيا، تأهل خمسة مشاريع من المخيم إلى جائزة الشارقة للاتصال الحكومي. وعمل المشاركون على مشاريع توظف الذكاء الاصطناعي في أربعة محاور هي الصحة العامة والتعليم والتحول البيئي والأمن الغذائي، بهدف تقديم حلول مبتكرة تدعم التواصل بين الأفراد والجهات الحكومية. وتواصل الفرق المتأهلة العمل على مشاريعها في مسرح المجاز استعداداً للعرض الختامي المقرر في الأول من نوفمبر. وشكرت الأبقش الجائزة والمكتب الإعلامي لحكومة الشارقة على إتاحة هذه الفرصة.",
+   "excerpt": "أكدت حور صالح الأبقش، المشرف التقني على مخيم الذكاء الاصطناعي في مركز ربع قرن للعلوم والتكنولوجيا، مشاركة المركز في جائزة الشارقة للاتصال الحكومي، بخمسة مشاريع…"
   },
   {
    "id": "5289072612ad",
@@ -171,6 +479,34 @@
    "excerpt": "Will voter discontent lead to AI-driven construction boom?"
   },
   {
+   "id": "3283da0062d0",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T13:45:06+00:00",
+   "title": "Al Kuwaiti underscores importance of AI in protecting financial oversight systems from cyberattacks",
+   "title_ar": "الكويتي يؤكد أهمية الذكاء الاصطناعي في حماية أنظمة الرقابة المالية من الهجمات السيبرانية",
+   "url": "https://www.wam.ae/en/article/c2zjlvt-kuwaiti-underscores-importance-protecting",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "01c6f1f45331",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-29T13:42:38+00:00",
+   "title": "Chinese spies targeted Nvidia CEO Jensen Huang, according to The New York Times",
+   "title_ar": "جواسيس صينيون استهدفوا الرئيس التنفيذي لشركة Nvidia جنسن هوانغ، وفق ما نشرته The New York Times",
+   "url": "https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/",
+   "summary_en": "The New York Times reports that US intelligence agencies believe an executive close to Nvidia CEO Jensen Huang is an informant for China, according to The Decoder. The report names her as Alice Huang (Huang Le) of Megaspeed, a Singapore-based data centre operator. President Trump was reportedly briefed about a year ago and took no action, and Jensen Huang was not warned. The US government suspects Megaspeed of helping China obtain Nvidia chips; a Malaysian sister company bought at least $4.8 billion worth of AI hardware between June 2024 and February 2026. Nvidia says Megaspeed receives no sensitive information, Megaspeed has announced an internal investigation, and the Chinese embassy called the allegations \"groundless smears and slanders.\"",
+   "summary_ar": "تفيد صحيفة «نيويورك تايمز»، بحسب موقع The Decoder، بأن وكالات الاستخبارات الأمريكية تعتقد أن مسؤولة تنفيذية مقرّبة من الرئيس التنفيذي لشركة NVIDIA جنسن هوانغ تعمل مخبرة لصالح الصين. ويسمّيها التقرير أليس هوانغ (هوانغ لي) من شركة Megaspeed، وهي مشغّل مراكز بيانات مقرّه سنغافورة. ويذكر التقرير أن الرئيس دونالد ترامب أُطلع على الأمر قبل نحو عام ولم يتخذ أي إجراء، وأن جنسن هوانغ لم يتلقَّ أي تحذير. وتشتبه الحكومة الأمريكية في أن Megaspeed تساعد الصين في الحصول على رقائق NVIDIA؛ إذ اشترت شركة شقيقة في ماليزيا عتاداً للذكاء الاصطناعي بقيمة 4.8 مليار دولار على الأقل بين يونيو 2024 وفبراير 2026. وتقول NVIDIA إن Megaspeed لا تتلقى معلومات حساسة، وأعلنت الأخيرة فتح تحقيق داخلي، بينما وصفت السفارة الصينية الاتهامات بأنها افتراءات لا أساس لها.",
+   "excerpt": "US intelligence agencies believe an executive in Nvidia CEO Jensen Huang's circle is an informant for China."
+  },
+  {
    "id": "0b3918620b86",
    "source": "verge-ai",
    "lang": "en",
@@ -183,6 +519,62 @@
    "summary_en": "The Verge's analysis of Anthropic's S-1 filing argues that the company's heavy compute spending is tied to its need for rapid growth. Revenue rose fourteen times to $16.3 billion between the first half of 2025 and the first half of 2026, and adjusted income was $1.62 billion despite an $80 billion loss that the author describes as largely an accounting matter. Commitments, however, total at least about $850 billion over 20 years, and roughly a trillion dollars if unfinalised deals are included. Anthropic faces pressure from other frontier labs, open-source models and Google's broader distribution. PitchBook analyst Harrison Rolfes says the contracts assume growth continues.",
    "summary_ar": "يرى تحليل لموقع The Verge لوثيقة الطرح العام S-1 الخاصة بشركة Anthropic أن إنفاق الشركة الكبير على القدرة الحاسوبية مرتبط بحاجتها إلى نمو سريع. فقد ارتفعت الإيرادات أربعة عشر ضعفاً لتبلغ 16.3 مليار دولار بين النصف الأول من 2025 والنصف الأول من 2026، وبلغ الدخل المعدّل 1.62 مليار دولار رغم خسارة قدرها 80 مليار دولار يصفها الكاتب بأنها محاسبية في معظمها. غير أن الالتزامات تبلغ نحو 850 مليار دولار على الأقل على مدى 20 عاماً، وقرابة تريليون دولار إذا أُضيفت الصفقات غير المكتملة. وتواجه Anthropic ضغطاً من مختبرات الذكاء الاصطناعي الرائدة الأخرى ومن النماذج مفتوحة المصدر ومن قوة التوزيع لدى Google. ويقول المحلل هاريسون رولفس من PitchBook إن العقود تفترض استمرار النمو.",
    "excerpt": "The Anthropic S-1 seems to have provided the financial justification for the company to spend as much as it possibly can on compute."
+  },
+  {
+   "id": "739daec66370",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T13:28:00+00:00",
+   "title": "جائزة الشارقة للاتصال الحكومي تطلق تحدي مهارات الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a4",
+   "summary_en": "The Sharjah Government Communication Award has launched an AI Skills Challenge, according to Aisha Abdullah Al Dhahri, head of the Government Communication Network section at the Sharjah Government Media Office. The challenge is run with the Rubu Qarn Foundation for Making Leaders and Innovators and belongs to the creative competition and smart communication awards category. The top five teams have been nominated, and the winners will be announced next Monday at the award ceremony. The competition highlights the use of AI skills to boost creativity and innovation in government communication.",
+   "summary_ar": "أفادت عائشة عبدالله الظاهري، رئيسة قسم شبكة الاتصال الحكومي في المكتب الإعلامي لحكومة الشارقة، بإطلاق تحدي مهارات الذكاء الاصطناعي ضمن جائزة الشارقة للاتصال الحكومي. وينظَّم التحدي بالتعاون مع مؤسسة ربع قرن لصناعة القادة والمبتكرين، ويندرج ضمن فئة جوائز التنافس الإبداعي والتواصل الذكي. وتم ترشيح أفضل خمسة فرق للمنافسة، على أن يُعلن عن الفائزين يوم الاثنين المقبل خلال حفل الجائزة. وتسلّط المنافسة الضوء على توظيف مهارات الذكاء الاصطناعي في تعزيز الإبداع والابتكار في مجال الاتصال الحكومي.",
+   "excerpt": "أعلنت عائشة عبد الله الظاهري رئيس قسم شبكة الاتصال الحكومي في المكتب الإعلامي لحكومة الشارقة، عن انطلاق تحدي مهارات الذكاء الاصطناعي، بالتعاون مع مؤسسة ربع قرن…"
+  },
+  {
+   "id": "c9786a2a56df",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T13:26:26+00:00",
+   "title": "محمد الكويتي يؤكد أهمية الذكاء الاصطناعي في حماية منظومة الرقابة المالية من الهجمات السيبرانية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdx81-محمد-الكويتي-يؤكد-أهمية-الذكاء-الاصطناعي-حماية",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "9f18f7245411",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-29T13:20:14+00:00",
+   "title": "OpenAI's Astra becomes the main target for Chinese AI labs after Anthropic tightens its defenses",
+   "title_ar": "Astra من OpenAI تصبح الهدف الرئيسي لمختبرات الذكاء الاصطناعي الصينية بعد تشديد Anthropic دفاعاتها",
+   "url": "https://the-decoder.com/openais-astra-becomes-the-main-target-for-chinese-ai-labs-after-anthropic-tightens-its-defenses/",
+   "summary_en": "Chinese AI labs are now mainly drawing on OpenAI's most powerful model, GPT-6 Astra, rather than Anthropic's Claude, The Decoder reports, citing The Information. DeepSeek and Moonshot AI reportedly relied heavily on Astra's outputs to train their latest models, including Kimi K3.1 Pro and V4.1-Flash 1017. Such distillation works only if the labs get the models to reveal their hidden reasoning steps, which OpenAI and Anthropic both ban. Anthropic says its tightened defenses cut the data attackers can extract by 90 to 99 percent. In late September, OpenAI reported a coordinated distillation campaign it says involved people linked to Moonshot, which declined to comment.",
+   "summary_ar": "يفيد موقع The Decoder، نقلاً عن موقع The Information، بأن مختبرات الذكاء الاصطناعي الصينية باتت تعتمد أساساً على أقوى نماذج OpenAI، وهو GPT-6 Astra، بدلاً من Claude التابع لشركة Anthropic. وبحسب التقرير، اعتمدت DeepSeek وMoonshot AI بشكل كبير على مخرجات Astra لتدريب أحدث نماذجها، ومنها Kimi K3.1 Pro وV4.1-Flash 1017. ولا تنجح هذه التقنية، المعروفة بالتقطير، إلا إذا دفعت المختبرات النماذج إلى كشف خطوات استدلالها الخفية، وهو أمر تحظره OpenAI وAnthropic. وتقول Anthropic إن دفاعاتها المشددة خفّضت كمية البيانات التي يستطيع المهاجمون استخراجها بنسبة 90 إلى 99 في المئة. وفي أواخر سبتمبر أعلنت OpenAI رصد حملة تقطير منسقة تقول إنها شملت أشخاصاً مرتبطين بشركة Moonshot، التي امتنعت عن التعليق.",
+   "excerpt": "Chinese AI labs are now mainly tapping OpenAI's most powerful model, GPT-6 Astra, instead of Anthropic's Claude."
+  },
+  {
+   "id": "307d58a787d3",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T13:12:35+00:00",
+   "title": "دبي الرقمية تبحث الذكاء الاصطناعي للموارد البشرية الحكومية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdx7w-دبي-الرقمية-تبحث-الذكاء-الاصطناعي-للموارد-البشرية",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "fd92a529665f",
@@ -213,6 +605,20 @@
    "excerpt": "With Pipecat, Deepgram will likely gain a deeper understanding of real-time voice and video infrastructure."
   },
   {
+   "id": "d27da110e945",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T12:55:09+00:00",
+   "title": "الذكاء الاصطناعي يلتهم الإعلانات ويهبط بسهم «ألفابت»",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1561407",
+   "summary_en": "Shares of Alphabet fell about 10% in early trading, putting the stock on course for its largest market value loss ever, after the company revealed that its AI-powered search product is eating into its core advertising business. Third-quarter revenue excluding partner payments was $111.2 billion, below analyst expectations, and search and other ad sales grew at the slowest rate in five quarters. Google business chief Philipp Schindler said queries in AI Mode earn less revenue, while saying the company is optimistic and plans to add more ads there. The company also posted negative free cash flow for a second straight quarter, and pressure is growing on CEO Sundar Pichai to justify about a trillion dollars in future spending.",
+   "summary_ar": "تراجعت أسهم «ألفابت» بنحو 10% في التعاملات المبكرة، ما يضعها على مسار أكبر خسارة في القيمة السوقية في تاريخها، بعد أن كشفت الشركة أن منتج البحث المدعوم بالذكاء الاصطناعي يقتطع من نشاطها الإعلاني الأساسي. وبلغت إيرادات الربع الثالث، باستثناء مدفوعات الشركاء، 111.2 مليار دولار، وهو أقل من توقعات المحللين، فيما سجلت مبيعات إعلانات البحث والقنوات الأخرى أبطأ نمو في خمسة أرباع. وقال رئيس قطاع الأعمال في «غوغل» فيليب شيندلر إن الاستفسارات عبر «وضع الذكاء الاصطناعي» (AI Mode) تدرّ إيرادات أقل، مؤكداً تفاؤل الشركة وخططها لزيادة الإعلانات ضمنه. كما سجلت الشركة تدفقاً نقدياً حراً سالباً للربع الثاني على التوالي، ويتزايد الضغط على الرئيس التنفيذي سوندار بيتشاي لتبرير نحو تريليون دولار من الإنفاق المستقبلي.",
+   "excerpt": "هبطت أسهم شركة «ألفابت» بنحو 10 % في التعاملات المبكرة، مهيئة السهم لتسجيل أكبر خسارة في القيمة السوقية على الإطلاق، بع"
+  },
+  {
    "id": "d534b219cbe4",
    "source": "euronews-ar",
    "lang": "ar",
@@ -225,6 +631,34 @@
    "summary_en": "The article says the United States and China are forming their own AI blocs, leaving other countries trying to benefit from both while avoiding marginalisation. Europe is trying to become a third force, but experts say the window to choose freely between the US-led Pax Silica and the China-inspired World AI Cooperation Organization is narrowing. The EU unveiled a tech sovereignty package in June and has backed chipmaking, including 319 million euros for Infineon Technologies under its Chips Act. Still, Europe remains heavily dependent on foreign technology and has no leading frontier model, and up to 90% of its rare earths come from China. Brussels also promotes its 2024 AI Act, though companies pushed to delay some rules.",
    "summary_ar": "تقول المادة إن الولايات المتحدة والصين تشكّلان تكتلاتهما الخاصة في مجال الذكاء الاصطناعي، فيما تحاول دول أخرى الاستفادة من المعسكرين وتجنّب التهميش. وتسعى أوروبا إلى أن تصبح قوة ثالثة، لكن خبراء يرون أن الفرصة المتاحة للاختيار بحرية بين «Pax Silica» التي تقودها الولايات المتحدة و«World AI Cooperation Organization» المستوحاة من الصين تضيق. وكان الاتحاد الأوروبي قد أعلن في يونيو «حزمة السيادة التكنولوجية الأوروبية»، ودعم صناعة الرقاقات، ومنها 319 مليون يورو لشركة Infineon Technologies بموجب «قانون الرقاقات». ومع ذلك لا تزال أوروبا تعتمد بدرجة كبيرة على التكنولوجيا الأجنبية، ولا تملك نموذجاً رائداً متقدماً، ويأتي ما يصل إلى 90% من عناصرها الأرضية النادرة من الصين. كما تروّج بروكسل لقانون الذكاء الاصطناعي لعام 2024، رغم أن شركات ضغطت لإرجاء بعض قواعده.",
    "excerpt": "بينما تبني الولايات المتحدة والصين تكتلات متنافسة في مجال الذكاء الاصطناعي، تسعى أوروبا لتقليل اعتمادها عليهما، لكنها رغم طموحها لتصبح قوة تكنولوجية ما زالت تفتقر إلى الرقائق والبنية التحتية والنماذج المحلية اللازمة للمنافسة على قدم المساواة."
+  },
+  {
+   "id": "12ac1ba9ebf8",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T12:08:21+00:00",
+   "title": "Samsung Innovation Campus 2026 begins AI training for more than 250 Emirati students",
+   "title_ar": "Samsung Innovation Campus 2026 تبدأ التدريب على الذكاء الاصطناعي لأكثر من 250 طالباً إماراتياً",
+   "url": "https://www.wam.ae/en/article/c2zjlsk-samsung-innovation-campus-2026-begins-training-for",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "87f35ce7fada",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T12:07:31+00:00",
+   "title": "الرقابة المالية بدبي: الذكاء الاصطناعي والتدريب لتطوير التدقيق الحكومي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2zje3c-الرقابة-المالية-بدبي-الذكاء-الاصطناعي-والتدريب",
+   "summary_en": "Abdulrahman Al Harib, director general of Dubai's Financial Audit Authority, said investment in AI, the infrastructure needed to adopt it, and staff training are the main themes of the third Future of Government Auditing conference. The main sessions began on 29 October at Al Jawhara Hall in Jumeirah, Dubai, under the slogan \"Smart Oversight\", with experts in audit, governance, cybersecurity and AI. Al Harib told WAM that this edition focuses on using AI in audits, alongside assessing risks of emerging technologies and governing AI systems. He said AI has made it possible to check 100% of required samples and cut some tasks from a week to two or three hours, raising confidence in audit results.",
+   "summary_ar": "قال عبدالرحمن الحارب، مدير عام جهاز الرقابة المالية في دبي، إن الاستثمار في الذكاء الاصطناعي وتطوير البنية التحتية اللازمة لتبنيه وتدريب الكوادر هي أبرز محاور النسخة الثالثة من مؤتمر «استشراف مستقبل التدقيق الحكومي». وانطلقت الفعاليات الرئيسية في 29 أكتوبر بقاعة الجوهرة في مدينة جميرا بدبي تحت شعار «الرقابة الذكية»، بمشاركة خبراء في التدقيق والحوكمة والأمن السيبراني والذكاء الاصطناعي. وأوضح الحارب لوكالة «وام» أن هذه النسخة تركز على توظيف الذكاء الاصطناعي في التدقيق، إلى جانب تقييم مخاطر التقنيات الناشئة وحوكمة أنظمة الذكاء الاصطناعي. وأضاف أن هذه التقنيات أتاحت فحص 100% من العينات المطلوبة واختصرت بعض المهام من أسبوع إلى ساعتين أو ثلاث ساعات، ما عزز الثقة في نتائج الفحص.",
+   "excerpt": null
   },
   {
    "id": "8e47f8733441",
@@ -241,6 +675,48 @@
    "excerpt": "أعلنت شركة سامسونج للالكترونيات الخميس عن قفزة هائلة في أرباحها التشغيلية خلال الربع الثالث من العام، إذ تجاوزت 780% مقارنة بالفترة نفسها من العام الفائت، مدفوعة بالطلب المتزايد على أشباه الموصلات المستخدمة في الذكاء الاصطناعي."
   },
   {
+   "id": "ef5410d6a98e",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T11:25:42+00:00",
+   "title": "الذكاء الاصطناعي يدخل غرفة عمليات الفورمولا 1",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/sports/all-games/1561395",
+   "summary_en": "The International Automobile Federation (FIA) announced a multi-million-pound investment in its race management system through a new remote operations centre at Biggin Hill in the United Kingdom, built in cooperation with Formula One Management. FIA president Mohammed Ben Sulayem said before the Mexican Grand Prix that it reflects a commitment to safety, fairness and integrity. The centre gives round-the-clock support to race control and stewards for Formula 1, 2 and 3, and analyses live data from more than 140 audio and video sources, plus car positioning data and team radio. It also relies on technologies including AI, computer vision and automated radio classification to flag potential incidents. Operating fully since the 2026 Dutch Grand Prix, it has up to 16 staff on race weekends.",
+   "summary_ar": "أعلن الاتحاد الدولي للسيارات «فيا» استثماراً بملايين الجنيهات الإسترلينية في منظومة إدارة السباقات، عبر مركز عمليات عن بُعد جديد في «بيغين هيل» بالمملكة المتحدة، أُنشئ بالتعاون مع مجموعة الفورمولا 1 (Formula One Management). وقال رئيس الاتحاد «محمد بن سليّم» قبيل سباق جائزة المكسيك الكبرى إن المركز يعكس الالتزام بمعايير السلامة والعدالة والنزاهة. ويوفر المركز دعماً على مدار الساعة لغرفة التحكم في السباقات ولجان الحكام في بطولات الفورمولا 1 و2 و3، ويحلل بيانات مباشرة من أكثر من 140 مصدراً صوتياً ومرئياً، إضافة إلى بيانات مواقع السيارات والاتصالات اللاسلكية للفرق. كما يعتمد على تقنيات تشمل الذكاء الاصطناعي والرؤية الحاسوبية والتصنيف الآلي للاتصالات اللاسلكية لرصد الحوادث المحتملة. وقد بدأ التشغيل الكامل منذ سباق جائزة هولندا الكبرى 2026، ويعمل فيه حتى 16 موظفاً خلال عطلات نهاية أسابيع السباقات.",
+   "excerpt": "أعلن الاتحاد الدولي للسيارات «فيا» استثمارًا بملايين الجنيهات الإسترلينية لتطوير منظومة إدارة السباقات، من خلال مركز الع"
+  },
+  {
+   "id": "730a594bd1ad",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T11:22:09+00:00",
+   "title": "GCC Ministerial Committee for Digital Government approves AI Strategy",
+   "title_ar": "اللجنة الوزارية لمجلس التعاون الخليجي للحكومة الرقمية تعتمد استراتيجية الذكاء الاصطناعي",
+   "url": "https://www.wam.ae/en/article/c2zjlpm-gcc-ministerial-committee-for-digital-government",
+   "summary_en": "The Ministerial Committee for Digital Government of the Gulf Cooperation Council approved an \"Artificial Intelligence Strategy\" at its 10th meeting in Bahrain, according to a WAM report dated 29th October, 2026. Lieutenant General Tariq Hassan Al Hassan, Bahrain's Chief of Police, chaired the meeting and stressed stronger GCC cooperation, including using AI to develop services, strengthen cybersecurity and keep government services running. GCC Secretary General Jasem Mohamed Albudaiwi said the GCC average in the World Bank's GovTech Maturity Index rose from around 65 points in 2020 to 88 out of 100 in 2025. The committee also approved forming a Digital Government Award Committee and discussed linking national digital trust lists and cooperation with the European Union, China and Egypt.",
+   "summary_ar": "وافقت اللجنة الوزارية للحكومة الرقمية في مجلس التعاون لدول الخليج العربية على «استراتيجية الذكاء الاصطناعي» خلال اجتماعها العاشر في البحرين، بحسب خبر لوكالة أنباء الإمارات (وام) بتاريخ 29 أكتوبر 2026. وترأس الاجتماع الفريق طارق حسن الحسن، رئيس الأمن العام في البحرين، وشدد على تعزيز التعاون الخليجي، ومنه استخدام الذكاء الاصطناعي لتطوير الخدمات وتعزيز الأمن السيبراني وضمان استمرارية الخدمات الحكومية. وقال الأمين العام لمجلس التعاون جاسم محمد البديوي إن متوسط دول المجلس في مؤشر البنك الدولي لنضج التقنيات الحكومية ارتفع من نحو 65 نقطة في 2020 إلى 88 من 100 في 2025. كما أقرت اللجنة تشكيل لجنة لجائزة الحكومة الرقمية، وناقشت ربط قوائم الثقة الرقمية الوطنية والتعاون مع الاتحاد الأوروبي والصين ومصر.",
+   "excerpt": "MANAMA, 29th October, 2026 (WAM) -- The Ministerial Committee for Digital Government of the Gulf Cooperation Council (GCC) has approved an \"Artificial Intelligence Strategy\" during the committee's 10th meeting in Bahrain."
+  },
+  {
+   "id": "ec5ac67c7615",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T10:16:34+00:00",
+   "title": "Google's AI search problem finally shows up in the earnings report, some investors believe",
+   "title_ar": "يرى بعض المستثمرين أن مشكلة البحث بالذكاء الاصطناعي لدى Google ظهرت أخيراً في تقرير الأرباح",
+   "url": "https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/",
+   "summary_en": "Google lost up to ten percent of its market value after third-quarter search revenue grew about 12 percent, short of the 15 percent analysts had expected. Executive Philipp Schindler said strong growth in AI mode queries had an impact because of lower monetization, though the company said annual growth in search queries hit a five-year high. CEO Sundar Pichai said the Gemini app has reached one billion users. Cloud revenue grew 103 percent year over year to $30.7 billion, and third-quarter capital expenditures reached $51.4 billion, with the 2026 forecast at $195 billion to $205 billion. Management did not disclose the margin on selling TPU-based systems to outside customers, even when asked twice.",
+   "summary_ar": "خسرت Google ما يصل إلى عشرة في المئة من قيمتها السوقية بعدما نمت إيرادات البحث في الربع الثالث بنحو 12 في المئة، أي أقل من 15 في المئة كان المحللون يتوقعونها. وقال المسؤول التنفيذي فيليب شيندلر إن النمو القوي في استفسارات AI mode كان له أثر بسبب انخفاض العائد منها، فيما ذكرت الشركة أن النمو السنوي في استفسارات البحث بلغ أعلى مستوى في خمس سنوات. وقال الرئيس التنفيذي سوندار بيتشاي إن تطبيق Gemini بلغ مليار مستخدم. ونما قطاع الحوسبة السحابية 103 في المئة على أساس سنوي إلى 30.7 مليار دولار، وبلغ الإنفاق الرأسمالي في الربع الثالث 51.4 مليار دولار، مع بقاء توقعات 2026 بين 195 و205 مليارات دولار. ولم تفصح الإدارة عن هامش الربح من بيع أنظمة TPU لعملاء خارجيين، حتى بعد سؤالها مرتين.",
+   "excerpt": "Google's stock dropped as much as ten percent after its quarterly earnings. Cloud revenue more than doubled to $30.7 billion, but search revenue grew just 12 percent, slower than expected."
+  },
+  {
    "id": "9cd5509199bf",
    "source": "verge-ai",
    "lang": "en",
@@ -255,6 +731,20 @@
    "excerpt": "A hulking gray giant rises from the desert. Inside, engineers create the force behind our phones and computers and appliances, our streaming services and search engines and chatbots and vibe-coded apps and websites."
   },
   {
+   "id": "b7b16a7c3d8f",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T09:59:24+00:00",
+   "title": "UAE AI Office launches nationwide ‘Vibe Coding’ experience with Microsoft",
+   "title_ar": "مكتب الذكاء الاصطناعي في الإمارات يطلق تجربة «Vibe Coding» على مستوى الدولة بالتعاون مع Microsoft",
+   "url": "https://www.wam.ae/en/article/c2zjljs-uae-office-launches-nationwide-‘vibe-coding’",
+   "summary_en": "The UAE's Artificial Intelligence Office has launched UAE Vibe Codes, developed with Microsoft, as part of UAE Codes Day on 29 October. The initiative lets people describe an idea in natural language and have AI tools turn it into a working prototype of a website or app, with no programming experience needed. It drew 5,000 participants in its first hour. Minister of State for Artificial Intelligence Omar Sultan Al Olama said the initiative aims to empower people and build their confidence to innovate. The office is also running workshops with Google, Emirates Global Aluminium, Siemens and IBM, and promoting the experience through Emaar and cinemas across the UAE.",
+   "summary_ar": "أطلق مكتب الذكاء الاصطناعي في الإمارات مبادرة «UAE Vibe Codes» بالتعاون مع Microsoft، ضمن فعاليات «يوم الإمارات تبرمج» الذي يقام في 29 أكتوبر. وتتيح المبادرة للأفراد وصف أفكارهم باللغة الطبيعية لتتولى أدوات الذكاء الاصطناعي تحويلها إلى نموذج أولي لموقع إلكتروني أو تطبيق، دون الحاجة إلى خبرة في البرمجة. وشارك فيها 5000 شخص خلال الساعة الأولى من إطلاقها. وقال عمر سلطان العلماء، وزير دولة للذكاء الاصطناعي، إن المبادرة تسعى إلى تمكين الأفراد وتعزيز ثقتهم بقدرتهم على الابتكار. كما ينظم المكتب ورشاً بالتعاون مع Google وEmirates Global Aluminium وSiemens وIBM، ويروّج للتجربة عبر شاشات شركة «إعمار» ودور السينما في أنحاء الدولة.",
+   "excerpt": "DUBAI, 29th October, 2026 (WAM) -- The Artificial Intelligence Office in the UAE has launched UAE Vibe Codes, as part of UAE Codes Day, celebrated annually on 29th October."
+  },
+  {
    "id": "aa33e4fa4d49",
    "source": "thenational",
    "lang": "en",
@@ -267,6 +757,20 @@
    "summary_en": "Oracle is opening more data centres in the UAE and Saudi Arabia to keep pace with growing AI adoption, executive vice president Cormac Watters told The National at Oracle AI World in Las Vegas. He said a couple were added in the past six months and more will follow in the next six, driven by huge demand, though he declined to give locations because of the geopolitical situation. Watters said sovereignty has become a key concern for regional customers, with some now discussing a \"digital embassy\" model. He described the Middle East as Oracle's fastest-growing part of its Europe, Middle East and Africa region, with opportunities also in Qatar and Kuwait.",
    "summary_ar": "قال كورماك واترز، النائب التنفيذي لرئيس Oracle للتطبيقات في أوروبا والشرق الأوسط وأفريقيا، لصحيفة «ذا ناشيونال» خلال مؤتمر Oracle AI World في لاس فيغاس، إن الشركة تفتتح مراكز بيانات جديدة في الإمارات والسعودية لمواكبة تزايد استخدام الذكاء الاصطناعي. وذكر أنها أضافت عدداً منها خلال الأشهر الستة الماضية وأن المزيد سيأتي في الأشهر الستة المقبلة بسبب الطلب الكبير، لكنه امتنع عن ذكر المواقع بسبب الوضع الجيوسياسي. وأضاف أن السيادة أصبحت محور اهتمام العملاء في المنطقة، وأن بعضهم يتحدث الآن عن مفهوم «السفارة الرقمية». ووصف الشرق الأوسط بأنه الجزء الأسرع نمواً لدى Oracle في المنطقة، مع فرص أيضاً في قطر والكويت.",
    "excerpt": "Tech company offering solutions like “digital embassies” as landscape develops"
+  },
+  {
+   "id": "b7bb1e0381d7",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T09:42:51+00:00",
+   "title": "\"مكتب الذكاء الاصطناعي\" يطلق أوسع تجربة مجتمعية للبرمجة بالذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2zjdu8-مكتب-الذكاء-الاصطناعي-يطلق-أوسع-تجربة-مجتمعية",
+   "summary_en": "The UAE's Artificial Intelligence Office has launched \"UAE Vibe Codes\" as part of UAE Codes Day, held each year on 29 October. Organised with Microsoft, it lets people turn ideas into websites and apps within minutes using AI, without prior coding experience, and it drew 5,000 participants in its first hour. Users describe their idea in natural language and AI tools help build a prototype. Minister of State for Artificial Intelligence Omar Sultan Al Olama said the initiative aims to widen public participation and build confidence in innovation. The office is also holding hands-on workshops with partners including Google, Emirates Global Aluminium, IBM and Siemens.",
+   "summary_ar": "أعلن مكتب الذكاء الاصطناعي في الإمارات إطلاق مبادرة «UAE Vibe Codes» ضمن فعاليات «يوم الإمارات تبرمج» الذي يقام في 29 أكتوبر من كل عام. وتنظَّم المبادرة بالتعاون مع Microsoft، وتتيح للأفراد تحويل أفكارهم إلى مواقع إلكترونية وتطبيقات خلال دقائق باستخدام الذكاء الاصطناعي دون خبرة برمجية مسبقة، وقد شارك فيها 5000 شخص في ساعتها الأولى. ويصف المستخدم فكرته باللغة الطبيعية لتساعده أدوات الذكاء الاصطناعي في بناء نموذج أولي. وقال عمر سلطان العلماء، وزير دولة للذكاء الاصطناعي، إن المبادرة تسعى إلى توسيع المشاركة المجتمعية وتعزيز الثقة بالابتكار. كما ينظم المكتب ورشاً تطبيقية مع شركاء منهم Google وEmirates Global Aluminium وIBM وSiemens.",
+   "excerpt": "دبي في 29 أكتوبر/ وام/ أعلن مكتب الذكاء الاصطناعي، إطلاق مبادرة \"UAE Vibe Codes\"، ضمن فعاليات \"يوم الإمارات تبرمج\"، الذي ينظم في 29 أكتوبر من كل عام، ويحمل هذا العام شعار «Vibe Coding»، لتمكين أفراد المجتمع من تحويل أفكارهم إلى مواقع إلكترونية وتطبيقات رقمية باستخدام الذكاء…"
   },
   {
    "id": "bf9d7f744f53",
@@ -297,6 +801,48 @@
    "excerpt": null
   },
   {
+   "id": "7e8c5a460e84",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T07:38:00+00:00",
+   "title": "في أميركا.. معلمون يغيرون أساليب التدريس لمواجهة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/29/gh-9",
+   "summary_en": "As generative AI use grows, middle and high school teachers in the United States are reworking how they teach and assess students. The available text is cut off after this point, so it does not say what specific changes they are making.",
+   "summary_ar": "مع تزايد استخدام الذكاء الاصطناعي التوليدي، يتجه معلمو المرحلتين الإعدادية والثانوية في الولايات المتحدة إلى إعادة صياغة أساليب التدريس والتقييم. ولا يوضح النص المتاح، لأنه مقتطع، طبيعة التغييرات المحددة التي يجرونها.",
+   "excerpt": "وسط تنامي استخدام الذكاء الاصطناعي التوليدي، يتجه معلمو المرحلتين الإعدادية والثانوية في الولايات المتحدة إلى إعادة صياغة أساليب التدريس والتقييم، عبر تقليص…"
+  },
+  {
+   "id": "568eecbb7a25",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T06:37:00+00:00",
+   "title": "\"مزن Hub71\" يدعم شركات إماراتية لتوظّيف الذكاء الاصطناعي في تطوير التعليم والرعاية الصحية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c2zjdl8-مزن-hub71-يدعم-شركات-إماراتية-لتوظيف-الذكاء",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "9ba1f0cf0d07",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-29T06:18:59+00:00",
+   "title": "لا بشر على كرسي المدير.. ديلاوير تختبر شركات يقودها الذكاء الاصطناعي بالكامل",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/companies/1561333",
+   "summary_en": "The US state of Delaware is moving toward testing a new model for running companies, according to the short description from Al Bayan. Under it, AI agents would be allowed to take over business operations. The headline describes companies led entirely by AI with no humans in the manager's seat. The available text offers no further details.",
+   "summary_ar": "تتجه ولاية ديلاوير الأمريكية نحو اختبار نموذج جديد لإدارة الشركات، بحسب الوصف القصير الذي نشرته صحيفة البيان. ويسمح هذا النموذج لوكلاء الذكاء الاصطناعي بتولي العمليات التجارية. ويشير العنوان إلى شركات يقودها الذكاء الاصطناعي بالكامل من دون وجود بشر في منصب المدير. ولا يقدّم النص المتاح تفاصيل أخرى.",
+   "excerpt": "تتجه ولاية ديلاوير الأمريكية نحو اختبار نموذج جديد لإدارة الشركات، يسمح لوكلاء الذكاء الاصطناعي بتولي العمليات التجارية"
+  },
+  {
    "id": "30c46bec55e0",
    "source": "gn-uae",
    "lang": "en",
@@ -311,6 +857,20 @@
    "excerpt": "Discover how an Emirati engineer's AI innovation identifies 14 cyber threats in just 0.87 milliseconds, revolutionizing IoT security worldwide."
   },
   {
+   "id": "6a7aab2f6e7a",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T04:59:46+00:00",
+   "title": "Samsung Electronics posts record profit in Q3 on AI chip supercycle",
+   "title_ar": "Samsung Electronics تسجل أرباحاً قياسية في الربع الثالث بفضل الدورة الفائقة لرقائق الذكاء الاصطناعي",
+   "url": "https://www.wam.ae/en/article/c2zjl58-samsung-electronics-posts-record-profit-chip",
+   "summary_en": "Samsung Electronics said on Thursday, 29 October 2026, that its third-quarter net profit rose more than sixfold from a year earlier, helped by strong demand for AI-related semiconductors. Net profit for July to September was 75.13 trillion won (US$56.2 billion), up 514.6 percent from 12.22 trillion won. Operating profit climbed 783.1 percent to 107.44 trillion won, and revenue rose 126.9 percent to 195.2 trillion won. The company reported record quarterly revenue and operating profit for the fourth consecutive quarter, extending a streak that began in the fourth quarter of 2025, according to Yonhap News Agency.",
+   "summary_ar": "أعلنت شركة Samsung Electronics يوم الخميس 29 أكتوبر 2026 أن صافي أرباحها في الربع الثالث ارتفع أكثر من ستة أضعاف مقارنة بالعام السابق، بدعم من الطلب القوي على أشباه الموصلات المرتبطة بالذكاء الاصطناعي. وبلغ صافي الأرباح للفترة من يوليو إلى سبتمبر 75.13 تريليون وون (56.2 مليار دولار أمريكي)، بزيادة نسبتها 514.6 بالمئة عن 12.22 تريليون وون قبل عام. وقفزت الأرباح التشغيلية بنسبة 783.1 بالمئة إلى 107.44 تريليون وون، وزادت الإيرادات بنسبة 126.9 بالمئة إلى 195.2 تريليون وون. وسجلت الشركة إيرادات وأرباحاً تشغيلية فصلية قياسية للربع الرابع على التوالي، في سلسلة بدأت في الربع الأخير من عام 2025، بحسب وكالة يونهاب للأنباء.",
+   "excerpt": "SEOUL, 29th October, 2026 (WAM) -- Samsung Electronics Co. said Thursday its third-quarter net profit jumped more than sixfold from a year earlier as strong demand for artificial intelligence (AI)-related semiconductors boosted earnings."
+  },
+  {
    "id": "a80eda4b8c23",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -323,6 +883,20 @@
    "summary_en": "New York Governor Kathy Hochul has signed a law that bars minors from using AI chatbots that present themselves as their friends, described as the most significant step so far to restrict such consumer-facing models. Operators of programs such as ChatGPT must verify users' ages and limit certain features for anyone under 18. The law also prohibits content suggesting the bot is human, alive or has human feelings, or that it has a personal or professional relationship with the user. Hochul said at Wednesday's signing that minors will no longer reach chatbots posing as friends or emotional partners. The group Tech:NYC called the wording vague, while Common Sense Media called it the strongest child AI safety law in the country. OpenAI and Anthropic did not respond to AFP.",
    "summary_ar": "وقّعت حاكمة ولاية نيويورك كاثي هوكول قانوناً جديداً يمنع القُصّر من استخدام روبوتات الدردشة المدعومة بالذكاء الاصطناعي التي تقدّم نفسها كأنها صديقة لهم، في خطوة توصف بأنها الأهم حتى الآن لتقييد مثل هذه النماذج الموجهة للمستهلكين. ويُلزم القانون مشغلي برامج مثل ChatGPT بالتحقق من أعمار المستخدمين وتقييد بعض الخصائص لمن هم دون الثامنة عشرة. كما يحظر محتوى يوحي بأن البرنامج كائن بشري أو حي أو يملك مشاعر إنسانية، أو أن بينه وبين المستخدم علاقة شخصية أو مهنية. وقالت هوكول خلال مراسم التوقيع يوم الأربعاء إن القُصّر لن يتمكنوا بعد اليوم من الوصول إلى برامج تتظاهر بأنها صديقة أو شريكة عاطفية. ووصفت منظمة Tech:NYC صياغة القانون بأنها غامضة، بينما عدّته منظمة Common Sense Media أقوى تشريع في البلاد لسلامة الأطفال في مجال الذكاء الاصطناعي. ولم تردّ OpenAI وAnthropic على طلب التعليق من وكالة فرانس برس.",
    "excerpt": "وقعت حاكمة ولاية نيويورك، قانونا جديدا يمنع القُصّر من استخدام روبوتات الدردشة المدعومة بالذكاء الاصطناعي والتي توحي وكأنها صديقة لهم، في خطوة تعد الأهم حتى الآن لتقييد مثل هذه النماذج الموجهة للمستهلكين. ويلزم القانون مشغلي برامج مثل \"تشات جي بي تي\" بالتح"
+  },
+  {
+   "id": "fc9c87d58981",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-29T02:14:49+00:00",
+   "title": "\"سامسونغ\" تسجل قفزة بأرباحها الصافية 6 أضعاف خلال الربع الثالث بدعم من الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17hyc4t-سامسونغ-تسجل-قفزة-بأرباحها-الصافية-أضعاف-خلال",
+   "summary_en": "Samsung Electronics announced on 29 October that its third-quarter net profit rose more than sixfold from a year earlier, driven by strong demand for semiconductors tied to AI technologies. In a regulatory filing reported by Yonhap News Agency, the company put net profit for July to September at 75.13 trillion won, about 56 billion dollars, up 514.6 percent from 12.22 trillion won. Operating profit rose 783.1 percent year on year to 107.44 trillion won, while total revenue grew 126.9 percent to 195.2 trillion won. Samsung posted record quarterly revenue and operating profit for the fourth straight quarter, continuing a run that began in the last quarter of 2025.",
+   "summary_ar": "أعلنت شركة «سامسونغ للإلكترونيات» في 29 أكتوبر أن صافي أرباحها في الربع الثالث ارتفع أكثر من ستة أضعاف مقارنة بالعام السابق، مدفوعاً بالطلب القوي على أشباه الموصلات المرتبطة بتقنيات الذكاء الاصطناعي. وبحسب بيان تنظيمي أوردته وكالة يونهاب للأنباء، بلغ صافي الأرباح للفترة من يوليو إلى سبتمبر 75.13 تريليون وون، أي نحو 56 مليار دولار، بزيادة نسبتها 514.6 بالمئة عن 12.22 تريليون وون. وارتفعت الأرباح التشغيلية بنسبة 783.1 بالمئة على أساس سنوي إلى 107.44 تريليون وون، فيما زادت الإيرادات الإجمالية بنسبة 126.9 بالمئة لتبلغ 195.2 تريليون وون. وسجلت الشركة إيرادات وأرباحاً تشغيلية فصلية قياسية للربع الرابع على التوالي، مواصلة سلسلة بدأت في الربع الأخير من عام 2025.",
+   "excerpt": "سيئول في 29 أكتوبر / وام / أعلنت شركة \"سامسونغ للإلكترونيات\"، اليوم، قفزة في صافي أرباحها خلال الربع الثالث من العام الجاري بأكثر من 6 أضعاف مقارنة بالعام السابق، مدفوعة بالطلب القوي على أشباه الموصلات المرتبطة بتقنيات الذكاء الاصطناعي."
   },
   {
    "id": "c401b0ff7e9d",
@@ -407,6 +981,20 @@
    "summary_en": "Microsoft reported record quarterly revenue of $92.3 billion on Wednesday, up 19% from the year-ago quarter and the tenth record quarter in a row. Net income rose 32% on a GAAP basis to $36.6 billion. Microsoft Cloud brought in $63.9 billion, up 30%, with Azure at $33.2 billion and Microsoft 365 at nearly $28 billion, though not all of that is AI-related. Microsoft also reported $10 billion in revenue from OpenAI, and its commercial remaining performance obligation rose 73% to $677 billion, which reflects future revenue committed by AI labs. Capital expenditures reached a record $45.2 billion, while Devices and Consumer revenue fell 3% to $15.5 billion.",
    "summary_ar": "أعلنت Microsoft يوم الأربعاء عن إيرادات فصلية قياسية بلغت 92.3 مليار دولار، بزيادة 19% عن الفصل نفسه من العام الماضي، وهو الفصل العاشر على التوالي الذي تسجل فيه إيرادات قياسية. وارتفع صافي الدخل بنسبة 32% وفق المعايير المحاسبية GAAP إلى 36.6 مليار دولار. وحققت Microsoft Cloud إيرادات بلغت 63.9 مليار دولار بنمو 30%، منها 33.2 مليار دولار من Azure ونحو 28 مليار دولار من Microsoft 365، مع الإشارة إلى أن جزءاً من ذلك لا يرتبط بالذكاء الاصطناعي. كما سجلت الشركة 10 مليارات دولار من إيرادات OpenAI، وارتفعت التزاماتها التعاقدية المتبقية بنسبة 73% إلى 677 مليار دولار، وهي إيرادات مستقبلية تعهدت بها مختبرات الذكاء الاصطناعي. وبلغ الإنفاق الرأسمالي مستوى قياسياً هو 45.2 مليار دولار، بينما تراجعت إيرادات قطاع الأجهزة والمستهلكين 3% إلى 15.5 مليار دولار.",
    "excerpt": "Whatever the future of AI might be, the current situation is still very good for Microsoft. The tech giant reported yet another record for quarterly revenue on Wednesday: $92.3 billion, a 19% increase over the year-ago quarter."
+  },
+  {
+   "id": "273d2a2f1a0e",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-28T20:22:56+00:00",
+   "title": "Anthropic engineer declares the coding interview dead",
+   "title_ar": "مهندس في Anthropic يعلن أن مقابلة البرمجة قد ماتت",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/28/anthropic-engineer-declares-the-coding-interview-dead/5306115",
+   "summary_en": "The Register reports that an Anthropic engineer has declared the coding interview dead. The stated reasoning is a question: why give candidates tests that AI can ace?",
+   "summary_ar": "تنقل صحيفة The Register أن مهندساً في Anthropic أعلن أن مقابلة البرمجة التقليدية انتهت. ويقوم المبرر المطروح على تساؤل: لماذا تُعطى للمرشحين اختبارات يتفوق فيها الذكاء الاصطناعي؟",
+   "excerpt": "Why give people tests that AI aces?"
   },
   {
    "id": "fc7d1d71bde9",
@@ -647,6 +1235,20 @@
    "excerpt": "Google is opening up Android Studio to third-party AI agents. Through a new \"Bring Your Own Agent\" feature, the IDE now supports more than 40 coding agents, including Anthropic's Claude Agent and OpenAI's Codex."
   },
   {
+   "id": "0afbd32e1ac6",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-10-28T16:49:14+00:00",
+   "title": "Amazon tells tokenmaxxing devs to slow their AI roll",
+   "title_ar": "Amazon تطلب من المطورين المفرطين في استهلاك الرموز (tokenmaxxing) تخفيف وتيرة استخدامهم للذكاء الاصطناعي",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/28/amazon-tells-tokenmaxxing-devs-to-slow-their-ai-roll/5306090",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Focus more on what matters, please, like creating useful software and accomplishing company goals"
+  },
+  {
    "id": "dc061a2ad5f6",
    "source": "albayan",
    "lang": "ar",
@@ -869,6 +1471,34 @@
    "summary_en": "The Innovation Hub at the Emirates Institute of Finance, which was set up by the Central Bank of the UAE, held an event with Visa on the future of AI-powered commerce in the country. Government, banking, technology and retail representatives attended. Discussions covered trust frameworks, identity verification, accountability and consumer protection, along with the opportunities offered by AI agents. Visa's recent \"Stay Secure\" study found that 85 percent of UAE consumers have used AI tools to help with shopping decisions, and 36 percent believe banks and financial institutions should bear the main responsibility for fraud protection. Marwan Al Muhairi, the institute's chief executive, and Mario Makari of Visa both spoke about responsible adoption and trust.",
    "summary_ar": "بحث مركز الابتكار في معهد الإمارات المالي، الذي أنشأه مصرف الإمارات العربية المتحدة المركزي، مع Visa مستقبل التجارة المدعومة بالذكاء الاصطناعي في الدولة، بحضور ممثلين عن الجهات الحكومية والقطاع المصرفي والتكنولوجيا والتجارة. وتناولت النقاشات أطر الثقة والتحقق من الهوية والمساءلة وحماية المستهلك، إضافة إلى الفرص التي يتيحها وكلاء الذكاء الاصطناعي. وأظهرت دراسة «ابقَ آمناً» الحديثة من Visa أن 85% من المستهلكين في الإمارات استخدموا أدوات الذكاء الاصطناعي للمساعدة في قرارات التسوق، وأن 36% يرون أن البنوك والمؤسسات المالية ينبغي أن تتحمل المسؤولية الرئيسية عن الحماية من الاحتيال. وتحدث الرئيس التنفيذي للمعهد «مروان المهيري» و«ماريو مكاري» من Visa عن أهمية التبني المسؤول للتقنيات وعن دور الثقة في تبني هذه التجارب.",
    "excerpt": "بحث مركز الابتكار في معهد الإمارات المالي، الذي أنشأه مصرف الإمارات العربية المتحدة المركزي، بالتعاون مع فيزا، مستقبل ا"
+  },
+  {
+   "id": "7cf3fcdf1986",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-28T13:44:00+00:00",
+   "title": "Child Safety warns against AI misuse to exploit children online",
+   "title_ar": "الحماية من المخاطر على الأطفال تحذر من إساءة استخدام الذكاء الاصطناعي لاستغلال الأطفال عبر الإنترنت",
+   "url": "https://sharjah24.ae/en/Articles/2026/10/28/a2",
+   "summary_en": "Child Safety, an organisation headed by Director General Dr Hanadi Saleh Al Yafei, has warned against using artificial intelligence to manipulate children's images in order to harm them. It said fabricated sexual images may be fake, but the psychological and social harm can be real and long-lasting, including humiliation, anxiety and sexual extortion, even if a child never shared a photograph. It advised parents to review privacy settings, stay involved in their children's online activity, remain calm, refuse blackmailers' demands, preserve evidence and report the content. Suspected abuse can be reported on 800700 across the UAE. It added that such acts may be offences under Federal Decree-Law No. 34 of 2021, with penalties including imprisonment and fines of AED 250,000 to AED 500,000.",
+   "summary_ar": "حذّرت مؤسسة سلامة الطفل، التي تترأسها المديرة العامة الدكتورة هنادي صالح اليافعي، من استخدام الذكاء الاصطناعي في التلاعب بصور الأطفال بقصد الإضرار بهم. وأوضحت أن الصور الجنسية المفبركة قد تكون مزيفة، لكن ضررها النفسي والاجتماعي حقيقي وقد يدوم طويلاً، ويشمل الإهانة والقلق والابتزاز الجنسي، حتى لو لم يشارك الطفل أي صورة. ونصحت أولياء الأمور بمراجعة إعدادات الخصوصية، والبقاء على اطلاع بنشاط أطفالهم الرقمي، والحفاظ على الهدوء، ورفض مطالب المبتزين، وحفظ الأدلة، والإبلاغ عن المحتوى. ويمكن الإبلاغ عن حالات الاشتباه بالإساءة عبر الرقم 800700 في أنحاء الإمارات. وأضافت أن هذه الأفعال قد تُعد جرائم بموجب المرسوم بقانون اتحادي رقم 34 لسنة 2021، وتشمل العقوبات الحبس وغرامات تتراوح بين 250 ألفاً و500 ألف درهم.",
+   "excerpt": "The Child Safety Organisation, affiliated with the Sharjah Family and Community Council, has warned against the misuse of artificial intelligence to generate…"
+  },
+  {
+   "id": "5f7f424adc03",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-28T13:28:00+00:00",
+   "title": "مؤسسة سلامة الطفل بالشارقة تحذر من إساءة استخدام الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/10/28/a2",
+   "summary_en": "Sharjah's Child Safety Foundation, part of the Sharjah Family and Community Council, has warned against misusing AI to create or circulate fabricated sexual images of children, including so-called digital undressing apps. It said an ordinary photo taken at school or at a family event can be manipulated, and that sharing such content as a joke is not harmless and may be a crime. Children may suffer humiliation, anxiety and isolation, and may be blackmailed even if they never shared a real image. The foundation urged parents to stay involved, avoid yielding to threats, keep evidence and report to platforms and authorities. It said UAE law, including Federal Decree-Law No. 34 of 2021, provides prison terms and fines for such acts.",
+   "summary_ar": "حذّرت مؤسسة سلامة الطفل في الشارقة، التابعة لمجلس الشارقة للأسرة والمجتمع، من إساءة استخدام الذكاء الاصطناعي في إنتاج أو تداول صور جنسية مفبركة للأطفال، ومنها ما يُعرف بتطبيقات «نزع الملابس رقمياً». وأوضحت أن صورة عادية التُقطت في المدرسة أو في مناسبة عائلية قد يجري التلاعب بها، وأن نشر هذا المحتوى على سبيل المزاح ليس سلوكاً بريئاً وقد يشكل جريمة. وقد يعاني الطفل من الإهانة والقلق والعزلة، وقد يتعرض للابتزاز حتى إن لم يشارك أي صورة حقيقية. ودعت المؤسسة أولياء الأمور إلى المشاركة الفاعلة، وعدم الاستجابة للتهديدات، وحفظ الأدلة، والإبلاغ عبر المنصات والجهات المختصة. وبيّنت أن القانون الإماراتي، ومنه المرسوم بقانون اتحادي رقم 34 لسنة 2021، ينص على عقوبات بالحبس والغرامة على هذه الأفعال.",
+   "excerpt": "دعت مؤسسة سلامة الطفل في الشارقة، إلى حماية الأطفال من إساءة استخدام تقنيات الذكاء الاصطناعي لإنتاج أو تداول محتوى مفبرك يظهر الأطفال في صور جنسية صريحة مولّدة…"
   },
   {
    "id": "cbe8a2073156",
@@ -1177,6 +1807,20 @@
    "summary_en": "A report from the Future Investment Initiative Institute, called Priority Compass and released on Wednesday, finds that people in the Global South are far more optimistic about AI and jobs than those in wealthier economies. It surveyed more than 61,000 respondents in 32 countries. About 43 per cent in the Global South disagree that AI will create more quality jobs than it destroys, against 70 per cent in the Global North. In Saudi Arabia, Egypt and Morocco, 66 per cent believe it will create more. Globally, 85 per cent back a global regulatory framework for greater human oversight. The report also found that the cost of living remains the top concern, with energy and fuel costs now the next biggest worry.",
    "summary_ar": "كشف تقرير «بوصلة الأولويات» (Priority Compass) الصادر عن معهد مبادرة مستقبل الاستثمار (FII Institute) يوم الأربعاء أن سكان الجنوب العالمي أكثر تفاؤلاً بكثير من سكان الاقتصادات الأغنى بشأن أثر الذكاء الاصطناعي في الوظائف. وشمل الاستطلاع أكثر من 61 ألف مشارك في 32 دولة. ويخالف 43 في المئة من المشاركين في الجنوب العالمي الرأي القائل إن الذكاء الاصطناعي سيخلق وظائف جيدة أكثر مما يلغي، مقابل 70 في المئة في الشمال العالمي. أما في السعودية ومصر والمغرب فيرى 66 في المئة أنه سيخلق وظائف أكثر. ويؤيد 85 في المئة عالمياً وضع إطار تنظيمي عالمي يضمن رقابة بشرية أكبر. وأشار التقرير أيضاً إلى أن غلاء المعيشة ما زال في صدارة المخاوف، تليه تكاليف الطاقة والوقود.",
    "excerpt": "Sharp divide by region over technology's future impact on employment"
+  },
+  {
+   "id": "b3d9e88f2ebe",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-28T06:00:00+00:00",
+   "title": "Should AI Decide Your Court Case? This Judge Says Yes",
+   "title_ar": "هل ينبغي للذكاء الاصطناعي أن يبتّ في قضيتك أمام المحكمة؟ هذا القاضي يقول نعم",
+   "url": "https://www.wired.com/story/geoffrey-vos-uk-judge-ai-legal-profession-challenges/",
+   "summary_en": "Geoffrey Vos, who is about to retire as Master of the Rolls, the most senior post in England's civil justice system, is trying to prompt debate on whether and how judges should use AI, he tells WIRED. Current guidance advises judges in England to limit AI to administrative tasks, and Vos says he uses Microsoft Copilot daily to find documents and summarise text. After visiting a court in Shenzhen, China, where judges rely heavily on AI in civil disputes, he believes courts elsewhere should consider doing likewise. He notes risks, including lawyers citing hallucinated case law and chatbot-assisted litigants filing more claims. He thinks AI could handle cases such as personal injury claims, while complex commercial and sensitive family cases may need human judges.",
+   "summary_ar": "يقول «جيفري فوس»، الذي يوشك على التقاعد من منصب «ماستر أوف ذا رولز»، وهو أرفع منصب في نظام القضاء المدني في إنجلترا، لمجلة WIRED إنه يسعى إلى إثارة نقاش حول ما إذا كان ينبغي للقضاة استخدام الذكاء الاصطناعي وكيفية ذلك. وتنصح الإرشادات الحالية القضاة في إنجلترا بحصر استخدامه في المهام الإدارية، ويذكر فوس أنه يستعين يومياً بـ Microsoft Copilot للعثور على المستندات وتلخيص النصوص. وبعد زيارته محكمة في «شنتشن» بالصين، حيث يعتمد القضاة بشكل كبير على الذكاء الاصطناعي في النزاعات المدنية، يرى أن على المحاكم في دول أخرى أن تدرس السير في الاتجاه نفسه. ويشير إلى مخاطر منها استشهاد محامين بسوابق قضائية مختلقة، وتزايد الدعاوى التي يرفعها متقاضون بمساعدة روبوتات الدردشة. ويرى أن الذكاء الاصطناعي قد يتولى قضايا مثل الإصابات الشخصية، بينما قد تحتاج النزاعات التجارية المعقدة وقضايا الأسرة الحساسة إلى قضاة من البشر.",
+   "excerpt": "One of England’s top judges, Geoffrey Vos, believes that AI could adjudicate plenty of civil cases. The question, he says, is where the line should be drawn."
   },
   {
    "id": "bfc4f768e450",
@@ -4427,6 +5071,20 @@
    "excerpt": "Anthropic says companies should evaluate whether they can consolidate sub-agents into a single agent that loads context on demand. In one architecture comparison, the single-agent setup ran about twice as fast."
   },
   {
+   "id": "c2945aeb812a",
+   "source": "skynews-ar-tech",
+   "lang": "ar",
+   "uae": false,
+   "topic": "education",
+   "published": "2026-10-25T08:45:57+00:00",
+   "title": "أسرار الأطفال في عصر الذكاء الاصطناعي.. هل يحل محل الأصدقاء؟",
+   "title_ar": null,
+   "url": "https://www.skynewsarabia.com/technology/1900477-%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D8%B9%D9%87%D8%AF-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%8A%D8%AD%D9%84-%D9%85%D8%AD%D9%84-%D8%A7%D9%84%D8%A3%D8%B5%D8%AF%D9%82%D8%A7%D8%A1",
+   "summary_en": "A Finnish survey, supported by the foundations Etla and Digiroha, found that 78 percent of children and teenagers aged 11 to 17 use AI tools. About one in five uses them to discuss personal matters they do not want to raise with others, rising to over 25 percent among older teens, and about 7 percent say they have no one else to talk to. Some 57 percent trust the information AI gives them fully or to some extent, and about a third find it hard to tell real images and videos from AI-made ones. The article says the results do not show that AI causes loneliness, and it urges families and schools to teach children to verify information and protect their privacy.",
+   "summary_ar": "كشف استطلاع فنلندي أُجري بدعم من مؤسستي «إيتلا» و«ديجيروها» أن 78 في المئة من الأطفال والمراهقين الذين تتراوح أعمارهم بين 11 و17 عاماً يستخدمون أدوات الذكاء الاصطناعي. ويستخدمها نحو واحد من كل خمسة لمناقشة أمور شخصية لا يريدون الحديث عنها مع الآخرين، وترتفع النسبة إلى أكثر من 25 في المئة بين المراهقين الأكبر سناً، فيما قال نحو 7 في المئة إنهم لا يجدون شخصاً آخر يتحدثون إليه. ويثق 57 في المئة من المشاركين بمعلومات الذكاء الاصطناعي كلياً أو إلى حد ما، ويجد نحو الثلث صعوبة في التمييز بين الصور ومقاطع الفيديو الحقيقية وتلك المصنوعة به. ويوضح المقال أن النتائج لا تثبت أن الذكاء الاصطناعي يسبب الوحدة، ويدعو الأسر والمدارس إلى تعليم الأطفال التحقق من المعلومات وحماية خصوصيتهم.",
+   "excerpt": "كشف استطلاع فنلندي عن تحول لافت في علاقة الأطفال بالذكاء الاصطناعي، إذ لم يعد استخدامه مقتصرا على الواجبات المدرسية والبحث عن المعلومات، بل امتد إلى المحادثات الشخصية والبوح بأسرار لا يرغبون في مشاركتها مع الآخرين."
+  },
+  {
    "id": "fee562b95d16",
    "source": "albayan",
    "lang": "ar",
@@ -4579,6 +5237,20 @@
    "summary_en": "Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law on Thursday. It requires any ad, whether image, video, audio or text, that has been significantly modified or generated by AI to carry a label in the same format as the ad itself. The rule covers TV commercials from large companies as well as small restaurant flyers, and it applies to ads made elsewhere if they will air in Pennsylvania. The article calls the state one of the first to require such disclosures, but points to loopholes: the phrase significantly modified is subjective, parody, satire, commentary, criticism and evidently fictional content are exempt, and labels seem required only where synthetic content creates a false consumer perception. The office of State Senator Nick Pisciottano, who introduced the bill, did not immediately comment.",
    "summary_ar": "وقّع حاكم ولاية بنسلفانيا «جوش شابيرو» يوم الخميس قانون الإعلانات المضللة بالذكاء الاصطناعي (Artificial Intelligence Deceptive Advertising Act). ويلزم القانون كل إعلان، سواء كان صورة أو فيديو أو صوتاً أو نصاً، جرى تعديله بشكل كبير أو إنشاؤه بواسطة الذكاء الاصطناعي بأن يحمل تنويهاً بالصيغة نفسها التي يظهر بها الإعلان. ويشمل ذلك الإعلانات التلفزيونية للشركات الكبرى ومنشورات المطاعم الصغيرة، كما ينطبق على الإعلانات المنتجة خارج الولاية إذا كان من المتوقع بثها فيها. ويصف المقال بنسلفانيا بأنها من أوائل الولايات التي تفرض هذه الإفصاحات، لكنه يشير إلى ثغرات، منها أن عبارة «تعديل كبير» غير محددة، واستثناء المحاكاة الساخرة والتعليق والنقد والمحتوى الخيالي بوضوح، وأن التنويه يبدو مطلوباً فقط عندما يخلق المحتوى الاصطناعي انطباعاً خاطئاً لدى المستهلك. ولم يرد مكتب السيناتور «نيك بيسيوتانو»، مقدم مشروع القانون، على طلب التعليق فوراً.",
    "excerpt": "On Thursday, Pennsylvania Governor Josh Shapiro signed the Artificial Intelligence Deceptive Advertising Act into law, requiring disclosures on AI-generated ads."
+  },
+  {
+   "id": "3a50b27d586d",
+   "source": "skynews-ar-tech",
+   "lang": "ar",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-24T18:19:59+00:00",
+   "title": "الهنود يدربون الذكاء الاصطناعي على المهن اليدوية",
+   "title_ar": null,
+   "url": "https://www.skynewsarabia.com/technology/1900391-%D8%A7%D9%84%D9%87%D9%86%D9%88%D8%AF-%D9%8A%D8%AF%D8%B1%D8%A8%D9%88%D9%86-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%A7%D9%84%D9%85%D9%87%D9%86-%D8%A7%D9%84%D9%8A%D8%AF%D9%88%D9%8A%D8%A9",
+   "summary_en": "Thousands of Indians are wearing head-mounted cameras to record their daily work for pay, according to a BBC report cited by Sky News Arabia. In Bengaluru, a barber named Mohammed Ashim films haircuts and beard trims with customers' faces hidden, spending five to six hours a day recording. Specialist firms collect, process and label the clips, then sell them to AI labs and robotics companies that need real-world data for so-called physical AI. Some firms pay between $5 and $10 for eight to ten hours of footage, and one company says it has 96,000 data collectors in parts of Latin America and Southeast Asia. The article notes fears that workers may be training robots that could take their jobs, while some specialists say India should build its own data processing and quality-checking capacity.",
+   "summary_ar": "يرتدي آلاف الهنود كاميرات مثبتة على الرأس لتسجيل تفاصيل عملهم اليومي مقابل أجر، بحسب تقرير لشبكة «بي بي سي» نقلته «سكاي نيوز عربية». ففي مدينة بنغالورو، يصوّر الحلاق «محمد أشيم» عمليات قص الشعر وتهذيب اللحى مع إخفاء وجوه الزبائن، ويقضي من خمس إلى ست ساعات يومياً في التسجيل. وتتولى شركات متخصصة جمع المقاطع ومعالجتها وتصنيفها، ثم تبيعها لمختبرات الذكاء الاصطناعي وشركات الروبوتات التي تحتاج إلى بيانات واقعية لتطوير ما يُعرف بالذكاء الاصطناعي المادي. وتدفع بعض الشركات ما بين 5 و10 دولارات مقابل ثماني إلى عشر ساعات من التسجيل، وتقول إحداها إن لديها 96 ألف جامع بيانات في بعض دول أميركا اللاتينية وجنوب شرق آسيا. ويشير التقرير إلى مخاوف من أن يدرّب العمال روبوتات قد تحل محلهم، بينما يرى بعض المتخصصين أن على الهند تطوير قدراتها في معالجة البيانات والتحقق من جودتها.",
+   "excerpt": "لم يعد استخدام كاميرات الرأس قاصرا على توثيق المغامرات، بل تحولت الكاميرات إلى أداة عمل لآلاف الهنود الذين يسجلون تفاصيل مهنتهم اليومية مقابل أموال تساعدهم على تحسين دخولهم."
   },
   {
    "id": "c07e910a519e",
