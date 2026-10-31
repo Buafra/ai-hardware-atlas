@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-31T07:45:00+04:00",
+  "generated_at": "2026-10-31T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6744,6 +6744,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-31T07:45:00+04:00",
       "cover": "images/qahwa/week-05-day-29--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-30--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "If it gives you a source, the source exists.",
+        "ar": "إذا ذكر لك مصدراً فالمصدر موجود"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "If it gives you ==a source==, the source exists.",
+            "body": "Answer: Myth ❌ It can produce a title or a link that looks right but doesn't exist. Open the source yourself before you rely on it."
+          },
+          "ar": {
+            "title": "إذا ذكر لك ==مصدراً== فالمصدر موجود",
+            "body": "الجواب: خرافة ❌ قد يولّد عنوان كتاب أو رابطاً يبدو صحيحاً وهو غير موجود. افتح المصدر بنفسك قبل أن تعتمد عليه."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-31T07:50:00+04:00",
+      "cover": "images/qahwa/week-05-day-30--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
