@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-31T08:04:00+04:00",
+  "generated_at": "2026-10-31T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6906,6 +6906,10 @@
           },
           "en": {
             "title": "Save the steps and use them before ==you share anything=="
+          },
+          "next": {
+            "ar": "الدرس 24: صور وأصوات ومقاطع مزيّفة",
+            "en": "Lesson 24: Fake images, voices and videos"
           }
         }
       ],
@@ -6920,6 +6924,152 @@
       "related_concepts": [
         "hallucination",
         "human-in-the-loop"
+      ]
+    },
+    {
+      "id": "week-05-day-32--1-learn-lesson-24",
+      "kind": "lesson",
+      "lesson": 24,
+      "code": "L24",
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "Fake images, voices and videos",
+        "ar": "صور وأصوات ومقاطع مزيّفة"
+      },
+      "summary": {
+        "en": "Generating an image, a voice or a short clip is now within almost anyone's reach. Quality alone is no longer evidence that something is real.",
+        "ar": "صار توليد صورة أو صوت أو مقطع قصير في متناول الجميع تقريباً. لهذا لم تعد جودة ما تراه دليلاً على أنه حقيقي."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "==«يبدو حقيقياً»== لم يعد دليلاً",
+            "body": "كيف تتعامل مع الصور والأصوات والمقاطع اليوم."
+          },
+          "en": {
+            "title": "==“It looks real”== is no longer proof",
+            "body": "How to handle images, voices and clips today."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لماذا تغيّرت القاعدة؟",
+            "body": "صار توليد صورة أو صوت أو مقطع قصير في متناول الجميع تقريباً. لهذا لم تعد جودة ما تراه دليلاً على أنه حقيقي."
+          },
+          "en": {
+            "title": "Why the rule changed",
+            "body": "Generating an image, a voice or a short clip is now within almost anyone's reach. Quality alone is no longer evidence that something is real."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "انظر إلى التفاصيل",
+            "items": [
+              "الأيدي والأسنان والنظارات",
+              "الكتابة داخل الصورة",
+              "الظلال والانعكاسات غير المتسقة",
+              "حركة الشفاه لا تطابق الصوت"
+            ]
+          },
+          "en": {
+            "title": "Look at the details",
+            "items": [
+              "Hands, teeth and glasses",
+              "Text inside the image",
+              "Inconsistent shadows and reflections",
+              "Lip movement that doesn't match the audio"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لكن التفاصيل ==لا تكفي==",
+            "body": "الأدوات تتحسن بسرعة وتختفي هذه العلامات. لذلك السؤال الأهم ليس كيف تبدو الصورة، بل من نشرها ومن أين جاءت."
+          },
+          "en": {
+            "title": "But details ==are not enough==",
+            "body": "The tools improve quickly and these signs disappear. The better question is not how it looks, but who published it and where it came from."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اختبار المصدر",
+            "items": [
+              "من الحساب الذي نشرها أولاً؟",
+              "هل نشرتها جهة إخبارية موثوقة؟",
+              "ابحث بالصورة نفسها (بحث عكسي)",
+              "لست متأكداً؟ لا تُعد إرسالها."
+            ]
+          },
+          "en": {
+            "title": "The source test",
+            "items": [
+              "Which account posted it first?",
+              "Has a trusted news outlet reported it?",
+              "Reverse-search the image itself",
+              "Not sure? Don't forward it"
+            ]
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "صورة القهوة ==ليست القهوة==",
+            "body": "في القائمة كوب مثالي دائماً، والحقيقة تُعرف عند الطلب. لا تحكم على ما تراه قبل أن تعرف من صوّره."
+          },
+          "en": {
+            "title": "A photo of coffee ==is not the coffee==",
+            "body": "The menu photo is always perfect; the truth arrives with the cup. Don't judge what you see before you know who shot it."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "توجد أداة تكشف أي صورة أو صوت مزيّف بدقة.",
+            "fact": "أدوات الكشف قد تساعد، لكنها تخطئ في الاتجاهين: تتهم الحقيقي وتغفل المزيّف. ويبقى تتبّع المصدر أوثق منها."
+          },
+          "en": {
+            "myth": "There's a tool that detects any fake image or voice reliably.",
+            "fact": "Detection tools can help, but they get it wrong both ways: flagging the real and missing the fake. Tracing the source stays more reliable."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "وصلني مقطع يقول: [الادعاء]. ما الأسئلة التي أطرحها قبل تصديقه؟ أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "I received a clip claiming: [claim]. What questions should I ask before believing it? Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، وأرسله لمن ==يصدّق كل مقطع=="
+          },
+          "en": {
+            "title": "Save this and send it to someone who ==believes every clip=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I received a clip claiming: [claim]. What questions should I ask before believing it? Answer in my language.",
+        "ar": "وصلني مقطع يقول: [الادعاء]. ما الأسئلة التي أطرحها قبل تصديقه؟ أجب بلغتي.",
+        "code": "L24"
+      },
+      "permalink": "https://www.instagram.com/p/DfJyki4DZ9J/",
+      "published_at": "2026-10-31T13:03:00+04:00",
+      "cover": "images/qahwa/week-05-day-32--1-learn-lesson-24.webp",
+      "related_concepts": [
+        "deepfakes"
       ]
     }
   ]
