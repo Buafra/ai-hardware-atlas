@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-31T07:50:00+04:00",
+  "generated_at": "2026-10-31T08:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6622,6 +6622,10 @@
           },
           "en": {
             "title": "Save this and share it with someone who ==believes every answer=="
+          },
+          "next": {
+            "ar": "الدرس 23: تحقّق من أي إجابة في دقيقتين",
+            "en": "Lesson 23: Check any answer in two minutes"
           }
         }
       ],
@@ -6780,6 +6784,143 @@
       "published_at": "2026-10-31T07:50:00+04:00",
       "cover": "images/qahwa/week-05-day-30--3-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-05-day-31--1-learn-lesson-23",
+      "kind": "lesson",
+      "lesson": 23,
+      "code": "L23",
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "Check any answer in two minutes",
+        "ar": "تحقّق من أي إجابة في دقيقتين"
+      },
+      "summary": {
+        "en": "A link is not enough. Open it and check that the page really says what was claimed, and that the publisher is trustworthy.",
+        "ar": "وجود رابط لا يكفي. افتحه وتأكد أن الصفحة تقول فعلاً ما نُسب إليها، وأن الجهة التي نشرتها موثوقة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحقّق من أي إجابة ==في دقيقتين==",
+            "body": "أربع خطوات قبل أن تصدّق أو تشارك."
+          },
+          "en": {
+            "title": "Check any answer ==in two minutes==",
+            "body": "Four steps before you believe it or share it."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات الأربع",
+            "items": [
+              "اطلب المصدر وتاريخه",
+              "افتح المصدر واقرأه بنفسك",
+              "اسأل مساعداً آخر السؤال نفسه",
+              "اطلب منه أن يعارض إجابته"
+            ]
+          },
+          "en": {
+            "title": "The four steps",
+            "items": [
+              "Ask for the source and its date",
+              "Open the source and read it yourself",
+              "Ask a second assistant the same thing",
+              "Ask it to argue against its answer"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "الخطوة الثانية ==هي الأهم==",
+            "body": "وجود رابط لا يكفي. افتحه وتأكد أن الصفحة تقول فعلاً ما نُسب إليها، وأن الجهة التي نشرتها موثوقة."
+          },
+          "en": {
+            "title": "Step two ==matters most==",
+            "body": "A link is not enough. Open it and check that the page really says what was claimed, and that the publisher is trustworthy."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "مساعدان أفضل من واحد",
+            "body": "اطرح السؤال نفسه على مساعد آخر. الاختلاف في رقم أو اسم يعني العودة إلى المصدر. والاتفاق ليس دليلاً: قد تكرران الخطأ نفسه."
+          },
+          "en": {
+            "title": "Two assistants beat one",
+            "body": "Ask a second assistant the same question. If the answers differ on a number or a name, go back to the source. If they agree, that is still not proof."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "اطلب منه أن ==ينتقد نفسه==",
+            "body": "قل له: اذكر أقوى حجة ضد إجابتك. قد يكشف ذلك نقاط ضعف، فتحقّق منها في المصدر."
+          },
+          "en": {
+            "title": "Ask it to ==argue against itself==",
+            "body": "Tell it: give me the strongest case against your answer. That can surface weak points; check them in the source."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "تذوّق القهوة ==قبل أن تقدّمها==",
+            "body": "رشفة واحدة تكشف الكوب الرديء. ودقيقتان من التحقّق تكشفان الإجابة الخاطئة قبل أن تنقلها لغيرك."
+          },
+          "en": {
+            "title": "Taste the coffee ==before you serve it==",
+            "body": "One sip catches a bad cup. Two minutes of checking catch a wrong answer before you pass it on."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "التحقّق يحتاج وقتاً طويلاً، يكفي أن تأخذ الإجابة كما هي.",
+            "fact": "فتح المصدر وقراءة الجملة التي تؤيد المعلومة يأخذ دقيقتين. أما تصحيح معلومة نشرتها فيأخذ وقتاً أطول بكثير."
+          },
+          "en": {
+            "myth": "Checking takes too long, so just trust the answer.",
+            "fact": "Opening the source and finding the sentence that backs the claim takes a minute or two. Correcting it afterwards takes far longer."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "تحقّق من هذه المعلومة: [المعلومة]. اذكر المصدر وتاريخه ورابطاً أفتحه، أو قل إنك لم تجد مصدراً. ثم أقوى حجة تعارضها. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Check this claim: [claim]. Give me the source, its date and a link I can open, or say clearly if you can't find one. Then the strongest case against it. Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الخطوات، واستخدمها قبل ==أن تشارك أي شيء=="
+          },
+          "en": {
+            "title": "Save the steps and use them before ==you share anything=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Check this claim: [claim]. Give me the source, its date and a link I can open, or say clearly if you can't find one. Then the strongest case against it. Answer in my language.",
+        "ar": "تحقّق من هذه المعلومة: [المعلومة]. اذكر المصدر وتاريخه ورابطاً أفتحه، أو قل إنك لم تجد مصدراً. ثم أقوى حجة تعارضها. أجب بلغتي.",
+        "code": "L23"
+      },
+      "permalink": "https://www.instagram.com/p/DfJQV8xiPvk/",
+      "published_at": "2026-10-31T08:04:00+04:00",
+      "cover": "images/qahwa/week-05-day-31--1-learn-lesson-23.webp",
+      "related_concepts": [
+        "hallucination",
+        "human-in-the-loop"
+      ]
     }
   ]
 }
