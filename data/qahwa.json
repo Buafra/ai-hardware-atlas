@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-31T13:03:00+04:00",
+  "generated_at": "2026-10-31T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7071,6 +7071,42 @@
       "related_concepts": [
         "deepfakes"
       ]
+    },
+    {
+      "id": "week-05-day-31--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "A second assistant is pointless; they all answer the same.",
+        "ar": "سؤال مساعد آخر لا يفيد، فكلها تعطي الإجابة نفسها"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "سؤال مساعد آخر ==لا يفيد==، فكلها تعطي الإجابة نفسها",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "A second assistant ==is pointless==; they all answer the same.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-31T20:30:00+04:00",
+      "cover": "images/qahwa/week-05-day-31--3-check-story.webp",
+      "related_concepts": []
     }
   ]
 }
