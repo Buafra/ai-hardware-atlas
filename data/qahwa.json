@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-30T21:15:00+04:00",
+  "generated_at": "2026-10-31T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -6709,6 +6709,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-10-30T21:15:00+04:00",
       "cover": "images/qahwa/week-05-day-30--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-29--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "An AI assistant keeps nothing of what you type.",
+        "ar": "المساعد الذكي لا يحتفظ بشيء مما تكتبه"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant ==keeps nothing== of what you type.",
+            "body": "Answer: Myth ❌ What you type reaches the service and may be stored. How long and what for depend on the service and your settings, so don't type what you don't want stored."
+          },
+          "ar": {
+            "title": "المساعد الذكي ==لا يحتفظ== بشيء مما تكتبه",
+            "body": "الجواب: خرافة ❌ ما تكتبه يصل إلى الخدمة وقد يُحفظ لفترة. المدة والاستخدام يختلفان حسب الخدمة وإعداداتك، فلا تكتب ما لا تريد حفظه."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-10-31T07:45:00+04:00",
+      "cover": "images/qahwa/week-05-day-29--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
