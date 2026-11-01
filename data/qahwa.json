@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-01T07:50:00+04:00",
+  "generated_at": "2026-11-01T08:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7213,6 +7213,152 @@
       "published_at": "2026-11-01T07:50:00+04:00",
       "cover": "images/qahwa/week-05-day-32--3-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-05-day-33--1-learn-lesson-25",
+      "kind": "lesson",
+      "lesson": 25,
+      "code": "L25",
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "Scams that use AI, and the family rule",
+        "ar": "احتيال يستخدم الذكاء الاصطناعي، وقاعدة العائلة"
+      },
+      "summary": {
+        "en": "Most scams push you to act right now, without asking anyone. That pressure is a warning sign, however familiar the voice sounds.",
+        "ar": "أغلب محاولات الاحتيال تدفعك للتصرف الآن ودون أن تسأل أحداً. هذا الضغط علامة تحذير، مهما كان الصوت مألوفاً."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "صوت ==تعرفه== يطلب المال",
+            "body": "احتيال يستخدم الذكاء الاصطناعي، وقاعدة تحمي عائلتك."
+          },
+          "en": {
+            "title": "A voice ==you know== asking for money",
+            "body": "Scams that use AI, and the rule that protects your family."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "كيف يصل إليك؟",
+            "items": [
+              "مكالمة بصوت قريب لك في ضائقة",
+              "رسالة من «قريب» برقم جديد",
+              "عرض وظيفة براتب مبالغ فيه",
+              "«موظف بنك» يطلب رمزاً أو موافقة"
+            ]
+          },
+          "en": {
+            "title": "How it reaches you",
+            "items": [
+              "A call in a relative's voice, in trouble",
+              "A “relative” messaging from a new number",
+              "A job offer with an inflated salary",
+              "A “bank employee” wanting a code or approval"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "العلامة الأشهر: ==الاستعجال==",
+            "body": "أغلب محاولات الاحتيال تدفعك للتصرف الآن ودون أن تسأل أحداً. هذا الضغط علامة تحذير، مهما كان الصوت مألوفاً."
+          },
+          "en": {
+            "title": "The usual sign: ==urgency==",
+            "body": "Most scams push you to act right now, without asking anyone. That pressure is a warning sign, however familiar the voice sounds."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "قاعدة العائلة",
+            "items": [
+              "اتفقوا على كلمة سر وجهاً لوجه",
+              "أغلق واتصل بالرقم المعروف",
+              "اسأل سؤالاً لا يعرفه غيركم",
+              "لا ترسل مالاً قبل أن تتأكد"
+            ]
+          },
+          "en": {
+            "title": "The family rule",
+            "items": [
+              "Agree on a code word face to face",
+              "Hang up and call the known number",
+              "Ask something only your family knows",
+              "Send no money before you confirm"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "لا أحد يحتاج ==رمز التحقق==",
+            "body": "البنوك والجهات الرسمية لا تطلب رمز التحقق ولا كلمة المرور في مكالمة أو رسالة، ولا توافق على طلب في تطبيقك لم تبدأه. الطلب نفسه هو الاحتيال."
+          },
+          "en": {
+            "title": "Nobody needs ==your verification code==",
+            "body": "Banks and official bodies do not ask for your code or password by call or message, and never approve an in-app request you didn't start. The request itself is the scam."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "ادفع ==في المكان الذي تعرفه==",
+            "body": "لن تدفع لشخص أوقفك في الشارع وقال إنه من المقهى. عد إلى المكان الذي تعرفه، واتصل بالرقم الذي تعرفه."
+          },
+          "en": {
+            "title": "Pay at ==the place you know==",
+            "body": "You wouldn't pay someone who stops you in the street claiming to be from the café. Go back to the place you know, and the number you know."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "أعرف صوت ابني، ولا يمكن أن يخدعني أحد بتقليده.",
+            "fact": "صار تقليد الأصوات ممكناً بجودة مقنعة، خصوصاً في مكالمة قصيرة ومتوتّرة. لهذا القاعدة بسيطة: أغلق واتصل بالرقم المعروف."
+          },
+          "en": {
+            "myth": "I know my son's voice; nobody could fool me.",
+            "fact": "Voices can now be imitated convincingly, especially in a short, stressful call. That is why you hang up and call the number you know."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "هذه رسالة وصلتني بعد حذف اسمي وأرقامي منها: [الرسالة]. ما علامات الاحتيال فيها، وكيف أتحقّق دون أي رابط أو رقم فيها؟ أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Here is a message I received, with my name and numbers removed: [message]. What scam signs do you see, and how can I check it without using any link or number in it? Answer in my language."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس، واتفقوا على ==كلمة السر الليلة=="
+          },
+          "en": {
+            "title": "Save this and agree on ==your code word tonight=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Here is a message I received, with my name and numbers removed: [message]. What scam signs do you see, and how can I check it without using any link or number in it? Answer in my language.",
+        "ar": "هذه رسالة وصلتني بعد حذف اسمي وأرقامي منها: [الرسالة]. ما علامات الاحتيال فيها، وكيف أتحقّق دون أي رابط أو رقم فيها؟ أجب بلغتي.",
+        "code": "L25"
+      },
+      "permalink": "https://www.instagram.com/p/DfL1G7_CIDz/",
+      "published_at": "2026-11-01T08:04:00+04:00",
+      "cover": "images/qahwa/week-05-day-33--1-learn-lesson-25.webp",
+      "related_concepts": [
+        "deepfakes"
+      ]
     }
   ]
 }
