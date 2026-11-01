@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-01T21:01:00+04:00",
+  "generated_at": "2026-11-01T22:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7570,6 +7570,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-01T21:01:00+04:00",
       "cover": "images/qahwa/week-05-day-34--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-35--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never type into an AI assistant?",
+        "ar": "أيّ هذه لا تكتبه في المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Which one should you never type?",
+        "ar": "أيّها لا تكتبه في المساعد الذكي؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "ar": {
+            "title": "أيّ هذه ==لا تكتبه== في المساعد الذكي؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Which of these should you ==never type== into an AI assistant?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-01T22:00:00+04:00",
+      "cover": "images/qahwa/week-05-day-35--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
