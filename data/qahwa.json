@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-01T08:04:00+04:00",
+  "generated_at": "2026-11-01T13:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7359,6 +7359,112 @@
       "related_concepts": [
         "deepfakes"
       ]
+    },
+    {
+      "id": "week-05-day-35--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "recap",
+      "title": {
+        "en": "Safety week recap",
+        "ar": "ملخص أسبوع الأمان"
+      },
+      "summary": {
+        "en": "Lessons 21 to 25, with your coffee.",
+        "ar": "راجع الدروس 21 إلى 25 مع قهوتك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "أسبوع الأمان ==في بطاقات==",
+            "body": "راجع الدروس 21 إلى 25 مع قهوتك."
+          },
+          "en": {
+            "title": "Safety week ==in a few cards==",
+            "body": "Lessons 21 to 25, with your coffee."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (1)",
+            "items": [
+              "لا تكتب كلمات مرور ولا أرقام هوية",
+              "احذف الأسماء والأرقام قبل اللصق",
+              "النبرة الواثقة ليست دليل صحة",
+              "يبحث فقط إذا أظهر التطبيق بحثاً"
+            ]
+          },
+          "en": {
+            "title": "What we learned (1)",
+            "items": [
+              "Never type passwords or ID numbers",
+              "Strip names and numbers before pasting",
+              "A confident tone is not proof",
+              "It searches only if the app shows it"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (2)",
+            "items": [
+              "اطلب المصدر وتاريخه",
+              "افتح المصدر واقرأه بنفسك",
+              "اسأل مساعداً آخر السؤال نفسه",
+              "اطلب منه أن يعارض إجابته"
+            ]
+          },
+          "en": {
+            "title": "What we learned (2)",
+            "items": [
+              "Ask for the source and its date",
+              "Open the source and read it yourself",
+              "Ask a second assistant the same thing",
+              "Ask it to argue against its answer"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (3)",
+            "items": [
+              "«يبدو حقيقياً» لم يعد دليلاً",
+              "تتبّع من نشر الصورة أولاً",
+              "الاستعجال علامة تحذير",
+              "كلمة سر عائلية ورقم معروف"
+            ]
+          },
+          "en": {
+            "title": "What we learned (3)",
+            "items": [
+              "Looking real is no longer proof",
+              "Trace who posted it first",
+              "Urgency is a warning sign",
+              "A code word and a known number"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "ثبّت العادة: ==تحقّق قبل أن تشارك=="
+          },
+          "en": {
+            "title": "Make it a habit: ==check before you share=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DfMXPLSjTDj/",
+      "published_at": "2026-11-01T13:02:00+04:00",
+      "cover": "images/qahwa/week-05-day-35--1-recap-carousel.webp",
+      "related_concepts": []
     }
   ]
 }
