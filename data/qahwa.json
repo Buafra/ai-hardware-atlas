@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-01T20:30:00+04:00",
+  "generated_at": "2026-11-01T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7500,6 +7500,76 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-01T20:30:00+04:00",
       "cover": "images/qahwa/week-05-day-33--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-34--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "challenge",
+      "title": {
+        "en": "Agree on a family code word",
+        "ar": "اتفقوا على كلمة سر للعائلة"
+      },
+      "summary": {
+        "en": "Five minutes that protect you from a scam call.",
+        "ar": "خمس دقائق تحميكم من مكالمة احتيال."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحدّي الأسبوع: ==كلمة سر للعائلة==",
+            "body": "خمس دقائق تحميكم من مكالمة احتيال."
+          },
+          "en": {
+            "title": "Weekly challenge: ==a family code word==",
+            "body": "Five minutes that protect you from a scam call."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات",
+            "items": [
+              "اتفقوا عليها وجهاً لوجه أو بمكالمة، لا في مجموعة",
+              "اتفقوا على كلمة سهلة وغير متوقعة",
+              "القاعدة: أغلق واتصل بالرقم المعروف",
+              "أخبرنا أنك طبّقتها، ولا تكتب الكلمة نفسها أبداً"
+            ]
+          },
+          "en": {
+            "title": "How to play",
+            "items": [
+              "Agree it in person or by phone, not in a group chat",
+              "Agree on an easy, unexpected word",
+              "The rule: hang up, call the known number",
+              "Tell us you did it, but never share the word itself"
+            ]
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "انسخ هذا الأمر",
+            "prompt": "اكتب رسالة قصيرة لعائلتي تشرح فكرة كلمة السر ضد مكالمات الاحتيال. أجب بلغتي."
+          },
+          "en": {
+            "title": "Copy this prompt",
+            "prompt": "Write a short message to my family explaining the idea of a code word against scam calls. Answer in my language."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Write a short message to my family explaining the idea of a code word against scam calls. Answer in my language.",
+        "ar": "اكتب رسالة قصيرة لعائلتي تشرح فكرة كلمة السر ضد مكالمات الاحتيال. أجب بلغتي.",
+        "code": "C5"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-01T21:01:00+04:00",
+      "cover": "images/qahwa/week-05-day-34--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
