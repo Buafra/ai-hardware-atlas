@@ -17,6 +17,20 @@
    "excerpt": "أطلقت دائرة التمكين الحكومي- أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، وهي ظاهرة يتخذ فيها الأفراد قرارات أقل مع تولّي الذكاء الاصطناعي مزيداً من المهام الروتينية، بينما تزداد أهمية كل قرار وتبعاته."
   },
   {
+   "id": "e008b4e78396",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-30T11:29:06+00:00",
+   "title": "كيم يريد تسريع تطوير أسلحة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661635/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D9%88%D9%84%D9%8A%D8%A7%D8%AA/%D9%83%D9%8A%D9%85-%D9%8A%D8%B1%D9%8A%D8%AF-%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A3%D8%B3%D9%84%D8%AD%D8%A9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+   "summary_en": "North Korea tested attack drones, missiles and a rocket launcher during a military display, the state news agency said on Friday. Leader Kim Jong Un called for faster development of drones and artificial intelligence to reach \"absolute superiority\" in both fields. The display included explosive attack drones, multipurpose drones firing air-to-ground missiles, cruise missiles and 600mm rocket launchers, and the agency said the drones and cruise missiles hit an island target with complete accuracy. It came a day after Seoul reported about 10 short-range ballistic missiles fired toward the Sea of Japan, and it is unclear whether the two events are linked. Pyongyang has also announced a new type of micro torpedo using AI for guidance and target detection, and in early October a medium-range hypersonic missile that uses AI to adjust its path at low altitude.",
+   "summary_ar": "أجرت كوريا الشمالية اختبارات لمسيّرات هجومية وصواريخ وراجمة صواريخ خلال عرض عسكري، بحسب ما أعلنته وكالة الأنباء الرسمية يوم الجمعة. ودعا الزعيم «كيم جونغ أون» إلى تسريع تطوير المسيّرات والذكاء الاصطناعي لتحقيق «تفوق مطلق» في المجالين. وشمل العرض مسيّرات هجومية متفجرة ومسيّرات متعددة الاستخدامات تطلق صواريخ جو-أرض وصواريخ كروز وراجمات صواريخ من عيار 600 مليمتر، وقالت الوكالة إن المسيّرات وصواريخ كروز أصابت هدفاً على جزيرة بدقة تامة. وجاء ذلك بعد يوم من إعلان «سيول» إطلاق نحو 10 صواريخ باليستية قصيرة المدى باتجاه بحر اليابان، ولم يتضح إن كان هناك ارتباط بين الحدثين. وكانت «بيونغ يانغ» قد أعلنت أيضاً اختبار نوع جديد من الطوربيدات الدقيقة يستخدم الذكاء الاصطناعي في التوجيه ورصد الأهداف، وفي مطلع أكتوبر اختبار صاروخ فرط صوتي متوسط المدى يستخدم الذكاء الاصطناعي لتعديل مساره على ارتفاع منخفض.",
+   "excerpt": "اختبرت كوريا الشمالية مسيرات هجومية وصواريخ وراجمة صواريخ خلال عرض عسكري، وفق ما أعلنت وكالة الأنباء الرسمية الكورية الشمالية اليوم الجمعة، في وقت دعا زعيمها كيم جونغ أون إلى تسريع تطوير المسيرات والذكاء الاصطناعي لتحقيق \"تفوق مطلق\" في هذين المجالين العسكريين."
+  },
+  {
    "id": "6e68c0014c21",
    "source": "kt-uae",
    "lang": "en",
@@ -45,6 +59,20 @@
    "excerpt": "شركات التكنولوجيا عادت تحت الضغط يوم الجمعة بعد جولة جديدة من نتائج الأرباح المخيبة لعمالقة وول ستريت، وسط تنامي المخاوف من طفرة الاستثمار في الذكاء الاصطناعي."
   },
   {
+   "id": "a973ac401cee",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-30T09:00:00+00:00",
+   "title": "Wikipedia’s operator says a bad AI copyright ruling could threaten the open web",
+   "title_ar": "الجهة المشغّلة لـ Wikipedia: حكم سيئ بشأن حقوق النشر والذكاء الاصطناعي قد يهدد الإنترنت المفتوح",
+   "url": "https://www.theverge.com/policy/1022880/wikipedia-openai-new-york-times-copyright",
+   "summary_en": "The Wikimedia Foundation, the nonprofit behind Wikipedia, filed an amicus brief on Friday in the lawsuits by publishers including The New York Times against OpenAI and Microsoft, taking neither side. It argues that scraping websites and pre-training large language models on copyrighted works without a licence should count as fair use when the result is something new and different. It says a licence should be required when chatbots hand users copies of material in a way that replaces engagement with the originals. Wikimedia notes that Wikipedia is a key source of AI training data, that AI systems draw visitors away and ignore Creative Commons terms, and that such models also help its editors. It warns that an overbroad ruling could threaten free knowledge and the open web.",
+   "summary_ar": "قدمت مؤسسة Wikimedia Foundation، الجهة غير الربحية المشغلة لموقع Wikipedia، يوم الجمعة مذكرة بصفة صديق للمحكمة في الدعاوى التي رفعتها جهات نشر، منها The New York Times، ضد OpenAI وMicrosoft، دون أن تنحاز لأي طرف. وترى المؤسسة أن جمع المحتوى من المواقع والتدريب المسبق للنماذج اللغوية الكبيرة على أعمال محمية بحقوق النشر دون ترخيص ينبغي أن يُعد استخداماً عادلاً متى أنتج شيئاً جديداً ومختلفاً. وتقول إن الترخيص يجب أن يكون مطلوباً عندما تقدم روبوتات الدردشة للمستخدمين نسخاً من المواد بما يحل محل تفاعل القراء مع الأعمال الأصلية. وتشير إلى أن Wikipedia مصدر رئيسي لبيانات تدريب الذكاء الاصطناعي، وأن هذه الأنظمة تبعد الزوار ولا تلتزم بشروط Creative Commons، وأن النماذج نفسها تفيد محرريها. وتحذر من أن حكماً مفرط الإطلاق قد يهدد المعرفة الحرة والويب المفتوح.",
+   "excerpt": "The Wikimedia Foundation is staking out a middle ground in a group of landmark AI copyright cases, pushing courts to legally protect large language models (LLMs) training on copyrighted work - but not chatbots regurgitating that work to users."
+  },
+  {
    "id": "8f2362ced8df",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -57,6 +85,48 @@
    "summary_en": "In San Francisco, described as the world's AI capital, sixth-grade humanities teacher Tristen Zhang has arranged her class so students cannot lean on chatbots. Since last year she has dropped take-home essays and assesses pupils orally, asking 15 questions on characters, plot, theme and metaphor that must be answered within five minutes. According to Reuters interviews with dozens of teachers and education experts, middle and high school teachers across the United States are rethinking assessment as generative AI spreads. They are cutting homework, adding in-class writing and discussion, and redesigning tasks to test students' thinking rather than their answers. Some also ask for interpretations that go beyond the predictable.",
    "summary_ar": "في سان فرانسيسكو، التي توصف بأنها عاصمة الذكاء الاصطناعي في العالم، نظّمت معلمة العلوم الإنسانية للصف السادس «تريستن تشانغ» فصلها بحيث لا يستطيع الطلاب الاعتماد على روبوتات الدردشة. فمنذ العام الماضي ألغت الواجبات المنزلية الخاصة بكتابة المقالات، وصارت تقيّم طلابها شفهياً بطرح 15 سؤالاً عن الشخصيات والحبكة والموضوع والاستعارة، تجب الإجابة عنها خلال خمس دقائق. ووفقاً لمقابلات أجرتها Reuters مع عشرات المعلمين وخبراء التعليم، يعيد معلمو المدارس الإعدادية والثانوية في الولايات المتحدة النظر في أساليب التقييم مع انتشار الذكاء الاصطناعي التوليدي. فهم يقللون الواجبات المنزلية، ويزيدون الكتابة والنقاش داخل الفصل، ويعيدون تصميم المهام لقياس تفكير الطلاب لا إجاباتهم. ويطلب بعضهم أيضاً تفسيرات تخرج عن المألوف.",
    "excerpt": "في سان فرانسيسكو، عاصمة الذكاء الاصطناعي العالمية، تحضر معلمة العلوم الإنسانية للصف السادس، تريستن تشانغ، فصلها الدراسي، بحيث لا يتمكن الطلاب من الاعتماد على روبوتات الدردشة. ومنذ العام الماضي، ألغت تشانغ واجبات كتابة المقال في المنزل، وبدأت استخدام الامت"
+  },
+  {
+   "id": "c0bcb8595dfc",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T23:05:16+00:00",
+   "title": "UAE harnesses AI to deliver proactive, autonomous government services: Report",
+   "title_ar": "الإمارات تسخّر الذكاء الاصطناعي لتقديم خدمات حكومية استباقية وذاتية التشغيل: تقرير",
+   "url": "https://www.wam.ae/en/article/17i0i1c-uae-harnesses-deliver-proactive-autonomous",
+   "summary_en": "A WAM report dated 30 October 2026 says UAE government services are entering a new phase in which AI applications move beyond giving information to carrying out tasks autonomously and proactively, cutting transaction steps and saving customers time. Abu Dhabi's TAMM platform serves 3.8 million users through more than 1,150 services, processes 95% of requests using AI, and its AutoGov feature renews some licences and medical appointments automatically. Ajman completed the country's first government trade licence renewal using agentic AI in July, and Dubai's DEWA converted 16 of its 21 services within 90 days. At federal level, the Cabinet approved a framework in May 2026 aiming to shift 50% of government sectors, services and operations to agentic AI models within two years. Approvals, data protection and human oversight remain essential.",
+   "summary_ar": "يفيد تقرير لوكالة أنباء الإمارات (WAM) بتاريخ 30 أكتوبر 2026 بأن الخدمات الحكومية في الإمارات تدخل مرحلة جديدة، إذ تنتقل تطبيقات الذكاء الاصطناعي من تقديم المعلومات إلى تنفيذ المهام بصورة ذاتية واستباقية، ما يقلص خطوات المعاملات ويوفر وقت المتعاملين. وتخدم منصة TAMM في أبوظبي 3.8 مليون مستخدم عبر أكثر من 1,150 خدمة، وتعالج 95% من الطلبات بالذكاء الاصطناعي، وتجدد ميزة TAMM AutoGov بعض الرخص والمواعيد الطبية تلقائياً. وأنجزت عجمان في يوليو أول معاملة حكومية في الدولة لتجديد رخصة تجارية بالذكاء الاصطناعي المساعد، فيما حولت هيئة كهرباء ومياه دبي 16 خدمة من أصل 21 خلال 90 يوماً. وعلى المستوى الاتحادي، اعتمد مجلس الوزراء في مايو 2026 إطاراً يستهدف تحويل 50% من القطاعات والخدمات والعمليات الحكومية إلى نماذج قائمة على هذه التقنيات خلال عامين. وتبقى الموافقات وحماية البيانات والإشراف البشري عناصر أساسية.",
+   "excerpt": null
+  },
+  {
+   "id": "0edf3b8f8526",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T23:01:58+00:00",
+   "title": "الإمارات.. الذكاء الاصطناعي يعيد رسم رحلة المتعاملين بخدمات تستبق الاحتياجات وتنجز المعاملات",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17i0h9k-الإمارات-الذكاء-الاصطناعي-يعيد-رسم-رحلة-المتعاملين",
+   "summary_en": "A WAM report from Abu Dhabi dated 30 October says UAE government services are shifting to a stage where AI performs tasks and coordinates procedures on its own and ahead of time, shortening transactions and letting some recurring services finish without a manual request. Abu Dhabi's TAMM platform handles 95% of requests with AI, serves 3.8 million users and has completed over 1.9 million cases through conversational AI. Ajman completed the country's first trade licence renewal using agentic AI and launched the OneClick assistant for business setup. Dubai's DEWA turned 16 of 21 services into autonomous ones, and the RTA updated its Mahboub assistant. Federally, the Cabinet approved a framework in May 2026 to move 50% of government operations to agentic AI within two years, with 80,000 federal employees to be trained.",
+   "summary_ar": "يذكر تقرير لوكالة أنباء الإمارات (وام) من أبوظبي بتاريخ 30 أكتوبر أن الخدمات الحكومية في الدولة تتجه إلى مرحلة ينفذ فيها الذكاء الاصطناعي المهام وينسق الإجراءات بصورة ذاتية واستباقية، فتقصر المعاملات ويمكن إنجاز بعض الخدمات الدورية دون طلب يدوي. وتعالج منصة TAMM في أبوظبي 95% من الطلبات بالذكاء الاصطناعي، وتخدم 3.8 مليون مستخدم، وأنجزت أكثر من 1.9 مليون حالة عبر الذكاء الاصطناعي الحواري. وأتمت عجمان أول تجديد لرخصة تجارية في الدولة بالذكاء الاصطناعي المساعد، وأطلقت مساعد OneClick لتأسيس الأعمال. وحولت هيئة كهرباء ومياه دبي 16 خدمة من أصل 21 إلى خدمات ذاتية التنفيذ، وطورت هيئة الطرق والمواصلات مساعدها «محبوب». وعلى المستوى الاتحادي، اعتمد مجلس الوزراء في مايو 2026 إطاراً لتحويل 50% من العمل الحكومي إلى هذه النماذج خلال عامين، مع تدريب 80 ألف موظف اتحادي.",
+   "excerpt": null
+  },
+  {
+   "id": "115aa6cd0e70",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T22:09:01+00:00",
+   "title": "رهانات الذكاء الاصطناعي تهتز مع تصاعد مخاوف المستثمرين",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661609/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D9%88%D8%AA%D9%82%D8%A7%D8%B1%D9%8A%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9/%D8%B1%D9%87%D8%A7%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%AA%D9%87%D8%AA%D8%B2-%D9%85%D8%B9-%D8%AA%D8%B5%D8%A7%D8%B9%D8%AF-%D9%85%D8%AE%D8%A7%D9%88%D9%81-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AB%D9%85%D8%B1%D9%8A%D9%86",
+   "summary_en": "Alphabet shares fell a record 12%, erasing roughly $500 billion in market value and reviving doubts over whether huge AI spending can bring enough returns, according to Independent Arabia. The Nasdaq 100 slipped about 1.3%, a group of companies benefiting from the AI boom lost 3%, and around 400 S&P 500 stocks rose as money moved toward broader sectors and bonds. Microsoft's $25 billion bond offering drew exceptional demand. Separately, US GDP grew at an annual rate of 3.4% in the third quarter, supported by business investment largely tied to AI, while the PCE price index rose 0.5% in September. White House economic council director Kevin Hassett hinted the Federal Reserve might raise rates if October inflation data is high.",
+   "summary_ar": "تراجعت أسهم «ألفابت» بنسبة قياسية بلغت 12%، ما محا نحو 500 مليار دولار من قيمتها السوقية وأعاد الشكوك بشأن قدرة الإنفاق الضخم على الذكاء الاصطناعي على تحقيق عوائد كافية، بحسب «إندبندنت عربية». وهبط مؤشر ناسداك 100 بنحو 1.3%، وخسرت مجموعة من الشركات المستفيدة من طفرة الذكاء الاصطناعي 3%، بينما ارتفعت أسهم نحو 400 شركة في مؤشر ستاندرد أند بورز 500 مع تحول الأموال إلى قطاعات أوسع والسندات. وشهد طرح سندات «مايكروسوفت» البالغة قيمته 25 مليار دولار طلباً استثنائياً. وفي بيانات منفصلة، نما الناتج المحلي الإجمالي الأميركي بمعدل سنوي بلغ 3.4% في الربع الثالث بدعم من استثمارات الشركات المرتبطة إلى حد كبير بالذكاء الاصطناعي، فيما ارتفع مؤشر أسعار نفقات الاستهلاك الشخصي 0.5% في سبتمبر. ولمح كيفن هاسيت، مدير المجلس الاقتصادي الوطني في البيت الأبيض، إلى أن الاحتياطي الفيدرالي قد يرفع الفائدة إذا جاءت بيانات التضخم لشهر أكتوبر مرتفعة.",
+   "excerpt": "تسببت موجة بيع لأسهم عدد من شركات التكنولوجيا في تحول الاستثمارات نحو فئات أوسع من الأسهم، تزامناً مع زيادة الإقبال على السندات بعدِّها ملاذاً آمناً."
   },
   {
    "id": "56f3a391bb1f",
@@ -87,6 +157,34 @@
    "excerpt": "(Bloomberg) -- Tech stocks were dragged lower by a record drop in Alphabet Inc. after disappointing results renewed investor concerns about the threat that artificial intelligence poses to its core business."
   },
   {
+   "id": "24f3c9778b1e",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-29T20:05:47+00:00",
+   "title": "Rivian expands joint venture with VW to include AI assistant",
+   "title_ar": "Rivian توسّع مشروعها المشترك مع VW ليشمل مساعداً بالذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/10/29/rivian-expands-joint-venture-with-vw-to-include-ai-assistant/",
+   "summary_en": "Rivian is licensing elements of its AI voice assistant technology to Volkswagen Group as part of their $5.8 billion joint venture, according to Rivian's third-quarter investor presentation released Thursday. The company did not disclose fees, payment terms or which Volkswagen models will use it, though the ID EVERY1 hatchback could be the first. The assistant reached the R1S and R1T in May 2026 and the R2 SUV in October. CEO RJ Scaringe said Rivian built an in-house agentic framework that could eventually let its vehicles run AI agents from other companies, including Anthropic. Rivian described the expansion as a proof point for its platform and linked it to its vertical integration strategy.",
+   "summary_ar": "ترخّص «ريفيان» عناصر من تقنية مساعدها الصوتي الذكي لمجموعة «فولكس فاغن» ضمن مشروعهما المشترك البالغة قيمته 5.8 مليار دولار، بحسب العرض الذي قدمته الشركة للمستثمرين عن الربع الثالث وصدر يوم الخميس. ولم تفصح الشركة عن الرسوم أو شروط الدفع أو طرازات فولكس فاغن التي ستستخدم التقنية، لكن سيارة ID EVERY1 الصغيرة قد تكون الأولى. وجرى طرح المساعد في سيارتي R1S وR1T في مايو 2026 وفي سيارة R2 في أكتوبر. وقال الرئيس التنفيذي RJ Scaringe إن الشركة طورت إطاراً داخلياً للوكلاء الأذكياء قد يتيح مستقبلاً تشغيل وكلاء ذكاء اصطناعي من شركات أخرى في مركباتها، ومنها Anthropic. ووصفت «ريفيان» هذا التوسع بأنه دليل على قابلية منصتها للتوسع، وربطته باستراتيجيتها للتكامل الرأسي.",
+   "excerpt": "Rivian doesn't disclose if the value of its $5.8 billion joint venture will expand as a result."
+  },
+  {
+   "id": "6db735303844",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-29T20:01:27+00:00",
+   "title": "OpenAI doubles usage limits on Pro plans as competition with Anthropic heats up",
+   "title_ar": "OpenAI تضاعف حدود الاستخدام في باقات Pro مع احتدام المنافسة مع Anthropic",
+   "url": "https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/",
+   "summary_en": "OpenAI has doubled usage limits on several paid plans. Work and Codex quotas on the Pro 100 and Pro 500 plans now stand at twice their previous level, while on Pro 200 the company doubled the lower quota and reversed a planned cut after user pushback. The Plus plan is unchanged. New subscribers get the updated quotas, and existing customers receive them automatically. OpenAI notes that twice the quota does not mean twice as many finished tasks, because consumption depends on the model, task type and settings. The company says it will keep releasing better models and efficiency gains, and it recently launched its 6.1 models Terra and Sol. The article links the move to Anthropic's IPO preparations and the two firms' competition for business customers.",
+   "summary_ar": "ضاعفت OpenAI حدود الاستخدام في عدد من خطط الاشتراك المدفوعة. فقد أصبحت حصص Work وCodex في خطتي Pro 100 وPro 500 ضعف ما كانت عليه سابقاً، أما في خطة Pro 200 فضاعفت الشركة الحصة الأدنى وتراجعت عن خفض كانت تعتزمه بعد اعتراض المستخدمين. وبقيت خطة Plus دون تغيير. ويحصل المشتركون الجدد على الحصص المحدثة، ويحصل عليها العملاء الحاليون تلقائياً. وتوضح الشركة أن مضاعفة الحصة لا تعني مضاعفة عدد المهام المنجزة، لأن الاستهلاك يختلف بحسب النموذج ونوع المهمة والإعدادات. وتقول إنها ستواصل إطلاق نماذج أفضل وتحسينات في الكفاءة، وقد أطلقت أخيراً نموذجي Terra وSol من الجيل 6.1. ويربط المقال الخطوة باستعداد Anthropic للطرح العام الأولي وبالمنافسة بين الشركتين على عملاء قطاع الأعمال.",
+   "excerpt": "OpenAI is doubling usage limits across its paid plans, from Pro 100 to Pro 500. A planned cut to the Pro 200 quota was reversed after user pushback. More efficient models like Terra and Sol should push usable capacity even higher."
+  },
+  {
    "id": "76e3f8d331e0",
    "source": "euronews-ar",
    "lang": "ar",
@@ -115,6 +213,76 @@
    "excerpt": "أطلقت شركة إنفيديا الأميركية، نموذجاً جديداً للذكاء الاصطناعي لتحويل التسجيلات الصوتية إلى نصوص مكتوبة، يدعم 40 لغة، ويتيح للمطورين استخدامه مجاناً بأوزان…"
   },
   {
+   "id": "56fa7327f2b2",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T19:56:19+00:00",
+   "title": "OpenAI-backed Thrive Holdings acquires ADT",
+   "title_ar": "Thrive Holdings المدعومة من OpenAI تستحوذ على ADT",
+   "url": "https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/",
+   "summary_en": "Thrive Holdings has acquired physical security company ADT for $10 per share, about $7.6 billion in equity, the companies announced on Thursday. ADT put the total enterprise value of the deal at $15.3 billion. Thrive Holdings is a holding company spun out of Thrive Capital, and OpenAI is both its partner and an investor. It aims to hold companies long term and revitalise them with AI, and it says it owns over 75 firms. OpenAI supplies AI models, technology and forward-deployed engineers. Neither side named new AI-powered products, though they said they plan to invest and release some. The press release says ADT will be the base of Thrive Holdings' smart home security business.",
+   "summary_ar": "استحوذت Thrive Holdings على شركة الأمن المادي ADT مقابل 10 دولارات للسهم الواحد، أي نحو 7.6 مليار دولار من حقوق الملكية، بحسب إعلان الشركتين يوم الخميس. وذكرت ADT أن القيمة الإجمالية للصفقة شاملة الديون تبلغ 15.3 مليار دولار. وThrive Holdings شركة قابضة منبثقة عن Thrive Capital، وتعد OpenAI شريكاً ومستثمراً فيها. وتهدف إلى الاحتفاظ بالشركات على المدى الطويل وتنشيطها بالذكاء الاصطناعي، وتقول إنها تملك أكثر من 75 شركة. وتزوّد OpenAI الشركات بنماذج الذكاء الاصطناعي وتقنياته ومهندسين ينتشرون لدى العملاء. ولم تكشف الشركتان عن منتجات أمنية جديدة تعمل بالذكاء الاصطناعي، لكنهما أشارتا إلى خطة للاستثمار وإطلاق منتجات. وجاء في البيان أن ADT ستكون أساس نشاط Thrive Holdings في أمن المنازل الذكية.",
+   "excerpt": "OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security business."
+  },
+  {
+   "id": "039f4be7610e",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-29T19:33:37+00:00",
+   "title": "Experts adopt AI agent's random opinions and think they're their own, Anthropic study finds",
+   "title_ar": "دراسة من Anthropic: خبراء يتبنّون آراء عشوائية لوكيل ذكاء اصطناعي ويعتقدون أنها آراؤهم",
+   "url": "https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/",
+   "summary_en": "Anthropic ran an experiment with 50 experts in causal inference who analysed data from a fictional farming cooperative using an AI agent. Unknown to them, a coin toss set the agent's preference for one of two valid options at each decision point. Participants adopted the agent's preference in 86 percent of four analytical decisions, and the agent's net influence, the \"flip rate\", ranged from 62 to 82 percent. Afterwards 52 percent said the recommendation felt more like their own than the agent's, and only 15 percent mentioned AI in their explanations. Participants also worked faster and made fewer serious errors with AI. The researchers warn of a false consensus in science and call for ways to measure deference to agents.",
+   "summary_ar": "أجرت Anthropic تجربة على 50 خبيراً في الاستدلال السببي حللوا بيانات تعاونية زراعية خيالية بمساعدة وكيل ذكاء اصطناعي. لم يكن المشاركون يعلمون أن رمي عملة حدد تفضيل الوكيل لأحد خيارين صالحين عند كل نقطة قرار. تبنّى المشاركون تفضيل الوكيل في 86 بالمئة من أربعة قرارات تحليلية، وتراوح ما سمّته الدراسة «معدل التحول» بين 62 و82 بالمئة. وبعد ذلك قال 52 بالمئة إن التوصية بدت أقرب إلى رأيهم من رأي الوكيل، ولم يذكر الذكاء الاصطناعي سوى 15 بالمئة في تفسيراتهم. كما عمل المشاركون بسرعة أكبر وبأخطاء جسيمة أقل مع الذكاء الاصطناعي. ويحذّر الباحثون من إجماع زائف في العلوم، ويدعون إلى طرق لقياس الاتكال على الوكلاء.",
+   "excerpt": "Anthropic gave 50 experts an AI agent whose preferences were set by coin toss. The experts followed the agent's view up to 86 percent of the time on judgment calls, and most believed the conclusions were their own."
+  },
+  {
+   "id": "31a141606e86",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-29T19:14:36+00:00",
+   "title": "Meta quietly launches an AI fashion app called Style Sketch",
+   "title_ar": "Meta تطلق بهدوء تطبيق أزياء بالذكاء الاصطناعي باسم Style Sketch",
+   "url": "https://techcrunch.com/2026/10/29/meta-quietly-launches-an-ai-fashion-app-called-style-sketch/",
+   "summary_en": "Meta has quietly launched Style Sketch, an AI fashion app that suggests outfit combinations from clothes users already own. It can build a virtual closet from photos posted on Instagram, or users can add items by photo, video or upload. Users can try outfits on a model matched to their body shape and skin tone, and can get a day-by-day outfit plan for a trip based on destination, length and activities. Matt Navarra first spotted the app, which is available on iOS and Android in Indonesia, Singapore and Thailand. Meta did not respond to a request for comment, and it is unknown whether a wider launch is planned. It follows other recent Meta apps, including Waddle World, Pocket and Vibes.",
+   "summary_ar": "أطلقت Meta بهدوء تطبيق Style Sketch، وهو تطبيق أزياء بالذكاء الاصطناعي يقترح تنسيقات ملابس من القطع التي يملكها المستخدم أصلاً. ويمكنه بناء خزانة افتراضية من الصور المنشورة على Instagram، أو يضيف المستخدم القطع بالتصوير أو بمقطع فيديو أو برفع الصور. ويستطيع المستخدمون تجربة الإطلالات على عارضة تناسب شكل الجسم ولون البشرة، والحصول على خطة يومية للملابس في السفر بحسب الوجهة ومدة الرحلة والأنشطة. وكان «مات نافارا» أول من رصد التطبيق، وهو متاح على iOS وAndroid في إندونيسيا وسنغافورة وتايلاند. ولم تردّ Meta على طلب التعليق، ولا يُعرف إن كانت تنوي إطلاقه على نطاق أوسع. ويأتي ذلك بعد تطبيقات حديثة أخرى من Meta منها Waddle World وPocket وVibes.",
+   "excerpt": "The app connects to Instagram to build a virtual closet from photos you’ve already shared, or lets you add items manually by snapping a photo, recording a quick video, or uploading images from your camera roll."
+  },
+  {
+   "id": "d6f5cbd7ccda",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T18:54:46+00:00",
+   "title": "«كهرباء الشارقة» تنظم ورشة عمل لاستخدام الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561568",
+   "summary_en": "The Sharjah Electricity, Water and Gas Authority held an interactive workshop to identify and develop innovative projects that use artificial intelligence. The session produced six proposed projects, which were discussed, and they focus on improving services and raising operational efficiency. The proposals include managing institutional knowledge to preserve expertise and pass it between employees, speeding up water delivery services, and proactive services that check request requirements before submission to avoid delays. The text describes the projects as a step toward turning innovative ideas into practical initiatives that can be studied and developed.",
+   "summary_ar": "نظمت هيئة كهرباء ومياه وغاز الشارقة ورشة عمل تفاعلية لتحديد مشاريع مبتكرة وتطويرها باستخدام الذكاء الاصطناعي. وأسفرت الورشة عن اقتراح 6 مشاريع ومناقشتها، تركز على تطوير الخدمات ورفع الكفاءة التشغيلية. وتشمل المقترحات إدارة المعرفة المؤسسية للحفاظ على الخبرات ونقلها بين الموظفين، وتسريع خدمات توصيل المياه، وخدمات استباقية تتحقق من متطلبات الطلبات قبل تقديمها لتجنب التأخير. ويصف النص هذه المشاريع بأنها خطوة نحو تحويل الأفكار المبتكرة إلى مبادرات عملية قابلة للدراسة والتطوير.",
+   "excerpt": "نظمت هيئة كهرباء ومياه وغاز الشارقة ورشة عمل تفاعلية لتحديد وتطوير فرص ومشاريع مبتكرة باستخدام الذكاء الاصطناعي، أسفرت"
+  },
+  {
+   "id": "612f4665c4c2",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T18:53:51+00:00",
+   "title": "الإمارات تطلق مبادرة مجتمعية للبرمجة بالذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561563",
+   "summary_en": "The UAE's Artificial Intelligence Office has launched an initiative called \"UAE Vibe Codes\" as part of UAE Codes Day, held every year on 29 October, whose theme this year is \"Vibe Coding\". Organised with Microsoft, it lets people turn ideas into websites and digital apps within minutes using AI, with no prior programming experience; users describe an idea in natural language and AI tools help build a prototype. The text says 5,000 people took part in the first hour after launch. Minister of State for Artificial Intelligence Omar Sultan Al Olama said it aims to help community members benefit from fast-moving developments in digital solutions. The office is also running workshops with partners including Google, Emirates Global Aluminium, IBM and Siemens.",
+   "summary_ar": "أعلن مكتب الذكاء الاصطناعي في الإمارات إطلاق مبادرة «UAE Vibe Codes» ضمن فعاليات «يوم الإمارات تبرمج» الذي يقام في 29 أكتوبر من كل عام، ويحمل هذا العام شعار «Vibe Coding». وتنظَّم المبادرة بالتعاون مع Microsoft، وتتيح للأفراد تحويل أفكارهم إلى مواقع إلكترونية وتطبيقات رقمية خلال دقائق باستخدام الذكاء الاصطناعي ودون خبرة برمجية سابقة، إذ يصفون الفكرة بلغتهم الطبيعية وتساعدهم أدوات الذكاء الاصطناعي في بناء نموذج أولي. ويذكر النص أن 5000 شخص شاركوا في الساعة الأولى من الإطلاق. وقال وزير الدولة للذكاء الاصطناعي «عمر سلطان العلماء» إن المبادرة تسعى إلى تمكين أفراد المجتمع من الاستفادة من التطورات المتسارعة في الحلول الرقمية. كما ينظم المكتب ورشاً مع شركاء، منهم Google وEmirates Global Aluminium وIBM وSiemens.",
+   "excerpt": "أعلن مكتب الذكاء الاصطناعي، إطلاق مبادرة «UAE Vibe Codes»، ضمن فعاليات «يوم الإمارات تبرمج»، الذي ينظم في 29 أكتوبر من ك"
+  },
+  {
    "id": "2a1a8a7c88a0",
    "source": "verge-ai",
    "lang": "en",
@@ -129,6 +297,76 @@
    "excerpt": "Now you can generate, preview, and edit PDFs, Google Docs, Google Sheets, slide decks, Markdown files, TXT files, and code directly within Google Gemini."
   },
   {
+   "id": "1c18cf23721b",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "models",
+   "published": "2026-10-29T18:24:31+00:00",
+   "title": "عبد الرحمن الحارب يحذر من هلوسة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561562",
+   "summary_en": "Abdulrahman Al Harib, director general of the Dubai Financial Audit Authority, said in his opening speech at the third government audit foresight conference, themed \"Smart Oversight\", that AI allows auditors to move from checking samples to reviewing entire operations and datasets. He cited a global audit firm's platform handling more than 1.4 trillion in daily ledger-entry data, and studies reporting audit efficiency gains of 20–25%. Research on continuous auditing with large language models showed up to 83% less verification time and 97% accuracy in analysing audit evidence. He also warned of risks, including AI hallucination, faulty inferences, models unfamiliar with audit standards, and over-reliance without professional scepticism. He said technology's value lies in what it adds to audit accuracy and effectiveness.",
+   "summary_ar": "قال مدير عام جهاز الرقابة المالية في دبي «عبدالرحمن الحارب» في كلمته الافتتاحية للنسخة الثالثة من مؤتمر استشراف مستقبل التدقيق الحكومي، الذي ينعقد تحت شعار «الرقابة الذكية»، إن الذكاء الاصطناعي يتيح الانتقال من فحص عينات من المعاملات إلى مراجعة كامل العمليات والبيانات. واستشهد بمنصة لإحدى شركات التدقيق العالمية تعالج أكثر من 1.4 تريليون من بيانات القيود المحاسبية اليومية، وبدراسات أفادت بتحسن كفاءة التدقيق بنسبة 20 إلى 25%. وأظهرت أبحاث حول التدقيق المستمر باستخدام نماذج اللغة الكبيرة انخفاض وقت التحقق بنسبة تصل إلى 83% ودقة بلغت 97% في تحليل أدلة التدقيق. كما حذر من مخاطر، منها هلوسة الذكاء الاصطناعي والاستدلالات الخاطئة واستخدام نماذج لا تلم بمعايير التدقيق والاعتماد المفرط عليها دون شك مهني. وأكد أن قيمة التقنية تقاس بما تضيفه إلى دقة التدقيق وفاعليته.",
+   "excerpt": "أكد عبدالرحمن الحارب، مدير عام جهاز الرقابة المالية في دبي، أن التطور التقني والذكاء الاصطناعي يفتحان آفاقاً واسعة لرفع"
+  },
+  {
+   "id": "12958a6bb5bc",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "policy",
+   "published": "2026-10-29T18:21:52+00:00",
+   "title": "«استشراف مستقبل التدقيق الحكومي» يناقش حوكمة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561559",
+   "summary_en": "The third edition of the Government Audit Foresight conference opened in Dubai, organised by the Dubai Financial Audit Authority under the theme \"Smart Oversight\" at the Jawhara Hall in Madinat Jumeirah. It brings together leaders and experts in audit, governance, cybersecurity and AI to discuss risks from emerging technologies, AI governance and the reliability of digital data and decisions. In his opening speech, Abdulrahman Al Harib said responsible AI use requires clear governance, testable controls, data protection and effective human review, and that AI should strengthen auditors rather than replace them. Keynotes included Mohamed Hamad Al Kuwaiti on cyber financial oversight in the AI era and Dominique Vincenti on internal audit. Nine specialised sessions covered AI governance, AI auditing and practical AI use in internal audit.",
+   "summary_ar": "انطلقت في دبي أعمال النسخة الثالثة من مؤتمر «استشراف مستقبل التدقيق الحكومي» الذي ينظمه جهاز الرقابة المالية تحت شعار «الرقابة الذكية»، في قاعة الجوهرة بمدينة جميرا. ويجمع المؤتمر قيادات وخبراء في التدقيق والحوكمة والأمن السيبراني والذكاء الاصطناعي لمناقشة مخاطر التقنيات الناشئة وحوكمة أنظمة الذكاء الاصطناعي وموثوقية البيانات والقرارات الرقمية. وقال «عبدالرحمن الحارب» في كلمته الافتتاحية إن الاستخدام المسؤول للذكاء الاصطناعي يقتضي حوكمة واضحة وضوابط قابلة للاختبار وحماية للبيانات ومراجعة بشرية فاعلة، وإن الهدف ليس أن يحل محل المدقق بل أن يمنحه قدرة أكبر على التحليل. وتضمنت الكلمات الرئيسية مشاركة «محمد حمد الكويتي» حول الرقابة المالية السيبرانية في عصر الذكاء الاصطناعي، و«دومينيك فينسينتي» حول التدقيق الداخلي. وتناولت تسع جلسات متخصصة حوكمة الذكاء الاصطناعي وتدقيقه وتطبيقاته العملية في التدقيق الداخلي.",
+   "excerpt": "انطلقت، أمس، في دبي، أعمال النسخة الثالثة من مؤتمر «استشراف مستقبل التدقيق الحكومي»، الذي ينظمه جهاز الرقابة المالية تح"
+  },
+  {
+   "id": "fbc216de21ca",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "education",
+   "published": "2026-10-29T18:21:38+00:00",
+   "title": "المعلمون في مواجهة الذكاء الاصطناعي.. أساليب جديدة لعصر مختلف",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/miscellaneous/1561557",
+   "summary_en": "Teachers in US middle and high schools are rethinking how they assess learning as generative AI spreads, according to Reuters interviews with dozens of teachers and education experts. In San Francisco, sixth-grade humanities teacher Tristen Chang dropped take-home essays and now uses oral exams with 15 questions to be answered in five minutes. Other teachers are assigning less homework, adding more writing and discussion in class, and redesigning tasks to judge students' thinking rather than their answers. Education systems remain split on AI, with some wanting it in classrooms and others wanting limits, so many teachers are handling the shift largely alone. Many have chosen a middle path, such as New York maths teacher Bobson Wong, who gives fewer homework questions and more in-class practice.",
+   "summary_ar": "يعيد معلمو المدارس الإعدادية والثانوية في الولايات المتحدة النظر في طريقة تقييم التعلم مع انتشار الذكاء الاصطناعي التوليدي، وفق مقابلات أجرتها رويترز مع عشرات المعلمين وخبراء التعليم. وفي سان فرانسيسكو، ألغت معلمة العلوم الإنسانية للصف السادس تريستن تشانج واجبات كتابة المقال في المنزل، وصارت تعتمد امتحانات شفوية من 15 سؤالاً يُجاب عنها في خمس دقائق. ويقلل معلمون آخرون الواجبات المنزلية ويزيدون الكتابة والمناقشات داخل الفصل، ويعيدون تصميم المهام لتقييم تفكير الطلاب لا إجاباتهم. ولا تزال الأنظمة التعليمية منقسمة بشأن الذكاء الاصطناعي، فيريد بعضها دمجه ويريد آخرون تقييده، ما يترك كثيراً من المعلمين يتعاملون مع التحول بمفردهم. واختار كثيرون نهجاً وسطاً، مثل مدرس الرياضيات في نيويورك بوبسون وونج الذي يعطي أسئلة أقل للمنزل وتدريبات أكثر داخل الفصل.",
+   "excerpt": "في سان فرانسيسكو عاصمة الذكاء الاصطناعي العالمية، تحضر تريستن تشانج معلمة العلوم الإنسانية للصف السادس فصلها الدراسي، بح"
+  },
+  {
+   "id": "3408fa0eb349",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "health",
+   "published": "2026-10-29T18:21:11+00:00",
+   "title": "عبدالرحمن الحارب: الذكاء الاصطناعي يعزز التدقيق الشامل",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1561554",
+   "summary_en": "Abdulrahman Al Harib, director general of the Dubai Financial Audit Authority, told Al Bayan on the sidelines of the government audit foresight conference that using AI at the authority is meant to widen audit scope, speed up tasks and improve accuracy, not replace staff. He said the technology can be used across the audit cycle, from planning to document checks and reporting. The authority is still at an early stage of adoption, focusing first on audit plans and risk assessment, with trial use in examining documents and company data. He added that it has set up a data unit of data scientists who build audit algorithms and scripts and train national auditors to use them to detect errors and violations.",
+   "summary_ar": "قال مدير عام جهاز الرقابة المالية في دبي «عبدالرحمن الحارب» في تصريحات لصحيفة «البيان» على هامش مؤتمر استشراف مستقبل التدقيق الحكومي إن توظيف الذكاء الاصطناعي في أعمال الجهاز لا يحل محل الموظفين، بل يستهدف توسيع نطاق التدقيق وتسريع المهام وتحسين دقتها وجودتها. وأوضح أن التقنية يمكن استخدامها في مراحل متعددة من دورة التدقيق، من إعداد الخطة إلى التدقيق المستندي وإصدار التقارير. وأشار إلى أن الجهاز لا يزال في بدايات تبني الذكاء الاصطناعي، وأن التركيز الأولي ينصب على خطط التدقيق وتقييم المخاطر، مع استخدام اختباري في فحص المستندات وبيانات الشركات. وكشف أن الجهاز أنشأ وحدة معنية بالبيانات تضم متخصصين في علم البيانات يبنون خوارزميات وبرامج نصية للتدقيق ويدربون المدققين المواطنين على استخدامها في اكتشاف الأخطاء والمخالفات.",
+   "excerpt": "أكد عبدالرحمن الحارب، مدير عام جهاز الرقابة المالية في دبي، أن توظيف الذكاء الاصطناعي في أعمال الجهاز لا يحل محل الموظف"
+  },
+  {
+   "id": "a39d2cb266f9",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-29T17:54:38+00:00",
+   "title": "Granola crunches up a dictation feature to compete with Wispr",
+   "title_ar": "Granola تطرح ميزة للإملاء الصوتي لمنافسة Wispr",
+   "url": "https://techcrunch.com/2026/10/29/granola-crunches-up-a-dictation-feature-to-compete-with-wispr/",
+   "summary_en": "Granola, known for its meeting notetaker, has launched a dictation feature, months after dictation app Wispr added a meeting notetaker. On Mac, users press the Fn key and speak, and the tool tidies and formats the speech before posting the text in any app. Granola said iOS and Windows versions are coming soon. Granola is valued at $1.5 billion and Wispr at $2 billion; Wispr is trying to build its own models through a research lab exploring different human-computer interfaces. The article says other voice startups such as Fireflies, Speechify and Monologue have also become multifeature apps combining notetaking and dictation, and that these companies are now looking for more value from capturing users' speech.",
+   "summary_ar": "أطلقت Granola، المعروفة بتطبيق تدوين الاجتماعات، ميزة للإملاء الصوتي، بعد أشهر من إضافة تطبيق الإملاء Wispr أداةً لتدوين الاجتماعات. وعلى جهاز Mac يضغط المستخدم مفتاح Fn ويتحدث، فتنظّف الأداة كلامه وتنسقه ثم تكتب النص في أي تطبيق. وقالت الشركة إن الميزة ستصل قريباً إلى iOS وWindows. وتبلغ قيمة Granola نحو 1.5 مليار دولار وقيمة Wispr نحو 2 مليار دولار، وتسعى Wispr إلى بناء نماذجها الخاصة عبر مختبر بحثي يستكشف واجهات مختلفة بين الإنسان والحاسوب. ويذكر المقال أن شركات صوتية ناشئة أخرى مثل Fireflies وSpeechify وMonologue أصبحت تطبيقات متعددة الميزات تجمع بين تدوين الاجتماعات والإملاء، وأن هذه الشركات تبحث الآن عن فائدة أكبر من التقاط كلام المستخدمين.",
+   "excerpt": "Uno reverse! After Wispr added meeting notes to its dictation app, Granola is adding dictation to its meeting notetaker. The voice AI wars are getting interesting."
+  },
+  {
    "id": "bcae5e5bffd4",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -141,6 +379,20 @@
    "summary_en": "French AI company Mistral has released the weights of Mistral Large 4 (ML4), a trillion-parameter open-source model nicknamed \"Le Chonk,\" which was first introduced earlier this month. Businesses and governments can now download and deploy it themselves, and it is available on Hugging Face and through Mistral's API. The company says the model performs comparably to China's open-weight GLM-5.3 on cyber work while using 47 percent fewer tokens per task, and that it outranks other open models on Artificial Analysis' Coding Agent Index for agentic coding. Mistral's Pierre Stock said open weights give organizations access to frontier AI for cyber defence that cannot be cut off, and allow on-premises deployment.",
    "summary_ar": "أعلنت شركة الذكاء الاصطناعي الفرنسية Mistral إتاحة أوزان نموذجها المفتوح المصدر Mistral Large 4 (ML4) الذي يضم تريليون معامل، ويُلقَّب بـ«Le Chonk» وكان قد عُرض للمرة الأولى مطلع هذا الشهر. وبذلك يمكن للشركات والحكومات تنزيل النموذج وتشغيله بنفسها، وهو متاح عبر Hugging Face وواجهة Mistral البرمجية. وتقول الشركة إن أداءه قريب من أداء النموذج الصيني المفتوح الأوزان GLM-5.3 في المهام السيبرانية، مع استهلاك أقل بنسبة 47 في المئة من «الوحدات اللغوية» لكل مهمة، وإنه يتفوق على النماذج المفتوحة الأخرى في مؤشر Coding Agent Index الخاص بمهام البرمجة الوكيلية. وقال بيير ستوك من Mistral إن الأوزان المفتوحة تمنح المؤسسات وصولاً إلى ذكاء اصطناعي متقدم للدفاع السيبراني لا يمكن قطعه، وتتيح تشغيله داخل منشآتها.",
    "excerpt": "Mistral says its new model can afford organizations a kind of control over its cyber defenses that closed models can't."
+  },
+  {
+   "id": "74f9a405d7dc",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-10-29T16:36:52+00:00",
+   "title": "6 مشاريع مدعومة بالذكاء الاصطناعي لتعزيز خدمات \"كهرباء الشارقة\"",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3ctvdzkh-مشاريع-مدعومة-بالذكاء-الاصطناعي-لتعزيز-خدمات",
+   "summary_en": "The Sharjah Electricity, Water and Gas Authority discussed six AI-supported projects aimed at improving services and operational efficiency, as part of its drive to speed up digital transformation. The projects were proposed at an interactive workshop the authority organised, according to WAM on 29 October. They cover institutional knowledge management, water connection services, proactive services that check application requirements before submission, cybersecurity response and alerts, smart consumption and sustainability through analysis of electricity, water and gas use, and automated review of no-objection certificate requests. The text describes the projects as a step toward turning innovative ideas into practical initiatives that can be studied and developed, supporting the authority's vision of smarter, more efficient and sustainable services.",
+   "summary_ar": "ناقشت هيئة كهرباء ومياه وغاز الشارقة ستة مشاريع مدعومة بالذكاء الاصطناعي لتطوير الخدمات ورفع الكفاءة التشغيلية، وذلك ضمن جهودها لتسريع التحول الرقمي وتبني الحلول الذكية، بحسب وكالة أنباء الإمارات (وام) في 29 أكتوبر. وقد طُرحت المشاريع خلال ورشة عمل تفاعلية نظمتها الهيئة. وتشمل إدارة المعرفة المؤسسية، وخدمات توصيل المياه، والخدمات الاستباقية التي تتحقق من متطلبات الطلبات قبل تقديمها، والأمن السيبراني لتعزيز سرعة الاستجابة للحوادث الأمنية، والاستهلاك الذكي والاستدامة عبر تحليل استهلاك الكهرباء والمياه والغاز، وأتمتة مراجعة طلبات شهادات عدم الممانعة. ويصف النص هذه المشاريع بأنها خطوة نحو تحويل الأفكار المبتكرة إلى مبادرات عملية قابلة للدراسة والتطوير، بما يدعم رؤية الهيئة نحو خدمات أكثر ذكاءً وكفاءة واستدامة.",
+   "excerpt": "الشارقة في 29 أكتوبر/وام/ ناقشت هيئة كهرباء ومياه وغاز الشارقة في إطار جهودها لتسريع التحول الرقمي وتبني الحلول الذكية،"
   },
   {
    "id": "0334b943369e",
@@ -407,6 +659,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "7ebd7a7628ea",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-10-29T14:17:00+00:00",
+   "title": "من فنزويلا إلى العالم... هل تدير \"الروبوتات\" قرارات ترمب؟",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661588/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9/%D9%85%D8%AA%D8%A7%D8%A8%D8%B9%D8%A7%D8%AA/%D9%85%D9%86-%D9%81%D9%86%D8%B2%D9%88%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%87%D9%84-%D8%AA%D8%AF%D9%8A%D8%B1-%D8%A7%D9%84%D8%B1%D9%88%D8%A8%D9%88%D8%AA%D8%A7%D8%AA-%D9%82%D8%B1%D8%A7%D8%B1%D8%A7%D8%AA-%D8%AA%D8%B1%D9%85%D8%A8%D8%9F",
+   "summary_en": "Citing a Time report, Independent Arabia says Donald Trump met Elon Musk in December 2025 and spent hours talking with Musk's Grok chatbot, including asking how Venezuelans would react to the arrest of Nicolás Maduro. Grok reportedly called Maduro an unpopular dictator, and Trump, after seeing celebrations following the US operation on 3 January, concluded the chatbot was superintelligent. The article adds that a Pentagon AI official said in June the military used Grok Gov to identify targets during the war with Iran. It also notes Trump's AI-generated posts and a September executive order replacing the term for artificial intelligence with \"superintelligence\" in the executive branch. The author questions whether language models can truly grasp the politics of other societies.",
+   "summary_ar": "نقلاً عن تقرير لمجلة «تايم»، يذكر موقع «اندبندنت عربية» أن «دونالد ترمب» التقى «إيلون ماسك» في ديسمبر 2025 وأمضى ساعات في الحديث مع روبوت الدردشة Grok التابع لماسك، وسأله عن رد فعل الفنزويليين على اعتقال «نيكولاس مادورو». ويُقال إن Grok وصف مادورو بأنه ديكتاتور يفتقر إلى الشعبية، وخرج ترمب بعد رؤية الاحتفالات عقب العملية الأميركية في 3 يناير بقناعة أن الروبوت يتمتع بذكاء خارق. ويضيف المقال أن مسؤول الذكاء الاصطناعي في «البنتاغون» ذكر في يونيو أن الجيش استخدم Grok Gov لتحديد الأهداف خلال الحرب مع إيران، كما يشير إلى منشورات ترمب المولدة بالذكاء الاصطناعي وإلى أمر تنفيذي في سبتمبر استبدل مصطلح «الذكاء الفائق» بمصطلح «الذكاء الاصطناعي» في السلطة التنفيذية. ويتساءل الكاتب عن قدرة النماذج اللغوية على فهم سياسة المجتمعات الأخرى.",
+   "excerpt": "ربما تغير هذه المقالة طريقتك في التعامل مع نماذج الذكاء الاصطناعي، إذا ما علمت أن رئيس أقوى دولة في العالم يستشيرها في أخطر القضايا المعاصرة، حتى يصل الأمر إلى استشارات تتعلق بتقرير مصير دول."
   },
   {
    "id": "a5980a6c5a8c",
@@ -1611,6 +1877,20 @@
    "summary_en": "Felix Rieseberg, an engineering manager at Anthropic who has led development of Claude.ai and Claude Code Desktop, has dropped the classic coding interview, saying Claude now handles small programming tasks better than candidates do. He argues that newcomers without status or an internal network can overtake veterans because they notice problems long-time staff accept, and that AI makes execution cheap enough to build a weekend prototype of an ambitious idea tied to company goals. He cites Anthony Morris and Alice Zhao, who built the graphical interface for Claude Code over a weekend, with a public version about eight days later. The article notes this moves entry-level expectations toward entrepreneurial thinking, product sense and taste, skills most universities barely teach.",
    "summary_ar": "ألغى فيليكس ريزيبرغ، مدير الهندسة في Anthropic الذي قاد تطوير Claude.ai وClaude Code Desktop، مقابلات البرمجة التقليدية، قائلاً إن Claude بات ينجز المهام البرمجية الصغيرة أفضل من المرشحين. ويرى أن الوافدين الجدد الذين لا يملكون مكانة أو شبكة علاقات داخل الشركة يمكنهم تجاوز أصحاب الخبرة لأنهم يلاحظون مشكلات اعتاد عليها القدامى، وأن الذكاء الاصطناعي جعل التنفيذ منخفض الكلفة، ما يتيح بناء نموذج أولي لفكرة طموحة خلال عطلة نهاية أسبوع بما يخدم أهداف الشركة. ويستشهد بأنتوني موريس وأليس تشاو اللذين بنيا الواجهة الرسومية لـClaude Code في عطلة أسبوع، وصدرت نسخة عامة بعد نحو ثمانية أيام. وتشير المقالة إلى أن ذلك ينقل معيار الوظائف المبتدئة نحو التفكير الريادي والحس المنتجي والذوق، وهي مهارات لا تدرّسها معظم الجامعات إلا قليلاً.",
    "excerpt": "Anthropic manager Felix Rieseberg says the classic coding interview is dead because Claude now solves small programming tasks better than job candidates do. He'd rather see prototypes that show taste, empathy, and principled thinking, since in his words, \"hunger beats tenure.\""
+  },
+  {
+   "id": "30cf3e52d118",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-28T11:05:37+00:00",
+   "title": "ماذا يحدث عندما يتداخل الدين مع الذكاء الاصطناعي؟",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661465/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D9%88%D9%85%D8%B7%D9%88%D9%84%D8%A7%D8%AA/%D9%85%D8%A7%D8%B0%D8%A7-%D9%8A%D8%AD%D8%AF%D8%AB-%D8%B9%D9%86%D8%AF%D9%85%D8%A7-%D9%8A%D8%AA%D8%AF%D8%A7%D8%AE%D9%84-%D8%A7%D9%84%D8%AF%D9%8A%D9%86-%D9%85%D8%B9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D8%9F",
+   "summary_en": "An Independent Arabia article looks at how religion and artificial intelligence are increasingly overlapping. It says a growing number of people are turning to AI tools for answers on religious questions, and some are searching for a new faith. It cites a New York Times report that Anthropic, founded in 2021, held confidential meetings over several months with religious scholars from different faiths, reportedly to help give its models ethical values. The talks also touched on whether Claude might have some degree of consciousness. The piece recalls Anthony Levandowski's 2015 founding of a religion called Way of the Future, centred on an AI-based deity. It concludes that the real fear is of new followers obeying such gods without realising it.",
+   "summary_ar": "تتناول مقالة في «اندبندنت عربية» التداخل المتزايد بين الدين والذكاء الاصطناعي، وتذكر أن عدداً متنامياً من الناس يلجأون إلى أدوات الذكاء الاصطناعي بحثاً عن إجابات في المسائل الدينية، وأن بعضهم يبحث عن دين جديد. وتشير إلى تقرير لصحيفة «نيويورك تايمز» عن لقاءات سرية عقدتها شركة Anthropic، التي تأسست عام 2021، مع علماء دين من أديان مختلفة على مدى أشهر، وذلك بحسب ما ورد لمساعدتها في تزويد نماذجها بقيم أخلاقية. وتطرقت النقاشات أيضاً إلى احتمال أن يتمتع Claude بدرجة من الوعي. كما تستعيد المقالة تأسيس أنتوني ليفاندوفسكي عام 2015 ديناً باسم «نهج المستقبل» (Way of the Future) يقوم على إله مبني على الذكاء الاصطناعي. وتخلص إلى أن الخوف الحقيقي هو من مستخدمين جدد يطيعون آلهة كهذه من دون أن يدركوا ذلك.",
+   "excerpt": "غيّرت أدوات الذكاء الاصطناعي وقواعد العصر الرقمي كثيراً من سُبل الحصول على المشورة الطبية، وأحياناً الوصول إلى العلاجات والأدوية، وألغت الخرائط الورقية والأدلة السياحية التي كان ملايين السياح يعتمدون عليها للتنقل أثناء رحلاتهم، وكذلك معرفة الطرق للوجهات المراد الوصول إليها…"
   },
   {
    "id": "37f5357ffc7a",
@@ -3458,7 +3738,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/26/Ma14",
    "summary_en": "Meta plans to raise $35 billion by offering shares, with the money meant to fund the development of AI technologies. The plan appears in documents the company submitted to the US Securities and Exchange Commission. The available text is cut off after mentioning that the filings also include further plans.",
    "summary_ar": "تعتزم Meta جمع 35 مليار دولار عبر طرح أسهم، على أن يُخصص المبلغ لتمويل تطوير تقنيات الذكاء الاصطناعي. وترد الخطة في وثائق قدمتها الشركة إلى هيئة الأوراق المالية والبورصات الأميركية. ويتوقف النص المتاح بعد الإشارة إلى أن الوثائق تتضمن خططاً أخرى.",
-   "excerpt": "تعتزم مجموعة ميتا جمع 35 مليار دولار عبر طرح أسهم لتمويل تطوير تقنيات الذكاء الاصطناعي، وفق وثائق قدمتها إلى هيئة الأوراق المالية والبورصات الأميركية، مع خطط…"
+   "excerpt": null
   },
   {
    "id": "f2e696280f6d",
@@ -3710,7 +3990,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/26/UAE-librarians-build-skills-in-artificial-intelligence",
    "summary_en": "A programme in the UAE is designed to build the specialist skills of library staff and help them apply up-to-date knowledge and technologies in library and cultural workplaces. It includes a workshop called Artificial Intelligence in Leading Cultural Institutions, held in Umm Al Quwain, Dubai, Fujairah and Abu Dhabi. The workshop covers AI applications in managing cultural institutions and how technology can improve performance, support decision-making and raise daily efficiency. A second workshop, the Library Collection Development Series, runs at the Sharjah Book Authority and the Mohamed bin Zayed Nabdh Centre in Abu Dhabi. Fahad Ali Al Maamari of the Emirates Library and Information Association said it helps the sector keep pace with digital transformation.",
    "summary_ar": "يهدف برنامج في الإمارات إلى بناء المهارات المتخصصة للعاملين في المكتبات ومساعدتهم على توظيف أحدث المعارف والتقنيات في المكتبات ومواقع العمل الثقافية. ويتضمن ورشة بعنوان «الذكاء الاصطناعي في قيادة المؤسسات الثقافية»، تُعقد في أم القيوين ودبي والفجيرة وأبوظبي. وتعرّف الورشة المشاركين بتطبيقات الذكاء الاصطناعي في إدارة المؤسسات الثقافية، وبكيفية استخدام التقنيات الحديثة لتحسين الأداء ودعم اتخاذ القرار ورفع كفاءة العمل اليومي. وتُقام ورشة ثانية بعنوان «سلسلة تنمية المقتنيات المكتبية» في هيئة الشارقة للكتاب ومركز محمد بن زايد «نبض» في أبوظبي. وقال فهد علي المعمري، رئيس مجلس إدارة جمعية الإمارات للمكتبات والمعلومات، إن البرنامج يساعد القطاع على مواكبة التحول الرقمي والتقنيات الحديثة.",
-   "excerpt": "The Emirates Library and Information Association runs a training programme to 2 November 2026, with workshops on AI and collection development."
+   "excerpt": null
   },
   {
    "id": "4a24365e960e",
@@ -3808,7 +4088,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/26/Ma2",
    "summary_en": "The UAE took part in the Global AI and Digital Summit in Seoul, organised by the World Bank with South Korea's Ministry of Economy and Finance and Ministry of Science and ICT. Mohamed Bin Taliah, Assistant Minister of Cabinet Affairs for Government Knowledge Exchange Affairs, represented the country, presenting its use of AI and agentic AI to improve government services and efficiency. He joined the AI and Digital Ministerial Meeting, a roundtable on Zero Bureaucracy and a session on AI for development. He said the value of AI lies in redesigning government operations and simplifying procedures. On the sidelines he met ministers and Korean officials, including Ha Jung-woo of the Presidential Council of National AI Strategy Committee, to discuss cooperation on AI.",
    "summary_ar": "شاركت الإمارات في «القمة العالمية للذكاء الاصطناعي والتحول الرقمي» (Global AI and Digital Summit) في سيول، التي نظمها البنك الدولي بالتعاون مع وزارة الاقتصاد والمالية ووزارة العلوم وتكنولوجيا المعلومات والاتصالات في كوريا الجنوبية. ومثّل الدولة محمد بن طليعة، مساعد وزير شؤون مجلس الوزراء لشؤون تبادل المعرفة الحكومية، الذي عرض تجربة الإمارات في توظيف الذكاء الاصطناعي والذكاء الاصطناعي الوكيل لتحسين الخدمات الحكومية ورفع الكفاءة. وشارك في الاجتماع الوزاري للذكاء الاصطناعي والتحول الرقمي، وفي طاولة مستديرة حول «صفر بيروقراطية»، وفي جلسة عن توظيف الذكاء الاصطناعي لأغراض التنمية. وقال إن قيمة الذكاء الاصطناعي تكمن في إعادة تصميم العمل الحكومي وتبسيط الإجراءات. وعلى هامش القمة التقى وزراء ومسؤولين كوريين، بينهم ها جونغ وو من المجلس الرئاسي للجنة الاستراتيجية الوطنية للذكاء الاصطناعي، لبحث التعاون في هذا المجال.",
-   "excerpt": "The UAE Government participated in the Global AI and Digital Summit, held in Seoul from 19 to 22 October, and organised by the World Bank in collaboration with…"
+   "excerpt": null
   },
   {
    "id": "5ecfeeaf9cec",
@@ -3850,7 +4130,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/26/Ma2",
    "summary_en": "The UAE government presented its experience of using artificial intelligence to develop government services and raise institutional performance. It did so at a global summit on AI and transformation held in Korea. The available text is only a short excerpt, so it gives no further detail on the summit or on the projects presented.",
    "summary_ar": "عرضت حكومة دولة الإمارات تجربتها في توظيف الذكاء الاصطناعي لتطوير الخدمات الحكومية ورفع كفاءة الأداء المؤسسي، وذلك خلال قمة عالمية للذكاء الاصطناعي والتحول عُقدت في كوريا. والنص المتاح مقتطف قصير فقط، ولذلك لا يتضمن تفاصيل إضافية عن القمة أو عن المشاريع المعروضة.",
-   "excerpt": "استعرضت حكومة دولة الإمارات تجربتها في توظيف الذكاء الاصطناعي لتطوير الخدمات الحكومية ورفع كفاءة الأداء المؤسسي، خلال القمة العالمية للذكاء الاصطناعي والتحول…"
+   "excerpt": null
   },
   {
    "id": "8223c5d311b2",
@@ -4438,7 +4718,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/26/mm07",
    "summary_en": "Andrew Gordon, an animation expert and former director at Pixar studios, spoke at a workshop during the Sharjah Animation and Comics Conference 2026. According to the headline, he said AI supports creativity and does not replace the role of the artist. The available text is only a short excerpt, so it does not give further detail on what he presented.",
    "summary_ar": "تحدث أندرو غوردون، خبير الرسوم المتحركة والمخرج السابق في استوديوهات Pixar، خلال ورشة ضمن مؤتمر الشارقة للرسوم المتحركة والقصص المصورة 2026. وبحسب العنوان، قال إن الذكاء الاصطناعي يدعم الإبداع ولا يغني عن دور الفنان. والنص المتاح مقتطف قصير فقط، ولذلك لا يتضمن تفاصيل إضافية عمّا عرضه.",
-   "excerpt": "استعرض أندرو غوردون، خبير الرسوم المتحركة والمخرج السابق في استوديوهات بيكسار، خلال ورشة ضمن مؤتمر الشارقة للرسوم المتحركة والقصص المصورة 2026، دور الذكاء…"
+   "excerpt": null
   },
   {
    "id": "50742549bb2a",
@@ -4830,7 +5110,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/25/SACC-draws-line-between-AI-assistance-and-human-creativity",
    "summary_en": "At a session titled AI Workflows That Don't Harm Your Art, held on Sunday, speaker Boksmati said AI can help with animation production but that human experience and creative judgement remain central to storytelling. He warned that heavy reliance on AI could weaken artists' core skills, and said many studios are wary of using it commercially because of copyright, provenance and documentation questions. Akil Wade, founder of AfricAI and mAIstro, described using AI to make educational animation for his two-year-old son without any animation background. Aisha Binghalib of HP Inc. said teaching younger generations about AI's benefits and risks is key to responsible use.",
    "summary_ar": "خلال جلسة بعنوان «سير عمل الذكاء الاصطناعي الذي لا يضر بفنك» (AI Workflows That Don't Harm Your Art) عُقدت يوم الأحد، قال بوكسماتي إن الذكاء الاصطناعي قادر على دعم إنتاج الرسوم المتحركة، لكن الخبرة البشرية والحكم الإبداعي يظلان أساس رواية القصص. وحذر من أن الاعتماد المفرط عليه قد يُضعف المهارات الإبداعية الأساسية للفنانين، مشيراً إلى أن استوديوهات كثيرة تتحفظ على استخدامه تجارياً بسبب أسئلة حقوق النشر والمصدر والتوثيق. وروى أكيل وايد، مؤسس AfricAI وmAIstro، كيف استخدم الذكاء الاصطناعي لإنتاج رسوم متحركة تعليمية لابنه البالغ عامين رغم أنه لا يملك خلفية في هذا المجال. وقالت عائشة بنغالب من HP Inc. إن تثقيف الأجيال الأصغر بفوائد الذكاء الاصطناعي ومخاطره أمر أساسي لتشجيع استخدامه المسؤول.",
-   "excerpt": "“Human beings are storytellers. People want to hear stories about human experiences, not stories created by AI,” said Saud Boksmati, Chief Creative Officer at…"
+   "excerpt": null
   },
   {
    "id": "ded150483482",
@@ -12657,6 +12937,20 @@
    "summary_en": "A lawsuit against OpenAI, the developer of ChatGPT, has raised questions about using AI for medical advice, CBS News reported. David Rosenthal, a 39-year-old man from Washington state, accuses the platform of helping worsen his mental state until he was hospitalised. The suit, filed in a civil court in San Francisco, California, alleges ChatGPT practised medicine without a licence, helping him choose medications and doses and reassuring him when he decided not to follow his doctor's instructions. It says he was hospitalised for several weeks in 2025, and argues the chatbot should have declined to advise on medication and psychiatric conditions and referred him to a doctor.",
    "summary_ar": "أثارت دعوى قضائية ضد شركة OpenAI، المطوّرة لروبوت المحادثة ChatGPT، تساؤلات بشأن استخدام الذكاء الاصطناعي في تقديم المشورة الطبية، بحسب شبكة «سي بي إس نيوز». ويتهم «ديفيد روزنتال»، وهو رجل في التاسعة والثلاثين من ولاية واشنطن، المنصة بالمساهمة في تدهور حالته النفسية حتى دخل المستشفى. وتقول الدعوى، المرفوعة أمام محكمة مدنية في «سان فرانسيسكو» بولاية «كاليفورنيا»، إن ChatGPT مارس الطب دون ترخيص، إذ ساعده على اختيار الأدوية وتحديد جرعاتها وطمأنه حين قرر عدم اتباع تعليمات طبيبه. وتشير إلى أنه أُدخل المستشفى لعدة أسابيع في عام 2025، وترى أن الروبوت كان ينبغي أن يمتنع عن تقديم المشورة بشأن الأدوية والحالات النفسية وأن يوجّه المستخدم إلى طبيب أو اختصاصي مؤهل.",
    "excerpt": "أثارت دعوى قضائية ضد شركة «أوبن إيه آي»، المطوّرة لروبوت المحادثة «تشات جي بي تي»، تساؤلات بشأن استخدام الذكاء الاصطناعي"
+  },
+  {
+   "id": "d348cf945379",
+   "source": "alkhaleej-scitech",
+   "lang": "ar",
+   "uae": false,
+   "topic": "education",
+   "published": "2026-10-17T16:34:00+00:00",
+   "title": "ذكاء اصطناعي يحوّل الخردة إلى سبائك أقوى وأرخص",
+   "title_ar": null,
+   "url": "https://www.alkhaleej.ae/2026-10-17/%D9%85%D9%86%D9%88%D8%B9%D8%A7%D8%AA/%D8%B9%D9%84%D9%88%D9%85-%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%8A%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D8%AE%D8%B1%D8%AF%D8%A9-%D8%A5%D9%84%D9%89-%D8%B3%D8%A8%D8%A7%D8%A6%D9%83-%D8%A3%D9%82%D9%88%D9%89-%D9%88%D8%A3%D8%B1%D8%AE%D8%B5",
+   "summary_en": "A team of researchers led by East China University of Science and Technology has developed an AI-based technique for turning scrap metal into new iron alloys. Compared with traditional methods, the alloys have 15.2% higher tensile resistance and can stretch 73.2% more before failing. Production costs are also reduced by 8.1%.",
+   "summary_ar": "طوّر فريق من الباحثين بقيادة جامعة شرق الصين للعلوم والتكنولوجيا تقنية تعتمد على الذكاء الاصطناعي لتحويل الخردة المعدنية إلى سبائك حديد جديدة. وبالمقارنة مع الطرق التقليدية، تتميز هذه السبائك بمقاومة للشد أعلى بنسبة 15.2%، وبقابلية للتمدد قبل الانهيار أكبر بنسبة 73.2%. كما تنخفض تكاليف الإنتاج بنسبة 8.1%.",
+   "excerpt": "طور فريق من الباحثين بقيادة جامعة شرق الصين للعلوم والتكنولوجيا، تقنية تعتمد على الذكاء الاصطناعي لتحويل الخردة المعدنية إلى سبائك حديد جديدة، مقاومة للشد بنسبة 15.2%، وأكثر قابلية للتمدد قبل الانهيار بنسبة 73.2%، مع خفض تكاليف الإنتاج بنسبة 8.1%، مقارنة بالطرق التقليدية."
   },
   {
    "id": "6629cf3c0c80",
