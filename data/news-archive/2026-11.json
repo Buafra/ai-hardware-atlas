@@ -3,6 +3,20 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "ca7b85581f45",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-11-01T20:18:16+00:00",
+   "title": "الذكاء الاصطناعي يتنبأ بالصداع والإرهاق بعد ارتجاج دماغي",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الذكاء-الاصطناعي/4702867/الذكاء-الاصطناعي-يتنبأ-بالصداع-والإرهاق-بعد-ارتجاج-دماغي",
+   "summary_en": "A new study found that AI can predict moderate-to-severe headache and fatigue in some people with concussion, with moderate to good accuracy, 24 hours before symptoms appear. Researchers at the Norwegian University of Science and Technology (NTNU) and the Norwegian Centre for Headache Research (NorHead) worked with 20 people who had persistent post-concussion symptoms, at the rehabilitation department of St. Olav's Hospital. Participants logged symptoms daily for 28 days, while heart rate, skin temperature and trapezius muscle tension were also measured. A foundation model outperformed a traditional machine-learning model. Researcher Antonios Danilakis described the work as an early proof of concept needing more study. A follow-up study with at least 200 patients is planned for spring 2027.",
+   "summary_ar": "أظهرت دراسة جديدة أن الذكاء الاصطناعي قادر على التنبؤ بالصداع المتوسط إلى الشديد والإرهاق لدى بعض المصابين بارتجاج دماغي، بدقة تتراوح بين المتوسطة والجيدة، وذلك قبل 24 ساعة من ظهور الأعراض. أجرى الدراسة باحثون في الجامعة النرويجية للعلوم والتكنولوجيا (NTNU) والمركز النرويجي لأبحاث الصداع (NorHead)، وشارك فيها 20 شخصاً يعانون من أعراض مستمرة بعد الارتجاج، وأُجريت في قسم إعادة التأهيل بمستشفى سانت أولاف. سجّل المشاركون أعراضهم يومياً لمدة 28 يوماً، كما قيس معدل ضربات القلب ودرجة حرارة الجلد وتوتر العضلة شبه المنحرفة. وحقق نموذج أساسي نتائج أفضل من نموذج تقليدي للتعلم الآلي. ووصف الباحث أنطونيوس دانيلاكس العمل بأنه إثبات مبدئي للمفهوم يحتاج إلى مزيد من البحث. ويخطط الفريق لدراسة جديدة في ربيع عام 2027 تشمل 200 مريض على الأقل.",
+   "excerpt": "أظهرت دراسة حديثة أن الذكاء الاصطناعي قادر على التنبؤ بدقة بالصداع والإرهاق المتوسط إلى الشديد الذي يعاني منه بعض المصابين بارتجاج دماغي، وذلك بدقة تتراوح بين المتوسطة والجيدة قبل 24 ساعة من ظهور الأعراض."
+  },
+  {
    "id": "c61666e702df",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -29,6 +43,34 @@
    "summary_en": "Meta Platforms has quietly released an AI-powered fashion app called Style Sketch, which helps users put together outfits from clothes they already own. The app links to Instagram to build a virtual wardrobe from photos the user has posted, and items can also be added by photo, short video or gallery upload. Users can try suggested outfits on a realistic model matching body shape and skin tone. TechCrunch, citing social media expert Matt Navarra, reported it is available in Indonesia, Singapore and Thailand on Android and iOS. Meta has not commented, and it is unclear whether a wider launch is planned. Similar tools already exist, including the startup Alta and Google Photos, and the article says Meta will lean on Instagram integration.",
    "summary_ar": "أطلقت شركة «ميتا بلاتفورمس» من دون إعلان تطبيقاً جديداً للموضة مدعوماً بالذكاء الاصطناعي باسم Style Sketch، يساعد المستخدمين على تنسيق إطلالاتهم من الملابس التي يمتلكونها أصلاً. ويرتبط التطبيق بمنصة إنستجرام لإنشاء خزانة ملابس افتراضية من الصور التي نشرها المستخدم سابقاً، كما يمكن إضافة القطع يدوياً بالتصوير أو بمقطع فيديو قصير أو برفع صور من المعرض. ويمكن تجربة التنسيقات المقترحة على نموذج واقعي يطابق شكل الجسم ولون البشرة. وذكر موقع TechCrunch، استناداً إلى خبير وسائل التواصل مات نافارا، أن التطبيق متاح في إندونيسيا وسنغافورة وتايلاند على نظامي أندرويد وآي أو إس. ولم تعلّق «ميتا»، ولا يُعرف إن كانت ستطرحه على نطاق أوسع. وتوجد تطبيقات مشابهة مثل Alta وأدوات Google Photos، ويشير المقال إلى أن «ميتا» ستعتمد على تكامل التطبيق مع إنستجرام.",
    "excerpt": "أطلقت شركة التكنولوجيا العملاقة ميتا بلاتفورمس من دون إعلان، تطبيقاً جديداً للموضة مدعوماً بالذكاء الاصطناعي باسم ستايل سكيتش، والذي يساعد المستخدمين، على تنسيق إطلالاتهم باستخدام الملابس التي يمتلكونها بالفعل."
+  },
+  {
+   "id": "6ee2cd6707e3",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-01T13:28:33+00:00",
+   "title": "روبوتات الدردشة تثير شكوكا بمعلومات \"مضللة\" عن الانتخابات الأميركية",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661792/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B1%D9%88%D8%A8%D9%88%D8%AA%D8%A7%D8%AA-%D8%A7%D9%84%D8%AF%D8%B1%D8%AF%D8%B4%D8%A9-%D8%AA%D8%AB%D9%8A%D8%B1-%D8%B4%D9%83%D9%88%D9%83%D8%A7-%D8%A8%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-%D9%85%D8%B6%D9%84%D9%84%D8%A9-%D8%B9%D9%86-%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D9%8A%D8%A9",
+   "summary_en": "With the US midterm elections set for November 3, millions of voters are turning to AI chatbots for election information, and studies warn the tools may worsen election misinformation. A study by the startup Forum AI found that about 40 percent of chatbot answers to election questions contained at least one error. Gemini gave a wrong mail-ballot deadline for Pennsylvania, and Claude confused a North Carolina candidate with someone else. NewsGuard reported that tools repeated a baseless claim about Texas Senate candidate James Talarico that bore the marks of a Russian campaign. A National Conference on Citizenship poll found two in five Americans used AI for election information. Brennan Center research found leading chatbots also pushed back on common conspiracy theories.",
+   "summary_ar": "مع اقتراب انتخابات التجديد النصفي الأميركية في الثالث من نوفمبر، يلجأ ملايين الناخبين إلى روبوتات الدردشة بحثاً عن معلومات انتخابية، وتحذّر دراسات من أن هذه الأدوات قد تفاقم التضليل الانتخابي. ووجدت دراسة لشركة Forum AI الناشئة أن نحو 40 في المئة من إجابات الروبوتات عن أسئلة الانتخابات تضمنت خطأً واحداً على الأقل. فقد أعطى Gemini موعداً خاطئاً لطلب بطاقة الاقتراع عبر البريد في ولاية بنسلفانيا، وخلط Claude بين مرشح عن ولاية كارولاينا الشمالية وشخص آخر. وأفادت NewsGuard بأن أدواتٍ كررت اتهاماً لا أساس له بحق المرشح لمجلس الشيوخ عن تكساس جيمس تالاريكو، يحمل سمات حملة تضليل روسية. وأظهر استطلاع «المؤتمر الوطني للمواطنة» أن اثنين من كل خمسة أميركيين استخدموا الذكاء الاصطناعي لمعلومات انتخابية. كما وجد «مركز برينان للعدالة» أن الروبوتات الرائدة تصدّت لنظريات مؤامرة شائعة.",
+   "excerpt": "مع اقتراب انتخابات التجديد النصفي داخل الولايات المتحدة في الثالث من نوفمبر (تشرين الثاني) الجاري، يتزايد اعتماد ملايين الناخبين على روبوتات الدردشة القائمة على الذكاء الاصطناعي للحصول على معلومات انتخابية، لكن دراسات تحذر من أن هذه الأدوات قد تفاقم التضليل الانتخابي بنشر…"
+  },
+  {
+   "id": "7f4129f06e18",
+   "source": "kt-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-01T07:28:14+00:00",
+   "title": "Dubai to cut traffic congestion by 5%, accidents among new drivers by 20% using AI",
+   "title_ar": "دبي تعتزم خفض الازدحام المروري بنسبة 5% والحوادث بين السائقين الجدد بنسبة 20% باستخدام الذكاء الاصطناعي",
+   "url": "https://www.khaleejtimes.com/uae/dubai-rta-targets-traffic-congestion-cut-ai-strategy",
+   "summary_en": "Dubai's Roads and Transport Authority (RTA) has set targets under an updated AI strategy launched by its Director General, Mattar Al Tayer. They include cutting traffic congestion by 3 to 5 per cent and reducing accidents involving newly licensed drivers by 10 to 20 per cent. The strategy spans 41 areas, and RTA plans to develop 40 AI products over two-and-a-half years, 11 of which are complete. It expects more than Dh300 million in annual added value and aims to move 50 per cent of its operations and services to an Agentic AI ecosystem. Projects include an upgraded Mahboub chatbot that can complete transactions, an AI system for eNOCs, a document auditor and a bus network planner.",
+   "summary_ar": "حددت هيئة الطرق والمواصلات في دبي أهدافاً ضمن استراتيجية محدّثة للذكاء الاصطناعي أطلقها مدير عام الهيئة «مطر الطاير». وتشمل الأهداف خفض الازدحام المروري بنسبة 3 إلى 5 في المئة، وتقليص الحوادث التي يتورط فيها السائقون الجدد بنسبة 10 إلى 20 في المئة. وتغطي الاستراتيجية 41 مجالاً، وتخطط الهيئة لتطوير 40 منتجاً قائماً على الذكاء الاصطناعي خلال عامين ونصف العام، أُنجز 11 منها. وتتوقع الهيئة قيمة مضافة سنوية تتجاوز 300 مليون درهم، وتسعى إلى نقل 50 في المئة من عملياتها وخدماتها إلى منظومة للذكاء الاصطناعي الوكيلي (Agentic AI). ومن المبادرات تطوير «محبوب» ليتمكن من إتمام المعاملات، ونظام لشهادات عدم الممانعة الإلكترونية، ومدقق للمستندات، ومخطط لشبكة الحافلات.",
+   "excerpt": "The authority also aims to shorten service delivery times at these centres by 15% to 20%, reduce accidents involving newly licensed drivers by 10% to 20%, and cut procurement cycles by 10% to 15%."
   },
   {
    "id": "a11faefdc843",
