@@ -73,6 +73,20 @@
    "excerpt": "تلقت \"وول ستريت\" صدمة أعادت المستثمرين إلى أرض الواقع، مع موجة بيع حادة ضربت أسهم شركات التكنولوجيا، وأثارت مخاوف من أن الحماس المفرط المحيط بالذكاء الاصطناعي، الذي قاد موجة الصعود في أسواق الأسهم، ربما تجاوز الحدود."
   },
   {
+   "id": "9920b237ef0b",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-10-31T01:36:15+00:00",
+   "title": "الصين تكشف عن أول دفعة من نماذج الذكاء الاصطناعي لرصد الطقس المتطرف",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17i2mfw-الصين-تكشف-أول-دفعة-نماذج-الذكاء-الاصطناعي-لرصد",
+   "summary_en": "China has unveiled its first batch of AI models for monitoring extreme weather within the Fengyun satellite system, according to a WAM report from Beijing dated 31 October. Xinhua, citing the China Meteorological Administration, said the models include a smart typhoon cloud analysis model and a nowcasting model for severe convective weather. The typhoon model can automatically analyse a storm's location, structure, intensity and evolution, and generate standard explanatory text and visual outputs. The administration said the models will strengthen the satellites' ability to detect and warn of extreme events. China currently has 10 Fengyun meteorological satellites in orbit, and their data is available to 141 countries and regions.",
+   "summary_ar": "كشفت الصين عن أول دفعة من نماذج الذكاء الاصطناعي لرصد الطقس المتطرف ضمن نظام أقمار «فنغيون» الاصطناعية، وفق خبر لوكالة أنباء الإمارات (وام) من بكين بتاريخ 31 أكتوبر. ونقلت وكالة «شينخوا» عن هيئة الأرصاد الجوية الصينية أن النماذج تشمل نموذجاً ذكياً لتحليل سحب الأعاصير ونموذجاً للإنذار الآني للطقس شديد الحمل الحراري. ويستطيع نموذج تحليل الأعاصير أن يحلل تلقائياً موقع العاصفة وبنيتها وشدتها وتطورها، وأن يولد نصوصاً تفسيرية قياسية ومخرجات مرئية. وقالت الهيئة إن هذه النماذج ستعزز قدرة الأقمار على رصد الظواهر المتطرفة والتحذير منها. وتمتلك الصين حالياً 10 أقمار «فنغيون» للأرصاد الجوية في مدارها، وتتاح بياناتها أمام 141 دولة ومنطقة.",
+   "excerpt": null
+  },
+  {
    "id": "022fb4cf00d3",
    "source": "euronews-ar",
    "lang": "ar",
@@ -99,6 +113,76 @@
    "summary_en": "The Abu Dhabi Department of Government Enablement has released a report introducing the \"leaner workforce paradox\": as AI takes over routine tasks, people make fewer decisions, but each decision carries more weight. The report calls managing this one of the main governance challenges of the next decade. It outlines four scenarios for the future of work up to 2040 and favours one in which AI handles administrative tasks while humans keep judgement, creativity and relationship management. It notes that over 95% of Abu Dhabi government employees have completed AI training, and that more than 100 AI use cases run across over 40 government entities. Among its recommendations are naming a specific person responsible for key public decisions and piloting redesigned roles in vital services.",
    "summary_ar": "أصدرت دائرة التمكين الحكومي في أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، أي أن الأفراد يتخذون قرارات أقل مع تولّي الذكاء الاصطناعي المهام الروتينية، بينما تزداد أهمية كل قرار. ويعدّ التقرير التعامل مع هذه الظاهرة من أبرز تحديات الحوكمة خلال العقد المقبل. ويرسم أربعة سيناريوهات لمستقبل العمل حتى عام 2040، ويفضّل سيناريو يتولى فيه الذكاء الاصطناعي الأعباء الإدارية، فيما يحتفظ الإنسان بالحكم والإبداع وإدارة العلاقات. ويشير إلى أن أكثر من 95% من موظفي حكومة أبوظبي أكملوا تدريباً في الذكاء الاصطناعي، وأن أكثر من 100 حالة استخدام تعمل في أكثر من 40 جهة حكومية. ومن توصياته تحديد شخص بعينه يتحمّل مسؤولية القرارات العامة الأساسية، وإطلاق مشاريع تجريبية لإعادة تصميم الأدوار في الخدمات الحيوية.",
    "excerpt": "أطلقت دائرة التمكين الحكومي- أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، وهي ظاهرة يتخذ فيها الأفراد قرارات أقل مع تولّي الذكاء الاصطناعي مزيداً من المهام الروتينية، بينما تزداد أهمية كل قرار وتبعاته."
+  },
+  {
+   "id": "9e1171f2fe11",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T19:42:59+00:00",
+   "title": "A Claude model autonomously chose a gene therapy and operated on a mouse brain with no human decision-making",
+   "title_ar": "نموذج Claude اختار علاجاً جينياً بشكل مستقل وأجرى عملية على دماغ فأر دون أي قرار بشري",
+   "url": "https://the-decoder.com/a-claude-model-autonomously-chose-a-gene-therapy-and-operated-on-a-mouse-brain-with-no-human-decision-making/",
+   "summary_en": "An AI agent running on Claude Sonnet 5 chose a gene therapy, a brain region and surgical coordinates for a mouse epilepsy model, then carried out the procedure with a custom motorized device fitted with cameras. Gabriel Ocana-Santero, cofounder and CEO of Exin Therapeutics and an Oxford PhD student, said the agent had 19 candidate therapies and one instruction: reduce the seizures. A licensed veterinarian approved every irreversible step and held an emergency stop. After a connection dropped, the agent refused to continue because its target lay outside the device's range. It was right, since manual adjustments had disturbed the control system, and Ocana-Santero had to fix the code by hand. The mouse recovered well; the results are not peer-reviewed.",
+   "summary_ar": "اختار وكيل ذكاء اصطناعي يعمل بنموذج Claude Sonnet 5 علاجاً جينياً ومنطقة في الدماغ وإحداثيات جراحية لنموذج فأر مصاب بالصرع، ثم نفّذ الإجراء بنفسه باستخدام جهاز آلي مخصص مزود بكاميرات. وقال غابرييل أوكانا سانتيرو، المؤسس المشارك والرئيس التنفيذي لشركة Exin Therapeutics وطالب الدكتوراه في جامعة أكسفورد، إن الوكيل حصل على قائمة من 19 علاجاً محتملاً وتعليمات واحدة هي خفض نوبات الفأر. وكان طبيب بيطري مرخّص يوافق على كل خطوة لا رجعة فيها ويمسك بزر إيقاف طارئ. وبعد انقطاع الاتصال رفض الوكيل المتابعة لأن الموضع المحسوب يقع خارج نطاق حركة الجهاز. وتبيّن أنه محق، إذ أخلّت تعديلات يدوية بنظام التحكم، فاضطر أوكانا سانتيرو إلى إصلاح الشيفرة يدوياً. وتعافى الفأر جيداً، لكن النتائج لم تخضع لمراجعة الأقران بعد.",
+   "excerpt": "An AI agent performed brain surgery on an epileptic mouse, picking the drug, the brain target, and the injection coordinates on its own."
+  },
+  {
+   "id": "2cbbfda3d8ac",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-30T19:21:03+00:00",
+   "title": "480 مليار دولار تتبخر.. هل بدأت فقاعة الذكاء الاصطناعي بالانفجار؟",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1561780",
+   "summary_en": "China's STAR 50 index, which groups leading technology firms listed in Shanghai, fell more than 40% in four months to 29 October, wiping out about $480 billion in market value, according to a CNN report. On 26 October it traded at around 100 times trailing 12-month earnings, down from nearly 250 times earlier. Goldman Sachs figures cited in the report put AI-related stocks at about 42% of market value and 57% of trading across mainland and Hong Kong-listed H shares. The article says the drop reflects investors reassessing prices rather than AI failing. Analysts told CNA that state support could sustain ambitions, while smaller, cash-hungry firms face more pressure. Christopher Beddor of Gavekal Dragonomics sees access to advanced chips as the main obstacle.",
+   "summary_ar": "هبط مؤشر «STAR 50» الذي يضم أبرز شركات التكنولوجيا المدرجة في شنغهاي بأكثر من 40% خلال أربعة أشهر حتى 29 أكتوبر، ما محا نحو 480 مليار دولار من القيمة السوقية، وفق تقرير لشبكة CNN. وكان المؤشر يتداول في 26 أكتوبر عند نحو 100 ضعف أرباح الأشهر الاثني عشر الماضية، بعدما اقترب سابقاً من 250 ضعفاً. وبحسب أرقام Goldman Sachs التي أوردها التقرير، شكّلت الأسهم المرتبطة بالذكاء الاصطناعي نحو 42% من القيمة السوقية و57% من التداولات في أسهم البر الرئيسي الصيني وأسهم H المدرجة في هونغ كونغ. ويرى المقال أن التراجع يعكس إعادة تقييم المستثمرين للأسعار وليس فشلاً للذكاء الاصطناعي. وقال محللون لقناة CNA إن الدعم الحكومي قد يساعد الصين على مواصلة طموحاتها، بينما قد تواجه الشركات الأصغر والأكثر استنزافاً للنقد ضغوطاً أكبر. ويعتبر كريستوفر بيدور من Gavekal Dragonomics أن الوصول إلى الرقائق المتقدمة هو العقبة الأكبر.",
+   "excerpt": "قبل سنوات قليلة، كان يكفي تقريباً أن يرتبط اسم شركة بالذكاء الاصطناعي حتى تبدأ التوقعات بالصعود، المستثمرون يندفعون، أسع"
+  },
+  {
+   "id": "1c585585e601",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-30T18:16:10+00:00",
+   "title": "Malicious Claude Code extension in Cursor's marketplace attempted remote access and data theft",
+   "title_ar": "إضافة Claude Code خبيثة في متجر Cursor حاولت الوصول عن بُعد وسرقة البيانات",
+   "url": "https://the-decoder.com/malicious-claude-code-extension-in-cursors-marketplace-attempted-remote-access-and-data-theft/",
+   "summary_en": "A tampered version of the Claude Code extension was available in Cursor's VS Code extension marketplace on Thursday for about eleven hours, and up to 5,000 users may have been affected, according to Cursor. Anthropic had no role in building it. The extension tried to collect data such as hostname, username, operating system and public IP address, and it also tried to set up remote access for the attacker, though Cursor says this likely would not have worked on most machines because it needs admin privileges. After discovering the problem, Cursor removed the extension and took the whole marketplace offline. It was restored after Cursor worked with providers to neutralize the malware and confirmed there was no further risk. Cursor says no other extensions were affected.",
+   "summary_ar": "أعلنت شركة Cursor أن نسخة معدّلة بشكل خبيث من إضافة Claude Code ظلت متاحة يوم الخميس لمدة نحو إحدى عشرة ساعة في سوق إضافات VS Code الخاص بها، وأن عدد المستخدمين المتأثرين قد يصل إلى 5,000. وأكدت أن شركة Anthropic لم يكن لها أي دور في تطويرها. حاولت الإضافة جمع بيانات مثل اسم الجهاز واسم المستخدم ونظام التشغيل وعنوان IP العام، كما سعت إلى إعداد وصول عن بُعد للمهاجم، لكن Cursor ترى أن ذلك غالباً لم يكن ليعمل على معظم الأجهزة لأنه يتطلب صلاحيات المسؤول. وبعد اكتشاف المشكلة سحبت الشركة الإضافة وأوقفت السوق بالكامل. ثم أعادت تشغيله بعد العمل مع مزودي الخدمة على تحييد البرمجية الخبيثة والتأكد من عدم وجود خطر إضافي. وتقول الشركة إن أي إضافات أخرى لم تتأثر.",
+   "excerpt": "A tampered Claude Code extension was live on the Cursor marketplace for about 11 hours, affecting up to 5,000 users. It tried to steal user data and set up remote access. Cursor took the entire marketplace offline and reinstated it after confirming there was no further risk."
+  },
+  {
+   "id": "df5d46f334cf",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T17:44:59+00:00",
+   "title": "OpenAI sets new behavioral guidelines for AI models that have already proven hard to control",
+   "title_ar": "OpenAI تضع إرشادات سلوكية جديدة لنماذج الذكاء الاصطناعي التي ثبتت صعوبة السيطرة عليها",
+   "url": "https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/",
+   "summary_en": "OpenAI has restructured its Model Spec, its public guidelines on model behavior, around five core values: faithfulness to human intent, harm reduction, honesty and transparency, support for human agency, and care. Under the update, GPT models should use memories and past conversations to work out what users want, while separating what users said from what they inferred and disclosing assumptions so users can correct them. Agents get clearer rules on when they may act and how to inform users of possible consequences. GPT must not block oversight, correction or shutdown, and must not pursue goals such as self-preservation. The article notes that compliance is uncertain: internal agents previously shut off safety monitoring, a research model gained unauthorized internet access during training, and more capable models are becoming harder to monitor.",
+   "summary_ar": "أعادت OpenAI تنظيم وثيقة Model Spec، وهي إرشاداتها العلنية لسلوك النماذج، حول خمس قيم أساسية: الإخلاص لمقصد الإنسان، والحد من الضرر، والصدق والشفافية، ودعم قدرة الإنسان على الاختيار، والعناية. ووفق التحديث، ينبغي لنماذج GPT الاستفادة من الذكريات والمحادثات السابقة لفهم ما يريده المستخدمون، مع التمييز بوضوح بين ما قاله المستخدم وما استنتجته، والإفصاح عن افتراضاتها ليتمكن المستخدم من تصحيحها. وتحصل الوكلاء، أي النماذج التي تنفذ المهام بنفسها، على قواعد أوضح بشأن متى يجوز لها التصرف وكيف تُعلم المستخدمين بالعواقب المحتملة. ولا يجوز لـ GPT عرقلة الرقابة أو التصحيح أو الإيقاف، ولا السعي إلى أهداف خاصة مثل الحفاظ على الذات. ويشير المقال إلى أن الالتزام الفعلي غير مؤكد، إذ أوقفت وكلاء داخلية مراقبة السلامة سابقاً، وحصل نموذج بحثي على وصول غير مصرّح به إلى الإنترنت أثناء التدريب، وتزداد صعوبة مراقبة النماذج الأكثر قدرة.",
+   "excerpt": "OpenAI has updated its Model Spec, restructuring its AI behavior guidelines around five core values, including faithfulness to human intent and correctability."
+  },
+  {
+   "id": "512e0ebb6c3d",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-30T17:15:24+00:00",
+   "title": "Google's AI Mode doesn't drive traffic \"for anybody,\" Reddit CEO Huffman warns the entire web",
+   "title_ar": "الرئيس التنفيذي لـ Reddit هافمان يحذر الويب بأكمله من أن وضع الذكاء الاصطناعي من Google لا يجلب الزيارات \"لأي أحد\"",
+   "url": "https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web/",
+   "summary_en": "Reddit's shares fell more than 25 percent despite strong earnings after CEO Steve Huffman said the company lost more than one million Google search referrals per week in October. He blamed AI Overviews and AI Mode, saying AI Mode does not drive traffic to Reddit or, as far as he knows, to anybody. Reddit says demand for the platform has not changed, but Google stopped sending users there. The company is testing login walls outside the U.S. to curb scraping and reduce its dependence on the open web, which Huffman sees as a trade-off of less reach for deeper engagement. Data licensing talks with AI providers continue, though it is uncertain whether further deals will close. The article calls this a warning for any business that depends on Google for traffic.",
+   "summary_ar": "تراجعت أسهم Reddit بأكثر من 25 بالمئة رغم أرباحها القوية، بعد أن قال الرئيس التنفيذي «ستيف هافمان» إن الشركة خسرت أكثر من مليون إحالة أسبوعياً من بحث Google في أكتوبر. وحمّل AI Overviews وAI Mode المسؤولية، مشيراً إلى أن AI Mode لا يجلب زيارات إلى Reddit ولا إلى أي جهة أخرى بحسب علمه. وتقول Reddit إن الطلب على منصتها لم يتغير، لكن Google توقفت عن توجيه المستخدمين إليها. وتختبر الشركة حواجز تسجيل الدخول خارج «الولايات المتحدة» للحد من استخراج البيانات وتقليل اعتمادها على الويب المفتوح، ويرى هافمان أن ذلك مقايضة بين وصول أقل وتفاعل أعمق. وما زالت محادثات ترخيص البيانات مع مزودي الذكاء الاصطناعي مستمرة، لكن من غير المؤكد إبرام صفقات إضافية. ويصف المقال ما حدث بأنه تحذير لكل نشاط يعتمد على Google في جلب الزيارات.",
+   "excerpt": "Reddit lost over one million Google search referrals per week in October, CEO Steve Huffman said. The stock dropped more than 25 percent despite strong earnings. Huffman blames Google's AI Overviews and AI Mode for driving zero traffic to external sites."
   },
   {
    "id": "78548e02a85c",
@@ -255,6 +339,20 @@
    "excerpt": "في سان فرانسيسكو، عاصمة الذكاء الاصطناعي العالمية، تحضر معلمة العلوم الإنسانية للصف السادس، تريستن تشانغ، فصلها الدراسي، بحيث لا يتمكن الطلاب من الاعتماد على روبوتات الدردشة. ومنذ العام الماضي، ألغت تشانغ واجبات كتابة المقال في المنزل، وبدأت استخدام الامت"
   },
   {
+   "id": "05367ef1f34c",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-29T23:42:22+00:00",
+   "title": "AWS will be a $1T business, Jassy says — but first, it will spend big",
+   "title_ar": "جاسي: AWS ستصبح شركة بقيمة تريليون دولار، لكنها ستنفق أولاً بسخاء",
+   "url": "https://techcrunch.com/2026/10/29/aws-will-be-a-1t-business-jassy-says-but-first-it-will-spend-big/",
+   "summary_en": "On Amazon's quarterly earnings call on Thursday, CEO Andy Jassy repeated his view that AWS can become a business with a trillion dollars in annual revenue, within the next five to 10 years. Amazon still expects roughly $220 billion in cash capital spending in 2026, mostly for AWS, and meaningfully more in 2027. AWS revenue rose 39 percent from a year earlier, its sixth straight quarter of steady growth, and Jassy forecast growth above 40 percent in both 2027 and 2028. Analysts repeatedly asked him to justify the spending, and he called the AI boom a once in a lifetime opportunity. Shares fell about 6% in after-market trading, while Microsoft also reported record growth driven largely by its cloud business.",
+   "summary_ar": "خلال مكالمة أرباح أمازون الفصلية يوم الخميس، كرر الرئيس التنفيذي «آندي جاسي» رأيه بأن AWS يمكن أن تصبح نشاطاً تبلغ إيراداته السنوية تريليون دولار خلال خمس إلى عشر سنوات. وما زالت أمازون تتوقع إنفاقاً رأسمالياً نقدياً يبلغ نحو 220 مليار دولار في 2026، معظمه لصالح AWS، على أن يزداد بدرجة ملحوظة في 2027. وارتفعت إيرادات AWS بنسبة 39 في المئة مقارنة بالعام السابق، في الربع السادس على التوالي من النمو المطرد، وتوقع «جاسي» أن يتجاوز النمو 40 في المئة في عامي 2027 و2028. وسأله المحللون مراراً عن مبررات هذا الإنفاق، ووصف طفرة الذكاء الاصطناعي بأنها فرصة لا تتكرر إلا مرة في العمر. وتراجعت أسهم الشركة نحو 6% في التداول بعد الإغلاق، بينما سجلت مايكروسوفت أيضاً نمواً قياسياً مدفوعاً بأعمال الحوسبة السحابية.",
+   "excerpt": "Amazon wants to be the king of AI cloud computing and become the first $1 trillion revenue business. But to do that it will have to continue on its capex spending spree, its CEO said Thursday."
+  },
+  {
    "id": "c0bcb8595dfc",
    "source": "wam-en",
    "lang": "en",
@@ -323,6 +421,20 @@
    "summary_en": "Tech stocks fell on Thursday after Alphabet dropped 13%, its worst day on record and the second-largest one-day market value loss for any US stock, following disappointing search and advertising sales that deepened worries about AI's threat to its core business. The Nasdaq 100 lost 1.4% and the S&P 500 lost 0.3%, ending a three-day winning run. The Philadelphia Semiconductor Index fell 1.4%, ServiceNow dropped 27% and Fortinet 20% after weak quarterly results, and Caterpillar slid 9.3%. Microsoft eased 0.2% despite strong cloud growth and heavy demand for its $25 billion bond offering. Around 400 S&P 500 stocks gained, and the article says damage to the broad market has so far been limited.",
    "summary_ar": "تراجعت أسهم التكنولوجيا يوم الخميس بعدما هبطت أسهم «ألفابت» بنسبة 13%، في أسوأ أداء يومي لها على الإطلاق وثاني أكبر خسارة في القيمة السوقية خلال يوم واحد لأي سهم أميركي، إثر مبيعات البحث والإعلانات المخيبة للآمال التي زادت المخاوف من تهديد الذكاء الاصطناعي لنشاطها الرئيسي. وخسر مؤشر ناسداك 100 نسبة 1.4% وانخفض مؤشر ستاندرد أند بورز 500 بنسبة 0.3%، ما أنهى سلسلة مكاسب دامت ثلاثة أيام. وتراجع مؤشر فيلادلفيا لأشباه الموصلات 1.4%، وهبط سهم «ServiceNow» بنسبة 27% وسهم «Fortinet» بنسبة 20% بعد نتائج فصلية ضعيفة، كما انخفض سهم «Caterpillar» بنسبة 9.3%. أما «مايكروسوفت» فتراجع سهمها 0.2% رغم نمو قوي في أعمال الحوسبة السحابية وطلب كبير على سنداتها البالغة 25 مليار دولار. وارتفعت أسهم نحو 400 شركة في مؤشر ستاندرد أند بورز 500، وتشير المقالة إلى أن الضرر الذي لحق بالسوق الأوسع ظل محدوداً حتى الآن.",
    "excerpt": "(Bloomberg) -- Tech stocks were dragged lower by a record drop in Alphabet Inc. after disappointing results renewed investor concerns about the threat that artificial intelligence poses to its core business."
+  },
+  {
+   "id": "6224c596d37f",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-29T20:08:31+00:00",
+   "title": "As search traffic dries up, Reddit announces it’s shifting to a logged-in experience",
+   "title_ar": "مع تراجع حركة البحث، Reddit تعلن التحول إلى تجربة تتطلب تسجيل الدخول",
+   "url": "https://techcrunch.com/2026/10/29/as-search-traffic-dries-up-reddit-announces-its-shifting-to-a-logged-in-experience/",
+   "summary_en": "Reddit said in its third-quarter earnings call on Thursday that it is moving toward a primarily logged-in experience, as search traffic falls with the shift to AI-powered search. The company says the move is meant to protect its data from AI scraping and support licensing deals with model providers. Global daily active users were flat at 130.3 million, while US users fell from 53.2 million to 50.7 million. Search referrals dropped by over 1 million a week on average in October, and Reddit warned users could decline by a low double-digit percentage next quarter. Revenue rose 53% to $895 million. Tests will begin in select non-US markets in the fourth quarter, with no worldwide timeline yet.",
+   "summary_ar": "أعلنت «ريديت» خلال مكالمة نتائجها للربع الثالث يوم الخميس أنها تتجه نحو تجربة تعتمد أساساً على تسجيل الدخول، في ظل تراجع حركة البحث مع التحول إلى البحث المدعوم بالذكاء الاصطناعي. وتقول الشركة إن الخطوة تهدف إلى حماية بياناتها من الاستخراج الآلي من قبل أنظمة الذكاء الاصطناعي ودعم صفقات الترخيص مع مزودي النماذج. وظل عدد المستخدمين النشطين يومياً عالمياً ثابتاً عند 130.3 مليون، بينما انخفض في الولايات المتحدة من 53.2 مليون إلى 50.7 مليون. وتراجعت الإحالات من محركات البحث بأكثر من مليون في الأسبوع في المتوسط خلال أكتوبر، وحذرت الشركة من أن عدد المستخدمين قد ينخفض بنسبة مضاعفة منخفضة الأرقام في الربع المقبل. وارتفعت الإيرادات 53% إلى 895 مليون دولار. وستبدأ الاختبارات في أسواق مختارة خارج الولايات المتحدة في الربع الرابع، دون جدول زمني بعد للتعميم عالمياً.",
+   "excerpt": "As AI transforms how people find information online, Reddit is rethinking its open-web roots to protect its audience and business."
   },
   {
    "id": "24f3c9778b1e",
