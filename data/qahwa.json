@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-03T08:03:00+04:00",
+  "generated_at": "2026-11-03T13:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7813,6 +7813,149 @@
       "permalink": "https://www.instagram.com/p/DfQ-oguiDgi/",
       "published_at": "2026-11-03T08:03:00+04:00",
       "cover": "images/qahwa/week-08-day-53--1-learn-lesson-39.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-54--1-learn-lesson-40",
+      "kind": "lesson",
+      "lesson": 40,
+      "code": "L40",
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Mac mini vs Mac Studio vs MacBook Pro",
+        "ar": "Mac mini مقابل Mac Studio مقابل MacBook Pro"
+      },
+      "summary": {
+        "en": "Best when you want a compact, always-on desktop for agents, services, small and mid-size local models, and good efficiency.",
+        "ar": "مناسب لجهاز مكتبي صغير ودائم التشغيل للوكلاء والخدمات والنماذج المحلية الصغيرة إلى المتوسطة بكفاءة جيدة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Mac mini, MacBook Pro ==or Mac Studio?==",
+            "body": "Pick by workload — not by product name."
+          },
+          "ar": {
+            "title": "Mac mini أم MacBook Pro ==أم Mac Studio؟==",
+            "body": "اختر حسب المهمة — وليس حسب اسم الجهاز."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Mac mini",
+            "body": "Best when you want a ==compact, always-on desktop== for agents, services, small and mid-size local models, and good efficiency."
+          },
+          "ar": {
+            "title": "Mac mini",
+            "body": "مناسب ==لجهاز مكتبي صغير ودائم التشغيل== للوكلاء والخدمات والنماذج المحلية الصغيرة إلى المتوسطة بكفاءة جيدة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "MacBook Pro",
+            "body": "Best when ==portability matters== and you still want strong on-device AI, with M5 Max configurations reaching 128 GB unified memory."
+          },
+          "ar": {
+            "title": "MacBook Pro",
+            "body": "مناسب عندما ==تهمك قابلية الحمل== مع AI قوي على الجهاز، ويمكن إعداد M5 Max بذاكرة موحّدة تصل إلى 128 GB."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Mac Studio",
+            "body": "Best when ==maximum local model capacity==, sustained desktop performance, fast networking and large memory are the priority."
+          },
+          "ar": {
+            "title": "Mac Studio",
+            "body": "مناسب عندما تكون الأولوية ==لأكبر سعة للنماذج المحلية== والأداء المستمر والشبكات السريعة والذاكرة الضخمة."
+          }
+        },
+        {
+          "type": "bullets",
+          "en": {
+            "title": "Simple decision",
+            "items": [
+              "Always-on agent server → Mac mini",
+              "Portable AI developer → MacBook Pro",
+              "Very large local LLMs → Mac Studio"
+            ]
+          },
+          "ar": {
+            "title": "قرار بسيط",
+            "items": [
+              "خادم وكلاء دائم التشغيل ← Mac mini",
+              "مطور AI متنقل ← MacBook Pro",
+              "نماذج محلية ضخمة جداً ← Mac Studio"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What all three share",
+            "body": "Apple silicon, unified memory, Metal acceleration and access to Mac AI software — but their ==memory ceilings, cooling, ports and price== are very different."
+          },
+          "ar": {
+            "title": "ما الذي تشترك فيه؟",
+            "body": "Apple silicon وذاكرة موحّدة وتسريع Metal وبرمجيات AI على Mac — لكن ==سقف الذاكرة والتبريد والمنافذ والسعر== تختلف كثيراً."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Mac mini = ==small coffee kiosk==",
+            "body": "MacBook Pro = premium coffee cart that travels with you. Mac Studio = full professional café. Choose the size of the operation you actually need."
+          },
+          "ar": {
+            "title": "Mac mini = ==كشك قهوة صغير==",
+            "body": "وMacBook Pro عربة قهوة فاخرة تتنقل معك، وMac Studio مقهى احترافي كامل. اختر حجم العمل الذي تحتاجه فعلاً."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "The most expensive Mac is automatically the best AI purchase.",
+            "fact": "The best choice is the one whose memory, performance, portability and price match your actual workload."
+          },
+          "ar": {
+            "myth": "أغلى Mac هو أفضل خيار للـAI تلقائياً.",
+            "fact": "الأفضل هو ما يطابق مهمتك من حيث الذاكرة والأداء وقابلية الحمل والسعر."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "My AI workflow is [describe it]. Choose between Mac mini, MacBook Pro and Mac Studio, and tell me the minimum memory configuration you would buy."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "عملي في AI هو [صفه]. اختر بين Mac mini وMacBook Pro وMac Studio وحدد أقل سعة ذاكرة تنصح بشرائها."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Choose the workload first — ==then the Mac=="
+          },
+          "ar": {
+            "title": "اختر المهمة أولاً — ==ثم اختر الـMac=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My AI workflow is [describe it]. Choose between Mac mini, MacBook Pro and Mac Studio, and tell me the minimum memory configuration you would buy.",
+        "ar": "عملي في AI هو [صفه]. اختر بين Mac mini وMacBook Pro وMac Studio وحدد أقل سعة ذاكرة تنصح بشرائها.",
+        "code": "L40"
+      },
+      "permalink": "https://www.instagram.com/p/DfRg_FBjX8f/",
+      "published_at": "2026-11-03T13:03:00+04:00",
+      "cover": "images/qahwa/week-08-day-54--1-learn-lesson-40.webp",
       "related_concepts": []
     }
   ]
