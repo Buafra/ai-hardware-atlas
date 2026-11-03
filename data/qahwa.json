@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-03T13:03:00+04:00",
+  "generated_at": "2026-11-03T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7956,6 +7956,42 @@
       "permalink": "https://www.instagram.com/p/DfRg_FBjX8f/",
       "published_at": "2026-11-03T13:03:00+04:00",
       "cover": "images/qahwa/week-08-day-54--1-learn-lesson-40.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-53--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Unified memory in a Mac is the same as VRAM on a separate card.",
+        "ar": "الذاكرة الموحّدة في Mac هي نفسها VRAM في بطاقة منفصلة."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "Unified memory in a Mac ==is the same as VRAM== on a separate card.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "الذاكرة الموحّدة في Mac ==هي نفسها VRAM== في بطاقة منفصلة.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-03T20:30:00+04:00",
+      "cover": "images/qahwa/week-08-day-53--3-check-story.webp",
       "related_concepts": []
     }
   ]
