@@ -255,6 +255,62 @@
    "excerpt": "هل يمكن الاعتماد على الذكاء الاصطناعي بدلًا من استشارة الطبيب؟"
   },
   {
+   "id": "43523836c604",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-30T22:56:13+00:00",
+   "title": "Ollie, a privacy-focused AI assistant, is shutting down",
+   "title_ar": "إغلاق Ollie، مساعد الذكاء الاصطناعي الذي يركز على الخصوصية",
+   "url": "https://techcrunch.com/2026/10/30/ollie-a-privacy-focused-ai-assistant-is-shutting-down/",
+   "summary_en": "Ollie, a startup that built a privacy-focused AI assistant, will shut down its app on November 6. Co-founder and CEO Bill Lennon announced the news on X on Friday. The subscription app helped families stay organised by connecting to email and calendars, and it offered appointment booking, meal planning and bill payments. Ollie had raised a $7.5 million seed round led by Khosla Ventures and was among the first mainstream apps to achieve the SOC 2 privacy standard. Lennon said that with Muse, Instinct and others entering the market, it became harder to stand out, grow and raise capital. Customers will soon receive instructions for exporting their data and getting refunds.",
+   "summary_ar": "ستغلق شركة Ollie الناشئة، التي طورت مساعداً ذكياً يركز على الخصوصية، تطبيقها في السادس من نوفمبر. وأعلن المؤسس المشارك والرئيس التنفيذي بيل لينون الخبر على منصة X يوم الجمعة. كان التطبيق يعمل بالاشتراك ويساعد العائلات على تنظيم شؤونها عبر الربط مع البريد الإلكتروني والتقويم، ويوفر حجز المواعيد وتخطيط الوجبات وسداد الفواتير. وكانت الشركة قد جمعت جولة تمويل أولية بقيمة 7.5 مليون دولار بقيادة Khosla Ventures، وكانت من أوائل التطبيقات الرائجة التي حصلت على معيار الخصوصية SOC 2. وقال لينون إن دخول Muse وInstinct وجهات أخرى إلى السوق جعل التميز والنمو وجمع رأس المال أصعب. وسيتلقى العملاء قريباً تعليمات لتصدير بياناتهم واسترداد أموالهم.",
+   "excerpt": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week."
+  },
+  {
+   "id": "6198118eee13",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-30T21:54:34+00:00",
+   "title": "Intel’s stock crashes, knocking $12B from government’s stake",
+   "title_ar": "انهيار سهم Intel يمحو 12 مليار دولار من حصة الحكومة",
+   "url": "https://techcrunch.com/2026/10/30/intels-stock-crashes-knocking-12b-from-governments-stake/",
+   "summary_en": "Intel's stock fell about 28% on Friday, one of its worst days ever, after the company gave a weaker-than-expected fourth-quarter outlook. The drop cut the value of the US government's 10% stake by $12 billion, according to CNBC, though the shares are still up more than 70% for the year. Intel expects revenue of $15 billion to $16 billion, against analyst expectations of about $17 billion, and a gross margin of 37%, down from 43%. CEO Lip-Bu Tan said PC demand is slowing because memory prices and availability are straining customers' budgets, with the AI industry absorbing memory and components. Data center revenue grew 78%, but Intel needs more fab capacity, and its next Arizona fab is not expected online until 2028.",
+   "summary_ar": "تراجع سهم إنتل بنحو 28% يوم الجمعة، في واحد من أسوأ أيامه، بعد أن قدمت الشركة توقعات للربع الرابع أضعف مما كان منتظراً. وبحسب CNBC، خفّض الانخفاض قيمة حصة الحكومة الأمريكية البالغة 10% بنحو 12 مليار دولار، مع أن السهم ما زال مرتفعاً أكثر من 70% منذ بداية العام. وتتوقع إنتل إيرادات بين 15 و16 مليار دولار مقابل نحو 17 مليار دولار توقعها المحللون، وهامش ربح إجمالي بنسبة 37% بعد أن كان 43%. وقال الرئيس التنفيذي ليب-بو تان إن الطلب على الحواسيب الشخصية يتباطأ بسبب أسعار الذاكرة وتوافرها، في ظل استحواذ صناعة الذكاء الاصطناعي على الذاكرة والمكونات. ونمت إيرادات مراكز البيانات 78%، لكن الشركة تحتاج إلى طاقة إنتاجية أكبر، ولا يُتوقع تشغيل مصنعها التالي في أريزونا قبل 2028.",
+   "excerpt": "Intel is being hurt by PC sales as the AI industry gobbles memory and other components causing PC prices to rise."
+  },
+  {
+   "id": "60ba719a0574",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-30T21:52:03+00:00",
+   "title": "Anthropic expected to receive high ‘junk’ rating from credit agencies following IPO, FT report says",
+   "title_ar": "تقرير لصحيفة فاينانشال تايمز: من المتوقع أن تحصل Anthropic على تصنيف ائتماني مرتفع المخاطر \"غير استثماري\" من وكالات التصنيف بعد طرحها العام الأولي",
+   "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+   "summary_en": "The Financial Times reports that Anthropic is expected to receive a high \"junk\" credit rating after its IPO. Blackstone, anchor investor in a $63 billion deal financing Anthropic's chips, reportedly told investors it expects a double-B rating, the top tier of speculative grade. Blackstone had earlier said the Claude maker would reach investment grade before 2027. TechCrunch notes this is only a forecast, but a junk rating would make raising money costlier and harder for a lab that has signed large compute deals over the past 12 months, which has worried investors. Anthropic filed to go public earlier this week, and both companies declined to comment to TechCrunch.",
+   "summary_ar": "نقلت صحيفة فايننشال تايمز أن من المتوقع أن تحصل Anthropic على تصنيف ائتماني «عالي المخاطر» مرتفع ضمن فئة «الخردة» بعد طرحها العام الأولي. وذُكر أن Blackstone، المستثمر الرئيسي في صفقة تمويل شرائح Anthropic بقيمة 63 مليار دولار، أبلغت المستثمرين بأنها تتوقع تصنيفاً من فئة BB، وهي أعلى درجة ضمن الفئة المضاربية. وكانت Blackstone قد قالت سابقاً إن مطورة Claude ستبلغ درجة الاستثمار قبل عام 2027. وتشير TechCrunch إلى أن ذلك مجرد توقع، لكن التصنيف المتدني سيجعل جمع الأموال أصعب وأعلى كلفة لمختبر أبرم صفقات كبيرة للقدرة الحاسوبية خلال الأشهر الاثني عشر الماضية، وهو ما أقلق المستثمرين. وقدمت Anthropic طلب الطرح العام مطلع هذا الأسبوع، وامتنعت الشركتان عن التعليق.",
+   "excerpt": "Blackstone's forecast is just a prediction, but naturally, a high junk rating would make it more difficult and costlier for Anthropic to raise the money to keep funding its massive spending that has undergirded its business."
+  },
+  {
+   "id": "f1f6194d2036",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-30T21:17:40+00:00",
+   "title": "Cracks are emerging in the AI spending boom",
+   "title_ar": "تصدعات بدأت تظهر في طفرة الإنفاق على الذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/",
+   "summary_en": "TechCrunch reports that investors are growing nervous about AI infrastructure spending as Alphabet, Amazon, Meta and Microsoft outlined more than $740 billion in capital expenditures this year. On Friday the Nasdaq fell 2.9%, with Nvidia down 4%, Broadcom over 5% and Qualcomm 11%. Alphabet dropped 12% on Thursday, its worst day on record, after reporting negative free cash flow of $9.1 billion. Amazon and Meta also reported negative free cash flow, while Microsoft stayed positive at $18.6 billion. Five large firms raised a combined $326 billion in debt in 2026, and the article says these concerns could complicate Anthropic's planned IPO.",
+   "summary_ar": "تفيد TechCrunch بأن القلق يتزايد لدى المستثمرين من الإنفاق على البنية التحتية للذكاء الاصطناعي، بعدما أعلنت Alphabet وAmazon وMeta وMicrosoft عن نفقات رأسمالية تتجاوز 740 مليار دولار هذا العام. وفي يوم الجمعة تراجع مؤشر Nasdaq بنسبة 2.9%، وهبط سهم NVIDIA بنسبة 4% وBroadcom بأكثر من 5% وQualcomm بنسبة 11%. وكان سهم Alphabet قد انخفض 12% يوم الخميس، وهو أسوأ يوم له على الإطلاق، بعد تسجيل تدفق نقدي حر سلبي بقيمة 9.1 مليار دولار. كما سجلت Amazon وMeta تدفقاً نقدياً حراً سلبياً، في حين بقيت Microsoft في المنطقة الإيجابية عند 18.6 مليار دولار. واقترضت خمس شركات كبرى ما مجموعه 326 مليار دولار في 2026، ويشير المقال إلى أن هذه المخاوف قد تعقّد الطرح العام المرتقب لشركة Anthropic.",
+   "excerpt": "Big Tech is pouring billions into AI infrastructure, but mounting debt, negative cash flow, and growing investor skepticism are raising questions about the sustainability of the AI spending boom."
+  },
+  {
    "id": "da7bf57625f8",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -323,6 +379,20 @@
    "summary_en": "A tampered version of the Claude Code extension was available in Cursor's VS Code extension marketplace on Thursday for about eleven hours, and up to 5,000 users may have been affected, according to Cursor. Anthropic had no role in building it. The extension tried to collect data such as hostname, username, operating system and public IP address, and it also tried to set up remote access for the attacker, though Cursor says this likely would not have worked on most machines because it needs admin privileges. After discovering the problem, Cursor removed the extension and took the whole marketplace offline. It was restored after Cursor worked with providers to neutralize the malware and confirmed there was no further risk. Cursor says no other extensions were affected.",
    "summary_ar": "أعلنت شركة Cursor أن نسخة معدّلة بشكل خبيث من إضافة Claude Code ظلت متاحة يوم الخميس لمدة نحو إحدى عشرة ساعة في سوق إضافات VS Code الخاص بها، وأن عدد المستخدمين المتأثرين قد يصل إلى 5,000. وأكدت أن شركة Anthropic لم يكن لها أي دور في تطويرها. حاولت الإضافة جمع بيانات مثل اسم الجهاز واسم المستخدم ونظام التشغيل وعنوان IP العام، كما سعت إلى إعداد وصول عن بُعد للمهاجم، لكن Cursor ترى أن ذلك غالباً لم يكن ليعمل على معظم الأجهزة لأنه يتطلب صلاحيات المسؤول. وبعد اكتشاف المشكلة سحبت الشركة الإضافة وأوقفت السوق بالكامل. ثم أعادت تشغيله بعد العمل مع مزودي الخدمة على تحييد البرمجية الخبيثة والتأكد من عدم وجود خطر إضافي. وتقول الشركة إن أي إضافات أخرى لم تتأثر.",
    "excerpt": "A tampered Claude Code extension was live on the Cursor marketplace for about 11 hours, affecting up to 5,000 users. It tried to steal user data and set up remote access. Cursor took the entire marketplace offline and reinstated it after confirming there was no further risk."
+  },
+  {
+   "id": "d52c9778a55e",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-30T17:47:12+00:00",
+   "title": "Zest’s new AI agent finds restaurants and books reservations over text",
+   "title_ar": "وكيل الذكاء الاصطناعي الجديد من Zest يعثر على المطاعم ويحجز الطاولات عبر الرسائل النصية",
+   "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+   "summary_en": "Zest, the restaurant discovery app that launched earlier this year, introduced an AI-powered \"restaurant concierge\" on Thursday that works through text messages. Users can ask for recommendations by cuisine, occasion, dietary restrictions or neighborhood, and the agent can check availability and book tables through OpenTable, Resy and SevenRooms. It can also join group chats, blend everyone's tastes, run votes and book for the group. Zest bases its suggestions on credit card data imported through Plaid, limited to food and drink transactions. Founded in November 2024 with $1.8 million in pre-seed funding, the company hopes texting will help it grow beyond its initial thousands of users, with booking and ordering as first revenue lines. TechCrunch's tests found the AI worked fairly well.",
+   "summary_ar": "أطلق تطبيق Zest لاكتشاف المطاعم، الذي ظهر في وقت سابق من هذا العام، يوم الخميس «مرشداً للمطاعم» يعمل بالذكاء الاصطناعي عبر الرسائل النصية. يستطيع المستخدمون طلب اقتراحات بحسب نوع المطبخ أو المناسبة أو القيود الغذائية أو الحي، ويمكن للمساعد الذكي التحقق من توفر الطاولات وحجزها عبر OpenTable وResy وSevenRooms. كما يمكن إضافته إلى المحادثات الجماعية ليجمع أذواق الأعضاء وينظّم تصويتاً ثم يحجز للمجموعة. ويبني Zest اقتراحاته على بيانات بطاقات الائتمان المستوردة عبر Plaid، مع الاقتصار على معاملات الطعام والشراب. تأسست الشركة في نوفمبر 2024 بتمويل أولي قدره 1.8 مليون دولار، وتأمل أن يساعدها التحول إلى الرسائل على النمو بعد آلاف المستخدمين الأوائل، مع اعتبار الحجز وطلب الطعام أول مصادر الإيراد. وقد وجدت اختبارات TechCrunch أن الأداء جيد إلى حد ما.",
+   "excerpt": "Can't agree on where to eat? Zest's AI concierge can combine everyone's tastes, put restaurant options to a vote, and make the reservation."
   },
   {
    "id": "df5d46f334cf",
@@ -647,6 +717,20 @@
    "excerpt": "Amazon wants to be the king of AI cloud computing and become the first $1 trillion revenue business. But to do that it will have to continue on its capex spending spree, its CEO said Thursday."
   },
   {
+   "id": "eee28578f735",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-29T23:12:26+00:00",
+   "title": "Researchers find bugs in 5 AI developer tools, with OpenAI and Microsoft flaws still unpatched",
+   "title_ar": "باحثون يعثرون على ثغرات في 5 أدوات لمطوّري الذكاء الاصطناعي، مع بقاء ثغرات OpenAI وMicrosoft دون إصلاح",
+   "url": "https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508",
+   "summary_en": "The Register reports that researchers have found bugs in five AI developer tools. Flaws affecting OpenAI and Microsoft remain unpatched, and the report says embedded browsers are at the heart of the problem.",
+   "summary_ar": "يفيد موقع The Register بأن باحثين عثروا على ثغرات في خمس أدوات من أدوات المطورين المعتمدة على الذكاء الاصطناعي. وتبقى الثغرات المتعلقة بـ OpenAI وMicrosoft من دون إصلاح، ويشير التقرير إلى أن المتصفحات المدمجة هي لب المشكلة.",
+   "excerpt": "Embedded browsers are at the heart of the problem"
+  },
+  {
    "id": "c0bcb8595dfc",
    "source": "wam-en",
    "lang": "en",
@@ -745,6 +829,20 @@
    "excerpt": "Rivian doesn't disclose if the value of its $5.8 billion joint venture will expand as a result."
   },
   {
+   "id": "f9482e1e329c",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-29T20:04:05+00:00",
+   "title": "Howler will have AI answer your questions, then burn the chat",
+   "title_ar": "Howler ستجعل الذكاء الاصطناعي يجيب عن أسئلتك ثم يحرق المحادثة",
+   "url": "https://www.theregister.com/offbeat/2026/10/29/howler-will-have-ai-answer-your-questions-then-burn-the-chat/5306484",
+   "summary_en": "The Register reports on Howler, a tool that has an AI answer users' questions and then burns the chat. According to the short description, it leaves no local chat history, so people can ask the AI whatever they like without a record staying on their device. The tool is styled after the magical letters in a children's fantasy novel. The description gives no further details on who built it or how it works.",
+   "summary_ar": "تتناول «ذا ريجيستر» أداة تُدعى Howler تجعل الذكاء الاصطناعي يجيب عن أسئلة المستخدمين ثم «يحرق» المحادثة. ووفق الوصف المختصر، لا تترك الأداة أي سجل محادثات محلي، ما يتيح للمستخدمين طرح ما يشاؤون من أسئلة دون بقاء أثر على أجهزتهم. وتأتي الأداة بأسلوب يشبه الرسائل السحرية في روايات الفانتازيا الموجهة للأطفال. ولا يتضمن الوصف تفاصيل أخرى عن الجهة التي طورتها أو طريقة عملها.",
+   "excerpt": "Ask AI dumb things and leave no local chat history, all with the style of a kids' fantasy novel – or rather, one of its magical letters"
+  },
+  {
    "id": "6db735303844",
    "source": "the-decoder",
    "lang": "en",
@@ -799,6 +897,20 @@
    "summary_en": "Thrive Holdings has acquired physical security company ADT for $10 per share, about $7.6 billion in equity, the companies announced on Thursday. ADT put the total enterprise value of the deal at $15.3 billion. Thrive Holdings is a holding company spun out of Thrive Capital, and OpenAI is both its partner and an investor. It aims to hold companies long term and revitalise them with AI, and it says it owns over 75 firms. OpenAI supplies AI models, technology and forward-deployed engineers. Neither side named new AI-powered products, though they said they plan to invest and release some. The press release says ADT will be the base of Thrive Holdings' smart home security business.",
    "summary_ar": "استحوذت Thrive Holdings على شركة الأمن المادي ADT مقابل 10 دولارات للسهم الواحد، أي نحو 7.6 مليار دولار من حقوق الملكية، بحسب إعلان الشركتين يوم الخميس. وذكرت ADT أن القيمة الإجمالية للصفقة شاملة الديون تبلغ 15.3 مليار دولار. وThrive Holdings شركة قابضة منبثقة عن Thrive Capital، وتعد OpenAI شريكاً ومستثمراً فيها. وتهدف إلى الاحتفاظ بالشركات على المدى الطويل وتنشيطها بالذكاء الاصطناعي، وتقول إنها تملك أكثر من 75 شركة. وتزوّد OpenAI الشركات بنماذج الذكاء الاصطناعي وتقنياته ومهندسين ينتشرون لدى العملاء. ولم تكشف الشركتان عن منتجات أمنية جديدة تعمل بالذكاء الاصطناعي، لكنهما أشارتا إلى خطة للاستثمار وإطلاق منتجات. وجاء في البيان أن ADT ستكون أساس نشاط Thrive Holdings في أمن المنازل الذكية.",
    "excerpt": "OpenAI-backed Thrive Holdings is buying ADT in a $15.3 billion deal, with plans to bring AI to the home security business."
+  },
+  {
+   "id": "6dc553098491",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-29T19:46:08+00:00",
+   "title": "Startup wants to make AI agents safe for DevOps duty",
+   "title_ar": "شركة ناشئة تريد جعل وكلاء الذكاء الاصطناعي آمنين للعمل في مهام DevOps",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/29/startup-wants-to-make-ai-agents-safe-for-devops-duty/5306477",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Infrastructure automation needs something better than prompt and pray"
   },
   {
    "id": "039f4be7610e",
@@ -2621,6 +2733,20 @@
    "excerpt": "Artificial Analysis overhauled its Intelligence Index, causing Kimi K3.1 Pro to drop five spots in the rankings."
   },
   {
+   "id": "2952348be6c4",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-28T15:00:46+00:00",
+   "title": "NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+   "title_ar": "حواسيب Windows المحمولة المزوّدة بـ NVIDIA RTX Spark تحصل على نماذج وأدوات وكلاء وألعاب جديدة",
+   "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+   "summary_en": "NVIDIA says RTX Spark laptops are now available from ASUS, Dell, HP, Lenovo, Microsoft and MSI. Each combines a Blackwell RTX GPU and a Grace CPU in one superchip, with up to 128GB of unified memory and up to 1 petaflop of FP4 AI performance. NVIDIA introduced Nemotron 3.5 Transcribe, an open-weight speech model covering 40 languages that handles transcription, speaker labels and translation, and it ranks No. 1 on the Hugging Face Open ASR leaderboard. The company also added a resource-management option in the NVIDIA App for sharing GPU power between foreground apps and background agents, and noted Liquid AI's LFM3 models running locally. On the gaming side, Phantom Blade Zero launches Oct. 28 with ray tracing, and RTX Remix 1.6 brings Minecraft Java Edition 1.21.1 support.",
+   "summary_ar": "تقول NVIDIA إن حواسيب RTX Spark المحمولة أصبحت متاحة من ASUS وDell وHP وLenovo وMicrosoft وMSI. ويجمع كل جهاز بين معالج رسومات Blackwell RTX ومعالج Grace مركزي في شريحة فائقة واحدة، مع ذاكرة موحدة تصل إلى 128 غيغابايت وأداء ذكاء اصطناعي يصل إلى 1 بيتافلوب بصيغة FP4. وقدمت الشركة نموذج Nemotron 3.5 Transcribe، وهو نموذج صوتي مفتوح الأوزان يدعم 40 لغة ويتولى التفريغ النصي وتمييز المتحدثين والترجمة، ويحتل المرتبة الأولى في لوحة Hugging Face Open ASR. كما أضافت ميزة لإدارة الموارد في تطبيق NVIDIA تتيح توزيع قدرة وحدة المعالجة بين التطبيق الأمامي والوكلاء العاملين في الخلفية، مع الإشارة إلى تشغيل نماذج LFM3 من Liquid AI محلياً. وفي الألعاب، تنطلق Phantom Blade Zero في 28 أكتوبر مع تقنية تتبع الأشعة، ويدعم RTX Remix 1.6 لعبة Minecraft Java Edition 1.21.1.",
+   "excerpt": "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do. RTX Spark laptops are now available from ASUS, Dell, HP, Lenovo, Microsoft and MSI."
+  },
+  {
    "id": "f1ebb512d4e0",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -3725,6 +3851,20 @@
    "summary_en": "Ars Technica reports on Google DeepMind's Genie 4, the successor to Genie 3, which last year rattled gaming stocks. The new world model uses Gemini 3.8 Flash as a guiding agent to break down goals and assess each frame, and DeepMind says it improves physics, makes people look more natural and is its first world model with native audio, including interactive speech. Worlds still stay consistent for only a couple of minutes. Access is limited to trusted testers for now, with no timeline for wider release. Developers are due to get it through the Gemini API and AI Studio, with pricing unavailable. Consumers will get phased access through Project Genie on AI Ultra plans starting at $100 per month, and a waitlist is open. Google says world models are key to AGI and could provide training environments for robots.",
    "summary_ar": "تتناول Ars Technica نموذج Genie 4 من Google DeepMind، خليفة Genie 3 الذي هزّ أسهم شركات الألعاب العام الماضي. ويستخدم النموذج العالمي الجديد Gemini 3.8 Flash وكيلاً موجّهاً لتجزئة الأهداف وتقييم كل إطار، وتقول DeepMind إنه يحسّن الفيزياء ويجعل حركة الشخصيات أكثر طبيعية، وهو أول نموذج عالمي لديها يدعم الصوت أصلاً، بما في ذلك الحوار التفاعلي. ومع ذلك تبقى العوالم متسقة لبضع دقائق فقط. والوصول محدود حالياً بمختبرين موثوقين دون جدول زمني لإطلاق أوسع. ومن المقرر أن يحصل المطورون عليه عبر Gemini API وAI Studio دون الإعلان عن الأسعار بعد. أما المستهلكون فسيحصلون عليه تدريجياً عبر Project Genie ضمن خطط AI Ultra التي تبدأ من 100 دولار شهرياً، مع قائمة انتظار مفتوحة. وترى Google أن النماذج العالمية عنصر أساسي نحو الذكاء الاصطناعي العام وقد توفر بيئات تدريب للروبوتات.",
    "excerpt": "Genie 4 will roll out to developers and Google AI Ultra subscribers soon."
+  },
+  {
+   "id": "6cf6ca19286e",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-27T16:00:00+00:00",
+   "title": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure",
+   "title_ar": "NVIDIA وOracle توسّعان NVIDIA Vera Rubin إلى نطاق عدة غيغاواط وتجلبان NVIDIA Vera CPU إلى Oracle Cloud Infrastructure",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+   "summary_en": "NVIDIA and Oracle announced plans to expand Oracle Cloud Infrastructure Superclusters with NVIDIA Vera Rubin NVL72 systems to multi-gigawatt scale, citing demand for AI training, inference and agentic applications. They also announced general availability of NVIDIA Vera Rubin NVL72 and NVIDIA Vera CPUs on OCI, so customers can scale CPU and GPU resources independently. OCI also plans to offer NVIDIA HGX Rubin NVL8, an eight-GPU x86-based server option. The companies say OpenAI trained and served GPT-6 Astra in Abilene on an OCI Supercluster with more than 100,000 NVIDIA Blackwell GPUs, and OpenAI is among the early-access customers for Vera CPUs. The CPUs are meant to speed tool execution, code testing and data retrieval for AI agents, reducing idle GPU time.",
+   "summary_ar": "أعلنت NVIDIA وOracle خططاً لتوسيع مجموعات Oracle Cloud Infrastructure Superclusters بأنظمة NVIDIA Vera Rubin NVL72 إلى نطاق عدة غيغاواط، مشيرتين إلى الطلب المتزايد على تدريب الذكاء الاصطناعي والاستدلال والتطبيقات القائمة على الوكلاء. كما أعلنتا إتاحة NVIDIA Vera Rubin NVL72 ووحدات NVIDIA Vera CPU بشكل عام على OCI، بما يتيح للعملاء توسيع موارد المعالجات المركزية والرسومية بصورة مستقلة. وتخطط OCI أيضاً لتقديم NVIDIA HGX Rubin NVL8، وهو خيار خادم قائم على معمارية x86 بثماني وحدات معالجة رسومية. وتذكر الشركتان أن OpenAI دربت GPT-6 Astra وشغّلته في «أبيلين» على OCI Supercluster تضم أكثر من 100,000 وحدة NVIDIA Blackwell GPU، وأنها من عملاء الوصول المبكر إلى Vera CPU. وتهدف هذه المعالجات إلى تسريع تنفيذ الأدوات واختبار الشيفرة واسترجاع البيانات لوكلاء الذكاء الاصطناعي، وتقليل زمن انتظار وحدات المعالجة الرسومية.",
+   "excerpt": "NVIDIA and Oracle today announced plans to expand Oracle Cloud Infrastructure (OCI) Superclusters with NVIDIA Vera Rubin NVL72 systems to multi-gigawatt scale, supporting growing customer demand for AI training, inference and agentic applications."
   },
   {
    "id": "3513fbe8e952",

@@ -3,6 +3,34 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "e1ad7c46f007",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-02T17:46:58+00:00",
+   "title": "ميرتس يدعو لحماية السيادة الرقمية في عصر الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/عربي-ودولي/4703149/ميرتس-يدعو-لحماية-السيادة-الرقمية-في-عصر-الذكاء-الاصطناعي",
+   "summary_en": "German Chancellor Friedrich Merz said on Monday that Germany and Europe must move faster to build their own AI capabilities in order to protect their \"digital sovereignty\". Speaking at an AI conference in Berlin, he said they must avoid becoming fully dependent on third parties for developing and using the technology, calling the issue existential. He said adapting will take a huge technological and organisational effort and broad modernisation of the state and economy, and he promised to speed up the digitalisation of the economy. His goal is to produce and manage the technology independently and securely across the whole value chain, from hardware to software. The text adds that his government has pledged to close a technology gap with faster European economies such as the Netherlands and Denmark, and that Germany has had a national AI strategy since 2018.",
+   "summary_ar": "دعا المستشار الألماني «فريدريش ميرتس» يوم الاثنين ألمانيا وأوروبا إلى التحرك بوتيرة أسرع لبناء قدراتهما الذاتية في مجال الذكاء الاصطناعي حمايةً لـ«السيادة الرقمية». وقال في كلمة خلال مؤتمر للذكاء الاصطناعي في برلين إنه يجب تجنب الاعتماد الكامل على أطراف ثالثة في تطوير هذه التكنولوجيا واستخدامها، ووصف المسألة بأنها قضية وجودية. وأوضح أن التكيف مع هذا التحول يتطلب جهداً تكنولوجياً وتنظيمياً هائلاً وتحديثاً واسع النطاق للدولة والاقتصاد، وتعهد بتسريع رقمنة الاقتصاد. وأكد أن الهدف هو القدرة على إنتاج التكنولوجيا وإدارتها بصورة مستقلة وآمنة عبر سلسلة القيمة كاملة، من الأجهزة إلى البرمجيات. ويضيف النص أن حكومته تعهدت بتعويض التأخر التكنولوجي أمام اقتصادات أوروبية أسرع مثل هولندا والدنمارك، وأن ألمانيا وضعت استراتيجية وطنية للذكاء الاصطناعي منذ عام 2018.",
+   "excerpt": "دعا المستشار الألماني فريدريش ميرتس، اليوم الاثنين، ألمانيا وأوروبا إلى التحرك بوتيرة أسرع من أجل تطوير قدراتهما الذاتية في مجال الذكاء الاصطناعي من أجل حماية \"السيادة الرقمية\" لهما."
+  },
+  {
+   "id": "8b2a9818a63c",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "policy",
+   "published": "2026-11-02T07:22:47+00:00",
+   "title": "Sheikh Mohammed bin Rashid launches annual government challenge to drive AI innovation",
+   "title_ar": null,
+   "url": "https://gulfnews.com/uae/government/sheikh-mohammed-bin-rashid-launches-annual-government-challenge-to-drive-ai-innovation-1.500732402",
+   "summary_en": "Sheikh Mohammed bin Rashid Al Maktoum, UAE Vice President, Prime Minister and Ruler of Dubai, announced on Monday the launch of the Annual Government Challenge. The national initiative aims to encourage government employees and teams to develop bold, innovative solutions that transform public services and operations. It coincides with the start of UAE Innovation Month. The first challenge focuses on AI assistants, and the nine best government projects and teams will be honoured. In a post on X, Sheikh Mohammed said he wants unconventional ideas and solutions that make a difference in government work.",
+   "summary_ar": "أعلن الشيخ «محمد بن راشد آل مكتوم» نائب رئيس دولة الإمارات رئيس مجلس الوزراء حاكم «دبي»، يوم الاثنين، إطلاق «التحدي الحكومي السنوي» (Annual Government Challenge)، وهي مبادرة وطنية تهدف إلى تشجيع موظفي الحكومة وفرقها على ابتكار حلول جريئة تطوّر الخدمات والعمليات الحكومية. وتتزامن المبادرة مع بداية «شهر الإمارات للابتكار». ويركّز التحدي الأول على المساعدين الأذكياء، على أن يُكرَّم أفضل تسعة مشاريع وفرق حكومية. وقال الشيخ «محمد» في منشور على منصة X إنه يريد أفكاراً غير تقليدية وحلولاً تُحدث فرقاً ومشاريع ترتقي بالعمل الحكومي.",
+   "excerpt": "Sheikh Mohammed bin Rashid launches UAE's Annual Government Challenge to inspire AI-driven innovation in public services during UAE Innovation Month."
+  },
+  {
    "id": "ca7b85581f45",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -85,6 +113,20 @@
    "summary_en": "Citing a PCWorld report, the article describes how three short instructions, \"No Teasers\", \"Don't Act Human\" and \"On a Budget\", can make AI chatbot replies more direct. With help from Claude Opus 5.5 and GPT-6.1 Sol, they were merged into one prompt of about 200 words. It was tested on ChatGPT, Claude Sonnet 5.5 and Gemini 3 Flash, before and after adding it. In one test, Gemini's advice on moving to a new apartment shrank to the essential steps, and its closing offer disappeared. In another, ChatGPT's reply on fixing a personal website in 20 minutes became shorter and was organised into a priority table. Claude added effort labels such as S and L. The prompt can be pasted at the start of a chat or added to custom instructions.",
    "summary_ar": "استناداً إلى تقرير لموقع PCWorld، يوضح المقال كيف يمكن لثلاث تعليمات قصيرة هي «لا تقدم عروضاً لمواصلة المساعدة» (No Teasers) و«لا تتصرف كأنك إنسان» (Don't Act Human) و«راعِ حدود الاستخدام» (On a Budget) أن تجعل ردود روبوتات الدردشة أكثر مباشرة. وبمساعدة Claude Opus 5.5 وGPT-6.1 Sol جُمعت التعليمات في نص واحد يبلغ نحو 200 كلمة، واختُبر مع ChatGPT وClaude Sonnet 5.5 وGemini 3 Flash قبل إضافته وبعده. وفي أحد الاختبارات اقتصر رد Gemini بشأن الانتقال إلى شقة جديدة على الخطوات الأساسية، واختفت عبارة العرض الختامية. وفي اختبار آخر صار رد ChatGPT بشأن إصلاح موقع شخصي خلال 20 دقيقة أقصر، ونُظّم في جدول للأولويات. أما Claude فأضاف تصنيفات للجهد مثل S وL. ويمكن لصق النص في بداية المحادثة أو إضافته إلى التعليمات المخصصة.",
    "excerpt": "بثلاث عبارات مختصرة (يمكن دمجها في عبارة واحدة) يمكنك جعل المحادثات مع الذكاء الاصطناعي أقل إزعاجًا، كما تتخلص من العبارات التي تنتهي بها الردود مثل \"إذا أردت، يمكنني مساعدتك في...\"، والقوائم الطويلة التي تتضمن خطوات فرعية كثيرة لتنفيذ مهام بسيطة، ومحاولا"
+  },
+  {
+   "id": "2979babeb5dd",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-01T02:30:02+00:00",
+   "title": "115.3 مليار دولار صادرات كوريا الجنوبية في أكتوبر بدعم من الرقائق",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17i4rm0-1153-مليار-دولار-صادرات-كوريا-الجنوبية-أكتوبر-بدعم",
+   "summary_en": "Government data released on Sunday, 1 November, show South Korea's exports rose 93.7% year on year in October to a record $115.3 billion, driven mainly by much higher semiconductor shipments. In a statement carried by Yonhap, the trade ministry said strong global demand for chips and big tech companies' investment in AI infrastructure supported the increase. Chip exports jumped 259% to $56.4 billion, while imports rose 36% to $72.78 billion, leaving a trade surplus of $42.5 billion. Exports to China climbed 133.6% to $26.98 billion, and shipments to the United States leapt 185.8% to $24.9 billion, helped by demand for chips, computers and electrical equipment used in AI infrastructure.",
+   "summary_ar": "أظهرت بيانات حكومية صدرت يوم الأحد الأول من نوفمبر أن صادرات كوريا الجنوبية ارتفعت في أكتوبر بنسبة 93.7% على أساس سنوي لتبلغ مستوى قياسياً قدره 115.3 مليار دولار، مدفوعة بصورة رئيسية بزيادة كبيرة في شحنات أشباه الموصلات. وقالت وزارة التجارة، في بيان نقلته وكالة «يونهاب»، إن الطلب العالمي القوي على الرقائق واستثمارات شركات التكنولوجيا الكبرى في البنية التحتية للذكاء الاصطناعي دعما الصادرات. وقفزت صادرات الرقائق بنسبة 259% إلى 56.4 مليار دولار، فيما ارتفعت الواردات بنسبة 36% إلى 72.78 مليار دولار، ما حقق فائضاً تجارياً بقيمة 42.5 مليار دولار. وزادت الصادرات إلى الصين بنسبة 133.6% لتبلغ 26.98 مليار دولار، وإلى الولايات المتحدة بنسبة 185.8% لتصل إلى 24.9 مليار دولار، بدعم من الطلب على الرقائق وأجهزة الكمبيوتر والمعدات الكهربائية المستخدمة في البنية التحتية للذكاء الاصطناعي.",
+   "excerpt": null
   }
  ]
 }
