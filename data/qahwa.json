@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-02T20:30:00+04:00",
+  "generated_at": "2026-11-03T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7643,6 +7643,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-02T20:30:00+04:00",
       "cover": "images/qahwa/week-08-day-52--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-52--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "512 GB unified memory makes Mac Studio faster than every NVIDIA GPU.",
+        "ar": "ذاكرة موحّدة بسعة 512 GB تجعل Mac Studio أسرع من كل GPU من NVIDIA."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "512 GB unified memory makes Mac Studio ==faster than every NVIDIA GPU==.",
+            "body": "Answer: Myth ❌ It gives enormous capacity, but speed depends on compute, bandwidth, software and workload."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 512 GB تجعل Mac Studio ==أسرع من كل GPU من NVIDIA==.",
+            "body": "الجواب: خرافة ❌ تمنحه سعة ضخمة، لكن السرعة تعتمد على المعالجة وعرض النطاق والبرمجيات والمهمة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-03T07:45:00+04:00",
+      "cover": "images/qahwa/week-08-day-52--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
