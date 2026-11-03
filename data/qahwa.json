@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-03T07:45:00+04:00",
+  "generated_at": "2026-11-03T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -7678,6 +7678,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-03T07:45:00+04:00",
       "cover": "images/qahwa/week-08-day-52--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-53--1-learn-lesson-39",
+      "kind": "lesson",
+      "lesson": 39,
+      "code": "L39",
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "M5 Pro and M5 Max",
+        "ar": "M5 Pro وM5 Max"
+      },
+      "summary": {
+        "en": "The 14-inch MacBook Pro is available with M5, M5 Pro or M5 Max. The 16-inch model uses M5 Pro or M5 Max.",
+        "ar": "MacBook Pro مقاس 14 إنش يتوفر مع M5 أو M5 Pro أو M5 Max، بينما مقاس 16 إنش يتوفر مع M5 Pro أو M5 Max."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Can your AI workstation ==fit in a backpack?==",
+            "body": "MacBook Pro puts up to 128 GB of unified memory in a laptop."
+          },
+          "ar": {
+            "title": "هل يمكن أن تحمل محطة عمل AI ==في حقيبة ظهرك؟==",
+            "body": "MacBook Pro يوفّر ذاكرة موحّدة تصل إلى 128 GB في جهاز محمول."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Current lineup",
+            "body": "The 14-inch MacBook Pro is available with M5, M5 Pro or M5 Max. The 16-inch model uses M5 Pro or M5 Max."
+          },
+          "ar": {
+            "title": "التشكيلة الحالية",
+            "body": "MacBook Pro مقاس 14 إنش يتوفر مع M5 أو M5 Pro أو M5 Max، بينما مقاس 16 إنش يتوفر مع M5 Pro أو M5 Max."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "M5 Max memory",
+            "body": "M5 Max MacBook Pro can be configured up to ==128 GB unified memory==, with up to 614 GB/s memory bandwidth on the highest configuration."
+          },
+          "ar": {
+            "title": "ذاكرة M5 Max",
+            "body": "يمكن إعداد MacBook Pro مع M5 Max بذاكرة موحّدة ==تصل إلى 128 GB== وعرض نطاق يصل إلى 614 GB/s في أعلى إعداد."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why it is interesting for AI",
+            "body": "That much shared memory in a laptop can support surprisingly large local models, coding agents, data work and creative AI ==without relying entirely on cloud services==."
+          },
+          "ar": {
+            "title": "لماذا يهم للـAI؟",
+            "body": "هذه السعة في اللابتوب قد تسمح بنماذج محلية كبيرة ووكلاء برمجة وتحليل بيانات وAI إبداعي ==دون الاعتماد الكامل على السحابة==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Portable ==does not mean unlimited==",
+            "body": "Sustained heavy workloads are constrained by laptop thermals, battery and power. A desktop can maintain higher performance for long sessions."
+          },
+          "ar": {
+            "title": "المحمول ==ليس بلا حدود==",
+            "body": "الأحمال الثقيلة المستمرة تتأثر بحرارة اللابتوب والبطارية والطاقة. الجهاز المكتبي قد يحافظ على أداء أعلى لفترات طويلة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Connectivity",
+            "body": "M5 Pro and M5 Max models include Thunderbolt 5. That helps with fast external storage, displays and high-speed desk setups."
+          },
+          "ar": {
+            "title": "التوصيلات",
+            "body": "إصدارات M5 Pro وM5 Max تتضمن Thunderbolt 5 للتخزين الخارجي السريع والشاشات وتجهيزات المكتب عالية السرعة."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "MacBook Pro is ==the premium mobile coffee cart==",
+            "body": "Powerful and travels with you, but a full café still has more room for all-day heavy work."
+          },
+          "ar": {
+            "title": "MacBook Pro مثل ==عربة قهوة متنقلة فاخرة==",
+            "body": "قوية وتتحرك معك، لكن المقهى الكامل يملك مساحة وطاقة أكبر للعمل الثقيل طوال اليوم."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "If a model fits in the memory, it will run at full speed anywhere.",
+            "fact": "Fitting is only the first condition. Speed depends on bandwidth, the chip and the software — and on heat and battery in a laptop."
+          },
+          "ar": {
+            "myth": "إذا اتسعت الذاكرة للنموذج، فسيعمل بأقصى سرعة في كل مكان.",
+            "fact": "الاتساع شرط أول فقط. السرعة تعتمد على عرض النطاق والشريحة والبرمجيات، وعلى الحرارة والبطارية في الجهاز المحمول."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "My local-AI workflow is [describe it]. Would a 64 GB or 128 GB MacBook Pro be enough? List the model sizes and trade-offs I should expect."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "عملي في AI المحلي هو [صفه]. هل يكفيه MacBook Pro بذاكرة 64 أو 128 GB؟ اذكر أحجام النماذج والتنازلات المتوقعة."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Portability, thermals and software ==still matter=="
+          },
+          "ar": {
+            "title": "قابلية الحمل والحرارة والبرمجيات ==ما زالت مهمة=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My local-AI workflow is [describe it]. Would a 64 GB or 128 GB MacBook Pro be enough? List the model sizes and trade-offs I should expect.",
+        "ar": "عملي في AI المحلي هو [صفه]. هل يكفيه MacBook Pro بذاكرة 64 أو 128 GB؟ اذكر أحجام النماذج والتنازلات المتوقعة.",
+        "code": "L39"
+      },
+      "permalink": "https://www.instagram.com/p/DfQ-oguiDgi/",
+      "published_at": "2026-11-03T08:03:00+04:00",
+      "cover": "images/qahwa/week-08-day-53--1-learn-lesson-39.webp",
       "related_concepts": []
     }
   ]
