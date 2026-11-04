@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T07:45:00+04:00",
+  "generated_at": "2026-11-04T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8063,6 +8063,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-04T07:45:00+04:00",
       "cover": "images/qahwa/week-08-day-53--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-54--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "The most expensive Mac is automatically the best choice for AI.",
+        "ar": "أغلى Mac هو الخيار الأفضل للـAI تلقائياً."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "The most expensive Mac is ==automatically the best choice== for AI.",
+            "body": "Answer: Myth ❌ The right machine depends on model size, portability, sustained load, software and budget."
+          },
+          "ar": {
+            "title": "أغلى Mac هو ==الخيار الأفضل للـAI تلقائياً==.",
+            "body": "الجواب: خرافة ❌ الاختيار يعتمد على حجم النموذج والحمل المستمر وقابلية الحمل والبرمجيات والميزانية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-04T07:50:00+04:00",
+      "cover": "images/qahwa/week-08-day-54--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
