@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T13:01:00+04:00",
+  "generated_at": "2026-11-04T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8199,6 +8199,62 @@
       "permalink": "https://www.instagram.com/p/DfUFjATDmr0/",
       "published_at": "2026-11-04T13:01:00+04:00",
       "cover": "images/qahwa/week-08-day-56--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-55--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "challenge",
+      "title": {
+        "en": "Pick your Apple AI machine",
+        "ar": "اختر جهاز Apple المناسب للـAI"
+      },
+      "summary": {
+        "en": "Mac mini · MacBook Pro · Mac Studio",
+        "ar": "Mac mini · MacBook Pro · Mac Studio"
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Challenge 8: ==Pick your Apple AI machine==",
+            "body": "Choose your role: A) always-on home agent · B) portable AI developer · C) huge local models"
+          },
+          "ar": {
+            "title": "التحدّي 8: ==اختر جهاز Apple المناسب للـAI==",
+            "body": "اختر دورك: أ) وكيل منزلي دائم التشغيل · ب) مطور AI متنقل · ج) نماذج محلية ضخمة"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Choose the Mac",
+            "body": "Mac mini · MacBook Pro · Mac Studio"
+          },
+          "ar": {
+            "title": "اختر الجهاز",
+            "body": "Mac mini · MacBook Pro · Mac Studio"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Choose the memory",
+            "body": "Pick the smallest memory configuration that still fits your workload — and explain why."
+          },
+          "ar": {
+            "title": "اختر الذاكرة",
+            "body": "اختر أقل سعة ذاكرة تكفي مهمتك — واشرح السبب."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-04T21:01:00+04:00",
+      "cover": "images/qahwa/week-08-day-55--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
