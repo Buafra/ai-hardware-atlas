@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-03T21:15:00+04:00",
+  "generated_at": "2026-11-04T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8028,6 +8028,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-03T21:15:00+04:00",
       "cover": "images/qahwa/week-08-day-54--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-53--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Unified memory in a Mac is the same as VRAM on a separate card.",
+        "ar": "الذاكرة الموحّدة في Mac هي نفسها VRAM في بطاقة منفصلة."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "Unified memory in a Mac ==is the same as VRAM== on a separate card.",
+            "body": "Answer: Myth ❌ Unified memory is shared by the CPU and the graphics, and what matters is its bandwidth. VRAM belongs to the card alone. The same number does not mean the same performance."
+          },
+          "ar": {
+            "title": "الذاكرة الموحّدة في Mac ==هي نفسها VRAM== في بطاقة منفصلة.",
+            "body": "الجواب: خرافة ❌ الذاكرة الموحّدة يتشاركها المعالج والرسوميات، وتُقاس بعرض نطاقها. أما VRAM فذاكرة مخصصة للبطاقة وحدها. الرقم نفسه لا يعني الأداء نفسه."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-04T07:45:00+04:00",
+      "cover": "images/qahwa/week-08-day-53--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
