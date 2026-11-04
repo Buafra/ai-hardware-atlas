@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T21:01:00+04:00",
+  "generated_at": "2026-11-04T21:15:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8255,6 +8255,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-04T21:01:00+04:00",
       "cover": "images/qahwa/week-08-day-55--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-56--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "quiz",
+      "title": {
+        "en": "Which Mac would you choose for the largest local models?",
+        "ar": "أي Mac تختار لأكبر النماذج المحلية؟"
+      },
+      "summary": {
+        "en": "Which Mac fits the job?",
+        "ar": "أي Mac يناسب المهمة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "en": {
+            "title": "Which Mac would you choose for ==the largest local models?==",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "أي Mac تختار ==لأكبر النماذج المحلية؟==",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-04T21:15:00+04:00",
+      "cover": "images/qahwa/week-08-day-56--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
