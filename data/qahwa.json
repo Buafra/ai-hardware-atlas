@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T08:02:00+04:00",
+  "generated_at": "2026-11-04T13:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8135,6 +8135,70 @@
       "permalink": "https://www.instagram.com/reel/DfTjM5tAMc7/",
       "published_at": "2026-11-04T08:02:00+04:00",
       "cover": "images/qahwa/week-08-day-54--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-56--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "recap",
+      "title": {
+        "en": "Week 8 recap",
+        "ar": "ملخص الأسبوع الثامن"
+      },
+      "summary": {
+        "en": "Apple hardware for local AI.",
+        "ar": "عتاد Apple للذكاء الاصطناعي المحلي."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Week 8 ==in a few cards==",
+            "body": "Apple hardware for local AI."
+          },
+          "ar": {
+            "title": "الأسبوع الثامن ==في بطاقات==",
+            "body": "عتاد Apple للذكاء الاصطناعي المحلي."
+          }
+        },
+        {
+          "type": "bullets",
+          "en": {
+            "title": "What we learned",
+            "items": [
+              "Apple silicon uses unified memory that CPU and GPU can access from one pool",
+              "Mac mini is strong for compact always-on agents and local services",
+              "MacBook Pro brings high-memory local AI into a portable machine",
+              "Mac Studio prioritizes large memory capacity and sustained desktop workloads"
+            ]
+          },
+          "ar": {
+            "title": "ما تعلّمناه",
+            "items": [
+              "Apple silicon تستخدم ذاكرة موحّدة يصل إليها CPU وGPU معاً",
+              "Mac mini مناسب للوكلاء والخدمات المحلية الدائمة في جهاز صغير",
+              "MacBook Pro يوفّر ذاكرة كبيرة للـAI المحلي في جهاز محمول",
+              "Mac Studio يعطي الأولوية للسعة الكبيرة والعمل المكتبي المستمر"
+            ]
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Save the whole week ==before you buy a Mac for AI=="
+          },
+          "ar": {
+            "title": "احفظ ملخص الأسبوع ==قبل شراء Mac للذكاء الاصطناعي=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DfUFjATDmr0/",
+      "published_at": "2026-11-04T13:01:00+04:00",
+      "cover": "images/qahwa/week-08-day-56--1-recap-carousel.webp",
       "related_concepts": []
     }
   ]
