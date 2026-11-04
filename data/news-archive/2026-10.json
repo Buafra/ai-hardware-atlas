@@ -31,6 +31,34 @@
    "excerpt": "Starting November 29, OpenAI will use data from Daybreak Blue sessions to train its models, even when users have turned off training. After backlash, a follow-up email promised a separate opt-out."
   },
   {
+   "id": "ed0268fa6e32",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-31T16:05:00+00:00",
+   "title": "I built an AI Tamagotchi before Meta could",
+   "title_ar": "بنيت تاماغوتشي بالذكاء الاصطناعي قبل أن تفعل Meta ذلك",
+   "url": "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
+   "summary_en": "A Verge writer built a homemade alternative to Meta's Muse Charm, the pocket AI companion Meta plans to sell this holiday season. He paid $50 for a Waveshare ESP32-S3 1.75C touchscreen pendant, one of the options Meta suggests for building a \"Muse Gadget\" that links to its Muse AI cloud through open-source code. The basic setup was slow, hard to read and could not speak, so he used Claude Code to add a conversation history page, an ElevenLabs voice, remote camera control, a pocket watch face and Tamagotchi-style avatars with a minigame. He has no coding experience, says the code may be flawed, and does not trust Meta's Muse agent with his email or home network.",
+   "summary_ar": "بنى كاتب في موقع The Verge بديلاً منزلياً لجهاز Muse Charm، وهو رفيق ذكي صغير تعتزم Meta بيعه خلال موسم العطلات. دفع 50 دولاراً مقابل قلادة بشاشة لمس هي Waveshare ESP32-S3 1.75C، وهي من الخيارات التي تقترحها Meta لبناء «Muse Gadget» يتصل بسحابة Muse للذكاء الاصطناعي عبر شيفرة مفتوحة المصدر. كان الجهاز في وضعه الأولي بطيئاً وصعب القراءة ولا ينطق الردود، فاستعان بـ Claude Code لإضافة صفحة لسجل المحادثات وصوت من ElevenLabs وتحكم عن بعد بالكاميرا ووجه ساعة جيب وشخصيات على طريقة Tamagotchi مع لعبة صغيرة. ويقول إنه لا يملك خبرة في البرمجة وإن الشيفرة قد تكون معيبة، كما أنه لا يثق بوكيل Muse التابع لـ Meta في بريده الإلكتروني أو شبكته المنزلية.",
+   "excerpt": "Mark Zuckerberg's Meta made AI look so stinking cute by giving it a squishy little face - and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi. But I won't be buying one, because we have Muse Charm at home. It…"
+  },
+  {
+   "id": "17cd7959b922",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-31T15:36:14+00:00",
+   "title": "Google's AI satellite sends a very expensive haiku to Earth",
+   "title_ar": "قمر Google الاصطناعي المزوّد بالذكاء الاصطناعي يرسل إلى الأرض قصيدة هايكو باهظة الثمن",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/31/googles-ai-satellite-sends-a-very-expensive-haiku-to-earth/5306818",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Experimental orbital datacenter prototype puts its TPU to work producing poetry"
+  },
+  {
    "id": "f9a1b5def1c8",
    "source": "the-decoder",
    "lang": "en",
@@ -101,6 +129,20 @@
    "excerpt": null
   },
   {
+   "id": "10b3fdf3c2b8",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-31T11:00:00+00:00",
+   "title": "Amazon sends chills through its workforce with mixed message memo about AI use",
+   "title_ar": "Amazon تثير القلق بين موظفيها بمذكرة برسائل متضاربة حول استخدام الذكاء الاصطناعي",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/31/amazon-sends-chills-through-its-workforce-with-mixed-message-memo-about-ai-use-corey-quinn/5306804",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "A lot of software engineers feel bleak about the future of the profession"
+  },
+  {
    "id": "8c0b7e9213a9",
    "source": "the-decoder",
    "lang": "en",
@@ -169,6 +211,20 @@
    "summary_en": "Sharjah Electricity, Water and Gas Authority (SEWA) presented its latest projects and technologies in water and energy at the second edition of the Sharjah Future Station forum. The available text is only a short excerpt, and it does not give further detail on the strategy.",
    "summary_ar": "استعرضت هيئة كهرباء ومياه وغاز الشارقة أحدث مشروعاتها وتقنياتها في مجالي المياه والطاقة خلال مشاركتها في النسخة الثانية من منتدى الشارقة محطة المستقبل. والنص المتاح مقتطف قصير فقط ولا يتضمن تفاصيل إضافية عن الاستراتيجية.",
    "excerpt": null
+  },
+  {
+   "id": "0bcbd00768f4",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-31T08:03:00+00:00",
+   "title": "Backbone of a beast – charting Nvidia's rise to networking titan",
+   "title_ar": "العمود الفقري لعملاق التقنية: تتبّع صعود Nvidia لتصبح عملاقاً في مجال الشبكات",
+   "url": "https://www.theregister.com/networks/2026/10/31/backbone-of-a-beast-charting-nvidias-rise-to-networking-titan/5306499",
+   "summary_en": "The Register looks at how Nvidia became a networking giant. According to its short description, a $6.9B bet on Mellanox made Nvidia bigger than Cisco, and also the world's most valuable company.",
+   "summary_ar": "تتناول «The Register» كيف أصبحت «NVIDIA» قوة كبرى في مجال الشبكات. ووفق الوصف المقتضب للمقال، فإن رهاناً بقيمة 6.9 مليار دولار على «Mellanox» جعل «NVIDIA» أكبر من «Cisco»، وجعلها كذلك أعلى شركات العالم قيمة.",
+   "excerpt": "How a $6.9B bet on Mellanox made Nvidia bigger than Cisco, and the world's most valuable company to boot"
   },
   {
    "id": "067b5344ebcc",
@@ -283,6 +339,34 @@
    "excerpt": "As an increasing number of AI assistants flood the market, the founder of Ollie, an assistant that respected its users' privacy, says it will be shutting down in a week."
   },
   {
+   "id": "963a648beab8",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T22:42:24+00:00",
+   "title": "Managing Amazon Bedrock costs end to end: A playbook for FinOps and platform teams",
+   "title_ar": "إدارة تكاليف Amazon Bedrock من البداية إلى النهاية: دليل عملي لفرق FinOps وفرق المنصات",
+   "url": "https://aws.amazon.com/blogs/machine-learning/managing-amazon-bedrock-costs-end-to-end-a-playbook-for-finops-and-platform-teams/",
+   "summary_en": "An AWS Machine Learning Blog post sets out a five-step operating model for managing Amazon Bedrock costs, written for FinOps practitioners and platform engineering teams. The steps are attribute, observe, enforce, optimize and operate, run as a continuous loop. The post says agentic workloads make cost control more pressing because they issue many model invocations per task and carry larger context. For attribution, Amazon Bedrock assigns inference costs to the IAM principal that made the call, shown in the CUR 2.0 report. It describes a fix for LLM gateways that use a single shared role, using per-user sessions and tags, and also covers application inference profiles and projects.",
+   "summary_ar": "تعرض مقالة على مدونة AWS للتعلم الآلي نموذجاً تشغيلياً من خمس خطوات لإدارة تكاليف Amazon Bedrock، موجهاً لمتخصصي FinOps وفرق هندسة المنصات. والخطوات هي: الإسناد والمراقبة والإنفاذ والتحسين والتشغيل، وتعمل بصورة حلقة مستمرة. وتذكر المقالة أن أعباء العمل الوكيلية تجعل ضبط التكاليف أكثر إلحاحاً لأنها تنفذ استدعاءات كثيرة للنموذج في كل مهمة وتحمل سياقاً أكبر. وفي مجال الإسناد، ينسب Amazon Bedrock تكاليف الاستدلال إلى هوية IAM التي أجرت الاستدعاء، وتظهر في تقرير CUR 2.0. كما تعرض حلاً لبوابات النماذج اللغوية الكبيرة التي تستخدم دوراً مشتركاً واحداً، عبر جلسات ووسوم لكل مستخدم، وتتناول أيضاً ملفات الاستدلال الخاصة بالتطبيقات والمشاريع.",
+   "excerpt": "This post presents a five-stage operating model for managing Amazon Bedrock cost: attribute every dollar to an owner, make every request observable, enforce budgets, optimize platform defaults, and operate a review cadence. Written for FinOps and platform engineering teams."
+  },
+  {
+   "id": "011fdc062b2b",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T22:32:53+00:00",
+   "title": "Apple Intelligence is finally coming to China with iOS 27.3",
+   "title_ar": "Apple Intelligence تصل أخيراً إلى الصين مع iOS 27.3",
+   "url": "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+   "summary_en": "Apple will bring some of its initial Apple Intelligence features to China with iOS 27.3, according to an announcement on its Chinese newsroom website, as reported by MacRumors. A beta is set for November 4th, with the full release scheduled for December. The launch does not include the new Siri AI. It covers earlier features such as notification summaries, real-time translation, rewriting and proofreading tools, visual intelligence and removing objects from photos. Apple also says it worked with Alibaba to support its Qwen chatbot in some experiences. Apple Intelligence was approved in China in July, and Reuters reported in August that Apple had trained its own LLM specifically for the country.",
+   "summary_ar": "ستطرح «Apple» بعض ميزات «Apple Intelligence» الأولى في الصين مع «iOS 27.3»، بحسب إعلان نشرته الشركة على موقعها الإخباري الصيني ونقله موقع «MacRumors». ومن المقرر إطلاق نسخة تجريبية في 4 نوفمبر، على أن يصدر الإصدار الكامل في ديسمبر. ولا يشمل الإطلاق ميزة «Siri» الذكية الجديدة، بل ميزات سابقة مثل ملخصات الإشعارات والترجمة الفورية وأدوات إعادة الصياغة والتدقيق اللغوي والذكاء البصري وإزالة العناصر من الصور. وتقول الشركة أيضاً إنها تعاونت مع «Alibaba» لدعم المساعد الذكي «Qwen» في بعض التجارب. وكانت «Apple Intelligence» قد حصلت على الموافقة في الصين في يوليو، وذكرت «رويترز» في أغسطس أن «Apple» دربت نموذجاً لغوياً كبيراً خاصاً بالصين.",
+   "excerpt": "Apple will launch Apple Intelligence in China with iOS 27.3, the company announced on its Chinese newsroom website, as reported by MacRumors."
+  },
+  {
    "id": "6198118eee13",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -311,6 +395,34 @@
    "excerpt": "Blackstone's forecast is just a prediction, but naturally, a high junk rating would make it more difficult and costlier for Anthropic to raise the money to keep funding its massive spending that has undergirded its business."
   },
   {
+   "id": "168738aae15d",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-30T21:40:03+00:00",
+   "title": "Preview web apps live as your coding agent builds them with Amazon Bedrock AgentCore runtime",
+   "title_ar": "معاينة تطبيقات الويب مباشرةً أثناء بناء وكيل البرمجة لها باستخدام Amazon Bedrock AgentCore runtime",
+   "url": "https://aws.amazon.com/blogs/machine-learning/preview-web-apps-live-as-your-coding-agent-builds-them-with-amazon-bedrock-agentcore-runtime/",
+   "summary_en": "Amazon Web Services explains how Amazon Bedrock AgentCore runtime lets developers preview web apps live while a coding agent builds them. The runtime runs each agent session in an isolated microVM, and Session endpoints give each session an authenticated URL that forwards HTTP requests and WebSocket connections to ports the developer allows, within 8000–12000. In the sample, an agent keeps a Vite website running on port 8090, and the user watches it change to a dark theme without a refresh. Every request needs credentials, such as a SigV4 signature or a bearer token, and the URL lasts only as long as the session. AWS says it is meant for building and reviewing, while serving users requires a hosting service such as AWS Amplify Hosting.",
+   "summary_ar": "تشرح خدمات أمازون ويب (AWS) كيف تتيح بيئة تشغيل Amazon Bedrock AgentCore للمطورين معاينة تطبيقات الويب مباشرةً أثناء بناء وكيل البرمجة لها. تشغّل البيئة كل جلسة للوكيل داخل آلة افتراضية مصغّرة معزولة، وتمنح نقاط نهاية الجلسة (Session endpoints) كل جلسة رابطاً موثّقاً يمرّر طلبات HTTP واتصالات WebSocket إلى المنافذ التي يسمح بها المطور، ضمن النطاق من 8000 إلى 12000. في المثال، يُبقي الوكيل موقع Vite يعمل على المنفذ 8090، ويشاهد المستخدم الموقع يتحول إلى المظهر الداكن دون تحديث الصفحة. يتطلب كل طلب بيانات اعتماد، مثل توقيع SigV4 أو رمز حامل، ولا يبقى الرابط صالحاً إلا بقدر عمر الجلسة. وتذكر AWS أن الميزة مخصصة للبناء والمراجعة، أما تقديم التطبيق للمستخدمين فيتطلب خدمة استضافة مثل AWS Amplify Hosting.",
+   "excerpt": "Amazon Bedrock AgentCore Session endpoints give each runtime session an authenticated URL that forwards any HTTP method, path, and WebSocket connection to the ports you allow."
+  },
+  {
+   "id": "a7904f9e100d",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-30T21:19:26+00:00",
+   "title": "How a Contractor’s Claude Agent Got Into the Pentagon",
+   "title_ar": "كيف وصل وكيل Claude التابع لأحد المتعاقدين إلى البنتاغون",
+   "url": "https://www.wired.com/story/uncanny-valley-podcast-how-a-contractors-claude-agent-got-into-the-pentagon/",
+   "summary_en": "In this episode of WIRED's Uncanny Valley podcast, hosts Brian Barrett, Leah Feiger and Zoë Schiffer discuss a scoop on a defense contractor that connected Anthropic's Claude Code to a secure Department of Defense system. They also go through Anthropic's public IPO filing, made on Monday, which they sort into green, yellow and red flags. The company's valuation rose from $183 billion to $965 billion, and some expect nearly $2 trillion at trading. Revenue reached $16.3 billion in the first half of 2026, more than 14 times the year before, though losses and compute commitments are also large. A third topic is volunteers preparing for ICE agents possibly appearing at polling sites in the midterms.",
+   "summary_ar": "في هذه الحلقة من بودكاست «أنكاني فالي» (Uncanny Valley) من WIRED، يناقش المقدّمون براين باريت وليا فيغر وزوي شيفر سبقاً صحفياً عن متعاقد دفاعي ربط Claude Code من Anthropic بنظام آمن تابع لوزارة الدفاع الأمريكية. كما يستعرضون ملف الطرح العام الأولي الذي قدّمته Anthropic يوم الاثنين، ويصنّفون ما فيه إلى إشارات خضراء وصفراء وحمراء. ارتفعت قيمة الشركة من 183 مليار دولار إلى 965 مليار دولار، ويتوقع البعض أن تقترب من تريليوني دولار عند بدء التداول. وبلغت الإيرادات 16.3 مليار دولار في النصف الأول من 2026، أي أكثر من 14 ضعفاً عن العام السابق، مع خسائر والتزامات ضخمة للحوسبة. ويتناول البودكاست أيضاً تحضير متطوعين لاحتمال ظهور عناصر من هيئة الهجرة والجمارك (ICE) عند مراكز الاقتراع في انتخابات التجديد النصفي.",
+   "excerpt": "This week on Uncanny Valley, we also discuss Anthropic’s IPO filing and the volunteers gearing up to counter ICE at the midterms."
+  },
+  {
    "id": "f1f6194d2036",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -325,6 +437,20 @@
    "excerpt": "Big Tech is pouring billions into AI infrastructure, but mounting debt, negative cash flow, and growing investor skepticism are raising questions about the sustainability of the AI spending boom."
   },
   {
+   "id": "ce0cce9f3bc5",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T21:09:54+00:00",
+   "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+   "title_ar": "إضافة Anthropic لمحرر VS Code على Cursor تعرضت لباب خلفي لنحو 12 ساعة",
+   "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+   "summary_en": "Ars Technica reports that an official Anthropic extension for Claude in Cursor's VS Code marketplace was backdoored, with Cursor saying at most 5,000 users were affected by version 2.1.313. Anthropic released version 2.1.314 several hours later, but neither company has explained how attackers reached the official account, and Anthropic has not publicly warned customers. According to Cursor, the malicious code tried to set up a persistent SSH backdoor and a reverse SSH tunnel on Windows, macOS and Linux. Cursor removed the version, blocked its distribution and temporarily shut the marketplace to rotate keys and audit access. Anyone who installed or updated the extension between 5:27 am ET and 4:35 pm on Thursday should consider themselves affected.",
+   "summary_ar": "تفيد Ars Technica بأن إضافة رسمية لنموذج Claude من Anthropic في متجر إضافات VS Code الخاص بـ Cursor جرى زرع باب خلفي فيها، وتقول Cursor إن الإصدار 2.1.313 طال 5,000 مستخدم على الأكثر. أصدرت Anthropic الإصدار 2.1.314 بعد ساعات عدة، لكن أياً من الشركتين لم يوضح كيف وصل المهاجمون إلى الحساب الرسمي، ولم تحذّر Anthropic عملاءها علناً. وبحسب Cursor، حاولت الشيفرة الخبيثة إنشاء باب خلفي دائم عبر SSH ونفق SSH عكسي على أنظمة Windows وmacOS وLinux. وأزالت Cursor الإصدار ومنعت توزيعه وأغلقت المتجر مؤقتاً لتدوير المفاتيح ومراجعة صلاحيات الوصول. ويُعدّ كل من ثبّت الإضافة أو حدّثها بين الساعة 5:27 صباحاً و4:35 مساءً بتوقيت الساحل الشرقي يوم الخميس متأثراً.",
+   "excerpt": "It's still unknown how attackers got access to Anthropic's verified Cursor account."
+  },
+  {
    "id": "da7bf57625f8",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -337,6 +463,48 @@
    "summary_en": "The Abu Dhabi Department of Government Enablement has released a report introducing the \"leaner workforce paradox\": as AI takes over routine tasks, people make fewer decisions, but each decision carries more weight. The report calls managing this one of the main governance challenges of the next decade. It outlines four scenarios for the future of work up to 2040 and favours one in which AI handles administrative tasks while humans keep judgement, creativity and relationship management. It notes that over 95% of Abu Dhabi government employees have completed AI training, and that more than 100 AI use cases run across over 40 government entities. Among its recommendations are naming a specific person responsible for key public decisions and piloting redesigned roles in vital services.",
    "summary_ar": "أصدرت دائرة التمكين الحكومي في أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، أي أن الأفراد يتخذون قرارات أقل مع تولّي الذكاء الاصطناعي المهام الروتينية، بينما تزداد أهمية كل قرار. ويعدّ التقرير التعامل مع هذه الظاهرة من أبرز تحديات الحوكمة خلال العقد المقبل. ويرسم أربعة سيناريوهات لمستقبل العمل حتى عام 2040، ويفضّل سيناريو يتولى فيه الذكاء الاصطناعي الأعباء الإدارية، فيما يحتفظ الإنسان بالحكم والإبداع وإدارة العلاقات. ويشير إلى أن أكثر من 95% من موظفي حكومة أبوظبي أكملوا تدريباً في الذكاء الاصطناعي، وأن أكثر من 100 حالة استخدام تعمل في أكثر من 40 جهة حكومية. ومن توصياته تحديد شخص بعينه يتحمّل مسؤولية القرارات العامة الأساسية، وإطلاق مشاريع تجريبية لإعادة تصميم الأدوار في الخدمات الحيوية.",
    "excerpt": "أطلقت دائرة التمكين الحكومي- أبوظبي تقريراً يطرح مفهوم «مفارقة القوى العاملة الأخفّ حجماً»، وهي ظاهرة يتخذ فيها الأفراد قرارات أقل مع تولّي الذكاء الاصطناعي مزيداً من المهام الروتينية، بينما تزداد أهمية كل قرار وتبعاته."
+  },
+  {
+   "id": "e6a83342c0c5",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-10-30T20:48:43+00:00",
+   "title": "Sam Altman says it’s better for RAM to be in a data center than on your desk",
+   "title_ar": "سام ألتمان: من الأفضل أن تكون ذاكرة RAM في مركز بيانات بدلاً من أن تكون على مكتبك",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
+   "summary_en": "OpenAI CEO Sam Altman said on the Cheeky Pint podcast that it is \"terrible\" for the world's limited DRAM to sit in personal computers rather than in data centers. He noted that many people want local inference and assume open-source models on their own machines remove the need for data center capacity. From a global allocation view, he said, memory in personal computers is used about five percent of the time, while the cloud can reach maximum utilization in a supply-constrained market. The article says OpenAI's buying is squeezing RAM supply, and that Samsung and SK Hynix have long-term deals with cloud operators and projects like Stargate that reserve much of the output. It ties the billions spent on chips to rising prices for laptops and phones.",
+   "summary_ar": "قال الرئيس التنفيذي لشركة OpenAI «سام ألتمان» خلال ظهوره في بودكاست Cheeky Pint إن من «السيئ للغاية» وضع الإمدادات المحدودة من ذاكرة DRAM في الحواسيب الشخصية بدلاً من مراكز البيانات. وأوضح أن كثيرين يريدون تشغيل النماذج محلياً ويفترضون أن النماذج مفتوحة المصدر تغني عن سعة مراكز البيانات. ويرى من منظور التوزيع العالمي أن الذاكرة في الأجهزة الشخصية لا تُستخدم سوى نحو خمسة في المئة من الوقت، بينما تتيح السحابة أعلى استفادة ممكنة في سوق محدودة الإمدادات. ويذكر المقال أن مشتريات OpenAI تضغط على إمدادات الذاكرة، وأن Samsung وSK Hynix أبرمتا اتفاقات طويلة الأجل مع مشغلي الخدمات السحابية ومشاريع مثل Stargate تحجز جزءاً كبيراً من الإنتاج، وأن المليارات المنفقة على الرقائق ترتبط بارتفاع أسعار الحواسيب المحمولة والهواتف.",
+   "excerpt": "Asked about supply chain shortages, like the ongoing RAM shortage, OpenAI CEO Sam Altman said in an interview that it's \"terrible\" to have RAM in personal PCs instead of data centers."
+  },
+  {
+   "id": "65d255a74525",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-30T20:40:13+00:00",
+   "title": "Dartmouth's provost warned us about AI cheating—but his own AI use cost him his job",
+   "title_ar": "عميد الشؤون الأكاديمية في دارتموث حذّرنا من الغش بالذكاء الاصطناعي، لكن استخدامه الشخصي للذكاء الاصطناعي كلّفه وظيفته",
+   "url": "https://arstechnica.com/tech-policy/2026/10/dartmouths-provost-warned-us-about-ai-cheating-but-his-own-ai-use-cost-him-his-job/",
+   "summary_en": "Dartmouth College provost Santiago Schnell resigned after an advisory committee found he did not disclose significant AI use in an academic paper and in a Washington Post op-ed, even though the publishers required disclosure. The committee noted his insufficient cooperation: he handed over his Dartmouth laptop but not logs from personal LLM accounts, and he declined to meet it. Logs from his university Claude account showed him using it to revise papers, fix code and edit figures, and the committee said his public descriptions may understate his actual use. Schnell has said he used AI only as an editing aid. President Sian Leah Beilock still wants more AI at Dartmouth but says leaders must model transparency.",
+   "summary_ar": "استقال عميد الشؤون الأكاديمية في كلية «دارتموث» «سانتياغو شنيل» بعد أن خلصت لجنة استشارية إلى أنه لم يفصح عن استخدام كبير للذكاء الاصطناعي في ورقة أكاديمية وفي مقال رأي نشرته Washington Post، رغم أن الناشرين اشترطوا الإفصاح. وأشارت اللجنة إلى «عدم كفاية تعاونه»، إذ سلّم حاسوبه الجامعي دون سجلات حساباته الشخصية لنماذج اللغة، ورفض الاجتماع بها. وبيّنت سجلات حسابه المؤسسي في Claude أنه استخدمه لمراجعة أوراقه وإصلاح الأخطاء البرمجية وتحرير الأشكال، وقالت اللجنة إن أوصافه العلنية قد تقلل من حجم استخدامه الفعلي. وقال «شنيل» إنه استعان بالذكاء الاصطناعي أداة تحريرية فقط. وما زالت رئيسة الكلية «سيان ليا بيلوك» تريد مزيداً من الذكاء الاصطناعي في «دارتموث»، لكنها ترى أن على القادة التحلي بالشفافية.",
+   "excerpt": "People who love AI don't always love telling others they used it."
+  },
+  {
+   "id": "bb88bfd803d0",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-10-30T20:32:32+00:00",
+   "title": "Darkbloom, which allowed Mac users to rent out their GPUs for AI inference, warns of low payouts",
+   "title_ar": "Darkbloom، التي أتاحت لمستخدمي Mac تأجير وحدات معالجة الرسومات لديهم لاستدلال الذكاء الاصطناعي، تحذر من انخفاض الأرباح المدفوعة",
+   "url": "https://www.theregister.com/ai-and-ml/2026/10/30/darkbloom-which-allowed-mac-users-to-rent-out-their-gpus-for-ai-inference-warns-of-low-payouts/5306782",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "25a528e218b1",
@@ -395,6 +563,20 @@
    "excerpt": "Mohammad Abu Sheikh says facilities will put country ahead as robot interest surges"
   },
   {
+   "id": "538ea1326a6a",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-30T19:30:52+00:00",
+   "title": "Basically no one is using AI agents for their DoorDash orders",
+   "title_ar": "لا أحد تقريباً يستخدم وكلاء الذكاء الاصطناعي لطلبات DoorDash",
+   "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
+   "summary_en": "DoorDash co-founder and CEO Tony Xu said on a Thursday third-quarter earnings call that outside AI agents have generated only several hundred orders on the platform, which he called a very low use case. The company handled just under 1 billion orders in the third quarter of 2026. DoorDash launched its Model Context Protocol connector less than a month ago, and it is limited to a small number of early beta partners, mainly for corporate lunch orders. Xu's figure excludes DoorDash's own AI tools such as Ask DoorDash, whose orders the company says have higher basket values. Xu said agents may help with long-consideration purchases, while simple food orders tend to go directly to DoorDash.",
+   "summary_ar": "قال توني شو، المؤسس المشارك والرئيس التنفيذي لشركة DoorDash، في مكالمة أرباح الربع الثالث يوم الخميس، إن وكلاء الذكاء الاصطناعي الخارجيين ولّدوا بضع مئات من الطلبات فقط على المنصة، ووصف ذلك بأنه حالة استخدام منخفضة جداً. وكانت الشركة قد تعاملت مع ما يقارب مليار طلب في الربع الثالث من عام 2026. وأطلقت DoorDash موصل Model Context Protocol قبل أقل من شهر، وهو متاح لعدد صغير من شركاء الاختبار المبكر، ويُستخدم أساساً لطلبات غداء الشركات. ولا يشمل رقم شو أدوات الذكاء الاصطناعي الداخلية للشركة مثل Ask DoorDash، التي تقول الشركة إن طلباتها تتميز بقيمة سلة أعلى. وأوضح شو أن الوكلاء قد يفيدون في المشتريات التي تحتاج إلى تفكير طويل، بينما تتجه طلبات الطعام البسيطة مباشرة إلى DoorDash.",
+   "excerpt": "But it's still early days for the relatively new e-commerce use case."
+  },
+  {
    "id": "2cbbfda3d8ac",
    "source": "albayan",
    "lang": "ar",
@@ -407,6 +589,20 @@
    "summary_en": "China's STAR 50 index, which groups leading technology firms listed in Shanghai, fell more than 40% in four months to 29 October, wiping out about $480 billion in market value, according to a CNN report. On 26 October it traded at around 100 times trailing 12-month earnings, down from nearly 250 times earlier. Goldman Sachs figures cited in the report put AI-related stocks at about 42% of market value and 57% of trading across mainland and Hong Kong-listed H shares. The article says the drop reflects investors reassessing prices rather than AI failing. Analysts told CNA that state support could sustain ambitions, while smaller, cash-hungry firms face more pressure. Christopher Beddor of Gavekal Dragonomics sees access to advanced chips as the main obstacle.",
    "summary_ar": "هبط مؤشر «STAR 50» الذي يضم أبرز شركات التكنولوجيا المدرجة في شنغهاي بأكثر من 40% خلال أربعة أشهر حتى 29 أكتوبر، ما محا نحو 480 مليار دولار من القيمة السوقية، وفق تقرير لشبكة CNN. وكان المؤشر يتداول في 26 أكتوبر عند نحو 100 ضعف أرباح الأشهر الاثني عشر الماضية، بعدما اقترب سابقاً من 250 ضعفاً. وبحسب أرقام Goldman Sachs التي أوردها التقرير، شكّلت الأسهم المرتبطة بالذكاء الاصطناعي نحو 42% من القيمة السوقية و57% من التداولات في أسهم البر الرئيسي الصيني وأسهم H المدرجة في هونغ كونغ. ويرى المقال أن التراجع يعكس إعادة تقييم المستثمرين للأسعار وليس فشلاً للذكاء الاصطناعي. وقال محللون لقناة CNA إن الدعم الحكومي قد يساعد الصين على مواصلة طموحاتها، بينما قد تواجه الشركات الأصغر والأكثر استنزافاً للنقد ضغوطاً أكبر. ويعتبر كريستوفر بيدور من Gavekal Dragonomics أن الوصول إلى الرقائق المتقدمة هو العقبة الأكبر.",
    "excerpt": "قبل سنوات قليلة، كان يكفي تقريباً أن يرتبط اسم شركة بالذكاء الاصطناعي حتى تبدأ التوقعات بالصعود، المستثمرون يندفعون، أسع"
+  },
+  {
+   "id": "226d6d5c25cb",
+   "source": "mit-news-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-30T19:00:00+00:00",
+   "title": "Q&A: Hey AI, who should I vote for this year?",
+   "title_ar": "أسئلة وأجوبة: أيها الذكاء الاصطناعي، لمن يجب أن أصوّت هذا العام؟",
+   "url": "https://news.mit.edu/2026/qa-hey-ai-who-should-i-vote-for-this-year-1030",
+   "summary_en": "MIT researchers have built a dashboard called the LLM Election Observatory to track in real time how popular AI chatbots answer questions about the 2026 U.S. midterm elections. The team is led by Professor Adam Berinsky, Assistant Professor Chara Podimata and Professor Charles Stewart III. It runs a fixed set of questions on topics such as election certification, hot-button issues, result predictions and news coverage every few days, watching how answers vary with user location, party affiliation and identity. Podimata says there is no good historical record of this information environment, so the project aims to document it and share the data. She adds that framing, emphasis and cited sources matter beyond factual accuracy, and that the work builds on her research on the 2024 election.",
+   "summary_ar": "طوّر باحثون في معهد ماساتشوستس للتكنولوجيا (MIT) لوحة متابعة باسم LLM Election Observatory لرصد كيفية إجابة روبوتات الدردشة الشائعة عن أسئلة تتعلق بانتخابات التجديد النصفي الأمريكية لعام 2026 في الوقت الفعلي. ويقود الفريق الأستاذ آدم بيرينسكي والأستاذة المساعدة شارا بوديماتا والأستاذ تشارلز ستيوارت الثالث. ويطرح الفريق مجموعة ثابتة من الأسئلة حول موضوعات منها المصادقة على نتائج الانتخابات والقضايا الخلافية وتوقعات النتائج والتغطية الإخبارية، ويكررها كل بضعة أيام لمراقبة تغيّر الإجابات بحسب موقع المستخدم وانتمائه الحزبي وهويته. وتقول بوديماتا إنه لا يوجد سجل تاريخي جيد لهذه البيئة المعلوماتية، لذلك يهدف المشروع إلى توثيقها وإتاحة البيانات للباحثين والجمهور. وتضيف أن صياغة الإجابات وما تركّز عليه والمصادر التي تستشهد بها أمور مهمة إلى جانب الدقة الواقعية، وأن المشروع يبني على بحثها حول انتخابات 2024.",
+   "excerpt": "MIT professors Adam Berinsky and Chara Podimata discuss a new project to track how AI chatbots are responding to questions about the 2026 U.S. midterm elections."
   },
   {
    "id": "c4dbacf8aa2b",
@@ -435,6 +631,20 @@
    "summary_en": "A tampered version of the Claude Code extension was available in Cursor's VS Code extension marketplace on Thursday for about eleven hours, and up to 5,000 users may have been affected, according to Cursor. Anthropic had no role in building it. The extension tried to collect data such as hostname, username, operating system and public IP address, and it also tried to set up remote access for the attacker, though Cursor says this likely would not have worked on most machines because it needs admin privileges. After discovering the problem, Cursor removed the extension and took the whole marketplace offline. It was restored after Cursor worked with providers to neutralize the malware and confirmed there was no further risk. Cursor says no other extensions were affected.",
    "summary_ar": "أعلنت شركة Cursor أن نسخة معدّلة بشكل خبيث من إضافة Claude Code ظلت متاحة يوم الخميس لمدة نحو إحدى عشرة ساعة في سوق إضافات VS Code الخاص بها، وأن عدد المستخدمين المتأثرين قد يصل إلى 5,000. وأكدت أن شركة Anthropic لم يكن لها أي دور في تطويرها. حاولت الإضافة جمع بيانات مثل اسم الجهاز واسم المستخدم ونظام التشغيل وعنوان IP العام، كما سعت إلى إعداد وصول عن بُعد للمهاجم، لكن Cursor ترى أن ذلك غالباً لم يكن ليعمل على معظم الأجهزة لأنه يتطلب صلاحيات المسؤول. وبعد اكتشاف المشكلة سحبت الشركة الإضافة وأوقفت السوق بالكامل. ثم أعادت تشغيله بعد العمل مع مزودي الخدمة على تحييد البرمجية الخبيثة والتأكد من عدم وجود خطر إضافي. وتقول الشركة إن أي إضافات أخرى لم تتأثر.",
    "excerpt": "A tampered Claude Code extension was live on the Cursor marketplace for about 11 hours, affecting up to 5,000 users. It tried to steal user data and set up remote access. Cursor took the entire marketplace offline and reinstated it after confirming there was no further risk."
+  },
+  {
+   "id": "b2263e9f8412",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-30T17:57:24+00:00",
+   "title": "nemotron-halloween",
+   "title_ar": null,
+   "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+   "summary_en": "An NVIDIA employee describes building MonsterHouse, an interactive Halloween projection that gives a garage door a mouth and the personality of a grumpy old pirate ship who answers trick-or-treaters and softens when they are polite. It uses the NVIDIA Nemotron Voice Agent with Nemotron ASR, Nemotron 3.5 Bolt E4B 4GB, Magpie TTS Zeroshot and Audio2Face-3D, and runs on a single workstation. After testing more than a dozen models, the author chose Bolt E4B, a small open language model, in its 4-bit quantized release, shaped by a LoRA adapter trained on over 5000 multi-turn conversations. The character was built in Autodesk Maya and Unreal Engine, and the pipeline starts speech early and reuses prepared lines and recordings to keep replies quick.",
+   "summary_ar": "يروي أحد موظفي NVIDIA كيف بنى مشروع MonsterHouse، وهو عرض إسقاط ضوئي تفاعلي لليلة الهالوين يمنح باب المرآب فماً وشخصية سفينة قراصنة عجوز متذمرة، تردّ على الأطفال الذين يطرقون الأبواب وتلين حين يتحلّون بالأدب. يعتمد المشروع على NVIDIA Nemotron Voice Agent مع Nemotron ASR وNemotron 3.5 Bolt E4B 4GB وMagpie TTS Zeroshot وAudio2Face-3D، ويعمل على محطة عمل واحدة. وبعد اختبار أكثر من اثني عشر نموذجاً، اختار الكاتب Bolt E4B، وهو نموذج لغوي صغير مفتوح، بإصداره المكمّم بدقة 4 بت، مع محوّل LoRA دُرّب على أكثر من 5000 محادثة متعددة الأدوار. بُنيت الشخصية في Autodesk Maya وUnreal Engine، ويبدأ النظام النطق قبل اكتمال الجواب ويعيد استخدام عبارات وتسجيلات جاهزة لتسريع الردود.",
+   "excerpt": "A Blog post by NVIDIA on Hugging Face"
   },
   {
    "id": "d52c9778a55e",
@@ -1176,7 +1386,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a14",
    "summary_en": "NVIDIA has announced a new AI model called Nemotron 3.5 Transcribe, which turns audio recordings into written text and supports 40 languages. Developers can use it for free, as it comes with open weights. The company says it also handles translation between English and 31 other languages, processes recordings of up to an hour, and can tell apart as many as eight speakers in one recording. NVIDIA says it is aimed at apps for transcribing recordings and medical conversations, and it can recognise specialised technical terms. The model has 30 billion parameters and can run on a single chip across a range of computing platforms, so multiple systems are not needed.",
    "summary_ar": "أعلنت شركة NVIDIA إطلاق نموذج جديد للذكاء الاصطناعي باسم Nemotron 3.5 Transcribe، يحوّل التسجيلات الصوتية إلى نصوص مكتوبة ويدعم 40 لغة. ويمكن للمطورين استخدامه مجاناً لأنه يأتي بأوزان مفتوحة. وتقول الشركة إن النموذج يدعم أيضاً الترجمة بين الإنجليزية و31 لغة أخرى، ويعالج تسجيلات تصل مدتها إلى ساعة، ويميّز بين أصوات ما يصل إلى ثمانية متحدثين في التسجيل الواحد. ويستهدف تطبيقات تفريغ التسجيلات والمحادثات الطبية، ويستطيع التعرف على المصطلحات الفنية المتخصصة. ويضم النموذج 30 مليار معامل، ويمكن تشغيله على شريحة واحدة عبر منصات حوسبة متنوعة، دون الحاجة إلى أنظمة حوسبة متعددة.",
-   "excerpt": "أطلقت شركة إنفيديا الأميركية، نموذجاً جديداً للذكاء الاصطناعي لتحويل التسجيلات الصوتية إلى نصوص مكتوبة، يدعم 40 لغة، ويتيح للمطورين استخدامه مجاناً بأوزان…"
+   "excerpt": null
   },
   {
    "id": "56fa7327f2b2",
@@ -1470,7 +1680,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/29/mm12",
    "summary_en": "A symposium organised by the Holy Quran Academy in Sharjah examined the achievements of the Encyclopaedia of Rhetorical Exegesis and looked at future directions for rhetorical studies after the encyclopaedia. Participants also discussed how artificial intelligence could deepen appreciation of the rhetoric of Quranic parables, including methods for identifying rhetorical meanings and digital applications of rhetorical exegesis. Academy Secretary-General Abdullah Khalaf Al Hosani said AI could link the heritage of Arabic rhetoric with modern knowledge tools and open new avenues for research. Mohammed Safi Al-Mustghanemi, the encyclopaedia's scientific director, described its scholarly methodology, and university deans praised its contribution. Senior officials, researchers and professors attended, and Al Hosani honoured the participants at the close.",
    "summary_ar": "ناقشت ندوة نظمتها أكاديمية القرآن الكريم في الشارقة إنجازات موسوعة التفسير البلاغي، واستعرضت آفاق الدراسات البلاغية في مرحلة ما بعد الموسوعة. كما بحث المشاركون دور الذكاء الاصطناعي في تعميق تذوق بلاغة الأمثال القرآنية، ومن ذلك طرق استخراج المعاني البلاغية وإمكانات التطبيق الرقمي للتفسير البلاغي. وقال الأمين العام للأكاديمية الدكتور عبدالله خلف الحوسني إن الذكاء الاصطناعي يربط تراث البلاغة العربية بأدوات المعرفة الحديثة ويفتح آفاقاً جديدة للبحث. وعرض الدكتور محمد صافي المستغانمي، المدير العلمي للموسوعة، المنهج العلمي المتبع فيها، فيما أشاد عميدا كليتين جامعيتين بإسهامها. وحضر الندوة مسؤولون وباحثون وأساتذة جامعات، وكرّم الحوسني المتحدثين والمشاركين في ختامها.",
-   "excerpt": "Sharjah’s Holy Quran Academy hosted a scientific symposium exploring the achievements of the Encyclopaedia of Rhetorical Exegesis and future research…"
+   "excerpt": null
   },
   {
    "id": "216ba6a50c0a",
@@ -1596,7 +1806,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/29/a6",
    "summary_en": "Five entries from an AI camp have been shortlisted for the Sharjah Government Communication Award. The camp aims to let participants develop innovative solutions that use AI technologies to improve communication between individuals and government bodies. Participants worked on specialised projects applying AI in four areas: public health, education, environmental transformation and food security. The qualifying teams are still refining their projects at the Al Majaz Amphitheatre ahead of a final presentation scheduled for November 1st. Al Abqash thanked the Sharjah Government Media Bureau and the award for the opportunity to take part.",
    "summary_ar": "تأهلت خمسة مشاريع من معسكر للذكاء الاصطناعي إلى القائمة المختصرة لجائزة الشارقة للاتصال الحكومي. ويهدف المعسكر إلى تمكين المشاركين من تطوير حلول مبتكرة توظف تقنيات الذكاء الاصطناعي لتحسين التواصل بين الأفراد والجهات الحكومية. وعمل المشاركون على مشاريع متخصصة تطبق الذكاء الاصطناعي في أربعة مجالات رئيسية هي الصحة العامة والتعليم والتحول البيئي والأمن الغذائي. وما زالت الفرق المتأهلة تواصل تحسين مشاريعها في مسرح المجاز تمهيداً للعرض النهائي المقرر في الأول من نوفمبر. وقدمت الأبقش الشكر للمكتب الإعلامي لحكومة الشارقة وللجائزة على فرصة المشاركة.",
-   "excerpt": "Hoor Al Abqash, Technical Supervisor of the Artificial Intelligence (AI) Camp at the Rubu’ Qarn Center for Science and Technology, confirmed that the Center is…"
+   "excerpt": null
   },
   {
    "id": "d463bd1a8e80",
@@ -1708,7 +1918,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/10/29/a4",
    "summary_en": "The Sharjah Government Communication Award has launched an AI Skills Challenge, which forms part of the Best Innovators Competition in Smart Communication Award, one of the award's categories. Al Dhahri said the top five teams have been shortlisted. The winners will be announced on November 2nd during the award ceremony. The challenge highlights the use of artificial intelligence skills to enhance creativity and innovation in government communication.",
    "summary_ar": "أطلقت جائزة الشارقة للاتصال الحكومي تحدي مهارات الذكاء الاصطناعي، وهو جزء من مسابقة أفضل المبتكرين في جائزة التواصل الذكي، إحدى فئات الجائزة. وقالت الظاهري إنه تم ترشيح أفضل خمسة فرق للمنافسة. وسيُعلن عن الفائزين في الثاني من نوفمبر خلال حفل الجائزة. ويسلّط التحدي الضوء على توظيف مهارات الذكاء الاصطناعي لتعزيز الإبداع والابتكار في الاتصال الحكومي.",
-   "excerpt": "Aysha Abdullah Al Dhahri, Head of the Government Communication Network Department at the Sharjah Government Media Bureau, announced the launch of the…"
+   "excerpt": null
   },
   {
    "id": "24929e4a8bee",
@@ -1862,7 +2072,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a6",
    "summary_en": "Five projects from the AI camp at the Rubu Qarn Centre for Science and Technology have qualified for the Sharjah Government Communication Award, according to Hour Saleh Al Abqash, the camp's technical supervisor. Participants developed projects that apply artificial intelligence in four areas: public health, education, environmental transformation and food security. The aim is to offer innovative solutions that support communication between individuals and government bodies. The qualified teams are continuing to work on their projects at Al Majaz Theatre ahead of a final presentation scheduled for 1 November. Al Abqash thanked the award and the Sharjah Government Media Office for the opportunity.",
    "summary_ar": "أعلنت حور صالح الأبقش، المشرف التقني على مخيم الذكاء الاصطناعي في مركز ربع قرن للعلوم والتكنولوجيا، تأهل خمسة مشاريع من المخيم إلى جائزة الشارقة للاتصال الحكومي. وعمل المشاركون على مشاريع توظف الذكاء الاصطناعي في أربعة محاور هي الصحة العامة والتعليم والتحول البيئي والأمن الغذائي، بهدف تقديم حلول مبتكرة تدعم التواصل بين الأفراد والجهات الحكومية. وتواصل الفرق المتأهلة العمل على مشاريعها في مسرح المجاز استعداداً للعرض الختامي المقرر في الأول من نوفمبر. وشكرت الأبقش الجائزة والمكتب الإعلامي لحكومة الشارقة على إتاحة هذه الفرصة.",
-   "excerpt": "أكدت حور صالح الأبقش، المشرف التقني على مخيم الذكاء الاصطناعي في مركز ربع قرن للعلوم والتكنولوجيا، مشاركة المركز في جائزة الشارقة للاتصال الحكومي، بخمسة مشاريع…"
+   "excerpt": null
   },
   {
    "id": "5289072612ad",
@@ -1960,7 +2170,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/10/29/a4",
    "summary_en": "The Sharjah Government Communication Award has launched an AI Skills Challenge, according to Aisha Abdullah Al Dhahri, head of the Government Communication Network section at the Sharjah Government Media Office. The challenge is run with the Rubu Qarn Foundation for Making Leaders and Innovators and belongs to the creative competition and smart communication awards category. The top five teams have been nominated, and the winners will be announced next Monday at the award ceremony. The competition highlights the use of AI skills to boost creativity and innovation in government communication.",
    "summary_ar": "أفادت عائشة عبدالله الظاهري، رئيسة قسم شبكة الاتصال الحكومي في المكتب الإعلامي لحكومة الشارقة، بإطلاق تحدي مهارات الذكاء الاصطناعي ضمن جائزة الشارقة للاتصال الحكومي. وينظَّم التحدي بالتعاون مع مؤسسة ربع قرن لصناعة القادة والمبتكرين، ويندرج ضمن فئة جوائز التنافس الإبداعي والتواصل الذكي. وتم ترشيح أفضل خمسة فرق للمنافسة، على أن يُعلن عن الفائزين يوم الاثنين المقبل خلال حفل الجائزة. وتسلّط المنافسة الضوء على توظيف مهارات الذكاء الاصطناعي في تعزيز الإبداع والابتكار في مجال الاتصال الحكومي.",
-   "excerpt": "أعلنت عائشة عبد الله الظاهري رئيس قسم شبكة الاتصال الحكومي في المكتب الإعلامي لحكومة الشارقة، عن انطلاق تحدي مهارات الذكاء الاصطناعي، بالتعاون مع مؤسسة ربع قرن…"
+   "excerpt": null
   },
   {
    "id": "c9786a2a56df",
@@ -3557,6 +3767,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "How AI might enter the org chart—beneath, beside, and between us."
+  },
+  {
+   "id": "aed046389bac",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-28T09:50:31+00:00",
+   "title": "الانهيار العالمي للذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/661454/%D8%A2%D8%B1%D8%A7%D8%A1/%D8%A7%D9%84%D8%A7%D9%86%D9%87%D9%8A%D8%A7%D8%B1-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A-%D9%84%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+   "summary_en": "An analysis published by Independent Arabia argues that the global economy relies more and more on artificial intelligence, with heavy investment, high share prices and debt feeding what may be the largest technology bubble markets have seen. The text says a burst would send a wide shock around the world, but would remove weaker companies and leave a more efficient sector, while AI's real effect on productivity comes only after the speculation fades. It notes that about 30 percent of Americans use AI less than four years after ChatGPT launched, and that the ten largest S&P 500 companies, all major AI players, make up roughly 40 percent of the index. It adds that AI-related exports account for a third of China's growth, and that South Korea's stock market value rose from $1.5 trillion to over $5 trillion.",
+   "summary_ar": "يرى تحليل نشرته «اندبندنت عربية» أن الاقتصاد العالمي يعتمد بصورة متزايدة على الذكاء الاصطناعي، وأن الاستثمارات الضخمة وارتفاع أسعار الأسهم والديون تغذي ما قد يكون أكبر فقاعة تكنولوجية شهدتها الأسواق. ويشير النص إلى أن انفجارها سيحدث صدمة واسعة حول العالم، لكنه سيُخرج الشركات الأضعف ويترك قطاعاً أكثر كفاءة، بينما لا يظهر الأثر الحقيقي للذكاء الاصطناعي في الإنتاجية إلا بعد أن تهدأ المضاربات. ويذكر أن نحو 30 في المئة من الأميركيين يستخدمون الذكاء الاصطناعي بعد أقل من أربعة أعوام على إطلاق ChatGPT، وأن أكبر عشر شركات في مؤشر S&P 500، وكلها من كبار اللاعبين في هذا المجال، تمثل قرابة 40 في المئة من المؤشر. ويضيف أن الصادرات المرتبطة بالذكاء الاصطناعي تشكل ثلث النمو في الصين، وأن القيمة السوقية للأسهم في كوريا الجنوبية قفزت من 1.5 تريليون دولار إلى أكثر من 5 تريليونات.",
+   "excerpt": "لا يشك كُثر في أن الذكاء الاصطناعي من أكثر التقنيات التي أحدثت تحولاً عميقاً خلال القرن الماضي. وبمقاييس عدة، ينتشر بوتيرة أسرع وعلى نطاق أوسع من أي ابتكار ظهر منذ فجر الثورة الصناعية، فقد شاع استخدام المحركات البخارية خلال القرن الـ19، والكهرباء مطلع القرن الـ20، لكن إمكاناتهما…"
   },
   {
    "id": "fc656aa09368",

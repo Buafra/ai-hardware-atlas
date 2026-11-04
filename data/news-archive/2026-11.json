@@ -3,6 +3,34 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "dde5f3bd6293",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-03T15:24:51+00:00",
+   "title": "Apple is all in on AI — its own and everyone else’s",
+   "title_ar": "Apple تتبنى الذكاء الاصطناعي بالكامل، سواء الخاص بها أو الذي تقدمه الشركات الأخرى",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1025245/apple-earnings-q4-ai",
+   "summary_en": "Apple's latest earnings show it benefiting from the AI boom without the heavy infrastructure spending of its rivals, according to the article. The company posted its best fiscal year for revenue and earnings per share, with iPhone revenue up 17.5% to $57.6 billion, though it warned that rising memory costs would squeeze margins. AI was mentioned 45 times on the call, and new CEO John Ternus spoke of tremendous opportunity. Apple spent $2.2 billion on capital expenditures, compared with Amazon's $77.3 billion and Alphabet's $51.4 billion. It earns from hardware used to run AI, App Store fees on AI subscriptions and planned paid access to its own server-based features. The article notes that OpenAI has started steering subscribers away from Apple's fees.",
+   "summary_ar": "تُظهر نتائج Apple الأخيرة، بحسب المقال، أنها تستفيد من طفرة الذكاء الاصطناعي من دون الإنفاق الضخم على البنية التحتية الذي تتحمله منافساتها. فقد سجلت الشركة أفضل سنة مالية لها من حيث الإيرادات وربحية السهم، وارتفعت إيرادات iPhone بنسبة 17.5% إلى 57.6 مليار دولار، لكنها حذّرت من أن ارتفاع تكاليف الذاكرة سيضغط على هوامش الربح. وذُكر الذكاء الاصطناعي 45 مرة خلال المكالمة، وتحدث الرئيس التنفيذي الجديد «جون تيرنوس» عن فرصة هائلة. وأنفقت Apple 2.2 مليار دولار على النفقات الرأسمالية، مقابل 77.3 مليار لدى Amazon و51.4 مليار لدى Alphabet. وتربح الشركة من الأجهزة المستخدمة لتشغيل الذكاء الاصطناعي ومن رسوم متجر التطبيقات على اشتراكات تطبيقاته ومن خطة لبيع وصول موسّع إلى ميزاتها المعتمدة على الخوادم. ويشير المقال إلى أن OpenAI بدأت توجيه المشتركين بعيداً عن رسوم Apple.",
+   "excerpt": "Apple's latest earnings show how it's continuing to capitalize on the AI boom without busting its budget on the infrastructure spending consuming its competitors. Overall, Apple posted its best-ever fiscal year for revenue and earnings per share."
+  },
+  {
+   "id": "970714b88ab6",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "business",
+   "published": "2026-11-03T06:45:56+00:00",
+   "title": "AI’s next test in energy is resilience, industry leaders said at ADIPEC",
+   "title_ar": null,
+   "url": "https://gulfnews.com/uae/abu-dhabi/ais-next-test-in-energy-is-resilience-industry-leaders-said-at-adipec-1.500733787",
+   "summary_en": "At ADIPEC in Abu Dhabi, two executives said the energy sector's priorities are moving from digitalising operations to the infrastructure beneath AI applications: reliable connectivity and resilient local supply chains. Omar Al Busaidy of Future Pipe Industries said AI should amplify industrial knowledge, not replace it. Alaa Alsadi of IEC Telecom said oil and gas has largely finished digitalisation and is adopting AI applications that depend on real-time monitoring of offshore sites. Operators combine satellite, 4G and 5G links so critical traffic switches automatically if the main link weakens. IEC Telecom is testing an L-band backup service with Space42, offering speeds of up to 1 Mbps. The UAE digital oilfield market is projected to reach USD 1.21 billion by 2030.",
+   "summary_ar": "قال مسؤولان تنفيذيان في معرض ومؤتمر أديبك (ADIPEC) في أبوظبي إن أولويات قطاع الطاقة تتحول من رقمنة العمليات إلى البنية التي تقوم عليها تطبيقات الذكاء الاصطناعي، وهي الاتصال الموثوق وسلاسل الإمداد المحلية القادرة على الصمود. وأكد عمر البوسعيدي من Future Pipe Industries أن الذكاء الاصطناعي ينبغي أن يعزز المعرفة الصناعية لا أن يحل محلها. وقال علاء الصعدي من IEC Telecom إن قطاع النفط والغاز أنهى إلى حد كبير مرحلة الرقمنة، وبدأ يعتمد تطبيقات تستند إلى المراقبة الفورية للمواقع البحرية. ويجمع المشغلون بين وصلات الأقمار الاصطناعية وشبكات 4G و5G بحيث تنتقل البيانات الحيوية تلقائياً إذا ضعف الرابط الرئيسي. وتختبر الشركة مع Space42 خدمة احتياطية بنطاق L بسرعة تصل إلى 1 ميغابت في الثانية. ويُتوقع أن يبلغ سوق الحقول النفطية الرقمية في الإمارات 1.21 مليار دولار بحلول 2030.",
+   "excerpt": "Resilient systems and local capability stand as key to AI-driven energy transformation"
+  },
+  {
    "id": "2694799e999f",
    "source": "thenational",
    "lang": "en",
@@ -17,6 +45,48 @@
    "excerpt": "Europe's top private market firm bets on exiting partnerships for growth in the Gulf, chair, Jean Eric Salata tells The National"
   },
   {
+   "id": "e3f3f6c0c50f",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-02T18:56:02+00:00",
+   "title": "Anthropic clamps down on Claude’s AI video game clones",
+   "title_ar": "Anthropic تشدد الخناق على نسخ ألعاب الفيديو المستنسخة التي يصنعها Claude بالذكاء الاصطناعي",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones",
+   "summary_en": "Anthropic has updated the system prompt of Claude Code to stop the tool from being used to recreate existing video games, according to a report by Tom's Hardware. A user on X posted a screenshot of two new sentences telling the tool to build original games, genre games and games from the user's own designs and assets, but not recreations of a specific existing game. Anthropic's Addy Osmani did not confirm the exact wording, but said the two sentences were added on Opus 5.5 because using Claude to infringe IP is against the company's usage policy. He said original and genre games should keep working and that Anthropic will keep iterating. The article notes that retro gaming is being flooded with AI-made decompilations, recompilations and ports.",
+   "summary_ar": "حدّثت شركة Anthropic التعليمات النظامية لأداة Claude Code لمنع استخدامها في إعادة إنشاء ألعاب فيديو موجودة، بحسب ما نقله موقع Tom's Hardware. ونشر أحد المستخدمين على منصة X لقطة شاشة تُظهر جملتين جديدتين تطلبان من الأداة بناء ألعاب أصلية وألعاب ضمن نوع معين وألعاب تعتمد على تصاميم المستخدم وأصوله، لا نسخ لعبة محددة قائمة. ولم يؤكد «آدي أوسماني» من Anthropic الصياغة الدقيقة، لكنه قال إن الجملتين أُضيفتا في Opus 5.5 لأن استخدام Claude لانتهاك الملكية الفكرية يخالف سياسة الاستخدام لدى الشركة. وأضاف أن الألعاب الأصلية وألعاب النوع والألعاب المبنية على تصاميم المستخدم يجب أن تواصل العمل، وأن الشركة ستواصل التحسين. ويشير المقال إلى أن ألعاب الزمن القديم تشهد موجة من عمليات فك الترجمة وإعادة الترجمة والنقل التي ينفذها الذكاء الاصطناعي.",
+   "excerpt": "Anthropic has updated Claude Code's system prompt to prevent the AI tool from being used to re-create existing video games, as reported by Tom's Hardware."
+  },
+  {
+   "id": "16194c055af9",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-02T18:01:30+00:00",
+   "title": "OpenAI pitches data center power plants as a way to protect nearby areas",
+   "title_ar": "OpenAI تطرح محطات الطاقة الخاصة بمراكز البيانات كوسيلة لحماية المناطق المجاورة",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1024604/openai-data-center-grid-protection-program",
+   "summary_en": "OpenAI announced on Monday that it will pilot a Grid Protectors Program at an upcoming data center in Effingham County, Georgia. The company promises to free up to 1,000 megawatts of power during extreme weather or emergencies, enough for air conditioners in around 700,000 homes. It presents the power plants feeding its AI data centers as a resource utilities can call on when communities need it most. The announcement comes as opposition to data centers spreads across the US, including protests in Utah over a Box Elder County project. Several states have passed laws to stop AI companies passing energy costs to residents, and a HARC study warned about air quality in Texas.",
+   "summary_ar": "أعلنت OpenAI يوم الاثنين أنها ستجرّب «برنامج حماة الشبكة» (Grid Protectors Program) في مركز بيانات مرتقب في مقاطعة إيفينغهام بولاية جورجيا. وتتعهد الشركة بتوفير ما يصل إلى 1000 ميغاواط من الطاقة خلال الطقس الشديد أو حالات الطوارئ، وهو ما يكفي لتشغيل مكيفات الهواء في نحو 700 ألف منزل. وتقدم محطات الطاقة التي تغذي مراكز بياناتها للذكاء الاصطناعي بوصفها مورداً يمكن لشركات المرافق الاعتماد عليه عندما تحتاجه المجتمعات. ويأتي ذلك مع اتساع المعارضة لمراكز البيانات في الولايات المتحدة، ومنها احتجاجات في يوتا على مشروع في مقاطعة بوكس إلدر. وأقرت عدة ولايات قوانين تمنع شركات الذكاء الاصطناعي من تحميل السكان تكاليف الطاقة، وحذرت دراسة لمركز HARC من أثر ذلك على جودة الهواء في تكساس.",
+   "excerpt": "In an announcement on Monday, OpenAI says it will pilot its \"Grid Protectors Program\" at an upcoming data center in Effingham County, Georgia, where the company promises to free up to 1,000 megawatts of power during extreme weather or emergencies, enough to power air…"
+  },
+  {
+   "id": "dc6c7ef2ed74",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-02T17:51:19+00:00",
+   "title": "The New York Times sues Brave web browser for AI scraping and bypassing paywalls",
+   "title_ar": "The New York Times تقاضي متصفح الويب Brave بسبب كشط المحتوى لأغراض الذكاء الاصطناعي وتجاوز جدران الدفع",
+   "url": "https://www.theverge.com/tech/1024588/brave-lawsuit-ai-scraping-new-york-times",
+   "summary_en": "The New York Times and other publications have filed lawsuits against Brave Software, maker of the Brave browser, over alleged unlawful scraping to train AI and letting users bypass paywalls, as reported by Reuters. A complaint from the New York Daily News, the Chicago Tribune and the Orlando Sentinel says Brave sold AI companies paid access to its index of scraped content, allegedly including Anthropic, Perplexity, Mistral, xAI and Cohere. The complaint says Brave never sought permission or paid the publishers. The Times spokesperson Graham James said the suit aims to hold Brave accountable. Brave did not immediately reply, and Perplexity's Jesse Dwyer dismissed the suit.",
+   "summary_ar": "رفعت صحيفة The New York Times ومطبوعات أخرى دعاوى قضائية ضد شركة Brave Software المطورة لمتصفح Brave، بسبب ما وُصف بأنه استخراج غير قانوني للمحتوى لتدريب الذكاء الاصطناعي والسماح للمستخدمين بتجاوز الجدران المدفوعة، بحسب ما نقلته رويترز. وتقول شكوى قدمتها New York Daily News وChicago Tribune وOrlando Sentinel إن Brave حققت دخلاً من فهرسها للمواقع بمنح شركات الذكاء الاصطناعي وصولاً مدفوعاً إليه، ومنها بحسب الادعاء Anthropic وPerplexity وMistral وxAI وCohere. وتضيف الشكوى أن Brave لم تطلب إذن الناشرين ولم تعوضهم. وقال المتحدث باسم الصحيفة «غراهام جيمس» إن الدعوى تهدف إلى محاسبة Brave. ولم ترد Brave فوراً على طلب التعليق، بينما رفض «جيسي دواير» من Perplexity الدعوى.",
+   "excerpt": "The New York Times and a group of other publications have filed lawsuits against the company that makes the Brave web browser over alleged unlawful scraping to train AI and also letting users bypass their paywalls, as reported by Reuters."
+  },
+  {
    "id": "e1ad7c46f007",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -29,6 +99,48 @@
    "summary_en": "German Chancellor Friedrich Merz said on Monday that Germany and Europe must move faster to build their own AI capabilities in order to protect their \"digital sovereignty\". Speaking at an AI conference in Berlin, he said they must avoid becoming fully dependent on third parties for developing and using the technology, calling the issue existential. He said adapting will take a huge technological and organisational effort and broad modernisation of the state and economy, and he promised to speed up the digitalisation of the economy. His goal is to produce and manage the technology independently and securely across the whole value chain, from hardware to software. The text adds that his government has pledged to close a technology gap with faster European economies such as the Netherlands and Denmark, and that Germany has had a national AI strategy since 2018.",
    "summary_ar": "دعا المستشار الألماني «فريدريش ميرتس» يوم الاثنين ألمانيا وأوروبا إلى التحرك بوتيرة أسرع لبناء قدراتهما الذاتية في مجال الذكاء الاصطناعي حمايةً لـ«السيادة الرقمية». وقال في كلمة خلال مؤتمر للذكاء الاصطناعي في برلين إنه يجب تجنب الاعتماد الكامل على أطراف ثالثة في تطوير هذه التكنولوجيا واستخدامها، ووصف المسألة بأنها قضية وجودية. وأوضح أن التكيف مع هذا التحول يتطلب جهداً تكنولوجياً وتنظيمياً هائلاً وتحديثاً واسع النطاق للدولة والاقتصاد، وتعهد بتسريع رقمنة الاقتصاد. وأكد أن الهدف هو القدرة على إنتاج التكنولوجيا وإدارتها بصورة مستقلة وآمنة عبر سلسلة القيمة كاملة، من الأجهزة إلى البرمجيات. ويضيف النص أن حكومته تعهدت بتعويض التأخر التكنولوجي أمام اقتصادات أوروبية أسرع مثل هولندا والدنمارك، وأن ألمانيا وضعت استراتيجية وطنية للذكاء الاصطناعي منذ عام 2018.",
    "excerpt": "دعا المستشار الألماني فريدريش ميرتس، اليوم الاثنين، ألمانيا وأوروبا إلى التحرك بوتيرة أسرع من أجل تطوير قدراتهما الذاتية في مجال الذكاء الاصطناعي من أجل حماية \"السيادة الرقمية\" لهما."
+  },
+  {
+   "id": "3059ef1574cb",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-02T16:23:21+00:00",
+   "title": "Elon Musk throttles Grok Bot limits due to ‘unsustainably high’ costs",
+   "title_ar": "إيلون ماسك يخفض حدود استخدام Grok Bot بسبب تكاليف «مرتفعة بشكل غير مستدام»",
+   "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/",
+   "summary_en": "Over the Halloween weekend, some Grok Bot users found their weekly usage limits had hit the maximum, even though they had not used the agentic AI overnight. Some reported on X that usage jumped from as low as 50% to 100%. SpaceX CEO Elon Musk confirmed on Sunday that this was not a glitch, saying the cost of serving Grok Bot was unsustainably high relative to revenue. A SpaceX filing last month said AI makes up 52% of company income, and its Super Intelligence division made a $431 million profit, after $1.2 billion of one-time costs tied to the Cursor acquisition. Musk has not said how subscribers' limits will change.",
+   "summary_ar": "خلال عطلة نهاية أسبوع الهالوين، تفاجأ بعض مستخدمي Grok Bot بأن حدود استخدامهم الأسبوعية بلغت حدها الأقصى، رغم أنهم لم يستخدموا أداة الذكاء الاصطناعي الوكيلة خلال الليل. وذكر بعضهم على منصة X أن نسبة الاستخدام قفزت من 50% إلى 100%. وأكد «إيلون ماسك»، الرئيس التنفيذي لشركة SpaceX، يوم الأحد أن الأمر ليس خللاً تقنياً، موضحاً أن كلفة تشغيل Grok Bot كانت مرتفعة بشكل لا يمكن تحمله قياساً بالإيرادات. وذكرت SpaceX في ملف رسمي الشهر الماضي أن الذكاء الاصطناعي يشكل 52% من دخل الشركة، وأن قسم Super Intelligence حقق ربحاً بلغ 431 مليون دولار، بعد تكاليف لمرة واحدة بقيمة 1.2 مليار دولار مرتبطة بالاستحواذ على Cursor. ولم يوضح ماسك كيف ستتأثر حدود الاستخدام لدى المشتركين مستقبلاً.",
+   "excerpt": "Musk recently referred to Grok Bot as having \"the fastest growth of a product that I've ever seen in my life.\""
+  },
+  {
+   "id": "a43a012fc6e7",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-02T15:00:00+00:00",
+   "title": "Omen AI adds liquid know-how in $16 million Aquatic Labs acquisition",
+   "title_ar": "Omen AI تضيف خبرة في مجال السوائل عبر استحواذها على Aquatic Labs بقيمة 16 مليون دولار",
+   "url": "https://techcrunch.com/2026/11/02/omen-ai-adds-liquid-know-how-in-16-million-aquatic-labs-acquisition/",
+   "summary_en": "Omen AI, a startup founded in 2024 that builds real-time sensors to monitor cooling fluids in data centers, is acquiring competitor Aquatic Labs in a $16 million cash-and-stock deal, after raising a $31 million Series A in June. Omen's sensors look for elements in the water, while Aquatic Labs' sensor tests alkalinity, and the combined teams aim to put both in one sensor by early next year. Omen expects to monitor chips drawing 250 to 300 MW by the end of the year, and hopes to reach the equivalent of 1 GW by the end of 2027. The article says better monitoring lets operators reuse fluid for longer and avoid costly shutdowns.",
+   "summary_ar": "تستحوذ شركة Omen AI الناشئة، التي تأسست عام 2024 وتبني حساسات فورية لمراقبة سوائل التبريد في مراكز البيانات، على منافستها Aquatic Labs في صفقة نقدية وبالأسهم قيمتها 16 مليون دولار، وذلك بعد جمعها 31 مليون دولار في جولة السلسلة A في يونيو. وتبحث حساسات Omen عن العناصر في الماء، بينما يقيس حساس Aquatic Labs القلوية، ويعمل الفريقان على دمج التقنيتين في حساس واحد يُتوقع طرحه في الأسواق مطلع العام المقبل. وتتوقع Omen مراقبة رقائق تستهلك بين 250 و300 ميغاواط بنهاية العام، وتأمل بلوغ ما يعادل 1 غيغاواط بنهاية 2027. ويشير المقال إلى أن تحسين المراقبة يتيح للمشغّلين استخدام السائل نفسه مدة أطول وتجنب توقفات مكلفة.",
+   "excerpt": "Two startups tackling the data center water problem are joining forces in a $16 million deal."
+  },
+  {
+   "id": "869219a7f133",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-02T13:57:53+00:00",
+   "title": "OpenAI is finally merging ChatGPT’s Chat and Work tabs",
+   "title_ar": "OpenAI تدمج أخيراً تبويبي Chat وWork في ChatGPT",
+   "url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/",
+   "summary_en": "OpenAI is preparing to merge the Chat and Work tabs in the ChatGPT desktop app, according to an email sent to users. The new experience will first go to select users for feedback before a wider rollout. The email says users will be able to bring in files and plugins and ask ChatGPT to build a website, create a presentation or act on the web, while Codex stays a separate experience. ChatGPT and Codex will also draw tokens from one shared allowance pool, which OpenAI says will not affect most users, though some may wait for resets more often. Anthropic merged Claude's chat and Cowork functions in September.",
+   "summary_ar": "تستعد OpenAI لدمج تبويبي Chat وWork في تطبيق ChatGPT لسطح المكتب، بحسب رسالة إلكترونية أُرسلت إلى المستخدمين. وستُتاح التجربة الجديدة في البداية لمستخدمين محددين لجمع ملاحظاتهم قبل طرحها على نطاق أوسع. وتقول الرسالة إن بإمكان المستخدمين إضافة ملفاتهم وإضافاتهم وطلب بناء موقع إلكتروني أو إنشاء عرض تقديمي أو تنفيذ مهام على الويب، بينما يبقى Codex تجربة منفصلة. كما سيسحب ChatGPT وCodex «الوحدات اللغوية» من حصة مشتركة واحدة، وتوضح OpenAI أن ذلك لن يؤثر في معظم المستخدمين، لكن بعضهم قد ينتظر إعادة التعيين بوتيرة أكبر. وكانت Anthropic قد دمجت وظيفتي المحادثة وCowork في Claude بشاشة واحدة في سبتمبر.",
+   "excerpt": "OpenAI said that ChatGPT and Codex will draw usage from the same allocation pool after this change."
   },
   {
    "id": "e62991d0c95c",
@@ -171,6 +283,34 @@
    "excerpt": "Rising electricity demand has put resilience at the top of the event’s agenda this year"
   },
   {
+   "id": "33c086ca1438",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-01T21:55:23+00:00",
+   "title": "OpenAI might rebrand its data centers as ‘AI compute campuses’",
+   "title_ar": "قد تعيد OpenAI تسمية مراكز بياناتها لتصبح «مجمّعات حوسبة الذكاء الاصطناعي»",
+   "url": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+   "summary_en": "Axios reports that OpenAI is preparing a PR push for after Tuesday's midterm elections, in which Democrats appear likely to win back the House and possibly the Senate. Chief global affairs officer Chris Lehane called the midterms a preview of 2028, when he expects AI to be \"the issue\" in the presidential race. He discussed proposals including AI \"speed limits\", helping people see AI as empowering, a U.S. role in global standards, and rebranding data centers as \"AI compute campuses\". Lehane described the debate over data centers, which has led Amazon and Microsoft to drop NDAs with local governments, as \"good and healthy\", saying communities should hold companies accountable.",
+   "summary_ar": "تفيد «أكسيوس» بأن شركة OpenAI تستعد لحملة علاقات عامة بعد انتخابات التجديد النصفي التي تجرى يوم الثلاثاء، والتي يبدو أن الديمقراطيين قد يستعيدون فيها مجلس النواب وربما مجلس الشيوخ. وقال كريس ليهان، كبير مسؤولي الشؤون العالمية في الشركة، إن هذه الانتخابات تمثل لمحة عمّا سيحدث في 2028، حين يتوقع أن يصبح الذكاء الاصطناعي «القضية» في الانتخابات الرئاسية. وتناول مقترحات منها وضع «حدود للسرعة» للذكاء الاصطناعي، ومساعدة الناس على رؤيته أداةً تمكّنهم، ودور للولايات المتحدة في المعايير العالمية، وإعادة تسمية مراكز البيانات إلى «مجمعات حوسبة الذكاء الاصطناعي». ووصف ليهان النقاش حول مراكز البيانات، الذي دفع Amazon وMicrosoft إلى التخلي عن اتفاقيات السرية مع الحكومات المحلية، بأنه «جيد وصحي»، وقال إن على المجتمعات محاسبة الشركات.",
+   "excerpt": "Data centers are deeply unpopular. But what if we called them something else?"
+  },
+  {
+   "id": "0ae10264665c",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-01T20:57:58+00:00",
+   "title": "AI can make tech CEOs’ lives easier. What about everyone else?",
+   "title_ar": "الذكاء الاصطناعي قادر على تسهيل حياة الرؤساء التنفيذيين لشركات التقنية. فماذا عن بقية الناس؟",
+   "url": "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
+   "summary_en": "Dazzle AI CEO Marissa Mayer recently drew criticism for comments praising AI, including asking an AI tool to help with a school-assigned description of her daughter. Similar remarks have come from OpenAI's Sam Altman, who floated personalized podcasts for kids' drives to school and said he could not imagine parenting without ChatGPT, and Meta's Mark Zuckerberg, who suggested that meeting social and romantic needs through AI will become more acceptable. On TechCrunch's Equity podcast, Amanda Silberling, Kirsten Korosec, Sean O'Kane and Anthony Ha discussed whether this is a marketing or a product problem. Silberling said it is a bit of both and argued that the industry is pushing a future where basic human interaction is optimized away. The conversation comes as Anthropic is set to go public while Wall Street begins losing its appetite for heavy AI spending.",
+   "summary_ar": "تعرضت ماريسا ماير، الرئيسة التنفيذية لشركة Dazzle AI، لانتقادات بعد تصريحات أشادت فيها بفوائد الذكاء الاصطناعي، منها طلبها من أداة ذكية المساعدة في كتابة وصف لابنتها كلفتها به المدرسة. وصدرت تصريحات مشابهة عن سام ألتمان، الرئيس التنفيذي لشركة OpenAI، الذي اقترح إعداد بودكاست مخصص للأطفال أثناء توجههم إلى المدرسة، وقال إنه لا يتخيل تربية الأبناء دون ChatGPT، وعن مارك زوكربيرغ، الرئيس التنفيذي لشركة Meta، الذي رأى أن تلبية الاحتياجات الاجتماعية والعاطفية عبر الذكاء الاصطناعي ستصبح أكثر قبولاً. وناقش فريق بودكاست Equity التابع لموقع TechCrunch ما إذا كانت المشكلة تسويقية أم متعلقة بالمنتجات، وقالت أماندا سيلبرلنغ إنها مزيج من الأمرين، وإن القطاع يدفع نحو مستقبل تُستبعد فيه التفاعلات الإنسانية الأساسية. ويأتي ذلك مع استعداد Anthropic لطرح أسهمها للاكتتاب العام في وقت تفقد فيه وول ستريت شهيتها للإنفاق الكبير على الذكاء الاصطناعي.",
+   "excerpt": "On Equity, we discuss why tech CEO statements can seem so tone deaf."
+  },
+  {
    "id": "ca7b85581f45",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -183,6 +323,20 @@
    "summary_en": "A new study found that AI can predict moderate-to-severe headache and fatigue in some people with concussion, with moderate to good accuracy, 24 hours before symptoms appear. Researchers at the Norwegian University of Science and Technology (NTNU) and the Norwegian Centre for Headache Research (NorHead) worked with 20 people who had persistent post-concussion symptoms, at the rehabilitation department of St. Olav's Hospital. Participants logged symptoms daily for 28 days, while heart rate, skin temperature and trapezius muscle tension were also measured. A foundation model outperformed a traditional machine-learning model. Researcher Antonios Danilakis described the work as an early proof of concept needing more study. A follow-up study with at least 200 patients is planned for spring 2027.",
    "summary_ar": "أظهرت دراسة جديدة أن الذكاء الاصطناعي قادر على التنبؤ بالصداع المتوسط إلى الشديد والإرهاق لدى بعض المصابين بارتجاج دماغي، بدقة تتراوح بين المتوسطة والجيدة، وذلك قبل 24 ساعة من ظهور الأعراض. أجرى الدراسة باحثون في الجامعة النرويجية للعلوم والتكنولوجيا (NTNU) والمركز النرويجي لأبحاث الصداع (NorHead)، وشارك فيها 20 شخصاً يعانون من أعراض مستمرة بعد الارتجاج، وأُجريت في قسم إعادة التأهيل بمستشفى سانت أولاف. سجّل المشاركون أعراضهم يومياً لمدة 28 يوماً، كما قيس معدل ضربات القلب ودرجة حرارة الجلد وتوتر العضلة شبه المنحرفة. وحقق نموذج أساسي نتائج أفضل من نموذج تقليدي للتعلم الآلي. ووصف الباحث أنطونيوس دانيلاكس العمل بأنه إثبات مبدئي للمفهوم يحتاج إلى مزيد من البحث. ويخطط الفريق لدراسة جديدة في ربيع عام 2027 تشمل 200 مريض على الأقل.",
    "excerpt": "أظهرت دراسة حديثة أن الذكاء الاصطناعي قادر على التنبؤ بدقة بالصداع والإرهاق المتوسط إلى الشديد الذي يعاني منه بعض المصابين بارتجاج دماغي، وذلك بدقة تتراوح بين المتوسطة والجيدة قبل 24 ساعة من ظهور الأعراض."
+  },
+  {
+   "id": "0b67a42115e7",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-01T19:28:26+00:00",
+   "title": "الذكاء الاصطناعي يصنع أناقتك من خزانتك",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/miscellaneous/1562113",
+   "summary_en": "Meta Platforms has quietly launched an AI-powered fashion app called Style Sketch, which helps users put together outfits from clothes they already own. The app links to Instagram to build a virtual wardrobe from photos users have posted, and clothing can also be added manually through a photo, a short video or an upload from the phone's gallery. It suggests outfit combinations and lets users try them on a realistic model matching body shape and skin tone. TechCrunch reported that social media expert Matt Navarra spotted the app in Indonesia, Singapore and Thailand, on Android and iOS. Meta has not commented, and it is unclear whether a wider release is planned. Similar apps already exist, including from startups such as Alta and in Google Photos.",
+   "summary_ar": "أطلقت شركة Meta Platforms من دون إعلان تطبيقاً جديداً للأزياء يعمل بالذكاء الاصطناعي باسم Style Sketch، يساعد المستخدمين على تنسيق إطلالاتهم باستخدام الملابس التي يملكونها بالفعل. يرتبط التطبيق بمنصة Instagram لإنشاء خزانة ملابس افتراضية من الصور التي نشرها المستخدم سابقاً، كما يمكن إضافة القطع يدوياً عبر التقاط صورة أو تسجيل مقطع قصير أو رفع صور من معرض الهاتف. ويقترح التطبيق تنسيقات يمكن تجربتها على نموذج واقعي يطابق شكل الجسم ولون البشرة. ونقل موقع TechCrunch أن خبير وسائل التواصل الاجتماعي مات نافارا رصد التطبيق في إندونيسيا وسنغافورة وتايلاند، وأنه يعمل على نظامي أندرويد وiOS. ولم تعلّق Meta، ولا يُعرف إن كانت ستتيحه على نطاق أوسع. وتوجد تطبيقات مشابهة، منها شركات ناشئة مثل Alta وتطبيق Google Photos.",
+   "excerpt": "أطلقت شركة التكنولوجيا العملاقة ميتا بلاتفورمس بدون إعلان، تطبيقاً جديداً للموضة مدعوماً بالذكاء الاصطناعي باسم ستايل سك"
   },
   {
    "id": "98b8a9566507",
