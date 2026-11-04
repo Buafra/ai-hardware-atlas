@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-04T02:26:26+00:00",
+ "updated_at": "2026-11-04T18:07:20+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -784,6 +784,17 @@
    "moe": false
   },
   {
+   "id": "moonshotai/kimi-k3.1-pro",
+   "name": "MoonshotAI: Kimi K3.1 Pro",
+   "hf": "moonshotai/Kimi-K3.1-Pro",
+   "context": 1048576,
+   "created": 1792778188,
+   "open": true,
+   "params_b": 2780.11,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "gryphe/mythomax-l2-13b",
    "name": "MythoMax 13B",
    "hf": "Gryphe/MythoMax-L2-13b",
@@ -1444,6 +1455,17 @@
    "moe": false
   },
   {
+   "id": "tencent/hy4",
+   "name": "Tencent: Hy4",
+   "hf": "tencent/Hy4",
+   "context": 1048576,
+   "created": 1793766031,
+   "open": true,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "tencent/hy4-preview",
    "name": "Tencent: Hy4 preview",
    "hf": "tencent/Hy4-preview",
@@ -1524,7 +1546,7 @@
    "id": "xiaomi/mimo-v2.5",
    "name": "Xiaomi: MiMo-V2.5",
    "hf": "XiaomiMiMo/MiMo-V2.5",
-   "context": 1050000,
+   "context": 1000000,
    "created": 1776874269,
    "open": true,
    "params_b": 310.78,
@@ -2780,17 +2802,6 @@
    "hf": null,
    "context": 32768,
    "created": 1739803239,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "moonshotai/kimi-k3.1-pro",
-   "name": "MoonshotAI: Kimi K3.1 Pro",
-   "hf": null,
-   "context": 1048576,
-   "created": 1792778188,
    "open": false,
    "params_b": null,
    "params_source": null,

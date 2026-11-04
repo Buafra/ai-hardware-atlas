@@ -185,6 +185,20 @@
    "excerpt": "OpenAI raised only about $11 billion in its latest funding round, less than half of the $30 billion it was targeting. At $1.25 trillion, the valuation falls short of expectations, and major investors appear to be pulling back amid the recent tech sell-off."
   },
   {
+   "id": "ce91228cb514",
+   "source": "skynews-ar-tech",
+   "lang": "ar",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-10-31T09:18:01+00:00",
+   "title": "أسرارك مع الذكاء الاصطناعي للبيع.. أزمة تكشف خطرا خفيا",
+   "title_ar": null,
+   "url": "https://www.skynewsarabia.com/technology/1901724-%D8%A3%D8%B3%D8%B1%D8%A7%D8%B1%D9%83-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%84%D9%84%D8%A8%D9%8A%D8%B9-%D8%A3%D8%B2%D9%85%D8%A9-%D8%AA%D9%83%D8%B4%D9%81-%D8%AE%D8%B7%D8%B1%D8%A7-%D8%AE%D9%81%D9%8A%D8%A7",
+   "summary_en": "Character.ai, a US company, is close to bankruptcy, and according to a BBC report its users' messages and personal conversations could be sold. Experts cited by the article warn that the collapse of AI firms could turn people's secrets into tradable assets, because developing and running AI is so costly. Court documents indicate the company can offer user information to buyers. It sold some assets to Disney for $20 million, but that deal excludes user data. A coalition of 40 attorneys general sought safeguards, though weak legislation limits such efforts. Experts advise reviewing apps that hold sensitive information and deleting data from platforms no longer used.",
+   "summary_ar": "تقترب شركة «Character.ai» الأميركية من الإفلاس، وبحسب تقرير نشرته «بي بي سي» قد تُعرض رسائل المستخدمين ومحادثاتهم الشخصية للبيع. ويحذر خبراء نقل عنهم المقال من أن انهيار شركات الذكاء الاصطناعي قد يحول أسرار الناس إلى أصول تجارية قابلة للتداول، بسبب التكاليف الهائلة لتطوير هذه التقنيات وتشغيلها. وتشير مستندات قضائية إلى أن الشركة تستطيع عرض معلومات مستخدميها على مشترين آخرين. وقد باعت بعض أصولها إلى ديزني مقابل 20 مليون دولار، لكن الصفقة لا تشمل بيانات المستخدمين. وسعى تحالف من 40 مدعياً عاماً أميركياً إلى فرض ضمانات، غير أن ضعف التشريعات يحد من فاعلية ذلك. وينصح الخبراء بمراجعة التطبيقات التي تحتفظ بمعلومات حساسة وحذف البيانات من المنصات التي لم تعد مستخدمة.",
+   "excerpt": "قد تبوح لروبوت محادثة بما تخفيه عن أقرب الناس إليك، وتشاركه مخاوفك وعلاقاتك وأسرارك الشخصية، مطمئنا إلى أنه مجرد صندوق رقمي لا يفضح أسرارك."
+  },
+  {
    "id": "aa15596dad88",
    "source": "sharjah24-en",
    "lang": "en",
@@ -10517,6 +10531,20 @@
    "excerpt": "Trump’s EPA can't unilaterally dismiss SpaceXAI pollution lawsuit, court rules."
   },
   {
+   "id": "8cf68b219889",
+   "source": "alkhaleej-uae",
+   "lang": "ar",
+   "uae": false,
+   "topic": "education",
+   "published": "2026-10-21T18:01:00+00:00",
+   "title": "تقييم وطني لقياس مهارات الطلبة في الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.alkhaleej.ae/2026-10-21/%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA/%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85/%D8%AA%D9%82%D9%8A%D9%8A%D9%85-%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%82%D9%8A%D8%A7%D8%B3-%D9%85%D9%87%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A",
+   "summary_en": "Several school administrations and education complexes have announced they are carrying out the national baseline assessment in artificial intelligence for the current school year. The assessment targets students in grades five to ten. Its aim is to measure their knowledge and skills related to AI and to determine how ready they are to deal with the technologies.",
+   "summary_ar": "أعلنت عدة إدارات مدرسية ومجمعات تعليمية تنفيذ التقييم الوطني لقياس خط الأساس في الذكاء الاصطناعي خلال العام الدراسي الجاري. ويستهدف التقييم طلبة الصفوف من الخامس إلى العاشر. ويهدف إلى قياس معارفهم ومهاراتهم المرتبطة بالذكاء الاصطناعي، وتحديد مدى جاهزيتهم للتعامل مع هذه التقنيات.",
+   "excerpt": "أعلن عدد من الإدارات المدرسية والمجمعات التعليمية، تنفيذ التقييم الوطني لقياس خط الأساس في الذكاء الاصطناعي للعام الدراسي الجاري، والذي يستهدف طلبة الصفوف من الخامس إلى العاشر، بهدف قياس معارفهم ومهاراتهم المرتبطة بالذكاء الاصطناعي، وتحديد مدى جاهزيتهم للتعامل مع التقنيات…"
+  },
+  {
    "id": "66d6885dea0a",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -10626,6 +10654,20 @@
    "url": "https://www.wam.ae/ar/article/3csjrb5i-قمة-مستقبل-الصحة-2026-الذكاء-الاصطناعي-يعيد-تشكيل",
    "summary_en": null,
    "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "2de1f3f85cd4",
+   "source": "google-research",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-21T16:23:53+00:00",
+   "title": "Empowering frontline maternal care with AI-assisted ultrasound",
+   "title_ar": "تمكين رعاية الأمومة في الخطوط الأمامية عبر التصوير بالموجات فوق الصوتية بمساعدة الذكاء الاصطناعي",
+   "url": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/",
+   "summary_en": "Google Research has published a prospective multi-center study in JAMA Network Open on an AI model that estimates gestational age from \"blind sweep\" ultrasound scans. Operators without sonography training perform these scans by gliding a low-cost handheld probe across the abdomen. The model was trained on 1,968 participants from North Carolina and Zambia, fine-tuned on 120 participants from Chicago, and tested in Chicago (n=192) and Nairobi (n=193) with no Nairobi fine-tuning. Its combined mean absolute error was 4.18 days, against 4.48 days for expert sonographer biometry, which made it non-inferior. The text cites WHO estimates of over 250,000 preventable pregnancy-related deaths a year and says two-thirds of people lack access to imaging such as ultrasound.",
+   "summary_ar": "نشر فريق Google Research في مجلة JAMA Network Open دراسة مستقبلية متعددة المراكز عن نموذج للذكاء الاصطناعي يقدّر عمر الحمل من فحوص الموجات فوق الصوتية بطريقة «المسح الأعمى». يجري هذه الفحوص مشغّلون لم يتلقوا تدريباً في التصوير بالموجات فوق الصوتية، إذ يمررون مسباراً محمولاً منخفض التكلفة على البطن. دُرّب النموذج على بيانات 1,968 مشاركة من ولاية نورث كارولاينا وزامبيا، ثم عُدّل بدقة باستخدام فحوص 120 مشاركة من شيكاغو، واختُبر في شيكاغو (192 مشاركة) ونيروبي (193 مشاركة) من دون أي تعديل على بيانات نيروبي. بلغ متوسط الخطأ المطلق المجمّع 4.18 يوم مقابل 4.48 يوم لقياسات أخصائيي التصوير الخبراء، وهو ما جعله غير أدنى منها. ويذكر النص أن منظمة الصحة العالمية تقدّر وفيات الحمل التي يمكن تفاديها بأكثر من 250 ألف حالة سنوياً، وأن ثلثي سكان العالم لا تتوفر لهم خدمات التصوير مثل الموجات فوق الصوتية.",
    "excerpt": null
   },
   {
@@ -11929,6 +11971,20 @@
    "summary_en": "Japan's Nikkei index rose on Wednesday, according to Al Bayan. The gain came as optimism returned about demand in the booming artificial intelligence sector. The available text cuts off before giving further figures.",
    "summary_ar": "ارتفع مؤشر نيكاي الياباني يوم الأربعاء، بحسب صحيفة البيان. وجاء الارتفاع مع عودة التفاؤل بشأن الطلب في قطاع الذكاء الاصطناعي المزدهر. أما النص المتاح فينقطع قبل ذكر مزيد من الأرقام.",
    "excerpt": "ارتفع المؤشر نيكاي الياباني اليوم الأربعاء مع عودة التفاؤل بشأن الطلب في قطاع الذكاء الاصطناعي المزدهر. وارتفع الم"
+  },
+  {
+   "id": "1778fb273dbb",
+   "source": "google-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-21T04:00:00+00:00",
+   "title": "Southeast Asia’s digital economy to hit $368 billion",
+   "title_ar": "الاقتصاد الرقمي في جنوب شرق آسيا يصل إلى 368 مليار دولار",
+   "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+   "summary_en": "The 11th e-Conomy SEA report, produced by Google, Temasek, and Bain & Company, says generative AI is now part of daily life for 243 million Southeast Asians, or 58% of the working population. It finds that the region's digital economy will grow 17% year-on-year to $368 billion in gross merchandise value in 2026, and is on track to exceed $1 trillion by 2035. Measured in tokens, regional AI usage is projected to rise 60-fold over five years. In the survey, 75% of users would let AI agents compare prices and complete purchases for them, and 62% trust AI more than a year ago. The report calls for more data centres, better energy efficiency, and unified digital trade policies.",
+   "summary_ar": "يفيد التقرير الحادي عشر «e-Conomy SEA» الصادر عن Google وTemasek وBain & Company بأن الذكاء الاصطناعي التوليدي أصبح جزءاً من الحياة اليومية لـ243 مليون شخص في جنوب شرق آسيا، أي 58% من القوى العاملة. ويشير إلى أن اقتصاد المنطقة الرقمي سينمو 17% على أساس سنوي ليبلغ 368 مليار دولار من إجمالي قيمة السلع في عام 2026، وأنه في طريقه لتجاوز تريليون دولار بحلول 2035. وبحسب الوحدات اللغوية (tokens)، يُتوقع أن يتضاعف استخدام الذكاء الاصطناعي في المنطقة 60 مرة خلال خمس سنوات. وأظهر المسح أن 75% من المستخدمين مستعدون لأن تقارن وكلاء الذكاء الاصطناعي الأسعار وتتم عمليات الشراء نيابة عنهم، وأن 62% يثقون بأدوات الذكاء الاصطناعي أكثر من العام الماضي. ويدعو التقرير إلى توسيع مراكز البيانات وتحسين كفاءة الطاقة ووضع سياسات موحدة للتجارة الرقمية.",
+   "excerpt": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035."
   },
   {
    "id": "f13c117ea623",
