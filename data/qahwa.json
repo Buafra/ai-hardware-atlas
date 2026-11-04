@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T07:50:00+04:00",
+  "generated_at": "2026-11-04T08:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8098,6 +8098,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-04T07:50:00+04:00",
       "cover": "images/qahwa/week-08-day-54--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-54--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Pick the right Mac for AI",
+        "ar": "اختر الـMac المناسب للـAI"
+      },
+      "summary": {
+        "en": "Mac mini vs MacBook Pro vs Mac Studio",
+        "ar": "Mac mini مقابل MacBook Pro مقابل Mac Studio"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "Mac mini vs MacBook Pro ==vs Mac Studio=="
+          },
+          "ar": {
+            "title": "Mac mini مقابل MacBook Pro ==مقابل Mac Studio=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Choose the best Mac for my AI workload: [describe workload]. Explain memory, performance, portability and budget.",
+        "ar": "اختر أفضل Mac لعملي في AI: [صف المهمة]. اشرح الذاكرة والأداء وقابلية الحمل والميزانية.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/DfTjM5tAMc7/",
+      "published_at": "2026-11-04T08:02:00+04:00",
+      "cover": "images/qahwa/week-08-day-54--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
