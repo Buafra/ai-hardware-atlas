@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-04T21:15:00+04:00",
+  "generated_at": "2026-11-05T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8292,6 +8292,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-04T21:15:00+04:00",
       "cover": "images/qahwa/week-08-day-56--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-56--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "quiz",
+      "title": {
+        "en": "Which Mac would you choose for the largest local models?",
+        "ar": "أي Mac تختار لأكبر النماذج المحلية؟"
+      },
+      "summary": {
+        "en": "Answer: Which Mac fits the job?",
+        "ar": "الجواب: أي Mac يناسب المهمة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which Mac would you choose for ==the largest local models?==",
+            "body": "Answer: Mac Studio ✅ especially high-memory configurations, if model fit is the main priority."
+          },
+          "ar": {
+            "title": "أي Mac تختار ==لأكبر النماذج المحلية؟==",
+            "body": "الجواب: Mac Studio ✅ خصوصاً إعدادات الذاكرة الكبيرة، إذا كانت سعة النموذج هي الأولوية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-05T07:45:00+04:00",
+      "cover": "images/qahwa/week-08-day-56--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
