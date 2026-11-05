@@ -115,6 +115,20 @@
    "excerpt": null
   },
   {
+   "id": "bc2326c848ae",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-10-31T12:00:00+00:00",
+   "title": "Spooky New Infostealer Malware Uses AI to ‘Autodox’ Victims",
+   "title_ar": "برنامج خبيث جديد لسرقة المعلومات يستخدم الذكاء الاصطناعي لكشف هويات الضحايا ونشر بياناتهم",
+   "url": "https://www.wired.com/story/kernel-panic-volta-autodoxer-ai-infostealer-malware/",
+   "summary_en": "Cisco Talos researchers have found a new infostealer, which they call Volta-Autodoxer, that uses AI to profile victims automatically, according to WIRED's Kernel Panic newsletter. After collecting passwords, tokens, cookies, payment cards and crypto wallet seed phrases, the malware builds a dossier and sends it through OpenRouter to language models, defaulting to Anthropic's Claude Opus 4.6. It has fallbacks to Moonshot AI's Kimi K2 and Google's Gemini 2.5 Flash in case a model refuses. Talos flagged it with its CAIRN framework and did not track whether it has been used in the wild. Researcher Ryan Fetterman said it may have been built for sale to many attackers.",
+   "summary_ar": "اكتشف باحثو Cisco Talos برمجية خبيثة جديدة لسرقة المعلومات سموها Volta-Autodoxer، تستخدم الذكاء الاصطناعي لتحليل ضحاياها تلقائياً، بحسب نشرة Kernel Panic التابعة لمجلة WIRED. فبعد جمع كلمات المرور والرموز وملفات تعريف الارتباط وبطاقات الدفع وعبارات استرداد محافظ العملات المشفرة، تُعدّ البرمجية ملفاً عن الضحية وترسله عبر OpenRouter إلى نماذج لغوية، وتعتمد افتراضياً على Claude Opus 4.6 من Anthropic. وتتضمن بدائل هي Kimi K2 من Moonshot AI ثم Gemini 2.5 Flash من Google في حال رفض أحد النماذج الطلب. ورصدتها Talos بإطارها CAIRN، ولم تتتبع ما إذا استُخدمت فعلياً. وقال الباحث «ريان فيترمان» إنها ربما صُممت لتُباع لمجموعة من المهاجمين.",
+   "excerpt": "Named Volta-Autodoxer, the recently uncovered malware uses AI tools to collect troves of data about victims, from login credentials and credit card numbers to Discord sessions and UberEats receipts."
+  },
+  {
    "id": "e267f67ab390",
    "source": "wam-ar",
    "lang": "ar",
@@ -157,6 +171,20 @@
    "excerpt": "Microsoft is offering voluntary severance packages to about 60,000 employees, roughly a quarter of its workforce, in the second such program this year."
   },
   {
+   "id": "2ec3abacf294",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-10-31T10:30:00+00:00",
+   "title": "Meta’s Muse Could Upend All Kinds of Businesses. It Hasn’t Yet",
+   "title_ar": "Muse من Meta قد يقلب أنواعاً كثيرة من الأعمال رأساً على عقب، لكنه لم يفعل ذلك بعد",
+   "url": "https://www.wired.com/story/metas-muse-could-upend-all-kinds-of-businesses-it-hasnt-yet/",
+   "summary_en": "Meta's Muse, an agentic AI tool that automates online tasks, was a hot topic on recent earnings calls. Mark Zuckerberg said more than 10 million people in the US and Canada had activated it, with over 25 percent using it for shopping. Yet executives at roughly 50 companies, speaking on earnings calls and to WIRED, said agent-driven activity is tiny so far, with DoorDash citing orders in the hundreds, Hilton calling bookings insignificant and eBay describing activity as very, very small. Some firms, such as Chipotle, are already adjusting their websites for agents, and Amazon, which blocked Muse last month, now says it expects to work with outside agents. Zuckerberg plans to charge businesses a fee on transactions facilitated by Muse, while some companies remain cautious about security and errant orders.",
+   "summary_ar": "كانت أداة Muse من Meta، وهي أداة ذكاء اصطناعي وكيلية تتولى تنفيذ مهام عبر الإنترنت، من أبرز المواضيع في مكالمات الأرباح الأخيرة. وقال مارك زوكربيرغ إن أكثر من 10 ملايين شخص في الولايات المتحدة وكندا فعّلوها، وإن أكثر من 25 في المئة منهم استخدموها للتسوق. غير أن مسؤولين في نحو 50 شركة قالوا في مكالمات الأرباح ولمجلة WIRED إن نشاط الوكلاء الأذكياء ما زال ضئيلاً، إذ أشارت DoorDash إلى طلبات بالمئات، ووصفت Hilton الحجوزات بأنها غير مؤثرة، ووصفتها eBay بأنها صغيرة جداً. وبدأت شركات مثل Chipotle بتعديل مواقعها لتناسب هؤلاء الوكلاء، بينما قالت Amazon، التي حظرت Muse الشهر الماضي، إنها تتوقع العمل مع وكلاء من جهات خارجية. ويعتزم زوكربيرغ فرض رسوم على الشركات مقابل المعاملات التي تتم عبر Muse، في حين لا تزال شركات عدة حذرة بسبب مخاوف الأمن والطلبات الخاطئة.",
+   "excerpt": "Companies have spent the past several weeks trying to reassure investors that Muse and other AI agents pose more of an opportunity than a threat."
+  },
+  {
    "id": "2c75f48ca2a5",
    "source": "the-decoder",
    "lang": "en",
@@ -169,6 +197,20 @@
    "summary_en": "Google DeepMind and the World Resources Institute have built ForTy, short for Forest Typology, an AI map that sorts the world's land in 2020 into six classes at 10-meter resolution, including primary forest, planted forest, plantations and tree crops such as oil palm, rubber or cocoa. The main driver is the EU Regulation on Deforestation-free Products, which targets goods linked to forest cleared or degraded after December 31, 2020. ForTy runs on AlphaEarth Foundations, together with image recognition models and examples added by experts, and it was correct in 90.2 percent of 8,190 expert-reviewed sites. Accuracy varies by type: 89 percent of confirmed primary forests were identified, but only about half of tree crops and planted forests. The map, classification layer and test data are freely available under a CC BY 4.0 license.",
    "summary_ar": "طورت Google DeepMind ومعهد الموارد العالمية (World Resources Institute) خريطة ForTy، وهي اختصار لـForest Typology، وهي خريطة مدعومة بالذكاء الاصطناعي تصنّف أراضي العالم في عام 2020 إلى ست فئات بدقة 10 أمتار، منها الغابات البكر والغابات المزروعة ومزارع الأشجار ومحاصيل الأشجار مثل نخيل الزيت والمطاط والكاكاو. ويأتي المشروع أساساً بسبب لائحة الاتحاد الأوروبي الخاصة بالمنتجات الخالية من إزالة الغابات، التي تستهدف السلع المرتبطة بغابات أُزيلت أو تدهورت بعد 31 ديسمبر 2020. وتعمل الخريطة على نموذج AlphaEarth Foundations إلى جانب نماذج للتعرف على الصور وأمثلة أضافها خبراء، وقد جاءت صحيحة في 90.2 في المئة من 8,190 موقعاً راجعها خبراء. لكن الدقة تتفاوت بحسب النوع، إذ جرى تحديد 89 في المئة من الغابات البكر المؤكدة، مقابل نحو النصف فقط من محاصيل الأشجار والغابات المزروعة. والخريطة وطبقة التصنيف وبيانات الاختبار متاحة مجاناً بموجب رخصة CC BY 4.0.",
    "excerpt": "Google Deepmind and the World Resources Institute have released ForTy, a global map that classifies forests and other land into six categories, including primary forest, plantations, and tree crops."
+  },
+  {
+   "id": "44be6d9cd9ec",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-31T10:00:00+00:00",
+   "title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+   "title_ar": "وكيل ذكاء اصطناعي يحقن أدوية في دماغ فأر حي",
+   "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+   "summary_en": "Biotech founder Gabriel Ocana Santero, CEO of San Francisco-based Exin Therapeutics, connected an AI agent to a custom surgical rig and had it carry out a brain injection on a live mouse. After a veterinary surgeon performed the craniotomy, the agent picked a gene therapy from 19 options to test against seizures, chose the brain region and coordinates, and controlled the robotic arms and injector. Claude Opus 5.5 declined to guide the needle, so the team used Claude Sonnet 5, and a coordinate glitch was fixed by a separate Opus 5 agent that was not told surgery was under way. The procedure took slightly over an hour instead of about 45 minutes, and Santero says the mouse is recovering well. He expects agents to work alongside scientists but says human oversight remains key.",
+   "summary_ar": "قام مؤسس شركة التقنية الحيوية غابرييل أوكانا سانتيرو، الرئيس التنفيذي لشركة Exin Therapeutics ومقرها سان فرانسيسكو، بربط مساعد ذكي وكيلي بمنصة جراحية مخصصة، وكلّفه بإجراء حقن دماغي في فأر حي. وبعد أن أجرى جراح بيطري عملية فتح الجمجمة، اختار الوكيل علاجاً جينياً من بين 19 خياراً لاختباره ضد النوبات، وحدد منطقة الدماغ والإحداثيات، وتحكم بالأذرع الآلية وأداة الحقن. ورفض Claude Opus 5.5 توجيه الإبرة، فاستخدم الفريق Claude Sonnet 5، وعالج وكيل منفصل يعمل بـOpus 5 خللاً في نظام الإحداثيات دون إبلاغه بأن عملية جراحية جارية. واستغرق الإجراء أكثر من ساعة بقليل بدلاً من نحو 45 دقيقة، ويقول سانتيرو إن الفأر يتعافى جيداً. ويتوقع أن يعمل الوكلاء الأذكياء إلى جانب العلماء، لكنه يؤكد أن الإشراف البشري يبقى أساسياً.",
+   "excerpt": "A biotech startup let an agent choose a gene therapy and successfully inject the treatment, offering a startling glimpse of the future of research labs."
   },
   {
    "id": "52d7915023da",

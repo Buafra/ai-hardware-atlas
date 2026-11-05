@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-04T18:07:20+00:00",
+ "updated_at": "2026-11-05T02:31:41+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -3847,6 +3847,17 @@
    "hf": null,
    "context": 256000,
    "created": 1765213560,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "ricursiveai/ripple-65b-preview",
+   "name": "ricursiveAI/Ripple-65B-Preview",
+   "hf": null,
+   "context": 1048576,
+   "created": 1793818990,
    "open": false,
    "params_b": null,
    "params_source": null,
