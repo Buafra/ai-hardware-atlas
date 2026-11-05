@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-05T02:31:41+00:00",
+ "updated_at": "2026-11-05T18:12:08+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -289,6 +289,17 @@
    "moe": false
   },
   {
+   "id": "inclusionai/ling-3.0-tiny",
+   "name": "inclusionAI: Ling 3.0 Tiny",
+   "hf": "inclusionAI/Ling-3.0-tiny",
+   "context": 262144,
+   "created": 1786034890,
+   "open": true,
+   "params_b": 7.89,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "inference-net/schematron-v2-small",
    "name": "Inference.net: Schematron V2 Small",
    "hf": "inference-net/schematron-v2-llama-3.2-3b",
@@ -476,28 +487,6 @@
    "moe": false
   },
   {
-   "id": "minimax/minimax-m2",
-   "name": "MiniMax: MiniMax M2",
-   "hf": "MiniMaxAI/MiniMax-M2",
-   "context": 204800,
-   "created": 1761252093,
-   "open": true,
-   "params_b": 228.69,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "minimax/minimax-m2.1",
-   "name": "MiniMax: MiniMax M2.1",
-   "hf": "MiniMaxAI/MiniMax-M2.1",
-   "context": 204800,
-   "created": 1766454997,
-   "open": true,
-   "params_b": 228.69,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "minimax/minimax-m2.5",
    "name": "MiniMax: MiniMax M2.5",
    "hf": "MiniMaxAI/MiniMax-M2.5",
@@ -538,17 +527,6 @@
    "created": 1792379569,
    "open": true,
    "params_b": 220.49,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "minimax/minimax-01",
-   "name": "MiniMax: MiniMax-01",
-   "hf": "MiniMaxAI/MiniMax-Text-01",
-   "context": 1000192,
-   "created": 1736915462,
-   "open": true,
-   "params_b": 456.09,
    "params_source": "huggingface",
    "moe": false
   },
@@ -2060,11 +2038,22 @@
    "moe": false
   },
   {
+   "id": "openrouter/auto-code",
+   "name": "Auto Code",
+   "hf": null,
+   "context": 2000000,
+   "created": 1793884321,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "openrouter/auto",
    "name": "Auto Router",
    "hf": null,
    "context": 2000000,
-   "created": 1699401600,
+   "created": 1793885889,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2467,6 +2456,28 @@
    "moe": false
   },
   {
+   "id": "google/gemini-omni-1.1-flash",
+   "name": "Google: Gemini Omni 1.1 Flash",
+   "hf": null,
+   "context": 131072,
+   "created": 1793825668,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "google/gemini-omni-1.2-flash",
+   "name": "Google: Gemini Omni 1.2 Flash",
+   "hf": null,
+   "context": 131072,
+   "created": 1793898961,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "~google/gemini-pro-latest",
    "name": "Google: Gemini Pro Latest",
    "hf": null,
@@ -2703,17 +2714,6 @@
    "hf": null,
    "context": 1000000,
    "created": 1750200414,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "minimax/minimax-m2-her",
-   "name": "MiniMax: MiniMax M2-her",
-   "hf": null,
-   "context": 65536,
-   "created": 1769177239,
    "open": false,
    "params_b": null,
    "params_source": null,
