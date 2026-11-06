@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T02:29:48+00:00",
+ "updated_at": "2026-11-06T17:34:23+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -3854,7 +3854,7 @@
   },
   {
    "id": "ricursiveai/ripple-65b-preview",
-   "name": "ricursiveAI/Ripple-65B-Preview",
+   "name": "Ricursive: Ripple 65B Preview",
    "hf": null,
    "context": 1048576,
    "created": 1793818990,
