@@ -605,6 +605,20 @@
    "excerpt": "OpenAI, Google, Microsoft, and Anthropic say they will adopt a new standard that publishers can use to opt out of being scraped by AI, as reported earlier by Search Engine Roundtable."
   },
   {
+   "id": "de7eef275564",
+   "source": "mit-news-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-30T20:15:00+00:00",
+   "title": "MIT affiliates named 2026 Schmidt Sciences AI2050 Fellows",
+   "title_ar": "تسمية منتسبين إلى معهد MIT ضمن زملاء Schmidt Sciences AI2050 لعام 2026",
+   "url": "https://news.mit.edu/2026/mit-affiliates-named-schmidt-sciences-ai2050-fellows-1030",
+   "summary_en": "Five MIT faculty members and two additional alumni have been named to the 2026 cohort of AI2050 Fellows, an annual honor from Schmidt Sciences, the philanthropic initiative of Eric and Wendy Schmidt. AI2050, co-chaired by Eric Schmidt and James Manyika, aims to help solve hard problems in artificial intelligence. The MIT fellows are Sendhil Mullainathan, Alex Damian, Bailey Flanigan, Yunha Hwang and Manish Raghavan. Their projects range from turning patterns found by AI into testable theories to effective model training, gathering structured public input for lawmakers, determining enzyme functions and limiting the negative effects of widespread AI reliance. Irene Chen, Allison Z. Koenecke and Juan Carlos Perdomo were also named Early Career Fellows.",
+   "summary_ar": "أُعلن عن خمسة من أعضاء هيئة التدريس في معهد MIT وخريجَين آخرين ضمن دفعة 2026 من زملاء برنامج AI2050، وهو تكريم سنوي تمنحه Schmidt Sciences، المبادرة الخيرية لـ«إريك» و«ويندي شميت». ويشترك في رئاسة البرنامج «إريك شميت» و«جيمس مانيكا»، ويهدف إلى المساعدة في حل مشكلات صعبة في الذكاء الاصطناعي. والزملاء من المعهد هم «سينديل مولاينثان» و«أليكس داميان» و«بيلي فلانيغان» و«يونها هوانغ» و«مانيش راغافان». وتتنوع مشاريعهم بين تحويل الأنماط التي يكشفها الذكاء الاصطناعي إلى نظريات قابلة للاختبار، وتدريب النماذج بفعالية، وجمع آراء الجمهور المنظمة لصناع القوانين، وتحديد وظائف الإنزيمات، والحد من الآثار السلبية للاعتماد الواسع على الذكاء الاصطناعي. كما أُعلن عن «آيرين تشن» و«أليسون كوينكه» و«خوان كارلوس بيردومو» زملاءَ في بداية مسيرتهم المهنية.",
+   "excerpt": "Five MIT faculty members and two additional alumni are honored with fellowships to advance research on beneficial AI."
+  },
+  {
    "id": "9e1171f2fe11",
    "source": "the-decoder",
    "lang": "en",

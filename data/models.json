@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T17:34:23+00:00",
+ "updated_at": "2026-11-07T02:00:55+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -342,6 +342,17 @@
    "params_b": 23.97,
    "params_source": "huggingface",
    "moe": true
+  },
+  {
+   "id": "liquid/lfm-3-1.7b",
+   "name": "LiquidAI: LFM3-1.7B",
+   "hf": "LiquidAI/LFM3-1.7B",
+   "context": 262144,
+   "created": 1794009477,
+   "open": true,
+   "params_b": 1.73,
+   "params_source": "huggingface",
+   "moe": false
   },
   {
    "id": "anthracite-org/magnum-v4-72b",
