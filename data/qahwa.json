@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-05T07:45:00+04:00",
+  "generated_at": "2026-11-08T13:29:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8327,6 +8327,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-05T07:45:00+04:00",
       "cover": "images/qahwa/week-08-day-56--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-36--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "32 GB vs 96 GB — which one is for AI?",
+        "ar": "32 GB مقابل 96 GB — أيهما للذكاء الاصطناعي؟"
+      },
+      "summary": {
+        "en": "RTX 5090 vs RTX PRO 6000: don’t compare only speed.",
+        "ar": "RTX 5090 مقابل RTX PRO 6000: لا تقارن السرعة فقط."
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "RTX 5090 vs RTX PRO 6000: ==don’t compare only speed==."
+          },
+          "ar": {
+            "title": "RTX 5090 مقابل RTX PRO 6000: ==لا تقارن السرعة فقط==."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Given my model size, context and budget, tell me whether 32 GB or 96 GB VRAM makes sense.",
+        "ar": "حسب حجم النموذج والسياق والميزانية، هل 32 GB أم 96 GB VRAM أنسب؟",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/Dfeb2laHMGc/",
+      "published_at": "2026-11-08T13:29:00+04:00",
+      "cover": "images/qahwa/week-06-day-36--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
