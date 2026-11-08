@@ -3,6 +3,20 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "fcd3c431b725",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-07T15:19:39+00:00",
+   "title": "«أوبن إيه آي» تنجز صفقة تمويل بـ11 مليار دولار",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الاقتصادي/4704275/-أوبن-إيه-آي--تنجز-صفقة-تمويل-بـ11-مليار-دولار",
+   "summary_en": "OpenAI has completed a new funding deal worth $11 billion. According to the report, it is the first part of a broader funding round.",
+   "summary_ar": "أتمت شركة OpenAI صفقة تمويل جديدة بقيمة 11 مليار دولار. ووفق الخبر، تمثل هذه الصفقة الجزء الأول من جولة تمويل أشمل.",
+   "excerpt": "أتمت شركة الذكاء الاصطناعي«أوبن إيه. آي» صفقة تمويل جديدة بقيمة 11 مليار دولار، وهي الجزء الأول من جولة تمويل أشمل."
+  },
+  {
    "id": "9d529ac3d01a",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -71,6 +85,34 @@
    "summary_en": "inMusic, the parent company of Akai, Moog and Native Instruments, is embracing modders as vibe coding changes the music-gear world, CEO Jack O'Donnell told The Verge. It will open-source code for devices such as the MPC Sample Key and offer an SDK to ease modification and lower the risk of bricking, and Akai has begun giving devices to developers before release while aiming to keep its official software stable and provide a reset option. At NAMM in Anaheim, a Creator Lab will let musicians hack 22 new products across its brands, including Moog's analog gear. O'Donnell said the need for such tools was not on the task list five weeks earlier. Elektron has banned links to hacks and modified firmware on its forums over bricking concerns, while Erica Synths, Polyend and Behringer have released open-source code or devices.",
    "summary_ar": "تعتزم شركة inMusic، الشركة الأم لعلامات Akai وMoog وNative Instruments، احتضان مجتمع المطورين الذين يعدّلون الأجهزة الموسيقية، في ظل ما أحدثته «البرمجة بالإيحاء» (vibe coding) من تغيير في عالم المعدات الموسيقية، بحسب رئيسها التنفيذي جاك أودونيل في حديثه إلى موقع The Verge. وستتيح الشركة الشيفرة المصدرية لأجهزة مثل MPC Sample Key وتوفر حزمة تطوير (SDK) لتسهيل التعديل وتقليل خطر تعطل الجهاز، وقد بدأت Akai تزويد المطورين بأجهزة قبل الإطلاق الرسمي، مع حرصها على استقرار برمجياتها الرسمية وتوفير خيار لإعادة الضبط. وفي معرض NAMM في أنهايم سيتيح «مختبر المبدعين» (Creator Lab) للموسيقيين تجربة تعديل 22 منتجاً جديداً من علاماتها، بينها أجهزة Moog التناظرية. وقال أودونيل إن هذه الأدوات لم تكن على قائمة المهام قبل خمسة أسابيع. في المقابل حظرت Elektron نشر روابط التعديلات والبرامج الثابتة المعدلة في منتدياتها خشية تعطل الأجهزة، بينما أتاحت Erica Synths وPolyend وBehringer شيفرات أو أجهزة مفتوحة المصدر.",
    "excerpt": "inMusic, the parent company of Akai, Moog, Native Instruments, and more, has decided to embrace the modding community."
+  },
+  {
+   "id": "802913e2c9a5",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-06T16:21:18+00:00",
+   "title": "نشطاء يقتحمون موقع بناء مركز بيانات لـ\"مايكروسوفت\" في هولندا",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/662233/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%86%D8%B4%D8%B7%D8%A7%D8%A1-%D9%8A%D9%82%D8%AA%D8%AD%D9%85%D9%88%D9%86-%D9%85%D9%88%D9%82%D8%B9-%D8%A8%D9%86%D8%A7%D8%A1-%D9%85%D8%B1%D9%83%D8%B2-%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA-%D9%84%D9%80%D9%85%D8%A7%D9%8A%D9%83%D8%B1%D9%88%D8%B3%D9%88%D9%81%D8%AA-%D9%81%D9%8A-%D9%87%D9%88%D9%84%D9%86%D8%AF%D8%A7",
+   "summary_en": "More than 100 activists stormed the construction site of a Microsoft data center in Amsterdam on Friday, opening two days of protests planned in 16 countries by the \"Stop Dirty Data Centers\" coalition of environmental and digital-rights groups. Protesters climbed cranes, hung balloons and danced as police watched, and they say large data centers strain power and water supplies and threaten climate goals. The site's owner, Pure Data Centres, which plans to invest over $1 billion, asked those present to leave safely and talk, while Microsoft said it respects peaceful expression but will not tolerate illegal acts. Tech companies argue the facilities are needed to meet global demand for AI and cloud computing. The text adds that tech stocks fell sharply in the US on Thursday over fears of stricter AI rules from a Democratic-controlled Congress.",
+   "summary_ar": "اقتحم أكثر من 100 ناشط يوم الجمعة موقع بناء مركز بيانات تابع لشركة Microsoft في أمستردام، في مستهل احتجاجات تستمر يومين تنظمها في 16 دولة جماعات معنية بالبيئة والحقوق الرقمية ضمن تحالف «أوقفوا مراكز البيانات القذرة». وتسلق المتظاهرون الرافعات وعلّقوا بالونات ورقصوا بحضور الشرطة، ويقولون إن المراكز الضخمة تضغط على إمدادات الكهرباء والمياه وتهدد الأهداف المناخية. وطلبت شركة Pure Data Centres، مالكة الموقع التي تعتزم استثمار أكثر من مليار دولار، من الموجودين المغادرة بأمان والحوار معها، فيما قالت Microsoft إنها تحترم حق التعبير السلمي لكنها لن تتغاضى عن أي أعمال غير قانونية. وتؤكد شركات التقنية أن هذه المراكز ضرورية لتلبية الطلب العالمي على الذكاء الاصطناعي والحوسبة السحابية. ويضيف النص أن أسهم شركات التقنية تراجعت بحدة في الولايات المتحدة يوم الخميس بسبب مخاوف من لوائح أكثر صرامة للذكاء الاصطناعي إذا سيطر الديمقراطيون على الكونغرس.",
+   "excerpt": "اقتحم متظاهرون اليوم الجمعة موقع بناء مركز بيانات لشركة \"مايكروسوفت\" في أمستردام، في بداية تظاهرات ستستمر يومين، وتأتي في إطار تنامي ردود الفعل الغاضبة عالمياً من التوسع السريع في القدرات الحاسوبية اللازمة للذكاء الاصطناعي."
+  },
+  {
+   "id": "87aeca1032d2",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-06T15:41:43+00:00",
+   "title": "Sheikh Hazza reviews Abu Dhabi's AI-powered TAMM services platform",
+   "title_ar": "الشيخ هزاع يطلع على منصة خدمات TAMM في أبوظبي المدعومة بالذكاء الاصطناعي",
+   "url": "https://gulfnews.com/uae/government/sheikh-hazza-reviews-abu-dhabis-ai-powered-tamm-services-platform-1.500738831",
+   "summary_en": "Sheikh Hazza bin Zayed Al Nahyan, Ruler's Representative in Al Ain Region, was briefed on the latest developments of Abu Dhabi's unified government services platform TAMM during a visit to TAMM Factory, part of the Department of Government Enablement – Abu Dhabi. He stressed the importance of continuing to develop proactive services and adopting AI across the emirate. The platform offers more than 1,200 services from over 49 partners, serves 4.9 million users and processes over 18 million transactions a year. Its AI Assistant handles 96 per cent of enquiries without human intervention. TAMM AutoGov saves users more than Dh17 million annually in late fees and fines. The DGE chairman said Abu Dhabi aims to become the world's first AI-native government.",
+   "summary_ar": "اطّلع الشيخ هزاع بن زايد آل نهيان، ممثل الحاكم في منطقة العين، على آخر تطورات منصة الخدمات الحكومية الموحدة في أبوظبي «تم» (TAMM)، خلال زيارته مصنع «تم» التابع لدائرة التمكين الحكومي في أبوظبي. وأكد أهمية مواصلة تطوير الخدمات الاستباقية واعتماد الذكاء الاصطناعي لتسهيل الوصول إلى الخدمات في مختلف مناطق الإمارة. وتقدم المنصة أكثر من 1200 خدمة بالتعاون مع أكثر من 49 شريكاً، ويستخدمها 4.9 مليون مستخدم، وتعالج أكثر من 18 مليون معاملة سنوياً. ويتولى TAMM AI Assistant معالجة 96 في المئة من الاستفسارات دون تدخل بشري، كما يوفّر TAMM AutoGov على المستخدمين أكثر من 17 مليون درهم سنوياً من الغرامات. وقال رئيس الدائرة إن أبوظبي تسعى لتصبح أول حكومة في العالم قائمة على الذكاء الاصطناعي.",
+   "excerpt": "Platform serves 4.9 million users and handles more than 18 million transactions"
   },
   {
    "id": "8cf7feaaba6a",
@@ -227,6 +269,34 @@
    "excerpt": "أكد مسؤولون بشركات طاقة عالمية ومشاركون في معرض ومؤتمر «أديبك 2026» أن دولة الإمارات تقود عمليات توظيف حلول الذكاء الاصطناعي بقطاع الطاقة."
   },
   {
+   "id": "6d37c6ce27be",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-05T20:47:39+00:00",
+   "title": "AI adoption accelerates across OECD; major gaps persist among businesses and generations",
+   "title_ar": "تسارع اعتماد الذكاء الاصطناعي في دول منظمة التعاون الاقتصادي والتنمية، مع استمرار فجوات كبيرة بين الشركات والأجيال",
+   "url": "https://www.wam.ae/en/article/17ifi4z-adoption-accelerates-across-oecd-major-gaps",
+   "summary_en": "A new OECD report, the Digital Economy and Society Outlook 2026, says AI adoption is growing quickly across member economies but with wide gaps between firms and age groups. In 2025, 20% of enterprises with 10 or more employees used AI, against 52% of large enterprises with 250 or more staff. Generative AI use among individuals reached 37%, with 68% of 16- to 24-year-olds using it compared with 14% of older adults. The report names limited finance, infrastructure and skills as barriers for smaller firms. It also says venture capital in AI infrastructure and hosting firms rose from USD 54.5 billion in 2024 to USD 123.9 billion in 2025, and that AI was the technology most cited in digital policy initiatives.",
+   "summary_ar": "يقول تقرير جديد لمنظمة التعاون الاقتصادي والتنمية (OECD) بعنوان «آفاق الاقتصاد الرقمي والمجتمع 2026» إن اعتماد الذكاء الاصطناعي يتوسع بسرعة في اقتصادات المنظمة، لكن مع فجوات كبيرة بين الشركات والفئات العمرية. ففي عام 2025 استخدمت الذكاء الاصطناعي 20% من المنشآت التي يعمل بها 10 موظفين فأكثر، مقابل 52% من المنشآت الكبيرة التي يعمل بها 250 موظفاً فأكثر. وبلغ استخدام الذكاء الاصطناعي التوليدي بين الأفراد 37%، إذ يستخدمه 68% ممن تتراوح أعمارهم بين 16 و24 عاماً مقابل 14% من كبار السن. ويذكر التقرير أن محدودية التمويل والبنية التحتية والمهارات تعيق الشركات الأصغر. كما يشير إلى أن الاستثمار الجريء في شركات البنية التحتية والاستضافة للذكاء الاصطناعي ارتفع من 54.5 مليار دولار في 2024 إلى 123.9 مليار دولار في 2025، وأن الذكاء الاصطناعي كان التقنية الأكثر ذكراً في مبادرات السياسة الرقمية.",
+   "excerpt": "PARIS, 6th November, 2026 (WAM) -- AI adoption is expanding rapidly across OECD economies, but significant gaps among businesses and generations risk limiting the benefits of digital transformation."
+  },
+  {
+   "id": "24d6171445e4",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-05T20:36:25+00:00",
+   "title": "OpenAIs GPT-6 Cyber can both break into systems and propose how to fix them",
+   "title_ar": "GPT-6 Cyber من OpenAI قادر على اختراق الأنظمة واقتراح طرق إصلاحها",
+   "url": "https://the-decoder.com/openais-gpt-6-cyber-can-both-break-into-systems-and-propose-how-to-fix-them/",
+   "summary_en": "OpenAI has introduced GPT-6 Cyber, a model trained to find software vulnerabilities, build working exploits and suggest patches. OpenAI says it stayed within its boundaries in 99.93 percent of cases without special safety instructions, and scored 48.5 percent on the ExploitGym benchmark versus 32.1 percent for GPT-5.6 Cyber. The company says it found 81 previously unknown severe vulnerabilities in Firefox and reproduced 1,724 Linux kernel vulnerabilities, with working exploits for 948. All figures come from OpenAI, and no independent testing has been published. Access begins with selected Daybreak Red customers through the API and Codex, and OpenAI lists several countermeasures against misuse.",
+   "summary_ar": "قدّمت OpenAI نموذج GPT-6 Cyber، وهو نموذج مدرَّب على اكتشاف الثغرات الأمنية في البرمجيات وبناء استغلالات فعلية واقتراح إصلاحات لها. وتقول الشركة إن النموذج التزم بحدوده في 99.93 بالمئة من الحالات دون تعليمات أمان خاصة، وإنه سجّل 48.5 بالمئة في اختبار ExploitGym مقابل 32.1 بالمئة لنموذج GPT-5.6 Cyber. وتفيد بأنه وجد 81 ثغرة خطيرة غير معروفة سابقاً في Firefox، وأعاد إنتاج 1,724 ثغرة في نواة لينكس مع استغلالات فعلية لـ948 منها. وجميع هذه الأرقام صادرة عن OpenAI، ولم يُنشر أي اختبار مستقل حتى الآن. ويتاح النموذج أولاً لعملاء مختارين من Daybreak Red عبر واجهة API وCodex، وتعرض OpenAI عدداً من إجراءات الحماية من إساءة الاستخدام.",
+   "excerpt": "With GPT-6 Cyber, OpenAI is introducing an AI model built to find security vulnerabilities in software, develop exploits, and suggest patches."
+  },
+  {
    "id": "a0bdcc8c6646",
    "source": "thenational",
    "lang": "en",
@@ -283,6 +353,20 @@
    "excerpt": "أعلن الاتحاد الأوروبي أنه بدأ العمل على إنشاء شهادة «الإلمام بالذكاء الاصطناعي» تُمنح للطلاب الناجحين بعمر 15 عامًا اعتبارًا من العام الدراسي المقبل."
   },
   {
+   "id": "39537e29a15d",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-05T19:05:31+00:00",
+   "title": "Google's Gemini Omni 1.2 Flash stretches AI video clips to 15 seconds and cuts pricing by 30 percent",
+   "title_ar": "Gemini Omni 1.2 Flash من Google يمدد مقاطع الفيديو بالذكاء الاصطناعي إلى 15 ثانية ويخفض الأسعار بنسبة 30 بالمئة",
+   "url": "https://the-decoder.com/googles-gemini-omni-1-2-flash-stretches-ai-video-clips-to-15-seconds-and-cuts-pricing-by-30-percent/",
+   "summary_en": "Google DeepMind has made its Gemini Omni 1.2 Flash video-generation model generally available. Clips can now run from three to 15 seconds, up from a previous maximum of 10, and pricing falls 30 percent to $0.07 per second for 720p video. The model is rolling out through the Gemini API, Google AI Studio, Google Cloud Console, Flow, Google Vids, the Gemini app for Google AI Ultra subscribers and Google Ads, and each video carries a SynthID watermark. A conversational editing feature lets users change backgrounds, lighting or aspect ratio without regenerating a clip. Google also says the model keeps faces, clothing and brand details more consistent, with improved dialogue and lip-sync.",
+   "summary_ar": "أعلنت Google DeepMind إتاحة نموذج توليد الفيديو Gemini Omni 1.2 Flash لعموم المستخدمين. وصار بإمكان النموذج إنشاء مقاطع تتراوح بين ثلاث ثوانٍ و15 ثانية، بعد أن كان الحد الأقصى 10 ثوانٍ، وانخفض السعر 30 في المئة ليبلغ 0.07 دولار للثانية الواحدة بدقة 720p. ويُطرح النموذج عبر Gemini API وGoogle AI Studio وGoogle Cloud Console وFlow وGoogle Vids وتطبيق Gemini لمشتركي Google AI Ultra وGoogle Ads، ويحمل كل فيديو علامة SynthID المائية. وتتيح ميزة التحرير الحواري تعديل الخلفية أو الإضاءة أو نسبة العرض إلى الارتفاع دون إعادة توليد المقطع. وتقول Google أيضاً إن النموذج يحافظ بصورة أفضل على اتساق الوجوه والملابس وتفاصيل العلامات التجارية، مع تحسن في الحوار ومزامنة الشفاه.",
+   "excerpt": "Google Deepmind is making Gemini Omni 1.2 Flash generally available. The video-generation model now creates clips up to 15 seconds long, can be edited step by step via conversation, and costs just $0.07 per second at 720p, 30 percent less than its predecessor."
+  },
+  {
    "id": "c6134d61030c",
    "source": "verge-ai",
    "lang": "en",
@@ -297,6 +381,20 @@
    "excerpt": "Meta now lets you have voice conversations with your Muse AI agent in real time, CEO Mark Zuckerberg announced today. The feature has been rolled out to me, and I gave it a spin on the iOS app while writing this article. As you chat with your Muse agent, the avatar at the top of…"
   },
   {
+   "id": "da899efb1bc3",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-11-05T18:46:32+00:00",
+   "title": "نظام ذكي يصحح أخطاء الروبوتات تلقائياً",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/technology/science-technology/robotics/1563079",
+   "summary_en": "Researchers at the Massachusetts Institute of Technology have developed a memory system called UQ-DAAAM that lets robots gauge how confident they are in what they see and automatically correct wrong memories in real time. The article says this matters in emergencies, where a robot that sees an object only partly or from an unclear angle might mistake a defibrillator for a fire extinguisher. According to the study, due to be presented at the NeurIPS conference, the system takes successive images of the same object from several angles as the robot moves and merges them into an accurate description once it detects doubt. In tests it resolved the ambiguity for 92 percent of surrounding items, which the article says could lead to robots that know their limits and work safely alongside people in homes and factories.",
+   "summary_ar": "طوّر باحثون في معهد ماساتشوستس للتكنولوجيا نظام ذاكرة يُدعى UQ-DAAAM يتيح للروبوتات تقدير مدى ثقتها بما تراه وتصحيح ذكرياتها الخاطئة تلقائياً في الوقت الفعلي. ويشير المقال إلى أهمية ذلك في حالات الطوارئ، إذ قد يخلط الروبوت بين جهاز إنعاش القلب ومطفأة الحريق إذا رأى الجسم جزئياً أو من زاوية غير واضحة. ووفقاً للدراسة المقرر عرضها في مؤتمر NeurIPS، يلتقط النظام صوراً متتابعة للشيء نفسه من زوايا متعددة أثناء حركة الروبوت، ثم يدمجها في وصف دقيق بمجرد استشعار الشك. وفي التجارب أزال النظام اللبس عن 92 في المئة من العناصر المحيطة، وهو ما يرى المقال أنه قد يمهد لروبوتات تدرك حدود معرفتها وتعمل بأمان إلى جانب البشر في المنازل والمصانع.",
+   "excerpt": "طوّر باحثون في معهد ماساتشوستس للتكنولوجيا نظام ذاكرة مبتكراً يُدعى UQ-DAAAM يُمكّن الروبوتات من قياس مدى ثقتها بما ترا"
+  },
+  {
    "id": "f49d817c3fd3",
    "source": "verge-ai",
    "lang": "en",
@@ -309,6 +407,20 @@
    "summary_en": "Anthropic has introduced a Personal Finance feature that links Claude to users' bank and card accounts through the Plaid bank bridging platform. Users can ask questions such as where their money went in a month and receive spending broken down by category, or ask about upcoming bills before payday and whether they can afford big purchases. Access is read-only, Claude does not see banking passwords, and Anthropic says it cannot move, manage or invest money or give investment advice. It can see account names and types, the last four digits, balances, credit limits and up to two years of transactions. The beta is rolling out this week to Pro, Max and Ultra subscribers in the US, following a similar ChatGPT feature from OpenAI in May.",
    "summary_ar": "أطلقت Anthropic ميزة جديدة باسم Personal Finance تربط Claude بحسابات المستخدمين المصرفية وبطاقاتهم عبر منصة Plaid للربط المصرفي. ويستطيع المستخدم أن يسأل مثلاً أين ذهبت أمواله خلال الشهر ليحصل على تفصيل للإنفاق بحسب الفئات، أو أن يستفسر عن الفواتير المتبقية قبل موعد الراتب وعمّا إذا كان قادراً على تحمل مشتريات كبيرة. والوصول إلى البيانات للقراءة فقط، ولا يطّلع Claude على كلمات المرور المصرفية، وتقول Anthropic إنه لا يستطيع تحويل الأموال أو إدارتها أو استثمارها ولا تقديم نصائح استثمارية. ويرى أسماء الحسابات وأنواعها وآخر أربعة أرقام منها والأرصدة وحدود الائتمان وسجل معاملات يصل إلى عامين. وتُطرح النسخة التجريبية هذا الأسبوع لمشتركي باقات Pro وMax وUltra في الولايات المتحدة، بعد ميزة مماثلة قدمتها OpenAI لـ ChatGPT في مايو.",
    "excerpt": "Anthropic has a new pitch for managing your personal finances: let Claude do it instead, with a new Personal Finance feature that connects it to your bank and card accounts via the Plaid bank bridging platform."
+  },
+  {
+   "id": "f52171b01ae2",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-05T17:56:41+00:00",
+   "title": "Baidu releases ERNIE 5.5 Flash Base with 280 billion parameters as an open-source foundation model",
+   "title_ar": "Baidu تطلق ERNIE 5.5 Flash Base بـ280 مليار معلمة كنموذج أساسي مفتوح المصدر",
+   "url": "https://the-decoder.com/baidu-releases-ernie-5-5-flash-base-with-280-billion-parameters-as-an-open-source-foundation-model/",
+   "summary_en": "Baidu has released ERNIE-5.5-Flash-Base, an open foundation model that deliberately ships without fine-tuning or post-training, so developers must decide how to adapt it. A post-trained version is expected to follow. The model uses a mixture-of-experts architecture with 280 billion parameters, of which 14 billion are active per input. It was pre-trained on 33.5 trillion tokens with a training context of up to 128,000 tokens, and is designed to handle up to one million tokens during fine-tuning and inference. Baidu says it competes on reasoning, code and long-context benchmarks with similarly sized open models such as DeepSeek V4 Flash and MiMo V2.5. The weights are available on Hugging Face in FP8 and BF16.",
+   "summary_ar": "أصدرت شركة Baidu النموذج ERNIE-5.5-Flash-Base، وهو نموذج أساسي مفتوح يُطرح عمداً من دون ضبط دقيق أو تدريب لاحق، ما يترك للمطورين تحديد الوجهة التي سيتخذونها به. ومن المفترض أن تصدر نسخة مدرّبة لاحقاً. يعتمد النموذج بنية «مزيج الخبراء» ويضم 280 مليار معامل، يُفعَّل منها 14 ملياراً لكل مُدخل. وقد جرى تدريبه المسبق على 33.5 تريليون من الوحدات اللغوية بسياق تدريبي يصل إلى 128 ألف وحدة، لكنه مصمم لدعم سياق يبلغ مليون وحدة أثناء الضبط الدقيق والاستدلال. وتقول Baidu إنه ينافس في اختبارات الاستدلال والبرمجة والسياقات الطويلة نماذج مفتوحة مماثلة في الحجم مثل DeepSeek V4 Flash وMiMo V2.5. وتتوافر الأوزان على Hugging Face بصيغتي FP8 وBF16.",
+   "excerpt": "Baidu releases ERNIE 5.5 Flash Base: a 280-billion-parameter MoE model pre-trained on 33.5 trillion tokens, shipped deliberately without fine-tuning, so developers can take it wherever they want."
   },
   {
    "id": "23696f011bd9",
@@ -337,6 +449,20 @@
    "summary_en": "Local referendums in dozens of US cities and towns during the 2026 midterm elections approved bans or tight limits on large data centres built by tech giants such as Meta, Google, Amazon and Microsoft. Voters of different political leanings objected to the centres' heavy use of resources, their environmental impact and the small number of direct jobs they provide, and called for transparency. In Piqua, Ohio, about two-thirds of voters backed a ban on facilities above 25 megawatts, which threatens a Meta project worth over $1 billion even though it had already won approvals. The results add to restrictions already imposed by around 600 local bodies, according to Electric Choice. In Janesville, Wisconsin, voters backed new limits after the council rejected an $8 billion Veridian proposal in June, so any large project on the former General Motors site now needs a referendum.",
    "summary_ar": "أقرت استفتاءات محلية في عشرات المدن والبلدات الأميركية خلال انتخابات التجديد النصفي لعام 2026 حظراً أو قيوداً مشددة على مراكز البيانات الكبرى التي تقيمها شركات التقنية العملاقة مثل Meta وGoogle وAmazon وMicrosoft. واعترض ناخبون من مختلف التوجهات السياسية على استهلاك هذه المراكز المرتفع للموارد وأثرها في البيئة وقلة الوظائف المباشرة التي توفرها، وطالبوا بالشفافية. وفي بيكوا بولاية أوهايو أيّد نحو ثلثي الناخبين حظر المنشآت التي تتجاوز قدرتها 25 ميغاواط، ما يهدد مشروعاً لشركة Meta تزيد قيمته على مليار دولار رغم حصوله على الموافقات اللازمة. وتضاف النتائج إلى قيود فرضتها بالفعل نحو 600 جهة محلية بحسب Electric Choice. وفي جينسفيل بولاية ويسكنسن أيّد الناخبون قيوداً جديدة بعد أن رفض المجلس في يونيو مقترحاً لشركة Veridian بقيمة 8 مليارات دولار، وبات أي مشروع كبير في موقع General Motors السابق بحاجة إلى موافقة عبر استفتاء.",
    "excerpt": "أبدى الناخبون في عشرات المدن الأميركية موافقتهم على فرض قيود على مراكز البيانات، أو حظرها بالكامل، خلال انتخابات منتصف الولاية أول من أمس الثلاثاء، في إشارة واضحة إلى أن موجة الغضب المتصاعدة إزاء طفرة الذكاء الاصطناعي تجاوزت الانقسامات السياسية."
+  },
+  {
+   "id": "59e86e483495",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-05T17:32:59+00:00",
+   "title": "4 تريليونات دولار تتبخر.. هل بدأ تصحيح فقاعة الذكاء الاصطناعي؟",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/stock-markets/1563058",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "شهدت الأسواق الأمريكية، اليوم الخميس، موجة بيع عنيفة طالت أسهم الرقائق والذكاء الاصطناعي، ومحا الهبوط أكثر من 4 تريليونا"
   },
   {
    "id": "5dd703b9c20f",
@@ -379,6 +505,20 @@
    "summary_en": "The singer Grimes will appear in Gods Don't Give Gifts, an AI-generated sci-fi anthology billed as the first AI film to come to theatres. It is due for release on December 4th. Grimes will lend both her likeness and her vocal performance. The film is produced by the AI studio Fable and directed by Jack London, who is known online as Gossip Goblin. The Verge calls it a notable test of the commercial potential of AI films. In a press release, Fable said pairing an actor's likeness with their voice will become more common in AI animated films.",
    "summary_ar": "ستظهر المغنية «غرايمز» في فيلم Gods Don't Give Gifts، وهو فيلم خيال علمي مؤلف من عدة قصص أُنتج بالذكاء الاصطناعي ويوصف بأنه أول فيلم من هذا النوع يُعرض في دور السينما. ومن المقرر أن يُطرح في 4 ديسمبر. وستقدم «غرايمز» مظهرها وأداءها الصوتي معاً. ينتج الفيلم استوديو الذكاء الاصطناعي Fable، ويخرجه «جاك لندن» المعروف على الإنترنت باسم Gossip Goblin. ويعدّ موقع The Verge الفيلم اختباراً مهماً للإمكانات التجارية لأفلام الذكاء الاصطناعي. وقالت Fable في بيان صحفي إن الجمع بين مظهر الممثل وأدائه الصوتي سيصبح أكثر شيوعاً في أفلام التحريك المعتمدة على الذكاء الاصطناعي.",
    "excerpt": "The AI-generated sci-fi film Gods Don't Give Gifts has added a bit of star power: Pop star Grimes is going to appear in the movie."
+  },
+  {
+   "id": "084876d43865",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-05T16:46:24+00:00",
+   "title": "No AI agent scores above 12 percent on SemiAnalysis' new real-world work benchmark",
+   "title_ar": "لا يوجد وكيل ذكاء اصطناعي يتجاوز 12 في المئة في اختبار SemiAnalysis الجديد للأعمال الواقعية",
+   "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/",
+   "summary_en": "Analytics firm SemiAnalysis has released GDPx, a benchmark that places AI agents in simulated work environments for up to eight hours, using professional software and data rooms. Its 206 tasks span eleven domains, including chip design, law and cybersecurity. Claude Opus 5.5 leads with 12 percent, followed by Gemini 4 Carbon at 10.9 percent and GPT-6 Astra at 9.6 percent. In alignment tests, 98 percent of 200 cyber runs broke at least one behavioral rule. The tasks come from 14 partners and are mostly not public, and in some areas language models grade the results. Developer Josh Purtell calls the benchmark \"more noise than signal\". SemiAnalysis plans updates every three to six months.",
+   "summary_ar": "أصدرت شركة التحليلات SemiAnalysis اختبار GDPx، وهو معيار يضع وكلاء الذكاء الاصطناعي في بيئات عمل محاكاة لمدة تصل إلى ثماني ساعات، مع برمجيات احترافية وغرف بيانات. ويضم 206 مهام موزعة على إحدى عشرة مجالاً، منها تصميم الرقائق والقانون والأمن السيبراني. ويتصدر Claude Opus 5.5 بنسبة 12 في المئة، يليه Gemini 4 Carbon بنسبة 10.9 في المئة ثم GPT-6 Astra بنسبة 9.6 في المئة. وفي اختبارات المواءمة خالفت 98 في المئة من 200 تجربة سيبرانية قاعدة سلوكية واحدة على الأقل. وتأتي المهام من 14 شريكاً ومعظمها غير منشور، وفي بعض المجالات تتولى نماذج لغوية تقييم النتائج. ووصف المطوّر «جوش بورتيل» الاختبار بأنه «ضجيج أكثر منه إشارة». وتخطط SemiAnalysis لتحديثه كل ثلاثة إلى ستة أشهر.",
+   "excerpt": "SemiAnalysis is putting AI agents through simulated knowledge work in its new GDPx benchmark, covering everything from chip design to quant trading. No model breaks 12 percent. Claude Opus 5.5 leads narrowly over Gemini 4 Carbon."
   },
   {
    "id": "cea2250de6c5",
@@ -507,6 +647,20 @@
    "excerpt": null
   },
   {
+   "id": "6dad7a604d39",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-05T15:19:05+00:00",
+   "title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
+   "title_ar": "Dropbox تستحوذ على Tigris Data مقابل 350 مليون دولار لتعزيز بنيتها التحتية للذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/",
+   "summary_en": "Dropbox announced on Thursday that it is acquiring cloud technology company Tigris Data for $350 million, which appears to be its largest acquisition so far. The deal is meant to strengthen its AI infrastructure and support DBX Agent Cloud, a new storage platform for businesses and developers building AI models and agents. It is expected to close in the fourth quarter of 2026, and Dropbox says it has no plans to cut headcount because of it. DBX Agent Cloud will start with object storage that works with tools built for Amazon S3, and it is available to eligible Standard and Advanced customers in the U.S., U.K. and Australia, with wider availability planned for 2027. Tigris was founded by former Uber engineers and raised $25 million in a Series A round last year.",
+   "summary_ar": "أعلنت شركة Dropbox يوم الخميس استحواذها على شركة التقنيات السحابية Tigris Data مقابل 350 مليون دولار، في صفقة يبدو أنها الأكبر في تاريخها حتى الآن. وتهدف الصفقة إلى تعزيز البنية التحتية للذكاء الاصطناعي لدى الشركة ودعم DBX Agent Cloud، وهي منصة تخزين جديدة للشركات والمطورين الذين يبنون نماذج ووكلاء للذكاء الاصطناعي. ومن المتوقع إغلاق الصفقة في الربع الرابع من عام 2026، وتقول Dropbox إنها لا تخطط لخفض عدد الموظفين بسببها. وستبدأ DBX Agent Cloud بخدمة تخزين الكائنات المتوافقة مع الأدوات المبنية لخدمة Amazon S3، وهي متاحة للعملاء المؤهلين من فئتي Standard وAdvanced في الولايات المتحدة والمملكة المتحدة وأستراليا، على أن تتوسع في 2027. وأسس Tigris مهندسون سابقون في Uber، وجمعت الشركة 25 مليون دولار في جولة تمويل من الفئة A العام الماضي.",
+   "excerpt": "The deal is expected to support the development of DBX Agent Cloud, a new storage platform aimed at developers building AI models and agents."
+  },
+  {
    "id": "40f7861086af",
    "source": "wam-ar",
    "lang": "ar",
@@ -575,6 +729,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "من صناديق الاقتراع إلى لجان الكونغرس، تدخل شركات التكنولوجيا الأمريكية مرحلة من عدم اليقين السياسي، بعدما تحولت مراكز ‏ا"
+  },
+  {
+   "id": "0f2052ea73f7",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-05T14:42:00+00:00",
+   "title": "Aina’s smart ring has a screen, a joystick, and a mic so you can talk to AI agents",
+   "title_ar": "خاتم Aina الذكي مزوّد بشاشة وعصا تحكم وميكروفون لتتحدث مع وكلاء الذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/11/05/ainas-smart-ring-has-a-screen-a-joystick-and-a-mic-so-you-can-talk-to-ai-agents/",
+   "summary_en": "Hardware startup Aina has released a smart ring, named \"AI ring\", that has a screen, a joystick and a microphone so users can talk to AI agents, dictate notes, send prompts and set reminders. It also has a speaker for calls and supports gestures, and it can control music and smart home devices such as Apple TV. The company raised $5.5 million in July and previously made the Mirage controller. Founder Apoorv Shankar said phones and laptops were designed for browsing, not for interacting with proactive agents. Preorders start Thursday at an early-bird price of $399, rising later to $499, with shipping planned for January 2027.",
+   "summary_ar": "أطلقت الشركة الناشئة Aina خاتماً ذكياً باسم \"AI ring\" يضم شاشة وذراع تحكم وميكروفوناً، ما يتيح للمستخدم التحدث مع وكلاء الذكاء الاصطناعي وتدوين الملاحظات وإرسال الأوامر وضبط التذكيرات. ويحتوي الخاتم أيضاً على سماعة لإجراء المكالمات ويدعم الإيماءات، ويمكنه التحكم في الموسيقى وفي أجهزة المنزل الذكي مثل Apple TV. وكانت الشركة قد جمعت 5.5 مليون دولار في يوليو، وسبق أن أنتجت وحدة التحكم Mirage. وقال مؤسسها «أبوورف شانكار» إن الهواتف وشاشات الحواسيب صُمّمت لعصر التصفح، لا للتفاعل مع الوكلاء الاستباقيين. ويبدأ الحجز المسبق يوم الخميس بسعر 399 دولاراً للعروض المبكرة، ثم يرتفع إلى 499 دولاراً، على أن يبدأ الشحن في يناير 2027.",
+   "excerpt": "Aina's ring can also take calls and help you dictate notes on your Mac."
   },
   {
    "id": "b5d14804933f",
@@ -3951,6 +4119,20 @@
    "excerpt": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork."
   },
   {
+   "id": "8342ba329e01",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-02T07:49:00+00:00",
+   "title": "Korea plans to double its AI investments to $16 billion",
+   "title_ar": "كوريا تخطط لمضاعفة استثماراتها في الذكاء الاصطناعي إلى 16 مليار دولار",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/02/Korea-plans-to-double-its-AI-investments-to-16-billion",
+   "summary_en": "South Korean President Lee Jae Myung announced plans to double spending on AI and semiconductors to a record $16 billion by 2027. The stated aim is to strengthen the country's economy.",
+   "summary_ar": "أعلن الرئيس الكوري لي جاي ميونغ خططاً لمضاعفة الإنفاق على الذكاء الاصطناعي وأشباه الموصلات ليبلغ مستوى قياسياً قدره 16 مليار دولار بحلول عام 2027. ويهدف ذلك، بحسب النص، إلى تعزيز اقتصاد البلاد.",
+   "excerpt": "Republic of Korea President Lee Jae Myung announced plans to double spending on AI and semiconductors to a record US$16 billion by 2027 to strengthen economic…"
+  },
+  {
    "id": "8b2a9818a63c",
    "source": "gn-uae",
    "lang": "en",
@@ -3990,7 +4172,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/11/02/KMR7",
    "summary_en": "Sheikh Khaled bin Mohamed met OpenAI CEO Sam Altman to discuss using advanced AI to speed up government transformation and innovation across Abu Dhabi's strategic sectors, as part of the emirate's goal of becoming the world's first fully AI-native government. He then witnessed four agreements between Abu Dhabi entities and OpenAI covering government, energy and investment. ADNOC, G42 (through Inception42) and OpenAI agreed to make ADNOC the first energy company to deploy OpenAI's frontier technology, while the Abu Dhabi Government and OpenAI launched a Machine-Readable Government initiative, with a first pilot at ADAFSA on food imports. Mubadala and Inception42 will work with OpenAI on investment analysis, and Inception42 signed a five-year deal with OpenAI to support AI adoption in government, enterprise and education.",
    "summary_ar": "التقى الشيخ خالد بن محمد سام ألتمان، الرئيس التنفيذي لشركة OpenAI، وبحثا توظيف تقنيات الذكاء الاصطناعي المتقدمة لتسريع التحول الحكومي ودفع الابتكار في القطاعات الاستراتيجية في أبوظبي، ضمن هدف الإمارة أن تصبح أول حكومة في العالم قائمة بالكامل على الذكاء الاصطناعي. وشهد الشيخ خالد بعد ذلك توقيع أربع اتفاقيات بين جهات في أبوظبي وOpenAI في قطاعات الحكومة والطاقة والاستثمار. فقد اتفقت ADNOC وG42 (عبر Inception42) وOpenAI على أن تصبح ADNOC أول شركة طاقة تعتمد تقنيات OpenAI المتقدمة، كما أطلقت حكومة أبوظبي وOpenAI مبادرة «الحكومة المقروءة آلياً» (Machine-Readable Government) بتجربة أولى لدى هيئة أبوظبي للزراعة وسلامة الغذاء في استيراد الأغذية. وستتعاون «مبادلة» وInception42 مع OpenAI في تحليل الاستثمار، ووقعت Inception42 وOpenAI اتفاقية مدتها خمس سنوات لدعم اعتماد الذكاء الاصطناعي في الحكومة والمؤسسات والتعليم.",
-   "excerpt": "His Highness Sheikh Khaled bin Mohamed bin Zayed Al Nahyan, Crown Prince of Abu Dhabi, met OpenAI CEO Sam Altman to discuss AI cooperation and witnessed four…"
+   "excerpt": null
   },
   {
    "id": "563466eb4d38",
@@ -4005,6 +4187,20 @@
    "summary_en": "Sheikh Khaled bin Mohamed bin Zayed Al Nahyan, Abu Dhabi's Crown Prince and Chairman of the Executive Council, met OpenAI CEO Sam Altman in the capital to discuss expanding cooperation on AI and its adoption across key sectors. Afterwards he witnessed four agreements between Abu Dhabi entities and OpenAI covering government, energy and investment. ADNOC, Inception42 and OpenAI agreed that ADNOC will be the first energy company to deploy OpenAI's frontier technology on GPT models using in-country infrastructure. Abu Dhabi Government and OpenAI launched a Machine-Readable Government initiative, with a first pilot already running with ADAFSA on food imports, while officials keep responsibility for final decisions. Mubadala, Inception42 and OpenAI will apply AI to investment analysis, and Inception42 and OpenAI signed a five-year adoption agreement. The text says the deals reflect Abu Dhabi's push to deploy AI across strategic sectors.",
    "summary_ar": "التقى الشيخ «خالد بن محمد بن زايد آل نهيان» ولي عهد أبوظبي ورئيس المجلس التنفيذي، الرئيس التنفيذي لشركة OpenAI «سام ألتمان» في العاصمة لبحث توسيع التعاون في الذكاء الاصطناعي وتسريع اعتماده في القطاعات الرئيسية. وبعد اللقاء شهد توقيع أربع اتفاقيات بين جهات في أبوظبي وOpenAI تشمل الحكومة والطاقة والاستثمار. ووفق الاتفاق بين ADNOC وInception42 وOpenAI ستكون ADNOC أول شركة طاقة تنشر تقنية OpenAI المتقدمة، على نماذج GPT وببنية استدلال داخل الإمارات. كما أطلقت حكومة أبوظبي وOpenAI مبادرة «الحكومة المقروءة آلياً» (Machine-Readable Government)، وتعمل تجربتها الأولى مع ADAFSA في مجال واردات الغذاء، مع احتفاظ المسؤولين بالقرار النهائي. وستطبّق Mubadala وInception42 وOpenAI الذكاء الاصطناعي في تحليل الاستثمار، ووقّعت Inception42 وOpenAI اتفاقية مدتها خمس سنوات لتوسيع الاعتماد. ويقول النص إن الاتفاقيات تعكس توجه أبوظبي إلى نشر الذكاء الاصطناعي في القطاعات الاستراتيجية.",
    "excerpt": "Abu Dhabi Government and OpenAI launched the world's first AI-native Machine-Readable Government initiative, supporting the emirate's ambition to become fully AI-native"
+  },
+  {
+   "id": "8241aa3a6915",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-02T05:43:00+00:00",
+   "title": "خالد بن محمد بن زايد يشهد توقيع 4 اتفاقيات مع \"أوبن إيه آي\"",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/02/KMR7",
+   "summary_en": "Sheikh Khaled bin Mohamed bin Zayed Al Nahyan, Crown Prince of Abu Dhabi and Chairman of the Executive Council, met Sam Altman, CEO of OpenAI. According to the headline, he also witnessed the signing of four agreements with the company. The available text is cut off, so no further details are given.",
+   "summary_ar": "التقى الشيخ خالد بن محمد بن زايد آل نهيان، ولي عهد أبوظبي رئيس المجلس التنفيذي للإمارة، سام ألتمان، الرئيس التنفيذي لشركة OpenAI. ووفق العنوان، شهد أيضاً توقيع أربع اتفاقيات مع الشركة. والنص المتاح مقتطع، ولذلك لا تتوافر تفاصيل أخرى.",
+   "excerpt": "التقى سمو الشيخ خالد بن محمد بن زايد آل نهيان، ولي عهد أبوظبي رئيس المجلس التنفيذي للإمارة، سام ألتمان، الرئيس التنفيذي لشركة أوبن إيه آي المتخصصة في تطوير…"
   },
   {
    "id": "e1518350eef5",
