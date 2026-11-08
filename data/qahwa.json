@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-08T13:29:00+04:00",
+  "generated_at": "2026-11-08T13:33:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8330,6 +8330,141 @@
       "related_concepts": []
     },
     {
+      "id": "week-06-day-36--1-learn-lesson-26",
+      "kind": "lesson",
+      "lesson": 26,
+      "code": "L26",
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Why 32 GB vs 96 GB matters",
+        "ar": "لماذا الفرق بين 32 GB و96 GB مهم؟"
+      },
+      "summary": {
+        "en": "NVIDIA GeForce RTX 5090: 32 GB GDDR7, 512-bit interface, 1792 GB/s memory bandwidth. A flagship consumer GPU for gaming and creation, and very capable for local AI.",
+        "ar": "بطاقة GeForce رائدة للمستهلك: 32 GB GDDR7، وواجهة 512-bit، وعرض نطاق 1792 GB/s. للألعاب والإبداع، وقوية أيضاً للذكاء الاصطناعي المحلي."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "One has 32 GB.\n==The other has 96 GB.==",
+            "body": "Both are Blackwell. Why does that matter for AI?"
+          },
+          "ar": {
+            "title": "أحدهما 32 GB.\n==والآخر 96 GB.==",
+            "body": "كلاهما Blackwell. لماذا يهم ذلك للذكاء الاصطناعي؟"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "RTX 5090",
+            "body": "NVIDIA GeForce RTX 5090: ==32 GB GDDR7==, 512-bit interface, 1792 GB/s memory bandwidth. A flagship consumer GPU for gaming and creation, and very capable for local AI."
+          },
+          "ar": {
+            "title": "RTX 5090",
+            "body": "بطاقة GeForce رائدة للمستهلك: ==32 GB GDDR7==، وواجهة 512-bit، وعرض نطاق 1792 GB/s. للألعاب والإبداع، وقوية أيضاً للذكاء الاصطناعي المحلي."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "RTX PRO 6000 Blackwell",
+            "body": "NVIDIA RTX PRO 6000 Workstation Edition: ==96 GB GDDR7 ECC== and 1792 GB/s memory bandwidth. Built for demanding professional AI, data and graphics workloads."
+          },
+          "ar": {
+            "title": "RTX PRO 6000 Blackwell",
+            "body": "ذاكرة ==96 GB GDDR7 ECC== وعرض نطاق 1792 GB/s، ومصممة لأحمال احترافية ثقيلة في الذكاء الاصطناعي والبيانات والرسوميات."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "The big difference: ==memory headroom==",
+            "body": "96 GB fits workloads that 32 GB can't hold without splitting the model between GPU and system memory (slower), compressing it more, or using a smaller one."
+          },
+          "ar": {
+            "title": "الفرق الكبير: ==مساحة الذاكرة==",
+            "body": "ذاكرة 96 GB تتّسع لأحمال لا تكفيها 32 GB، إلا بتقسيم النموذج بين ذاكرة GPU وذاكرة النظام (وهذا أبطأ)، أو بضغطه أكثر، أو بنموذج أصغر."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "96 GB does not mean “3× faster”",
+            "body": "Bandwidth is the same on both cards; capacity ==decides what fits==, not how fast it runs. The PRO card adds ECC memory, workstation validation and professional drivers."
+          },
+          "ar": {
+            "title": "96 GB لا تعني «أسرع 3 مرات»",
+            "body": "عرض النطاق نفسه في البطاقتين، والسعة ==تحدد ما تتّسع له الذاكرة== لا سرعة التشغيل. وتضيف PRO ذاكرة ECC واعتماد محطات العمل وتعريفات احترافية."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Power & system design",
+            "body": "The RTX 5090 is rated at 575 W and the RTX PRO 6000 Workstation Edition at ==up to 600 W== (a 300 W Max-Q version also exists). Plan the power supply and cooling."
+          },
+          "ar": {
+            "title": "الطاقة وتصميم الجهاز",
+            "body": "RTX 5090 تستهلك 575 W، وبطاقة RTX PRO 6000 Workstation تصل ==إلى 600 W== (وتوجد نسخة Max-Q باستهلاك 300 W). خطّط لمزوّد الطاقة والتبريد."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "RTX 5090 = ==a very fast barista==",
+            "body": "With a normal counter. RTX PRO 6000 = a similar barista with three times the counter space."
+          },
+          "ar": {
+            "title": "RTX 5090 مثل ==باريستا سريع جداً==",
+            "body": "بطاولة عادية، وRTX PRO 6000 مثل باريستا مشابه بطاولة أكبر بثلاث مرات."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "96 GB means exactly three times the speed of 32 GB.",
+            "fact": "Memory capacity tells you what can fit, not a simple speed multiplier."
+          },
+          "ar": {
+            "myth": "96 GB تعني سرعة أعلى بثلاث مرات مقارنة بـ32 GB.",
+            "fact": "سعة الذاكرة تحدد ما تتّسع له، وليست مضاعفاً مباشراً للسرعة."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "For [model and size] and a budget of [amount], when does 96 GB of VRAM justify moving from a GeForce GPU to a professional GPU?"
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "لنموذج [الاسم والحجم] وميزانية [المبلغ]، متى تبرر ذاكرة VRAM بسعة 96 GB الانتقال من GeForce إلى GPU احترافي؟"
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "32 GB vs 96 GB is ==not a simple speed contest=="
+          },
+          "ar": {
+            "title": "32 GB مقابل 96 GB ==ليست مسابقة سرعة فقط=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "For [model and size] and a budget of [amount], when does 96 GB of VRAM justify moving from a GeForce GPU to a professional GPU?",
+        "ar": "لنموذج [الاسم والحجم] وميزانية [المبلغ]، متى تبرر ذاكرة VRAM بسعة 96 GB الانتقال من GeForce إلى GPU احترافي؟",
+        "code": "L26"
+      },
+      "permalink": "https://www.instagram.com/p/DfecUMVjBZb/",
+      "published_at": "2026-11-08T13:33:00+04:00",
+      "cover": "images/qahwa/week-06-day-36--1-learn-lesson-26.webp",
+      "related_concepts": []
+    },
+    {
       "id": "week-06-day-36--2-try-reel-cover",
       "kind": "reel",
       "lesson": null,
@@ -8361,8 +8496,8 @@
         "ar": "حسب حجم النموذج والسياق والميزانية، هل 32 GB أم 96 GB VRAM أنسب؟",
         "code": null
       },
-      "permalink": "https://www.instagram.com/reel/Dfeb2laHMGc/",
-      "published_at": "2026-11-08T13:29:00+04:00",
+      "permalink": "https://www.instagram.com/reel/DfecYb_jz8X/",
+      "published_at": "2026-11-08T13:33:00+04:00",
       "cover": "images/qahwa/week-06-day-36--2-try-reel-cover.webp",
       "related_concepts": []
     }
