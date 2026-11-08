@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-08T13:33:00+04:00",
+  "generated_at": "2026-11-08T21:40:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8499,6 +8499,42 @@
       "permalink": "https://www.instagram.com/reel/DfecYb_jz8X/",
       "published_at": "2026-11-08T13:33:00+04:00",
       "cover": "images/qahwa/week-06-day-36--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-37--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "NVIDIA is the only option for local AI.",
+        "ar": "NVIDIA هي الخيار الوحيد للذكاء الاصطناعي المحلي."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "NVIDIA is ==the only option== for local AI.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "NVIDIA هي ==الخيار الوحيد== للذكاء الاصطناعي المحلي.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-08T21:40:00+04:00",
+      "cover": "images/qahwa/week-06-day-37--3-check-story.webp",
       "related_concepts": []
     }
   ]
