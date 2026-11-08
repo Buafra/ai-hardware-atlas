@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T01:33:07+00:00",
+ "updated_at": "2026-11-08T16:48:10+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2593,39 +2593,6 @@
    "hf": null,
    "context": 131072,
    "created": 1781754054,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inception/mercury-2",
-   "name": "Inception: Mercury 2",
-   "hf": null,
-   "context": 128000,
-   "created": 1772636275,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inception/mercury-2.5",
-   "name": "Inception: Mercury 2.5",
-   "hf": null,
-   "context": 260000,
-   "created": 1788892137,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inception/mercury-3",
-   "name": "Inception: Mercury 3",
-   "hf": null,
-   "context": 1000000,
-   "created": 1792158337,
    "open": false,
    "params_b": null,
    "params_source": null,

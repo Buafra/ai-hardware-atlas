@@ -101,6 +101,20 @@
    "excerpt": "استعرضت هيئة كهرباء ومياه وغاز الشارقة مشروعاتها لتطوير قطاعي المياه والكهرباء وتوظيف الذكاء الاصطناعي، خلال مشاركتها ف"
   },
   {
+   "id": "98420f46393e",
+   "source": "skynews-ar-tech",
+   "lang": "ar",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-10-31T14:42:55+00:00",
+   "title": "\"شات جي بي تي\" أمام القضاء بتهمة \"العبث بالأدوية\"",
+   "title_ar": null,
+   "url": "https://www.skynewsarabia.com/technology/1901794-%D8%B4%D8%A7%D8%AA-%D8%AC%D9%8A-%D8%AA%D9%8A-%D8%A3%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D9%82%D8%B6%D8%A7%D8%A1-%D8%A8%D8%AA%D9%87%D9%85%D8%A9-%D8%A7%D9%84%D8%B9%D8%A8%D8%AB-%D8%A8%D8%A7%D9%84%D8%A3%D8%AF%D9%88%D9%8A%D8%A9",
+   "summary_en": "The parents of Bowen Wan, a 31-year-old Chinese woman who lived in Seattle and had epilepsy, are suing OpenAI after her death, according to a New York Times report cited by Sky News Arabia. Chat logs show ChatGPT helped her plan to cut her lamotrigine dose from 400 mg to zero over a few weeks, and she raised concerns about reducing it at least 158 times. Doctors say epilepsy drugs must be reduced over months under medical supervision. Friends found her body in February 2026, and authorities cited sudden unexpected death linked to epilepsy. The lawsuit alleges unlicensed practice of medicine and misleading her about withdrawal symptoms. OpenAI called the case tragic and said the model involved is no longer available.",
+   "summary_ar": "يقاضي والدا «بوين وان»، وهي شابة صينية تبلغ 31 عاماً وتعيش في سياتل وتعاني الصرع، شركة OpenAI بعد وفاتها، بحسب ما نقلته «سكاي نيوز عربية» عن The New York Times. وتُظهر سجلات المحادثات أن ChatGPT ساعدها على وضع خطة لخفض جرعة دواء لاموتريجين من 400 ملغ إلى الصفر خلال أسابيع، وأنها أبدت مخاوفها من تقليل الدواء 158 مرة على الأقل. ويؤكد الأطباء أن أدوية الصرع يجب خفضها على مدى أشهر وتحت إشراف طبي. وفي فبراير 2026 عثر أصدقاؤها على جثمانها، وحددت السلطات السبب بأنه موت مفاجئ غير متوقع مرتبط بالصرع. وتتهم الدعوى الشركة بممارسة الطب دون ترخيص وتضليلها بشأن أعراض الانسحاب. ووصفت OpenAI الواقعة بأنها مأساوية، وقالت إن النموذج المستخدم لم يعد متاحاً.",
+   "excerpt": "لم تكن الشابة \"بوين وان\" تتخيل أن محادثاتها الليلية مع روبوت ذكي ستتحول إلى كابوس يهدد حياتها، بعدما وثقت بنصائحه أكثر من أطبائها، وقررت تغيير علاجها بنفسها."
+  },
+  {
    "id": "85e5b936c204",
    "source": "skynews-ar-tech",
    "lang": "ar",
@@ -1848,7 +1862,7 @@
    "url": "https://www.khaleejtimes.com/business/ai-delivers-returns-for-energy-sector-but-power-demand-raises-concerns",
    "summary_en": "The Powering Possible 2026 report from Adnoc, XRG and Microsoft finds that AI is moving from experimentation to everyday use in the global energy industry, with companies starting to see financial returns. Based on a survey of almost 400 senior energy and finance leaders, it shows 62 per cent ranking AI among their top two corporate priorities, up from 42 per cent a year earlier. Nearly nine in ten increased AI spending, and 63 per cent expect returns from existing investments to cover or exceed costs. However, nearly three-quarters expect AI to raise energy consumption by 2030, while only 52 per cent are confident current infrastructure can meet the demand. The report was released ahead of the fourth ENACT Majlis and ADIPEC 2026 in Abu Dhabi.",
    "summary_ar": "يفيد تقرير «تعزيز الإمكانات 2026» (Powering Possible 2026) الصادر عن ADNOC و XRG و Microsoft بأن الذكاء الاصطناعي ينتقل من مرحلة التجريب إلى الاستخدام اليومي في قطاع الطاقة العالمي، وأن الشركات بدأت تلمس عوائد مالية. واستند التقرير إلى استطلاع شمل نحو 400 من كبار قادة الطاقة والتمويل، وأظهر أن 62% منهم يضعون الذكاء الاصطناعي ضمن أهم أولويتين لمؤسساتهم مقابل 42% قبل عام. وزاد قرابة تسعة من كل عشرة مشاركين إنفاقهم على الذكاء الاصطناعي، وتوقع 63% أن تغطي عوائد استثماراتهم الحالية تكاليفها أو تتجاوزها. في المقابل، يتوقع نحو ثلاثة أرباع المشاركين أن يزيد الذكاء الاصطناعي استهلاك الطاقة بحلول 2030، بينما يثق 52% فقط بقدرة البنية التحتية الحالية على تلبية الطلب. وصدر التقرير قبل الدورة الرابعة من مجلس ENACT ومعرض ومؤتمر ADIPEC 2026 في أبوظبي.",
-   "excerpt": "New Adnoc, XRG and Microsoft research finds companies moving from pilot projects to large-scale deployment, with grid upgrades emerging as a critical investment priority"
+   "excerpt": null
   },
   {
    "id": "88294416a4cb",
@@ -4621,6 +4635,20 @@
    "summary_en": "Exowatt, which makes modular solar systems that supply power to energy-intensive sites such as AI data centers, described how it used Amazon SageMaker AI serverless model customization to build a repeatable pipeline for fine-tuned models. The pipeline serves two targets: an edge model based on Qwen3-1.7B for alarm triage on on-site controllers without a GPU, and a cloud model based on Qwen3-14B for energy-market analysis. According to the post, the models reach higher accuracy than frontier models at up to 49× lower cost. The company says it can now go from raw operational data to a deployable model in days rather than months, and plans to reuse the approach for other narrow tasks across its fleet.",
    "summary_ar": "شرحت شركة Exowatt، المتخصصة في أنظمة الطاقة الشمسية المعيارية التي تغذي مواقع كثيفة الاستهلاك للطاقة مثل مراكز بيانات الذكاء الاصطناعي، كيف استخدمت خدمة Amazon SageMaker AI للتخصيص بلا خوادم من أجل بناء مسار متكرر لإنتاج نماذج مضبوطة بدقة. يخدم هذا المسار هدفين: نموذجاً للحافة مبنياً على Qwen3-1.7B لفرز التنبيهات على وحدات تحكم في المواقع دون الحاجة إلى وحدة معالجة رسومية، ونموذجاً سحابياً مبنياً على Qwen3-14B لتحليل سوق الطاقة. ووفق المقال، تحقق النماذج دقة أعلى من النماذج الرائدة بتكلفة أقل تصل إلى 49 ضعفاً. وتقول الشركة إنها باتت قادرة على الانتقال من بيانات التشغيل الخام إلى نموذج جاهز للنشر خلال أيام بدلاً من أشهر، وتخطط لإعادة استخدام الأسلوب في مهام محددة أخرى عبر أسطولها.",
    "excerpt": "In this post, we show how Exowatt used Amazon SageMaker AI serverless model customization to build a repeatable AI pipeline that produces task-specific fine-tuned models for two deployment targets, edge and cloud, achieving higher accuracy than frontier models at up to 49x lower…"
+  },
+  {
+   "id": "c69c4ac23ab6",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-27T16:35:58+00:00",
+   "title": "آبل تطلق حاسوبها المكتبي iMac بمعالج M6.. قفزة في أداء الذكاء الاصطناعي وسعر يبدأ من 1500 دولارٍ",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/10/27/%d8%a2%d8%a8%d9%84-%d8%aa%d8%b7%d9%84%d9%82-%d8%ad%d8%a7%d8%b3%d9%88%d8%a8%d9%87%d8%a7-%d8%a7%d9%84%d9%85%d9%83%d8%aa%d8%a8%d9%8a-imac-%d8%a8%d9%85%d8%b9%d8%a7%d9%84%d8%ac-m6-%d9%82%d9%81%d8%b2/",
+   "summary_en": "Apple has updated its iMac desktop with the new M6 chip, aimed at better performance and on-device AI processing, with a starting price of $1,500. The chip uses 2-nanometre manufacturing and a dual 16-core Neural Engine, and Apple says local AI tasks run about 5 times faster than on the M4 model. The base model has a 10-core CPU and 10-core GPU, while a 12-core CPU and GPU version starts at $1,700. Pre-orders open on 28 October, with availability on 6 November. The iMac also gains Apple's N1 wireless chip with Wi-Fi 7 and Bluetooth 6, but keeps the same design and colours, and some options now cost extra.",
+   "summary_ar": "حدّثت Apple حاسوبها المكتبي iMac بمعالج M6 الجديد بهدف تحسين الأداء ومعالجة مهام الذكاء الاصطناعي على الجهاز نفسه، بسعر يبدأ من 1500 دولار. ويعتمد المعالج على تصنيع بدقة 2 نانومتر ويضم محركاً عصبياً مزدوجاً بـ16 نواة، وتقول Apple إن مهام الذكاء الاصطناعي المحلية تعمل بسرعة أكبر بنحو خمسة أضعاف مقارنة بطراز M4. ويأتي الإصدار الأساسي بمعالج مركزي بـ10 أنوية ومعالج رسومي بـ10 أنوية، أما الإصدار الأعلى بـ12 نواة لكل منهما فيبدأ من 1700 دولار. وتبدأ الطلبات المسبقة في 28 أكتوبر، على أن يتوفر الجهاز في 6 نوفمبر. كما حصل الجهاز على شريحة الاتصال اللاسلكي N1 مع دعم Wi-Fi 7 وBluetooth 6، مع بقاء التصميم والألوان نفسها، وأصبحت بعض الخيارات بمقابل إضافي.",
+   "excerpt": "أعلنت شركة آبل تحديث حاسوبها المكتبي المتكامل iMac، ليأتي مزودًا بمعالج M6 الجديد، لتعزيز الأداء وقدرات معالجة مهام الذكاء الاصطناعي محليًا، مع الإبقاء على التصميم الخارجي وخيارات الألوان نفسها تقريبًا، وبسعر يبدأ من 1500 دولارٍ."
   },
   {
    "id": "dddf43d553b6",
