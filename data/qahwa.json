@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-08T21:40:00+04:00",
+  "generated_at": "2026-11-08T22:00:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8535,6 +8535,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-08T21:40:00+04:00",
       "cover": "images/qahwa/week-06-day-37--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-38--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Jetson is just a tiny gaming PC.",
+        "ar": "Jetson مجرد كمبيوتر ألعاب صغير."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "Jetson is just ==a tiny gaming PC==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "Jetson مجرد ==كمبيوتر ألعاب صغير==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-08T22:00:00+04:00",
+      "cover": "images/qahwa/week-06-day-38--3-check-story.webp",
       "related_concepts": []
     }
   ]
