@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-09T07:50:00+04:00",
+  "generated_at": "2026-11-09T08:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8641,6 +8641,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-09T07:50:00+04:00",
       "cover": "images/qahwa/week-06-day-38--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-37--1-learn-lesson-27",
+      "kind": "lesson",
+      "lesson": 27,
+      "code": "L27",
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Another path for local AI",
+        "ar": "خيار آخر للذكاء الاصطناعي المحلي"
+      },
+      "summary": {
+        "en": "AMD lists 32 GB GDDR6 on a 256-bit interface with 640 GB/s peak memory bandwidth.",
+        "ar": "تذكر AMD ذاكرة 32 GB GDDR6 بواجهة 256-bit وعرض نطاق أقصى 640 GB/s."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "NVIDIA is not the only ==local-AI option==",
+            "body": "Meet AMD Radeon AI PRO R9700."
+          },
+          "ar": {
+            "title": "NVIDIA ليست ==الخيار الوحيد للذكاء الاصطناعي المحلي==",
+            "body": "تعرّف على AMD Radeon AI PRO R9700."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "32 GB of dedicated VRAM",
+            "body": "AMD lists ==32 GB GDDR6== on a 256-bit interface with 640 GB/s peak memory bandwidth."
+          },
+          "ar": {
+            "title": "ذاكرة VRAM مخصصة بسعة 32 GB",
+            "body": "تذكر AMD ذاكرة ==32 GB GDDR6== بواجهة 256-bit وعرض نطاق أقصى 640 GB/s."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "RDNA 4 + AI accelerators",
+            "body": "The R9700 uses RDNA 4, 64 compute units and dedicated AI accelerators, aimed at ==running trained models locally (inference)== and memory-heavy professional work."
+          },
+          "ar": {
+            "title": "RDNA 4 ومسرّعات الذكاء الاصطناعي",
+            "body": "تعتمد على RDNA 4 و64 وحدة حوسبة ومسرّعات مخصصة للذكاء الاصطناعي، ==لتشغيل النماذج محلياً (الاستدلال)== والأعمال التي تحتاج ذاكرة كبيرة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "ROCm matters",
+            "body": "AMD’s ROCm software stack is the key ecosystem layer for many AI workloads. ==Hardware specs are only half the story.=="
+          },
+          "ar": {
+            "title": "ROCm مهمة",
+            "body": "منظومة ROCm البرمجية من AMD طبقة أساسية لكثير من أحمال الذكاء الاصطناعي. ==المواصفات وحدها لا تكفي.=="
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Software compatibility varies",
+            "body": "Model, framework, OS and application support can differ between CUDA, ROCm, Vulkan and other backends. ==Check your exact software before buying.=="
+          },
+          "ar": {
+            "title": "التوافق يختلف",
+            "body": "دعم النماذج والأطر والأنظمة والتطبيقات يختلف بين CUDA وROCm وVulkan وغيرها. ==تحقّق من برنامجك المحدد قبل الشراء.=="
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Power & workstation use",
+            "body": "AMD specifies 300 W total board power and PCIe 5.0 x16 for the card."
+          },
+          "ar": {
+            "title": "الطاقة والاستخدام الاحترافي",
+            "body": "تذكر AMD استهلاك طاقة يصل إلى 300 W للبطاقة ومنفذ PCIe 5.0 x16."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Two espresso machines ==may have similar capacities==",
+            "body": "But the tools, recipes and support around them can make the experience very different."
+          },
+          "ar": {
+            "title": "قد تتشابه آلتان ==في السعة==",
+            "body": "لكن الأدوات والوصفات والدعم حول كل واحدة قد تجعل التجربة مختلفة جداً."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "NVIDIA is the only hardware that can run local AI.",
+            "fact": "AMD, Apple, Intel and specialized accelerators can run AI too. Software support and workload determine the experience."
+          },
+          "ar": {
+            "myth": "NVIDIA هي الوحيدة التي تشغّل الذكاء الاصطناعي محلياً.",
+            "fact": "AMD وApple وIntel ومسرّعات متخصصة تستطيع تشغيل الذكاء الاصطناعي أيضاً. التجربة تعتمد على البرامج والمهمة."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "My AI setup: [apps, frameworks, operating system]. Does it support ROCm or another AMD backend on an R9700? List the official pages I should check."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "منظومتي: [التطبيقات والأطر ونظام التشغيل]. هل تدعم ROCm أو backend آخر من AMD على R9700؟ واذكر الصفحات الرسمية للتأكد."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Always ==check your software stack first=="
+          },
+          "ar": {
+            "title": "تحقّق دائماً ==من توافق برامجك أولاً=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My AI setup: [apps, frameworks, operating system]. Does it support ROCm or another AMD backend on an R9700? List the official pages I should check.",
+        "ar": "منظومتي: [التطبيقات والأطر ونظام التشغيل]. هل تدعم ROCm أو backend آخر من AMD على R9700؟ واذكر الصفحات الرسمية للتأكد.",
+        "code": "L27"
+      },
+      "permalink": "https://www.instagram.com/p/DfgbWJ7jOor/",
+      "published_at": "2026-11-09T08:02:00+04:00",
+      "cover": "images/qahwa/week-06-day-37--1-learn-lesson-27.webp",
       "related_concepts": []
     }
   ]
