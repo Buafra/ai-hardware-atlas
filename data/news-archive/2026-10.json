@@ -4497,6 +4497,20 @@
    "excerpt": "Local race is part of broader Big Tech and AI backlash in the US"
   },
   {
+   "id": "91ab09be6954",
+   "source": "google-research",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-27T17:35:00+00:00",
+   "title": "The sleep framework: A new way for LLMs to retain knowledge in continual learning",
+   "title_ar": "إطار النوم: طريقة جديدة لتمكين نماذج اللغة الكبيرة من الاحتفاظ بالمعرفة في التعلّم المستمر",
+   "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+   "summary_en": "Google Research's Ali Behrouz and Vahab Mirrokni have introduced a sleep framework for continual learning in large language models. The authors say deployed models remain largely static with a fixed knowledge cutoff, that ongoing parameter updates risk catastrophic forgetting, and that in-context learning keeps information only for the length of a session. In their approach, a model alternates between active interaction and an offline sleep phase made up of memory consolidation and dreaming. Consolidation moves short-term context into long-term parameters, while dreaming uses self-generated examples for self-improvement, with the architecture unchanged. They report that this lets models acquire new facts, retain long-context knowledge up to 10M tokens and improve complex reasoning, and they add a theoretical analysis of why the two stages work.",
+   "summary_ar": "قدّم الباحثان «علي بهروز» و«وحيد ميرروكني» من Google Research إطاراً جديداً للتعلّم المستمر في النماذج اللغوية الكبيرة يقوم على مرحلة «النوم». ويشير الباحثان إلى أن النماذج بعد نشرها تبقى ثابتة إلى حد بعيد ولها تاريخ محدد لانتهاء معرفتها، وأن التحديثات المتواصلة للمعاملات قد تسبب النسيان الكارثي، بينما يحتفظ التعلّم داخل السياق بالمعلومات طوال الجلسة فقط. وفي النهج المقترح يتناوب النموذج بين التفاعل النشط ومرحلة نوم تعمل دون اتصال، وتضم ترسيخ الذاكرة و«الحلم». فالترسيخ ينقل السياق قصير الأمد إلى معاملات طويلة الأمد، أما الحلم فيعتمد على أمثلة يولّدها النموذج بنفسه لتحسين ذاته مع بقاء بنيته دون تغيير. ويفيد الباحثان بأن ذلك يتيح اكتساب حقائق جديدة والاحتفاظ بمعرفة السياقات الطويلة حتى 10M من الوحدات اللغوية وتحسين الاستدلال المعقد، مع تحليل نظري يفسّر فاعلية المرحلتين.",
+   "excerpt": null
+  },
+  {
    "id": "d8c87d0b4457",
    "source": "verge-ai",
    "lang": "en",
@@ -6203,6 +6217,20 @@
    "summary_en": "Anthropic has filed the prospectus for its initial public offering, putting formerly private information about the AI lab on display. The biggest part of the document is 94 pages of risk factors, which warn that sufficiently advanced AI systems lacking proper safeguards could pose catastrophic or existential risks to humanity. The filing links this to recursive self-improvement, where AI models take over AI research and development and may outpace the company's ability to evaluate and safeguard them. Yet Anthropic also calls this \"closing the loop\" and describes it as one of its most significant structural advantages, warning that failing to do it could leave it behind rivals. The article says other labs face the same tension, and that several bills in Congress, including one cosponsored by Bernie Sanders, propose banning recursive self-improvement.",
    "summary_ar": "قدّمت شركة Anthropic نشرة الاكتتاب العام الأولي، وكشفت بذلك معلومات كانت سرّية سابقاً عن مختبر الذكاء الاصطناعي. وأكبر أقسام الوثيقة هو 94 صفحة من عوامل المخاطرة، تحذّر من أن أنظمة الذكاء الاصطناعي المتقدمة بما يكفي، إذا افتقرت إلى ضمانات مناسبة، قد تشكّل مخاطر كارثية أو وجودية على البشرية. وتربط الوثيقة ذلك بالتحسين الذاتي التكراري، أي أن تتولى نماذج الذكاء الاصطناعي بحث الذكاء الاصطناعي وتطويره، وقد تتقدم أسرع من قدرة الشركة على تقييمها وتأمينها. ومع ذلك تصف Anthropic هذه العملية بأنها «إغلاق الحلقة» وتعدّها من أهم مزاياها البنيوية، وتحذّر من أن التخلف عنها قد يجعلها متأخرة عن منافسيها. ويشير المقال إلى أن مختبرات أخرى تواجه التوتر نفسه، وأن عدة مشاريع قوانين في الكونغرس، بينها مشروع شارك في رعايته «بيرني ساندرز»، تقترح حظر التحسين الذاتي التكراري.",
    "excerpt": "Anthropic thinks “closing the loop” is the best path to AI triumph—and a recipe for “existential” threats to humanity."
+  },
+  {
+   "id": "be77c96c39b4",
+   "source": "google-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-10-26T16:00:00+00:00",
+   "title": "Our newest AI Quest: Mapping the human brain",
+   "title_ar": "أحدث مهمة لنا في الذكاء الاصطناعي: رسم خريطة الدماغ البشري",
+   "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+   "summary_en": "Google Research and the Stanford Accelerator for Learning have launched \"Polar Peaks\", the third quest in the AI Quests series for students aged 11 to 14. Guided by in-game mentors, players scan and map neurons in the brain to understand a character's memory loss, doing tasks such as data cleaning and model testing and learning that AI needs careful human oversight. The quest draws on more than a decade of Google research in connectomics, and students hear from researchers behind the mapping of the complete fruit fly brain, the largest brain map by number of neurons to date. More than 400,000 quests have been completed, localized to 10 languages. New teacher training modules are being released in the Google AI Educator Series, with the Quest #3 module due next month.",
+   "summary_ar": "أطلقت «غوغل ريسيرش» ومعها «مسرّعة ستانفورد للتعلّم» (Stanford Accelerator for Learning) المهمة «Polar Peaks»، وهي الثالثة في سلسلة «مهام الذكاء الاصطناعي» (AI Quests) الموجّهة إلى الطلاب بين 11 و14 عاماً. وبإرشاد من مرشدين داخل اللعبة، يفحص اللاعبون الخلايا العصبية في الدماغ ويرسمون خريطتها لفهم فقدان الذاكرة لدى شخصية اللعبة، وينفّذون مهام مثل تنظيف البيانات واختبار النماذج، ويتعلمون أن الذكاء الاصطناعي يحتاج إلى إشراف بشري دقيق. وتستند المهمة إلى أكثر من عقد من أبحاث غوغل في علم الوصلات العصبية، ويستمع الطلاب إلى باحثين شاركوا في رسم خريطة دماغ ذبابة الفاكهة كاملاً، وهي أكبر خريطة دماغية من حيث عدد الخلايا العصبية حتى الآن. وقد أُنجز أكثر من 400 ألف مهمة بعشر لغات. كما تُطرح وحدات تدريب جديدة للمعلمين ضمن Google AI Educator Series، على أن تصدر وحدة المهمة الثالثة الشهر المقبل.",
+   "excerpt": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”"
   },
   {
    "id": "0484546ab1e6",
