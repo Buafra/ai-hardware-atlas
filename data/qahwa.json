@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-09T07:45:00+04:00",
+  "generated_at": "2026-11-09T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8606,6 +8606,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-09T07:45:00+04:00",
       "cover": "images/qahwa/week-06-day-37--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-38--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Jetson is just a tiny gaming PC.",
+        "ar": "Jetson مجرد كمبيوتر ألعاب صغير."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "Jetson is just ==a tiny gaming PC==.",
+            "body": "Answer: Myth ❌ Jetson is an embedded AI platform built for edge computing, robotics and vision."
+          },
+          "ar": {
+            "title": "Jetson مجرد ==كمبيوتر ألعاب صغير==.",
+            "body": "الجواب: خرافة ❌ Jetson منصة ذكاء اصطناعي مدمجة للحوسبة على الحافة والروبوتات والرؤية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-09T07:50:00+04:00",
+      "cover": "images/qahwa/week-06-day-38--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
