@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-09T08:02:00+04:00",
+  "generated_at": "2026-11-09T08:06:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8777,6 +8777,143 @@
       "published_at": "2026-11-09T08:02:00+04:00",
       "cover": "images/qahwa/week-06-day-37--1-learn-lesson-27.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-06-day-38--1-learn-lesson-28",
+      "kind": "lesson",
+      "lesson": 28,
+      "code": "L28",
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Putting AI at the edge",
+        "ar": "وضع الذكاء الاصطناعي على الحافة"
+      },
+      "summary": {
+        "en": "AI runs close to the camera, robot, sensor or machine instead of sending every task to a distant cloud server.",
+        "ar": "يعمل الذكاء الاصطناعي قرب الكاميرا أو الروبوت أو الحساس أو الآلة بدل إرسال كل مهمة إلى خادم سحابي بعيد."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "What if AI needs ==to leave the desk?==",
+            "body": "Meet NVIDIA Jetson."
+          },
+          "ar": {
+            "title": "ماذا لو احتاج الذكاء الاصطناعي ==أن يغادر المكتب؟==",
+            "body": "تعرّف على NVIDIA Jetson."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What is edge AI?",
+            "body": "AI runs ==close to the camera, robot, sensor or machine== instead of sending every task to a distant cloud server."
+          },
+          "ar": {
+            "title": "ما هو Edge AI؟",
+            "body": "يعمل الذكاء الاصطناعي ==قرب الكاميرا أو الروبوت أو الحساس أو الآلة== بدل إرسال كل مهمة إلى خادم سحابي بعيد."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Jetson Orin Nano Super",
+            "body": "NVIDIA lists up to ==67 INT8 TOPS (with sparsity)==, 8 GB LPDDR5, 102 GB/s memory bandwidth and 7–25 W power for the developer kit."
+          },
+          "ar": {
+            "title": "Jetson Orin Nano Super",
+            "body": "تذكر NVIDIA لمجموعة المطورين أداءً يصل ==إلى 67 INT8 TOPS (مع sparsity)==، وذاكرة LPDDR5 بسعة 8 GB، وعرض نطاق 102 GB/s، واستهلاك 7–25 W."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Where is it useful?",
+            "body": "Robots, smart cameras, drones, industrial machines, vision systems and multimodal edge applications."
+          },
+          "ar": {
+            "title": "أين يفيد؟",
+            "body": "الروبوتات والكاميرات الذكية والطائرات المسيّرة والآلات الصناعية وأنظمة الرؤية وتطبيقات الذكاء الاصطناعي متعددة الوسائط على الحافة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why not use a desktop GPU?",
+            "body": "Edge devices care about ==size, power, heat, I/O and latency==. The fastest desktop card may be impractical inside a robot or camera."
+          },
+          "ar": {
+            "title": "لماذا لا نستخدم GPU مكتبياً؟",
+            "body": "في أجهزة الحافة، الأهم هو ==الحجم والطاقة والحرارة والتوصيلات وزمن الاستجابة==. أسرع بطاقة مكتبية قد لا تناسب روبوتاً أو كاميرا."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Not every model will fit",
+            "body": "The Orin Nano Super's ==8 GB is shared by CPU and GPU==, so choose small models and precision carefully. Bigger Jetson modules exist, up to the 128 GB Jetson AGX Thor."
+          },
+          "ar": {
+            "title": "ليست كل النماذج مناسبة",
+            "body": "ذاكرة Orin Nano Super البالغة ==8 GB مشتركة بين CPU وGPU==، فاختر النموذج والدقة بعناية. وتوجد وحدات Jetson أكبر تصل إلى 128 GB في AGX Thor."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Your desktop GPU is ==the café==",
+            "body": "Jetson is the coffee cart you can take to the street, factory or robot."
+          },
+          "ar": {
+            "title": "GPU المكتبي هو ==المقهى==",
+            "body": "وJetson هو عربة القهوة التي يمكنك أخذها إلى الشارع أو المصنع أو الروبوت."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "Jetson is just a tiny gaming PC.",
+            "fact": "Jetson is an embedded AI platform optimized for edge computing, robotics and vision."
+          },
+          "ar": {
+            "myth": "Jetson مجرد كمبيوتر ألعاب صغير.",
+            "fact": "Jetson منصة ذكاء اصطناعي مدمجة، محسّنة للحوسبة على الحافة والروبوتات والرؤية."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "Design a Jetson project for my home, shop or workplace. What camera/sensor, model and output would I need?"
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "صمّم مشروع Jetson للبيت أو المتجر أو العمل. ما الكاميرا/الحساس والنموذج والمخرجات التي أحتاجها؟"
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "AI doesn’t have to live in the cloud — ==or even on your desk=="
+          },
+          "ar": {
+            "title": "الذكاء الاصطناعي لا يلزم أن يعمل في السحابة ==ولا حتى على مكتبك=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Design a Jetson project for my home, shop or workplace. What camera/sensor, model and output would I need?",
+        "ar": "صمّم مشروع Jetson للبيت أو المتجر أو العمل. ما الكاميرا/الحساس والنموذج والمخرجات التي أحتاجها؟",
+        "code": "L28"
+      },
+      "permalink": "https://www.instagram.com/p/DfgbvAXjDrX/",
+      "published_at": "2026-11-09T08:06:00+04:00",
+      "cover": "images/qahwa/week-06-day-38--1-learn-lesson-28.webp",
+      "related_concepts": [
+        "local-vs-cloud"
+      ]
     }
   ]
 }
