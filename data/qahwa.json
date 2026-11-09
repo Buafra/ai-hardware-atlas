@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-08T22:00:00+04:00",
+  "generated_at": "2026-11-09T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8571,6 +8571,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-08T22:00:00+04:00",
       "cover": "images/qahwa/week-06-day-38--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-37--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "NVIDIA is the only option for local AI.",
+        "ar": "NVIDIA هي الخيار الوحيد للذكاء الاصطناعي المحلي."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "NVIDIA is ==the only option== for local AI.",
+            "body": "Answer: Myth ❌ AMD and other platforms can run local AI too. Software compatibility matters."
+          },
+          "ar": {
+            "title": "NVIDIA هي ==الخيار الوحيد== للذكاء الاصطناعي المحلي.",
+            "body": "الجواب: خرافة ❌ AMD ومنصات أخرى تستطيع تشغيل الذكاء الاصطناعي محلياً أيضاً، والتوافق البرمجي مهم."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-09T07:45:00+04:00",
+      "cover": "images/qahwa/week-06-day-37--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
