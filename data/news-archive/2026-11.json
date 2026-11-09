@@ -3,6 +3,34 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "ea22bd19897d",
+   "source": "emaratalyoum",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-08T02:58:19+00:00",
+   "title": "رجل يقاضي \"تشات جي بي تي\" بتهمة التخطيط مع زوجته لقتله",
+   "title_ar": null,
+   "url": "https://www.emaratalyoum.com/life/four-sides/2026-11-08-1.2100506",
+   "summary_en": "A man named James Gates has sued OpenAI, alleging that ChatGPT helped his wife, Cheryl Gates, plan to poison him. He survived a poisoning attempt last July, and she was then charged with attempted murder. According to reports, she put prescription drugs and toxic plants in his drinks after allegedly asking the chatbot about lethal drug combinations. The suit, which names OpenAI and CEO Sam Altman, lists nine counts, including negligent design, failure to warn and intentional infliction of emotional distress, and seeks unspecified damages. An OpenAI spokesperson said safety is its top priority and that it banned the user and gave information to law enforcement. The article says the attempted murder charges against Cheryl were dropped in April for insufficient evidence.",
+   "summary_ar": "رفع رجل يُدعى «جيمس غيتس» دعوى قضائية ضد شركة OpenAI، زاعماً أن ChatGPT ساعد زوجته «شيريل غيتس» في التخطيط لتسميمه. ونجا من محاولة تسميم في يوليو الماضي، ووُجهت بعدها إلى زوجته تهمة الشروع في القتل. ووفق التقارير، وضعت أدوية موصوفة ونباتات سامة في مشروباته بعد أن سألت المساعد الذكي، بحسب الادعاء، عن توليفات دوائية قاتلة. وتضم الدعوى، التي تطال OpenAI ورئيسها التنفيذي «سام ألتمان»، تسع تهم منها التصميم القائم على الإهمال والإخفاق في التحذير والتسبب المتعمد في ضائقة عاطفية، وتطالب بتعويضات لم تُحدد قيمتها. وقال متحدث باسم OpenAI إن السلامة أولويتها القصوى، وإنها حظرت المستخدم وقدمت معلومات إلى جهات إنفاذ القانون. ويذكر المقال أن تهم الشروع في القتل أُسقطت عن شيريل في أبريل لعدم كفاية الأدلة.",
+   "excerpt": "رفع رجل دعوى قضائية ضد شركة \"أوبن إيه آي\" (OpenAI)، زاعماً أن برنامج \"تشات جي بي تي\" (ChatGPT) ساعد زوجته في التخطيط لتسميمه. ونجا جيمس غيتس من محاولة تسميم في يوليو الماضي، وعلى إثر ذلك وُجهت إلى زوجته، شيريل غيتس -التي تعمل أخصائية نفسية في إحدى المدارس"
+  },
+  {
+   "id": "78a693cf6f9d",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-07T19:04:00+00:00",
+   "title": "الذكاء الاصطناعي يعيد تشكيل العلاقات الأميركية الصينية",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/opinion/4704341/الذكاء-الاصطناعي-يعيد-تشكيل-العلاقات-الأميركية-الصينية",
+   "summary_en": "In an opinion piece published by arrangement with the New York Times, an American writer describes a nine-day trip to Beijing, Xiongan and tech hubs including Hangzhou, Ningbo and Shenzhen. He argues that AI is bringing the US and China closer geopolitically, since both worry about bad actors using AI-enabled drones and cyber weapons, while sharpening their trade disputes. China made nearly a third of manufactured goods sold worldwide in 2024, and its 2025 trade surplus reached 1.19 trillion dollars. US firms are spending billions on frontier models, whereas Chinese firms focus on cheap open-weight ones. He reports that Wang Yi said both countries can develop and manage AI together under human control, while Donald Trump has rejected any global control scheme.",
+   "summary_ar": "في مقال رأي نُشر بترتيب خاص مع «نيويورك تايمز»، يصف كاتب أميركي رحلة استغرقت تسعة أيام شملت بكين وشيونغآن ومراكز تقنية منها هانغتشو ونينغبو وشنتشن. ويرى أن الذكاء الاصطناعي يقرّب الولايات المتحدة والصين جيوسياسياً، إذ يقلق البلدان من استخدام جهات سيئة لطائرات مسيّرة وأسلحة إلكترونية مدعومة بالذكاء الاصطناعي، لكنه يفاقم خلافاتهما التجارية. وأنتجت الصين في 2024 قرابة ثلث السلع المصنّعة المباعة عالمياً، وبلغ فائضها التجاري في 2025 نحو 1.19 تريليون دولار. وتنفق الشركات الأميركية مليارات الدولارات على النماذج المتقدمة، بينما تركز الشركات الصينية على نماذج رخيصة ومفتوحة الأوزان. وينقل الكاتب عن «وانغ يي» أن البلدين قادران على تطوير الذكاء الاصطناعي وإدارته معاً تحت سيطرة بشرية، في حين رفض الرئيس «دونالد ترامب» أي مخطط عالمي للسيطرة عليه.",
+   "excerpt": "في مطار بكين، كان هناك ملصق يطلب من حاملي الطائرات المسيرة إخراجها والإفصاح عنها. وبحكم زياراتي المتكررة للصين منذ التسعينيات، كانت تفاصيل الرحلة مختلفة، فهي الأولى لي في عصر الذكاء الاصطناعي."
+  },
+  {
    "id": "fcd3c431b725",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -87,6 +115,34 @@
    "excerpt": "استعرض ناشرون ومسؤولو دور نشر، خلال مشاركتهم في معرض الشارقة الدولي للكتاب 2026، خمسة متغيرات تشهدها صناعة النشر مع التوسع في استخدام تقنيات الذكاء الاصطناعي، تشمل أساليب إنتاج المحتوى وأصالته، وحقوق الملكية الفكرية، ودور المؤلف في العملية الإبداعية، وتطور عادات القراءة، إلى…"
   },
   {
+   "id": "c0641eb0de56",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-06T20:02:22+00:00",
+   "title": "All the latest updates on AI data centers",
+   "title_ar": "أحدث المستجدات حول مراكز بيانات الذكاء الاصطناعي",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/902546/data-centers-ai-energy-power-grids-controversy",
+   "summary_en": "The Verge's running roundup covers the fights over AI data centers, which are straining power grids and raising concerns about utility bills, communities and the environment. Voters largely opposed expansion in the midterms, with 76 percent of those polled by NBC News on Election Day opposing data centers in their communities, and dozens of local ballot measures restricting development. After the vote, OpenAI pledged not to use NDAs with public officials and announced a pilot of its Grid Protectors Program in Effingham County, Georgia, promising to free up to 1,000 megawatts during emergencies. Amazon said in October it would stop using such NDAs. A bipartisan permitting bill is advancing, which critics fear could limit oversight of new data centers.",
+   "summary_ar": "يعرض ملخص The Verge المتجدد النزاعات حول مراكز بيانات الذكاء الاصطناعي، التي تضغط على شبكات الكهرباء وتثير مخاوف بشأن فواتير الخدمات والمجتمعات المحلية والبيئة. وقد عارض الناخبون التوسع في معظمهم خلال الانتخابات النصفية، إذ قال 76 في المئة ممن استطلعت NBC News آراءهم يوم الاقتراع إنهم يعارضون وجود مراكز البيانات في مجتمعاتهم، وأقرّت عشرات المجتمعات المحلية إجراءات اقتراع تقيّد التطوير. وبعد التصويت تعهدت OpenAI بعدم استخدام اتفاقيات عدم الإفصاح مع المسؤولين العموميين، وأعلنت تجربة «برنامج حماة الشبكة» (Grid Protectors Program) في مقاطعة إيفينغهام بولاية جورجيا، متعهدة بتحرير ما يصل إلى 1,000 ميغاواط خلال حالات الطوارئ. وكانت Amazon قد أعلنت في أكتوبر أنها ستتوقف عن استخدام هذه الاتفاقيات. ويتقدم مشروع قانون للتصاريح بدعم من الحزبين، يخشى منتقدوه أن يحد من الرقابة على مراكز البيانات الجديدة.",
+   "excerpt": "Massive new data centers are the physical foundation for tech companies’ hopes and dreams for AI. But the rush to expand warehouses full of energy-hungry servers has also kicked up fights across the world over their impact on power grids, utility bills, nearby communities, and…"
+  },
+  {
+   "id": "edc88645f18e",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T19:47:04+00:00",
+   "title": "Ripple-65B Preview delivers strong agentic coding results as a fully Apache 2.0 open US model",
+   "title_ar": "نموذج Ripple-65B Preview يحقق نتائج قوية في البرمجة الوكيلية بوصفه نموذجاً أمريكياً مفتوح المصدر بالكامل بترخيص Apache 2.0",
+   "url": "https://the-decoder.com/ripple-65b-preview-delivers-strong-agentic-coding-results-as-a-fully-apache-2-0-open-us-model/",
+   "summary_en": "Ricursive Intelligence, a company that designs AI chips, has trained and released an open language model called Ripple-65B Preview. It was pretrained on 12 trillion tokens and, according to the company, scored 80.52 on the TerminalBench 2.1 coding benchmark, the best result among open US models. Ripple does not match the newly released Inkling 2 Small on other benchmarks, but it is likely easier to run on users' own hardware. Ricursive says total development and training costs were just $32 million. The model is a dense Transformer with 65 billion parameters, optimized for Nvidia hardware, and is available on Hugging Face under the Apache 2.0 license.",
+   "summary_ar": "دربت شركة Ricursive Intelligence، المتخصصة في تصميم رقائق الذكاء الاصطناعي، نموذجاً لغوياً مفتوحاً وأصدرته باسم Ripple-65B Preview. وقد جرى تدريبه الأولي على 12 تريليون من الوحدات اللغوية، وحقق وفق الشركة 80.52 نقطة في اختبار TerminalBench 2.1 للبرمجة، وهي أفضل نتيجة بين النماذج المفتوحة الأمريكية. ولا يضاهي Ripple نموذج Inkling 2 Small الذي صدر حديثاً في اختبارات أخرى، لكنه على الأرجح أسهل في التشغيل على أجهزة المستخدمين الخاصة. وتقول Ricursive إن إجمالي تكاليف التطوير والتدريب بلغ 32 مليون دولار فقط. والنموذج من نوع Transformer الكثيف بـ65 مليار معامل، ومحسّن لعتاد NVIDIA، ومتاح على Hugging Face بترخيص Apache 2.0.",
+   "excerpt": "Ricursive Intelligence is releasing Ripple-65B Preview, a 65-billion-parameter open-weight language model that the company says achieves the top score among open-source U.S. models on the TerminalBench 2.1 coding benchmark at a total R&D cost of $32 million."
+  },
+  {
    "id": "36e0a9007df7",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -99,6 +155,76 @@
    "summary_en": "A study published in Nature reports that a smartwatch, paired with an AI system that analyses its sensor readings, can detect high blood pressure with accuracy similar to standard clinic checks. Ming-Zher Poh and colleagues applied an algorithm to signals from a Google smartwatch, combining optical blood-volume and wrist-movement data with the wearer's height, without calibrating against a cuff. The system was trained on roughly 500,000 hours of data from 2,109 people and validated on 196 participants against 24-hour ambulatory monitoring. Sensitivity was 65.8% for the watch and 55.3% for office measurements, a difference that was not statistically significant, and both reached 90% specificity. The researchers say it does not replace cuff measurement but could help identify people showing signs of hypertension, supporting earlier diagnosis and intervention.",
    "summary_ar": "أفادت دراسة نُشرت في مجلة Nature بأن ساعة ذكية مقترنة بنظام للذكاء الاصطناعي يحلل قراءات مستشعراتها قادرة على كشف ارتفاع ضغط الدم بدقة تقارب دقة الفحوص المعتادة في العيادات. وطبّق «مينغ-زير بوه» وزملاؤه خوارزمية على إشارات مسجلة بواسطة ساعة Google الذكية، جمعت بين بيانات حجم الدم الضوئي وحركة المعصم وطول المشارك، دون الحاجة إلى معايرة بجهاز قياس الضغط. وقد دُرّب النظام على نحو 500,000 ساعة من البيانات جُمعت من 2,109 أشخاص، ثم جرى التحقق منه على 196 مشاركاً مقابل المراقبة المتنقلة لضغط الدم على مدى 24 ساعة. وبلغت حساسية الساعة 65.8% مقابل 55.3% للقياسات المكتبية، وهو فارق غير ذي دلالة إحصائية، فيما بلغت الخصوصية 90% لكلتا الطريقتين. ويؤكد الباحثون أن النظام لا يحل محل جهاز قياس الضغط، لكنه قد يساعد في تحديد من تظهر عليهم علامات ارتفاع الضغط، بما يسهّل التشخيص والتدخل المبكرين.",
    "excerpt": "أفادت دراسة، نُشرت في مجلة Nature، بأن الساعات الذكية قد تتمكن من الكشف عن ارتفاع ضغط الدم بدقة كبيرة، وذلك بمساعدة نظام ذكاء اصطناعي يُحلل قراءات المستشعرات."
+  },
+  {
+   "id": "7f6fbca1ddcf",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-06T19:18:01+00:00",
+   "title": "Nvidia pushes back after Jensen Huang asked to closed-door meeting in Congress over ties to Chinese 'asset'",
+   "title_ar": "Nvidia ترد بعد طلب عقد اجتماع مغلق مع جنسن هوانغ في الكونغرس بشأن صلاته بـ«أصل» صيني",
+   "url": "https://www.thenationalnews.com/future/technology/2026/11/06/jensen-huang-nvidia-china-ai-congress/",
+   "summary_en": "Nvidia has pushed back after US lawmakers asked its chief executive, Jensen Huang, to attend a closed-door briefing on November 18 about his reported interactions with Alice Huang, an executive at the Singapore company Megaspeed who is alleged to be a Chinese intelligence asset. The letter, from the House select committee on the Chinese Communist Party and signed by Republican Representatives Brian Mast, John Moolenaar and Eric Crawford, also asks about Nvidia's security protocols against foreign espionage. A company representative did not say whether Mr Huang would attend, and said regional cloud customers receive only ordinary business information, with nothing relevant to national security. The article notes that Nvidia's lobbying for looser chip export policies towards China has drawn scrutiny, and that the letter came a day after Republicans lost control of Congress in the midterms.",
+   "summary_ar": "ردّت شركة Nvidia على طلب من مشرعين أمريكيين بأن يحضر رئيسها التنفيذي «جنسن هوانغ» جلسة إحاطة مغلقة في 18 نوفمبر، بشأن اتصالات نُسبت إليه مع «أليس هوانغ»، وهي مسؤولة في شركة Megaspeed السنغافورية يُزعم أنها عنصر استخباراتي صيني. وجاء الطلب في رسالة من اللجنة المختارة في مجلس النواب المعنية بالحزب الشيوعي الصيني، ووقّعها النواب الجمهوريون «براين ماست» و«جون مولينار» و«إريك كروفورد»، وتسأل فيها أيضاً عن إجراءات Nvidia الأمنية في مواجهة التجسس الأجنبي. ولم يوضح ممثل الشركة ما إذا كان «هوانغ» سيحضر، وقال إن عملاءها من مزودي الخدمات السحابية الإقليميين يتلقون معلومات تجارية عادية فقط، دون أي معلومات تتصل بالأمن القومي. ويشير المقال إلى أن مساعي الشركة لتخفيف قيود تصدير الرقائق إلى الصين جلبت لها تدقيقاً متزايداً، وإلى أن الرسالة أُرسلت بعد يوم من خسارة الجمهوريين السيطرة على الكونغرس في الانتخابات النصفية.",
+   "excerpt": "Congressional committee seeking to learn more about 'Nvidia's security protocols against foreign adversary espionage', letter says"
+  },
+  {
+   "id": "712436ca7238",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-06T18:45:55+00:00",
+   "title": "مراكز البيانات العملاقة في ألمانيا تفاقم أزمة المياه",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/miscellaneous/1563319",
+   "summary_en": "Environmental campaigners warn that the expansion of data centres in Germany, driven by the AI boom, could place a heavy burden on water supplies. A brief study by the Öko-Institut, commissioned by Greenpeace, found that German server centres used about 13 billion litres of water for cooling in 2025, a figure that could reach 27 billion litres a year by 2030 as new giant facilities are built. The industry association Bitkom has said data centres' water needs are not a major problem overall, noting that about two-thirds of facilities use at most 0.1 litre per kilowatt-hour of IT electricity. After excluding faulty entries from the government register, the institute calculated a weighted average of 0.67 litre per kilowatt-hour.",
+   "summary_ar": "حذّر نشطاء في مجال حماية البيئة من أن التوسع في إنشاء مراكز البيانات في ألمانيا، مدفوعاً بطفرة الذكاء الاصطناعي، قد يفرض أعباءً كبيرة على إمدادات المياه. وبحسب دراسة موجزة أعدها معهد «أوكو» بتكليف من منظمة «غرينبيس»، استهلكت مراكز الخوادم في ألمانيا نحو 13 مليار لتر من المياه للتبريد في عام 2025، وقد يرتفع الرقم إلى 27 مليار لتر سنوياً بحلول عام 2030 مع إنشاء مراكز عملاقة جديدة. في المقابل، رأت رابطة «بيتكوم» أن احتياجات مراكز البيانات من المياه ليست مشكلة كبيرة في المجمل، مشيرة إلى أن نحو ثلثي المنشآت تستهلك 0.1 لتر على الأكثر لكل كيلوواط/ساعة من كهرباء تقنية المعلومات. أما المعهد فقد توصل، بعد استبعاد البيانات الخاطئة من السجل الحكومي، إلى متوسط مرجح قدره 0.67 لتر لكل كيلوواط/ساعة.",
+   "excerpt": "حذر نشطاء حماية البيئة من أن التوسع في إنشاء مراكز البيانات، مدفوعاً بالطفرة في مجال الذكاء الاصطناعي، يهدد بفرض أعباء"
+  },
+  {
+   "id": "52e0623fab79",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-06T18:10:10+00:00",
+   "title": "Meta’s Muse AI can create custom ‘spaces’ for the version of the app you need right now",
+   "title_ar": "Muse AI من Meta يمكنه إنشاء «مساحات» مخصصة لنسخة التطبيق التي تحتاجها الآن",
+   "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces",
+   "summary_en": "Meta now lets users build customized, app-like experiences inside its Muse AI assistant through a feature called spaces. Examples include a shopping hub, school dashboard, music tracker and trivia game. A user creates a space by describing it. If outside apps such as Gmail, Google Calendar, OpenTable or Notion are connected, Muse pulls information from them and updates details like pricing and dates in the background. Users can also check items off, add notes and make edits inside a space.",
+   "summary_ar": "أتاحت Meta للمستخدمين الآن بناء تجارب مخصصة تشبه التطبيقات داخل المساعد الذكي Muse عبر ميزة تسمى «المساحات» (spaces). ومن الأمثلة على ذلك مركز للتسوق ولوحة متابعة دراسية وأداة لتتبع الموسيقى ولعبة معلومات عامة. ويُنشئ المستخدم المساحة بمجرد وصفها. وإذا ربط المستخدم تطبيقات خارجية مثل Gmail وGoogle Calendar وOpenTable وNotion، يسحب Muse المعلومات منها ويحدّث تفاصيل مثل الأسعار والمواعيد في الخلفية. كما يمكن للمستخدم وضع علامات على العناصر وإضافة ملاحظات وإجراء تعديلات داخل المساحة.",
+   "excerpt": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the Muse…"
+  },
+  {
+   "id": "91f8d419f4fc",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-06T17:00:00+00:00",
+   "title": "AI is the new dating dealbreaker",
+   "title_ar": "الذكاء الاصطناعي بات سبباً جديداً لرفض الشريك في المواعدة",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1028609/ai-dating-feelings-doomers-singularity",
+   "summary_en": "The Verge looks at how AI is shaping dating in San Francisco, where conversations about it have been widespread since ChatGPT's release in 2022. Some users put anti-AI statements in their dating profiles, while an AI safety researcher called Kyle says the risks he sees affect his thinking about children and the long term. Bryan, who works at a frontier AI company, says feelings about AI barely matter in romance, though he notes that being rich from AI helps. Matchmakers report clients asking for \"AI engineer\" partners, and a CBRE report cites more than 20,000 AI jobs added in the Bay Area. An Elon University study found 27 percent of Americans use chatbots for personal or emotional questions.",
+   "summary_ar": "تتناول The Verge كيف يؤثر الذكاء الاصطناعي في المواعدة في سان فرانسيسكو، حيث أصبح الحديث عنه منتشراً منذ إطلاق ChatGPT عام 2022. فبعض المستخدمين يضعون عبارات معارضة للذكاء الاصطناعي في ملفاتهم الشخصية على تطبيقات المواعدة، ويقول باحث في سلامة الذكاء الاصطناعي يُدعى كايل إن المخاطر التي يراها تؤثر في تفكيره بشأن الإنجاب والمستقبل البعيد. أما براين، الذي يعمل في إحدى شركات الذكاء الاصطناعي الرائدة، فيرى أن المشاعر تجاه الذكاء الاصطناعي لا تكاد تؤثر في العلاقات العاطفية، لكنه يشير إلى أن الثراء الناتج عن هذا المجال يمثل ميزة. وتفيد وسيطات الزواج بأن عملاء يطلبون شريكاً يعمل «مهندس ذكاء اصطناعي»، ويذكر تقرير لشركة CBRE إضافة أكثر من 20 ألف وظيفة في هذا المجال في منطقة خليج سان فرانسيسكو. وتفيد دراسة لجامعة Elon بأن 27 في المئة من الأمريكيين يلجؤون إلى روبوتات المحادثة لطرح أسئلة شخصية أو عاطفية.",
+   "excerpt": "When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the 25-year-old analyst downloaded Hinge and started swiping, she noticed a trend."
+  },
+  {
+   "id": "04f7ceca8d41",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T16:47:28+00:00",
+   "title": "Perplexity now has its own always-on AI agent",
+   "title_ar": "Perplexity لديها الآن وكيل ذكاء اصطناعي خاص بها يعمل دائماً",
+   "url": "https://the-decoder.com/perplexity-now-has-its-own-always-on-ai-agent/",
+   "summary_en": "Perplexity has launched Teammates, an AI agent that runs around the clock and works through ongoing projects on its own, unlike Perplexity Computer, which handles one-off assignments. Each Teammate has its own virtual machine with a desktop and browser. Users follow progress in dedicated threads in the Perplexity app and can interact with the agents through Slack. Teammates require the Max plan at $200 per month. Similar agents already come from SpaceX, Meta, OpenAI and Anthropic as Grok Bots, Muse, Dots and Duet, with Dots starting at $100 and Duet from $20. The article says the cheaper options will likely hit usage limits quickly, and notes SpaceX recently tightened caps on Grok Bots. Perplexity's annualized revenue topped $750 million as of August.",
+   "summary_ar": "أطلقت Perplexity خدمة Teammates، وهي وكيل ذكاء اصطناعي يعمل على مدار الساعة وينجز المشاريع المستمرة بصورة مستقلة، بخلاف Perplexity Computer الذي ينفذ مهام لمرة واحدة. لكل Teammate جهاز افتراضي خاص به يضم سطح مكتب ومتصفحاً. ويتابع المستخدمون التقدم عبر مسارات مخصصة في تطبيق Perplexity، ويمكنهم التفاعل مع الوكلاء عبر Slack. تتطلب الخدمة اشتراك Max بسعر 200 دولار شهرياً. وتوفّر SpaceX وMeta وOpenAI وAnthropic وكلاء مشابهين هي Grok Bots وMuse وDots وDuet، إذ تبدأ أسعار Dots من 100 دولار وDuet من 20 دولاراً. ويذكر المقال أن الخيارات الأرخص ستبلغ على الأرجح حدود الاستخدام سريعاً، وأن SpaceX شددت مؤخراً سقوف الاستخدام على Grok Bots. وتجاوز الإيراد السنوي المقدّر لشركة Perplexity مبلغ 750 مليون دولار حتى أغسطس.",
+   "excerpt": "Perplexity is launching \"Teammates,\" always-on agents that work through ongoing projects on their own virtual machines. The feature requires the Max plan at $200 per month, well above similar offerings from OpenAI or Anthropic. The market for always-on agents is getting crowded."
   },
   {
    "id": "c821c11af1c2",
@@ -771,6 +897,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "c2788911aa71",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-11-05T16:16:45+00:00",
+   "title": "Axiom Math wants to keep AI slop out of mathematics",
+   "title_ar": "Axiom Math تريد إبعاد محتوى الذكاء الاصطناعي الرديء عن الرياضيات",
+   "url": "https://techcrunch.com/2026/11/05/axiom-math-wants-to-keep-ai-slop-out-of-mathematics/",
+   "summary_en": "Axiom Math, a startup valued at $1.6B, announced on Wednesday that it had formally verified the Stacks Project, a large open-source body of mathematics begun by Columbia mathematician Johan de Jong in 2005. The company's AI agents translated roughly 7,654 pages into about 16 million lines of Lean code, which a proof assistant checks line by line. CEO Carina Hong said the team feared so many interconnected results might not hold together, and the agents picked their own tasks and worked in parallel. Axiom argues that verified results become building blocks for future proofs and could help ensure code written by AI agents is free of bugs.",
+   "summary_ar": "أعلنت شركة Axiom Math الناشئة، التي تبلغ قيمتها 1.6 مليار دولار، يوم الأربعاء أنها تحققت رسمياً من «مشروع ستاكس» (Stacks Project)، وهو مرجع مفتوح المصدر ضخم في الرياضيات بدأه عالم الرياضيات في جامعة كولومبيا «جوهان دي يونغ» عام 2005. وحوّل وكلاء الذكاء الاصطناعي لدى الشركة نحو 7,654 صفحة إلى قرابة 16 مليون سطر من شيفرة Lean، يفحصها مساعد إثبات سطراً بسطر. وقالت الرئيسة التنفيذية «كارينا هونغ» إن الفريق خشي ألا تتماسك هذه النتائج المترابطة، وإن الوكلاء اختاروا مهامهم بأنفسهم وعملوا بالتوازي. وترى Axiom أن النتائج الموثقة تصبح لبنات للإثباتات المقبلة، وقد تساعد في ضمان خلو الشيفرات التي يكتبها وكلاء الذكاء الاصطناعي من الأخطاء.",
+   "excerpt": "As AI floods math with unchecked proofs, Axiom Math is betting on verification. The startup’s AI agents just formally verified the Stacks Project, one of the field’s biggest libraries."
   },
   {
    "id": "cb0138b17ecb",
@@ -4158,7 +4298,7 @@
    "url": "https://gulfnews.com/technology/consumer-electronics/nvidia-rtx-spark-changes-everything-about-windows-laptops-1.500732739",
    "summary_en": "This branded content from Reach by Gulf News, the publisher's branded content team, presents NVIDIA RTX Spark, a new generation of slim Windows laptops with up to 128GB of unified memory. It says the laptops run AI models and agents locally rather than relying wholly on the cloud, which it says keeps more data on the device and lowers latency. The piece describes uses for gamers, creators, students and developers, including gameplay at 1440p above 100 frames per second, editing 12K video, and generating 4K AI video locally. It says Adobe is rebuilding Photoshop and Premiere Pro for RTX Spark. The laptops come from ASUS, Dell, HP, Lenovo and MSI, and are sold in the UAE at Sharaf DG.",
    "summary_ar": "يقدم هذا المحتوى الدعائي، الصادر عن فريق المحتوى الإعلاني Reach by Gulf News، حواسيب NVIDIA RTX Spark، وهي جيل جديد من حواسيب Windows المحمولة النحيفة بذاكرة موحدة تصل إلى 128GB. ويذكر أنها تشغّل نماذج الذكاء الاصطناعي ووكلاءه محلياً بدل الاعتماد الكامل على الحوسبة السحابية، ما يبقي مزيداً من البيانات على الجهاز ويقلل زمن الاستجابة. ويعرض استخداماتها للاعبين وصناع المحتوى والطلاب والمطورين، ومنها تشغيل الألعاب بدقة 1440p وبأكثر من 100 إطار في الثانية، وتحرير فيديو بدقة 12K، وتوليد فيديو بدقة 4K بالذكاء الاصطناعي محلياً. ويقول إن Adobe تعيد بناء Photoshop وPremiere Pro لتناسب هذه الأجهزة. وتتوفر الحواسيب من ASUS وDell وHP وLenovo وMSI، وتُباع في الإمارات لدى Sharaf DG.",
-   "excerpt": "Slim laptops with AI and advanced graphics for creators and gamers alike are up for grabs"
+   "excerpt": null
   },
   {
    "id": "b38643a40929",
