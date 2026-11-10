@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-10T14:25:00+04:00",
+  "generated_at": "2026-11-10T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9122,6 +9122,42 @@
       "permalink": "https://www.instagram.com/reel/Dfjr6jbOoMC/",
       "published_at": "2026-11-10T14:25:00+04:00",
       "cover": "images/qahwa/week-06-day-40--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-36--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "96 GB of VRAM means exactly 3× the AI speed of 32 GB.",
+        "ar": "96 GB VRAM تعني سرعة ×3 مقارنة بـ32 GB."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "96 GB of VRAM means ==exactly 3× the AI speed== of 32 GB.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "96 GB VRAM تعني ==سرعة ×3== مقارنة بـ32 GB.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-10T20:30:00+04:00",
+      "cover": "images/qahwa/week-06-day-36--3-check-story.webp",
       "related_concepts": []
     }
   ]
