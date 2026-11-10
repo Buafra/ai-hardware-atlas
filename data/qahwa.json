@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-09T08:06:00+04:00",
+  "generated_at": "2026-11-10T14:25:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -8914,6 +8914,215 @@
       "related_concepts": [
         "local-vs-cloud"
       ]
+    },
+    {
+      "id": "week-06-day-38--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Camera → Jetson → AI",
+        "ar": "كاميرا ← Jetson ← AI"
+      },
+      "summary": {
+        "en": "AI sees without sending every frame to the cloud.",
+        "ar": "الذكاء الاصطناعي يرى دون إرسال كل إطار إلى السحابة."
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "AI sees ==without sending every frame to the cloud==."
+          },
+          "ar": {
+            "title": "الذكاء الاصطناعي يرى ==دون إرسال كل إطار إلى السحابة==."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Give me 5 useful edge-AI projects I could build with Jetson and a camera.",
+        "ar": "أعطني 5 مشاريع Edge AI مفيدة باستخدام Jetson وكاميرا.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/DfjrOFayCOH/",
+      "published_at": "2026-11-10T14:24:00+04:00",
+      "cover": "images/qahwa/week-06-day-38--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-39--1-learn-lesson-29",
+      "kind": "lesson",
+      "lesson": 29,
+      "code": "L29",
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Tiny hardware for edge AI",
+        "ar": "عتاد صغير للذكاء الاصطناعي على الحافة"
+      },
+      "summary": {
+        "en": "Hailo is a separate company making edge-AI processors. AMD Ryzen AI Halo is a different platform from AMD.",
+        "ar": "Hailo شركة مستقلة تصنع معالجات للذكاء الاصطناعي على الحافة. أما AMD Ryzen AI Halo فهي منصة مختلفة من AMD."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "A tiny accelerator can ==add AI to another computer==",
+            "body": "Meet Hailo."
+          },
+          "ar": {
+            "title": "كيف يضيف ==مسرّع صغير== الذكاء الاصطناعي إلى جهازك؟",
+            "body": "تعرّف على Hailo."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "First: ==Hailo ≠ AMD Halo==",
+            "body": "Hailo is a separate company making edge-AI processors. AMD Ryzen AI Halo is a different platform from AMD."
+          },
+          "ar": {
+            "title": "أولاً: ==Hailo ليست AMD Halo==",
+            "body": "Hailo شركة مستقلة تصنع معالجات للذكاء الاصطناعي على الحافة. أما AMD Ryzen AI Halo فهي منصة مختلفة من AMD."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Hailo-8 M.2",
+            "body": "Hailo lists the Hailo-8 M.2 accelerator at ==up to 26 TOPS== for efficient, real-time neural-network inference on edge devices."
+          },
+          "ar": {
+            "title": "Hailo-8 M.2",
+            "body": "تذكر Hailo أن أداء مسرّع Hailo-8 M.2 يصل ==إلى 26 TOPS==، لتشغيل الشبكات العصبية فورياً وبكفاءة على أجهزة الحافة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Hailo-10H",
+            "body": "Hailo lists Hailo-10H at ==up to 40 TOPS INT4==, aimed at bringing generative AI capabilities to edge devices."
+          },
+          "ar": {
+            "title": "Hailo-10H",
+            "body": "تذكر Hailo أن أداء Hailo-10H يصل ==إلى 40 TOPS بدقة INT4== لإضافة قدرات الذكاء الاصطناعي التوليدي إلى أجهزة الحافة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why use a dedicated accelerator?",
+            "body": "Low power, low latency and compact form factors can make dedicated accelerators useful for cameras, embedded PCs and always-on inference."
+          },
+          "ar": {
+            "title": "لماذا نستخدم مسرّعاً مخصصاً؟",
+            "body": "استهلاك منخفض وزمن استجابة قصير وحجم صغير — مناسب للكاميرات والأجهزة المدمجة والاستدلال المستمر."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Not a replacement for every GPU",
+            "body": "Specialized accelerators are optimized for ==specific inference workloads==. They are not general replacements for large desktop GPUs."
+          },
+          "ar": {
+            "title": "ليس بديلاً لكل GPU",
+            "body": "المسرّعات المتخصصة محسّنة ==لأحمال استدلال معينة== وليست بديلاً عاماً عن بطاقات GPU المكتبية الكبيرة."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "You do not need ==a full café for one simple drink==",
+            "body": "Sometimes a small dedicated machine is exactly the right tool."
+          },
+          "ar": {
+            "title": "لا تحتاج ==مقهى كاملاً لمشروب واحد بسيط==",
+            "body": "أحياناً آلة صغيرة متخصصة هي الأداة المناسبة تماماً."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "Add a Hailo accelerator and any AI app runs faster.",
+            "fact": "Only software built for it benefits, and models usually have to be converted with Hailo's tools first."
+          },
+          "ar": {
+            "myth": "أضف مسرّع Hailo فيصبح أي تطبيق ذكاء اصطناعي أسرع.",
+            "fact": "تستفيد منه فقط البرامج التي تدعمه، وغالباً يجب تحويل النموذج بأدوات Hailo أولاً."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "My project: [describe it]. Would it benefit more from a GPU, a Jetson or a Hailo accelerator? Compare power, model type, latency and software."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "مشروعي: [صِفه]. هل يناسبه GPU أم Jetson أم مسرّع Hailo؟ قارن الطاقة ونوع النموذج وزمن الاستجابة والبرمجيات."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "An accelerator only helps ==software built for it=="
+          },
+          "ar": {
+            "title": "المسرّع لا يفيد إلا ==البرامج المصمَّمة له=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My project: [describe it]. Would it benefit more from a GPU, a Jetson or a Hailo accelerator? Compare power, model type, latency and software.",
+        "ar": "مشروعي: [صِفه]. هل يناسبه GPU أم Jetson أم مسرّع Hailo؟ قارن الطاقة ونوع النموذج وزمن الاستجابة والبرمجيات.",
+        "code": "L29"
+      },
+      "permalink": "https://www.instagram.com/p/DfjryEPCNaW/",
+      "published_at": "2026-11-10T14:24:00+04:00",
+      "cover": "images/qahwa/week-06-day-39--1-learn-lesson-29.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-40--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Read an AI spec sheet in 30 seconds",
+        "ar": "اقرأ مواصفات الذكاء الاصطناعي في 30 ثانية"
+      },
+      "summary": {
+        "en": "Ignore the marketing headline. Check these 5 things.",
+        "ar": "تجاهل الرقم التسويقي. افحص هذه الأشياء الخمسة."
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "Ignore the marketing headline. ==Check these 5 things.=="
+          },
+          "ar": {
+            "title": "تجاهل الرقم التسويقي. ==افحص هذه الأشياء الخمسة.=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Read this hardware spec sheet and summarize memory, bandwidth, compute precision, software support and power.",
+        "ar": "اقرأ مواصفات هذا الجهاز ولخّص الذاكرة وعرض النطاق ودقة الحوسبة ودعم البرمجيات والطاقة.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/Dfjr6jbOoMC/",
+      "published_at": "2026-11-10T14:25:00+04:00",
+      "cover": "images/qahwa/week-06-day-40--2-try-reel-cover.webp",
+      "related_concepts": []
     }
   ]
 }
