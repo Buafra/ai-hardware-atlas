@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T20:52:14+00:00",
+ "updated_at": "2026-11-10T04:15:33+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -817,6 +817,17 @@
    "moe": false
   },
   {
+   "id": "nex-agi/nex-n2.6",
+   "name": "Nex AGI: Nex-N2.6",
+   "hf": "nex-agi/Nex-N2.6",
+   "context": 262144,
+   "created": 1794282379,
+   "open": true,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "nousresearch/hermes-4-405b",
    "name": "Nous: Hermes 4 405B",
    "hf": "NousResearch/Hermes-4-405B",
@@ -1249,7 +1260,7 @@
    "id": "qwen/qwen3.8-27b",
    "name": "Qwen: Qwen3.8 27B",
    "hf": "Qwen/Qwen3.8-27B",
-   "context": 1024000,
+   "context": 1048575,
    "created": 1786722910,
    "open": true,
    "params_b": 27.78,
@@ -2219,17 +2230,6 @@
    "hf": null,
    "context": 128000,
    "created": 1734158152,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "stealth/crouton-alpha",
-   "name": "Crouton Alpha",
-   "hf": null,
-   "context": 1048576,
-   "created": 1793669930,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -3990,6 +3990,17 @@
    "hf": null,
    "context": 256000,
    "created": 1779298123,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "thinkingmachines/inkling-2-small",
+   "name": "Thinking Machines: Inkling 2 Small",
+   "hf": null,
+   "context": 1048576,
+   "created": 1794261847,
    "open": false,
    "params_b": null,
    "params_source": null,
