@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T04:15:33+00:00",
+ "updated_at": "2026-11-10T17:52:56+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2472,6 +2472,17 @@
    "hf": null,
    "context": 1048576,
    "created": 1791907477,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "google/gemini-4-carbon",
+   "name": "Google: Gemini 4 Carbon",
+   "hf": null,
+   "context": 1048576,
+   "created": 1794326871,
    "open": false,
    "params_b": null,
    "params_source": null,

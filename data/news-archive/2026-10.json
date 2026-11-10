@@ -969,6 +969,20 @@
    "excerpt": "Combining the NetBSD kernel with the Alpine Linux userland"
   },
   {
+   "id": "094c331a98fa",
+   "source": "deepmind",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-10-30T14:18:30+00:00",
+   "title": "Speeding up planning decisions with AI",
+   "title_ar": "تسريع قرارات التخطيط باستخدام الذكاء الاصطناعي",
+   "url": "https://deepmind.google/blog/speeding-up-planning-decisions-with-ai/",
+   "summary_en": "Google DeepMind says PlanAssist, an AI planning tool built with Gemini, is being extended to 12 more local planning authorities in England. In pilots since June in Barnet, Camden and Dorset, it cut the average time officers spent on householder assessment tasks by 58%, and over 70% of its reports were approved without edits. The tool validates documents, checks heritage constraints and planning policies, and drafts cited reports that officers can edit. It now enters a 12-month Beta using live applications, bringing the total to 15 councils. Subject to testing, the government plans to offer it to all councils in England in 2027, with officers keeping the final decision.",
+   "summary_ar": "تقول Google DeepMind إن PlanAssist، وهي أداة تخطيط تعتمد على الذكاء الاصطناعي وبُنيت باستخدام Gemini، ستتوسع لتشمل 12 سلطة تخطيط محلية إضافية في إنجلترا. وخلال التجارب التي بدأت في يونيو في بارنت وكامدن ودورست، خفّضت الأداة متوسط الوقت الذي يقضيه الموظفون في تقييم طلبات أصحاب المنازل بنسبة 58%، ووافق الموظفون على أكثر من 70% من تقاريرها دون تعديل. وتتحقق الأداة من المستندات، وتفحص قيود التراث وسياسات التخطيط، وتصيغ تقارير موثقة يستطيع الموظفون تعديلها. وتدخل الآن مرحلة تجريبية (Beta) مدتها 12 شهراً على طلبات فعلية، ليصل عدد المجالس إلى 15. وإذا نجحت الاختبارات، تخطط الحكومة لإتاحتها لجميع المجالس في إنجلترا عام 2027، مع بقاء القرار النهائي بيد موظف تخطيط مؤهل.",
+   "excerpt": "Google DeepMind and UK government work together to reduce planning assessment times"
+  },
+  {
    "id": "87256e5bac9b",
    "source": "thenational",
    "lang": "en",
@@ -3347,6 +3361,20 @@
    "summary_en": "Dubai Future Foundation has launched the AI Sandbox through its Sandbox Dubai initiative, which supports the emirate's legislative and innovation framework through government-private cooperation. The programme brings together startups, small and medium enterprises, large technology firms and government bodies, including the Dubai Centre for AI, to test AI solutions in real settings across sectors such as education, healthcare, transport and tourism. Solutions must have reached at least minimum viable product stage, and companies worldwide can apply until 18 December 2026. Participants receive technical, regulatory and commercial expertise, and regulatory exemptions may be considered case by case. The text cites World Economic Forum research that 74% of companies have not moved AI initiatives beyond pilots.",
    "summary_ar": "أطلقت مؤسسة دبي للمستقبل «ساندبوكس الذكاء الاصطناعي» عبر مبادرة «ساندبوكس دبي» التي تدعم المنظومة التشريعية والابتكارية في الإمارة بالتعاون بين القطاعين الحكومي والخاص. ويجمع البرنامج الشركات الناشئة والصغيرة والمتوسطة وكبريات شركات التكنولوجيا وجهات حكومية، منها مركز دبي لاستخدامات الذكاء الاصطناعي، لاختبار حلول الذكاء الاصطناعي في بيئات واقعية بقطاعات مثل التعليم والرعاية الصحية والنقل والسياحة. ويُشترط أن تكون الحلول قد بلغت مرحلة الحد الأدنى من المنتج القابل للتطبيق على الأقل، ويتاح التقدم للشركات من أنحاء العالم حتى 18 ديسمبر 2026. وتستفيد الشركات المشاركة من خبرات تقنية وتنظيمية وتجارية، وقد تُدرس إمكانية منح استثناءات تنظيمية بحسب كل حالة. ويشير النص إلى أبحاث للمنتدى الاقتصادي العالمي تفيد بأن 74% من الشركات لم تنقل مبادراتها في هذا المجال من التجريب إلى التطبيق.",
    "excerpt": "أعلنت مؤسسة دبي للمستقبل إطلاق «ساندبوكس الذكاء الاصطناعي» عبر مبادرة «ساندبوكس دبي» التي تهدف إلى دعم تطوير المنظومة ا"
+  },
+  {
+   "id": "b0da25ea6c1a",
+   "source": "deepmind",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-10-28T17:00:58+00:00",
+   "title": "Gemini 4 Carbon: Our next frontier model",
+   "title_ar": "Gemini 4 Carbon: نموذجنا الرائد القادم",
+   "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "c802108aab79",
