@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-11T13:01:00+04:00",
+  "generated_at": "2026-11-11T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9468,6 +9468,42 @@
       "permalink": "https://www.instagram.com/p/DfmHGlQiNH0/",
       "published_at": "2026-11-11T13:01:00+04:00",
       "cover": "images/qahwa/week-06-day-42--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-39--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Any AI app runs faster with a Hailo accelerator.",
+        "ar": "أي تطبيق ذكاء اصطناعي يصبح أسرع مع مسرّع Hailo."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "Any AI app runs faster with ==a Hailo accelerator==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "أي تطبيق ذكاء اصطناعي ==يصبح أسرع مع مسرّع Hailo==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T20:30:00+04:00",
+      "cover": "images/qahwa/week-06-day-39--3-check-story.webp",
       "related_concepts": []
     }
   ]
