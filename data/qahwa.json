@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-10T20:30:00+04:00",
+  "generated_at": "2026-11-11T07:46:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9158,6 +9158,76 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-10T20:30:00+04:00",
       "cover": "images/qahwa/week-06-day-36--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-33--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "safety",
+      "title": {
+        "en": "A bank never asks for your verification code on a call.",
+        "ar": "البنك لا يطلب رمز التحقق في مكالمة"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "fact",
+          "en": {
+            "title": "A bank ==never asks== for your verification code on a call.",
+            "body": "Answer: Fact ✅ Banks do not ask for your verification code or password by call or message. Whoever asks is a scammer: hang up and call the number you know."
+          },
+          "ar": {
+            "title": "البنك ==لا يطلب== رمز التحقق في مكالمة",
+            "body": "الجواب: حقيقة ✅ لا تطلب البنوك رمز التحقق ولا كلمة المرور في مكالمة أو رسالة. من يطلبه محتال: أغلق واتصل بالرقم المعروف."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T07:45:00+04:00",
+      "cover": "images/qahwa/week-05-day-33--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-05-day-35--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 5,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these should you never type into an AI assistant?",
+        "ar": "أيّ هذه لا تكتبه في المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Answer: Which one should you never type?",
+        "ar": "الجواب: أيّها لا تكتبه في المساعد الذكي؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which of these should you ==never type== into an AI assistant?",
+            "body": "Answer: Your verification code ✅ Never type verification codes or passwords into any chat. Gift ideas and coffee recipes are perfectly safe."
+          },
+          "ar": {
+            "title": "أيّ هذه ==لا تكتبه== في المساعد الذكي؟",
+            "body": "الجواب: رمز التحقق ✅ لا تكتب رموز التحقق ولا كلمات المرور في أي محادثة. أما أفكار الهدايا ووصفات القهوة فلا ضرر فيها."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T07:46:00+04:00",
+      "cover": "images/qahwa/week-05-day-35--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
