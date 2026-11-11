@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-11T20:36:00+04:00",
+  "generated_at": "2026-11-11T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9540,6 +9540,62 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-11T20:36:00+04:00",
       "cover": "images/qahwa/week-06-day-40--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-41--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "challenge",
+      "title": {
+        "en": "Pick hardware for 3 AI jobs",
+        "ar": "اختر العتاد لـ3 مهام ذكاء اصطناعي"
+      },
+      "summary": {
+        "en": "Choose from: RTX PC · DGX Spark / Halo · Jetson · Hailo accelerator",
+        "ar": "اختر من: جهاز RTX · DGX Spark / Halo · Jetson · مسرّع Hailo"
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Challenge 6: ==Pick hardware for 3 AI jobs==",
+            "body": "A) private local AI assistant · B) smart camera · C) huge local model"
+          },
+          "ar": {
+            "title": "التحدّي 6: ==اختر العتاد لـ3 مهام ذكاء اصطناعي==",
+            "body": "أ) مساعد ذكي محلي خاص · ب) كاميرا ذكية · ج) نموذج محلي ضخم"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Your choices",
+            "body": "Choose from: RTX PC · DGX Spark / Halo · Jetson · Hailo accelerator"
+          },
+          "ar": {
+            "title": "اختياراتك",
+            "body": "اختر من: جهاز RTX · DGX Spark / Halo · Jetson · مسرّع Hailo"
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Explain why",
+            "body": "Post your three picks and one reason for each."
+          },
+          "ar": {
+            "title": "اشرح السبب",
+            "body": "شارك اختياراتك الثلاثة وسبباً واحداً لكل اختيار."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T21:01:00+04:00",
+      "cover": "images/qahwa/week-06-day-41--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
