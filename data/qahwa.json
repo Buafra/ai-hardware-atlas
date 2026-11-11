@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-11T07:50:00+04:00",
+  "generated_at": "2026-11-11T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9074,6 +9074,10 @@
           },
           "ar": {
             "title": "المسرّع لا يفيد إلا ==البرامج المصمَّمة له=="
+          },
+          "next": {
+            "en": "Lesson 30: Read an AI hardware spec sheet",
+            "ar": "الدرس 30: كيف تقرأ مواصفات عتاد الذكاء الاصطناعي؟"
           }
         }
       ],
@@ -9264,6 +9268,143 @@
       "published_at": "2026-11-11T07:50:00+04:00",
       "cover": "images/qahwa/week-06-day-36--3-check-story-answer.webp",
       "related_concepts": []
+    },
+    {
+      "id": "week-06-day-40--1-learn-lesson-30",
+      "kind": "lesson",
+      "lesson": 30,
+      "code": "L30",
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "Read an AI hardware spec sheet",
+        "ar": "كيف تقرأ مواصفات عتاد الذكاء الاصطناعي؟"
+      },
+      "summary": {
+        "en": "How much model and working data can fit? For local AI, this is often the first filter.",
+        "ar": "ما الذي تتّسع له الذاكرة من النموذج وبيانات العمل؟ في الذكاء الاصطناعي المحلي هذا غالباً أول معيار."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "AI hardware specs ==look confusing==",
+            "body": "Here are the numbers that actually matter."
+          },
+          "ar": {
+            "title": "مواصفات عتاد الذكاء الاصطناعي ==تبدو معقدة==",
+            "body": "هذه أهم الأرقام التي تحتاجها."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Memory capacity — GB",
+            "body": "How much model and working data can fit? For local AI, this is often ==the first filter==."
+          },
+          "ar": {
+            "title": "سعة الذاكرة — GB",
+            "body": "ما الذي تتّسع له الذاكرة من النموذج وبيانات العمل؟ في الذكاء الاصطناعي المحلي هذا غالباً ==أول معيار==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Memory bandwidth — GB/s",
+            "body": "How quickly can the processor move data to and from memory? Bandwidth can ==strongly affect model throughput==."
+          },
+          "ar": {
+            "title": "عرض نطاق الذاكرة — GB/s",
+            "body": "ما سرعة نقل البيانات من الذاكرة وإليها؟ عرض النطاق قد ==يؤثر بقوة في سرعة النماذج==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "TOPS & FLOPS",
+            "body": "TOPS = trillions of operations per second (common for NPUs). FLOPS = floating-point operations per second (common for GPUs). Neither means much without ==the precision and test conditions==."
+          },
+          "ar": {
+            "title": "TOPS وFLOPS",
+            "body": "TOPS = تريليونات العمليات في الثانية (شائع مع NPU). FLOPS = عمليات الفاصلة العائمة في الثانية (شائع مع GPU). لا قيمة كبيرة لأيٍّ منهما دون معرفة ==الدقة وظروف القياس==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Precision changes the number",
+            "body": "A chip may show a much larger TOPS/FLOPS figure at INT4 or FP4 than at higher precision. ==Always compare like with like.=="
+          },
+          "ar": {
+            "title": "الدقة تغيّر الرقم",
+            "body": "قد يظهر رقم أكبر بكثير عند INT4 أو FP4 مقارنة بدقة أعلى. ==قارن دائماً أرقاماً من نفس النوع والدقة.=="
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Watts",
+            "body": "Power matters for heat, electricity, battery life and whether the hardware can fit inside a laptop, robot or compact workstation."
+          },
+          "ar": {
+            "title": "الواط",
+            "body": "الطاقة مهمة للحرارة والكهرباء والبطارية وإمكانية وضع العتاد داخل لابتوب أو روبوت أو جهاز صغير."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Software support",
+            "body": "A fantastic spec sheet is ==useless if your framework or model cannot use the hardware efficiently==."
+          },
+          "ar": {
+            "title": "دعم البرمجيات",
+            "body": "أفضل المواصفات ==لا تفيد إذا كان إطار العمل أو النموذج لا يستطيع استخدام العتاد بكفاءة==."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Don’t choose ==by TOPS alone==",
+            "body": "That is like choosing a café only by cups per hour, without checking cup size, menu, quality or price."
+          },
+          "ar": {
+            "title": "لا تختر ==حسب TOPS فقط==",
+            "body": "هذا مثل اختيار مقهى حسب عدد الأكواب في الساعة دون معرفة الحجم أو القائمة أو الجودة أو السعر."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "The highest TOPS number always wins.",
+            "fact": "Compare memory, bandwidth, precision, software, power, price and the real workload — not one headline number."
+          },
+          "ar": {
+            "myth": "أعلى رقم TOPS هو الأفضل دائماً.",
+            "fact": "قارن الذاكرة وعرض النطاق والدقة والبرمجيات والطاقة والسعر والمهمة الفعلية، وليس رقماً واحداً."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Never buy AI hardware ==from one headline number=="
+          },
+          "ar": {
+            "title": "لا تشترِ عتاد الذكاء الاصطناعي ==اعتماداً على رقم واحد=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Here is a spec sheet: [paste the specs]. Summarize memory, bandwidth and power, say at what precision the performance numbers were measured, and write “not stated” for anything missing.",
+        "ar": "مواصفات جهاز: [الصق المواصفات]. لخّص الذاكرة وعرض النطاق والطاقة، وعند أي دقة قيست أرقام الأداء، واكتب «غير مذكور» لما ينقص.",
+        "code": "L30"
+      },
+      "permalink": "https://www.instagram.com/p/DfllCXzCFCR/",
+      "published_at": "2026-11-11T08:03:00+04:00",
+      "cover": "images/qahwa/week-06-day-40--1-learn-lesson-30.webp",
+      "related_concepts": [
+        "inference-serving"
+      ]
     }
   ]
 }
