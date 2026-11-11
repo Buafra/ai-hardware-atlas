@@ -3433,6 +3433,20 @@
    "excerpt": "Google is opening up Android Studio to third-party AI agents. Through a new \"Bring Your Own Agent\" feature, the IDE now supports more than 40 coding agents, including Anthropic's Claude Agent and OpenAI's Codex."
   },
   {
+   "id": "2ce02f1028ea",
+   "source": "ms-cloud",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-10-28T16:51:35+00:00",
+   "title": "Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work",
+   "title_ar": "نقدّم Microsoft Copilot harness: إطلاق إمكانات العمل الوكيلي متعدد النماذج حقاً",
+   "url": "https://blogs.microsoft.com/blog/2026/10/28/introducing-the-microsoft-copilot-harness-unlocking-the-potential-of-truly-multi-model-agentic-work/",
+   "summary_en": "Microsoft says it is making the Microsoft Copilot harness available through Microsoft Foundry. The harness, built by GitHub's engineering team and adopted company-wide, powers Copilot Code, Copilot Studio, the GitHub Copilot app, the CLI and VS Code. Microsoft describes it as the orchestration layer around a model, supplying instructions, context, an execution environment and controls, with support for open standards such as MCP and agent skills. It works across 20+ frontier models plus bring-your-own-key and routes work to suitable models. Microsoft says it recently ported the runtime to Rust, reducing session overhead and time-to-first token. Developers can download the SDK or run it in the cloud managed by Foundry, while Microsoft runs the agent loop and sandbox and customers supply instructions, skills, tools and model choice.",
+   "summary_ar": "تقول «مايكروسوفت» إنها تتيح Microsoft Copilot harness عبر Microsoft Foundry. وقد بناه فريق الهندسة في «غيت هب» واعتمدته الشركة في مختلف منتجاتها، وهو يشغّل Copilot Code وCopilot Studio وتطبيق GitHub Copilot وواجهة الأوامر CLI وVS Code. وتصفه الشركة بأنه طبقة التنسيق المحيطة بالنموذج، إذ توفر التعليمات والسياق وبيئة التنفيذ وأدوات التحكم، مع دعم معايير مفتوحة مثل MCP ومهارات الوكلاء. ويعمل مع أكثر من 20 نموذجاً متقدماً إضافة إلى خيار استخدام مفتاح المستخدم الخاص، ويوجّه المهام إلى النموذج المناسب. وتذكر «مايكروسوفت» أنها نقلت بيئة التشغيل مؤخراً إلى لغة Rust، مما قلل الحمل الإضافي للجلسات والزمن حتى أول وحدة لغوية. ويستطيع المطورون تنزيل حزمة SDK أو تشغيل الأداة سحابياً عبر Foundry، بينما تدير «مايكروسوفت» حلقة عمل الوكيل وبيئة العزل، ويقدم العملاء التعليمات والمهارات والأدوات واختيار النموذج.",
+   "excerpt": "If you want to compete, you need to be multi-model. And if you want to take advantage of everything that different AI models have to offer, you need a great harness. But building one that works seamlessly across multiple models and surfaces is incredibly hard."
+  },
+  {
    "id": "0afbd32e1ac6",
    "source": "register-ai",
    "lang": "en",

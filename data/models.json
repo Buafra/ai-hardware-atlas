@@ -1,7 +1,18 @@
 {
- "updated_at": "2026-11-11T02:02:15+00:00",
+ "updated_at": "2026-11-11T18:02:16+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
+  {
+   "id": "aion-labs/aion-rp-llama-3.1-8b",
+   "name": "AionLabs: Aion-RP 1.0 (8B)",
+   "hf": "aion-labs/Aion-RP-Llama-3.1-8B",
+   "context": 32768,
+   "created": 1738696718,
+   "open": true,
+   "params_b": 8.03,
+   "params_source": "huggingface",
+   "moe": false
+  },
   {
    "id": "baidu/ernie-5.5-flash-preview",
    "name": "Baidu: ERNIE-5.5-Flash-Preview",
@@ -32,6 +43,50 @@
    "created": 1741894342,
    "open": true,
    "params_b": 111.06,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "cohere/command-a-plus",
+   "name": "Cohere: Command A+",
+   "hf": "CohereLabs/command-a-plus-05-2026-bf16",
+   "context": 192000,
+   "created": 1790102896,
+   "open": true,
+   "params_b": 218.75,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "cohere/command-r-08-2024",
+   "name": "Cohere: Command R (08-2024)",
+   "hf": "CohereLabs/c4ai-command-r-08-2024",
+   "context": 128000,
+   "created": 1724976000,
+   "open": true,
+   "params_b": 32.3,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "cohere/command-r-plus-08-2024",
+   "name": "Cohere: Command R+ (08-2024)",
+   "hf": "CohereLabs/c4ai-command-r-plus-08-2024",
+   "context": 128000,
+   "created": 1724976000,
+   "open": true,
+   "params_b": 103.81,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "cohere/command-r7b-12-2024",
+   "name": "Cohere: Command R7B (12-2024)",
+   "hf": "CohereLabs/c4ai-command-r7b-12-2024",
+   "context": 128000,
+   "created": 1734158152,
+   "open": true,
+   "params_b": 8.03,
    "params_source": "huggingface",
    "moe": false
   },
@@ -201,6 +256,17 @@
    "moe": false
   },
   {
+   "id": "dots-studio/dots-3-note-preview",
+   "name": "Dots Studio: Dots3-Note Preview",
+   "hf": "dots-studio/dots3-note-prev",
+   "context": 512000,
+   "created": 1786680361,
+   "open": true,
+   "params_b": 288.44,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "google/gemma-2-27b-it",
    "name": "Google: Gemma 2 27B",
    "hf": "google/gemma-2-27b-it",
@@ -307,6 +373,17 @@
    "created": 1786034890,
    "open": true,
    "params_b": 7.89,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "inclusionai/ling-3.1-flash",
+   "name": "inclusionAI: Ling 3.1 Flash",
+   "hf": "inclusionAI/Ling-3.1-flash",
+   "context": 1000000,
+   "created": 1790950024,
+   "open": true,
+   "params_b": 572.12,
    "params_source": "huggingface",
    "moe": false
   },
@@ -553,6 +630,17 @@
    "moe": false
   },
   {
+   "id": "mistralai/mistral-large-2407",
+   "name": "Mistral Large 2407",
+   "hf": "mistralai/Mistral-Large-Instruct-2407",
+   "context": 131072,
+   "created": 1731978415,
+   "open": true,
+   "params_b": 122.61,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "mistralai/devstral-2512",
    "name": "Mistral: Devstral 2 2512",
    "hf": "mistralai/Devstral-2-123B-Instruct-2512",
@@ -597,6 +685,17 @@
    "moe": false
   },
   {
+   "id": "mistralai/mistral-large-2512",
+   "name": "Mistral: Mistral Large 3 2512",
+   "hf": "mistralai/Mistral-Large-3-675B-Instruct-2512",
+   "context": 262144,
+   "created": 1764624472,
+   "open": true,
+   "params_b": 675.0,
+   "params_source": "name",
+   "moe": false
+  },
+  {
    "id": "mistralai/mistral-large-4-0",
    "name": "Mistral: Mistral Large 4",
    "hf": "mistralai/Mistral-Large-4-1T-A52B",
@@ -606,6 +705,17 @@
    "params_b": null,
    "params_source": null,
    "moe": true
+  },
+  {
+   "id": "mistralai/mistral-medium-3-5",
+   "name": "Mistral: Mistral Medium 3.5",
+   "hf": "mistralai/Mistral-Medium-3.5-128B",
+   "context": 262144,
+   "created": 1777570439,
+   "open": true,
+   "params_b": 127.7,
+   "params_source": "huggingface",
+   "moe": false
   },
   {
    "id": "mistralai/mistral-nemo",
@@ -845,8 +955,8 @@
    "context": 262144,
    "created": 1794282379,
    "open": true,
-   "params_b": null,
-   "params_source": null,
+   "params_b": 321.32,
+   "params_source": "huggingface",
    "moe": false
   },
   {
@@ -886,7 +996,7 @@
    "id": "nvidia/nemotron-3-super-120b-a12b",
    "name": "NVIDIA: Nemotron 3 Super",
    "hf": "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-FP8",
-   "context": 1048576,
+   "context": 262144,
    "created": 1773245239,
    "open": true,
    "params_b": 123.61,
@@ -929,13 +1039,13 @@
   {
    "id": "nvidia/nemotron-3.5-super-vl",
    "name": "NVIDIA: Nemotron 3.5 Super VL",
-   "hf": "nvidia/NVIDIA-Nemotron-3.5-Super-VL",
+   "hf": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
    "context": 1048576,
    "created": 1792076662,
    "open": true,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
+   "params_b": 124.45,
+   "params_source": "huggingface",
+   "moe": true
   },
   {
    "id": "openai/gpt-oss-120b",
@@ -1796,17 +1906,6 @@
    "moe": false
   },
   {
-   "id": "aion-labs/aion-rp-llama-3.1-8b",
-   "name": "AionLabs: Aion-RP 1.0 (8B)",
-   "hf": null,
-   "context": 32768,
-   "created": 1738696718,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "amazon/nova-2-lite-v1",
    "name": "Amazon: Nova 2 Lite",
    "hf": null,
@@ -2137,44 +2236,11 @@
    "moe": false
   },
   {
-   "id": "bytedance-seed/seed-1.6",
-   "name": "ByteDance Seed: Seed 1.6",
-   "hf": null,
-   "context": 262144,
-   "created": 1766504997,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "bytedance-seed/seed-1.6-flash",
-   "name": "ByteDance Seed: Seed 1.6 Flash",
-   "hf": null,
-   "context": 262144,
-   "created": 1766505011,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "bytedance-seed/seed-2-1-turbo",
    "name": "ByteDance Seed: Seed 2.1 Turbo",
    "hf": null,
    "context": 262144,
    "created": 1786552176,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "bytedance-seed/seed-2.0-code",
-   "name": "ByteDance Seed: Seed-2.0-Code",
-   "hf": null,
-   "context": 262144,
-   "created": 1786550701,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2197,50 +2263,6 @@
    "hf": null,
    "context": 262144,
    "created": 1772131107,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "cohere/command-a-plus",
-   "name": "Cohere: Command A+",
-   "hf": null,
-   "context": 192000,
-   "created": 1790102896,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "cohere/command-r-08-2024",
-   "name": "Cohere: Command R (08-2024)",
-   "hf": null,
-   "context": 128000,
-   "created": 1724976000,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "cohere/command-r-plus-08-2024",
-   "name": "Cohere: Command R+ (08-2024)",
-   "hf": null,
-   "context": 128000,
-   "created": 1724976000,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "cohere/command-r7b-12-2024",
-   "name": "Cohere: Command R7B (12-2024)",
-   "hf": null,
-   "context": 128000,
-   "created": 1734158152,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2274,17 +2296,6 @@
    "hf": null,
    "context": 1048576,
    "created": 1785606009,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "dots-studio/dots-3-note-preview",
-   "name": "Dots Studio: Dots3-Note Preview",
-   "hf": null,
-   "context": 512000,
-   "created": 1786680361,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2643,17 +2654,6 @@
    "moe": false
   },
   {
-   "id": "inclusionai/ling-3.1-flash",
-   "name": "inclusionAI: Ling 3.1 Flash",
-   "hf": null,
-   "context": 1000000,
-   "created": 1790950024,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "kt/midm-k-3.0-pro",
    "name": "KT: Mi:dm K 3.0 Pro",
    "hf": null,
@@ -2764,33 +2764,11 @@
    "moe": false
   },
   {
-   "id": "mistralai/mistral-large-2407",
-   "name": "Mistral Large 2407",
-   "hf": null,
-   "context": 131072,
-   "created": 1731978415,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "mistralai/codestral-2508",
    "name": "Mistral: Codestral 2508",
    "hf": null,
    "context": 256000,
    "created": 1754079630,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "mistralai/mistral-large-2512",
-   "name": "Mistral: Mistral Large 3 2512",
-   "hf": null,
-   "context": 262144,
-   "created": 1764624472,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2813,17 +2791,6 @@
    "hf": null,
    "context": 131072,
    "created": 1755095639,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "mistralai/mistral-medium-3-5",
-   "name": "Mistral: Mistral Medium 3.5",
-   "hf": null,
-   "context": 262144,
-   "created": 1777570439,
    "open": false,
    "params_b": null,
    "params_source": null,
