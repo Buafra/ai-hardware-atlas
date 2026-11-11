@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-11T07:46:00+04:00",
+  "generated_at": "2026-11-11T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9228,6 +9228,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-11T07:46:00+04:00",
       "cover": "images/qahwa/week-05-day-35--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-36--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "96 GB of VRAM means exactly 3× the AI speed of 32 GB.",
+        "ar": "96 GB VRAM تعني سرعة ×3 مقارنة بـ32 GB."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "96 GB of VRAM means ==exactly 3× the AI speed== of 32 GB.",
+            "body": "Answer: Myth ❌ Capacity and speed are different. 96 GB may fit workloads that 32 GB cannot."
+          },
+          "ar": {
+            "title": "96 GB VRAM تعني ==سرعة ×3== مقارنة بـ32 GB.",
+            "body": "الجواب: خرافة ❌ السعة والسرعة مختلفتان. 96 GB قد تتّسع لأحمال لا تكفيها 32 GB."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T07:50:00+04:00",
+      "cover": "images/qahwa/week-06-day-36--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
