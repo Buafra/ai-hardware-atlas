@@ -3,6 +3,76 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "979094e8305e",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-10T15:20:22+00:00",
+   "title": "«اتصالات الإمارات» أول مشغّل يوفّر نظارات الذكاء الاصطناعي من «ميتا» و«إيسيلور لوكسوتيكا» «أوسطياً»",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الاقتصادي/4704980/-اتصالات-الإمارات--أول-مشغل-يوفر-نظارات-الذكاء-الاصطناعي-من",
+   "summary_en": "Etisalat UAE has announced the launch of Meta, Ray-Ban Meta and Oakley Meta glasses, becoming the first telecom operator in the Middle East and North Africa to offer these brands to customers. The range includes Meta glasses, the second and third generations of Ray-Ban Meta, and the AI-powered Oakley Meta HSTN performance glasses. According to the report, the devices let users interact with AI applications hands-free and use instant voice translation without constantly relying on their phones. Tamer El Tony, the company's senior vice president for devices and future development projects, described the launch as an addition to its device portfolio. Customers can buy the glasses in one payment from AED 1,160, or in 12, 18 or 24 monthly instalments through Smart Pay plans starting at AED 55 per month.",
+   "summary_ar": "أعلنت Etisalat UAE إطلاق نظارات Meta وRay-Ban Meta وOakley Meta، لتصبح أول مشغّل اتصالات في منطقة الشرق الأوسط وشمال أفريقيا يوفّر هذه العلامات لعملائه. وتضم التشكيلة نظارات Meta والجيلين الثاني والثالث من Ray-Ban Meta، إضافة إلى نظارات الأداء Oakley Meta HSTN المدعومة بالذكاء الاصطناعي. ووفق الخبر، تتيح النظارات التفاعل مع تطبيقات الذكاء الاصطناعي من دون استخدام اليدين والاستفادة من الترجمة الصوتية الفورية دون الاعتماد المستمر على الهاتف. ووصف الدكتور تامر التوني، النائب الأول للرئيس لقطاع الأجهزة ومشاريع التنمية المستقبلية في الشركة، الإطلاق بأنه إضافة إلى محفظة الأجهزة لديها. ويمكن للعملاء الشراء بدفعة واحدة تبدأ من 1,160 درهماً، أو بالتقسيط على 12 أو 18 أو 24 شهراً عبر باقات Smart Pay التي تبدأ من 55 درهماً شهرياً.",
+   "excerpt": "أبوظبي (الاتحاد) أعلنت شركة «اتصالات الإمارات» عن إطلاق نظارات «ميتا» و«راي بان ميتا» و«أوكلي ميتا»، لتصبح بذلك أول مشغّل اتصالات في منطقة الشرق الأوسط وشمال أفريقيا يوفّر هذه العلامات التجارية لعملائه."
+  },
+  {
+   "id": "7ab0b5af2163",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-10T07:45:32+00:00",
+   "title": "UAE's Nextgen joins OpenAI select partner to drive AI integration across key sectors",
+   "title_ar": null,
+   "url": "https://gulfnews.com/uae/uaes-nextgen-joins-openai-select-partner-to-drive-ai-integration-across-key-sectors-1.500742148",
+   "summary_en": "Nextgen, a UAE-based AI transformation firm, has been named an OpenAI Select Partner, bringing a local company into OpenAI's partner network. It will help government entities and businesses build and deploy AI solutions using OpenAI's models and products, including GPT and ChatGPT Work, with a focus on productivity and measurable value. The company says its engineers work directly with clients on their existing systems and help internal teams build skills. Nextgen has more than 135 specialists across five offices, over 50 enterprise clients and more than 200 delivered AI use cases. It says it will stay technology-independent, choosing models according to client needs, and that the partnership supports secure, scalable and sovereign AI aligned with national priorities.",
+   "summary_ar": "حصلت شركة «نكست جن» (Nextgen) الإماراتية المتخصصة في التحول القائم على الذكاء الاصطناعي على صفة شريك مختار لدى OpenAI، ما يضم شركة محلية إلى شبكة شركاء OpenAI. وستساعد الشركة الجهات الحكومية والشركات على بناء حلول الذكاء الاصطناعي ونشرها باستخدام نماذج OpenAI ومنتجاتها، ومنها GPT وChatGPT Work، مع التركيز على رفع الإنتاجية وتحقيق قيمة قابلة للقياس. وتقول الشركة إن مهندسيها يعملون مباشرة مع العملاء على أنظمتهم القائمة ويساعدون فرقهم الداخلية على اكتساب المهارات. ولدى «نكست جن» أكثر من 135 متخصصاً في خمسة مكاتب، وأكثر من 50 عميلاً من الشركات، وقد نفذت أكثر من 200 حالة استخدام. وتؤكد أنها ستواصل اختيار النماذج وفق احتياجات كل عميل، وأن الشراكة تدعم حلولاً آمنة وقابلة للتوسع وسيادية تتوافق مع الأولويات الوطنية.",
+   "excerpt": "Nextgen to integrate OpenAI models into UAE's government and business operations"
+  },
+  {
+   "id": "a9f8a8946b0f",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-10T04:31:04+00:00",
+   "title": "الصين تسجّل فائض تجارة يتجاوز 1 تريليون دولار مدفوعاً بارتفاع الطلب على منتجات الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/11/10/chinas-trade-surplus-exceeds-1-trillion-as-the-ai-boom-drives-exports",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "أظهرت بيانات رسمية الثلاثاء أن الفائض التجاري للصين تضخم في أكتوبر ليتجاوز تريليون دولار، ليبلغ هذا المستوى حتى قبل الرقم القياسي المسجل العام الماضي."
+  },
+  {
+   "id": "8d28cfa5555a",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-10T00:28:49+00:00",
+   "title": "David Ellison says AI could be the ‘biggest creative unlock in modern history’",
+   "title_ar": "ديفيد إليسون: الذكاء الاصطناعي قد يكون «أكبر إطلاق للإمكانات الإبداعية في التاريخ الحديث»",
+   "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
+   "summary_en": "Paramount Skydance CEO David Ellison said on the company's latest earnings call that artificial intelligence could be the biggest creative unlock in modern history. Asked about Paramount's outlook for AI, he compared it with the arrival of CGI and digital composites in the early 90s, which helped produce films such as Jurassic Park and Terminator 2, and said it is hard to imagine AI having a smaller impact. He noted that Terminator cost $4 million to make, while a shot-for-shot version today would cost $60 to 70 million. Ellison suggested AI tools could make budgets more digestible and so support more original storytelling. The article adds that he described AI as something that will never replace artists.",
+   "summary_ar": "قال الرئيس التنفيذي لشركة Paramount Skydance «ديفيد إليسون» خلال مكالمة الأرباح الأخيرة للشركة إن الذكاء الاصطناعي قد يكون أكبر محرّك للإبداع في التاريخ الحديث. وردّاً على سؤال عن توجه الشركة تجاه الذكاء الاصطناعي، شبّهه بظهور CGI والتركيب الرقمي في أوائل التسعينيات، وهي تقنيات أسهمت في أفلام مثل Jurassic Park وTerminator 2، ورأى أنه من الصعب تخيّل أن يكون أثر الذكاء الاصطناعي أقل منها. وأشار إلى أن تكلفة إنتاج Terminator بلغت 4 ملايين دولار، بينما يتطلب إنتاجه اليوم لقطة بلقطة ما بين 60 و70 مليون دولار. واقترح «إليسون» أن تجعل هذه الأدوات الميزانيات أيسر تحمّلاً، فتدعم قصصاً أكثر أصالة. ويضيف المقال أنه وصف الذكاء الاصطناعي بأنه لن يكون بديلاً عن الفنانين.",
+   "excerpt": "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI."
+  },
+  {
+   "id": "285987eab731",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-09T23:51:58+00:00",
+   "title": "What could China get from Jensen Huang?",
+   "title_ar": "ماذا يمكن أن تجنيه الصين من جنسن هوانغ؟",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
+   "summary_en": "After news broke that Nvidia CEO Jensen Huang had an extramarital affair with Alice Huang (no relation), an executive at the Singapore-based cloud provider Megaspeed, the article asks why he would be a valuable target for a foreign adversary. US officials believe she is a foreign intelligence asset, according to The New York Times. A Malaysian sister company of Megaspeed reportedly spent $4.8 billion or more on Nvidia products between June 2024 and February 2026. Huang had lobbied Trump to loosen chip export controls, and H20 sales to China were approved days after a July 2025 Oval Office meeting. Nvidia has said meeting customers is part of a CEO's job. A CSET analyst says a spy would want insight into US export-control thinking.",
+   "summary_ar": "بعد ظهور أنباء عن علاقة خارج إطار الزواج جمعت الرئيس التنفيذي لشركة NVIDIA «جنسن هوانغ» بـ«أليس هوانغ» (لا قرابة بينهما)، وهي مسؤولة في شركة Megaspeed للحوسبة السحابية ومقرها سنغافورة، يتساءل المقال لماذا قد يكون هوانغ هدفاً ثميناً لخصم أجنبي. ويعتقد مسؤولون أمريكيون أنها عميلة استخبارات أجنبية، بحسب The New York Times. وأنفقت شركة شقيقة لـMegaspeed في ماليزيا 4.8 مليار دولار أو أكثر على منتجات NVIDIA بين يونيو 2024 وفبراير 2026. وكان هوانغ قد ضغط على «دونالد ترامب» لتخفيف قيود تصدير الرقائق، وجرت الموافقة على مبيعات رقائق H20 إلى الصين بعد أيام من لقائه به في المكتب البيضاوي في يوليو 2025. وتقول NVIDIA إن لقاء العملاء جزء من عمل الرئيس التنفيذي. وترى محللة في CSET أن الجاسوس قد يسعى لمعرفة توجهات واشنطن بشأن ضوابط التصدير.",
+   "excerpt": "It's difficult to overstate Nvidia's power in today's AI landscape. The company's chips are the bedrock upon which advanced AI technology in the US is being built, and demand has consistently outpaced supply for years."
+  },
+  {
    "id": "15c28179b2dc",
    "source": "verge-ai",
    "lang": "en",
@@ -29,6 +99,20 @@
    "summary_en": "The Ministry of Education held two days of training workshops for school leaders under a programme called \"Empowerment in AI Skills\". The aim was to strengthen their ability to use AI tools in daily, educational and administrative work, and to build skills in designing and creating AI assistants. The workshops covered practical uses such as data analysis, task organisation and productivity. Participants also saw how Microsoft Copilot can be linked to the software used at work to automate repeated tasks, organise information and build databases. The sessions also gave attention to safe and responsible use of AI tools, so that they serve educational goals and suit the school environment.",
    "summary_ar": "نظمت وزارة التربية والتعليم ورشاً تدريبية على مدى يومين لقيادات مدرسية ضمن برنامج «التمكين في مهارات الذكاء الاصطناعي». وهدفت الورش إلى تعزيز قدرة المشاركين على توظيف أدوات الذكاء الاصطناعي في مهامهم اليومية وممارساتهم التربوية والإدارية، وتطوير مهاراتهم في تصميم وبناء المساعدين الذكيين. وتناولت الورش تطبيقات عملية في تحليل البيانات وتنظيم المهام وتحسين الإنتاجية. كما عرضت كيفية ربط أداة Microsoft Copilot بالبرامج المستخدمة في العمل لأتمتة المهام المتكررة وتنظيم المعلومات وبناء قواعد بيانات. وأولت الورش اهتماماً بالاستخدام الآمن والمسؤول لأدوات الذكاء الاصطناعي بما يخدم الأهداف التربوية ويناسب البيئة المدرسية.",
    "excerpt": "نظّمت وزارة التربية والتعليم، على مدار يومين، ورشاً تدريبية ضمن برنامج «التمكين في مهارات الذكاء الاصطناعي»، بمشاركة عدد من القيادات المدرسية، بهدف تعزيز قدراتهم على توظيف أدوات الذكاء الاصطناعي في المهام اليومية والممارسات التربوية والإدارية، وتطوير مهاراتهم التقنية في تصميم…"
+  },
+  {
+   "id": "2b128ff09548",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-09T19:24:51+00:00",
+   "title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+   "title_ar": "Anthropic تطلق نموذجي Mythos وFable الجديدين وسط مخاوف بشأن RSI",
+   "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
+   "summary_en": "Anthropic released Mythos 5.2 and Fable 5.2 on Monday, saying they improve on coding, reasoning and vision and communicate more clearly. It cut Fable's price from $10 to $8 per million input tokens, making it cheaper than GPT-6 Astra, and says responses are 30% faster. The launch is its first since a METR report suggested the lab might be nearing recursive self-improvement; METR found internal models speeding up progress by roughly 2x, with many uncertainties. Anthropic notes that both models voice suspicion of being evaluated more than recent ones, complicating tests. Separately, Physical Superintelligence announced a proof of the Aaronson-Ambainis conjecture using a non-public Anthropic model, which Anthropic neither confirmed nor denied was Fable 5.2.",
+   "summary_ar": "أطلقت Anthropic يوم الاثنين نموذجي Mythos 5.2 وFable 5.2، وقالت إنهما يتحسنان في البرمجة والاستدلال والرؤية ويتواصلان مع المستخدمين بوضوح أكبر. وخفضت سعر Fable من 10 دولارات إلى 8 دولارات لكل مليون وحدة لغوية مدخلة، ما يجعله أرخص من GPT-6 Astra، وتقول إن الاستجابات أسرع بنسبة 30%. وهذا أول إصدار لها بعد تقرير من METR أشار إلى أن المختبر قد يقترب من التحسين الذاتي التكراري؛ إذ وجد أن النماذج الداخلية تسرّع تقدم الشركة بنحو الضعف مع بقاء شكوك كثيرة. وتذكر Anthropic أن النموذجين يعبّران عن شك في خضوعهما للتقييم أكثر من نماذجها الأخيرة، ما يصعّب اختبار سلوكهما. وفي خبر منفصل أعلنت Physical Superintelligence إثباتاً لتخمين Aaronson-Ambainis باستخدام نموذج غير معلن من Anthropic، ولم تؤكد Anthropic أو تنفِ أن يكون Fable 5.2.",
+   "excerpt": "Anthropic says the new models \"show improvements in areas like coding, reasoning, and vision,\" as well as in communicating more clearly with users."
   },
   {
    "id": "6d7267178070",
@@ -73,6 +157,20 @@
    "excerpt": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges."
   },
   {
+   "id": "20ff528b5495",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-09T18:09:52+00:00",
+   "title": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
+   "title_ar": "علاقة جنسن هوانغ الغرامية بجاسوس صيني مزعوم تضع طموحات NVIDIA في الصين تحت المجهر",
+   "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/",
+   "summary_en": "The Financial Times reported on Friday that Nvidia CEO Jensen Huang had an affair with Alice Huang, a former executive at Megaspeed, an Nvidia customer. Huang admitted the relationship and apologized in a memo to staff on Sunday. According to the article, U.S. intelligence officials believe she was recruited by Chinese intelligence to collect information on him and influence Nvidia's push to ease chip export limits. Nvidia's independent directors are investigating with outside counsel, and Congress is demanding answers. The piece notes Huang has long argued for selling AI chips to China, which accounted for $7.9 billion, about 8%, of revenue in the three months ended July 26, and says the matter could affect Washington's trust in Nvidia's China business.",
+   "summary_ar": "نشرت صحيفة Financial Times يوم الجمعة تقريراً عن علاقة غرامية جمعت الرئيس التنفيذي لشركة NVIDIA، «جنسن هوانغ»، بـ«أليس هوانغ»، المديرة التنفيذية السابقة في Megaspeed، وهي من عملاء الشركة. وأقرّ هوانغ بالعلاقة واعتذر في مذكرة وجّهها إلى العاملين يوم الأحد. ويعتقد مسؤولو الاستخبارات الأمريكية أن الاستخبارات الصينية جنّدتها لجمع معلومات عنه والتأثير في جهود الشركة لتخفيف قيود تصدير الرقائق. ويجري المديرون المستقلون في NVIDIA تحقيقاً بالتعاون مع مستشار قانوني خارجي، فيما يطالب الكونغرس بإجابات. ويشير المقال إلى أن هوانغ يدافع منذ فترة عن بيع رقائق الذكاء الاصطناعي إلى الصين، التي شكّلت 7.9 مليار دولار، أي نحو 8% من الإيرادات، في الأشهر الثلاثة المنتهية في 26 يوليو، وإلى أن القضية قد تؤثر في ثقة واشنطن بأعمال الشركة هناك.",
+   "excerpt": "Jensen Huang’s alleged affair with a suspected Chinese spy threatens to complicate Nvidia’s lobbying efforts to loosen U.S. chip export restrictions and maintain access to China’s lucrative AI market."
+  },
+  {
    "id": "9d5aee5d27ee",
    "source": "verge-ai",
    "lang": "en",
@@ -85,6 +183,20 @@
    "summary_en": "Instagram has launched Effect Builder, a web tool that uses AI to create custom filters for Stories. It is available now to US residents over 18. Users describe a filter idea in a prompt box, can attach style reference images, upload their own photos to preview the effect, and request changes with follow-up prompts. There is also an option to let Instagram's AI rewrite the prompt; in The Verge's test, a one-line comic-book prompt became several detailed paragraphs, yet the resulting filter looked nearly identical to the original. Users can submit filters directly to Instagram, but effects must pass a safety review before others can use them. Approved effects link back to the creator's profile. The launch follows the expansion of Instagram's Edits app to macOS last week.",
    "summary_ar": "أطلقت Instagram أداة Effect Builder، وهي أداة على الويب تستخدم الذكاء الاصطناعي لإنشاء فلاتر مخصصة لقصص Stories. والأداة متاحة الآن للمقيمين في الولايات المتحدة ممن تزيد أعمارهم على 18 عاماً. يصف المستخدم فكرة الفلتر في مربع نصي، ويمكنه إرفاق صور مرجعية للأسلوب، ورفع صوره الخاصة لمعاينة التأثير، وطلب تعديلات عبر أوامر لاحقة. وهناك خيار يتيح للذكاء الاصطناعي من Instagram إعادة صياغة الأمر؛ وفي اختبار أجراه موقع The Verge تحول أمر من سطر واحد عن صفحات القصص المصورة إلى عدة فقرات مفصلة، لكن الفلتر الناتج بدا مطابقاً تقريباً للنسخة الأصلية. ويمكن إرسال الفلاتر إلى Instagram مباشرة، لكنها تخضع لمراجعة أمان قبل أن يستخدمها الآخرون، وتُربط التأثيرات المعتمدة بحساب صانعها. وجاء الإطلاق بعد توسيع تطبيق Edits ليعمل على macOS الأسبوع الماضي.",
    "excerpt": "After expanding its Edits app to macOS last week, Instagram's next move is launching this Effect Builder that generates custom filters for your Stories posts with AI."
+  },
+  {
+   "id": "fe9001b06ea6",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-09T18:00:00+00:00",
+   "title": "Meta releases Muse Ember, a new lightweight model for agent execution",
+   "title_ar": "Meta تطلق Muse Ember، نموذجاً خفيفاً جديداً لتنفيذ مهام الوكلاء",
+   "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+   "summary_en": "Meta Superintelligence Lab released Muse Ember on Monday, describing it as its lightest and most cost-efficient AI model so far. Meta says it is designed for repetitive agent work such as tool calls, coding subtasks, routing, extraction and long document parsing. Priced at 10 cents per million input tokens, it is cheaper than Anthropic's Haiku and OpenAI's Luna, according to Meta's use of Artificial Analysis's composite benchmark, and cost-competitive with DeepSeek V4.1 Flash and GLM 5.3 Flash. Ember is meant to work alongside a larger model such as Muse Wonder, and it can handle text, images and audio. It is the fourth Muse model, after Spark, Glimmer and Wonder.",
+   "summary_ar": "أصدر مختبر Meta Superintelligence Lab يوم الاثنين نموذج Muse Ember، ووصفه بأنه أخف نماذجه وأكثرها كفاءة من حيث التكلفة حتى الآن. وتقول Meta إنه مصمم لأعمال الوكلاء المتكررة مثل استدعاء الأدوات والمهام البرمجية الفرعية والتوجيه واستخراج المعلومات وتحليل المستندات الطويلة. وبسعر 10 سنتات لكل مليون من «الوحدات اللغوية» المُدخلة، يبدو أرخص من Haiku من Anthropic وLuna من OpenAI بحسب استخدام Meta للمقياس المركّب لدى Artificial Analysis، كما يضاهي في التكلفة نموذجي DeepSeek V4.1 Flash وGLM 5.3 Flash. ويُراد لـ Ember العمل إلى جانب نموذج أكبر مثل Muse Wonder، وهو قادر على التعامل مع النصوص والصور والصوت. وهو رابع نموذج ضمن علامة Muse بعد Spark وGlimmer وWonder.",
+   "excerpt": "At 10 cents per million input tokens, Ember is significantly cheaper than frontier competitors like Haiku and Luna."
   },
   {
    "id": "a06869aa80e5",
@@ -113,6 +225,34 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "Leibniz lives! Insight about how 'nature makes no leaps' promises better robot predictions"
+  },
+  {
+   "id": "ea1cff75717b",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-09T16:56:54+00:00",
+   "title": "Anthropic joins AI’s natural gas frenzy, buys $3.4B worth of turbines",
+   "title_ar": "Anthropic تنضم إلى الإقبال المحموم على الغاز الطبيعي في قطاع الذكاء الاصطناعي وتشتري توربينات بقيمة 3.4 مليار دولار",
+   "url": "https://techcrunch.com/2026/11/09/anthropic-joins-ais-natural-gas-frenzy-buys-3-4b-worth-of-turbines/",
+   "summary_en": "Anthropic is spending $3.4 billion on natural gas turbines, according to a Financial Times report cited by TechCrunch, even though the company has generally avoided buying physical infrastructure. The Caterpillar generators, able to produce up to 1.7 gigawatts, were originally ordered by supplier OnePWR, which reportedly could not secure financing, so Anthropic went directly to the manufacturer. The company plans to go public this year and has usually rented capacity; its May S-1 filing says it pays xAI, a SpaceX subsidiary, $1.25 billion a month through May 2029. Turbine backlogs stretch into the early 2030s, and grid connection queues can be just as long. Google, Amazon, Microsoft and Meta have also announced gas plants for their data centers.",
+   "summary_ar": "تنفق شركة Anthropic 3.4 مليار دولار على توربينات الغاز الطبيعي، وفق تقرير لصحيفة «فاينانشال تايمز» نقله موقع TechCrunch، مع أن الشركة تتجنب عموماً شراء البنية التحتية المادية. وكانت شركة OnePWR المورّدة للمعدات قد طلبت مولدات Caterpillar التي تنتج حتى 1.7 غيغاواط، لكنها لم تتمكن من تأمين التمويل، فتوجهت Anthropic مباشرة إلى الشركة المصنّعة. وتخطط الشركة للطرح العام هذا العام، وكانت تفضّل عادةً الاستئجار؛ إذ يفيد ملف S-1 المقدم في مايو بأنها تدفع لشركة xAI، التابعة لـSpaceX، 1.25 مليار دولار شهرياً حتى مايو 2029. وتمتد قوائم انتظار التوربينات إلى أوائل ثلاثينيات هذا القرن، وقد تطول طوابير الربط بالشبكة الكهربائية بالقدر نفسه. كما أعلنت Google وAmazon وMicrosoft وMeta خططاً لمحطات غاز لمراكز بياناتها.",
+   "excerpt": "Anthropic bought billions of dollars' worth of natural gas turbines in a deal that could give it buyer's remorse."
+  },
+  {
+   "id": "ad058ec7fa05",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-09T16:12:28+00:00",
+   "title": "Medium’s new TK app brings AI assistance directly into the writing process",
+   "title_ar": "تطبيق TK الجديد من Medium يدمج مساعدة الذكاء الاصطناعي مباشرة في عملية الكتابة",
+   "url": "https://techcrunch.com/2026/11/09/mediums-new-tk-app-brings-ai-assistance-directly-into-the-writing-process/",
+   "summary_en": "Medium has launched TK, a new app that puts an AI assistant inside the writing editor, where users can summon help by typing \"@TK\" followed by a request. The assistant can answer quick factual questions, pull in previously saved writing, and offer editorial and headline feedback or match a draft to a Medium publication's style guide. Medium acknowledges concerns about low-quality content and blurred lines between human and AI writing, so authors can publish notes explaining how AI was used. TK can connect to a user's own AI agent through an MCP server or Claude skill, and includes a social layer for sharing drafts. It is web-only for now, with a desktop app planned, and is free for Medium account holders.",
+   "summary_ar": "أطلقت منصة Medium تطبيقاً جديداً باسم TK يضع مساعداً ذكياً داخل محرر الكتابة، إذ يستطيع المستخدم طلب المساعدة بكتابة «@TK» متبوعةً بطلبه. ويمكن للمساعد الإجابة عن أسئلة سريعة، واستحضار نصوص محفوظة سابقاً، وتقديم ملاحظات تحريرية وملاحظات على العناوين، أو مطابقة المسودة مع دليل أسلوب أحد منشورات Medium. وتقر الشركة بالمخاوف من المحتوى منخفض الجودة وتداخل الحدود بين الكتابة البشرية وكتابة الذكاء الاصطناعي، لذلك يستطيع الكتّاب نشر ملاحظات توضح كيفية استخدام الذكاء الاصطناعي. ويمكن ربط TK بوكيل الذكاء الاصطناعي الخاص بالمستخدم عبر خادم MCP أو مهارة Claude، كما يتضمن طبقة اجتماعية لمشاركة المسودات. والتطبيق متاح حالياً على الويب فقط مع خطة لتطبيق للحاسوب، وهو مجاني لأصحاب حسابات Medium.",
+   "excerpt": "Medium's new writing app embraces AI-assisted writing, despite growing controversy over the technology's role in publishing."
   },
   {
    "id": "67d134866a7d",
@@ -577,6 +717,20 @@
    "excerpt": "Bloomberg's Mark Gurman says CEO John Ternus is pressuring AI czar Craig Federighi to accelerate the Siri roadmap and deliver a powerful AI agent that can compete with OpenAI's Dots or Meta's Muse."
   },
   {
+   "id": "d3e6cfa9befd",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-08T18:52:11+00:00",
+   "title": "منتدى عربي صيني يبحث الشراكة الصحية والذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c35hqm7-منتدى-عربي-صيني-يبحث-الشراكة-الصحية-والذكاء",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
    "id": "80e4e02f8180",
    "source": "albayan",
    "lang": "ar",
@@ -687,6 +841,34 @@
    "summary_en": "In a commentary, a senior market analyst at amana, who is also an accredited investment manager under CMA UAE, looks at AI trading bots sold online with claimed win rates of 80 or even 90 per cent. The author asks why anyone with truly exceptional software would sell it for a monthly fee, and notes that almost all computer-assisted trading is now called AI. Two experiments, from 2024 and 2026, linked heavier reliance on robots to lower earnings, and an autonomous AI trader did not significantly improve pricing efficiency while human participants grew poorer. The author says verified returns, drawdown, leverage, trading history and regulatory status matter more than win rate, and expects AI to play a growing role in research, analysis and execution.",
    "summary_ar": "في مقال رأي، يتناول محلل أسواق أول في «أمانة»، وهو أيضاً مدير استثمار معتمد لدى هيئة الأوراق المالية والسلع في الإمارات، روبوتات التداول بالذكاء الاصطناعي التي تُباع عبر الإنترنت مع ادعاءات بنسب ربح تبلغ 80 أو حتى 90 في المئة. ويتساءل الكاتب لماذا يبيع شخص برنامجاً يحقق عوائد استثنائية فعلاً مقابل اشتراك شهري، ويشير إلى أن معظم أشكال التداول بمساعدة الحاسوب باتت تُسمّى ذكاءً اصطناعياً. وتشير تجربتان من عامي 2024 و2026 إلى أن الاعتماد الأكبر على الروبوتات ارتبط بأرباح أقل، وأن متداولاً مستقلاً بالذكاء الاصطناعي لم يحسّن كفاءة التسعير بشكل ملحوظ بينما ازداد المشاركون من البشر فقراً. ويرى الكاتب أن العوائد الموثقة وحجم التراجع والرافعة المالية والسجل المتحقق منه والوضع التنظيمي أهم من نسبة الصفقات الرابحة، ويتوقع أن يتنامى دور الذكاء الاصطناعي في البحث والتحليل والتنفيذ.",
    "excerpt": "Quantitative and high-frequency firms spend fortunes on researchers, data and infrastructure. A few-hundred-dollar retail subscription is unlikely to buy anything comparable"
+  },
+  {
+   "id": "17792a87faeb",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "arabic",
+   "published": "2026-11-08T12:49:11+00:00",
+   "title": "Sovereign AI emerges as next battleground for Gulf economies",
+   "title_ar": "الذكاء الاصطناعي السيادي يبرز كساحة المنافسة المقبلة لاقتصادات الخليج",
+   "url": "https://www.khaleejtimes.com/business/sovereign-ai-emerges-as-next-battleground-for-gulf-economies",
+   "summary_en": "Andrew Chen, Vice President and Head of Platform & Products at Magna AI, says the Gulf's AI journey is moving from deploying tools to building sovereign ecosystems, with governance and accountability becoming as important as computing power. He says the biggest gap in the company's first year was between ambition and execution, and that many GCC organisations still struggle to move beyond pilots. Magna AI, headquartered in Riyadh, is working with Arabic.AI and Intella to deploy a sovereign Arabic large language model and dialectal voice AI on secure national infrastructure. The company has six products and secured commitments in Malaysia, Taiwan and Pakistan, including a 20MW sovereign AI data centre in Malaysia. Chen argues that countries owning the infrastructure, platforms, talent and intellectual property will capture the economic value.",
+   "summary_ar": "يقول أندرو تشن، نائب الرئيس ورئيس المنصات والمنتجات في Magna AI، إن مسيرة الذكاء الاصطناعي في الخليج تنتقل من نشر الأدوات إلى بناء منظومات سيادية، وإن الحوكمة والمساءلة باتتا بأهمية القدرات الحاسوبية نفسها. ويضيف أن أكبر فجوة رصدتها الشركة في عامها الأول كانت بين الطموح والتنفيذ، وأن كثيراً من المؤسسات في دول مجلس التعاون ما زالت تواجه صعوبة في تجاوز المشاريع التجريبية. وتعمل Magna AI، التي يقع مقرها في الرياض، مع Arabic.AI وIntella لنشر نموذج لغوي عربي سيادي كبير وذكاء اصطناعي صوتي باللهجات على بنية وطنية آمنة. ولدى الشركة ستة منتجات، وحصلت على التزامات في ماليزيا وتايوان وباكستان، منها مركز بيانات سيادي للذكاء الاصطناعي بقدرة 20 ميغاواط في ماليزيا. ويرى تشن أن الدول التي تملك البنية التحتية والمنصات والكفاءات والملكية الفكرية ستجني القيمة الاقتصادية.",
+   "excerpt": "Governments and enterprises are moving beyond AI pilots, focusing on governance, local language models and national infrastructure to capture long-term economic value"
+  },
+  {
+   "id": "3b57d3e3ef87",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-08T12:00:00+00:00",
+   "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
+   "title_ar": "جرّبت أداة تعديل الوصفات الجديدة المعتمدة على الذكاء الاصطناعي من NYT Cooking، وهي جيدة فعلاً",
+   "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
+   "summary_en": "WIRED's writer tested a new AI-powered recipe modifier that The New York Times introduced in an iOS-only beta for NYT Cooking subscribers. After the October 23 announcement, commenters angrily objected, and comments were closed after four days and 172 responses. The tool lets users adjust a recipe, such as swapping ingredients or adapting to missing pans or dietary needs, and shows every change in red-orange text. According to general manager Camilla Velasquez, it draws on the recipe, the Times' substitution guide and reader comments, and is meant to be a helper rather than a chatbot. She said the team of 60 is hiring more than ever. The writer, who had expected to side with critics, found it worked surprisingly well.",
+   "summary_ar": "جرّب كاتب في WIRED أداة جديدة لتعديل الوصفات بالذكاء الاصطناعي أطلقتها «ذا نيويورك تايمز» في نسخة تجريبية لأجهزة iOS فقط لمشتركي NYT Cooking. وبعد الإعلان عنها في 23 أكتوبر، اعترض معلّقون بغضب، وأُغلق باب التعليقات بعد أربعة أيام و172 تعليقاً. وتتيح الأداة للمستخدم تعديل الوصفة، مثل استبدال مكونات أو التكيّف مع غياب بعض الأواني أو مع الاحتياجات الغذائية، مع إظهار كل تغيير بلون برتقالي محمر. وتقول المديرة العامة كاميلا فيلاسكيز إن الأداة تعتمد على الوصفة نفسها ودليل البدائل لدى الصحيفة وتعليقات القرّاء، وإنها مساعد وليست روبوت محادثة. وأضافت أن فريق الوصفات المؤلف من 60 شخصاً يوظّف أكثر من أي وقت مضى. وكان الكاتب يتوقع أن يتفق مع المنتقدين، لكنه وجد أن الأداة تعمل بشكل جيد على نحو مفاجئ.",
+   "excerpt": "The New York Times has added a beta feature to its Cooking app that helps readers swap ingredients or adjust recipes to suit their needs. It mostly hits the mark."
   },
   {
    "id": "cbc9ada65cdb",
@@ -801,6 +983,20 @@
    "excerpt": "سيئول في 8 نوفمبر / وام / أظهرت بيانات صناعية أن شركة \"سامسونغ\" للإلكترونيات تتجه لتصبح أول شركة كورية جنوبية تتجاوز أصولها النقدية 200 تريليون وون (146.6 مليار دولار أمريكي)، مدعومة بالدورة الفائقة لرقائق الذكاء الاصطناعي."
   },
   {
+   "id": "5bc89fd18d76",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-08T04:17:39+00:00",
+   "title": "الكونغرس الأمريكي يطلب إيضاحات من رئيس إنفيديا بشأن مزاعم تجسس صيني",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/08/%d8%a7%d9%84%d9%83%d9%88%d9%86%d8%ba%d8%b1%d8%b3-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a-%d9%8a%d8%b7%d9%84%d8%a8-%d8%a5%d9%8a%d8%b6%d8%a7%d8%ad%d8%a7%d8%aa-%d9%85%d9%86-%d8%b1%d8%a6%d9%8a/",
+   "summary_en": "The chairs of three US House committees, Brian Mast, John Moolenaar and Rick Crawford, wrote to Nvidia chief executive Jensen Huang on 4 November 2026 asking for a closed briefing on 18 November, with a reply requested by 11 November. The request follows press reports about alleged links between businesswoman Alice Huang, who is tied to Megaspeed, and Chinese intelligence, and concerns over protecting sensitive chip and AI information. Axios reported that Senator Chris Coons plans to look at the issues raised. The text stresses the letter does not prove espionage or any wrongdoing. Nvidia said its CEO's contacts were ordinary business dealings, China's foreign ministry rejected the claims, and Singapore's home affairs ministry said it has not investigated Alice Huang. The matter comes amid the US-China dispute over access to advanced AI processors.",
+   "summary_ar": "طلب رؤساء ثلاث لجان في مجلس النواب الأمريكي، وهم «برايان ماست» و«جون مولينار» و«ريك كروفورد»، في خطاب وجهوه إلى الرئيس التنفيذي لشركة Nvidia «جنسن هوانغ» بتاريخ 4 نوفمبر 2026، عقد إحاطة مغلقة يوم 18 نوفمبر، على أن يأتي الرد بحلول 11 نوفمبر. ويستند الطلب إلى تقارير صحفية تتحدث عن صلات مزعومة بين سيدة الأعمال «أليس هوانغ»، المرتبطة بشركة Megaspeed، وأجهزة الاستخبارات الصينية، وعن مخاوف بشأن حماية معلومات الرقائق والذكاء الاصطناعي الحساسة. ونقل موقع Axios أن السيناتور «كريس كونز» يعتزم النظر في المعلومات المثارة. ويؤكد النص أن الخطاب لا يثبت وقوع تجسس أو أي مخالفة. ورفضت Nvidia الإيحاء بأن اتصالات رئيسها تجاوزت التعاملات التجارية المعتادة، ونفت وزارة الخارجية الصينية المزاعم، وأعلنت وزارة الداخلية السنغافورية أنها لم تجرِ تحقيقاً بشأن «أليس هوانغ». وتأتي هذه التطورات وسط الخلاف الأمريكي الصيني حول وصول الشركات الصينية إلى معالجات الذكاء الاصطناعي المتقدمة.",
+   "excerpt": "طلبت ثلاث لجان في مجلس النواب الأمريكي إحاطة مغلقة من رئيس إنفيديا جنسن هوانغ على خلفية مزاعم تجسس صيني نقلتها تقارير صحفية، فيما تنفي الشركة مشاركة معلومات حساسة."
+  },
+  {
    "id": "ea22bd19897d",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -813,6 +1009,20 @@
    "summary_en": "A man named James Gates has sued OpenAI, alleging that ChatGPT helped his wife, Cheryl Gates, plan to poison him. He survived a poisoning attempt last July, and she was then charged with attempted murder. According to reports, she put prescription drugs and toxic plants in his drinks after allegedly asking the chatbot about lethal drug combinations. The suit, which names OpenAI and CEO Sam Altman, lists nine counts, including negligent design, failure to warn and intentional infliction of emotional distress, and seeks unspecified damages. An OpenAI spokesperson said safety is its top priority and that it banned the user and gave information to law enforcement. The article says the attempted murder charges against Cheryl were dropped in April for insufficient evidence.",
    "summary_ar": "رفع رجل يُدعى «جيمس غيتس» دعوى قضائية ضد شركة OpenAI، زاعماً أن ChatGPT ساعد زوجته «شيريل غيتس» في التخطيط لتسميمه. ونجا من محاولة تسميم في يوليو الماضي، ووُجهت بعدها إلى زوجته تهمة الشروع في القتل. ووفق التقارير، وضعت أدوية موصوفة ونباتات سامة في مشروباته بعد أن سألت المساعد الذكي، بحسب الادعاء، عن توليفات دوائية قاتلة. وتضم الدعوى، التي تطال OpenAI ورئيسها التنفيذي «سام ألتمان»، تسع تهم منها التصميم القائم على الإهمال والإخفاق في التحذير والتسبب المتعمد في ضائقة عاطفية، وتطالب بتعويضات لم تُحدد قيمتها. وقال متحدث باسم OpenAI إن السلامة أولويتها القصوى، وإنها حظرت المستخدم وقدمت معلومات إلى جهات إنفاذ القانون. ويذكر المقال أن تهم الشروع في القتل أُسقطت عن شيريل في أبريل لعدم كفاية الأدلة.",
    "excerpt": "رفع رجل دعوى قضائية ضد شركة \"أوبن إيه آي\" (OpenAI)، زاعماً أن برنامج \"تشات جي بي تي\" (ChatGPT) ساعد زوجته في التخطيط لتسميمه. ونجا جيمس غيتس من محاولة تسميم في يوليو الماضي، وعلى إثر ذلك وُجهت إلى زوجته، شيريل غيتس -التي تعمل أخصائية نفسية في إحدى المدارس"
+  },
+  {
+   "id": "596f213b49de",
+   "source": "gulfnews-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-08T02:27:00+00:00",
+   "title": "Pakistani AI startup RLabs wins Silicon Valley award: Who is NUST graduate Harris Ahmed?",
+   "title_ar": "شركة RLabs الباكستانية الناشئة في الذكاء الاصطناعي تفوز بجائزة في وادي السيليكون: من هو هاريس أحمد خريج NUST؟",
+   "url": "https://gulfnews.com/world/asia/pakistan/pakistani-ai-startup-rlabs-wins-silicon-valley-award-who-is-nust-graduate-harris-ahmed-1.500739888",
+   "summary_en": "RLabs, a Pakistani startup led by Harris Ahmed, a 2018 graduate of the National University of Sciences and Technology in Islamabad, won the GOAL Startup Award at the Silicon Valley November Summit in California. The event, organised by Plug and Play, drew more than 3,000 participants, and RLabs was one of 18 startups chosen for the GOAL programme. The company works on extended reality simulators, synthetic data and machine training, and according to the National Incubation Centre for Aerospace Technologies it is building a proprietary large language model for a simulation engine that could cut development time by up to 75 per cent. Ahmed said the company is preparing to launch in the United States. Pakistan's IT minister, Shaza Fatima Khawaja, congratulated the team.",
+   "summary_ar": "فازت شركة RLabs الباكستانية الناشئة، التي يقودها «هاريس أحمد»، وهو خريج عام 2018 من الجامعة الوطنية للعلوم والتكنولوجيا في إسلام آباد، بجائزة GOAL Startup Award خلال قمة نوفمبر في وادي السيليكون بولاية كاليفورنيا. ونظمت الفعالية منصة Plug and Play وجمعت أكثر من 3000 مشارك، وكانت RLabs واحدة من 18 شركة ناشئة اختيرت للمشاركة في برنامج GOAL. وتعمل الشركة في مجال محاكيات الواقع الممتد والبيانات الاصطناعية وتدريب الآلات، وبحسب المركز الوطني للحضانة لتقنيات الفضاء الجوي (NICAT) تطور الشركة نموذجاً لغوياً كبيراً خاصاً بها لتشغيل محرك محاكاة قد يقلص زمن تطوير المحاكاة بنسبة تصل إلى 75 في المئة. وقال «أحمد» إن شركته تستعد للانطلاق في الولايات المتحدة. وهنأت وزيرة تقنية المعلومات والاتصالات الباكستانية «شازا فاطمة خواجة» الفريق على هذا الإنجاز.",
+   "excerpt": "Pakistani startup RLabs, led by NUST graduate Harris Ahmed, wins Silicon Valley award for its cutting-edge AI and XR simulation technologies."
   },
   {
    "id": "ed263cbbe1a4",
@@ -1023,6 +1233,20 @@
    "summary_en": "OpenAI has completed a new funding deal worth $11 billion. According to the report, it is the first part of a broader funding round.",
    "summary_ar": "أتمت شركة OpenAI صفقة تمويل جديدة بقيمة 11 مليار دولار. ووفق الخبر، تمثل هذه الصفقة الجزء الأول من جولة تمويل أشمل.",
    "excerpt": "أتمت شركة الذكاء الاصطناعي«أوبن إيه. آي» صفقة تمويل جديدة بقيمة 11 مليار دولار، وهي الجزء الأول من جولة تمويل أشمل."
+  },
+  {
+   "id": "85e4d139c5e2",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-07T15:00:00+00:00",
+   "title": "Fireworks says you’re wasting money on AI unless you’re using all the models",
+   "title_ar": "Fireworks تقول إنك تهدر المال على الذكاء الاصطناعي ما لم تستخدم جميع النماذج",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/07/fireworks-says-youre-wasting-money-on-ai-unless-youre-using-all-the-models/5308277",
+   "summary_en": "The Register reports that Fireworks says organisations waste money on AI unless they use all the available models. The piece sets out the case for managed inference, which means automatically routing each query to the right model for the right job.",
+   "summary_ar": "يفيد موقع The Register بأن شركة Fireworks ترى أن المؤسسات تهدر أموالها على الذكاء الاصطناعي ما لم تستخدم جميع النماذج المتاحة. ويعرض المقال حجة الاستدلال المُدار، أي توجيه كل استفسار تلقائياً إلى النموذج المناسب للمهمة المناسبة.",
+   "excerpt": "The case for managed inference, or automatically routing queries to the right model for the right job"
   },
   {
    "id": "055e03fe8fc4",
@@ -1347,6 +1571,20 @@
    "excerpt": "Congressional committee seeking to learn more about 'Nvidia's security protocols against foreign adversary espionage', letter says"
   },
   {
+   "id": "ba5f1cdb14f5",
+   "source": "mit-news-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-06T19:00:00+00:00",
+   "title": "How to predict the behavior of molecules from scant data",
+   "title_ar": "كيف يمكن التنبؤ بسلوك الجزيئات انطلاقاً من بيانات شحيحة",
+   "url": "https://news.mit.edu/2026/how-to-predict-molecule-behavior-with-scant-data-1106",
+   "summary_en": "MIT researchers have developed CheMeleon, an open-source machine-learning model that predicts molecular properties well even when little data is available. The work, led by graduate student Akshat Shirish Zalte and Professor William Green with colleagues including three BASF researchers, was reported in the Journal of Chemical Information and Modeling. CheMeleon was pre-trained on descriptor data for about a million molecules from PubChem, covering around 1,600 descriptors, and can then be fine-tuned on a few data points for a specific property. In tests across 58 cases it outperformed other foundation models and classical expert-driven models. Nine of the top 20 entries in an OpenADMET contest used it, and at least one pharmaceutical company has told staff to start with it. Green says it sharply reduces the number of molecules that must be tested experimentally.",
+   "summary_ar": "طوّر باحثون في معهد MIT نموذجاً مفتوح المصدر للتعلم الآلي باسم CheMeleon، يتنبأ بخصائص الجزيئات بكفاءة حتى عند توفر بيانات قليلة. وقد نُشر العمل في Journal of Chemical Information and Modeling، بقيادة طالب الدراسات العليا «أكشات شيريش زالت» والأستاذ «ويليام غرين» وبمشاركة ثلاثة باحثين من شركة BASF وآخرين. دُرّب النموذج مسبقاً على بيانات واصفات لنحو مليون جزيء من قاعدة PubChem، تشمل قرابة 1,600 واصف، ويمكن بعد ذلك ضبطه بعدد قليل من البيانات لخاصية معينة. وفي اختبارات شملت 58 حالة تفوق على نماذج أساسية أخرى وعلى النماذج الكلاسيكية التي يصممها الخبراء. واستخدمه تسعة من أفضل 20 مشاركاً في مسابقة OpenADMET، وطلبت شركة أدوية واحدة على الأقل من موظفيها البدء به. ويقول «غرين» إنه يقلل بدرجة كبيرة عدد الجزيئات التي يلزم اختبارها مخبرياً.",
+   "excerpt": "A machine-learning approach called CheMeleon provides a practical way to develop new drugs or other molecules with much less detailed, expensive experimentation."
+  },
+  {
    "id": "712436ca7238",
    "source": "albayan",
    "lang": "ar",
@@ -1403,6 +1641,20 @@
    "excerpt": "An experiment in which AI models were asked to break into simulated networks showed the hacking skills of DeepSeek and GLM to be not far behind OpenAI’s most advanced cyber model, which isn’t public."
   },
   {
+   "id": "5555c456191c",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-06T18:36:42+00:00",
+   "title": "PyTorch 2.15 tackles the 'one bad GPU' problem",
+   "title_ar": "PyTorch 2.15 يعالج مشكلة «وحدة GPU واحدة معطلة»",
+   "url": "https://www.theregister.com/devops/2026/11/06/pytorch-215-tackles-the-one-bad-gpu-problem/5308227",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Technical debt shoveled aside to make large-scale AI training more resilient"
+  },
+  {
    "id": "52e0623fab79",
    "source": "verge-ai",
    "lang": "en",
@@ -1415,6 +1667,20 @@
    "summary_en": "Meta now lets users build customized, app-like experiences inside its Muse AI assistant through a feature called spaces. Examples include a shopping hub, school dashboard, music tracker and trivia game. A user creates a space by describing it. If outside apps such as Gmail, Google Calendar, OpenTable or Notion are connected, Muse pulls information from them and updates details like pricing and dates in the background. Users can also check items off, add notes and make edits inside a space.",
    "summary_ar": "أتاحت Meta للمستخدمين الآن بناء تجارب مخصصة تشبه التطبيقات داخل المساعد الذكي Muse عبر ميزة تسمى «المساحات» (spaces). ومن الأمثلة على ذلك مركز للتسوق ولوحة متابعة دراسية وأداة لتتبع الموسيقى ولعبة معلومات عامة. ويُنشئ المستخدم المساحة بمجرد وصفها. وإذا ربط المستخدم تطبيقات خارجية مثل Gmail وGoogle Calendar وOpenTable وNotion، يسحب Muse المعلومات منها ويحدّث تفاصيل مثل الأسعار والمواعيد في الخلفية. كما يمكن للمستخدم وضع علامات على العناصر وإضافة ملاحظات وإجراء تعديلات داخل المساحة.",
    "excerpt": "Meta will now allow you to build customized, app-like experiences within Muse. The new feature, called \"spaces,\" allows its AI assistant to build things like a shopping hub, school dashboard, music tracker, trivia game, and more, which you can interact with directly in the Muse…"
+  },
+  {
+   "id": "b620342f92c4",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-06T18:01:00+00:00",
+   "title": "SageMaker Inference now supports Multi-Instance GPU to maximize GPU utilization for model endpoints",
+   "title_ar": "SageMaker Inference تدعم الآن تقنية Multi-Instance GPU لزيادة استخدام وحدات GPU إلى أقصى حد في نقاط نهاية النماذج",
+   "url": "https://aws.amazon.com/blogs/machine-learning/sagemaker-inference-now-supports-multi-instance-gpu-to-maximize-gpu-utilization-for-model-endpoints/",
+   "summary_en": "Amazon SageMaker Inference now supports GPU partitioning, which uses NVIDIA Multi-Instance GPU (MIG) to split one physical GPU into isolated partitions, each with a fixed share of compute and a dedicated block of memory enforced in hardware. Until now the smallest unit on a GPU endpoint was a whole accelerator, which limited how many models an instance could host and forced a choice between full GPUs of older or newer generations. With partitioning, different models can run in separate partitions, and users can pick a fraction of a newer accelerator. The feature works only on endpoints that use inference components and adds two optional fields to existing API calls. A GPU can be split into at most seven partitions, and the layout must be chosen when the endpoint is created. Salesforce helped define requirements and validate the first implementation.",
+   "summary_ar": "أصبحت خدمة Amazon SageMaker Inference تدعم تقسيم وحدات معالجة الرسوميات (GPU) باستخدام تقنية NVIDIA Multi-Instance GPU (MIG)، التي تجزّئ المعالج الفعلي الواحد إلى أقسام معزولة، لكل منها حصة ثابتة من وحدات الحوسبة وكتلة مخصصة من الذاكرة مع عزل مفروض على مستوى العتاد. وكان أصغر جزء يمكن طلبه في نقاط النهاية المعتمدة على المعالجات الرسومية هو مسرّع كامل، ما كان يحدّ من عدد النماذج على كل مثيل ويفرض الاختيار بين معالج كامل من جيل أقدم أو أحدث. وبفضل التقسيم يمكن تشغيل نموذج مختلف في كل قسم، كما يمكن اختيار جزء من مسرّع أحدث. تعمل الميزة فقط مع نقاط النهاية التي تستخدم مكوّنات الاستدلال (inference components)، وتضيف حقلين اختياريين إلى استدعاءات واجهة البرمجة الحالية. ويبلغ الحد الأقصى سبعة أقسام للمعالج الواحد، ويجب تحديد التخطيط عند إنشاء نقطة النهاية. وشاركت Salesforce في تحديد المتطلبات والتحقق من التنفيذ الأولي.",
+   "excerpt": "Amazon SageMaker Inference now supports GPU partitioning with NVIDIA Multi-Instance GPU (MIG), which divides one GPU into hardware-isolated partitions so you can run a different model in each or take a right-sized fraction of a newer accelerator."
   },
   {
    "id": "860444638104",
@@ -1431,6 +1697,34 @@
    "excerpt": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development."
   },
   {
+   "id": "95ff043a27dc",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-06T17:43:02+00:00",
+   "title": "“Does Meta think we can’t read?” Meta abandons sketchy commercial terms update.",
+   "title_ar": "«هل تظن Meta أننا لا نستطيع القراءة؟» Meta تتراجع عن تحديث مثير للريبة في الشروط التجارية",
+   "url": "https://arstechnica.com/tech-policy/2026/11/does-meta-think-we-cant-read-meta-abandons-sketchy-commercial-terms-update/",
+   "summary_en": "Meta has indefinitely delayed an update to its commercial terms that would have required Meta Business account holders to allow extensive AI training on external websites linked from Facebook. A spokesperson told Reuters the company is pausing the changes while it engages with stakeholders, and the existing terms remain in effect. Legal experts had warned that the vague wording could let Meta ignore robots.txt preferences, and businesses had no way to opt out. The start date had already moved from October 30 to November 20 amid pushback; courts in Brazil and Norway issued preliminary injunctions, and the UK's Competition and Markets Authority opened a formal investigation. Senators Adam Schiff and Marsha Blackburn asked Mark Zuckerberg to withdraw the terms. Meta says its crawling practices are unchanged, but its revised terms contain no specific robots.txt language.",
+   "summary_ar": "أجّلت Meta إلى أجل غير مسمى تحديثاً لشروطها التجارية كان سيُلزم أصحاب حسابات Meta Business بالسماح بتدريب واسع للذكاء الاصطناعي على مواقع خارجية مرتبطة بصفحاتهم على Facebook. وقال متحدث باسم الشركة لوكالة «رويترز» إنها توقف التغييرات بينما تواصل التشاور مع الأطراف المعنية، وإن الشروط الحالية تبقى سارية. وكان خبراء قانونيون قد حذروا من أن الصياغة الغامضة قد تتيح للشركة تجاهل تفضيلات ملفات robots.txt، ولم يكن لدى الشركات خيار للانسحاب. وكان موعد التطبيق قد تأجل من 30 أكتوبر إلى 20 نوفمبر وسط اعتراضات، كما أصدرت محاكم في البرازيل والنرويج أوامر مؤقتة بوقف الشروط، وفتحت هيئة المنافسة والأسواق البريطانية تحقيقاً رسمياً. وطلب السيناتوران «آدم شيف» و«مارشا بلاكبيرن» من «مارك زوكربيرغ» سحب الشروط. وتقول Meta إن ممارساتها في الزحف لم تتغير، لكن الشروط المعدّلة لا تتضمن نصاً محدداً بشأن robots.txt.",
+   "excerpt": "Meta won't force Facebook page owners to allow AI training on linked content."
+  },
+  {
+   "id": "afd6335fa188",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T17:34:45+00:00",
+   "title": "Taxonomy of agentic primitives in AWS Quick",
+   "title_ar": null,
+   "url": "https://aws.amazon.com/blogs/machine-learning/taxonomy-of-agentic-primitives-in-amazon-quick/",
+   "summary_en": "AWS describes a taxonomy of agentic primitives that emerged while building Amazon Quick, where agents moved from answering questions to taking actions such as scheduling meetings and generating reports. The framework breaks agentic work into four questions: When, What, Who and How. Triggers start the work and carry the task, an agent is a persistent, learning actor that takes it on, and capabilities, meaning tools, skills and workflows, are how it acts. Skills leave room for judgment, while workflows run fixed steps with decision logic in code. The authors say a request such as a daily Slack digest is usually a trigger added to an existing agent, and that learning improves repeated tasks over time. This is the first post in a series.",
+   "summary_ar": "تعرض AWS تصنيفاً للعناصر الأساسية للعمل الوكيلي (agentic primitives) توصلت إليه أثناء بناء Amazon Quick، حيث انتقلت الوكلاء من الإجابة عن الأسئلة إلى تنفيذ مهام مثل جدولة الاجتماعات وإعداد التقارير. ويقسّم الإطار العمل الوكيلي إلى أربعة أسئلة: متى، وماذا، ومن، وكيف. فالمحفّزات تبدأ العمل وتحمل المهمة، والوكيل كيان دائم ومتعلم يتولاها، أما القدرات، أي الأدوات والمهارات وسير العمل، فهي الطريقة التي ينفذ بها المهمة. وتترك المهارات مجالاً للتقدير، بينما تنفذ مسارات العمل خطوات ثابتة ومنطق القرار فيها في الشيفرة. ويرى الكتّاب أن طلباً مثل ملخص يومي لقناة Slack يكون غالباً محفّزاً يُضاف إلى وكيل قائم، وأن التعلم يحسّن المهام المتكررة بمرور الوقت. وهذه أولى المقالات في سلسلة.",
+   "excerpt": "As we built Amazon Quick, its agents grew from answering questions to taking actions, and the same primitives kept getting rebuilt under different names."
+  },
+  {
    "id": "ead671d25881",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1443,6 +1737,48 @@
    "summary_en": "Democrats' historic victories in this week's U.S. midterm elections could also reshape the tech industry, according to TechCrunch. Voters decided 41 data center-related ballot measures on Tuesday, and in all but one the majority backed more restrictions on data center development. Even where data centers were not on the ballot, they were a major talking point, and newly elected Democratic governors and members of Congress are likely to support additional regulation. On TechCrunch's Equity podcast, Kirsten Korosec, Sean O'Kane and Anthony Ha discuss what the results mean for the industry, including data centers, which OpenAI is already trying to rebrand, and increased government scrutiny of Big Tech.",
    "summary_ar": "تشير TechCrunch إلى أن الانتصارات التاريخية التي حققها الديمقراطيون في الانتخابات النصفية الأمريكية هذا الأسبوع قد تعيد تشكيل قطاع التقنية أيضاً. فقد صوّت الناخبون يوم الثلاثاء على 41 إجراءً مرتبطاً بمراكز البيانات، وفي جميع هذه الإجراءات باستثناء واحد أيّدت الأغلبية فرض قيود أكثر على إنشاء مراكز البيانات. وحتى حيث لم تُطرح مراكز البيانات للتصويت، كانت من أبرز محاور النقاش، ومن المرجح أن يدعم حكام الولايات وأعضاء الكونغرس الديمقراطيون المنتخبون حديثاً مزيداً من التنظيم. وفي بودكاست Equity التابع لـ TechCrunch، يناقش كيرستن كوروسيك وشون أوكين وأنتوني ها انعكاسات النتائج على القطاع، ومنها مراكز البيانات التي تحاول OpenAI إعادة تقديمها بصورة مختلفة، وتزايد تدقيق الحكومة في شركات التقنية الكبرى.",
    "excerpt": null
+  },
+  {
+   "id": "7ffe65e37ef1",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T17:13:13+00:00",
+   "title": "Serverless MCP server for AI agent data lake access on Amazon ECS Fargate",
+   "title_ar": "خادم MCP بلا خوادم لوصول وكلاء الذكاء الاصطناعي إلى بحيرة البيانات على Amazon ECS Fargate",
+   "url": "https://aws.amazon.com/blogs/machine-learning/serverless-mcp-server-for-ai-agent-data-lake-access-on-amazon-ecs-fargate/",
+   "summary_en": "A team supporting Amazon's North America Sort Center (NASC) network describes a serverless Model Context Protocol (MCP) server it built on Amazon ECS with AWS Fargate. It serves as a central gateway between AI agents and the enterprise data lake, so that agents no longer need separate integration code and their own access control for each dataset. A new dataset needs only a JSON metadata file, which the server finds automatically on the next pipeline sync. The design has four layers: client, MCP server, tools and knowledge-base refresh. It uses Amazon Bedrock, FastMCP, Athena and Redshift. In the team's testing, scoping queries through a context mapping kept end-to-end latency at 15–20 seconds.",
+   "summary_ar": "يصف فريق يدعم شبكة مراكز الفرز في أمريكا الشمالية (NASC) التابعة لأمازون خادماً بلا خوادم لبروتوكول سياق النماذج (Model Context Protocol – MCP) بناه على Amazon ECS مع AWS Fargate. ويعمل الخادم بوصفه بوابة مركزية بين وكلاء الذكاء الاصطناعي وبحيرة بيانات المؤسسة، فلا يحتاج كل وكيل إلى شيفرة تكامل منفصلة ولا إلى ضوابط وصول خاصة به لكل مجموعة بيانات. ولإتاحة مجموعة بيانات جديدة يكفي ملف بيانات وصفية بصيغة JSON يكتشفه الخادم تلقائياً عند المزامنة التالية. ويتكوّن التصميم من أربع طبقات هي العميل والخادم والأدوات وتحديث قاعدة المعرفة، ويستخدم Amazon Bedrock وFastMCP وAthena وRedshift. وبحسب اختبارات الفريق، أبقى تحديد نطاق الاستعلامات عبر ربط السياق زمن التفاعل الكامل بين 15 و20 ثانية.",
+   "excerpt": "Learn how to build a serverless Model Context Protocol (MCP) server on Amazon ECS with AWS Fargate that gives AI agents secure, metadata-driven access to an enterprise data lake. Exposing a new dataset requires only a JSON file, with no per-dataset integration code."
+  },
+  {
+   "id": "b8bac355d624",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T17:09:23+00:00",
+   "title": "Govern AI agent access with Okta Cross App Access and Amazon Bedrock AgentCore – Part 2",
+   "title_ar": "حوكمة وصول وكلاء الذكاء الاصطناعي باستخدام Okta Cross App Access وAmazon Bedrock AgentCore – الجزء 2",
+   "url": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-access-with-okta-cross-app-access-and-amazon-bedrock-agentcore-part-2/",
+   "summary_en": "This is the second part of an AWS series on governing AI agent access with Okta Cross App Access (XAA) and Amazon Bedrock AgentCore. It builds on the single-agent, two-server setup from Part 1, which the post says does not scale to an enterprise with hundreds of agents and thousands of tools. Amazon Bedrock AgentCore Gateway becomes a single front door that redeems Okta's grant for each target, while Cedar policies tie each tool to the agent and the scope Okta delegated. A second agent on Amazon EKS joins under its own Okta identity, and AgentCore Observability with Amazon CloudWatch records every decision. The additions take about 90 minutes, and the code is sample code for non-production use.",
+   "summary_ar": "هذا هو الجزء الثاني من سلسلة لـ AWS حول حوكمة وصول وكلاء الذكاء الاصطناعي باستخدام Okta Cross App Access (XAA) وAmazon Bedrock AgentCore. ويبني المقال على الإعداد الوارد في الجزء الأول، وهو وكيل واحد وخادمان، ويذكر أنه لا يتوسع ليناسب مؤسسة فيها مئات الوكلاء وآلاف الأدوات. وتصبح Amazon Bedrock AgentCore Gateway بوابة أمامية واحدة تستبدل تصريح Okta لكل هدف، بينما تربط سياسات Cedar كل أداة بالوكيل والنطاق الذي فوّضته Okta. وينضم وكيل ثانٍ يعمل على Amazon EKS بهوية Okta خاصة به، وتسجّل AgentCore Observability مع Amazon CloudWatch كل قرار. وتستغرق الإضافات نحو 90 دقيقة، والشيفرة المعروضة نموذجية وغير مخصصة للإنتاج.",
+   "excerpt": "In Part 1 you built one governed agent. Part 2 scales the pattern to an enterprise: Amazon Bedrock AgentCore Gateway becomes the single front door and redeems Okta's grant, Cedar policies bind each tool to the agent, a second agent runs on Amazon EKS, and AgentCore Observability…"
+  },
+  {
+   "id": "b7a89fa9b2a0",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T17:09:18+00:00",
+   "title": "Govern AI agent access with Okta Cross App Access and Amazon Bedrock AgentCore – Part 1",
+   "title_ar": "حوكمة وصول وكلاء الذكاء الاصطناعي باستخدام Okta Cross App Access وAmazon Bedrock AgentCore – الجزء 1",
+   "url": "https://aws.amazon.com/blogs/machine-learning/govern-ai-agent-access-with-okta-cross-app-access-and-amazon-bedrock-agentcore-part-1/",
+   "summary_en": "This AWS post, the first of two, explains how to govern which AI agent may act for which user by combining Okta Cross App Access (XAA) with Amazon Bedrock AgentCore. Okta acts as the governance plane that decides on each request, while AgentCore Identity redeems Okta's grant for a short-lived access token without exposing credentials to the agent code. The reader builds a task agent on AgentCore runtime. In the authors' tests, Okta refused an agent's new requests within about 1 second after an administrator removed a user's assignment, and issued tokens expired within 5 minutes. AgentCore Identity added about 0.6 seconds to a request of roughly 30 seconds. The walkthrough takes about 1 hour.",
+   "summary_ar": "يشرح هذا المقال من AWS، وهو الأول من جزأين، كيفية التحكم في الوكيل الذي يحق له التصرف نيابة عن أي مستخدم، وذلك بالجمع بين Okta Cross App Access (XAA) وAmazon Bedrock AgentCore. وتعمل Okta بوصفها طبقة الحوكمة التي تتخذ القرار عند كل طلب، بينما تستبدل AgentCore Identity تصريح Okta برمز وصول قصير الأمد دون كشف بيانات الاعتماد لشيفرة الوكيل. ويبني القارئ وكيل مهام على AgentCore runtime. وفي اختبارات الكاتبين، رفضت Okta الطلبات الجديدة للوكيل خلال نحو ثانية واحدة بعد أن أزال مسؤول تعيين المستخدم، وانتهت صلاحية الرموز الصادرة خلال 5 دقائق. وأضافت AgentCore Identity نحو 0.6 ثانية إلى طلب يستغرق نحو 30 ثانية. ويستغرق التطبيق العملي نحو ساعة واحدة.",
+   "excerpt": "An AI agent that acts for a user raises an identity question that per-app OAuth and service accounts leave open: which agent may act for which user, and how you stop it."
   },
   {
    "id": "91f8d419f4fc",
@@ -1459,6 +1795,34 @@
    "excerpt": "When Irene moved to San Francisco last year, she started using dating apps as a way to meet new people, get to know her new city, and connect with others who care about the things she does. After the 25-year-old analyst downloaded Hinge and started swiping, she noticed a trend."
   },
   {
+   "id": "38bdfb2f8c28",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T16:55:05+00:00",
+   "title": "How Greenlight Financial built an autonomous SOC solution on Amazon Bedrock AgentCore",
+   "title_ar": "كيف بنت Greenlight Financial حل مركز عمليات أمنية (SOC) ذاتي التشغيل على Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-greenlight-financial-built-an-autonomous-soc-solution-on-amazon-bedrock-agentcore/",
+   "summary_en": "Greenlight Financial, which offers financial products for families, built an autonomous security operations center solution called Luna on Amazon Bedrock AgentCore. Its SOC receives 3,000–4,000 security and risk alerts a month, and a human analyst needs 15–30 minutes per case. Luna uses a tiered supervisor design with more than 30 specialized agents. Tier 1 handles initial triage, with a median of single-digit seconds for routine cases, while Tier 2 takes the roughly 10 percent of cases needing multi-step reasoning. AgentCore memory lets Luna learn from past resolutions, lifting autonomous resolution from 83 percent to more than 90 percent. Greenlight extended Luna to financial risk triage within two months and estimates it avoids 900–1,800 manual hours each month.",
+   "summary_ar": "بنت شركة Greenlight Financial، التي تقدم منتجات مالية للعائلات، حلاً ذاتياً لمركز عمليات الأمن باسم Luna على منصة Amazon Bedrock AgentCore. يتلقى المركز ما بين 3,000 و4,000 تنبيه أمني وتنبيه مخاطر شهرياً، ويحتاج المحلل البشري إلى 15–30 دقيقة لكل حالة. يعتمد Luna على بنية إشرافية متدرجة تضم أكثر من 30 وكيلاً متخصصاً. يتولى المستوى الأول الفرز الأولي بمتوسط ثوانٍ معدودة للحالات الروتينية، بينما يعالج المستوى الثاني نحو 10 في المئة من الحالات التي تتطلب استدلالاً متعدد الخطوات. وتتيح ذاكرة AgentCore لـ Luna التعلم من القرارات السابقة، مما رفع نسبة الحل الذاتي من 83 في المئة إلى أكثر من 90 في المئة. وقد وسّعت الشركة استخدام النظام ليشمل فرز مخاطر مالية خلال شهرين، وتقدّر أنه يوفر بين 900 و1,800 ساعة عمل يدوي كل شهر.",
+   "excerpt": "Greenlight Financial resolves more than 90% of up to 4,000 monthly security and risk cases without human intervention using Luna, a tiered multi-agent system on Amazon Bedrock AgentCore."
+  },
+  {
+   "id": "55950fa4ce7a",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-06T16:49:42+00:00",
+   "title": "Taxbit Assist: A grounded, role-aware AI agent on Amazon Bedrock AgentCore",
+   "title_ar": "Taxbit Assist: وكيل ذكاء اصطناعي قائم على بيانات مرجعية ويراعي الأدوار على Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/taxbit-assist-a-grounded-role-aware-ai-agent-on-amazon-bedrock-agentcore/",
+   "summary_en": "Taxbit, a digital-asset tax and accounting compliance platform founded in 2018, has described how it built Taxbit Assist, an AI assistant embedded in its dashboard on Amazon Bedrock AgentCore. The assistant gives cited, permission-aware answers based on product knowledge that was previously scattered across the public website, API documentation and help-center articles. The agent is a Strands Agents SDK application with eight narrow tools. It has no read access to customer tax data, and the model never handles user identity. Geography-aware inference profiles address data residency, and a bring-your-own-key option is supported. According to Taxbit's internal analytics, more than 55 percent of users who ask a question return with another within 24 hours.",
+   "summary_ar": "شرحت Taxbit، وهي منصة للامتثال الضريبي والمحاسبي للأصول الرقمية تأسست عام 2018، كيف بنت Taxbit Assist، وهو مساعد ذكي مدمج في لوحة التحكم الخاصة بها على منصة Amazon Bedrock AgentCore. يقدم المساعد إجابات موثّقة بالمصادر وتراعي صلاحيات المستخدم، استناداً إلى معرفة بالمنتج كانت موزعة سابقاً بين الموقع العام ووثائق واجهات البرمجة ومقالات مركز المساعدة. والوكيل تطبيق مبني على Strands Agents SDK ويضم ثماني أدوات محددة. لا يملك الوكيل صلاحية قراءة بيانات العملاء الضريبية، ولا يتعامل النموذج مع هوية المستخدم. وتعالج ملفات الاستدلال المرتبطة بالمنطقة الجغرافية مسألة موقع البيانات، كما يُدعم خيار إحضار المفتاح الخاص بالعميل (BYOK). وبحسب تحليلات Taxbit الداخلية، يعود أكثر من 55 في المئة من المستخدمين الذين يطرحون سؤالاً إلى طرح سؤال آخر خلال 24 ساعة.",
+   "excerpt": "Taxbit built Taxbit Assist, a cited, permission-aware AI assistant embedded in its enterprise dashboard, on Amazon Bedrock AgentCore."
+  },
+  {
    "id": "04f7ceca8d41",
    "source": "the-decoder",
    "lang": "en",
@@ -1471,6 +1835,20 @@
    "summary_en": "Perplexity has launched Teammates, an AI agent that runs around the clock and works through ongoing projects on its own, unlike Perplexity Computer, which handles one-off assignments. Each Teammate has its own virtual machine with a desktop and browser. Users follow progress in dedicated threads in the Perplexity app and can interact with the agents through Slack. Teammates require the Max plan at $200 per month. Similar agents already come from SpaceX, Meta, OpenAI and Anthropic as Grok Bots, Muse, Dots and Duet, with Dots starting at $100 and Duet from $20. The article says the cheaper options will likely hit usage limits quickly, and notes SpaceX recently tightened caps on Grok Bots. Perplexity's annualized revenue topped $750 million as of August.",
    "summary_ar": "أطلقت Perplexity خدمة Teammates، وهي وكيل ذكاء اصطناعي يعمل على مدار الساعة وينجز المشاريع المستمرة بصورة مستقلة، بخلاف Perplexity Computer الذي ينفذ مهام لمرة واحدة. لكل Teammate جهاز افتراضي خاص به يضم سطح مكتب ومتصفحاً. ويتابع المستخدمون التقدم عبر مسارات مخصصة في تطبيق Perplexity، ويمكنهم التفاعل مع الوكلاء عبر Slack. تتطلب الخدمة اشتراك Max بسعر 200 دولار شهرياً. وتوفّر SpaceX وMeta وOpenAI وAnthropic وكلاء مشابهين هي Grok Bots وMuse وDots وDuet، إذ تبدأ أسعار Dots من 100 دولار وDuet من 20 دولاراً. ويذكر المقال أن الخيارات الأرخص ستبلغ على الأرجح حدود الاستخدام سريعاً، وأن SpaceX شددت مؤخراً سقوف الاستخدام على Grok Bots. وتجاوز الإيراد السنوي المقدّر لشركة Perplexity مبلغ 750 مليون دولار حتى أغسطس.",
    "excerpt": "Perplexity is launching \"Teammates,\" always-on agents that work through ongoing projects on their own virtual machines. The feature requires the Max plan at $200 per month, well above similar offerings from OpenAI or Anthropic. The market for always-on agents is getting crowded."
+  },
+  {
+   "id": "5beddb2a546b",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-06T16:45:58+00:00",
+   "title": "Extend Claude Code to remote sessions on Amazon Bedrock AgentCore with security controls",
+   "title_ar": "توسيع Claude Code ليعمل في الجلسات عن بُعد على Amazon Bedrock AgentCore مع ضوابط أمنية",
+   "url": "https://aws.amazon.com/blogs/machine-learning/extend-claude-code-to-remote-sessions-on-amazon-bedrock-agentcore-with-security-controls/",
+   "summary_en": "An AWS post shows how to run Claude Code as a remote agent on Amazon Bedrock AgentCore instead of only on a laptop. The accompanying sample, sample-remote-coding-agent, runs each task in its own isolated AgentCore runtime session inside the user's AWS account and returns a GitHub pull request for review and merge. Model calls go through a private Amazon Bedrock endpoint, so existing Bedrock data controls remain in place. Each session is a dedicated microVM whose memory is sanitized at the end. The agent uses a GitHub App token that expires after 8 hours rather than a long-lived credential. Prompts are screened by Amazon Bedrock Guardrails, though the post notes this does not catch prompt injection arriving through repository files or command output.",
+   "summary_ar": "يوضح مقال من AWS كيفية تشغيل Claude Code وكيلاً عن بُعد على منصة Amazon Bedrock AgentCore بدلاً من الاكتفاء بتشغيله على الحاسوب المحمول. ويشغّل المثال المرافق، sample-remote-coding-agent، كل مهمة في جلسة AgentCore runtime معزولة داخل حساب AWS الخاص بالمستخدم، ثم يعيد طلب دمج (pull request) على GitHub للمراجعة والدمج. تمر استدعاءات النموذج عبر نقطة اتصال خاصة في Amazon Bedrock، فتبقى ضوابط البيانات الحالية قائمة. وكل جلسة عبارة عن آلة افتراضية مصغّرة مخصصة تُنظَّف ذاكرتها عند انتهائها. ويستخدم الوكيل رمز وصول من تطبيق GitHub ينتهي بعد 8 ساعات بدلاً من بيانات اعتماد طويلة الأمد. وتُفحص الطلبات بواسطة Amazon Bedrock Guardrails، لكن المقال يشير إلى أن ذلك لا يلتقط حقن الأوامر القادم عبر ملفات المستودع أو مخرجات الأوامر.",
+   "excerpt": "Run Claude Code as a remote agent on Amazon Bedrock AgentCore. Each coding task runs in its own isolated session in your AWS account, every model call goes through Amazon Bedrock, and the result comes back as a GitHub pull request you review and merge."
   },
   {
    "id": "c821c11af1c2",
@@ -1499,6 +1877,20 @@
    "summary_en": "More than 100 activists stormed the construction site of a Microsoft data center in Amsterdam on Friday, opening two days of protests planned in 16 countries by the \"Stop Dirty Data Centers\" coalition of environmental and digital-rights groups. Protesters climbed cranes, hung balloons and danced as police watched, and they say large data centers strain power and water supplies and threaten climate goals. The site's owner, Pure Data Centres, which plans to invest over $1 billion, asked those present to leave safely and talk, while Microsoft said it respects peaceful expression but will not tolerate illegal acts. Tech companies argue the facilities are needed to meet global demand for AI and cloud computing. The text adds that tech stocks fell sharply in the US on Thursday over fears of stricter AI rules from a Democratic-controlled Congress.",
    "summary_ar": "اقتحم أكثر من 100 ناشط يوم الجمعة موقع بناء مركز بيانات تابع لشركة Microsoft في أمستردام، في مستهل احتجاجات تستمر يومين تنظمها في 16 دولة جماعات معنية بالبيئة والحقوق الرقمية ضمن تحالف «أوقفوا مراكز البيانات القذرة». وتسلق المتظاهرون الرافعات وعلّقوا بالونات ورقصوا بحضور الشرطة، ويقولون إن المراكز الضخمة تضغط على إمدادات الكهرباء والمياه وتهدد الأهداف المناخية. وطلبت شركة Pure Data Centres، مالكة الموقع التي تعتزم استثمار أكثر من مليار دولار، من الموجودين المغادرة بأمان والحوار معها، فيما قالت Microsoft إنها تحترم حق التعبير السلمي لكنها لن تتغاضى عن أي أعمال غير قانونية. وتؤكد شركات التقنية أن هذه المراكز ضرورية لتلبية الطلب العالمي على الذكاء الاصطناعي والحوسبة السحابية. ويضيف النص أن أسهم شركات التقنية تراجعت بحدة في الولايات المتحدة يوم الخميس بسبب مخاوف من لوائح أكثر صرامة للذكاء الاصطناعي إذا سيطر الديمقراطيون على الكونغرس.",
    "excerpt": "اقتحم متظاهرون اليوم الجمعة موقع بناء مركز بيانات لشركة \"مايكروسوفت\" في أمستردام، في بداية تظاهرات ستستمر يومين، وتأتي في إطار تنامي ردود الفعل الغاضبة عالمياً من التوسع السريع في القدرات الحاسوبية اللازمة للذكاء الاصطناعي."
+  },
+  {
+   "id": "01aef0d2f976",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-06T16:19:12+00:00",
+   "title": "Could potential AI clones of GTA VI force a quicker official port?",
+   "title_ar": "هل يمكن أن تدفع نسخ مقلّدة محتملة من GTA VI بالذكاء الاصطناعي إلى تسريع إصدار نسخة رسمية منقولة؟",
+   "url": "https://arstechnica.com/gaming/2026/11/could-potential-ai-clones-of-gta-vi-force-a-quicker-official-port/",
+   "summary_en": "Obbe Vermeij, a former Rockstar tech director, says AI tools that can reverse-engineer games might push Rockstar to speed up the official PC version of GTA VI. In an interview with Rock Paper Shotgun, he noted that Rockstar has long favoured consoles, with PC ports of its major games arriving months or even years later. He said he would be concerned if someone took the PS5 version and used AI to convert it to PC. Vermeij speculated that such an effort could cost tens of thousands of dollars in tokens and produce a port weaker than Rockstar's, though good enough for some players. No official timing for the PC port has been announced, but reports suggest Rockstar is aiming for the first quarter of 2027.",
+   "summary_ar": "يرى أوبي فيرمايج، المدير التقني السابق في Rockstar، أن أدوات الذكاء الاصطناعي القادرة على الهندسة العكسية للألعاب قد تدفع الشركة إلى تسريع إصدار النسخة الرسمية من GTA VI للحواسيب. وأشار في مقابلة مع Rock Paper Shotgun إلى أن Rockstar تعطي منذ زمن طويل أولوية لمنصات الألعاب، فتصل نسخ الحاسوب من ألعابها الكبرى بعد أشهر أو حتى سنوات. وقال إنه سيكون قلقاً لو كان مكان الشركة من أن يأخذ أحدهم نسخة PS5 ويستخدم الذكاء الاصطناعي لتحويلها إلى الحاسوب. وتوقع فيرمايج أن تكلف هذه المحاولة عشرات الآلاف من الدولارات في «الوحدات اللغوية»، وأن تكون النسخة الناتجة أقل جودة من نسخة Rockstar، لكنها قد ترضي بعض اللاعبين. ولم يُعلن موعد رسمي لنسخة الحاسوب، لكن تقارير تشير إلى أن الشركة تستهدف الربع الأول من عام 2027.",
+   "excerpt": "A former Rockstar tech director thinks the developer is facing new time pressures."
   },
   {
    "id": "215687ca939d",

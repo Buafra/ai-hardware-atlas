@@ -1,7 +1,18 @@
 {
- "updated_at": "2026-11-10T17:52:56+00:00",
+ "updated_at": "2026-11-11T02:02:15+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
+  {
+   "id": "baidu/ernie-5.5-flash-preview",
+   "name": "Baidu: ERNIE-5.5-Flash-Preview",
+   "hf": "baidu/ERNIE-5.5-Flash-Preview",
+   "context": 1024000,
+   "created": 1794333533,
+   "open": true,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
   {
    "id": "bytedance/ui-tars-1.5-7b",
    "name": "ByteDance: UI-TARS 7B",
@@ -784,6 +795,17 @@
    "moe": false
   },
   {
+   "id": "motif-technologies/motif-3",
+   "name": "Motif Technologies: Motif 3",
+   "hf": "Motif-Technologies/Motif-3",
+   "context": 262144,
+   "created": 1793655334,
+   "open": true,
+   "params_b": 314.84,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "gryphe/mythomax-l2-13b",
    "name": "MythoMax 13B",
    "hf": "Gryphe/MythoMax-L2-13b",
@@ -989,17 +1011,6 @@
    "created": 1731368400,
    "open": true,
    "params_b": 32.76,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "qwen/qwen-2.5-7b-instruct",
-   "name": "Qwen: Qwen2.5 7B Instruct",
-   "hf": "Qwen/Qwen2.5-7B-Instruct",
-   "context": 32768,
-   "created": 1729036800,
-   "open": true,
-   "params_b": 7.62,
    "params_source": "huggingface",
    "moe": false
   },
@@ -1598,17 +1609,6 @@
    "moe": false
   },
   {
-   "id": "xingchen-agi/xing4.0-29b-a4b",
-   "name": "XingChen: Xing4.0 29B A4B",
-   "hf": "XingChen-AGI/Xing4.0-29B-A4B",
-   "context": 262144,
-   "created": 1792177496,
-   "open": true,
-   "params_b": 31.22,
-   "params_source": "huggingface",
-   "moe": true
-  },
-  {
    "id": "z-ai/glm-4.5",
    "name": "Z.ai: GLM 4.5",
    "hf": "zai-org/GLM-4.5",
@@ -2109,6 +2109,17 @@
    "hf": null,
    "context": 2000000,
    "created": 1784311165,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "baidu/ernie-light-dt-1.0-intl",
+   "name": "Baidu: ERNIE-Light-DT-1.0",
+   "hf": null,
+   "context": 1024000,
+   "created": 1794331260,
    "open": false,
    "params_b": null,
    "params_source": null,
@@ -2637,6 +2648,17 @@
    "hf": null,
    "context": 1000000,
    "created": 1790950024,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "kt/midm-k-3.0-pro",
+   "name": "KT: Mi:dm K 3.0 Pro",
+   "hf": null,
+   "context": 261795,
+   "created": 1793897701,
    "open": false,
    "params_b": null,
    "params_source": null,
