@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-11T20:30:00+04:00",
+  "generated_at": "2026-11-11T20:36:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9504,6 +9504,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-11T20:30:00+04:00",
       "cover": "images/qahwa/week-06-day-39--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-40--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "hardware",
+      "title": {
+        "en": "The chip with the highest TOPS is always best for AI.",
+        "ar": "أعلى TOPS يعني أفضل شريحة AI دائماً."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "The chip with the highest TOPS is ==always best for AI==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "أعلى TOPS يعني ==أفضل شريحة AI دائماً==.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-11T20:36:00+04:00",
+      "cover": "images/qahwa/week-06-day-40--3-check-story.webp",
       "related_concepts": []
     }
   ]
