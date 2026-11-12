@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-12T07:46:00+04:00",
+  "generated_at": "2026-11-12T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9461,6 +9461,10 @@
           },
           "ar": {
             "title": "الأسبوع القادم: ==الذكاء الاصطناعي في حياتك ومالك=="
+          },
+          "next": {
+            "ar": "الدرس 31: خطّط رحلتك مع المساعد الذكي",
+            "en": "Lesson 31: Plan a trip with an AI assistant"
           }
         }
       ],
@@ -9666,6 +9670,143 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-12T07:46:00+04:00",
       "cover": "images/qahwa/week-06-day-40--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-43--1-learn-lesson-31",
+      "kind": "lesson",
+      "lesson": 31,
+      "code": "L31",
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "Plan a trip with an AI assistant",
+        "ar": "خطّط رحلتك مع المساعد الذكي"
+      },
+      "summary": {
+        "en": "It drafts a day-by-day plan around your dates and interests, and groups nearby places together so you don't lose the day in transit.",
+        "ar": "يكتب لك مسوّدة خطة يوماً بيوم حسب مواعيد رحلتك واهتماماتك، ويجمع الأماكن المتقاربة حتى لا يضيع وقتك في التنقّل."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "خطّط رحلتك ==مع المساعد الذكي==",
+            "body": "خطة يوماً بيوم في دقائق، والتحقّق يبقى عليك."
+          },
+          "en": {
+            "title": "Plan your trip ==with an AI assistant==",
+            "body": "A day-by-day plan in minutes. Verifying stays your job."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما الذي ==يجيده==؟",
+            "body": "يكتب لك مسوّدة خطة يوماً بيوم حسب مواعيد رحلتك واهتماماتك، ويجمع الأماكن المتقاربة حتى لا يضيع وقتك في التنقّل."
+          },
+          "en": {
+            "title": "What it ==does well==",
+            "body": "It drafts a day-by-day plan around your dates and interests, and groups nearby places together so you don't lose the day in transit."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أعطه هذه التفاصيل",
+            "items": [
+              "عدد الأيام وموسم السفر",
+              "من معك: عائلة أم أصدقاء",
+              "ميزانية تقريبية ونوع الإقامة",
+              "ما تحب أن تراه وما تفضّل تجاوزه"
+            ]
+          },
+          "en": {
+            "title": "Give it these details",
+            "items": [
+              "How many days, and the season",
+              "Who is with you: family or friends",
+              "A rough budget and where you'll stay",
+              "What you want to see, and what to skip"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "تحقّق أنت من هذه",
+            "items": [
+              "الأسعار وتوافر الحجز",
+              "أوقات العمل والإجازات الرسمية",
+              "شروط التأشيرة من مصدر رسمي",
+              "المسافات ووسيلة التنقّل"
+            ]
+          },
+          "en": {
+            "title": "You check these yourself",
+            "items": [
+              "Prices and booking availability",
+              "Opening times and public holidays",
+              "Visa rules, from an official source",
+              "Distances and how you will get around"
+            ]
+          },
+          "note": {
+            "ar": "قد يذكر لك معلومة قديمة بثقة تامة.",
+            "en": "It can state an outdated detail with full confidence."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل صديق ==زار المدينة قبلك==",
+            "body": "يقترح عليك مقهى وطريقاً جميلاً، لكنك تتصل بالمقهى بنفسك لتتأكّد أنه يفتح اليوم."
+          },
+          "en": {
+            "title": "Like a friend ==who's been there==",
+            "body": "He suggests a café and a nice route, but you still call the café to check it opens today."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "خطّط رحلة: [الوجهة]، [الأيام والموسم]، [من معي]، [الميزانية]، [اهتماماتي]. خطة يوماً بيوم حسب المناطق، وما أتحقّق منه. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Plan a trip: [destination], [days and season], [who is coming], [budget], [interests]. Day-by-day plan by area, plus what I must check myself. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "إذا حجز المساعد الذكي رحلتي، فلا حاجة لأن أتحقق من شيء.",
+            "fact": "بعض المساعدات تستطيع الحجز اليوم، وغالباً بعد تأكيدك، وتختلف الميزة حسب الخدمة والخطة والدولة. راجع الاسم والتاريخ والسعر وشروط الإلغاء قبل أن تؤكّد."
+          },
+          "en": {
+            "myth": "If an AI assistant books my trip, I do not need to check anything.",
+            "fact": "Some assistants can book today, usually after you confirm, and it varies by service, plan and country. Check the name, date, price and cancellation terms before you confirm."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==رحلتك القادمة=="
+          },
+          "en": {
+            "title": "Save this before ==your next trip=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Plan a trip: [destination], [days and season], [who is coming], [budget], [interests]. Day-by-day plan by area, plus what I must check myself. Answer in my language.",
+        "ar": "خطّط رحلة: [الوجهة]، [الأيام والموسم]، [من معي]، [الميزانية]، [اهتماماتي]. خطة يوماً بيوم حسب المناطق، وما أتحقّق منه. أجب بلغتي.",
+        "code": "L31"
+      },
+      "permalink": "https://www.instagram.com/p/DfoJ0zziFVL/",
+      "published_at": "2026-11-12T08:03:00+04:00",
+      "cover": "images/qahwa/week-07-day-43--1-learn-lesson-31.webp",
       "related_concepts": []
     }
   ]
