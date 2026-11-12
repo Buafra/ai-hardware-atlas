@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-12T08:03:00+04:00",
+  "generated_at": "2026-11-12T13:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9796,6 +9796,10 @@
           },
           "en": {
             "title": "Save this before ==your next trip=="
+          },
+          "next": {
+            "ar": "الدرس 32: أسبوع البيت في نصف ساعة",
+            "en": "Lesson 32: The household week in half an hour"
           }
         }
       ],
@@ -9807,6 +9811,141 @@
       "permalink": "https://www.instagram.com/p/DfoJ0zziFVL/",
       "published_at": "2026-11-12T08:03:00+04:00",
       "cover": "images/qahwa/week-07-day-43--1-learn-lesson-31.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-44--1-learn-lesson-32",
+      "kind": "lesson",
+      "lesson": 32,
+      "code": "L32",
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "The household week in half an hour",
+        "ar": "أسبوع البيت في نصف ساعة"
+      },
+      "summary": {
+        "en": "Tell it how many people you cook for and how much time you have, and it writes a seven-day meal plan plus a shopping list sorted by aisle.",
+        "ar": "تخبره بعدد أفراد الأسرة ووقت الطبخ المتاح، فيكتب لك جدول وجبات لسبعة أيام، وقائمة تسوّق مرتّبة حسب أقسام المتجر."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "أسبوع البيت ==في نصف ساعة==",
+            "body": "وجبات، وقائمة تسوّق، ووقت للأطفال."
+          },
+          "en": {
+            "title": "Your household week ==in half an hour==",
+            "body": "Meals, a shopping list, and time for the kids."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "كيف ==يساعدك==؟",
+            "body": "تخبره بعدد أفراد الأسرة ووقت الطبخ المتاح، فيكتب لك جدول وجبات لسبعة أيام، وقائمة تسوّق مرتّبة حسب أقسام المتجر."
+          },
+          "en": {
+            "title": "How it ==helps==",
+            "body": "Tell it how many people you cook for and how much time you have, and it writes a seven-day meal plan plus a shopping list sorted by aisle."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اطلب منه هذه الثلاثة",
+            "items": [
+              "جدول وجبات لسبعة أيام",
+              "قائمة تسوّق مرتّبة بالأقسام",
+              "أفكار لوقت الأطفال بلا شاشات"
+            ]
+          },
+          "en": {
+            "title": "Ask it for these three",
+            "items": [
+              "A seven-day meal plan",
+              "A shopping list sorted by aisle",
+              "Screen-free ideas for the kids"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "وقل له قيودك",
+            "items": [
+              "الحساسية وما لا تأكلونه",
+              "وقت الطبخ المتاح كل يوم",
+              "ميزانية تسوّق تقريبية",
+              "أعمار الأطفال ووقتهم الحر"
+            ]
+          },
+          "en": {
+            "title": "And tell it your limits",
+            "items": [
+              "Allergies and what you don't eat",
+              "The cooking time you really have",
+              "A rough shopping budget",
+              "The kids' ages and free hours"
+            ]
+          },
+          "note": {
+            "ar": "الحساسية الغذائية مسؤوليتك: اقرأ المكوّنات على العبوة.",
+            "en": "Food allergies are on you: read the ingredients on the package."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "مثل باريستا ==يحفظ طلبك المعتاد==",
+            "body": "تشرح ذوقك مرة واحدة، فيجهّز لك بقية الأسبوع دون أن تعيد الشرح كل صباح."
+          },
+          "en": {
+            "title": "Like a barista ==who remembers your order==",
+            "body": "You explain your taste once, and the rest of the week is ready without repeating yourself each morning."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "خطة وجبات أسبوع لـ[عدد الأفراد]، طبخ [30] دقيقة يومياً، بلا [الحساسية وما نتجنبه]، بميزانية [المبلغ]، وقائمة تسوّق بالأقسام. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Seven-day meal plan for [number of people], [30] min cooking a day, no [allergies and foods we avoid], budget [amount], shopping list by aisle. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "الخطة التي يكتبها جاهزة للتنفيذ كما هي.",
+            "fact": "هي مسوّدة جيدة، لكنها مبنية على ما كتبته فقط، لا على أذواق أسرتكم ولا مواعيدكم ولا ما يتوفر في متجركم. عدّلها قبل أن تعتمدها."
+          },
+          "en": {
+            "myth": "The plan it writes is ready to use exactly as it is.",
+            "fact": "It is a good first draft, but it is built only on what you told it — not your family's real tastes, your schedule, or what your shop stocks. Adjust it before you commit."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==تسوّق نهاية الأسبوع=="
+          },
+          "en": {
+            "title": "Save this before ==the weekend shop=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Seven-day meal plan for [number of people], [30] min cooking a day, no [allergies and foods we avoid], budget [amount], shopping list by aisle. Answer in my language.",
+        "ar": "خطة وجبات أسبوع لـ[عدد الأفراد]، طبخ [30] دقيقة يومياً، بلا [الحساسية وما نتجنبه]، بميزانية [المبلغ]، وقائمة تسوّق بالأقسام. أجب بلغتي.",
+        "code": "L32"
+      },
+      "permalink": "https://www.instagram.com/p/DfosLxMCGZx/",
+      "published_at": "2026-11-12T13:04:00+04:00",
+      "cover": "images/qahwa/week-07-day-44--1-learn-lesson-32.webp",
       "related_concepts": []
     }
   ]
