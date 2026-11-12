@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T03:06:08+00:00",
+ "updated_at": "2026-11-12T18:26:04+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2505,6 +2505,17 @@
    "hf": null,
    "context": 1048576,
    "created": 1794326871,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "google/gemini-4-hydrogen",
+   "name": "Google: Gemini 4 Hydrogen",
+   "hf": null,
+   "context": 1048576,
+   "created": 1794506460,
    "open": false,
    "params_b": null,
    "params_source": null,
