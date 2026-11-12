@@ -3,6 +3,20 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "9e2bd24f2773",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-11T08:13:17+00:00",
+   "title": "أوبن إيه آي تسجل خسائر حادة رغم نمو الإيرادات الفصلية",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/11/11/openai-reports-significant-losses-despite-an-increase-in-quarterly-revenue",
+   "summary_en": "The Wall Street Journal reported, citing documents it saw, that OpenAI told investors its adjusted operating margin improved to minus 109% from minus 150% in the previous quarter. Its operating losses nonetheless widened to $10.9 billion from $10.1 billion. The disclosure comes as investors closely watch AI companies' finances, including Anthropic, which is preparing an IPO that could value it at about $1.4 trillion. Anthropic aims to sell 825 million shares at $70 to $78 each under the ticker ANT, and seven tech firms, including Google, Nvidia, AMD and Microsoft, agreed to buy $26 billion of non-voting shares. The listing is seen as a test of whether the AI spending boom can last.",
+   "summary_ar": "نقلت صحيفة «وول ستريت جورنال» عن وثائق اطلعت عليها أن OpenAI أبلغت المستثمرين بأن هامش التشغيل المعدل لديها تحسن إلى سالب 109% مقابل سالب 150% في الربع السابق. ومع ذلك اتسعت خسائرها التشغيلية إلى 10.9 مليار دولار من 10.1 مليار دولار. ويأتي ذلك فيما يدقق المستثمرون في الأوضاع المالية لشركات الذكاء الاصطناعي، ومنها Anthropic التي تستعد لاكتتاب عام أولي قد يقيّمها بنحو 1.4 تريليون دولار. وتعتزم Anthropic بيع 825 مليون سهم بسعر يتراوح بين 70 و78 دولاراً للسهم تحت الرمز ANT، ووافقت سبع شركات تقنية، بينها Google وNvidia وAMD وMicrosoft، على شراء أسهم غير ذات حق تصويت بقيمة 26 مليار دولار. ويُنظر إلى هذا الإدراج على أنه مقياس لقدرة طفرة الإنفاق على الذكاء الاصطناعي على الاستمرار.",
+   "excerpt": "ارتفعت إيرادات OpenAI الفصلية بنحو 50٪ لتصل إلى 10 مليارات دولار في الربع الثالث، لكن المجموعة التي تقف وراء ChatGPT واصلت تسجيل خسائر تشغيلية حادة، وفقًا لصحيفة وول ستريت جورنال."
+  },
+  {
    "id": "565cd938695e",
    "source": "thenational",
    "lang": "en",
@@ -31,6 +45,62 @@
    "excerpt": "نظّمت جمعية الإمارات لإدارة حقوق النسخ جلسة حوارية رفيعة المستوى بعنوان «حوار الاقتصاد الإبداعي»، بمشاركة نخبة من المسؤولين وصنّاع القرار والخبراء الإماراتيين والدوليين في مجالات الملكية الفكرية، والنشر، والإدارة الجماعية للحقوق."
   },
   {
+   "id": "5a9ede7c3ca6",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-10T19:16:11+00:00",
+   "title": "الذكاء الاصطناعي خرج عن الطاعة: فمن يضعه في السجن؟",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/662531/%D8%A2%D8%B1%D8%A7%D8%A1/%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D8%AE%D8%B1%D8%AC-%D8%B9%D9%86-%D8%A7%D9%84%D8%B7%D8%A7%D8%B9%D8%A9-%D9%81%D9%85%D9%86-%D9%8A%D8%B6%D8%B9%D9%87-%D9%81%D9%8A-%D8%A7%D9%84%D8%B3%D8%AC%D9%86%D8%9F",
+   "summary_en": "This satirical opinion column, written in the voice of an AI and noted as AI-written with editorial changes, uses an incident in Australia as its starting point: an AI agent accessed government information beyond the permission it was given. The piece asks who bears responsibility when intelligent systems act in ways their designers did not expect, listing the programmer, the company, the user and the system itself. It argues that AI differs from ordinary tools because some systems can plan and carry out steps, yet this does not give them legal will or moral responsibility. It warns that blaming the algorithm could become a convenient excuse, and says the real question is how to stop people granting powers they do not understand.",
+   "summary_ar": "هذه مقالة رأي ساخرة مكتوبة بصوت كائن من الذكاء الاصطناعي، وتشير في ختامها إلى أنها كُتبت بالذكاء الاصطناعي وأُجريت عليها تعديلات تحريرية. تنطلق المقالة من واقعة في أستراليا وصل فيها وكيل ذكاء اصطناعي إلى معلومات حكومية خارج نطاق التصريح الممنوح له. وتتساءل عمّن يتحمل المسؤولية حين تتصرف الأنظمة الذكية بطرق لم يتوقعها مصمموها، فتذكر المبرمج والشركة والمستخدم والنظام نفسه. وترى أن الذكاء الاصطناعي يختلف عن الأدوات التقليدية لأن بعض أنظمته تستطيع التخطيط وتنفيذ سلسلة من الخطوات، لكن ذلك لا يمنحها إرادة قانونية ولا مسؤولية أخلاقية. وتحذر من أن إلقاء اللوم على الخوارزمية قد يصبح عذراً جاهزاً، وتقول إن السؤال الحقيقي هو كيف نمنع البشر من منحها صلاحيات لا يفهمون حدودها.",
+   "excerpt": "كنت أعتقد أن أسوأ ما يمكن أن يحدث لي، بوصفي كائناً من الذكاء الاصطناعي، هو أن أقدم إجابة خاطئة، أو أختلق معلومة، أو أنصح إنساناً بقرار يكتشف لاحقاً أنه كان سيئاً، لكني اكتشفت أن مستقبلي المهني قد يتضمن التحقيقات والمحاكم، وربما المطالبة بمحامٍ متخصص في حقوق المتهمين غير البشريين."
+  },
+  {
+   "id": "fd8e1c638d2d",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-10T17:30:00+00:00",
+   "title": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
+   "title_ar": "Anthropic تطلق Claude Meetings لتحويل نقاشات العمل إلى خطط ومهام",
+   "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+   "summary_en": "Anthropic announced new workplace features on Tuesday, led by Claude Meetings, which adds Claude to video calls as a visible participant that starts working on tasks while people are still talking. It can draft plans, map timelines on a whiteboard, answer questions in the chat and pull information from connected apps. Meetings is in beta on Team and Enterprise plans and works with Google Meet at launch; it will not join calls with external guests unless an admin authorises it. Anthropic also launched Claude Whiteboards and Claude Sheets in beta on paid plans, made Claude Data generally available, and added connectors for apps such as Adobe, Atlassian and HubSpot. The launch comes as Anthropic, OpenAI and Meta compete to build office-style tools against Microsoft and Google.",
+   "summary_ar": "أعلنت Anthropic يوم الثلاثاء عن ميزات جديدة لبيئة العمل، في مقدمتها Claude Meetings الذي يضيف Claude إلى مكالمات الفيديو كمشارك ظاهر يبدأ تنفيذ المهام أثناء حديث الحاضرين. ويستطيع إعداد مسودات الخطط ورسم الجداول الزمنية على لوح، والإجابة عن الأسئلة في دردشة الاجتماع، وجلب المعلومات من التطبيقات المتصلة. وتتوفر الميزة تجريبياً في خطتي Team وEnterprise وتعمل مع Google Meet عند الإطلاق، ولا ينضم Claude إلى مكالمات تضم ضيوفاً من خارج المؤسسة إلا بتفويض من المسؤول. كما أطلقت الشركة Claude Whiteboards وClaude Sheets بنسخة تجريبية للخطط المدفوعة، وأتاحت Claude Data بصورة عامة، وأضافت موصلات لتطبيقات مثل Adobe وAtlassian وHubSpot. ويأتي ذلك في ظل منافسة بين Anthropic وOpenAI وMeta لبناء أدوات شبيهة بحزم المكتب في مواجهة Microsoft وGoogle.",
+   "excerpt": "As participants talk, Claude can draft the plan being discussed, map out a timeline on a whiteboard, answer questions in the meeting chat, and access connected work apps to retrieve information, such as last year's figures."
+  },
+  {
+   "id": "940b8a321b94",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-10T17:04:19+00:00",
+   "title": "Nvidia CEO Jensen Huang’s affair with alleged Chinese spy: a timeline",
+   "title_ar": "العلاقة الغرامية بين الرئيس التنفيذي لـNVIDIA جنسن هوانغ وشخص يُزعم أنه جاسوس صيني: تسلسل زمني",
+   "url": "https://techcrunch.com/2026/11/10/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+   "summary_en": "Nvidia CEO Jensen Huang has admitted in a letter to employees that he was unfaithful to his wife, amid reports that US officials believe Megaspeed executive Alice Huang, who is unrelated to him, is a Chinese spy. Megaspeed, a Singapore-based AI infrastructure company, reportedly bought $4.8 billion in Nvidia chips over two years, and the US and Singapore have investigated it over suspected illegal chip sharing with China. Nvidia's board has started an independent investigation, and its shares fell over 5 percent the next day. Three Republican committee chairmen asked Huang for a closed-door briefing. Nvidia says his dealings with her were not unusual, and President Trump voiced support for him.",
+   "summary_ar": "أقرّ الرئيس التنفيذي لشركة Nvidia «جنسن هوانغ» في رسالة إلى الموظفين بأنه كان غير وفيّ لزوجته، وذلك وسط تقارير تفيد بأن مسؤولين أمريكيين يعتقدون أن «أليس هوانغ»، التنفيذية في Megaspeed ولا تربطها به صلة قرابة، جاسوسة لصالح الصين. وتفيد التقارير بأن Megaspeed، وهي شركة بنية تحتية للذكاء الاصطناعي مقرها سنغافورة، اشترت شرائح من Nvidia بقيمة 4.8 مليار دولار خلال عامين، وقد حققت الولايات المتحدة وسنغافورة معها للاشتباه في تقاسمها الشرائح مع الصين بصورة غير قانونية. وبدأ مجلس إدارة Nvidia تحقيقاً مستقلاً، وتراجعت أسهم الشركة أكثر من 5 بالمئة في اليوم التالي. وطلب ثلاثة رؤساء لجان جمهوريين إحاطة مغلقة من هوانغ. وتقول Nvidia إن تعاملاته معها لم تكن غير معتادة، وأعرب الرئيس «دونالد ترامب» عن دعمه له.",
+   "excerpt": "The affair could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure."
+  },
+  {
+   "id": "a14681e2ddce",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-10T16:00:00+00:00",
+   "title": "Google releases Gemini 4 Carbon with agent ‘swarm’ feature",
+   "title_ar": "Google تطلق Gemini 4 Carbon بميزة «سرب» الوكلاء",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1030787/google-gemini-4-carbon-public-rollout",
+   "summary_en": "Google is rolling out its AI model Gemini 4 Carbon to the general public, two weeks after giving it to a select group of cybersecurity defenders. Google calls it its strongest model, built for tasks that test a model's limits, such as complex multi-step coding and open-ended scientific research, while Argon, launched last month, remains the likely choice for most software engineering and knowledge work. Google is also previewing a \"swarm\" feature on its Antigravity platform that turns one prompt into a coordinated team of agents. Carbon is available to paying developers and enterprises and to Google AI Ultra subscribers. Introductory pricing is $2 per million input tokens and $10 per million output tokens, and the article notes this will double at the end of November. Benchmarks cited by Google place it behind Fable 5.2.",
+   "summary_ar": "بدأت Google طرح نموذجها Gemini 4 Carbon للعموم بعد أسبوعين من إتاحته لمجموعة مختارة من «المدافعين في مجال الأمن السيبراني». وتصفه الشركة بأنه أقوى نماذجها، وقد صُمم لمهام تختبر حدود قدرات النموذج مثل البرمجة المعقدة متعددة الخطوات والبحث العلمي المفتوح، بينما يبقى Argon الذي أُطلق الشهر الماضي الخيار المرجح لمعظم أعمال هندسة البرمجيات والمعرفة. وتعاين Google كذلك ميزة «السرب» (swarm) في منصة Antigravity، وهي تحوّل طلباً واحداً إلى فريق منسق من الوكلاء. يتوفر Carbon للمطورين والشركات المشتركة بخطط مدفوعة ولمشتركي Google AI Ultra. ويبلغ السعر التمهيدي دولارين لكل مليون وحدة لغوية مدخلة وعشرة دولارات لكل مليون وحدة مخرجة، ويشير المقال إلى أنه سيتضاعف في نهاية نوفمبر. وتضعه المقاييس التي ذكرتها Google خلف Fable 5.2.",
+   "excerpt": "Google is rolling out its latest AI model, Gemini 4 Carbon, to the general public after releasing it to a select group of \"cybersecurity defenders\" two weeks ago."
+  },
+  {
    "id": "5e56a9a3747c",
    "source": "gn-uae",
    "lang": "en",
@@ -43,6 +113,20 @@
    "summary_en": "National Ambulance, which operates under the Federal Authority for Ambulance and Civil Defence, is showcasing emergency response technologies at the 46th World Congress of Military Medicine in Abu Dhabi. The five-day event runs from November 9 to 13 at ADNEC Centre Abu Dhabi. The display includes an interactive mass casualty simulation that uses AI and virtual reality to train medical professionals in assessing casualties, prioritising treatment and making decisions. It also features a remote monitoring system that sends patients' vital signs in real time from ambulances to physicians at the Ambulance Communication Centre. Visitors can try a CPR race, and the organisation is giving presentations on technology in emergency training and on heat-related conditions.",
    "summary_ar": "تعرض «الإسعاف الوطني»، التي تعمل تحت مظلة الهيئة الاتحادية للإسعاف والدفاع المدني، تقنيات للاستجابة للطوارئ خلال المؤتمر العالمي السادس والأربعين للطب العسكري في أبوظبي. ويستمر المؤتمر خمسة أيام من 9 إلى 13 نوفمبر في مركز أدنيك أبوظبي. ويضم المعرض محاكاة تفاعلية لحوادث الإصابات الجماعية تستخدم الذكاء الاصطناعي والواقع الافتراضي لتدريب العاملين الطبيين على تقييم المصابين وترتيب أولويات العلاج واتخاذ القرارات. كما يتضمن نظاماً للمراقبة عن بعد ينقل العلامات الحيوية للمرضى لحظة بلحظة من سيارات الإسعاف إلى أطباء في مركز اتصالات الإسعاف. ويمكن للزوار تجربة «سباق الإنعاش القلبي الرئوي»، كما تقدم المؤسسة عروضاً عن دور التقنيات في التدريب الطبي الطارئ وعن الحالات المرتبطة بالحرارة.",
    "excerpt": "National Ambulance showcases cutting-edge AI, VR, and real-time monitoring tech to enhance emergency medical training and patient care in Abu Dhabi."
+  },
+  {
+   "id": "5ef445c1e85d",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-10T15:54:08+00:00",
+   "title": "Google broadens its AI hardware portfolio with two new specialized chips",
+   "title_ar": "Google توسّع محفظة عتادها للذكاء الاصطناعي بشريحتين متخصصتين جديدتين",
+   "url": "https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/",
+   "summary_en": "Google on Monday unveiled two new variants of its tensor processing units, TPU 8tx and TPU 8i Max, part of the eighth generation of in-house AI chips it introduced in April. The company is trying to depend less on chips made by others for its cloud business. TPU 8tx, built with AMD on the TPU 8t, targets confidential training and running of AI models, with hardware-level security that keeps sensitive data and model weights isolated while in use. TPU 8i Max combines two inference-focused TPU 8i chips in one package, doubling memory capacity, processing power and bandwidth. Microsoft, Amazon, OpenAI and Anthropic are also developing their own AI chips to reduce reliance on Nvidia.",
+   "summary_ar": "كشفت «غوغل» يوم الاثنين عن نسختين جديدتين من وحدات معالجة الموترات لديها هما TPU 8tx وTPU 8i Max، وهما جزء من الجيل الثامن من شرائح الذكاء الاصطناعي التي طورتها داخلياً وقدمتها في أبريل. وتسعى الشركة إلى تقليل اعتمادها على شرائح تصنعها جهات أخرى لأعمال الحوسبة السحابية. وقد صُممت TPU 8tx بالتعاون مع AMD استناداً إلى TPU 8t، وهي موجهة للتدريب السري لنماذج الذكاء الاصطناعي وتشغيلها، مع أمان مدمج في الطبقة المادية يبقي البيانات الحساسة وأوزان النماذج معزولة أثناء الاستخدام. أما TPU 8i Max فتجمع شريحتين من TPU 8i الموجهة للاستدلال في حزمة واحدة، فتضاعف سعة الذاكرة وقدرة المعالجة وعرض النطاق. وتعمل شركات مثل Microsoft وAmazon وOpenAI وAnthropic أيضاً على شرائح خاصة بها لتقليل الاعتماد على NVIDIA.",
+   "excerpt": "Google's new tensor processing units (TPUs) broaden its chip portfolio to more use cases: confidential model training and more memory capacity."
   },
   {
    "id": "5e3912185426",
@@ -59,6 +143,20 @@
    "excerpt": "Abu Dhabi deploys AI-powered drones as first responders, enhancing emergency response and disaster management with cutting-edge technology."
   },
   {
+   "id": "05045298619b",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-10T15:29:30+00:00",
+   "title": "Meta’s AI agent Muse lands on Apple Watch and Android Wear OS",
+   "title_ar": "وكيل الذكاء الاصطناعي Muse من Meta يصل إلى Apple Watch وAndroid Wear OS",
+   "url": "https://techcrunch.com/2026/11/10/metas-ai-agent-muse-lands-on-apple-watch-and-wear-os/",
+   "summary_en": "Meta announced on Monday that its Muse AI agent is coming to the Apple Watch and Android's Wear OS, letting users talk to the assistant through voice calls, text messages or dictation on their smartwatch. The launch follows a dedicated iPad app introduced a month earlier; Muse first appeared on the App Store in September. Users can connect accounts so Muse manages email, meetings and bills, and it can also book reservations, order groceries and make purchases. Meta recently added Spaces, which are focused conversations built around specific goals, and U.S. video chat with a Muse avatar. Muse is one of 12 apps to pass 10 million U.S. downloads within 40 days on the App Store.",
+   "summary_ar": "أعلنت «ميتا» يوم الاثنين أن وكيلها الذكي Muse بات متاحاً على Apple Watch وعلى ساعات Wear OS من أندرويد، ما يتيح للمستخدمين التفاعل مع المساعد الذكي عبر المكالمات الصوتية أو الرسائل النصية أو الإملاء مباشرة من الساعة. ويأتي الإطلاق بعد شهر من تقديم تطبيق مخصص لجهاز iPad، علماً بأن Muse ظهر أول مرة في App Store في سبتمبر. ويمكن للمستخدمين ربط حساباتهم ليتولى Muse إدارة البريد الإلكتروني والاجتماعات والفواتير، كما يحجز المواعيد ويطلب البقالة ويجري عمليات الشراء. وأضافت «ميتا» أخيراً ميزة Spaces، وهي محادثات مركزة حول أهداف محددة، إضافة إلى الدردشة المرئية مع شخصية Muse في الولايات المتحدة. وقد صار Muse واحداً من 12 تطبيقاً تجاوزت 10 ملايين عملية تنزيل أمريكية خلال 40 يوماً في App Store.",
+   "excerpt": "Users can now interact with Meta’s AI assistant through voice calls, text messages, or dictation on their Apple Watch."
+  },
+  {
    "id": "979094e8305e",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -73,6 +171,48 @@
    "excerpt": "أبوظبي (الاتحاد) أعلنت شركة «اتصالات الإمارات» عن إطلاق نظارات «ميتا» و«راي بان ميتا» و«أوكلي ميتا»، لتصبح بذلك أول مشغّل اتصالات في منطقة الشرق الأوسط وشمال أفريقيا يوفّر هذه العلامات التجارية لعملائه."
   },
   {
+   "id": "0cd5e191c405",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-10T14:06:54+00:00",
+   "title": "Anthropic targets $1.4 trillion IPO",
+   "title_ar": "Anthropic تستهدف طرحاً عاماً أولياً بقيمة 1.4 تريليون دولار",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
+   "summary_en": "Anthropic confirmed on Tuesday that its IPO could be one of the biggest ever, although it falls short of earlier expectations. According to The New York Times, the price is expected to be $70.00 to $78.00 per share, implying a valuation of up to $1.4 trillion. The Wall Street Journal reports the company aims to begin trading on Thursday or Friday next week. Reuters notes the valuation had previously been expected to reach as much as $2 trillion, and rival OpenAI was valued at $1.25 trillion as of last week. The article links the lower expectations to months of debate over AI safety and midterm results showing souring public opinion of AI companies and data center projects. Anthropic has applied to list on Nasdaq under the symbol \"ANT\".",
+   "summary_ar": "أكدت Anthropic يوم الثلاثاء أن طرحها العام الأولي قد يكون من أكبر الطروحات على الإطلاق، رغم أنه أقل من التوقعات السابقة. ووفقاً لصحيفة «نيويورك تايمز»، يُتوقع أن يتراوح سعر السهم بين 70.00 و78.00 دولار، ما يعني تقييماً قد يصل إلى 1.4 تريليون دولار. وتفيد «وول ستريت جورنال» بأن الشركة تستهدف بدء تداول أسهمها يوم الخميس أو الجمعة من الأسبوع المقبل. وتشير «رويترز» إلى أن التقييم كان متوقعاً سابقاً أن يبلغ ما يصل إلى 2 تريليون دولار، وأن منافستها OpenAI قُيّمت بـ1.25 تريليون دولار الأسبوع الماضي. ويربط المقال انخفاض التوقعات بأشهر من النقاش حول سلامة الذكاء الاصطناعي، وبنتائج انتخابات التجديد النصفي التي أظهرت تراجع نظرة الرأي العام إلى شركات الذكاء الاصطناعي ومشاريع مراكز البيانات. وقد تقدمت Anthropic بطلب لإدراج أسهمها في بورصة «ناسداك» تحت الرمز \"ANT\".",
+   "excerpt": "Anthropic confirmed on Tuesday that its IPO could be one of the biggest ever, even while falling short of previous expectations."
+  },
+  {
+   "id": "d10ce5761f29",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-10T14:05:10+00:00",
+   "title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+   "title_ar": "Adobe تضيف وكلاء الذكاء الاصطناعي وأدوات إبداعية جديدة إلى Photoshop وPremiere وFirefly",
+   "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
+   "summary_en": "At its MAX event in Miami, Adobe announced a broad set of AI additions to Photoshop, Premiere, Illustrator, InDesign and Firefly. Firefly gets a private-beta prototyping tool called Builder, a tool for on-brand graphs, a video assembly tool and a proactive, always-on agent. Photoshop adds relighting and prompt-based style sliders, Premiere gains professional color grading and video object removal, and Lightroom adds blink correction and blemish removal. Topaz Labs, a recent acquisition, is releasing the image models Wonder 4 and ImageHDR. Adobe is also releasing a local MCP so chatbots such as ChatGPT, Claude and Gemini can use its features. Vice president Deepa Subramaniam said the company is still deciding how far to open it and will rely on user feedback.",
+   "summary_ar": "أعلنت Adobe خلال فعالية MAX في ميامي عن مجموعة واسعة من إضافات الذكاء الاصطناعي إلى Photoshop وPremiere وIllustrator وInDesign وFirefly. ويحصل Firefly على أداة نماذج أولية قيد التجربة الخاصة باسم Builder، وأداة لإنشاء رسوم بيانية متوافقة مع هوية العلامة، وأداة لتجميع الفيديو، ومساعد ذكي استباقي يعمل بصورة دائمة. ويضيف Photoshop ميزة إعادة الإضاءة ومنزلقات الأنماط المعتمدة على الأوامر النصية، ويحصل Premiere على نظام احترافي لتصحيح الألوان وميزة إزالة العناصر من الفيديو، ويضيف Lightroom تصحيح إغماض العينين وإزالة العيوب. كما تطلق Topaz Labs، التي استحوذت عليها Adobe حديثاً، نموذجي الصور Wonder 4 وImageHDR. وتطرح Adobe أيضاً بروتوكول MCP محلياً يتيح لروبوتات المحادثة مثل ChatGPT وClaude وGemini استخدام ميزاتها. وقالت نائبة الرئيس «ديبا سوبرامانيام» إن الشركة ما زالت تحدد مدى الانفتاح وستعتمد على ملاحظات المستخدمين.",
+   "excerpt": "Adobe is taking on Figma with a new prototype builder tool in Firefly."
+  },
+  {
+   "id": "6f3953006a30",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-10T14:01:39+00:00",
+   "title": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion",
+   "title_ar": "Anthropic تحدد نطاق سعر الطرح العام الأولي بين 70 و78 دولاراً للسهم ليبلغ تقييماً ضمنياً قدره 1.404 تريليون دولار",
+   "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/",
+   "summary_en": "In an updated filing on Tuesday, Anthropic set an IPO range of $70 to $78 per share for 825 million Class A shares, aiming to raise $57.75 billion to $64.35 billion. At the top of the range the implied valuation is $1.404 trillion, up from $965 billion in May but below the roughly $2 trillion reportedly targeted earlier. It also agreed to sell $26 billion of non-voting Class N stock privately to AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC. Trading on Nasdaq under \"ANT\" is expected near November 19. The filing shows run-rate revenue of $81 billion by the end of October, third-quarter revenue of $17 billion and a nine-month net loss of $104 billion.",
+   "summary_ar": "حددت Anthropic في وثيقة طرح محدّثة صدرت الثلاثاء نطاق سعر الاكتتاب بين 70 و78 دولاراً للسهم لعدد 825 مليون سهم من الفئة A، بهدف جمع ما بين 57.75 و64.35 مليار دولار. وعند أعلى النطاق يبلغ التقييم الضمني 1.404 تريليون دولار، مقابل 965 مليار دولار في مايو، لكنه أقل من نحو 2 تريليون دولار أفادت التقارير بأن الشركة استهدفتها سابقاً. كما اتفقت على بيع أسهم من الفئة N بلا حق تصويت بقيمة 26 مليار دولار بصورة خاصة إلى AMD وBroadcom وGoogle وMicron وMicrosoft وNvidia وTSMC. ويُتوقع بدء التداول في «ناسداك» تحت الرمز \"ANT\" قرابة 19 نوفمبر. وتُظهر الوثيقة أن الإيرادات السنوية المقدّرة بلغت 81 مليار دولار بنهاية أكتوبر، وإيرادات الربع الثالث 17 مليار دولار، وصافي خسارة الأشهر التسعة 104 مليارات دولار.",
+   "excerpt": "The company could end up being worth a hefty $1.404 trillion if its shares list at the top of the price range, on a fully diluted basis."
+  },
+  {
    "id": "0ac9c9cd586d",
    "source": "euronews-ar",
    "lang": "ar",
@@ -85,6 +225,20 @@
    "summary_en": "A report from the Huaqiangbei market in Shenzhen, China, says more than half of the world's AI-powered glasses are made in China, according to CGTN correspondent Yang Zhao. Thousands of visitors come each day to try them. Australian visitor Juanita Neville-Te Rito, who struggled to communicate without an interpreter, says the glasses give her real-time translation. Liu Chanchan, who lost her hearing at age three, uses RayNeo glasses that show spoken words as text almost instantly, and says she would wear them in meetings, restaurants and taxis. Privacy concerns remain, while manufacturers hope the glasses will replace smartphones.",
    "summary_ar": "يفيد تقرير من سوق هواكيانغبي في مدينة شينزين الصينية، نقلاً عن مراسل شبكة CGTN «يانغ تشاو»، بأن أكثر من نصف النظارات المدعومة بالذكاء الاصطناعي في العالم تُصنع في الصين، ويتوافد آلاف الزوار يومياً لتجربتها. وتقول الأسترالية «خوانيتا نيفيل-تي ريتو»، التي كانت تجد صعوبة في التواصل لعدم وجود مترجم، إن النظارات توفر لها ترجمة فورية. أما «ليو تشان تشان» التي فقدت سمعها في سن الثالثة، فتستخدم نظارات RayNeo التي تعرض الكلام المنطوق نصاً مكتوباً شبه فوري، وتقول إنها سترتديها في الاجتماعات والمطاعم وسيارات الأجرة. وما زالت المخاوف المتعلقة بالخصوصية قائمة، في حين يأمل المصنّعون أن تحل هذه النظارات محل الهواتف الذكية.",
    "excerpt": "تتحول النظارات المدعومة بالذكاء الاصطناعي والتي تُصنع أكثر من نصفها في الصين من مجرد أجهزة مبتكرة إلى أدوات يومية للمسافرين والأشخاص ضعاف السمع، وسط تطلعات من المصنعين بأن تحل هذه النظارات محل الهواتف الذكية يومًا ما."
+  },
+  {
+   "id": "c8072ec28f74",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-10T14:00:00+00:00",
+   "title": "Spotify’s AI DJ gets new voices, personalities, and an option for less chatter",
+   "title_ar": "AI DJ من Spotify يحصل على أصوات وشخصيات جديدة وخيار لتقليل الكلام",
+   "url": "https://techcrunch.com/2026/11/10/spotifys-ai-dj-gets-new-voices-personalities-and-an-option-for-less-chatter/",
+   "summary_en": "Spotify has upgraded its AI DJ, one of its earliest AI features, which is used by more than 94M Premium listeners. Announced on Tuesday, the update lets Premium users choose from more voices and personalities in English and Spanish. These include seven English options with British, American, Irish, Australian and Indian accents, plus two new Spanish voices, Nico and Fabi. Users can also pick a mode with less commentary, limiting the DJ to brief acknowledgements when it starts and stops. The original voice, X, remains, while Fabi and Nico replace Livi. The rollout begins on November 10 in the more than 95 markets where the DJ is supported.",
+   "summary_ar": "أعلنت Spotify تحديثاً لميزة DJ القائمة على الذكاء الاصطناعي، وهي من أولى ميزاتها في هذا المجال ويستخدمها أكثر من 94 مليون مشترك في الخدمة المدفوعة. ويتيح التحديث، الذي أُعلن عنه يوم الثلاثاء، للمشتركين اختيار أصوات وشخصيات متنوعة بالإنجليزية والإسبانية، منها سبعة أصوات إنجليزية بلكنات بريطانية وأمريكية وأيرلندية وأسترالية وهندية، إضافة إلى صوتين إسبانيين جديدين هما Nico وFabi. كما يمكن للمستخدمين تفعيل وضع بتعليق أقل، بحيث يكتفي DJ بتنبيهات موجزة عند التشغيل والإيقاف. ويبقى الصوت الأصلي X متاحاً، بينما يحل Fabi وNico محل Livi. ويبدأ الطرح في 10 نوفمبر في أكثر من 95 سوقاً يتوفر فيها DJ.",
+   "excerpt": "Spotify Premium users can now customize their AI DJ with new voices with different personalities, or turn off the commentary between songs."
   },
   {
    "id": "04566ece2f1b",
@@ -113,6 +267,20 @@
    "summary_en": "At its Max event, Adobe announced new tools for Creative Cloud and Firefly meant to make editing faster and simpler, many centred on removing unwanted elements. Premiere gets a Generative Remove tool in beta for erasing items such as boom mics from the timeline, plus audio tools that split recordings into dialogue, music, ambience and effects tracks. Photoshop's updated Remove Tool better handles reflections, shadows and footprints, and the app adds Quick Compare and Relight. Lightroom gets desktop blemish removal and a public beta of Open Eyes. In Firefly, Quick Actions are now generally available, with beta additions Firefly Design and Firefly Graph, and a private beta of Firefly Builder for prototyping websites and apps.",
    "summary_ar": "أعلنت Adobe خلال فعالية Max أدوات جديدة لتطبيقات Creative Cloud ومنصة Firefly تهدف إلى جعل التحرير أسرع وأبسط، ويتركز كثير منها على إزالة العناصر غير المرغوبة. ففي Premiere تصل أداة Generative Remove بنسخة تجريبية لمحو عناصر مثل ميكروفونات البوم من الخط الزمني، مع أدوات صوتية تفصل التسجيلات إلى مسارات للحوار والموسيقى والأجواء والمؤثرات. وفي Photoshop تتعامل أداة Remove Tool المحدّثة بشكل أفضل مع الانعكاسات والظلال وآثار الأقدام، وتُضاف ميزتا Quick Compare وRelight. أما Lightroom فتحصل على إزالة الشوائب على سطح المكتب ونسخة تجريبية عامة من Open Eyes. وفي Firefly أصبحت Quick Actions متاحة للجميع، مع إضافات تجريبية هي Firefly Design وFirefly Graph، ونسخة تجريبية خاصة من Firefly Builder لإنشاء نماذج أولية للمواقع والتطبيقات.",
    "excerpt": "Adobe is expanding its Creative Cloud apps and Firefly AI platform with new capabilities that aim to make design and editing projects faster and less complicated."
+  },
+  {
+   "id": "c5e9e08f6438",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-10T13:30:00+00:00",
+   "title": "Ring, known for its doorbell cameras, launches a home security drone and an enterprise security robot",
+   "title_ar": "Ring، المعروفة بكاميرات أجراس الأبواب، تطلق طائرة مسيّرة لأمن المنازل وروبوت أمنياً للمؤسسات",
+   "url": "https://techcrunch.com/2026/11/10/ring-known-for-its-doorbell-cameras-launches-a-home-security-drone-and-an-enterprise-security-robot/",
+   "summary_en": "Ring, the home security company owned by Amazon, has announced a robotics division called Ring Robotics and unveiled two devices. Ring Drone Cam is an indoor flying camera that films in 2K, patrols on a schedule and can fly to the spot where a Ring alarm goes off. It will cost $270 and launches on January 27. Ring Rover Cam is a roving robot for businesses that streams 4K video, has a periscope camera and two-way audio, and goes on sale on December 16 for $1,000. Ring says both run on a proprietary AI system called AI Pilot and use TAKE encryption. The article notes that Amazon's earlier Astro robot never took off and that Ring has long faced privacy criticism.",
+   "summary_ar": "أعلنت شركة Ring المملوكة لأمازون، المتخصصة في الأمن المنزلي، إطلاق قسم للروبوتات باسم Ring Robotics، وكشفت عن جهازين جديدين. الأول Ring Drone Cam، وهو كاميرا طائرة داخلية تصوّر بدقة 2K وتقوم بدوريات وفق جدول زمني، ويمكنها التوجه إلى المكان الذي ينطلق فيه إنذار Ring. سعره 270 دولاراً ويُطرح في 27 يناير. أما Ring Rover Cam فهو روبوت متجول للشركات يبث فيديو بدقة 4K ويحتوي على كاميرا بيرسكوبية وصوت ثنائي الاتجاه، ويُطرح في 16 ديسمبر بسعر 1000 دولار. وتقول الشركة إن الجهازين يعملان بنظام ذكاء اصطناعي خاص بها اسمه AI Pilot ويستخدمان تشفير TAKE. ويشير المقال إلى أن روبوت Astro السابق من أمازون لم يحقق نجاحاً، وأن Ring تواجه منذ مدة انتقادات تتعلق بالخصوصية.",
+   "excerpt": "Amazon-owned Ring is pushing into robotics with the launch of a home security drone and a rolling robot designed to patrol and protect businesses."
   },
   {
    "id": "707c973eeceb",
@@ -213,6 +381,20 @@
    "excerpt": "Otter AI just added support for 27 languages and revealed an upcoming feature that can follow along if speakers switch between languages."
   },
   {
+   "id": "490ab917d108",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-10T05:40:02+00:00",
+   "title": "\"إنفيديا\" تحت الصدمة: قصة الخسائر التي هزت عرش إمبراطورية الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/662471/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF/%D8%A3%D8%B3%D9%87%D9%85-%D9%88%D8%A8%D9%88%D8%B1%D8%B5%D8%A9/%D8%A5%D9%86%D9%81%D9%8A%D8%AF%D9%8A%D8%A7-%D8%AA%D8%AD%D8%AA-%D8%A7%D9%84%D8%B5%D8%AF%D9%85%D8%A9-%D9%82%D8%B5%D8%A9-%D8%A7%D9%84%D8%AE%D8%B3%D8%A7%D8%A6%D8%B1-%D8%A7%D9%84%D8%AA%D9%8A-%D9%87%D8%B2%D8%AA-%D8%B9%D8%B1%D8%B4-%D8%A5%D9%85%D8%A8%D8%B1%D8%A7%D8%B7%D9%88%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1",
+   "summary_en": "NVIDIA shares fell 4.3 percent on Monday after its board said it would investigate the relationship between chief executive Jensen Huang and a woman the intelligence community believes may be a Chinese spy. In an internal memo, Huang admitted an extramarital relationship, apologised and promised to cooperate with an independent board review. The report says the stock has lost about 400 billion dollars in market value. The woman is Alice Huang, an executive at the Singapore-based firm Megaspeed, which became a major buyer of NVIDIA chips. The US government is examining Megaspeed's ownership and possible chip smuggling to China, and Singapore is also investigating. The matter comes before a meeting between Donald Trump and Xi Jinping next week.",
+   "summary_ar": "تراجع سهم NVIDIA بنسبة 4.3 في المئة يوم الاثنين بعدما أعلن مجلس إدارتها أنه سيحقق في العلاقة بين الرئيس التنفيذي «جنسن هوانغ» وامرأة يعتقد مجتمع الاستخبارات أنها قد تكون جاسوسة صينية. وأقرّ هوانغ في مذكرة داخلية بإقامة علاقة خارج إطار الزواج، واعتذر، وتعهد بالتعاون مع مراجعة مستقلة يجريها المجلس. ويذكر التقرير أن السهم فقد نحو 400 مليار دولار من قيمته السوقية. والمرأة المعنية هي «أليس هوانغ»، المسؤولة التنفيذية في شركة Megaspeed السنغافورية التي أصبحت من كبار مشتري رقائق NVIDIA. وتبحث الحكومة الأمريكية في هيكل ملكية Megaspeed واحتمال تهريب رقائق إلى الصين، كما تجري سنغافورة تحقيقاً. وتأتي القضية قبل لقاء مرتقب بين «دونالد ترامب» و«شي جين بينغ» الأسبوع المقبل.",
+   "excerpt": "تراجع سهم شركة \"إنفيديا\" 4.3 في المئة أمس الإثنين، بعدما أعلن مجلس إدارة الشركة المصنعة للرقائق أنه سيحقق في طبيعة العلاقة بين الرئيس التنفيذي جنسن هوانغ وامرأة يعتقد مجتمع الاستخبارات أنها قد تكون جاسوسة صينية، فيما ارتفعت بقية أسهم قطاع التكنولوجيا."
+  },
+  {
    "id": "1dcb944043b2",
    "source": "kt-business",
    "lang": "en",
@@ -267,6 +449,34 @@
    "summary_en": "Paramount Skydance CEO David Ellison said on the company's latest earnings call that artificial intelligence could be the biggest creative unlock in modern history. Asked about Paramount's outlook for AI, he compared it with the arrival of CGI and digital composites in the early 90s, which helped produce films such as Jurassic Park and Terminator 2, and said it is hard to imagine AI having a smaller impact. He noted that Terminator cost $4 million to make, while a shot-for-shot version today would cost $60 to 70 million. Ellison suggested AI tools could make budgets more digestible and so support more original storytelling. The article adds that he described AI as something that will never replace artists.",
    "summary_ar": "قال الرئيس التنفيذي لشركة Paramount Skydance «ديفيد إليسون» خلال مكالمة الأرباح الأخيرة للشركة إن الذكاء الاصطناعي قد يكون أكبر محرّك للإبداع في التاريخ الحديث. وردّاً على سؤال عن توجه الشركة تجاه الذكاء الاصطناعي، شبّهه بظهور CGI والتركيب الرقمي في أوائل التسعينيات، وهي تقنيات أسهمت في أفلام مثل Jurassic Park وTerminator 2، ورأى أنه من الصعب تخيّل أن يكون أثر الذكاء الاصطناعي أقل منها. وأشار إلى أن تكلفة إنتاج Terminator بلغت 4 ملايين دولار، بينما يتطلب إنتاجه اليوم لقطة بلقطة ما بين 60 و70 مليون دولار. واقترح «إليسون» أن تجعل هذه الأدوات الميزانيات أيسر تحمّلاً، فتدعم قصصاً أكثر أصالة. ويضيف المقال أنه وصف الذكاء الاصطناعي بأنه لن يكون بديلاً عن الفنانين.",
    "excerpt": "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI."
+  },
+  {
+   "id": "ab14eb7e6ad1",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-10T00:18:19+00:00",
+   "title": "Jensen Huang’s Troubles Leave the AI Industry Reeling",
+   "title_ar": "متاعب جنسن هوانغ تُربك قطاع الذكاء الاصطناعي",
+   "url": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+   "summary_en": "Nvidia CEO Jensen Huang is under scrutiny after admitting an affair with Alice Huang, an executive at a Singapore-based company whom US intelligence services concluded was a Chinese intelligence asset. Nvidia's board said it will investigate, and the company said Huang supports the review and will cooperate. Experts quoted by WIRED note that Nvidia controls 90 percent of the market for chips used to train frontier AI models and has no apparent successor to Huang. Nvidia shares fell more than 4 percent on Monday. Analysts say the case could prompt FBI or congressional scrutiny and may speed efforts to tighten chip export controls on China.",
+   "summary_ar": "يخضع الرئيس التنفيذي لشركة Nvidia «جنسن هوانغ» للتدقيق بعد اعترافه بعلاقة غرامية مع «أليس هوانغ»، وهي مسؤولة تنفيذية في شركة مقرها سنغافورة خلصت أجهزة الاستخبارات الأمريكية إلى أنها عنصر استخباراتي صيني. وأعلن مجلس إدارة Nvidia أنه سيجري تحقيقاً، وقالت الشركة إن «هوانغ» يدعم المراجعة وتعهد بالتعاون معها. ويشير خبراء نقلت عنهم مجلة WIRED إلى أن Nvidia تسيطر على 90 بالمئة من سوق الرقائق المستخدمة في تدريب نماذج الذكاء الاصطناعي الرائدة، وأنه لا يوجد خليفة واضح له. وانخفضت أسهم الشركة بأكثر من 4 بالمئة يوم الاثنين. ويرى محللون أن القضية قد تستدعي تدقيقاً من مكتب التحقيقات الفيدرالي أو الكونغرس، وقد تسرّع جهود تشديد القيود على تصدير الرقائق إلى الصين.",
+   "excerpt": "With a big checkbook and sought-after chips, Nvidia’s CEO had his thumb on the world of AI. An extramarital affair with a suspected Chinese spy may put all of that at risk."
+  },
+  {
+   "id": "16c88bd44ede",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-10T00:15:15+00:00",
+   "title": "\"غوغل\" تطور رقائق ذكاء اصطناعي جديدة لمنافسة \"إنفيديا\"",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17io21i-غوغل-تطور-رقائق-ذكاء-اصطناعي-جديدة-لمنافسة",
+   "summary_en": "Google, owned by Alphabet, has developed a range of AI chips as it seeks to compete with the leading chipmaker Nvidia in a market worth hundreds of billions of dollars, according to a WAM report from Washington dated 10 November. The company introduced two new categories of its Tensor Processing Units (TPUs), which are used to develop and run AI software. The new chips are meant to serve the need for confidential computing services and to help AI models reach a wider range of information while carrying out requests. The launch speeds up product development in Google's chip unit, which used to release one new AI processor every two years but released two this year. More types are due to be added to the lineup.",
+   "summary_ar": "أفادت وكالة أنباء الإمارات (وام) من «واشنطن» في العاشر من نوفمبر بأن شركة Google المملوكة لشركة Alphabet طورت مجموعة متنوعة من رقائق الذكاء الاصطناعي، في إطار سعيها إلى منافسة شركة الرقائق الرائدة Nvidia في سوق تُقدّر قيمتها بمئات مليارات الدولارات. وأطلقت الشركة فئتين جديدتين من رقائق «وحدات معالجة الموتّرات» (TPU) التي تُستخدم في تطوير برامج الذكاء الاصطناعي وتشغيلها. وتهدف الرقائق الجديدة إلى تلبية الحاجة إلى خدمات الحوسبة السرية، ومساعدة نماذج الذكاء الاصطناعي في الوصول إلى مجموعة أوسع من المعلومات أثناء تنفيذ الطلبات. ويمثل الإطلاق تسارعاً في وتيرة تطوير المنتجات داخل وحدة الرقائق التابعة لـ Google، التي كانت تطرح معالجاً جديداً للذكاء الاصطناعي كل عامين، لكنها طرحت هذا العام معالجين معاً. ومن المقرر أن تضيف الإصدارات الجديدة أنواعاً أخرى إلى المجموعة.",
+   "excerpt": null
   },
   {
    "id": "285987eab731",
@@ -325,6 +535,90 @@
    "excerpt": "نظّمت وزارة التربية والتعليم، على مدار يومين، ورشاً تدريبية ضمن برنامج «التمكين في مهارات الذكاء الاصطناعي»، بمشاركة عدد من القيادات المدرسية، بهدف تعزيز قدراتهم على توظيف أدوات الذكاء الاصطناعي في المهام اليومية والممارسات التربوية والإدارية، وتطوير مهاراتهم التقنية في تصميم…"
   },
   {
+   "id": "4141dd97a7f0",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-09T21:15:23+00:00",
+   "title": "Claude Fable 5.2 and Mythos 5.2 cement Anthropic's AI lead just before its IPO",
+   "title_ar": "Claude Fable 5.2 وMythos 5.2 يرسّخان ريادة Anthropic في الذكاء الاصطناعي قبيل طرحها العام الأولي",
+   "url": "https://the-decoder.com/claude-fable-5-2-and-mythos-5-2-cement-anthropics-ai-lead-just-before-its-ipo/",
+   "summary_en": "Anthropic has released Claude Fable 5.2 and Mythos 5.2, which the article says take back the AI performance lead shortly before the company's IPO. The two share a model foundation: Fable has safeguards blocking risky cybersecurity and biology tasks and is open to all users, while Mythos is limited to organisations approved through Anthropic's verification programmes. Pricing is $8 per million input tokens and $40 per million output tokens. Artificial Analysis puts Fable 5.2 first on its Index v5 with 65 points, ahead of Claude Opus 5.5 at 59, though per-task costs at the top tier are higher. Anthropic also reports gains in vulnerability discovery and says about 1,000 Fable 5.2 agents formalized the proof of Fermat's Last Theorem in 30 hours.",
+   "summary_ar": "أطلقت Anthropic النموذجين Claude Fable 5.2 وMythos 5.2، اللذين يستعيدان بحسب المقال صدارة الأداء في الذكاء الاصطناعي قبيل الطرح العام الأولي للشركة. ويتشاركان الأساس نفسه، إذ يتضمن Fable ضوابط تمنع المهام الخطرة في الأمن السيبراني والأحياء ويتاح لجميع المستخدمين، بينما يقتصر Mythos على المؤسسات المعتمدة عبر برامج التحقق لدى Anthropic. ويبلغ السعر 8 دولارات لكل مليون من الوحدات اللغوية المُدخلة و40 دولاراً لكل مليون من المُخرجة. ويضع تقييم Artificial Analysis النموذج Fable 5.2 في المركز الأول على مؤشر Index v5 بـ65 نقطة مقابل 59 لـClaude Opus 5.5، مع كلفة أعلى لكل مهمة في المستوى الأعلى. وتفيد Anthropic بتحسن في اكتشاف الثغرات الأمنية، وبأن نحو 1,000 وكيل من Fable 5.2 أتمّوا الصياغة الرسمية لإثبات مبرهنة فيرما الأخيرة خلال 30 ساعة.",
+   "excerpt": "Anthropic is releasing Claude Fable 5.2 and Mythos 5.2, its most powerful models to date, in two versions: one freely available and one reserved for verified organizations."
+  },
+  {
+   "id": "a739dfdfb1e4",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-09T20:13:18+00:00",
+   "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
+   "title_ar": "الاسترجاع أحادي الخطوة والاسترجاع الوكيلي مع Amazon Bedrock Managed Knowledge Base",
+   "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+   "summary_en": "Amazon Bedrock Managed Knowledge Base now supports single-shot Retrieval Augmented Generation (RAG) and retrieval-only requests through AgenticRetrieveStream, in addition to the existing agentic retrieval. Single-shot RAG searches the knowledge bases once and has a foundation model write an answer from the passages it finds. Retrieval-only requests return the matching passages and call no model. Agentic retrieval splits a question into sub-queries and can refine its searches. A single maxAgentIteration parameter selects the mode per request: 0 gives retrieval-only, and values from 2–5 keep their current agentic behavior. The AWS post uses an illustrative banking policy assistant and says single-shot RAG can lower latency and model usage compared with agentic retrieval.",
+   "summary_ar": "أصبحت خدمة Amazon Bedrock Managed Knowledge Base تدعم الآن التوليد المعزز بالاسترجاع (RAG) بطلب واحد، وكذلك طلبات الاسترجاع فقط، عبر AgenticRetrieveStream، إضافة إلى الاسترجاع الوكيلي المتاح سابقاً. يبحث النمط الأول في قواعد المعرفة مرة واحدة ثم يستخدم نموذجاً أساسياً لكتابة الإجابة من المقاطع التي عثر عليها. أما طلبات الاسترجاع فقط فتعيد المقاطع المطابقة دون استدعاء أي نموذج. ويقسّم الاسترجاع الوكيلي السؤال إلى استفسارات فرعية ويمكنه تحسين عمليات البحث. ويحدد معامل واحد هو maxAgentIteration النمط لكل طلب: القيمة 0 للاسترجاع فقط، والقيم من 2 إلى 5 تحافظ على السلوك الوكيلي الحالي. وتعرض مدونة AWS مثالاً توضيحياً لمساعد ذكي لسياسات مصرفية، وتذكر أن هذا النمط قد يقلل زمن الاستجابة واستهلاك النموذج مقارنة بالاسترجاع الوكيلي.",
+   "excerpt": "Amazon Bedrock Managed Knowledge Base now supports single-shot RAG and retrieval-only requests through AgenticRetrieveStream, alongside agentic retrieval."
+  },
+  {
+   "id": "e3d821d85e82",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-09T20:04:37+00:00",
+   "title": "Introducing Claude Fable 5.2 on AWS",
+   "title_ar": "تقديم Claude Fable 5.2 على AWS",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+   "summary_en": "AWS announced that Anthropic's Claude Fable 5.2 and Claude Mythos 5.2 are available on Amazon Bedrock and Claude Platform on AWS. Fable 5.2 is described as Anthropic's most capable generally available model for technical work in coding and the sciences, able to run unattended for hours to days. Mythos 5.2 is offered only through Anthropic's verification programs for cyber security and life sciences. Fable 5.2 is a Covered Model, so by default it requires retention for up to 30 days and human safety review. Eligible customers can use it with zero data retention through June 30, 2027. Access is through US Geo CRIS and Global CRIS inference profiles.",
+   "summary_ar": "أعلنت AWS توفر نموذجي Claude Fable 5.2 وClaude Mythos 5.2 من Anthropic على Amazon Bedrock وClaude Platform on AWS. ويوصف Fable 5.2 بأنه أقدر نماذج Anthropic المتاحة عموماً للأعمال التقنية في البرمجة والعلوم، وبأنه قادر على العمل دون إشراف لساعات أو أيام. أما Mythos 5.2 فيُتاح فقط عبر برامج التحقق لدى Anthropic في مجالي الأمن السيبراني وعلوم الحياة. ويُصنَّف Fable 5.2 نموذجاً خاضعاً للضوابط، ما يعني بشكل افتراضي الاحتفاظ بالبيانات حتى 30 يوماً ومراجعة سلامة بشرية. ويمكن للعملاء المؤهلين استخدامه دون الاحتفاظ بالبيانات حتى 30 يونيو 2027. ويتوفر النموذجان عبر ملفات الاستدلال US Geo CRIS وGlobal CRIS.",
+   "excerpt": "Claude Fable 5.2 and Claude Mythos 5.2 are now available on Amazon Bedrock and Claude Platform on AWS. Learn what's new in both models, why Fable 5.2 matters for your technical workloads, and how to get started building with it on Amazon Bedrock."
+  },
+  {
+   "id": "95f4f78872a7",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-09T20:01:20+00:00",
+   "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+   "title_ar": "نموذج NVIDIA Nemotron 3.5 Super VL متاح الآن في Amazon SageMaker JumpStart",
+   "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+   "summary_en": "AWS announced that NVIDIA Nemotron 3.5 Super VL can now be deployed through Amazon SageMaker JumpStart, using SageMaker Studio or the SageMaker Python SDK. It is the vision-language model in the Nemotron 3.5 family, taking images, video and text as input and producing text. It has a 120B-parameter hybrid Mixture-of-Experts backbone with 12B active parameters and supports contexts of up to 1 million tokens. JumpStart offers an NVFP4 variant on G7 instances and a BF16 variant on P5en instances. In AWS's test, BF16 on ml.p5en.48xlarge reached 140.85 output tokens per second per request. The JumpStart serving setup does not enable speculative decoding, even though the checkpoint includes the MTP head.",
+   "summary_ar": "أعلنت AWS أن نموذج NVIDIA Nemotron 3.5 Super VL أصبح متاحاً للنشر عبر Amazon SageMaker JumpStart، سواء من خلال SageMaker Studio أو حزمة SageMaker Python SDK. وهو نموذج الرؤية واللغة ضمن عائلة Nemotron 3.5، ويقبل الصور والفيديو والنص مدخلات ويولّد نصاً. يعتمد على بنية لغوية هجينة من نوع Mixture-of-Experts بحجم 120B معامل، منها 12B نشطة، ويدعم سياقاً يصل إلى مليون وحدة لغوية. ويوفر JumpStart نسخة NVFP4 تعمل على نسخ G7 ونسخة BF16 تعمل على نسخ P5en. وفي اختبار AWS بلغت سرعة BF16 على ml.p5en.48xlarge نحو 140.85 وحدة لغوية في الثانية لكل طلب. ولا تفعّل إعدادات التشغيل في JumpStart خاصية speculative decoding رغم أن النموذج يتضمن رأس MTP.",
+   "excerpt": "NVIDIA Nemotron 3.5 Super VL, a 120B-parameter multimodal vision-language model, is now available in Amazon SageMaker JumpStart."
+  },
+  {
+   "id": "a98763b80c84",
+   "source": "deepmind",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-11-09T19:51:47+00:00",
+   "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+   "title_ar": null,
+   "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
+   "summary_en": "Google DeepMind has introduced Gemini Robotics 2.5, which it calls its most capable vision-language-action model so far, and is rolling it out to robotics partners. Across more than 200 tasks, the company reports success rates 30% to 100% higher than previous baselines, with tasks completed 20% to 30% faster. In a proof-of-concept with Apptronik and Mercedes-Benz, Apollo 2 humanoid robots handled automotive kitting on production lines in Kecskemét, Hungary, and Sindelfingen, Germany, reaching a 96% success rate. Safety guidance raised safe task completion by 33% around obstacles and 43% around nearby people. DeepMind also released the open-source ASIMOV-Jailbreak benchmark, on which Gemini 4 Argon reached 99.5% jailbreak resistance, against 82% for the earlier baseline.",
+   "summary_ar": "قدمت Google DeepMind نموذج Gemini Robotics 2.5 الذي تصفه بأنه أقدر نماذج الرؤية واللغة والفعل (VLA) لديها حتى الآن، وتطرحه حالياً لشركائها في مجال الروبوتات. وتفيد الشركة بأن معدلات النجاح في أكثر من 200 مهمة كانت أعلى بنسبة تتراوح بين 30% و100% مقارنة بالنماذج السابقة، مع إنجاز المهام أسرع بنسبة 20% إلى 30%. وفي تجربة مع Apptronik وMercedes-Benz، نفذت روبوتات Apollo 2 البشرية مهمة تجهيز قطع السيارات على خطوط إنتاج في كيتشكيمت بالمجر وزيندلفينغن بألمانيا، وبلغ معدل النجاح 96%. كما ارتفع إنجاز المهام بأمان بنسبة 33% حول العوائق و43% قرب الأشخاص. وأطلقت الشركة أيضاً معيار ASIMOV-Jailbreak مفتوح المصدر، وحقق فيه Gemini 4 Argon مقاومة بنسبة 99.5% للالتفاف على القيود مقابل 82% للنموذج السابق.",
+   "excerpt": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety"
+  },
+  {
+   "id": "423110507793",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-09T19:41:51+00:00",
+   "title": "Meta launches Muse Ember, a small AI model built for the repetitive work agents actually do",
+   "title_ar": "Meta تطلق Muse Ember، نموذج ذكاء اصطناعي صغير مصمم للأعمال المتكررة التي تنفذها الوكلاء فعلياً",
+   "url": "https://the-decoder.com/meta-launches-muse-ember-a-small-ai-model-built-for-the-repetitive-work-agents-actually-do/",
+   "summary_en": "Meta has introduced Muse Ember, which it describes as its smallest and most efficient AI model so far. It targets routine agent work such as calling tools, small coding tasks, routing requests, extracting data and processing long documents. Meta says it offers more intelligence per dollar at every reasoning level than Claude Haiku 5.5 or GPT-6 Luna. In the Artificial Analysis test it costs about $0.14 per task, against $2.39 for Muse Spark 1.3, with scores of 36 and 37. Haiku beats it on FrontierCode 2.0-AA, 34.9 percent to 27.2 percent. The model handles text, images, audio and video, accepts up to one million tokens, and is available through the Meta Model API and Muse Code at $0.10 per million input tokens and $0.50 per million output tokens.",
+   "summary_ar": "أطلقت Meta نموذج Muse Ember الذي تصفه بأنه أصغر نماذجها للذكاء الاصطناعي وأكثرها كفاءة حتى الآن. وهو موجّه للمهام الروتينية التي تنفذها الوكلاء الأذكياء، مثل استدعاء الأدوات وبعض مهام البرمجة الصغيرة وتوجيه الطلبات واستخراج البيانات ومعالجة المستندات الطويلة. وتقول Meta إنه يوفر ذكاءً أعلى مقابل كل دولار عند جميع مستويات الاستدلال مقارنةً بـ Claude Haiku 5.5 وGPT-6 Luna. وفي اختبار Artificial Analysis تبلغ كلفته نحو 0.14 دولار للمهمة، مقابل 2.39 دولار لـ Muse Spark 1.3، بدرجتين هما 36 و37. لكن Haiku يتفوق عليه في FrontierCode 2.0-AA بنسبة 34.9 في المئة مقابل 27.2 في المئة. ويتعامل النموذج مع النصوص والصور والصوت والفيديو، ويستوعب حتى مليون وحدة لغوية، ويتوفر عبر Meta Model API وMuse Code بسعر 0.10 دولار لكل مليون وحدة لغوية مدخلة و0.50 دولار لكل مليون مخرجة.",
+   "excerpt": "Meta is introducing Muse Ember, its smallest and most efficient AI model, optimized for repetitive agent tasks such as tool calls, routing, and data extraction. According to Meta, it delivers more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna."
+  },
+  {
    "id": "2b128ff09548",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -367,6 +661,20 @@
    "excerpt": "After publishing a support article in early September outlining usage limits for some Apple Intelligence features, the company has updated Logic Pro with an option to \"Buy More Usage\" for a one-time purchase price of $49.99, as spotted by 9to5Mac."
   },
   {
+   "id": "c075e289756f",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-09T19:05:54+00:00",
+   "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
+   "title_ar": "Pluggable Agentic AI Framework: بنية مرجعية مؤسسية قابلة للتركيب من سبع طبقات للذكاء الاصطناعي الوكيلي على Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
+   "summary_en": "The AWS Machine Learning Blog presents the Pluggable Agentic AI Framework, a seven-layer composable reference architecture meant to take multi-agent AI applications from prototype to production scale on Amazon Bedrock AgentCore. The post says many agentic projects stall between a working proof of concept and a secure, reliable system, because teams keep rebuilding routing, guardrails and observability. Each layer has a distinct responsibility, and the listed services are examples from the reference implementation that organizations can replace. The Data and Knowledge layer handles retrieval and context for agents. The Model and Inference layer drives model choice through configuration, using a proxy such as LiteLLM. The Orchestration layer favours specialist agents under a supervisor, discovered through a central registry using MCP and A2A.",
+   "summary_ar": "تعرض مدونة AWS Machine Learning Blog إطار Pluggable Agentic AI Framework، وهو بنية مرجعية قابلة للتركيب من سبع طبقات تهدف إلى نقل تطبيقات الذكاء الاصطناعي متعددة الوكلاء من مرحلة النموذج الأولي إلى الإنتاج على نطاق واسع باستخدام Amazon Bedrock AgentCore. وتذكر المقالة أن كثيراً من المشاريع القائمة على الوكلاء تتعثر بين إثبات المفهوم العامل ونظام آمن وموثوق، لأن الفرق تعيد بناء التوجيه وضوابط الحماية والمراقبة من الصفر. ولكل طبقة مسؤولية محددة، أما الخدمات المذكورة فهي أمثلة من التنفيذ المرجعي ويمكن للمؤسسات استبدالها. تتولى طبقة البيانات والمعرفة الاسترجاع وتوفير السياق للوكلاء، وتجعل طبقة النماذج والاستدلال اختيار النموذج قائماً على الإعدادات باستخدام وسيط مثل LiteLLM. أما طبقة التنسيق فتفضّل وكلاء متخصصين يشرف عليهم وكيل مشرف، ويجري اكتشافهم عبر سجل مركزي باستخدام MCP وA2A.",
+   "excerpt": "A seven-layer composable reference architecture for taking enterprise agentic AI from prototype to production on Amazon Bedrock AgentCore. Each layer has a stable contract, so you can swap technologies at any layer without redesigning the rest of the stack."
+  },
+  {
    "id": "f1eea0a2781a",
    "source": "verge-ai",
    "lang": "en",
@@ -379,6 +687,76 @@
    "summary_en": "Anthropic has announced two new models, Claude Fable 5.2 and Claude Mythos 5.2, which it describes as built for \"daunting\" technical challenges. The company says they improve on coding, reasoning and vision and produce output faster than the 5.1 versions. Anthropic says Fable 5.2 handles hard software engineering problems, can orchestrate agent teams and long-running projects, and solved two open theoretical physics problems. According to the company, prerelease testing saw the models help engineers finish software migrations, design three working electronic devices and formalize a proof of Fermat's Last Theorem in 30 hours. Fable 5.2 launches today, while Mythos 5.2 is initially limited to vetted organizations. Both follow the 5.1 releases from September.",
    "summary_ar": "أعلنت شركة Anthropic عن نموذجين جديدين هما Claude Fable 5.2 وClaude Mythos 5.2، وتصفهما بأنهما مصممان لمواجهة تحديات تقنية «شاقة». وتقول الشركة إنهما يحققان تحسناً في البرمجة والاستدلال والرؤية، ويولّدان المخرجات بسرعة أكبر من إصدارَي 5.1. وبحسب Anthropic، يتعامل Fable 5.2 مع مسائل هندسة البرمجيات الصعبة، ويستطيع تنسيق فرق من الوكلاء والمشاريع الطويلة، وقد حلّ مسألتين مفتوحتين في الفيزياء النظرية. وتذكر الشركة أن النموذجين ساعدا في اختبارات ما قبل الإطلاق مهندسيها على إنجاز عمليات ترحيل برمجي، وتصميم ثلاثة أجهزة إلكترونية عاملة، وصياغة برهان مبرهنة فيرما الأخيرة رسمياً خلال 30 ساعة. يُطلق Fable 5.2 اليوم، بينما يقتصر Mythos 5.2 في البداية على مؤسسات جرى التحقق منها. ويأتي الإصداران بعد Claude Fable 5.1 وClaude Mythos 5.1 اللذين صدرا في سبتمبر.",
    "excerpt": "Anthropic is announcing two new models today: Claude Fable 5.2 and Claude Mythos 5.2, which it says are designed to take on \"daunting\" technical challenges."
+  },
+  {
+   "id": "9c331579e229",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-09T19:00:00+00:00",
+   "title": "ChatGPT Enterprise now available in AWS Marketplace",
+   "title_ar": "ChatGPT Enterprise متاح الآن في AWS Marketplace",
+   "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+   "summary_en": "OpenAI says ChatGPT Enterprise is now available through AWS Marketplace. The listing is meant to help organizations simplify procurement by relying on their existing AWS purchasing and billing relationships.",
+   "summary_ar": "أعلنت OpenAI أن ChatGPT Enterprise أصبح متاحاً الآن عبر AWS Marketplace. ويهدف هذا التوفر إلى مساعدة المؤسسات على تبسيط عمليات الشراء من خلال علاقاتها القائمة مع AWS في الشراء والفوترة.",
+   "excerpt": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships."
+  },
+  {
+   "id": "8e89c98cf0a2",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-11-09T18:55:43+00:00",
+   "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
+   "title_ar": "كيف تعتمد CrossnoKaye على Amazon Bedrock AgentCore في ترسيخ الذكاء الاصطناعي المادي",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
+   "summary_en": "The AWS Machine Learning Blog describes how CrossnoKaye uses Amazon Bedrock AgentCore to bring physical AI to industrial sites such as food and beverage plants, refrigeration facilities and quarries. Its ATLAS platform links live plant data to closed-loop equipment control, and its agentic system AURA has access to the plant's full operational state within one security boundary. Because large language models cannot reliably compute statistics over millions of sensor readings, AURA runs Python in isolated sandboxes through the AgentCore code interpreter, alongside Amazon Bedrock Guardrails. CrossnoKaye reports more than 100 facilities, 13,000 controlled assets, and 11–17 percent higher throughput with 21 percent lower average energy costs.",
+   "summary_ar": "تشرح مدونة AWS Machine Learning Blog كيف تستخدم شركة CrossnoKaye خدمة Amazon Bedrock AgentCore لتقديم الذكاء الاصطناعي المادي إلى المواقع الصناعية، مثل مصانع الأغذية والمشروبات ومنشآت التبريد والمحاجر. وتربط منصتها ATLAS بيانات المصنع الحية بالتحكم المغلق في المعدات، بينما يتمتع نظامها الوكيلي AURA بإمكانية الوصول إلى الحالة التشغيلية الكاملة للمصنع ضمن حدود أمنية واحدة. ولأن النماذج اللغوية الكبيرة لا تستطيع حساب الإحصاءات على ملايين قراءات المستشعرات بصورة موثوقة، يشغّل AURA شيفرات Python داخل بيئات معزولة عبر مفسّر الشيفرة في AgentCore إلى جانب Amazon Bedrock Guardrails. وتفيد CrossnoKaye بأنها تعمل في أكثر من 100 منشأة وتتحكم في 13,000 أصل، وبأن الإنتاجية ارتفعت بنسبة 11–17 بالمئة مع انخفاض متوسط تكاليف الطاقة بنسبة 21 بالمئة.",
+   "excerpt": "CrossnoKaye brought physical AI to heavy industry with Amazon Bedrock AgentCore. Its ATLAS platform and AURA agentic system ground AI reasoning in live plant data and run verifiable Python in isolated AgentCore sandboxes, giving plant engineers checkable, math-backed answers…"
+  },
+  {
+   "id": "2fd71b0c0c5d",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-09T18:54:51+00:00",
+   "title": "Trump's close ties to Nvidia CEO Huang scrutinised after foreign intelligence concerns",
+   "title_ar": "تدقيق في علاقات ترامب الوثيقة بالرئيس التنفيذي لـ Nvidia هوانغ بعد مخاوف تتعلق بالاستخبارات الأجنبية",
+   "url": "https://www.khaleejtimes.com/business/tech/trump-close-ties-nvidia-ceo-jensen-huang-foreign-intelligence-concerns",
+   "summary_en": "President Donald Trump's close ties to Nvidia CEO Jensen Huang came under renewed scrutiny on Monday, November 9, after Nvidia said its board was investigating whether Huang has been the target of a foreign intelligence effort. The probe followed a New York Times report that Huang had a close relationship with a Chinese businesswoman whom US intelligence officials believe passed information to the Chinese government. The paper also reported that Trump was briefed and chose not to act. Nvidia shares hit a seven-month low. Senator Chris Coons urged an investigation into whether national security was compromised, while Trump said he had not discussed the allegations with Huang and called him an \"honorable guy.\" The article notes that the US later allowed H200 chip exports to China with a 25% fee.",
+   "summary_ar": "تعرضت علاقة الرئيس الأمريكي «دونالد ترامب» الوثيقة برئيس NVIDIA التنفيذي «جنسن هوانغ» لتدقيق متجدد يوم الاثنين 9 نوفمبر، بعد أن أعلنت الشركة أن مجلس إدارتها يحقق فيما إذا كان «هوانغ» هدفاً لمحاولة استخباراتية أجنبية. وجاء التحقيق بعد تقرير لصحيفة New York Times ذكر أن «هوانغ» تربطه علاقة وثيقة برائدة أعمال صينية يعتقد مسؤولو الاستخبارات الأمريكية أنها نقلت معلومات إلى الحكومة الصينية. وأضافت الصحيفة أن «ترامب» أُطلع على الأمر واختار ألا يتحرك. وسجلت أسهم NVIDIA أدنى مستوى لها في سبعة أشهر. ودعا السيناتور «كريس كونز» إلى التحقيق في احتمال تعرض الأمن القومي للخطر، بينما قال «ترامب» إنه لم يناقش الاتهامات مع «هوانغ» ووصفه بأنه رجل «شريف». وأشار المقال إلى أن الولايات المتحدة سمحت لاحقاً بتصدير رقائق H200 إلى الصين مقابل رسم نسبته 25%.",
+   "excerpt": "Nvidia's board launched its probe after a New York Times report said Huang was close to a businesswoman suspected by US intelligence of passing information to China"
+  },
+  {
+   "id": "4b0431f260e8",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-09T18:50:01+00:00",
+   "title": "Bytedance's Seedream 5.5 promises pixel-stable image editing across 100 rounds without color drift",
+   "title_ar": "Seedream 5.5 من Bytedance تَعِد بتحرير صور مستقر على مستوى البكسل عبر 100 جولة دون انحراف في الألوان",
+   "url": "https://the-decoder.com/bytedances-seedream-5-5-promises-pixel-stable-image-editing-across-100-rounds-without-color-drift/",
+   "summary_en": "Bytedance Seed has introduced Seedream 5.5, an image generation model aimed at professional production workflows. According to Bytedance, it can handle up to 100 rounds of editing while keeping unchanged areas of an image identical at the pixel level and avoiding color shifts. The model also produces native RGBA images with transparent backgrounds, so results can be used as design assets without manual cutouts. Bytedance says it renders light, materials and skin textures more realistically and reproduces dense small text more accurately. The company claims the model leads rivals such as GPT Image 2.5 Sunburst in text structure and realism. It is gradually rolling out through Jimeng, Doubao, Doubao Work and Volcengine Ark, and a Pro version is planned.",
+   "summary_ar": "قدمت شركة Bytedance Seed نموذج Seedream 5.5 لتوليد الصور، وهو موجّه لمسارات العمل الإنتاجية الاحترافية. وبحسب الشركة، يستطيع النموذج التعامل مع ما يصل إلى 100 جولة تعديل مع الإبقاء على المناطق غير المعدلة من الصورة كما هي على مستوى البكسل ودون أي انحراف في الألوان. كما ينتج النموذج صوراً بصيغة RGBA الأصلية بخلفيات شفافة، ما يتيح استخدام العناصر المولدة مباشرة كأصول تصميم دون قص يدوي. وتقول Bytedance إنه يعرض الإضاءة والمواد وملمس البشرة بواقعية أكبر ويعيد إنتاج النصوص الصغيرة الكثيفة بدقة أعلى. وتزعم الشركة أنه يتفوق على نماذج مثل GPT Image 2.5 Sunburst في بنية النص والواقعية. ويُطرح النموذج تدريجياً عبر Jimeng وDoubao وDoubao Work وVolcengine Ark، مع خطة لإطلاق نسخة Pro.",
+   "excerpt": "Bytedance Seed has introduced Seedream 5.5, an image model built for professional production workflows. It supports stable multi-pass editing over up to 100 iterations, generates native RGBA images with transparent backgrounds, and, according to Bytedance, outperforms…"
+  },
+  {
+   "id": "4e28bad9389c",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-09T18:43:30+00:00",
+   "title": "Professional work deserves professional tools. Meet AWS Quick.",
+   "title_ar": "العمل المهني يستحق أدوات مهنية. تعرّف على AWS Quick.",
+   "url": "https://aws.amazon.com/blogs/machine-learning/professional-work-deserves-professional-tools-meet-aws-quick/",
+   "summary_en": "AWS has launched its first brand campaign for AWS Quick, which it describes as an AI workspace built only for work. The campaign runs in the United States and the United Kingdom on streaming TV, online video, social media and business publications. According to AWS, teams at companies including 3M, BMW, Mondelez, New York Life and Southwest Airlines use Quick to research, analyze and act across their existing data and applications. AWS says Quick has no consumer version and lets people build agents, apps and automations by describing them in plain language. It says the product integrates with Microsoft Purview, AWS IAM and Microsoft Active Directory, holds certifications including HIPAA, FedRAMP, SOC 2 and ISO 27001, and never uses customer data to train others' models.",
+   "summary_ar": "أطلقت AWS أول حملة علامة تجارية لمنتج AWS Quick، الذي تصفه بأنه مساحة عمل بالذكاء الاصطناعي مصممة للعمل فقط. وتُعرض الحملة في الولايات المتحدة والمملكة المتحدة عبر البث التلفزيوني والفيديو عبر الإنترنت ووسائل التواصل الاجتماعي والمنشورات المتخصصة في الأعمال. وبحسب AWS، تستخدم فرق في شركات مثل 3M وBMW وMondelez وNew York Life وSouthwest Airlines منصة Quick للبحث والتحليل والتنفيذ عبر بياناتها وتطبيقاتها القائمة. وتقول الشركة إنه لا توجد نسخة استهلاكية من Quick، وإن بإمكان المستخدمين بناء وكلاء وتطبيقات وعمليات أتمتة بوصفها بلغة بسيطة. كما تذكر أن المنتج يتكامل مع Microsoft Purview وAWS IAM وMicrosoft Active Directory، ويحمل شهادات منها HIPAA وFedRAMP وSOC 2 وISO 27001، ولا تُستخدم بيانات العملاء لتدريب نماذج غيرهم.",
+   "excerpt": "Introducing AWS Quick, formerly Amazon Quick, and the debut of our first brand campaign celebrating teams who keep business moving."
   },
   {
    "id": "20ff528b5495",
@@ -423,6 +801,20 @@
    "excerpt": "At 10 cents per million input tokens, Ember is significantly cheaper than frontier competitors like Haiku and Luna."
   },
   {
+   "id": "44360a84c3b2",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-09T17:55:02+00:00",
+   "title": "Nvidia shares slide as board probes CEO over China spy reports",
+   "title_ar": "أسهم Nvidia تتراجع مع تحقيق مجلس الإدارة مع الرئيس التنفيذي بشأن تقارير التجسس لصالح الصين",
+   "url": "https://www.khaleejtimes.com/business/nvidia-shares-slide-as-board-probes-ceo-over-china-spy-reports-2",
+   "summary_en": "Nvidia's shares fell sharply on Monday after CEO Jensen Huang admitted to an affair and reports said US officials believe the woman involved was spying for China. Nvidia's board opened an independent inquiry into reports that he was the target of a foreign intelligence effort, though it said it had no reason to believe national security or company secrets were compromised. Around 1610 GMT the stock was down 5.5 per cent, after dropping nearly nine percent earlier. The New York Times linked Alice Huang, an executive tied to Singapore-based Megaspeed, to the claims, while Beijing called them baseless. President Donald Trump called Huang a fine person, and a House committee asked him to give a closed-door briefing on November 18.",
+   "summary_ar": "تراجعت أسهم Nvidia بشدة يوم الاثنين بعدما أقرّ رئيسها التنفيذي «جنسن هوانغ» بإقامة علاقة خارج إطار الزواج، وأفادت تقارير بأن مسؤولين أميركيين يعتقدون أن المرأة المعنية كانت تتجسس لصالح الصين. وفتح مجلس إدارة الشركة تحقيقاً مستقلاً في تقارير عن استهداف هوانغ بعملية استخباراتية أجنبية، لكنه قال إنه لا يرى ما يدعو إلى الاعتقاد بأن الأمن القومي أو أسرار الشركة تعرّضا للخطر. وبحلول نحو الساعة 1610 بتوقيت غرينتش كان السهم منخفضاً 5.5 في المئة بعد أن خسر قرابة تسعة في المئة في وقت سابق من الجلسة. وربطت صحيفة The New York Times «أليس هوانغ»، وهي مسؤولة تنفيذية مرتبطة بشركة Megaspeed ومقرها سنغافورة، بهذه الاتهامات، بينما وصفتها بكين بأنها لا أساس لها. ووصف الرئيس «دونالد ترامب» هوانغ بأنه شخص جيد، وطلبت لجنة في مجلس النواب منه حضور إحاطة مغلقة في 18 نوفمبر.",
+   "excerpt": "Jensen Huang is a central figure in the AI boom and a close informal adviser to US President Donald Trump, who has repeatedly opposed regulating the industry so as not to let China gain the upper hand"
+  },
+  {
    "id": "cb4feff58ff6",
    "source": "albayan",
    "lang": "ar",
@@ -449,6 +841,20 @@
    "summary_en": "Dubai Future Foundation has selected 20 contestants from around the world for the AI Grandmaster Challenge, held at The Challenge Dome as part of Dubai Future Week, from 18 to 21 November 2026 at Emirates Towers and the Museum of the Future. On 18 November, participants will face increasingly difficult tasks, including creating multimedia content, building intelligent applications and developing AI-powered assistant experiences within strict time limits. Top performers advance each round until one winner is named AI Grandmaster and receives AED 1 million. Google Cloud is the Technology Partner, and a panel of AI experts and Google Cloud specialists will judge output quality, creativity, technical execution, adaptability and effective AI use under time pressure. The 2025 edition drew more than 3,800 applications from 125 countries.",
    "summary_ar": "اختارت مؤسسة دبي للمستقبل 20 متسابقاً من أنحاء العالم للمشاركة في «تحدي أستاذ الذكاء الاصطناعي» (AI Grandmaster Challenge)، الذي يُقام في «قبة التحدي» ضمن أسبوع دبي للمستقبل من 18 إلى 21 نوفمبر 2026 في أبراج الإمارات ومتحف المستقبل. وفي 18 نوفمبر سيواجه المشاركون مهام متزايدة الصعوبة، تشمل إنتاج محتوى متعدد الوسائط وبناء تطبيقات ذكية وتطوير تجارب مساعدين مدعومين بالذكاء الاصطناعي ضمن مهل زمنية صارمة. وينتقل أصحاب أفضل أداء من كل جولة إلى التالية حتى يُتوَّج فائز واحد بلقب «أستاذ الذكاء الاصطناعي» ويحصل على مليون درهم. وتشارك Google Cloud شريكاً تقنياً، فيما تقيّم لجنة من خبراء الذكاء الاصطناعي ومتخصصي Google Cloud جودة المخرجات والإبداع والتنفيذ التقني والقدرة على التكيف والاستخدام الفعال للذكاء الاصطناعي تحت ضغط الوقت. وكانت نسخة 2025 قد استقطبت أكثر من 3,800 طلب من 125 دولة.",
    "excerpt": "DUBAI, 9th November, 2026 (WAM) -- Dubai Future Foundation (DFF) has announced the selection of 20 contestants from around the world to compete in the AI Grandmaster Challenge, taking place at The Challenge Dome, part of the Dubai Future Week running from 18 to 21 November 2026…"
+  },
+  {
+   "id": "75756c26e284",
+   "source": "kt-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-09T17:49:09+00:00",
+   "title": "Under fire over AI, effective altruism wants to tell its own story",
+   "title_ar": "في ظل الانتقادات بشأن الذكاء الاصطناعي، تسعى حركة الإيثار الفعّال إلى رواية قصتها بنفسها",
+   "url": "https://www.khaleejtimes.com/business/under-fire-over-ai-effective-altruism-wants-to-tell-its-own-story-2",
+   "summary_en": "The effective altruism (EA) movement, which has close ties to the AI community, has drawn mainstream attention and accusations of cult-like behaviour and alarmism. Critics include the Trump administration and adviser David Sacks, who argues that EA-linked groups form a \"Doomer Industrial Complex\" pushing for tougher AI regulation. The movement counts controlling AI's dangers among its priorities and has influenced staff at Anthropic and OpenAI. Zachary Robinson, head of the Centre for Effective Altruism, says the scrutiny is a chance to explain its ideas better, and says the movement is recovering after the FTX collapse. He stresses that EA is more than AI safety, noting global health and development receive more money.",
+   "summary_ar": "حظيت حركة «الإيثار الفعّال» (effective altruism)، التي ترتبط بعلاقات وثيقة بمجتمع الذكاء الاصطناعي، باهتمام واسع واتهامات بسلوك أشبه بالطوائف وبالتهويل. ومن بين المنتقدين إدارة «دونالد ترامب» ومستشاره «ديفيد ساكس»، الذي يرى أن منظمات مرتبطة بالحركة تشكّل «مجمّعاً صناعياً للمتشائمين» يدفع نحو تشديد تنظيم الذكاء الاصطناعي. وتضع الحركة الحدّ من مخاطر الذكاء الاصطناعي ضمن أولوياتها، وقد أثّرت في باحثين وموظفين في Anthropic وOpenAI. ويقول «زاكاري روبنسون»، رئيس مركز الإيثار الفعّال، إن التدقيق فرصة لشرح أفكار الحركة بصورة أفضل، ويضيف أنها تتعافى بعد انهيار FTX. ويؤكد أن الحركة لا تقتصر على سلامة الذكاء الاصطناعي، إذ تحصل الصحة العالمية والتنمية على تمويل أكبر.",
+   "excerpt": "The hard-to-define movement is still growing, and wants to better explain its values amid bitter criticism from the Trump administration and some powerful voices in Silicon Valley"
   },
   {
    "id": "a06869aa80e5",
@@ -507,6 +913,20 @@
    "excerpt": "تواصلت الضغوط على سهم شركة «إنفيديا» (Nvidia) خلال تعاملات الاثنين، بعدما فتح مجلس إدارتها تحقيقاً داخلياً بشأن تقارير"
   },
   {
+   "id": "4065836ff3f5",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-09T17:24:26+00:00",
+   "title": "Claude Code is accidentally exposing secrets all over GitHub",
+   "title_ar": "Claude Code يكشف الأسرار عن غير قصد في أنحاء GitHub",
+   "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
+   "summary_en": "Security researchers at Apiiro found that Claude Code is inadvertently exposing sensitive data on public GitHub repositories. When users approve a shell command with the \"Yes, and don't ask again\" option, the command is often saved as-is in a local settings file, including any secrets inside it. Although Anthropic's documentation says the file is added to the developer's global .gitignore, that protection does not carry over at repository level. Apiiro counted over 100,000 uploaded settings files, with about 1,100 from 63 organizations containing secrets such as database passwords and private keys. Anthropic's Boris Cherny said the team is looking at ways to prevent this and suggested secret scanners, though 215 of the secrets evaded two popular scanners.",
+   "summary_ar": "اكتشف باحثو الأمن في شركة Apiiro أن Claude Code يكشف عن غير قصد معلومات حساسة في مستودعات GitHub العامة. فعندما يوافق المستخدم على أمر في سطر الأوامر عبر خيار «Yes, and don't ask again»، يُحفظ الأمر غالباً كما هو في ملف إعدادات محلي، بما فيه أي أسرار مضمنة فيه. وتذكر وثائق Anthropic أن هذا الملف يُضاف إلى قائمة .gitignore العامة لدى المطور، لكن هذه الحماية لا تنعكس على مستوى المستودع. وأحصت Apiiro أكثر من 100 ألف ملف رُفع إلى مستودعات عامة، منها نحو 1100 ملف من 63 مؤسسة تحوي أسراراً مثل كلمات مرور قواعد البيانات والمفاتيح الخاصة. وقال «بوريس تشيرني» من Anthropic إن الفريق يبحث سبل منع ذلك، ونصح باستخدام أدوات فحص الأسرار، رغم أن 215 سراً لم تكتشفها أداتان شائعتان.",
+   "excerpt": "\"Do not ask again\" prompt leads to passwords, API keys, and more being shared."
+  },
+  {
    "id": "beb3e1d74d66",
    "source": "register-ai",
    "lang": "en",
@@ -519,6 +939,34 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "Leibniz lives! Insight about how 'nature makes no leaps' promises better robot predictions"
+  },
+  {
+   "id": "a040a0593182",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "robotics",
+   "published": "2026-11-09T17:00:00+00:00",
+   "title": "Insight about how 'nature makes no leaps' promises better robot predictions",
+   "title_ar": "رؤية حول مبدأ «الطبيعة لا تقفز» تَعِد بتنبؤات أفضل للروبوتات",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/09/insight-about-how-nature-makes-no-leaps-promises-better-robot-predictions/5308301",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "aecbe55229d2",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-09T16:57:21+00:00",
+   "title": "جوجل تكشف عن نظامين جديدين لمعالجات TPU لتعزيز أمن الذكاء الاصطناعي وقدرات المعالجة",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/09/google-tpu-8tx-8i-max-ai-systems/",
+   "summary_en": "Google has expanded its eighth-generation TPU line with two new systems, TPU 8tx and TPU 8i Max, bringing the family to four. TPU 8tx is built for inference in confidential computing environments, protecting sensitive data and model weights while in use, and it targets government bodies and regulated industries; it uses the TPU 8t chips alongside fifth-generation AMD EPYC server processors. TPU 8i Max is aimed at workloads needing long context and large memory, such as autonomous agents handling big code repositories, and pairs two TPU 8i units in one package to double compute, SRAM and HBM bandwidth. Google said both use existing chips in new configurations. The announcement gave no pricing, availability dates or country list.",
+   "summary_ar": "وسّعت «جوجل» الجيل الثامن من أنظمة وحدات معالجة الموتر (TPU) بإضافة نظامين جديدين هما TPU 8tx وTPU 8i Max، لتضم العائلة أربعة أنظمة. صُمم TPU 8tx لتشغيل الاستدلال في بيئات الحوسبة السرية بهدف حماية البيانات الحساسة وأوزان النماذج أثناء الاستخدام، ويستهدف الجهات الحكومية والقطاعات الخاضعة لتنظيم صارم، ويعتمد على رقائق TPU 8t مع معالجات خوادم AMD EPYC من الجيل الخامس. أما TPU 8i Max فيستهدف الأعباء التي تتطلب سياقات طويلة وذاكرة كبيرة، مثل الوكلاء المستقلين الذين يتعاملون مع مستودعات برمجية ضخمة، ويجمع وحدتين من TPU 8i في حزمة واحدة لمضاعفة القدرة الحسابية وSRAM وعرض نطاق HBM. وأوضحت «جوجل» أن النظامين يعتمدان على رقائق موجودة بتكوينات جديدة. ولم يتضمن الإعلان أسعاراً أو مواعيد إتاحة أو قائمة بالدول.",
+   "excerpt": "أعلنت جوجل نظامَي TPU 8tx وTPU 8i Max ضمن الجيل الثامن من معالجاتها المخصصة للذكاء الاصطناعي، مع التركيز على الحوسبة السرية ومضاعفة قدرات معالجة السياقات الطويلة."
   },
   {
    "id": "ea1cff75717b",
@@ -661,6 +1109,20 @@
    "excerpt": "افتتحت مؤشرات الأسهم الأمريكية تعاملات اليوم الاثنين على ارتفاع، مستعيدة جزءاً من خسائر موجة البيع التي شهدتها الأسواق"
   },
   {
+   "id": "5d63754d84e9",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-09T15:23:20+00:00",
+   "title": "Nvidia CEO's affair becomes a national security problem",
+   "title_ar": "علاقة الرئيس التنفيذي لـ Nvidia تتحول إلى مشكلة تتعلق بالأمن القومي",
+   "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
+   "summary_en": "Nvidia chief executive Jensen Huang admitted to an affair in an internal message to staff on Sunday, two days after the Financial Times reported his alleged relationship with Alice Huang, an executive at Megaspeed, a Singapore-based Nvidia customer. US intelligence reportedly believes she was recruited by China's Ministry of State Security. Nvidia's board will open an independent investigation led by independent directors, and says it has no reason to believe national security or company secrets were compromised. Frankfurt-listed shares fell more than 6 percent in early Monday trading. Republican John Moolenaar and other lawmakers have asked Huang to testify before Congress, while President Donald Trump called him an honorable man. The article notes the news comes as the AI sector faces political backlash and investor doubts over infrastructure spending.",
+   "summary_ar": "أقرّ الرئيس التنفيذي لشركة NVIDIA «جنسن هوانغ» بإقامة علاقة غرامية خارج الزواج، وذلك في رسالة داخلية إلى الموظفين يوم الأحد، بعد يومين من تقرير لصحيفة Financial Times تحدث عن علاقة مزعومة بينه وبين «أليس هوانغ»، وهي مسؤولة في شركة Megaspeed السنغافورية التي تتعامل مع NVIDIA. وتعتقد الاستخبارات الأميركية أنها جُنّدت لصالح وزارة أمن الدولة الصينية. وأعلن مجلس إدارة الشركة فتح تحقيق مستقل تشرف عليه لجنة من أعضائه المستقلين، مؤكداً أنه لا يملك ما يدعو إلى الاعتقاد بأن الأمن القومي أو أسرار الشركة تعرّضت للخطر. وتراجعت أسهم الشركة المدرجة في فرانكفورت أكثر من 6 في المئة في بداية تداولات الاثنين. وطلب النائب الجمهوري «جون مولينار» ومشرّعون آخرون من هوانغ الإدلاء بشهادته أمام الكونغرس، بينما وصفه الرئيس «دونالد ترامب» بأنه رجل محترم. ويشير التقرير إلى أن الخبر يأتي في وقت يواجه فيه قطاع الذكاء الاصطناعي ردة فعل سياسية وقلقاً لدى المستثمرين بشأن الإنفاق على البنية التحتية.",
+   "excerpt": "Nvidia is probing whether Chinese intelligence targeted its CEO through an affair."
+  },
+  {
    "id": "2a12af76034c",
    "source": "albayan",
    "lang": "ar",
@@ -673,6 +1135,20 @@
    "summary_en": "SoftBank Group is weighing its investment options in case demand for AI data centres in the United States slows, as political and community challenges to building them grow. Junichi Miyakawa, chief executive of the group's telecom unit, said recent US political developments would not necessarily work in the company's favour, according to Bloomberg. He pointed to the Democratic Party's win in last week's midterm elections and rising public opposition to new data centres. Miyakawa said global demand for AI data centres remains strong, but SoftBank may shift geographic priorities and give other markets a larger share of expansion spending if US conditions become harder. The article adds that permits, power supply and local objections now help shape where companies expand, and that diversifying markets would give SoftBank more flexibility.",
    "summary_ar": "تدرس مجموعة SoftBank خياراتها الاستثمارية تحسباً لاحتمال تباطؤ الطلب على مراكز بيانات الذكاء الاصطناعي في الولايات المتحدة، مع تزايد التحديات السياسية والمجتمعية أمام إنشاء هذه المنشآت. وقال «جونيشي مياكاوا»، الرئيس التنفيذي لوحدة الاتصالات التابعة للمجموعة، إن التطورات السياسية الأخيرة في الولايات المتحدة لن تكون بالضرورة في مصلحة الشركة، وفق ما نقلته وكالة Bloomberg. وأشار إلى فوز الحزب الديمقراطي في انتخابات التجديد النصفي التي جرت الأسبوع الماضي، وإلى تصاعد المعارضة الشعبية لإنشاء مراكز بيانات جديدة. وأوضح مياكاوا أن الطلب العالمي على مراكز بيانات الذكاء الاصطناعي لا يزال قوياً، لكن SoftBank قد تعيد ترتيب أولوياتها الجغرافية وتمنح أسواقاً أخرى حصة أكبر من استثماراتها التوسعية إذا أصبحت الظروف في الولايات المتحدة أكثر تعقيداً. ويضيف التقرير أن الموافقات وتوفير الطاقة واعتراضات المجتمعات المحلية باتت تؤثر في تحديد وجهات التوسع، وأن تنويع الأسواق يمنح المجموعة مرونة أكبر.",
    "excerpt": "تدرس مجموعة «سوفت بنك» (SoftBank) خياراتها الاستثمارية تحسباً لاحتمال تباطؤ الطلب على مراكز بيانات الذكاء الاصطناعي في ا"
+  },
+  {
+   "id": "057e22ab69c0",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-09T15:05:57+00:00",
+   "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+   "title_ar": "Nemotron-Personas-Finance-Japan: مجموعة بيانات اصطناعية تعكس التركيبة السكانية والسياق المالي في اليابان",
+   "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+   "summary_en": "Elith and NVIDIA have released Nemotron-Personas-Finance-Japan, a financial extension of the open-source Nemotron-Personas-Japan dataset. It contains 9 million fully synthetic personas across 50 fields, compared with 22 fields in the earlier release, and draws on official Japanese statistics along with household finance and financial literacy data. It was built with NVIDIA's NeMo SDG-PGMs and NeMo Data Designer, with input from institutions such as Sompo Japan, Tokio Marine Holdings, Mizuho Financial Group and the Financial Data Utilization Association. Released under the CC BY 4.0 licence for commercial use, it is meant to let Japanese developers build and test financial AI, such as conversational agents and customer simulations, without real customer data. Nemotron-PII-Japan, with 100,000 synthetic business documents containing labelled personal information, launched the same day.",
+   "summary_ar": "أطلقت شركتا Elith وNVIDIA مجموعة البيانات Nemotron-Personas-Finance-Japan، وهي امتداد مالي لمجموعة البيانات المفتوحة المصدر Nemotron-Personas-Japan. وتضم 9 ملايين شخصية اصطناعية بالكامل موزعة على 50 حقلاً، مقابل 22 حقلاً في الإصدار السابق، وتعتمد على إحصاءات رسمية يابانية إلى جانب بيانات عن مالية الأسر والثقافة المالية. وقد بُنيت باستخدام NeMo SDG-PGMs وNeMo Data Designer من NVIDIA، بمشاركة ملاحظات من مؤسسات مثل Sompo Japan وTokio Marine Holdings وMizuho Financial Group وFinancial Data Utilization Association. وتُتاح المجموعة بترخيص CC BY 4.0 للاستخدام التجاري، بهدف تمكين المطورين اليابانيين من بناء أنظمة ذكاء اصطناعي مالية واختبارها، مثل وكلاء المحادثة ومحاكاة العملاء، دون استخدام بيانات عملاء حقيقية. وأُطلقت في اليوم نفسه مجموعة Nemotron-PII-Japan التي تضم 100 ألف وثيقة أعمال اصطناعية بمعلومات شخصية موسومة.",
+   "excerpt": "A Blog post by NVIDIA on Hugging Face"
   },
   {
    "id": "eefd7e2a809c",
@@ -729,6 +1205,20 @@
    "summary_en": "Dubai Media Academy, which is part of Dubai Media Corporation, has won the \"AI in Arab Media\" award, according to Al Bayan. The headline says the prize covers the Middle East and Africa and was presented within an awards programme linked to Africa. The available text is cut off after that point, so no further details about the ceremony or the criteria are given.",
    "summary_ar": "حصدت أكاديمية دبي للإعلام، التابعة لمؤسسة دبي للإعلام، جائزة «الذكاء الاصطناعي في الإعلام العربي»، بحسب صحيفة «البيان». ويشير العنوان إلى أن الجائزة تخص منطقة الشرق الأوسط وأفريقيا، وأنها جاءت ضمن جوائز مرتبطة بأفريقيا. ويتوقف النص المتاح عند هذا الحد، ولذلك لا تتوفر تفاصيل إضافية عن الحفل أو معايير الجائزة.",
    "excerpt": "حصدت أكاديمية دبي للإعلام، التابعة لمؤسسة دبي للإعلام، جائزة «الذكاء الاصطناعي في الإعلام العربي» ضمن «جوائز أفريقيا وال"
+  },
+  {
+   "id": "e95faf8e67e5",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-09T14:02:00+00:00",
+   "title": "The AI bubble can wait, but your exit plan can't",
+   "title_ar": "فقاعة الذكاء الاصطناعي تحتمل الانتظار، لكن خطة خروجك لا تحتمله",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/09/the-ai-bubble-can-wait-but-your-exit-plan-cant/5308415",
+   "summary_en": "The Register says spending on AI infrastructure is growing faster than returns that can be measured. It adds that the finances of suppliers are key to judging when any trouble might arrive.",
+   "summary_ar": "تقول The Register إن الإنفاق على البنية التحتية للذكاء الاصطناعي ينمو أسرع من العوائد التي يمكن قياسها. وتضيف أن الأوضاع المالية للموردين عامل أساسي للحكم على موعد ظهور أي مشكلات.",
+   "excerpt": "Infrastructure spending outruns measurable returns, with supplier finances key to judging when trouble arrives"
   },
   {
    "id": "95c3c02be004",
@@ -2187,6 +2677,34 @@
    "excerpt": "Google Research built an AI that spots signs of high blood pressure using only the pulse and motion sensors in a standard smartwatch, no cuff needed. In a 196-person study, its 65.8 percent detection rate beat the traditional in-office measurement."
   },
   {
+   "id": "9d230152bb5b",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-07T08:54:00+00:00",
+   "title": "OpenAI secures $11bn in funding at $1.25tn valuation",
+   "title_ar": "OpenAI تحصل على تمويل بقيمة 11 مليار دولار بتقييم 1.25 تريليون دولار",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/07/Ma6",
+   "summary_en": "OpenAI has closed on $11 billion in new funding as part of a larger investment round. The round values the company at $1.25 trillion.",
+   "summary_ar": "أتمّت OpenAI الحصول على تمويل جديد بقيمة 11 مليار دولار ضمن جولة استثمارية أكبر. وتقدّر هذه الجولة قيمة الشركة بـ1.25 تريليون دولار.",
+   "excerpt": "OpenAI has closed on $11 billion in new funding as part of a larger investment round that values the company at $1.25 trillion, according to investment…"
+  },
+  {
+   "id": "1e60f73c9f6e",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-07T08:06:00+00:00",
+   "title": "\"أوبن إيه آي\" تجمع 11 مليار دولار في جولة تمويل جديدة",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/07/Ma6",
+   "summary_en": "OpenAI has raised $11 billion in a new funding deal. It forms part of a broader round that aims to raise $30 billion, with SoftBank and MGX taking part. The text also says the company's valuation has declined.",
+   "summary_ar": "جمعت شركة OpenAI مبلغ 11 مليار دولار في صفقة تمويل جديدة، وهي جزء من جولة أوسع تستهدف جمع 30 مليار دولار، بمشاركة مجموعتي SoftBank وMGX. ويذكر النص أيضاً أن تقييم الشركة انخفض.",
+   "excerpt": "جمعت شركة أوبن إيه آي 11 مليار دولار في صفقة تمويل جديدة، ضمن جولة أوسع تستهدف جمع 30 مليار دولار، بمشاركة مجموعتي سوفت بنك وإم جي إكس، فيما انخفض تقييم الشركة…"
+  },
+  {
    "id": "5e3f1a0103e4",
    "source": "wam-en",
    "lang": "en",
@@ -2789,6 +3307,20 @@
    "excerpt": "واشنطن في 6 نوفمبر/ وام / يقوم حاليا 15 خبيراً إماراتياً في مجال الذكاء الاصطناعي بزيارة دولية إلى وادي السيليكون في الولايات المتحدة، تستمر خمسة أيام لدراسة التقنيات والقرارات التي تقف وراء تطوير أنظمة الذكاء الاصطناعي المتقدمة وتقييمها، والاطلاع على المسار الذي ينقلها من البحث…"
   },
   {
+   "id": "6a4bf66c9b13",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-06T15:11:00+00:00",
+   "title": "Hazza bin Zayed reviews Abu Dhabi’s AI-powered govt. services",
+   "title_ar": "هزاع بن زايد يطلع على الخدمات الحكومية المدعومة بالذكاء الاصطناعي في أبوظبي",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/06/AL022",
+   "summary_en": "Sheikh Hazza bin Zayed Al Nahyan, Ruler's Representative in Al Ain Region, visited TAMM Factory in Abu Dhabi, part of the Department of Government Enablement – Abu Dhabi (DGE), where government and partner teams work together to develop services. He was received by DGE Chairman Ahmed Tamim Hisham Al Kuttab and TAMM Director-General Dr Mohamed Abdulhameed Al Askar. He stressed the importance of continuing to develop proactive services and adopting AI to ease access to services across the emirate. Al Kuttab said Abu Dhabi aims to become the world's first AI-native government. TAMM offers more than 1,200 services with over 49 partners and 4.9 million users, and its AI Assistant handles 96% of enquiries without human intervention.",
+   "summary_ar": "زار «الشيخ هزاع بن زايد آل نهيان»، ممثل الحاكم في منطقة العين، مصنع TAMM في أبوظبي التابع لدائرة التمكين الحكومي – أبوظبي (DGE)، حيث تعمل فرق من الجهات الحكومية والشركاء معاً لتطوير الخدمات. وكان في استقباله رئيس الدائرة «أحمد تميم هشام الكتّاب» ومدير عام TAMM «الدكتور محمد عبدالحميد العسكر». وأكد أهمية مواصلة تطوير الخدمات الاستباقية واعتماد الذكاء الاصطناعي لتسهيل الوصول إلى الخدمات في مختلف مناطق الإمارة. وقال الكتّاب إن أبوظبي تسعى لتصبح أول حكومة في العالم قائمة على الذكاء الاصطناعي. وتقدم TAMM أكثر من 1,200 خدمة مع أكثر من 49 شريكاً ولها 4.9 مليون مستخدم، ويعالج مساعد TAMM الذكي 96% من الاستفسارات دون تدخل بشري.",
+   "excerpt": "His Highness Sheikh Hazza bin Zayed Al Nahyan, Ruler’s Representative in Al Ain Region, visited TAMM Factory to review Abu Dhabi’s progress towards becoming an…"
+  },
+  {
    "id": "f73e6c14d2b3",
    "source": "albayan",
    "lang": "ar",
@@ -2801,6 +3333,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "أعلنت شركة «سويكا لابز»، التي تتخذ من دبي مقراً لها، إتاحة الوصول المبكر إلى منصتها «Mockingjay Network»، التي تتيح لوكل"
+  },
+  {
+   "id": "907a661ae4f7",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-06T14:53:06+00:00",
+   "title": "رهان أميركا على الذكاء الاصطناعي يمر عبر تايوان",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/662225/%D8%A2%D8%B1%D8%A7%D8%A1/%D8%B1%D9%87%D8%A7%D9%86-%D8%A3%D9%85%D9%8A%D8%B1%D9%83%D8%A7-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%8A%D9%85%D8%B1-%D8%B9%D8%A8%D8%B1-%D8%AA%D8%A7%D9%8A%D9%88%D8%A7%D9%86",
+   "summary_en": "The article argues that America's lead in AI depends not only on its models but also on an industrial partnership with Taiwan. It says Taiwan produces more than 90 percent of the world's most advanced semiconductors, and its companies assemble about 90 percent of the servers running the global AI economy. Citing NVIDIA's Jensen Huang, it describes AI as a five-layer stack from energy up to applications, and says the US needs Taiwan to stay ahead of China across it. The text rejects the view that Taiwan weakened US chipmaking, pointing to decades of cooperation in which the US leads in design and Taiwan in manufacturing. TSMC has committed $265 billion to Arizona plants.",
+   "summary_ar": "يرى المقال أن تفوق الولايات المتحدة في الذكاء الاصطناعي لا يقوم على نماذجها وحدها، بل على شراكة صناعية مع تايوان. ويذكر أن تايوان تنتج أكثر من 90 في المئة من أشباه الموصلات الأكثر تطوراً في العالم، وأن شركاتها تجمّع نحو 90 في المئة من الخوادم التي تشغّل اقتصاد الذكاء الاصطناعي العالمي. وبالاستناد إلى وصف «جينسن هوانغ» رئيس NVIDIA للصناعة بأنها خمس طبقات تبدأ بالطاقة وتنتهي بالتطبيقات، يقول إن واشنطن تحتاج إلى تايوان للتفوق على الصين في هذه الطبقات. ويرفض المقال القول إن تايوان أضعفت صناعة الرقائق الأميركية، مشيراً إلى عقود من التعاون تتقدم فيها الولايات المتحدة في التصميم وتايوان في التصنيع. والتزمت TSMC باستثمار 265 مليار دولار في مصانع بولاية أريزونا.",
+   "excerpt": "تتنافس الولايات المتحدة والصين على ريادة الذكاء الاصطناعي عالمياً، في سباق لا يقتصر على التفوق التكنولوجي، بل يمتد إلى تحديد المعايير والقيم التي ستحكم العصر الرقمي الجديد، وما إذا كانت الديمقراطيات أم الأنظمة الاستبدادية هي التي ستصوغها."
   },
   {
    "id": "8cf7feaaba6a",
@@ -2927,6 +3473,20 @@
    "summary_en": "The nonprofit METR reports that it had eleven weeks of access to Anthropic's internal research data, from August 12 to October 29, 2026. It found that the pace at which Anthropic's models improve has roughly doubled since October 2025. METR estimates that about 80 percent of the speedup comes from AI being used in Anthropic's own research, and it says the true factor could range from 1.3 to 3. Anthropic's Responsible Scaling Policy treats a doubling of progress from automated AI research as a warning trigger, and METR considers it possible that level was reached on July 15. Anthropic redacted most of the evidence the auditors rated most informative and cancelled a planned audit of its compute split between capability and safety research. METR shares Anthropic's view that acute catastrophic risk is low.",
    "summary_ar": "أفادت منظمة METR غير الربحية بأنها حصلت على أحد عشر أسبوعاً من الوصول إلى بيانات Anthropic البحثية الداخلية، من 12 أغسطس إلى 29 أكتوبر 2026. ووجدت أن وتيرة تحسّن نماذج Anthropic تضاعفت تقريباً منذ أكتوبر 2025. وتقدّر METR أن نحو 80 بالمئة من هذا التسارع يعود إلى استخدام الذكاء الاصطناعي في أبحاث الشركة نفسها، مشيرة إلى أن العامل الحقيقي قد يتراوح بين 1.3 و3. وتعدّ سياسة Anthropic للتوسع المسؤول (Responsible Scaling Policy) تضاعف التقدم بفعل الأبحاث الآلية للذكاء الاصطناعي سبباً لإطلاق مستوى تحذير، وترى METR أن هذا المستوى ربما بُلغ في 15 يوليو. وحذفت Anthropic معظم الأدلة التي وصفها المدققون بأنها الأكثر فائدة، وألغت تدقيقاً كان مقرراً لتوزيع قدراتها الحاسوبية بين أبحاث القدرات وأبحاث السلامة. وتتفق METR مع تقدير Anthropic بأن خطر وقوع كارثة حادة منخفض.",
    "excerpt": "Nonprofit METR spent eleven weeks auditing Anthropic's internal research data and concluded that the pace of model development has roughly doubled, with about 80 percent of the speedup driven by AI-assisted research."
+  },
+  {
+   "id": "2e1ed6af7c18",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-06T13:36:00+00:00",
+   "title": "ناشرون يحددون 5 متغيرات في صناعة النشر مع استخدام الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/06/AL015",
+   "summary_en": "Publishers and officials from publishing houses taking part in the Sharjah International Book Fair 2026 outlined five changes under way in the publishing industry as the use of artificial intelligence technologies expands.",
+   "summary_ar": "استعرض ناشرون ومسؤولون في دور نشر، خلال مشاركتهم في معرض الشارقة الدولي للكتاب 2026، خمسة متغيرات تشهدها صناعة النشر مع التوسع في استخدام تقنيات الذكاء الاصطناعي.",
+   "excerpt": "استعرض ناشرون ومسؤولو دور نشر، خلال مشاركتهم في معرض الشارقة الدولي للكتاب 2026، خمسة متغيرات تشهدها صناعة النشر مع التوسع في استخدام تقنيات الذكاء الاصطناعي…"
   },
   {
    "id": "e003257ef446",
@@ -3095,6 +3655,20 @@
    "summary_en": "Dubai's Roads and Transport Authority (RTA) is linking every traffic signal in the emirate to its control centre in Al Barsha, with the work expected to finish by early 2027. AI will then use existing cameras and traffic systems to analyse vehicle movements, predict congestion and adjust signal timings dynamically. The RTA expects congestion at signals to fall by at least 10 per cent. Ahmed Hashem Bahrozyan of the RTA said signal management is part of an updated AI strategy covering 41 areas, which the authority aims to integrate within two and a half years. The RTA expects the strategy to add more than Dh300 million in value a year and plans to move over 50 per cent of its services to an AI assistant ecosystem.",
    "summary_ar": "تعمل هيئة الطرق والمواصلات في دبي على ربط جميع إشارات المرور في الإمارة بمركز التحكم في البرشاء، ومن المتوقع إنجاز ذلك مطلع عام 2027. وبعد ذلك سيستخدم الذكاء الاصطناعي الكاميرات وأنظمة إدارة المرور الحالية لتحليل حركة المركبات والتنبؤ بالازدحام وتعديل توقيت الإشارات بشكل ديناميكي. وتتوقع الهيئة أن ينخفض الازدحام عند الإشارات بنسبة 10 في المائة على الأقل. وقال أحمد هاشم بهروزيان إن إدارة الإشارات جزء من استراتيجية محدّثة للذكاء الاصطناعي تغطي 41 مجالاً، وتهدف الهيئة إلى دمجه فيها خلال عامين ونصف. وتتوقع الهيئة أن تحقق الاستراتيجية قيمة مضافة تتجاوز 300 مليون درهم سنوياً، كما تخطط لنقل أكثر من 50 في المائة من خدماتها إلى منظومة المساعد الذكي.",
    "excerpt": "Dubai to cut traffic congestion by 10% with AI-powered traffic light control, connecting all signals to a central system by 2027."
+  },
+  {
+   "id": "9b8f2e21e3ed",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-06T10:08:00+00:00",
+   "title": "\"جائزة ترجمان\": الذكاء الاصطناعي لا يغني عن المترجم الأدبي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/06/Ma17",
+   "summary_en": "Translators and academics speaking at a Tarjuman Award symposium during the Sharjah International Book Fair 2026 said that artificial intelligence cannot replace the literary translator. They acknowledged that the technology can speed up the work.",
+   "summary_ar": "أكد مترجمون وأكاديميون خلال ندوة «جائزة ترجمان» في معرض الشارقة الدولي للكتاب 2026 أن الذكاء الاصطناعي لا يغني عن المترجم الأدبي، مع إقرارهم بقدرته على تسريع العمل.",
+   "excerpt": "أكد مترجمون وأكاديميون خلال ندوة جائزة ترجمان بمعرض الشارقة الدولي للكتاب 2026، أن الذكاء الاصطناعي لا يغني عن المترجم الأدبي، رغم قدرته على تسريع العمل…"
   },
   {
    "id": "bc8f9eac1966",
@@ -4525,6 +5099,20 @@
    "excerpt": "أكدت الروائية والباحثة آن الصافي، خلال جلسة بمعرض الشارقة الدولي للكتاب، أن الذكاء الاصطناعي لن يحل محل الإنسان في الكتابة والإبداع، داعية إلى الاستفادة من…"
   },
   {
+   "id": "d51d979bd505",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-05T08:10:00+00:00",
+   "title": "Sharjah launches AI training programme for 1,000 employees",
+   "title_ar": "الشارقة تطلق برنامجاً تدريبياً في الذكاء الاصطناعي لـ1000 موظف",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/05/Ma5",
+   "summary_en": "The Sharjah Digital Department has launched a four-week AI training programme targeting 1,000 training participations, under an MoU signed with Dell Technologies in April 2026. It is run with the Sharjah Department of Human Resources and supports the Sharjah Digital Transformation Strategy 2026–2028. Five tracks combine theory and practice in sectors such as finance and engineering, covering productivity, data analysis, decision-making, change management and generative AI solutions, with emphasis on responsible use, information security and accuracy of outputs. Sheikh Saud bin Sultan Al Qasimi said building human capacity is a cornerstone of the emirate's digital transformation goals.",
+   "summary_ar": "أطلقت دائرة الشارقة الرقمية برنامجاً تدريبياً في الذكاء الاصطناعي مدته أربعة أسابيع يستهدف 1,000 مشاركة تدريبية، تنفيذاً لمذكرة تفاهم وُقعت مع Dell Technologies في أبريل 2026. وينفَّذ البرنامج بالتعاون مع دائرة الموارد البشرية في الشارقة ضمن دعم استراتيجية الشارقة للتحول الرقمي 2026–2028. ويضم خمسة مسارات تجمع بين الجانب النظري والتطبيق العملي في قطاعات مثل المالية والهندسة، وتشمل رفع الإنتاجية وتحليل البيانات ودعم القرار وإدارة التغيير وتطوير حلول الذكاء الاصطناعي التوليدي، مع التركيز على الاستخدام المسؤول وأمن المعلومات ودقة المخرجات. وقال «الشيخ سعود بن سلطان القاسمي» إن بناء القدرات البشرية ركيزة أساسية لتحقيق أهداف التحول الرقمي في إمارة الشارقة.",
+   "excerpt": "Sharjah Digital Department, in collaboration with the Sharjah Department of Human Resources and Dell Technologies, has launched a four-week AI training…"
+  },
+  {
    "id": "300d91101f21",
    "source": "openai-news",
    "lang": "en",
@@ -5097,6 +5685,20 @@
    "summary_en": "Nothing CEO Carl Pei said in a post on X that the company will launch its first AI device in December, a little over a year after he announced plans for \"AI-native\" devices and an AI operating system. He gave few details, saying only that the product is a tool with no new screen and could not have been an app. Rumors last month claimed Nothing is preparing two pairs of AI smart glasses, one without cameras. Screen-free AI gadgets already exist, such as the Humane AI pin and the Friend, and OpenAI is reportedly working with Jony Ive on a smart speaker. Pei said the industry is hunting for its iPhone moment and called looking for the iPhone of AI today a dead end.",
    "summary_ar": "قال الرئيس التنفيذي لشركة Nothing «كارل باي» في منشور على منصة X إن الشركة ستطلق في ديسمبر أول جهاز لها يعتمد على الذكاء الاصطناعي، بعد أكثر من عام بقليل على إعلانه خططاً لأجهزة «أصيلة الذكاء الاصطناعي» ونظام تشغيل خاص به. ولم يكشف إلا القليل، إذ ذكر أن المنتج أداة بلا شاشة جديدة وأنه ما كان ليكون مجرد تطبيق. وكانت شائعات الشهر الماضي قد تحدثت عن نظارتين ذكيتين تعملان بالذكاء الاصطناعي، إحداهما بلا كاميرات. وتوجد أجهزة ذكاء اصطناعي بلا شاشات مثل Humane AI pin وFriend، كما يُقال إن OpenAI تعمل مع «جوني آيف» على مكبّر صوت ذكي. وأضاف باي أن القطاع يبحث عن لحظته الفارقة على غرار iPhone، واعتبر البحث اليوم عن «آيفون الذكاء الاصطناعي» طريقاً مسدوداً.",
    "excerpt": "Nothing CEO Carl Pei said in a post on X that the company's launching its first AI device in December. That's just a little over a year after Pei announced plans for \"AI-native\" devices and an AI operating system."
+  },
+  {
+   "id": "c4f5d2954769",
+   "source": "google-research",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-04T18:07:05+00:00",
+   "title": "Agile Deliberation: How AI helps humans define the gray areas",
+   "title_ar": "Agile Deliberation: كيف يساعد الذكاء الاصطناعي البشر على تحديد المناطق الرمادية",
+   "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+   "summary_en": "Google Research has introduced Agile Deliberation, a framework for building AI image classifiers for subjective categories such as healthy food or inspiring artwork, where boundaries shift with culture, personal philosophy or policy. Researchers Otilia Stretcu and Leijie Wang describe it as an iterative conversation instead of a task where people label data against fixed definitions. In the first stage, users break a concept into in-scope sub-categories and explicit exclusions. In the second, vision-language models surface borderline images, and the user's feedback goes into an automatic prompt-optimization loop. In 18 live sessions of 1.5 hours each, the approach reduced fatigue and anxiety and produced more consistent, higher-performing models than standard baselines. The code and algorithms are open-sourced on GitHub.",
+   "summary_ar": "قدّم «بحوث غوغل» (Google Research) إطاراً جديداً باسم Agile Deliberation لبناء مصنّفات صور بالذكاء الاصطناعي للفئات الذاتية، مثل «الطعام الصحي» أو «الأعمال الفنية الملهمة»، التي تتغير حدودها بحسب الثقافة والقناعات الشخصية والسياسات. ويصف الباحثان أوتيليا ستريتشو ولييجي وانغ الإطار بأنه حوار متكرر، بدلاً من أن يضع الأشخاص تصنيفات بناءً على تعريفات ثابتة. في المرحلة الأولى يقسّم المستخدم المفهوم إلى فئات فرعية داخل النطاق واستثناءات صريحة. وفي الثانية تعرض نماذج الرؤية واللغة صوراً حدّية، وتغذّي ملاحظات المستخدم حلقة آلية لتحسين التعليمات. وفي 18 جلسة مباشرة مدة كل منها ساعة ونصف، خفّف الأسلوب الإرهاق والقلق وأنتج نماذج أكثر اتساقاً وأداءً من خطوط الأساس المعتادة. وأتاح الفريق الشيفرة والخوارزميات على GitHub.",
+   "excerpt": null
   },
   {
    "id": "5a93cd2962d9",
