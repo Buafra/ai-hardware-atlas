@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-12T13:04:00+04:00",
+  "generated_at": "2026-11-12T20:30:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9946,6 +9946,43 @@
       "permalink": "https://www.instagram.com/p/DfosLxMCGZx/",
       "published_at": "2026-11-12T13:04:00+04:00",
       "cover": "images/qahwa/week-07-day-44--1-learn-lesson-32.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-42--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "quiz",
+      "title": {
+        "en": "Which is the best way to compare two AI chips?",
+        "ar": "ما أفضل طريقة لمقارنة شريحتي ذكاء اصطناعي؟"
+      },
+      "summary": {
+        "en": "How should you compare two AI chips?",
+        "ar": "كيف تقارن شريحتي ذكاء اصطناعي؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "en": {
+            "title": "Which is the ==best way to compare== two AI chips?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "ما ==أفضل طريقة لمقارنة== شريحتي ذكاء اصطناعي؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-12T20:30:00+04:00",
+      "cover": "images/qahwa/week-06-day-42--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
