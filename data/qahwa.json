@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-13T07:47:00+04:00",
+  "generated_at": "2026-11-13T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -9935,6 +9935,10 @@
           },
           "en": {
             "title": "Save this before ==the weekend shop=="
+          },
+          "next": {
+            "ar": "الدرس 33: ميزانية شهرية بصراحة",
+            "en": "Lesson 33: A monthly budget, honestly"
           }
         }
       ],
@@ -10089,6 +10093,131 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-13T07:47:00+04:00",
       "cover": "images/qahwa/week-07-day-43--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-45--1-learn-lesson-33",
+      "kind": "lesson",
+      "lesson": 33,
+      "code": "L33",
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "A monthly budget, honestly",
+        "ar": "ميزانية شهرية بصراحة"
+      },
+      "summary": {
+        "en": "Give it your income and your spending, and it sorts them into categories, adds up the repeats, and shows where the money goes. It can add wrong, so check the totals.",
+        "ar": "تكتب له دخلك ومصاريفك، فيصنّفها إلى بنود، ويجمع المتكرّر منها، ويريك أين يذهب المال كل شهر. وقد يخطئ في الجمع، فراجع المجاميع بنفسك."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "ميزانيتك الشهرية ==بصراحة==",
+            "body": "ترتيب لأرقامك، وليس نصيحة مالية."
+          },
+          "en": {
+            "title": "Your monthly budget, ==honestly==",
+            "body": "Organizing your numbers, not financial advice."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ما الذي ==يجيده==؟",
+            "body": "تكتب له دخلك ومصاريفك، فيصنّفها إلى بنود، ويجمع المتكرّر منها، ويريك أين يذهب المال كل شهر. وقد يخطئ في الجمع، فراجع المجاميع بنفسك."
+          },
+          "en": {
+            "title": "What it ==does well==",
+            "body": "Give it your income and your spending, and it sorts them into categories, adds up the repeats, and shows where the money goes. It can add wrong, so check the totals."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ابدأ بثلاثة أرقام",
+            "items": [
+              "الدخل الشهري بعد الخصومات",
+              "المصاريف الثابتة: إيجار وفواتير",
+              "الاشتراكات المتكرّرة"
+            ]
+          },
+          "en": {
+            "title": "Start with three numbers",
+            "items": [
+              "Monthly income after deductions",
+              "Fixed costs: rent and bills",
+              "Recurring subscriptions"
+            ]
+          },
+          "note": {
+            "ar": "لا تكتب أرقام حسابك أو بطاقتك.",
+            "en": "Never type your account or card numbers."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "تنظيم، ==لا نصيحة مالية==",
+            "body": "هذه مساعدة على ترتيب أرقامك فقط. أما القرارات المهمة كالقروض والاستثمار فاستشر فيها مختصاً مالياً مرخّصاً."
+          },
+          "en": {
+            "title": "Budgeting, ==not financial advice==",
+            "body": "This only helps you organize your own numbers. For big decisions such as loans or investing, speak to a licensed financial adviser."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "==فنجان واحد== كل يوم",
+            "body": "يبدو رقماً صغيراً لا يستحق الحساب، لكن جمعه في آخر الشهر يريك الصورة كاملة. هذا عمل الميزانية."
+          },
+          "en": {
+            "title": "==One cup== a day",
+            "body": "It looks like a number too small to count, until you add it up at the end of the month. That is what a budget does."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "صنّف مصاريفي: [المبالغ وأسماء البنود]. اعرض الجمع وأكبر ثلاثة، واقترح سقفاً شهرياً لكل بند بـ[عملتك]، بلا نصائح استثمارية. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Sort my spending: [amounts and category names]. Show the sums, the top three, and a monthly cap per category in [my currency]. No investment advice. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "المساعد الذكي يرى حسابي البنكي من تلقاء نفسه.",
+            "fact": "لا يطّلع عليه إلا إذا ربطته أنت، وهذا متاح في بعض الخدمات والدول والخطط. ولا حاجة إلى ذلك هنا: تكفيه المبالغ وأسماء البنود."
+          },
+          "en": {
+            "myth": "An AI assistant can see my bank account on its own.",
+            "fact": "Only if you connect it yourself, which some services offer in some countries and plans. You do not need that here: amounts and category names are enough."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==راتب الشهر القادم=="
+          },
+          "en": {
+            "title": "Save this before ==next month's salary=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Sort my spending: [amounts and category names]. Show the sums, the top three, and a monthly cap per category in [my currency]. No investment advice. Answer in my language.",
+        "ar": "صنّف مصاريفي: [المبالغ وأسماء البنود]. اعرض الجمع وأكبر ثلاثة، واقترح سقفاً شهرياً لكل بند بـ[عملتك]، بلا نصائح استثمارية. أجب بلغتي.",
+        "code": "L33"
+      },
+      "permalink": "https://www.instagram.com/p/Dfqul_Kikh3/",
+      "published_at": "2026-11-13T08:03:00+04:00",
+      "cover": "images/qahwa/week-07-day-45--1-learn-lesson-33.webp",
       "related_concepts": []
     }
   ]
