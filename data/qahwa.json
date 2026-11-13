@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-13T19:45:00+04:00",
+  "generated_at": "2026-11-13T20:20:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10385,6 +10385,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-13T19:45:00+04:00",
       "cover": "images/qahwa/week-07-day-44--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-45--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant never gets the math wrong.",
+        "ar": "المساعد الذكي لا يخطئ في الحساب"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي ==لا يخطئ في الحساب==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant ==never gets the math wrong==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-13T20:20:00+04:00",
+      "cover": "images/qahwa/week-07-day-45--3-check-story.webp",
       "related_concepts": []
     }
   ]
