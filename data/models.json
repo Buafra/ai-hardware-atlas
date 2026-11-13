@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T02:46:01+00:00",
+ "updated_at": "2026-11-13T17:50:13+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -410,17 +410,6 @@
    "moe": false
   },
   {
-   "id": "liquid/lfm-2.5-2.6b",
-   "name": "LiquidAI: LFM2.5-2.6B",
-   "hf": "LiquidAI/LFM2.5-2.6B",
-   "context": 128000,
-   "created": 1786470519,
-   "open": true,
-   "params_b": 2.7,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "liquid/lfm-2.5-24b-a2b",
    "name": "LiquidAI: LFM2.5-24B-A2B",
    "hf": "LiquidAI/LFM2.5-24B-A2B",
@@ -589,7 +578,7 @@
    "id": "minimax/minimax-m2.5",
    "name": "MiniMax: MiniMax M2.5",
    "hf": "MiniMaxAI/MiniMax-M2.5",
-   "context": 200000,
+   "context": 198000,
    "created": 1770908502,
    "open": true,
    "params_b": 228.7,
@@ -2192,17 +2181,6 @@
    "moe": false
   },
   {
-   "id": "apodex/apodex-1.1-mini",
-   "name": "Apodex: Apodex 1.1 Mini",
-   "hf": null,
-   "context": 262144,
-   "created": 1790875335,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "openrouter/auto-code",
    "name": "Auto Code",
    "hf": null,
@@ -2681,28 +2659,6 @@
    "hf": null,
    "context": 131072,
    "created": 1781754054,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inclusionai/ling-3.0-flash-fin",
-   "name": "inclusionAI: Ling 3.0 Flash Fin",
-   "hf": null,
-   "context": 262144,
-   "created": 1787846290,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "inclusionai/ling-3.0-flash-sante",
-   "name": "inclusionAI: Ling 3.0 Flash Sante",
-   "hf": null,
-   "context": 262144,
-   "created": 1788545946,
    "open": false,
    "params_b": null,
    "params_source": null,
