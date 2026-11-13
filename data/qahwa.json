@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-12T20:37:00+04:00",
+  "generated_at": "2026-11-13T07:47:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10019,6 +10019,76 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-12T20:37:00+04:00",
       "cover": "images/qahwa/week-07-day-43--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-06-day-42--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 6,
+      "topic": "quiz",
+      "title": {
+        "en": "Which is the best way to compare two AI chips?",
+        "ar": "ما أفضل طريقة لمقارنة شريحتي ذكاء اصطناعي؟"
+      },
+      "summary": {
+        "en": "Answer: How should you compare two AI chips?",
+        "ar": "الجواب: كيف تقارن شريحتي ذكاء اصطناعي؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which is the ==best way to compare== two AI chips?",
+            "body": "Answer: Use several factors ✅ memory, bandwidth, precision, software, power and the real workload."
+          },
+          "ar": {
+            "title": "ما ==أفضل طريقة لمقارنة== شريحتي ذكاء اصطناعي؟",
+            "body": "الجواب: استخدم عدة عوامل ✅ الذاكرة وعرض النطاق والدقة والبرمجيات والطاقة والمهمة الفعلية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-13T07:45:00+04:00",
+      "cover": "images/qahwa/week-06-day-42--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-43--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows today's ticket prices.",
+        "ar": "المساعد الذكي يعرف أسعار التذاكر اليوم"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant knows ==today's ticket prices==.",
+            "body": "Answer: Myth ❌ Prices change by the hour, and even an assistant that browses the web can show you an old number. Check the airline or hotel site before you book."
+          },
+          "ar": {
+            "title": "المساعد الذكي يعرف ==أسعار التذاكر اليوم==",
+            "body": "الجواب: خرافة ❌ الأسعار تتغيّر كل ساعة، وحتى المساعد الذي يتصفّح الإنترنت قد يعرض لك رقماً قديماً. راجع موقع شركة الطيران أو الفندق قبل الحجز."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-13T07:47:00+04:00",
+      "cover": "images/qahwa/week-07-day-43--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
