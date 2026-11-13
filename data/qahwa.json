@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-13T13:02:00+04:00",
+  "generated_at": "2026-11-13T19:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10349,6 +10349,42 @@
       "permalink": "https://www.instagram.com/p/DfrQxCJEdSN/",
       "published_at": "2026-11-13T13:02:00+04:00",
       "cover": "images/qahwa/week-07-day-46--1-learn-lesson-34.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-44--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows what's inside the product I buy.",
+        "ar": "المساعد الذكي يعرف مكوّنات المنتج الذي أشتريه"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "المساعد الذكي يعرف ==مكوّنات المنتج== الذي أشتريه",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant knows ==what's inside the product== I buy.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-13T19:45:00+04:00",
+      "cover": "images/qahwa/week-07-day-44--3-check-story.webp",
       "related_concepts": []
     }
   ]
