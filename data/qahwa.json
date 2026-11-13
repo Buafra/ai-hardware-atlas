@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-13T08:03:00+04:00",
+  "generated_at": "2026-11-13T13:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10207,6 +10207,10 @@
           },
           "en": {
             "title": "Save this before ==next month's salary=="
+          },
+          "next": {
+            "ar": "الدرس 34: افهم قبل أن توقّع",
+            "en": "Lesson 34: Understand it before you sign"
           }
         }
       ],
@@ -10218,6 +10222,133 @@
       "permalink": "https://www.instagram.com/p/Dfqul_Kikh3/",
       "published_at": "2026-11-13T08:03:00+04:00",
       "cover": "images/qahwa/week-07-day-45--1-learn-lesson-33.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-46--1-learn-lesson-34",
+      "kind": "lesson",
+      "lesson": 34,
+      "code": "L34",
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "Understand it before you sign",
+        "ar": "افهم قبل أن توقّع"
+      },
+      "summary": {
+        "en": "Paste the clause or photograph the bill, ask for a plain-language explanation, then ask: what here could cost me more than I expect?",
+        "ar": "الصق نص البند أو صوّر الفاتورة، واطلب شرحاً بلغة بسيطة، ثم اسأل: ما الذي قد يكلّفني أكثر مما أتوقّع؟"
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "افهم ==قبل أن توقّع==",
+            "body": "فاتورة، أو بند في عقد، أو عرض جديد."
+          },
+          "en": {
+            "title": "Understand it ==before you sign==",
+            "body": "A bill, a clause in a contract, or a new offer."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "كيف ==تستخدمه==؟",
+            "body": "الصق نص البند أو صوّر الفاتورة، واطلب شرحاً بلغة بسيطة، ثم اسأل: ما الذي قد يكلّفني أكثر مما أتوقّع؟"
+          },
+          "en": {
+            "title": "How to ==use it==",
+            "body": "Paste the clause or photograph the bill, ask for a plain-language explanation, then ask: what here could cost me more than I expect?"
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اسأل هذه الأسئلة",
+            "items": [
+              "ما مدة الالتزام وكيف أُنهيه؟",
+              "ما الرسوم غير الواضحة؟",
+              "ماذا يحدث إن تأخّرت في الدفع؟",
+              "ما الذي لا يشمله العرض؟"
+            ]
+          },
+          "en": {
+            "title": "Ask these questions",
+            "items": [
+              "How long am I committed, and how do I exit?",
+              "Which fees are not clear?",
+              "What happens if I pay late?",
+              "What is not included in the offer?"
+            ]
+          },
+          "note": {
+            "ar": "تأكّد من الأرقام والشروط في المستند الرسمي نفسه.",
+            "en": "Confirm the numbers and terms in the official document itself."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "أخفِ ==ما لا يلزم==",
+            "body": "قبل أن ترفع أي مستند أو صورة، احذف أو غطِّ الاسم ورقم الحساب ورقم الهوية. يكفي نص البند نفسه."
+          },
+          "en": {
+            "title": "Hide ==what isn't needed==",
+            "body": "Before you upload a document or photo, remove or cover the name, the account number and the ID number. The clause text is enough."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "==اقرأ القائمة== قبل أن تطلب",
+            "body": "تسأل عن السعر والإضافات قبل الطلب، لا بعد أن تصل الفاتورة إلى الطاولة."
+          },
+          "en": {
+            "title": "==Read the menu== before you order",
+            "body": "You ask about the price and the extras first, not after the bill arrives at the table."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "أنا في [الدولة]. اشرح هذا البند بلغة بسيطة: [الصق نص البند]. اذكر ما قد يضرّني، واكتب خمسة أسئلة قبل التوقيع. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "I am in [country]. Explain this clause simply: [paste the clause]. Flag what could hurt me, and five questions to ask before I sign. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "شرح المساعد الذكي يغنيني عن المحامي.",
+            "fact": "الشرح يساعدك على الفهم وعلى صياغة أسئلتك، لكنه ليس استشارة قانونية. في الالتزامات الكبيرة استعن بمختص."
+          },
+          "en": {
+            "myth": "An AI explanation saves me from hiring a lawyer.",
+            "fact": "It helps you understand and write better questions, but it is not legal advice. For big commitments, get a professional."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==أي توقيع قادم=="
+          },
+          "en": {
+            "title": "Save this before ==your next signature=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "I am in [country]. Explain this clause simply: [paste the clause]. Flag what could hurt me, and five questions to ask before I sign. Answer in my language.",
+        "ar": "أنا في [الدولة]. اشرح هذا البند بلغة بسيطة: [الصق نص البند]. اذكر ما قد يضرّني، واكتب خمسة أسئلة قبل التوقيع. أجب بلغتي.",
+        "code": "L34"
+      },
+      "permalink": "https://www.instagram.com/p/DfrQxCJEdSN/",
+      "published_at": "2026-11-13T13:02:00+04:00",
+      "cover": "images/qahwa/week-07-day-46--1-learn-lesson-34.webp",
       "related_concepts": []
     }
   ]
