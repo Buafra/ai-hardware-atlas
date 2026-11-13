@@ -1,8 +1,6 @@
 {
-  "at": "2026-11-12T18:26:05+00:00",
-  "created": [
-    "AMD Instinct MI450X"
-  ],
+  "at": "2026-11-13T02:46:01+00:00",
+  "created": [],
   "waiting": [],
   "in_pull_request": [
     "NVIDIA Vera Rubin NVL72",
@@ -12,9 +10,9 @@
     3
   ],
   "usage": {
-    "requests": 1,
-    "input_tokens": 5627,
-    "output_tokens": 327,
-    "estimated_usd": 0.0145
+    "requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_usd": 0.0
   }
 }
