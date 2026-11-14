@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T20:20:00+04:00",
+  "generated_at": "2026-11-14T21:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10796,6 +10796,76 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-14T20:20:00+04:00",
       "cover": "images/qahwa/week-07-day-47--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-48--3-challenge-story",
+      "kind": "challenge",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "challenge",
+      "title": {
+        "en": "Add up your subscriptions",
+        "ar": "اجمع اشتراكاتك"
+      },
+      "summary": {
+        "en": "And see what they cost you in a year.",
+        "ar": "واعرف كم تكلّفك في السنة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "تحدّي الأسبوع: ==اجمع اشتراكاتك==",
+            "body": "واعرف كم تكلّفك في السنة."
+          },
+          "en": {
+            "title": "Weekly challenge: ==add up your subscriptions==",
+            "body": "And see what they cost you in a year."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "الخطوات",
+            "items": [
+              "اكتب اشتراكاتك الشهرية وأسعارها",
+              "انسخ الأمر في الشاشة التالية",
+              "ألغِ اشتراكاً لم تستخدمه هذا الشهر",
+              "لا تكتب أرقام بطاقتك أو حسابك"
+            ]
+          },
+          "en": {
+            "title": "How to play",
+            "items": [
+              "List your monthly subscriptions and prices",
+              "Copy the prompt on the next screen",
+              "Cancel one you haven't used this month",
+              "Never type your card or account numbers"
+            ]
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "انسخ هذا الأمر",
+            "prompt": "هذه اشتراكاتي الشهرية: [اكتب الاشتراكات وأسعارها]. احسب المجموع الشهري والسنوي، وابدأ بالأغلى. أجب بلغتي."
+          },
+          "en": {
+            "title": "Copy this prompt",
+            "prompt": "My monthly subscriptions: [list them with prices]. Give the monthly and yearly total, most expensive first. Answer in my language."
+          }
+        }
+      ],
+      "prompt": {
+        "en": "My monthly subscriptions: [list them with prices]. Give the monthly and yearly total, most expensive first. Answer in my language.",
+        "ar": "هذه اشتراكاتي الشهرية: [اكتب الاشتراكات وأسعارها]. احسب المجموع الشهري والسنوي، وابدأ بالأغلى. أجب بلغتي.",
+        "code": "C7"
+      },
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-14T21:01:00+04:00",
+      "cover": "images/qahwa/week-07-day-48--3-challenge-story.webp",
       "related_concepts": []
     }
   ]
