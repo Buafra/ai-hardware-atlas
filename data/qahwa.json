@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T07:50:00+04:00",
+  "generated_at": "2026-11-14T09:29:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10338,6 +10338,10 @@
           },
           "en": {
             "title": "Save this before ==your next signature=="
+          },
+          "next": {
+            "ar": "الدرس 35: خياران والقرار لك",
+            "en": "Lesson 35: Two options, your call"
           }
         }
       ],
@@ -10491,6 +10495,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-14T07:50:00+04:00",
       "cover": "images/qahwa/week-07-day-45--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-47--1-learn-lesson-35",
+      "kind": "lesson",
+      "lesson": 35,
+      "code": "L35",
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "Two options, your call",
+        "ar": "خياران والقرار لك"
+      },
+      "summary": {
+        "en": "Before you ask, write down what actually matters: price, how long it lasts, distance, warranty. Then rank them from most to least important.",
+        "ar": "قبل أن تسأل، اكتب ما يهمّك فعلاً: السعر، وطول العمر، والمسافة، والضمان. ثم رتّبها من الأهم إلى الأقل أهمية."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "خياران ==والقرار لك==",
+            "body": "موبايلان، أو باقتان، أو شقتان."
+          },
+          "en": {
+            "title": "Two options, ==your call==",
+            "body": "Two phones, two plans, or two flats."
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "ابدأ ==بمعاييرك أنت==",
+            "body": "قبل أن تسأل، اكتب ما يهمّك فعلاً: السعر، وطول العمر، والمسافة، والضمان. ثم رتّبها من الأهم إلى الأقل أهمية."
+          },
+          "en": {
+            "title": "Start with ==your own criteria==",
+            "body": "Before you ask, write down what actually matters: price, how long it lasts, distance, warranty. Then rank them from most to least important."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "اطلب منه هذه",
+            "items": [
+              "جدول مقارنة حسب معاييري",
+              "أكبر عيب في كل خيار",
+              "المعلومات الناقصة التي أحتاجها"
+            ]
+          },
+          "en": {
+            "title": "Ask it for these",
+            "items": [
+              "A comparison table on my criteria",
+              "The biggest drawback of each",
+              "What information is still missing"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "وتأكّد أنت من هذه",
+            "items": [
+              "المواصفات من الموقع الرسمي",
+              "السعر والعرض الساري اليوم",
+              "شروط الضمان والإرجاع",
+              "رأي من جرّب الخيارين"
+            ]
+          },
+          "en": {
+            "title": "And confirm these yourself",
+            "items": [
+              "The specs, from the official site",
+              "Today's price and today's offer",
+              "Warranty and return terms",
+              "Views from people who tried both"
+            ]
+          },
+          "note": {
+            "ar": "قد يخلط بين إصدارات المنتج وأجياله.",
+            "en": "It can mix up product versions and generations."
+          }
+        },
+        {
+          "type": "coffee",
+          "ar": {
+            "title": "الباريستا ==لا يشرب قهوتك==",
+            "body": "يشرح لك الفرق بين نوعَي البن، وقد يقترح أحدهما، لكن الفنجان فنجانك والاختيار اختيارك."
+          },
+          "en": {
+            "title": "The barista ==doesn't drink your coffee==",
+            "body": "He explains the difference between the two kinds of beans and may suggest one, but the cup is yours and so is the choice."
+          }
+        },
+        {
+          "type": "prompt",
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "قارن [الخيار أ] و[الخيار ب] حسب [معاييري]، مع عيوب كل خيار. اسألني عن الناقص سؤالاً وانتظر إجابتي، ولا تختر عني. أجب بلغتي."
+          },
+          "en": {
+            "title": "Try it now",
+            "prompt": "Compare [option A] and [option B] on [my criteria], with their drawbacks. Ask what's missing one at a time; wait for my answer. Don't choose for me. Answer in my language."
+          }
+        },
+        {
+          "type": "mythfact",
+          "ar": {
+            "myth": "يكفي أن أسأله: أيّهما أفضل؟",
+            "fact": "سيعطيك جواباً واثقاً حتى لو لم تخبره بميزانيتك ولا ظروفك. اطلب منه المقارنة والمعلومات الناقصة، ويبقى القرار لك."
+          },
+          "en": {
+            "myth": "I'll just ask it: which one is better?",
+            "fact": "It will answer confidently even if you haven't told it your budget or your situation. Ask it for the comparison and the missing information, and keep the decision yours."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الدرس قبل ==قرارك القادم=="
+          },
+          "en": {
+            "title": "Save this before ==your next decision=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Compare [option A] and [option B] on [my criteria], with their drawbacks. Ask what's missing one at a time; wait for my answer. Don't choose for me. Answer in my language.",
+        "ar": "قارن [الخيار أ] و[الخيار ب] حسب [معاييري]، مع عيوب كل خيار. اسألني عن الناقص سؤالاً وانتظر إجابتي، ولا تختر عني. أجب بلغتي.",
+        "code": "L35"
+      },
+      "permalink": "https://www.instagram.com/p/DftdPlgClam/",
+      "published_at": "2026-11-14T09:29:00+04:00",
+      "cover": "images/qahwa/week-07-day-47--1-learn-lesson-35.webp",
       "related_concepts": []
     }
   ]
