@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T13:02:00+04:00",
+  "generated_at": "2026-11-14T19:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10724,6 +10724,42 @@
       "permalink": "https://www.instagram.com/p/Dft1kQwEd9_/",
       "published_at": "2026-11-14T13:02:00+04:00",
       "cover": "images/qahwa/week-07-day-49--1-recap-carousel.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-46--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant can explain contracts in plain words.",
+        "ar": "يستطيع المساعد الذكي تبسيط لغة العقود"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "ar": {
+            "title": "يستطيع المساعد الذكي ==تبسيط لغة العقود==",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "An AI assistant can ==explain contracts in plain words==.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-14T19:45:00+04:00",
+      "cover": "images/qahwa/week-07-day-46--3-check-story.webp",
       "related_concepts": []
     }
   ]
