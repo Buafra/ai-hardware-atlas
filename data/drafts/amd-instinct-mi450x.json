@@ -1,0 +1,35 @@
+{
+  "vendor": "AMD",
+  "model": "AMD Instinct MI450X",
+  "level": "Rack scale",
+  "type": "GPU",
+  "architecture": "AMD flexible compute architecture (MI400 Series)",
+  "memory": "288 GB HBM4",
+  "memory_gb": 288.0,
+  "memory_scope": "Per GPU",
+  "announcement": "2026-11-12",
+  "release": null,
+  "release_kind": "Not established",
+  "power_w": null,
+  "use": "AI inference on AMD Helios racks",
+  "notes": "MI450X is a new MI400 Series option for AMD Helios with the same core compute, memory bandwidth and connectivity as MI455X but less memory. The page gives no availability date or power figure.",
+  "id": "amd-instinct-mi450x",
+  "source_reviewed": null,
+  "power_note": "Not documented in this edition",
+  "sources": [
+    {
+      "label": "Announcement",
+      "url": "https://newsroom.amd.com/news/amd-advances-instinct-mi400-series-ai-scientific-computing/"
+    }
+  ],
+  "_draft": {
+    "model": "claude-sonnet-5-5",
+    "created_at": "2026-11-12T18:26:05+00:00",
+    "source_url": "https://newsroom.amd.com/news/amd-advances-instinct-mi400-series-ai-scientific-computing/",
+    "evidence": [
+      "AMD is expanding the AMD Instinct MI400 Series portfolio with the new AMD Instinct MI450X GPU",
+      "MI450X offers 288 GB of HBM4 memory per GPU",
+      "Published November 12, 2026 at 8:00 AM CST"
+    ]
+  }
+}
