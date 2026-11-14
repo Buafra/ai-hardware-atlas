@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T09:29:00+04:00",
+  "generated_at": "2026-11-14T13:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10630,6 +10630,100 @@
       "permalink": "https://www.instagram.com/p/DftdPlgClam/",
       "published_at": "2026-11-14T09:29:00+04:00",
       "cover": "images/qahwa/week-07-day-47--1-learn-lesson-35.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-49--1-recap-carousel",
+      "kind": "recap",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "recap",
+      "title": {
+        "en": "Life and money",
+        "ar": "حياتك ومالك"
+      },
+      "summary": {
+        "en": "An AI assistant speeds up sorting, comparing and explaining. Numbers, times and terms you check at the official source before you pay or sign.",
+        "ar": "المساعد الذكي يسرّع الترتيب والمقارنة والشرح. أما الأرقام والمواعيد والشروط فتراجعها في مصدرها الرسمي قبل أن تدفع أو توقّع."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "ar": {
+            "title": "حياتك ومالك ==في بطاقات==",
+            "body": "خمسة دروس، راجعها مع قهوتك."
+          },
+          "en": {
+            "title": "Your life and money ==in a few cards==",
+            "body": "Five lessons, to review with your coffee."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (1)",
+            "items": [
+              "الرحلة: خطة يوماً بيوم، والتحقّق عليك",
+              "البيت: وجبات وتسوّق ووقت الأطفال",
+              "الميزانية: ترتيب لأرقامك لا نصيحة مالية"
+            ]
+          },
+          "en": {
+            "title": "What we learned (1)",
+            "items": [
+              "Trip: a day-by-day plan, you verify it",
+              "Home: meals, shopping and the kids' time",
+              "Budget: organizing numbers, not advice"
+            ]
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما تعلّمناه (2)",
+            "items": [
+              "العقود: اطلب شرحاً بسيطاً وأسئلة",
+              "القرار: قارن بمعاييرك، ثم اختر أنت",
+              "أخفِ بياناتك الشخصية قبل الرفع",
+              "راجع الأسعار والأوقات والشروط بنفسك"
+            ]
+          },
+          "en": {
+            "title": "What we learned (2)",
+            "items": [
+              "Contracts: ask for plain words and questions",
+              "Decisions: compare on your criteria, then choose",
+              "Hide your personal details before uploading",
+              "Check prices, times and terms yourself"
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "القاعدة ==الذهبية==",
+            "body": "المساعد الذكي يسرّع الترتيب والمقارنة والشرح. أما الأرقام والمواعيد والشروط فتراجعها في مصدرها الرسمي قبل أن تدفع أو توقّع."
+          },
+          "en": {
+            "title": "The ==golden rule==",
+            "body": "An AI assistant speeds up sorting, comparing and explaining. Numbers, times and terms you check at the official source before you pay or sign."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "احفظ الملخص ==وابدأ بخطوة واحدة=="
+          },
+          "en": {
+            "title": "Save the recap ==and start with one step=="
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/Dft1kQwEd9_/",
+      "published_at": "2026-11-14T13:02:00+04:00",
+      "cover": "images/qahwa/week-07-day-49--1-recap-carousel.webp",
       "related_concepts": []
     }
   ]
