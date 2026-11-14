@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-13T20:20:00+04:00",
+  "generated_at": "2026-11-14T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10421,6 +10421,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-13T20:20:00+04:00",
       "cover": "images/qahwa/week-07-day-45--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-44--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant knows what's inside the product I buy.",
+        "ar": "المساعد الذكي يعرف مكوّنات المنتج الذي أشتريه"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant knows ==what's inside the product== I buy.",
+            "body": "Answer: Myth ❌ It can't see the package in your hand, and ingredients differ between countries and versions. Read the label yourself, especially if someone at home has an allergy."
+          },
+          "ar": {
+            "title": "المساعد الذكي يعرف ==مكوّنات المنتج== الذي أشتريه",
+            "body": "الجواب: خرافة ❌ هو لا يرى العبوة التي بين يديك، والمكوّنات تختلف بين البلدان والإصدارات. اقرأ الملصق بنفسك، خاصة إن كان في البيت حساسية."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-14T07:45:00+04:00",
+      "cover": "images/qahwa/week-07-day-44--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
