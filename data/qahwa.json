@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T07:45:00+04:00",
+  "generated_at": "2026-11-14T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10456,6 +10456,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-14T07:45:00+04:00",
       "cover": "images/qahwa/week-07-day-44--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-45--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant never gets the math wrong.",
+        "ar": "المساعد الذكي لا يخطئ في الحساب"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "An AI assistant ==never gets the math wrong==.",
+            "body": "Answer: Myth ❌ It can add wrong or drop a line, even when the numbers look tidy. Check the total yourself, or ask it to show its work."
+          },
+          "ar": {
+            "title": "المساعد الذكي ==لا يخطئ في الحساب==",
+            "body": "الجواب: خرافة ❌ قد يخطئ في الجمع أو يهمل بنداً، حتى وإن بدت الأرقام مرتّبة. راجع المجموع بنفسك، أو اطلب منه أن يعرض خطوات الحساب."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-14T07:50:00+04:00",
+      "cover": "images/qahwa/week-07-day-45--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
