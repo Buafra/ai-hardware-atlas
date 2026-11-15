@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-15T13:10:00+04:00",
+  "generated_at": "2026-11-15T19:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11027,6 +11027,43 @@
       "permalink": "https://www.instagram.com/p/DfwbWfakWHA/",
       "published_at": "2026-11-15T13:10:00+04:00",
       "cover": "images/qahwa/week-08-day-50--1-learn-lesson-36.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-49--3-quiz-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these can you not rely on an AI assistant for?",
+        "ar": "أيّ هذه لا تعتمد فيه على المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Which one can't you rely on?",
+        "ar": "أين لا تعتمد على المساعد الذكي؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "quiz",
+          "ar": {
+            "title": "أيّ هذه ==لا تعتمد فيه== على المساعد الذكي؟",
+            "hint": "اختر من الخيارات",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Which of these can you ==not rely on== an AI assistant for?",
+            "hint": "Pick an answer",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-15T19:45:00+04:00",
+      "cover": "images/qahwa/week-07-day-49--3-quiz-story.webp",
       "related_concepts": []
     }
   ]
