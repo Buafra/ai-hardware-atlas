@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-14T21:01:00+04:00",
+  "generated_at": "2026-11-15T13:01:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10866,6 +10866,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-14T21:01:00+04:00",
       "cover": "images/qahwa/week-07-day-48--3-challenge-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-50--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Why Mac memory matters for AI",
+        "ar": "لماذا ذاكرة Mac مهمة للـAI؟"
+      },
+      "summary": {
+        "en": "64 GB unified memory ≠ 64 GB GPU VRAM",
+        "ar": "ذاكرة موحّدة بسعة 64 GB ≠ VRAM بسعة 64 GB"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "64 GB unified memory ==≠ 64 GB GPU VRAM=="
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 64 GB ==≠ VRAM بسعة 64 GB=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain Apple unified memory for local AI in 3 simple points.",
+        "ar": "اشرح ذاكرة Apple الموحّدة للـAI المحلي في 3 نقاط بسيطة.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/DfwaOkLq8cd/",
+      "published_at": "2026-11-15T13:01:00+04:00",
+      "cover": "images/qahwa/week-08-day-50--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
