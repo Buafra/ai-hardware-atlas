@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-15T13:01:00+04:00",
+  "generated_at": "2026-11-15T13:10:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -10903,6 +10903,130 @@
       "permalink": "https://www.instagram.com/reel/DfwaOkLq8cd/",
       "published_at": "2026-11-15T13:01:00+04:00",
       "cover": "images/qahwa/week-08-day-50--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-50--1-learn-lesson-36",
+      "kind": "lesson",
+      "lesson": 36,
+      "code": "L36",
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Why unified memory matters",
+        "ar": "لماذا تهم الذاكرة الموحّدة؟"
+      },
+      "summary": {
+        "en": "On Apple silicon, the CPU and GPU can access the same high-bandwidth memory pool instead of using separate system RAM and dedicated GPU VRAM.",
+        "ar": "في Apple silicon يمكن للـCPU والـGPU الوصول إلى ذاكرة واحدة مشتركة عالية السرعة بدل الفصل بين RAM النظام وVRAM المخصصة."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Why do Macs interest ==local-AI users?==",
+            "body": "One big reason: unified memory."
+          },
+          "ar": {
+            "title": "لماذا تجذب أجهزة Mac ==مستخدمي AI المحلي؟==",
+            "body": "سبب مهم: الذاكرة الموحّدة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What is unified memory?",
+            "body": "On Apple silicon, the CPU and GPU can access ==the same high-bandwidth memory pool== instead of using separate system RAM and dedicated GPU VRAM."
+          },
+          "ar": {
+            "title": "ما هي الذاكرة الموحّدة؟",
+            "body": "في Apple silicon يمكن للـCPU والـGPU الوصول إلى ==ذاكرة واحدة مشتركة عالية السرعة== بدل الفصل بين RAM النظام وVRAM المخصصة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why can that help AI?",
+            "body": "Large local models are often limited by memory capacity. A large unified pool can let the GPU work with models that ==would not fit== in a smaller discrete-GPU VRAM pool."
+          },
+          "ar": {
+            "title": "لماذا تفيد AI؟",
+            "body": "النماذج المحلية الكبيرة غالباً محدودة بسعة الذاكرة. الذاكرة الموحّدة الكبيرة قد تسمح للـGPU بالتعامل مع نماذج ==لا تتسع== في VRAM أصغر."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "But unified memory ==is not magic==",
+            "body": "Capacity helps models fit, but performance still depends on memory bandwidth, GPU compute, software support, model format and quantization (how compactly the model's numbers are stored)."
+          },
+          "ar": {
+            "title": "لكنها ==ليست سحراً==",
+            "body": "السعة تساعد النموذج على أن يتسع، لكن الأداء يعتمد أيضاً على عرض النطاق وقوة GPU والبرمجيات وصيغة النموذج ودرجة ضغطه (Quantization)."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What is MLX?",
+            "body": "MLX is an Apple machine-learning framework designed for Apple silicon. It is built around the unified-memory model so CPU and GPU can work on the same arrays ==without explicit copies==."
+          },
+          "ar": {
+            "title": "ما هو MLX؟",
+            "body": "MLX إطار تعلم آلي من Apple مصمم لـApple silicon ويستفيد من الذاكرة الموحّدة، بحيث يعمل CPU وGPU على البيانات نفسها ==دون نسخ صريح بينهما==."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Separate RAM and VRAM = ==two work counters==",
+            "body": "Apple unified memory is one shared counter that both the CPU and GPU can reach."
+          },
+          "ar": {
+            "title": "RAM وVRAM منفصلتان = ==طاولتا عمل منفصلتان==",
+            "body": "الذاكرة الموحّدة في Apple مثل طاولة واحدة مشتركة يصل إليها CPU وGPU."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "64 GB unified memory is exactly the same as a 64 GB discrete GPU.",
+            "fact": "The number may match, but macOS and your open apps share that memory, and bandwidth, compute and software differ."
+          },
+          "ar": {
+            "myth": "ذاكرة موحّدة بسعة 64 GB هي تماماً مثل كرت شاشة بسعة 64 GB.",
+            "fact": "قد يتشابه الرقم، لكن النظام والتطبيقات المفتوحة تتقاسم هذه الذاكرة، ويختلف عرض النطاق والمعالجة والبرمجيات."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "Explain how unified memory changes local LLM sizing on Apple silicon compared with a PC that has separate RAM and VRAM."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "اشرح كيف تغيّر الذاكرة الموحّدة اختيار حجم النموذج اللغوي الكبير المحلي على Apple silicon مقارنة بجهاز لديه RAM وVRAM منفصلتان."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Capacity is ==only one part of performance=="
+          },
+          "ar": {
+            "title": "السعة ==ليست العامل الوحيد في الأداء=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Explain how unified memory changes local LLM sizing on Apple silicon compared with a PC that has separate RAM and VRAM.",
+        "ar": "اشرح كيف تغيّر الذاكرة الموحّدة اختيار حجم النموذج اللغوي الكبير المحلي على Apple silicon مقارنة بجهاز لديه RAM وVRAM منفصلتان.",
+        "code": "L36"
+      },
+      "permalink": "https://www.instagram.com/p/DfwbWfakWHA/",
+      "published_at": "2026-11-15T13:10:00+04:00",
+      "cover": "images/qahwa/week-08-day-50--1-learn-lesson-36.webp",
       "related_concepts": []
     }
   ]
