@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-15T02:00:38+00:00",
+ "updated_at": "2026-11-15T17:13:25+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1268,17 +1268,6 @@
    "moe": true
   },
   {
-   "id": "qwen/qwen3-vl-30b-a3b-thinking",
-   "name": "Qwen: Qwen3 VL 30B A3B Thinking",
-   "hf": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-   "context": 262144,
-   "created": 1759794479,
-   "open": true,
-   "params_b": 31.07,
-   "params_source": "huggingface",
-   "moe": true
-  },
-  {
    "id": "qwen/qwen3-vl-8b-instruct",
    "name": "Qwen: Qwen3 VL 8B Instruct",
    "hf": "Qwen/Qwen3-VL-8B-Instruct",
@@ -1488,17 +1477,6 @@
    "moe": false
   },
   {
-   "id": "stepfun/step-3.5-flash",
-   "name": "StepFun: Step 3.5 Flash",
-   "hf": "stepfun-ai/Step-3.5-Flash",
-   "context": 262144,
-   "created": 1769728337,
-   "open": true,
-   "params_b": 199.38,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "stepfun/step-3.7-flash",
    "name": "StepFun: Step 3.7 Flash",
    "hf": "stepfun-ai/Step-3.7-Flash",
@@ -1519,17 +1497,6 @@
    "params_b": 604.34,
    "params_source": "huggingface",
    "moe": false
-  },
-  {
-   "id": "tencent/hunyuan-a13b-instruct",
-   "name": "Tencent: Hunyuan A13B Instruct",
-   "hf": "tencent/Hunyuan-A13B-Instruct",
-   "context": 131072,
-   "created": 1751987664,
-   "open": true,
-   "params_b": 80.39,
-   "params_source": "huggingface",
-   "moe": true
   },
   {
    "id": "tencent/hy-mt2-1.8b",
