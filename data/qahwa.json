@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T13:04:00+04:00",
+  "generated_at": "2026-11-16T19:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11439,6 +11439,42 @@
       "permalink": "https://www.instagram.com/p/Dfy_X0uiOcz/",
       "published_at": "2026-11-16T13:04:00+04:00",
       "cover": "images/qahwa/week-08-day-52--1-learn-lesson-38.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-50--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "64 GB unified memory is exactly the same as a 64 GB discrete GPU.",
+        "ar": "ذاكرة موحّدة بسعة 64 GB هي تماماً مثل كرت شاشة 64 GB."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "64 GB unified memory is ==exactly the same== as a 64 GB discrete GPU.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 64 GB ==هي تماماً مثل== كرت شاشة 64 GB.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-16T19:45:00+04:00",
+      "cover": "images/qahwa/week-08-day-50--3-check-story.webp",
       "related_concepts": []
     }
   ]
