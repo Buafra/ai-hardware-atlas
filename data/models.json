@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T02:05:46+00:00",
+ "updated_at": "2026-11-16T20:33:06+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -3831,6 +3831,17 @@
    "moe": false
   },
   {
+   "id": "qwen/qwen4-max",
+   "name": "Qwen: Qwen4 Max",
+   "hf": null,
+   "context": 1000000,
+   "created": 1794795526,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "relace/relace-apply-3",
    "name": "Relace: Relace Apply 3",
    "hf": null,
@@ -3990,6 +4001,17 @@
    "hf": null,
    "context": 256000,
    "created": 1779298123,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "tencent/hy4-flash",
+   "name": "Tencent: Hy4 flash",
+   "hf": null,
+   "context": 1048576,
+   "created": 1794838706,
    "open": false,
    "params_b": null,
    "params_source": null,
