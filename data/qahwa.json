@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T08:03:00+04:00",
+  "generated_at": "2026-11-16T13:04:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11304,6 +11304,141 @@
       "permalink": "https://www.instagram.com/p/Dfyc9DsiAn7/",
       "published_at": "2026-11-16T08:03:00+04:00",
       "cover": "images/qahwa/week-08-day-51--1-learn-lesson-37.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-52--1-learn-lesson-38",
+      "kind": "lesson",
+      "lesson": 38,
+      "code": "L38",
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "M5 Max vs M5 Ultra",
+        "ar": "M5 Max مقابل M5 Ultra"
+      },
+      "summary": {
+        "en": "Apple lists M5 Max Mac Studio with up to 128 GB unified memory and up to 614 GB/s memory bandwidth in the top configuration.",
+        "ar": "تذكر Apple أن Mac Studio مع M5 Max يأتي بذاكرة موحّدة تصل إلى 128 GB وعرض نطاق يصل إلى 614 GB/s في أعلى إعداد."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Up to ==512 GB unified memory== on a desktop",
+            "body": "Meet the 2026 Mac Studio."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة ==تصل إلى 512 GB== في جهاز مكتبي",
+            "body": "تعرّف على Mac Studio 2026."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "M5 Max",
+            "body": "Apple lists M5 Max Mac Studio with up to ==128 GB unified memory== and up to 614 GB/s memory bandwidth in the top configuration."
+          },
+          "ar": {
+            "title": "M5 Max",
+            "body": "تذكر Apple أن Mac Studio مع M5 Max يأتي بذاكرة موحّدة ==تصل إلى 128 GB== وعرض نطاق يصل إلى 614 GB/s في أعلى إعداد."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "M5 Ultra",
+            "body": "M5 Ultra can be configured up to ==512 GB unified memory== with 1.2 TB/s memory bandwidth — a major advantage for very large local workloads."
+          },
+          "ar": {
+            "title": "M5 Ultra",
+            "body": "يمكن إعداد M5 Ultra بذاكرة موحّدة ==تصل إلى 512 GB== مع عرض نطاق 1.2 TB/s — ميزة قوية جداً للأحمال المحلية الضخمة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Why does 512 GB matter?",
+            "body": "Very large models and long-context workloads can need far more memory than consumer GPUs provide. Capacity can let the workload ==fit entirely on one machine==."
+          },
+          "ar": {
+            "title": "لماذا تهم 512 GB؟",
+            "body": "النماذج الضخمة والسياقات الطويلة قد تحتاج ذاكرة أكبر بكثير مما توفره كروت الشاشة الاستهلاكية. السعة قد تسمح ==بتشغيل الحمل كاملاً على جهاز واحد==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "AI is not only the Neural Engine",
+            "body": "Local AI can use the GPU, Neural Engine and CPU depending on the software. For large LLM inference, ==the GPU and memory system== are especially important."
+          },
+          "ar": {
+            "title": "AI ليس Neural Engine فقط",
+            "body": "قد يستخدم AI المحلي الـGPU والـNeural Engine والـCPU حسب البرنامج. ولتشغيل النماذج اللغوية الكبيرة يكون ==GPU ونظام الذاكرة== مهمين بشكل خاص."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Connectivity",
+            "body": "Mac Studio includes Thunderbolt 5 and 10Gb Ethernet, useful for fast storage, networking and multi-system workflows."
+          },
+          "ar": {
+            "title": "التوصيلات",
+            "body": "يتضمن Mac Studio منفذ Thunderbolt 5 و10Gb Ethernet، وهي مفيدة للتخزين السريع والشبكات وربط عدة أجهزة."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Mac Studio is ==the large specialty café==",
+            "body": "More room behind the counter, more workers, and enough workspace for orders that smaller shops cannot handle."
+          },
+          "ar": {
+            "title": "Mac Studio مثل ==مقهى متخصص كبير==",
+            "body": "طاولة أكبر وفريق أكبر، ومساحة تكفي لطلبات لا تستطيع المقاهي الأصغر تلبيتها."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "512 GB unified memory means Mac Studio is automatically faster than every NVIDIA GPU.",
+            "fact": "It gives exceptional capacity, but speed still depends on compute, bandwidth, software, precision and workload."
+          },
+          "ar": {
+            "myth": "ذاكرة بسعة 512 GB تعني أن Mac Studio أسرع تلقائياً من كل GPU من NVIDIA.",
+            "fact": "السعة استثنائية، لكن السرعة تعتمد على المعالجة وعرض النطاق والبرمجيات والدقة والمهمة."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "Compare Mac Studio M5 Ultra 512 GB with a 96 GB professional NVIDIA GPU for local models: does the model fit in memory, and how fast does it actually run?"
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "قارن Mac Studio M5 Ultra بذاكرة 512 GB مع بطاقة NVIDIA احترافية بذاكرة 96 GB للنماذج المحلية: هل تتّسع الذاكرة للنموذج؟ وما سرعته الفعلية؟"
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Up to 512 GB — but ==not “fastest at everything”=="
+          },
+          "ar": {
+            "title": "حتى 512 GB — لكن ==ليس «الأسرع في كل شيء»=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Compare Mac Studio M5 Ultra 512 GB with a 96 GB professional NVIDIA GPU for local models: does the model fit in memory, and how fast does it actually run?",
+        "ar": "قارن Mac Studio M5 Ultra بذاكرة 512 GB مع بطاقة NVIDIA احترافية بذاكرة 96 GB للنماذج المحلية: هل تتّسع الذاكرة للنموذج؟ وما سرعته الفعلية؟",
+        "code": "L38"
+      },
+      "permalink": "https://www.instagram.com/p/Dfy_X0uiOcz/",
+      "published_at": "2026-11-16T13:04:00+04:00",
+      "cover": "images/qahwa/week-08-day-52--1-learn-lesson-38.webp",
       "related_concepts": []
     }
   ]
