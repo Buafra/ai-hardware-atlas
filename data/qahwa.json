@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T19:45:00+04:00",
+  "generated_at": "2026-11-16T20:20:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11475,6 +11475,42 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-16T19:45:00+04:00",
       "cover": "images/qahwa/week-08-day-50--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-51--3-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "All Mac mini models are equally good for large local AI models.",
+        "ar": "كل إصدارات Mac mini متساوية للنماذج المحلية الكبيرة."
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "en": {
+            "title": "All Mac mini models are ==equally good== for large local AI models.",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          },
+          "ar": {
+            "title": "كل إصدارات Mac mini ==متساوية== للنماذج المحلية الكبيرة.",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-16T20:20:00+04:00",
+      "cover": "images/qahwa/week-08-day-51--3-check-story.webp",
       "related_concepts": []
     }
   ]
