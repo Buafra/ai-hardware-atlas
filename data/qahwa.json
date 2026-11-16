@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-15T19:45:00+04:00",
+  "generated_at": "2026-11-16T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11064,6 +11064,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-15T19:45:00+04:00",
       "cover": "images/qahwa/week-07-day-49--3-quiz-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-46--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "An AI assistant can explain contracts in plain words.",
+        "ar": "يستطيع المساعد الذكي تبسيط لغة العقود"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "fact",
+          "en": {
+            "title": "An AI assistant can ==explain contracts in plain words==.",
+            "body": "Answer: Fact ✅ It is good at turning dense wording into plain language and shaping your questions. It can still miss a clause, and it is no substitute for a professional on big commitments."
+          },
+          "ar": {
+            "title": "يستطيع المساعد الذكي ==تبسيط لغة العقود==",
+            "body": "الجواب: حقيقة ✅ يجيد تحويل الصياغات المعقّدة إلى لغة بسيطة ويساعدك على صياغة أسئلتك. لكنه قد يغفل بنداً، وليس بديلاً عن مختص في الالتزامات الكبيرة."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-16T07:45:00+04:00",
+      "cover": "images/qahwa/week-07-day-46--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
