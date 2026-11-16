@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T07:50:00+04:00",
+  "generated_at": "2026-11-16T08:03:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11169,6 +11169,141 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-16T07:50:00+04:00",
       "cover": "images/qahwa/week-07-day-49--3-quiz-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-51--1-learn-lesson-37",
+      "kind": "lesson",
+      "lesson": 37,
+      "code": "L37",
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "Tiny desktop, useful AI box",
+        "ar": "جهاز صغير يمكن أن يصبح جهاز AI دائم التشغيل"
+      },
+      "summary": {
+        "en": "The 2026 Mac mini is offered with Apple M6 or M5 Pro. M6 targets compact everyday AI and agentic workflows; M5 Pro adds more CPU/GPU performance and more memory headroom.",
+        "ar": "إصدار 2026 يأتي مع Apple M6 أو M5 Pro. شريحة M6 مناسبة للـAI اليومي والوكلاء، بينما M5 Pro تضيف قوة أكبر ومساحة ذاكرة أوسع."
+      },
+      "slides": [
+        {
+          "type": "cover",
+          "en": {
+            "title": "Can a Mac mini be ==an AI machine?==",
+            "body": "Yes — but choose the chip and memory for the job."
+          },
+          "ar": {
+            "title": "هل يمكن أن يكون Mac mini ==جهاز AI؟==",
+            "body": "نعم — لكن اختر الشريحة والذاكرة حسب المهمة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Current Mac mini lineup",
+            "body": "The 2026 Mac mini is offered with ==Apple M6 or M5 Pro==. M6 targets compact everyday AI and agentic workflows; M5 Pro adds more CPU/GPU performance and more memory headroom."
+          },
+          "ar": {
+            "title": "تشكيلة Mac mini الحالية",
+            "body": "إصدار 2026 يأتي مع ==Apple M6 أو M5 Pro==. شريحة M6 مناسبة للـAI اليومي والوكلاء، بينما M5 Pro تضيف قوة أكبر ومساحة ذاكرة أوسع."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Memory options matter",
+            "body": "M6 is configurable up to ==32 GB== unified memory. M5 Pro can be configured up to ==64 GB==. For local LLMs, memory capacity often matters more than benchmark speed."
+          },
+          "ar": {
+            "title": "خيارات الذاكرة مهمة",
+            "body": "يمكن إعداد M6 بذاكرة موحّدة تصل إلى ==32 GB==، وM5 Pro بذاكرة تصل إلى ==64 GB==. وفي النماذج اللغوية الكبيرة المحلية، السعة غالباً أهم من رقم السرعة."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Connectivity for an always-on box",
+            "body": "The new Mac mini includes 2.5Gb Ethernet, with 10Gb Ethernet configurable. M5 Pro also adds Thunderbolt 5."
+          },
+          "ar": {
+            "title": "توصيلات مناسبة لجهاز دائم التشغيل",
+            "body": "Mac mini الجديد يتضمن 2.5Gb Ethernet مع خيار 10Gb، وتضيف نسخة M5 Pro منفذ Thunderbolt 5."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "What can it do?",
+            "body": "Run local chat models, embeddings, transcription, lightweight image workflows, coding agents and home AI services — ==depending on model size and software==."
+          },
+          "ar": {
+            "title": "ماذا يمكن أن يفعل؟",
+            "body": "تشغيل نماذج محادثة محلية وEmbeddings وتحويل الصوت إلى نص وأعمال صور خفيفة ووكلاء برمجة وخدمات AI منزلية — ==حسب حجم النموذج والبرمجيات==."
+          }
+        },
+        {
+          "type": "text",
+          "en": {
+            "title": "Where are the limits?",
+            "body": "The small enclosure is efficient, but memory is ==not upgradeable later== and the GPU ecosystem differs from CUDA. Buy enough memory for the lifetime of the machine."
+          },
+          "ar": {
+            "title": "ما الحدود؟",
+            "body": "الجهاز صغير وكفؤ، لكن الذاكرة ==لا يمكن ترقيتها لاحقاً== ومنظومة GPU تختلف عن CUDA. اشترِ سعة تكفيك طوال عمر الجهاز."
+          }
+        },
+        {
+          "type": "coffee",
+          "en": {
+            "title": "Mac mini is ==the compact coffee kiosk==",
+            "body": "Small, quiet and always ready — but you must choose the counter size before you buy it."
+          },
+          "ar": {
+            "title": "Mac mini مثل ==كشك قهوة صغير==",
+            "body": "صغير وهادئ ودائم الجاهزية — لكن عليك اختيار مساحة الطاولة قبل الشراء."
+          }
+        },
+        {
+          "type": "mythfact",
+          "en": {
+            "myth": "All Mac mini models are equally good for large local LLMs.",
+            "fact": "Chip, unified-memory capacity and software support make a big difference."
+          },
+          "ar": {
+            "myth": "كل إصدارات Mac mini متساوية للنماذج المحلية الكبيرة.",
+            "fact": "الشريحة وسعة الذاكرة الموحّدة ودعم البرمجيات تُحدث فرقاً كبيراً."
+          }
+        },
+        {
+          "type": "prompt",
+          "en": {
+            "title": "Try it now",
+            "prompt": "Compare Mac mini M6 32 GB and Mac mini M5 Pro 64 GB for local AI, coding agents and 24/7 home-server use."
+          },
+          "ar": {
+            "title": "جرّبها الآن",
+            "prompt": "قارن Mac mini M6 بذاكرة 32 GB وMac mini M5 Pro بذاكرة 64 GB للـAI المحلي ووكلاء البرمجة وخادم منزلي يعمل 24/7."
+          }
+        },
+        {
+          "type": "cta",
+          "en": {
+            "title": "Choose the memory first — ==you can’t upgrade it later=="
+          },
+          "ar": {
+            "title": "اختر الذاكرة أولاً — ==لأنها لا تُرقّى لاحقاً=="
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Compare Mac mini M6 32 GB and Mac mini M5 Pro 64 GB for local AI, coding agents and 24/7 home-server use.",
+        "ar": "قارن Mac mini M6 بذاكرة 32 GB وMac mini M5 Pro بذاكرة 64 GB للـAI المحلي ووكلاء البرمجة وخادم منزلي يعمل 24/7.",
+        "code": "L37"
+      },
+      "permalink": "https://www.instagram.com/p/Dfyc9DsiAn7/",
+      "published_at": "2026-11-16T08:03:00+04:00",
+      "cover": "images/qahwa/week-08-day-51--1-learn-lesson-37.webp",
       "related_concepts": []
     }
   ]
