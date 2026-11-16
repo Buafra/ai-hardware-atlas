@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T07:48:00+04:00",
+  "generated_at": "2026-11-16T07:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11134,6 +11134,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-16T07:48:00+04:00",
       "cover": "images/qahwa/week-07-day-47--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-49--3-quiz-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "quiz",
+      "title": {
+        "en": "Which of these can you not rely on an AI assistant for?",
+        "ar": "أيّ هذه لا تعتمد فيه على المساعد الذكي؟"
+      },
+      "summary": {
+        "en": "Answer: Which one can't you rely on?",
+        "ar": "الجواب: أين لا تعتمد على المساعد الذكي؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "answer",
+          "en": {
+            "title": "Which of these can you ==not rely on== an AI assistant for?",
+            "body": "Answer: Today's ticket price ✅ It changes constantly, and it can give you an old number. It is good at sorting lists and explaining clauses — with your own review."
+          },
+          "ar": {
+            "title": "أيّ هذه ==لا تعتمد فيه== على المساعد الذكي؟",
+            "body": "الجواب: سعر تذكرة اليوم ✅ فهو يتغيّر باستمرار وقد يعطيك رقماً قديماً. أما ترتيب القائمة وشرح البند فيجيدهما، مع مراجعتك أنت."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-16T07:50:00+04:00",
+      "cover": "images/qahwa/week-07-day-49--3-quiz-story-answer.webp",
       "related_concepts": []
     }
   ]
