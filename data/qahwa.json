@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T07:45:00+04:00",
+  "generated_at": "2026-11-16T07:48:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11099,6 +11099,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-16T07:45:00+04:00",
       "cover": "images/qahwa/week-07-day-46--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-07-day-47--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 7,
+      "topic": "life",
+      "title": {
+        "en": "It can give you a different answer to the same question.",
+        "ar": "قد يعطيك إجابة مختلفة للسؤال نفسه"
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "fact",
+          "en": {
+            "title": "It can give you ==a different answer== to the same question.",
+            "body": "Answer: Fact ✅ Language models generate text by probability, so the wording and the order can change from one run to the next. For important decisions, ask more than once and compare."
+          },
+          "ar": {
+            "title": "قد يعطيك ==إجابة مختلفة== للسؤال نفسه",
+            "body": "الجواب: حقيقة ✅ النماذج اللغوية تولّد النص بالاحتمالات، فتختلف الصياغة والترتيب من مرة إلى أخرى. في القرارات المهمة اسأل أكثر من مرة وقارن."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-16T07:48:00+04:00",
+      "cover": "images/qahwa/week-07-day-47--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
