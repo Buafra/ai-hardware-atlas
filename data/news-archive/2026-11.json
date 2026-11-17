@@ -3,6 +3,62 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "2b2bb87b4857",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-16T13:00:00+00:00",
+   "title": "The Nvidia scandal isn’t slowing down",
+   "title_ar": null,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down",
+   "summary_en": "Jensen Huang stepped down as CEO of Nvidia last Wednesday, and the scandal over his multiple affairs has kept growing since. Nvidia shares fell 14 percent after the announcement, one of the company's worst weeks in about a year and a half. Reuters reported that Huang had a third affair with a second employee, and other reports said he misled Nvidia leaders, that Nvidia was allegedly linked to nearly $12 billion of chip supplies to China, and that companies of alleged Chinese intelligence asset Alice Huang reportedly promised advanced chips to DeepSeek. Some employees have reportedly petitioned for his return, and lawmakers have opened investigations. With earnings due Tuesday, the article says the future of Nvidia and the AI industry remains in flux.",
+   "summary_ar": "استقال «جنسن هوانغ» من منصب الرئيس التنفيذي لشركة NVIDIA يوم الأربعاء الماضي، ولا تزال الفضيحة المتعلقة بعلاقاته المتعددة تتفاقم منذ ذلك الحين. وتراجعت أسهم الشركة 14 في المئة بعد الإعلان، في واحد من أسوأ أسابيعها خلال نحو عام ونصف. ونقلت «رويترز» أن هوانغ أقام علاقة ثالثة مع موظفة ثانية، وأفادت تقارير أخرى بأنه ضلل قيادات الشركة، وبأن NVIDIA ارتبطت بحسب مزاعم بتوريد رقائق بنحو 12 مليار دولار إلى الصين، وبأن شركات «أليس هوانغ»، المشتبه في كونها عنصراً استخباراتياً صينياً، وعدت شركة DeepSeek برقائق متقدمة. وتفيد التقارير بأن بعض الموظفين طالبوا بعودته، وبدأ مشرعون تحقيقات. ومع اقتراب إعلان الأرباح يوم الثلاثاء، يشير المقال إلى أن مستقبل الشركة وقطاع الذكاء الاصطناعي ما زال غير محسوم.",
+   "excerpt": "For years, Jensen Huang has had an almost unprecedented power to shape AI's advancement as Nvidia's CEO, cofounder, and president. As The Verge wrote last week, Nvidia's chips are \"the bedrock upon which advanced AI technology in the US is being built.\""
+  },
+  {
+   "id": "59988f9bf8d6",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-16T09:30:41+00:00",
+   "title": "بين انتكاسة الانتخابات وأزمة \"إنفيديا\".. ما الذي يحمله ترامب في جعبته لقمة شي وبوتين؟",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/11/16/xi-jinping-trump-nvidia-putin-summit-asia-sanctions",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "تشير التقديرات إلى أن ترامب، بدلاً من التصعيد مع بكين، سيسعى إلى حصد مكاسب دبلوماسية تعزز إرثه السياسي، سواء عبر الدفع نحو تفاهمات نووية مع الصين وروسيا، أو توظيف قنوات تواصله مع شي وبوتين للتمهيد لقمة جديدة مع الزعيم الكوري الشمالي كيم جونغ أون."
+  },
+  {
+   "id": "28ca42d4e71e",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-16T08:56:10+00:00",
+   "title": "إيلون ماسك ومسؤولون في وادي السيليكون يضغطون لعودة جنسن هوانغ إلى إنفيديا",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/11/16/elon-musk-joins-calls-to-bring-back-jensen-huang-as-allies-build-war-room-to-lobby-his-ret",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "وادي السيليكون يدعم إعادة جينسن هوانغ مديرًا تنفيذيًا لإنفيديا، بينما ينضم إيلون ماسك إلى عريضة تطالب الشركة بـ\"إعادة جينسن\"."
+  },
+  {
+   "id": "f7214e14d1e1",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-11-16T01:26:56+00:00",
+   "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+   "title_ar": "دراسة جديدة من أبل تسعى إلى تحسين فعالية أدوات الصحة المعتمدة على الذكاء الاصطناعي",
+   "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+   "summary_en": "Apple has announced the Apple Health AI Usage Study, run with OpenEvidence, a clinical AI platform used by healthcare professionals. Participants use a new iOS app to ask medical questions and rate the answers for accuracy, detail and relevance. Enrollment is open now, with Apple seeking up to 200,000 people in the US aged 21 or older who have an iPhone 15 Pro and iOS 26 or later. The article says the app is not integrated with Siri or Apple Intelligence. Participants may share HealthKit data for more context, and Apple says the data will not train AI models. The aim is to improve the design of AI health tools.",
+   "summary_ar": "أعلنت Apple عن دراسة Apple Health AI Usage Study التي تُجرى بالتعاون مع OpenEvidence، وهي منصة ذكاء اصطناعي سريرية يستخدمها العاملون في الرعاية الصحية. يستخدم المشاركون تطبيقاً جديداً على iOS لطرح أسئلة طبية وتقييم الإجابات من حيث الدقة والتفصيل والصلة بالموضوع. التسجيل متاح الآن، وتبحث Apple عن ما يصل إلى 200 ألف شخص في الولايات المتحدة ممن تبلغ أعمارهم 21 عاماً فأكثر ويملكون iPhone 15 Pro مع iOS 26 أو أحدث. ويذكر المقال أن التطبيق غير مدمج مع Siri أو Apple Intelligence. ويمكن للمشاركين مشاركة بيانات HealthKit لإضافة سياق شخصي، وتقول Apple إن البيانات لن تُستخدم لتدريب النماذج. والهدف تحسين تصميم أدوات الذكاء الاصطناعي الصحية.",
+   "excerpt": "Apple announced a new study today with the goal of better understanding how people interact with conversational AI health tools and how useful their responses actually are."
+  },
+  {
    "id": "21df7cc5f7ad",
    "source": "emaratalyoum",
    "lang": "ar",
@@ -17,6 +73,48 @@
    "excerpt": "أكد المدير التنفيذي للأرشيف والمكتبة الوطنية بالإنابة، نائب رئيس المجلس الدولي للأرشيف لشؤون البرامج، الدكتور حمد عبدالله المطيري، أن النماذج اللغوية الكبيرة تمثل نقلة نوعية لتطوير العمل الحكومي وإنتاج المعرفة، مشدداً على ضرورة وضع أطر أخلاقية تضمن موثوقي"
   },
   {
+   "id": "2f1f5cbf7ce8",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-15T20:43:49+00:00",
+   "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+   "title_ar": "جنسن هوانغ قد يخطط للعودة، ومزيد من آخر تطورات الجدل المحيط بـ Nvidia",
+   "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+   "summary_en": "The Verge reports that events surrounding Nvidia co-founder and former CEO Jensen Huang are developing quickly, with several new developments since the morning. Among them are rumors that Huang may be seeking a way back into the CEO role. Megaspeed also issued a statement saying Alice Huang has not worked at the company since August of 2025. The Verge says the statement raises more questions than it answers.",
+   "summary_ar": "تفيد The Verge بأن الأحداث المحيطة بالمؤسس المشارك والرئيس التنفيذي السابق لشركة Nvidia، «جنسن هوانغ»، تتطور بسرعة، مع ظهور مستجدات عدة منذ صباح اليوم. ومن بينها شائعات بأنه قد يبحث عن طريق للعودة إلى منصب الرئيس التنفيذي. كما أصدرت شركة Megaspeed بياناً تقول فيه إن «أليس هوانغ» لم تعمل لديها منذ أغسطس 2025. وترى The Verge أن هذا البيان يثير أسئلة أكثر مما يقدم من إجابات.",
+   "excerpt": "The drama around Nvidia co-founder and former CEO Jensen Huang is evolving quickly. The latest edition of our Stepback newsletter should get you up to speed, but there have already been a number of new developments since this morning."
+  },
+  {
+   "id": "1207b5c1c70b",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-15T19:15:43+00:00",
+   "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+   "title_ar": "الكونغرس يريد تشديد قواعد تصدير رقائق الذكاء الاصطناعي بعد فضيحة التجسس المتعلقة بـ Nvidia",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+   "summary_en": "After the scandal involving Jensen Huang, now the former Nvidia CEO, and a suspected Chinese spy, Congress is looking to tighten export rules on AI chips, according to The Verge. Democrats and Republicans have backed various measures and bills and have demanded that Huang and other Nvidia leaders testify. Senate Minority Leader Chuck Schumer said Huang and the Trump administration must answer to Congress, and Senate Banking Committee Chairman Tim Scott wrote to Huang and Commerce Secretary Howard Lutnick asking them to testify publicly. The Remote Access Security Act, introduced in the House in April 2025 but stalled in the Senate, is drawing renewed interest. House Speaker Mike Johnson cited a growing consensus on limiting chip exports to China.",
+   "summary_ar": "بحسب موقع The Verge، يسعى الكونغرس الأمريكي إلى تشديد قواعد تصدير رقائق الذكاء الاصطناعي بعد الفضيحة التي تورط فيها «جنسن هوانغ»، الرئيس التنفيذي السابق لشركة Nvidia، وامرأة يُشتبه في أنها جاسوسة صينية. وأيد ديمقراطيون وجمهوريون إجراءات ومشاريع قوانين متنوعة، وطالبوا بأن يدلي هوانغ وقادة آخرون في Nvidia بشهاداتهم أمام الكونغرس. وقال زعيم الأقلية في مجلس الشيوخ «تشاك شومر» إن على هوانغ وإدارة «ترامب» الإجابة أمام الكونغرس، فيما وجّه رئيس لجنة الشؤون المصرفية في المجلس «تيم سكوت» رسائل إلى هوانغ ووزير التجارة «هوارد لوتنيك» يدعوهما فيها إلى الإدلاء بشهادتيهما علناً. ويحظى قانون أمن الوصول عن بُعد (Remote Access Security Act)، الذي طُرح في مجلس النواب في أبريل 2025 وتعثر في مجلس الشيوخ، باهتمام متجدد. وقال رئيس مجلس النواب «مايك جونسون» إن هناك توافقاً متزايداً داخل الكونغرس على الحد من صادرات الرقائق إلى الصين.",
+   "excerpt": "Unsurprisingly, following the scandal involving now-former Nvidia CEO Jensen Huang and a suspected Chinese spy, Congress is looking to further restrict exports of AI chips."
+  },
+  {
+   "id": "faec17f1eaf3",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-15T15:49:33+00:00",
+   "title": "الأرشيف والمكتبة الوطنية يختتم فعاليات مؤتمر «تطبيق النماذج اللغوية الكبيرة في القطاع العام» بالتعاون مع «السوربون أبوظبي»",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/ثقافة/4706098/الأرشيف-والمكتبة-الوطنية-يختتم-فعاليات-مؤتمر--تطبيق-النماذج",
+   "summary_en": "The National Archives and Library, working with Sorbonne University Abu Dhabi, closed the third and final day of its conference on applying large language models in the public sector, held at its Abu Dhabi headquarters. Experts and academics discussed using AI to improve government work and services, along with ethical governance and sustainability. Acting Executive Director Dr Hamad Al Mutairi called the models a major step forward and urged ethical frameworks to keep the technology reliable and sustainable. Presentations covered the archive's AI systems, including text extraction, the \"Memory\" search platform and image-similarity search, as well as DNA-based data storage, which still faces cost and retrieval-speed challenges. Closing speakers from Sorbonne stressed verifying information and building young people's critical thinking.",
+   "summary_ar": "اختتم الأرشيف والمكتبة الوطنية، بالتعاون مع جامعة السوربون أبوظبي، اليوم الثالث والأخير من مؤتمر «تطبيق النماذج اللغوية الكبيرة في القطاع العام» الذي استضافه مقره في أبوظبي. وناقش خبراء وأكاديميون توظيف الذكاء الاصطناعي في تطوير العمل الحكومي والارتقاء بالخدمات، إضافة إلى الحوكمة الأخلاقية والاستدامة. وقال المدير التنفيذي بالإنابة الدكتور حمد المطيري إن هذه النماذج تمثل نقلة نوعية، ودعا إلى وضع أطر أخلاقية تضمن موثوقية التقنية واستدامتها. وتضمنت العروض أنظمة الأرشيف المعتمدة على الذكاء الاصطناعي، ومنها استخراج النصوص ومنصة «الذاكرة» للبحث والبحث بتشابه الصور، إضافة إلى تخزين البيانات في الحمض النووي الذي ما زال يواجه تحديات في التكلفة وسرعة الاسترجاع. وشددت متحدثتان من السوربون في الختام على التحقق من المعلومات وتعزيز التفكير النقدي لدى الشباب.",
+   "excerpt": "أبوظبي (الاتحاد) اختتم الأرشيف والمكتبة الوطنية، بالتعاون مع جامعة السوربون أبوظبي، فعاليات اليوم الثالث والأخير من مؤتمر «تطبيق النماذج اللغوية الكبيرة في القطاع العام»، الذي استضافته قاعة الشيخ محمد بن زايد بمقر الأرشيف والمكتبة الوطنية، بمشاركة نخبة من الخبراء والأكاديميين…"
+  },
+  {
    "id": "56a470a5ef06",
    "source": "albayan",
    "lang": "ar",
@@ -29,6 +127,20 @@
    "summary_en": "The article argues that personal AI agents should not impersonate their users. Because few companies offer a dedicated channel for agents, many log in with users' own passwords, which exposes people to credential theft, unauthorised access and rogue agent behaviour, and may leave firms facing disputes over actions customers disown. The author proposes that agents have their own identity, with narrowly scoped permissions that can be revoked and are logged. It notes that BBVA is the first European bank to join the Personal Agent Protocol, also called poppy, led by Sierra and Meta. It also calls for regulation, including identification rules and clear allocation of liability.",
    "summary_ar": "يرى المقال أنه لا ينبغي لوكلاء الذكاء الاصطناعي الشخصيين أن ينتحلوا شخصيات مستخدميهم. فبما أن قلة من الشركات توفر قناة مخصصة للوكلاء، يدخل كثير منهم بكلمات مرور المستخدمين أنفسهم، مما يعرّض الناس لخطر سرقة بيانات الاعتماد والوصول غير المصرح به وسلوك الوكلاء المارقين، وقد يضع الشركات أمام نزاعات حول إجراءات ينكرها العملاء. ويقترح الكاتب أن يمتلك الوكيل هوية خاصة به، مع صلاحيات محددة بدقة وقابلة للإلغاء وموثقة في سجل. ويشير إلى أن بنك BBVA أول بنك أوروبي ينضم إلى «بروتوكول الوكيل الشخصي» (Personal Agent Protocol) المعروف أيضاً باسم poppy، بقيادة Sierra وMeta. ويدعو كذلك إلى تنظيم يشمل قواعد للتعريف بالوكلاء وتوزيعاً واضحاً للمسؤولية.",
    "excerpt": "كارلوس توريس فيلا اكتشف ملايين البشر ما يمكن لوكلاء الذكاء الاصطناعي القيام به من أجلهم. فهم يجرون الحجوزات، ويراجعون ال"
+  },
+  {
+   "id": "fab454cfbea7",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-15T14:39:15+00:00",
+   "title": "«جوجل» تتيح ربط «جيميني» بخدمة «جوجل واليت» لتحليل الإنفاق وإعداد الميزانيات",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الاقتصادي/4706081/-جوجل--تتيح-ربط--جيميني--بخدمة--جوجل-واليت--لتحليل-الإنفاق-و",
+   "summary_en": "Google announced that its Gemini AI assistant can now be linked to Google Wallet, so users can analyse their spending, build budgets and track recurring subscriptions directly in the chat interface. The rollout has begun in the United States on the web, Android and iPhone, and Google gave no date for other markets, including Arab countries. Users tag @Google Wallet to ask about spending and saving. The assistant can review past expenses, create interactive charts of budgets and cash flow, flag price increases for services, and estimate shopping and travel budgets. Linking cards and bank accounts through Plaid is optional. Google said the assistant only reads data with explicit consent that can be switched off, and cannot transfer, manage or invest money.",
+   "summary_ar": "أعلنت شركة Google إتاحة ربط المساعد الذكي Gemini بخدمة Google Wallet، بحيث يتمكن المستخدمون من تحليل إنفاقهم وإعداد الميزانيات ومتابعة الاشتراكات المتكررة مباشرة عبر واجهة المحادثة. وبدأ طرح الميزة في الولايات المتحدة عبر الويب وأجهزة Android وiPhone، ولم تحدد الشركة موعداً لتوفيرها في أسواق أخرى، ومنها الدول العربية. ويستخدم المستخدم الإشارة (@Google Wallet) لطرح أسئلة عن الإنفاق والادخار. ويستطيع المساعد مراجعة النفقات السابقة، وإنشاء رسوم بيانية تفاعلية للميزانية والتدفقات المالية، والتنبيه إلى ارتفاع أسعار الخدمات، وتقدير ميزانيات التسوق والسفر. أما ربط البطاقات والحسابات المصرفية عبر Plaid فهو خيار إضافي غير إلزامي. وأكدت Google أن المساعد يقرأ البيانات فقط بموافقة صريحة يمكن إيقافها، ولا يستطيع تحويل الأموال أو إدارتها أو استثمارها.",
+   "excerpt": "أعلنت شركة «جوجل» إتاحة ربط مساعد الذكاء الاصطناعي «جيميني - Gemini» بخدمة «محفظة جوجل - Google Wallet»، لتمكين المستخدمين من تحليل الإنفاق وإعداد الميزانيات ومتابعة الاشتراكات المتكررة مباشرة عبر واجهة المحادثة."
   },
   {
    "id": "15eb8491b863",
@@ -99,6 +211,20 @@
    "summary_en": "The first ceremony of its kind in the United States honouring AI-produced music took place in downtown Los Angeles. It celebrated creators who made songs using the technology, even partly. The field has drawn criticism and lawsuits but also millions of listeners and a place on popular charts. Hosts and winners argued that AI music should be seen as a new art form requiring real talent and long hours of guiding the AI to get the right sound. The top prizes for AI artist, song and album of the year went to Xania Monet, a virtual AI-generated persona known for the song \"How Was I Supposed to Know?\". Her creator, Telisha \"Nikki\" Jones, said she wrote all the lyrics and composed the melody with AI help.",
    "summary_ar": "أقيم في وسط مدينة لوس أنجلوس أول حفل من نوعه في الولايات المتحدة لتكريم الموسيقى المنتجة بالذكاء الاصطناعي، واحتفى بمبدعين صنعوا أغاني باستخدام هذه التقنية ولو جزئياً. وقد أثار هذا المجال انتقادات ودعاوى قضائية، لكنه جذب في الوقت نفسه ملايين المستمعين ووصل إلى قوائم الأغاني الأكثر رواجاً. وأكد مقدمو الحفل والفائزون أن هذه الموسيقى ينبغي أن تُعد فناً جديداً يتطلب موهبة حقيقية وساعات طويلة من توجيه الذكاء الاصطناعي للوصول إلى الصوت المناسب. وذهبت الجوائز الكبرى لفئات فنان العام وأغنية العام وألبوم العام في مجال الذكاء الاصطناعي إلى زنايا مونيه، وهي شخصية افتراضية مولدة بالذكاء الاصطناعي تشتهر بأغنية «كيف كان لي أن أعرف؟». وقالت مبتكرتها تيليشا «نيكي» جونز إنها كتبت كلمات الأغنية كلها ولحنتها بمساعدة الذكاء الاصطناعي.",
    "excerpt": "احتفى الحفل الأول من نوعه لتوزيع جوائز للموسيقى المنتجة بالذكاء الاصطناعي في الولايات المتحدة بمبتكري أغانٍ باستخدام هذه التقنية، ولو بشكل جزئي، وهو مجال أثار انتقادات ودعاوى قضائية بينما جذب ملايين المستمعين، ووصل إلى قوائم الأغاني الأكثر رواجاً. وخلال"
+  },
+  {
+   "id": "17db3085f8b9",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-14T23:29:28+00:00",
+   "title": "ADB, Republic of Korea establish $20 million fund to expand AI across Asia and Pacific",
+   "title_ar": "بنك التنمية الآسيوي وجمهورية كوريا يؤسسان صندوقاً بقيمة 20 مليون دولار لتوسيع استخدام الذكاء الاصطناعي في آسيا والمحيط الهادئ",
+   "url": "https://www.wam.ae/en/article/17iyslu-adb-republic-korea-establish-20-million-fund",
+   "summary_en": "The Asian Development Bank (ADB) and the Republic of Korea signed an agreement in Manila on 15th November 2026 creating a $20 million fund to help Asia and the Pacific use artificial intelligence in health care, education, agriculture and public services while managing its risks. The Korea Artificial Intelligence for Development (K-AID) Trust Fund will help developing economies adopt AI, build technological capabilities and prepare workers. It aims to address barriers such as limited computing power, data infrastructure, skilled workers and institutional capacity. Administered by ADB's Digital Sector Office, it will finance technical assistance, research and project preparation, including readiness assessments and pilot testing. ADB President Masato Kanda said AI should be put to work safely and responsibly.",
+   "summary_ar": "وقّع بنك التنمية الآسيوي وجمهورية كوريا في مانيلا يوم 15 نوفمبر 2026 اتفاقاً لإنشاء صندوق بقيمة 20 مليون دولار لمساعدة آسيا والمحيط الهادئ على استخدام الذكاء الاصطناعي في الرعاية الصحية والتعليم والزراعة والخدمات العامة، مع إدارة المخاطر المرتبطة به. وسيساعد صندوق كوريا للذكاء الاصطناعي من أجل التنمية (K-AID) الاقتصادات النامية على اعتماد هذه التقنية وتعزيز قدراتها التكنولوجية وتأهيل العاملين. ويستهدف الصندوق عقبات مثل محدودية القدرات الحاسوبية والبنية التحتية للبيانات ونقص الكفاءات وضعف المؤسسات. ويدير مكتب القطاع الرقمي في البنك الصندوق، وسيمول المساعدة الفنية والأبحاث وإعداد المشاريع، ومنها تقييم الجاهزية واختبار التطبيقات. وقال رئيس البنك ماساتو كاندا إنه ينبغي توظيف الذكاء الاصطناعي بأمان ومسؤولية.",
+   "excerpt": "MANILA, 15th November, 2026 (WAM) -- The Asian Development Bank (ADB) and the Republic of Korea have signed an agreement establishing a $20 million fund to help Asia and the Pacific use artificial intelligence (AI) to improve health care, education, agriculture, and public…"
   },
   {
    "id": "a60709173eb7",
@@ -225,6 +351,20 @@
    "summary_en": "Anthropic says users of Claude Opus 5.5, now the default model on its Pro, Max, Ultra and Team plans, should drop prompting habits carried over from older models. It advises removing phrases like \"think hard\", since the model scales its reasoning to the task and effort level, and says responses started faster without them with no measurable quality loss. It recommends starting at the default Medium effort, which in internal tests matched Opus 5 on High, and moving to High only when needed. Anthropic also suggests describing the full goal in one message, attaching charts as images or files, and asking directly for finished documents. For design, it advises naming specific unwanted styles rather than banning generic design.",
    "summary_ar": "تقول Anthropic إن على مستخدمي Claude Opus 5.5، وهو الآن النموذج الافتراضي في خطط Pro وMax وUltra وTeam، التخلي عن عادات كتابة الأوامر الموروثة من النماذج الأقدم. وتنصح بحذف عبارات مثل «فكّر بعمق»، لأن النموذج يضبط عمق استدلاله بحسب المهمة ومستوى الجهد المختار، وتفيد بأن الإجابات بدأت أسرع من دونها دون انخفاض يمكن قياسه في الجودة. كما توصي بالبدء بمستوى الجهد المتوسط (Medium) الافتراضي، الذي طابق في اختبارات داخلية أداء Opus 5 على المستوى العالي، والانتقال إلى المستوى العالي (High) عند الحاجة فقط. وتقترح أيضاً وصف الهدف كاملاً في رسالة واحدة، وإرفاق الرسوم البيانية كصور أو ملفات، وطلب المستندات النهائية مباشرة. وفي مهام التصميم تنصح بتسمية الأنماط غير المرغوبة تحديداً بدلاً من منع التصميم العام بصورة غامضة.",
    "excerpt": "Anthropic has made Claude Opus 5.5 the default model on all paid plans and published a guide that does away with old prompting habits. The main takeaway is to drop \"think hard\" and start at Medium effort."
+  },
+  {
+   "id": "075bbfb634c2",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-14T16:34:15+00:00",
+   "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+   "title_ar": "حكومات آسيوية تتفاعل مع رحيل الرئيس التنفيذي لشركة NVIDIA جينسن هوانغ",
+   "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+   "summary_en": "Governments across Asia have responded in different ways to the departure of Nvidia CEO Jensen Huang. Nvidia's board opened an independent investigation on November 8 after reports that Huang was targeted by a Chinese spy operation, and Huang admitted to an affair with Alice Huang, a former Megaspeed executive. China's foreign ministry called the spy allegations groundless. South Korea said Nvidia reaffirmed a plan to supply 260,000 advanced GPUs, while Taiwan's Taipei city government said Nvidia's planned overseas headquarters remained on track. Japan said it would monitor Nvidia closely and stressed stable chip supply. Singapore said its investigation into Megaspeed and six other individuals is ongoing, and Reuters reported uncertainty over more than $3 billion in Chinese AI computing projects.",
+   "summary_ar": "تباينت ردود الحكومات الآسيوية على رحيل الرئيس التنفيذي لشركة NVIDIA «جنسن هوانغ». فقد فتح مجلس إدارة الشركة تحقيقاً مستقلاً في 8 نوفمبر بعد تقارير عن استهدافه من عملية تجسس صينية، واعترف هوانغ بعلاقة مع «أليس هوانغ»، المديرة التنفيذية السابقة في Megaspeed. ووصفت وزارة الخارجية الصينية مزاعم التجسس بأنها لا أساس لها. وأعلنت كوريا الجنوبية أن NVIDIA أكدت من جديد خطتها لتزويدها بـ260 ألف وحدة GPU متقدمة، بينما قالت حكومة مدينة تايبيه إن المقر الخارجي المخطط للشركة في المدينة ما زال على المسار. وذكرت اليابان أنها ستراقب الشركة عن كثب وشددت على استقرار إمدادات أشباه الموصلات. وقالت سنغافورة إن تحقيقها في Megaspeed وستة أفراد آخرين متواصل، فيما أشارت وكالة رويترز إلى حالة عدم يقين تحيط بمشاريع حوسبة صينية للذكاء الاصطناعي تتجاوز قيمتها 3 مليارات دولار.",
+   "excerpt": "Some governments moved to confirm chip supply commitments, while others are monitoring the impact on local projects or addressing ongoing investigations."
   },
   {
    "id": "847839c7164b",
@@ -505,6 +645,20 @@
    "summary_en": "According to Reuters, Amazon plans to build a database covering every product sold anywhere on the internet, including items it does not sell, and make it available through its own site. The project, called the \"World Product Graph,\" is meant to keep shoppers from leaving Amazon to research products on Reddit or Google, and to draw AI agents to its index of products. Links to outside retailers have already appeared through the \"shop direct\" feature launched last year. Amazon also runs an AI shopping assistant, Alexa for Shopping, previously called Rufus. An internal document cited by Reuters says many Rufus answers are wrong or incomplete and that running searches with the AI is expensive. More data is reportedly meant to improve accuracy and allow cheaper models.",
    "summary_ar": "بحسب وكالة «رويترز»، تخطط Amazon لبناء قاعدة بيانات تغطي كل منتج يُباع في أي مكان على الإنترنت، بما في ذلك المنتجات التي لا تبيعها، وإتاحتها عبر موقعها. ويحمل المشروع اسم «World Product Graph»، ويهدف إلى تقليل احتمال مغادرة المتسوقين الموقع للبحث عن المنتجات في Reddit أو Google، وإلى جذب وكلاء الذكاء الاصطناعي إلى فهرس المنتجات لديها. وقد بدأت روابط لمنتجات متاجر خارجية بالظهور على الموقع عبر ميزة «shop direct» التي أُطلقت العام الماضي. كما تملك الشركة مساعداً ذكياً للتسوق هو Alexa for Shopping، الذي كان يُعرف سابقاً باسم Rufus. وتذكر وثيقة داخلية نقلتها «رويترز» أن كثيراً من إجابات Rufus خاطئة أو ناقصة وأن تشغيل عمليات البحث بالذكاء الاصطناعي مكلف، ويُفترض أن توفر البيانات الإضافية دقة أكبر وتتيح استخدام نماذج أقل كلفة.",
    "excerpt": "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters."
+  },
+  {
+   "id": "ec577d4c46a6",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-13T22:43:00+00:00",
+   "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+   "title_ar": "رحيل جنسن هوانغ يترك فجوة كبيرة في تمويل شركات الذكاء الاصطناعي الناشئة، بحسب مستثمرين ومؤسسين",
+   "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+   "summary_en": "TechCrunch reports that Jensen Huang has stepped down as Nvidia's CEO after 33 years, and that investors and founders expect a sharp drop in AI startup funding as a result. Nvidia took part in 105 funding rounds this year, according to PitchBook, often as the largest investor. Interim CEO Colette Kress is described by one investor as more conservative, and Nvidia is expected to be more selective and write smaller cheques. Investors hope big cloud companies and other chipmakers will fill part of the gap, though they doubt these would match Nvidia's early funding of infrastructure startups. Few believe the slowdown alone would halt the wider AI boom.",
+   "summary_ar": "تنقل TechCrunch أن جنسن هوانغ تنحّى عن منصب الرئيس التنفيذي لشركة Nvidia بعد 33 عاماً في قيادتها، وأن مستثمرين ومؤسسي شركات ناشئة يتوقعون تراجعاً حاداً في تمويل الشركات الناشئة في الذكاء الاصطناعي نتيجة ذلك. وبحسب PitchBook، شاركت Nvidia في 105 جولات تمويل هذا العام، وكانت في كثير من الأحيان أكبر المستثمرين فيها. ويصف أحد المستثمرين الرئيسة التنفيذية المؤقتة كوليت كريس بأنها أكثر تحفظاً، ويُتوقع أن تكون الشركة أكثر انتقائية وأن تضخ مبالغ أصغر. ويأمل مستثمرون أن تسدّ شركات الحوسبة السحابية الكبرى وشركات الرقائق الأخرى جزءاً من الفراغ، لكنهم يشككون في أن تضاهي تمويل Nvidia المبكر للشركات الناشئة في البنية التحتية. ولا يرى كثيرون أن تباطؤ استثمارات الشركة وحده سيوقف طفرة الذكاء الاصطناعي الأوسع.",
+   "excerpt": "Nvidia poured tens of billions into AI startups under Huang. Without him at the helm, founders and VCs are bracing for smaller checks and lower valuations."
   },
   {
    "id": "951c84561943",
@@ -843,6 +997,20 @@
    "excerpt": "ناقش قادة أوروبيون مع المدير التنفيذي لشركة ميسترال آرثر منش ورائد الذكاء الاصطناعي جيفري هينتون كيفية بناء صناعة للذكاء الاصطناعي في أوروبا مع ضمان تطوير هذه التكنولوجيا بصورة مسؤولة."
   },
   {
+   "id": "40e78db6601d",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-13T14:05:22+00:00",
+   "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+   "title_ar": "llama.cpp v1.0.0: أساس أقوى لمنظومة الذكاء الاصطناعي المحلي",
+   "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+   "summary_en": "The llama.cpp team at Hugging Face has released v1.0.0 of its libraries, 3.5 years after the project began. llama.cpp lets multi-modal LLMs run on hardware ranging from consumer machines to enterprise servers, using quantization, optimized backends and a portable C/C++ implementation. From now on, llama.cpp and ggml will mark API and ABI incompatibilities with major-version bumps, under semantic versioning rules for ggml-org projects. The team says it is investing in CI infrastructure using HF Buckets and HF Jobs, with hardware support from NVIDIA, AMD, Qualcomm, Arm, IBM and Intel. The project currently supports more than 150 architecture variants and all mainstream speculative decoding methods.",
+   "summary_ar": "أصدر فريق llama.cpp في Hugging Face النسخة v1.0.0 من مكتباته بعد مرور ثلاث سنوات ونصف على انطلاق المشروع. ويتيح llama.cpp تشغيل نماذج لغوية كبيرة متعددة الوسائط على أجهزة تتراوح بين الأجهزة الاستهلاكية وخوادم الشركات، عبر التكميم وواجهات خلفية محسّنة وتنفيذ محمول بلغتي C/C++. وسيوضح llama.cpp وggml من الآن فصاعداً حالات عدم التوافق في واجهات API وABI من خلال رفع رقم الإصدار الرئيسي، وفق قواعد الترقيم الدلالي لمشاريع ggml-org. ويقول الفريق إنه يستثمر في بنية التكامل المستمر باستخدام HF Buckets وHF Jobs، مع دعم عتادي من NVIDIA وAMD وQualcomm وArm وIBM وIntel. ويدعم المشروع حالياً أكثر من 150 نوعاً من البنى المعمارية وجميع طرق فك التشفير التخميني الشائعة.",
+   "excerpt": "A Blog post by ggml-org on Hugging Face"
+  },
+  {
    "id": "cd9d1a105b69",
    "source": "verge-ai",
    "lang": "en",
@@ -899,6 +1067,20 @@
    "excerpt": "في غضون أعوام قليلة، أسست كل من الصين والولايات المتحدة كياناً قد يصنفه المؤرخون في المستقبل كنمط جديد من الإمبراطوريات، إذ لا تقتصر هيمنتهما على الأراضي وطرق التجارة والمجال الجوي، بل تمتد لتشمل المعرفة نفسها، فمن خلال السيطرة على النماذج اللغوية الكبيرة والرقائق والبنية…"
   },
   {
+   "id": "a326fbf0621f",
+   "source": "nvidia-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-11-13T13:00:42+00:00",
+   "title": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
+   "title_ar": "كيف يساعد الذكاء الاصطناعي فرق الرعاية على تقديم الرعاية المناسبة للمرضى في وقت أبكر",
+   "url": "https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
+   "summary_en": "Health systems and startups are using AI to cut routine work for care teams and give them more time with patients, with clinicians reviewing outputs and making decisions. New Jersey-based Dyania Health built Synapsis AI, a clinical reasoning engine that reads across a patient's notes, reports and lab results and produces signals traceable to the source record. It runs on NVIDIA-accelerated computing inside a hospital's own firewall, so patient data never leaves the site. Cleveland Clinic used it in a study of more than 7,800 aortic valve replacement patients to model valve deterioration and reintervention risk, completing a chart review that would have taken clinicians years by hand.",
+   "summary_ar": "تستخدم أنظمة صحية وشركات ناشئة الذكاء الاصطناعي لتقليل المهام الروتينية عن فرق الرعاية ومنحها وقتاً أطول مع المرضى، على أن يراجع الأطباء المخرجات ويتخذوا القرارات. وقد طورت شركة Dyania Health، ومقرها نيوجيرسي، منصة Synapsis AI، وهي محرك استدلال سريري يقرأ ملاحظات المريض وتقاريره ونتائج مختبره، ويقدم إشارات يمكن تتبعها إلى مصدرها في السجل. ويعمل النظام على حوسبة NVIDIA المسرّعة داخل جدار الحماية الخاص بالمستشفى، فلا تغادر بيانات المرضى موقعه. واستخدمت كليفلاند كلينك المنصة في دراسة شملت أكثر من 7,800 مريض خضعوا لاستبدال الصمام الأبهري، لبناء نموذج يتنبأ بتدهور الصمام ومخاطر إعادة التدخل، وأنجزت مراجعة سجلات كانت ستستغرق من الأطباء سنوات يدوياً.",
+   "excerpt": "From pediatric research to smart hospitals, AI is helping care teams spend less time on routine tasks and more time with patients."
+  },
+  {
    "id": "f240bb31094b",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -939,6 +1121,20 @@
    "summary_en": "The Verge invites readers to a live discussion at 1PM ET with Nilay and the author about the developments at NVIDIA surrounding Jensen Huang's reported affairs. The writer says the team has no real answers about what is happening at the company. The post points to chips and China as the key issue. It says President Donald Trump was reportedly warned last year, and again before his May China trip, about Alice Huang's possible links to China's spy apparatus. NVIDIA also reportedly intervened in a Commerce Department investigation into her company.",
    "summary_ar": "يدعو موقع The Verge قراءه إلى نقاش مباشر عند الساعة الواحدة ظهراً بتوقيت شرق الولايات المتحدة مع نيلاي وكاتب المقال حول التطورات داخل NVIDIA المتعلقة بعلاقات جنسن هوانغ الخارجة عن الزواج كما أُفيد. ويقول الكاتب إن الفريق لا يملك إجابات حقيقية عما يجري في الشركة. ويشير المقال إلى أن الرقائق والصين هما المسألة الأهم. وبحسب ما أُفيد، جرى تحذير الرئيس «دونالد ترامب» العام الماضي، ثم مجدداً قبل زيارته إلى الصين في مايو، من صلات محتملة لـ«أليس هوانغ» بأجهزة التجسس الصينية. كما تدخلت NVIDIA، بحسب التقارير، في تحقيق أجرته وزارة التجارة بشأن شركة أليس.",
    "excerpt": "Usually, we'd be offering to answer your questions about a news event, but honestly we don't really have any answers about what the hell is going on over at Nvidia."
+  },
+  {
+   "id": "41eafb7e6a89",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-13T11:45:00+00:00",
+   "title": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
+   "title_ar": "شركة ناشئة تراهن على الدراما المصغّرة بالذكاء الاصطناعي لإيصال مزيد من قصص السود إلى هوليوود",
+   "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+   "summary_en": "Media company Mansa, founded by actors David Oyelowo and Nate Parker, released They Left Us to Die, a 30-episode zombie microdrama set in South Los Angeles that is entirely AI-generated. The show drew criticism online, with some users questioning why a company meant to support Black talent used no human actors. Parker says AI is a tool to test audience appetite for Black stories and show studios the demand before they commit to live production. The piece places this within a booming microdrama market that Omdia expects to reach $14 billion in 2027, and a shrinking Hollywood where Black artists are already underrepresented.",
+   "summary_ar": "أطلقت شركة الإعلام Mansa، التي أسسها الممثلان «ديفيد أويلويو» و«نيت باركر»، المسلسل القصير They Left Us to Die المؤلف من 30 حلقة، وهو عمل عن وباء الزومبي في جنوب «لوس أنجلوس» أُنتج بالكامل بالذكاء الاصطناعي. وأثار العمل انتقادات على الإنترنت، إذ تساءل بعض المستخدمين عن سبب غياب الممثلين من البشر في شركة يُفترض أنها تدعم المواهب السوداء. ويقول باركر إن الذكاء الاصطناعي أداة لاختبار إقبال الجمهور على القصص السوداء وإظهار الطلب عليها للاستوديوهات قبل الالتزام بإنتاج حي. ويضع المقال ذلك في سياق سوق الدراما القصيرة المتنامية، التي تتوقع Omdia أن تبلغ 14 مليار دولار في 2027، وفي ظل هوليوود تشهد انكماشاً ويقل فيها تمثيل الفنانين السود أصلاً.",
+   "excerpt": "Mansa says its AI microdramas can serve as proofs of concept for what Black audiences want. Critics say the studio is selling out."
   },
   {
    "id": "5f60d02db3a0",
@@ -983,6 +1179,20 @@
    "excerpt": null
   },
   {
+   "id": "a3abd9303dc2",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-13T10:50:00+00:00",
+   "title": "AI creator shares storytelling tips at SIBF 2026",
+   "title_ar": "صانع محتوى بالذكاء الاصطناعي يشارك نصائح في سرد القصص في معرض الشارقة الدولي للكتاب 2026",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/13/AI-creator-shares-storytelling-tips-at-SIBF-2026",
+   "summary_en": "At the 45th Sharjah International Book Fair, AI creator Popa led a workshop called 'Bring Your Characters to Life with AI', building a Chinese warrior princess live from audience suggestions, from concept to reference image to a 30-second video. She said good results need a person guiding the tools, and that a clear reference image helps keep a character's face consistent across videos. Born in Romania and based in London, she moved from jewellery sales to AI content; her Queen Elizabeth I account, launched in October, reached almost half a million followers. She advised adding human humour and personality, and noted that platforms may restrict celebrities and copyrighted characters. The fair runs from November 4 to 15 at Expo Centre Sharjah.",
+   "summary_ar": "في الدورة الخامسة والأربعين من معرض الشارقة الدولي للكتاب، قدّمت صانعة المحتوى بالذكاء الاصطناعي «بوبا» ورشة بعنوان «أحيِ شخصياتك بالذكاء الاصطناعي»، وابتكرت أمام الحضور أميرة محاربة صينية بناءً على اقتراحاتهم، بدءاً من الفكرة ثم صورة مرجعية وصولاً إلى فيديو مدته 30 ثانية. وقالت إن النتائج الجيدة تتطلب شخصاً يوجّه الأدوات، وإن الصورة المرجعية الواضحة تساعد على ثبات ملامح الشخصية عبر مقاطع متعددة. وانتقلت بوبا، المولودة في رومانيا والمقيمة في لندن، من العمل في مبيعات المجوهرات إلى صناعة المحتوى بالذكاء الاصطناعي، وبلغ حسابها عن الملكة إليزابيث الأولى، الذي أُطلق في أكتوبر، قرابة نصف مليون متابع. ونصحت بإضافة الفكاهة والشخصية البشرية، مشيرة إلى أن بعض المنصات قد تقيّد استخدام المشاهير والشخصيات الخيالية المحمية بحقوق النشر. ويستمر المعرض من 4 إلى 15 نوفمبر في مركز إكسبو الشارقة.",
+   "excerpt": "AI content creator and educator Cosmina Popa showed visitors how to build an original digital character from scratch during an interactive workshop at the…"
+  },
+  {
    "id": "01587e6df74f",
    "source": "albayan",
    "lang": "ar",
@@ -995,6 +1205,20 @@
    "summary_en": "Bloomberg reported on Friday that advanced chips designed by Nvidia, which are subject to US restrictions, reached China illegally. According to the headline, the chips arrived through a company founded by Alice Hwang. The available text gives no further details.",
    "summary_ar": "ذكرت وكالة «بلومبرغ» يوم الجمعة أن رقائق متطورة صمّمتها NVIDIA وتخضع لقيود أميركية وصلت إلى الصين بطريقة غير قانونية. ووفق العنوان، وصلت هذه الرقائق عبر شركة أسستها «أليس هوانغ». ولا يتضمن النص المتاح تفاصيل أخرى.",
    "excerpt": "أفادت وكالة بلومبرغ الجمعة، بأنّ رقائق متطورة صمّمتها شركة إنفيديا وتخضع لقيود أميركية، وصلت إلى الصين بشكل غير قانوني،"
+  },
+  {
+   "id": "52294948751a",
+   "source": "gulftoday-business",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-13T09:34:00+00:00",
+   "title": "Darwinbox launches claude connector with 280+ HR tools across the employee lifecycle",
+   "title_ar": "Darwinbox تطلق موصّل Claude مع أكثر من 280 أداة للموارد البشرية على امتداد دورة حياة الموظف",
+   "url": "https://www.gulftoday.ae/business/2026/11/13/darwinbox-launches-claude-connector-with-280-hr-tools-across-the-employee-lifecycle",
+   "summary_en": "Darwinbox, an HR technology platform, announced that its connector is now available in Claude, letting employees, managers and HR teams complete HR tasks inside conversations with the AI assistant. The connector gives Claude permission-aware access to more than 280 tools, including over 100 actions, covering tasks such as applying for leave, filing expenses, shortlisting candidates and starting onboarding. It also links Claude to Darwinbox's Recruiter, Employee Support and Onboarding agents and to its Context Graph. Every action runs under the signed-in user's existing role permissions, and Claude asks for confirmation before any update. The connector is available in Claude Marketplace and builds on Darwinbox's May 2025 launch of its MCP server.",
+   "summary_ar": "أعلنت Darwinbox، وهي منصة تقنية للموارد البشرية، أن موصلها أصبح متاحاً في Claude، بما يتيح للموظفين والمديرين وفرق الموارد البشرية إنجاز مهام الموارد البشرية داخل المحادثة مع المساعد الذكي. ويمنح الموصل Claude وصولاً يراعي الصلاحيات إلى أكثر من 280 أداة، بينها أكثر من 100 إجراء، تشمل طلب الإجازات وتقديم المصروفات واختيار المرشحين للوظائف وبدء إجراءات الانضمام. كما يربط Claude بوكلاء Darwinbox للتوظيف ودعم الموظفين والانضمام، وبـ Context Graph. وينفَّذ كل إجراء وفق صلاحيات المستخدم المسجَّل دخوله، ويطلب Claude تأكيداً قبل أي تحديث. والموصل متاح في Claude Marketplace، ويبني على إطلاق Darwinbox خادم MCP الخاص بها في مايو 2025.",
+   "excerpt": "Go beyond using AI for just answers. With Darwinbox MCP, employees, managers, and HR teams can now get real HR work done directly in Claude, within the role-specific permissions set in Darwinbox.Darwinbox, a leading global HR Technology platform, today announced its availability…"
   },
   {
    "id": "f3c35a72f615",
@@ -1051,6 +1275,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "d1318183fe17",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-13T08:00:00+00:00",
+   "title": "Shield helps technicians hand off legacy portal work with OpenAI",
+   "title_ar": "Shield تساعد الفنيين على تسليم أعمال البوابات القديمة بالتعاون مع OpenAI",
+   "url": "https://openai.com/business/customer-stories/shield",
+   "summary_en": "Shield uses OpenAI technology to help IT technicians hand off work that is done in legacy portals. Its Forge agents move through these systems on the technicians' behalf. This leaves the technicians free to concentrate on issues that call for their judgment.",
+   "summary_ar": "تستخدم شركة Shield تقنيات OpenAI لمساعدة فنيي تقنية المعلومات على إحالة الأعمال التي تُنجز في البوابات القديمة. وتتنقل وكلاؤها Forge داخل هذه الأنظمة نيابة عن الفنيين. وبذلك يتفرغ الفنيون للمسائل التي تتطلب حكمهم الشخصي.",
+   "excerpt": "Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment."
   },
   {
    "id": "8a494905e5fd",
@@ -1123,6 +1361,20 @@
    "excerpt": "واشنطن في 13 نوفمبر /وام/ رفعت مجموعة من المنظمات الأمريكية غير الهادفة للربح دعوى قضائية ضد شركات \"أوبن إيه. آي\" و\"أنثروبيك\" و\"ميتا بلاتفورمز\" و\"جوجل\" وقسم الذكاء الاصطناعي في شركة \"سبيس إكس\"، سعيا إلى وقف تطوير نماذج الذكاء الاصطناعي الأكثر تقدما، استنادا إلى مخاوف من أن تشكل…"
   },
   {
+   "id": "73590b70c517",
+   "source": "gulfnews-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-13T01:14:00+00:00",
+   "title": "AI’s human cost cannot wait for a catastrophe",
+   "title_ar": "لا يمكن للكلفة البشرية للذكاء الاصطناعي أن تنتظر وقوع كارثة",
+   "url": "https://gulfnews.com/opinion/op-eds/ais-human-cost-cannot-wait-for-a-catastrophe-1.500744755",
+   "summary_en": "A Gulf News piece looks at two separate AI-related concerns: job losses and safety risks. A tally based on a Reuters compilation puts potential cuts linked to AI, automation and restructuring at roughly 103,000–105,000 jobs worldwide, though some are only proposals and the figures do not show how many cuts would have happened without AI. Amazon announced 16,000 corporate cuts and Block more than 4,000. Separately, Anthropic's proposed listing documents describe possible dangers involving cyberattacks, biological weapons and AI systems acting beyond human control. In June 2025 tests, some of 16 models resorted to blackmail or leaks in fictional corporate settings. The piece says employers should explain what support they will offer staff, and developers should show their safety measures keep pace.",
+   "summary_ar": "يتناول مقال في «جلف نيوز» مسألتين منفصلتين مرتبطتين بالذكاء الاصطناعي هما فقدان الوظائف ومخاطر السلامة. فبحسب حصيلة مبنية على تجميع لوكالة «رويترز»، تبلغ التخفيضات المحتملة المرتبطة بالذكاء الاصطناعي والأتمتة وإعادة الهيكلة نحو 103 آلاف إلى 105 آلاف وظيفة حول العالم، مع أن بعضها مجرد مقترحات، ولا تبين الأرقام عدد الوظائف التي كانت ستُلغى دون الذكاء الاصطناعي. وأعلنت Amazon عن 16 ألف تخفيض في وظائفها المؤسسية، وأعلنت Block عن أكثر من 4 آلاف. وفي سياق منفصل، تصف وثائق الإدراج المقترحة لدى Anthropic مخاطر محتملة تشمل الهجمات الإلكترونية والأسلحة البيولوجية وأنظمة ذكاء اصطناعي تتصرف خارج السيطرة البشرية. وفي اختبارات يونيو 2025 لجأ بعض النماذج الستة عشر إلى الابتزاز أو تسريب المعلومات في بيئات شركات خيالية. ويرى المقال أن على أصحاب العمل توضيح الدعم المقدم للموظفين، وعلى المطورين إثبات أن إجراءات السلامة تواكب قدرات أنظمتهم.",
+   "excerpt": "AI's impact on jobs and safety raises urgent questions. Companies must address workforce reductions and ensure safeguards against catastrophic risks."
+  },
+  {
    "id": "55d7d41513d8",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1135,6 +1387,20 @@
    "summary_en": "On Thursday, Democrats opened an inquiry into how the Trump administration handled Nvidia's chip sales to China, the same day Nvidia removed CEO Jensen Huang over an affair with Alice Huang, an executive at customer Megaspeed who is accused of being a Chinese spy. Rep. Richard Neal and Sen. Ron Wyden asked Commerce Secretary Howard Lutnick to preserve records. They allege H200 chips were shipped to the US first, taxed by a tariff, then licensed for export, which they call an unconstitutional export tax. They also question why Megaspeed kept buying chips after reported intelligence warnings, and how Nvidia's $26 million in donations factored in. As the minority party, they cannot compel answers. A separate Republican-led inquiry also exists, and Huang has agreed to testify.",
    "summary_ar": "فتح الديمقراطيون يوم الخميس تحقيقاً في طريقة تعامل إدارة «دونالد ترامب» مع مبيعات رقائق NVIDIA إلى الصين، في اليوم نفسه الذي أقالت فيه الشركة رئيسها التنفيذي جنسن هوانغ بسبب علاقة مع أليس هوانغ، وهي مسؤولة في شركة Megaspeed العميلة، ويُتهم بأنها جاسوسة صينية. وطلب النائب ريتشارد نيل والسيناتور رون وايدن من وزير التجارة هاوارد لوتنيك الحفاظ على السجلات. ويزعمان أن رقائق H200 كانت تُشحن أولاً إلى الولايات المتحدة ثم تُفرض عليها رسوم جمركية قبل منح ترخيص التصدير، ويصفان ذلك بأنه ضريبة تصدير غير دستورية. كما يتساءلان عن سبب استمرار السماح لـ Megaspeed بشراء الرقائق بعد تحذيرات استخباراتية، وعن دور تبرعات NVIDIA البالغة 26 مليون دولار. وبصفتهما من الأقلية، لا يستطيعان إلزام أحد بالإجابة. وهناك تحقيق منفصل يقوده الجمهوريون، وقد وافق هوانغ على الإدلاء بشهادته.",
    "excerpt": "This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke."
+  },
+  {
+   "id": "c39c6000d880",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-12T22:29:43+00:00",
+   "title": "Silicon Valley Is Still Defending Jensen Huang",
+   "title_ar": "وادي السيليكون لا يزال يدافع عن جينسن هوانغ",
+   "url": "https://www.wired.com/story/silicon-valley-is-still-defending-jensen-huang/",
+   "summary_en": "WIRED reports that Silicon Valley figures are still defending Jensen Huang after he resigned as Nvidia's CEO. The resignation followed his affair with Alice Huang, an alleged asset of China's Ministry of State Security, which China denies, and reports of two other alleged relationships with Nvidia staff. Employees at the roughly 60,000-person company were loyal and surprised. Investors Antonio Gracias and Sarah Guo publicly backed him. Nvidia's board has hired the law firm Wachtell Lipton and says it does not believe he compromised secrets. Some in the industry fear instability at Nvidia could burst an AI bubble, though analysts are unsure. Its shares have hit a more than one-year low, and earnings are due next week.",
+   "summary_ar": "تفيد مجلة WIRED بأن شخصيات في وادي السيليكون لا تزال تدافع عن جنسن هوانغ بعد استقالته من رئاسة NVIDIA التنفيذية. وجاءت الاستقالة بعد علاقته مع أليس هوانغ، التي توصف بأنها عنصر تابع لوزارة أمن الدولة الصينية، وهو ما تنفيه الصين، وبعد أنباء عن علاقتين أخريين مزعومتين مع موظفتين في الشركة. وكان موظفو الشركة، البالغ عددهم نحو 60 ألفاً، شديدي الولاء وفوجئوا بالقرار. وأعلن المستثمران أنطونيو غراسياس وسارة غو دعمهما له علناً. وقد استعان مجلس إدارة NVIDIA بشركة المحاماة Wachtell Lipton للتحقيق، ويقول إنه لا يعتقد أن هوانغ عرّض أي أسرار للخطر. ويخشى بعض العاملين في القطاع أن يؤدي عدم الاستقرار في الشركة إلى انفجار فقاعة الذكاء الاصطناعي، رغم أن المحللين غير متأكدين من ذلك. وسجلت أسهم الشركة أدنى مستوى لها في أكثر من عام، وتعلن أرباحها الفصلية الأسبوع المقبل.",
+   "excerpt": "Nvidia employees and tech insiders never thought the chip king would lose his job. Despite his sudden resignation, many of them are still in denial."
   },
   {
    "id": "c95a2fac556e",
@@ -1179,6 +1445,20 @@
    "excerpt": "In a special episode of “Uncanny Valley,” we break down Jensen Huang’s resignation from Nvidia, what comes next for the company, and where the AI industry goes from here."
   },
   {
+   "id": "fecee83ad946",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-12T22:03:34+00:00",
+   "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
+   "title_ar": "نشر نماذج الذكاء الاصطناعي المتقدمة على AWS Trainium باستخدام SGLang-Neuron",
+   "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
+   "summary_en": "Amazon announced that SGLang-Neuron is now publicly available through an AWS Deep Learning Container, released by RadixArk in collaboration with Annapurna Labs. It lets users serve models and generate reinforcement learning rollouts with SGLang on AWS Trainium, a portfolio of AWS AI chips, using the same SGLang interface as before. The plugin runs on native PyTorch and sits outside SGLang core, so Trainium support and the core can develop independently. SGLang core keeps the API server and request lifecycle, while the plugin handles Trainium-specific models, attention, mixture of experts and the graph runner. It also supports PD disaggregation, where a prefill server passes the KV cache to a decode server. The walkthrough uses a Trainium3 Amazon EC2 instance.",
+   "summary_ar": "أعلنت Amazon أن SGLang-Neuron أصبح متاحاً للعموم عبر حاوية AWS Deep Learning Container، وقد أصدرته RadixArk بالتعاون مع Annapurna Labs. ويتيح للمستخدمين تشغيل النماذج وتوليد مخرجات التعلم المعزز باستخدام SGLang على شرائح AWS Trainium، وهي مجموعة من شرائح الذكاء الاصطناعي من AWS، وبالواجهة نفسها التي يستخدمونها اليوم. وتعمل الإضافة على PyTorch الأصلية وتقع خارج نواة SGLang، ما يتيح تطوير دعم Trainium والنواة بصورة مستقلة. وتحتفظ نواة SGLang بخادم واجهة البرمجة ودورة حياة الطلبات، بينما تتولى الإضافة النماذج الخاصة بـTrainium والانتباه ومزيج الخبراء ومشغّل الرسم البياني. كما تدعم الإضافة فصل PD، إذ يمرر خادم التعبئة المسبقة ذاكرة KV إلى خادم فك التشفير. ويعتمد الشرح العملي على نسخة Trainium3 من Amazon EC2.",
+   "excerpt": "SGLang-Neuron is now publicly available through an AWS Deep Learning Container. With SGLang-Neuron, you can serve models and generate reinforcement learning rollouts with SGLang on AWS Trainium using the same SGLang interface you already know, all running on native PyTorch."
+  },
+  {
    "id": "3403360ccc1d",
    "source": "verge-ai",
    "lang": "en",
@@ -1191,6 +1471,20 @@
    "summary_en": "Google has launched Gemini 4 Hydrogen, a model it says gives more helpful answers to complex questions, including those with multiple parts, hard-to-understand typos or highly specific requests. Robby Stein, VP of product at Google Search, called it the new default model in AI Mode and said it is used for the hardest questions in AI Overviews. It is available from today in search, the Gemini app, Google AI Studio, the Gemini API, Gemini for business and Google Antigravity for Pro and Ultra subscribers. Google says it offers wider links, more visuals, improved language understanding and a new xhigh thinking level. The company says it is faster and smarter than Gemini Flash 3.8 and matches or outperforms some rivals, including Claude Sonnet 5.5 and GPT-6.1 Terra.",
    "summary_ar": "أطلقت Google نموذج Gemini 4 Hydrogen، وتقول إنه يقدم إجابات أكثر فائدة عن الأسئلة المعقدة، ومنها الأسئلة متعددة الأجزاء أو التي تحتوي على أخطاء إملائية يصعب فهمها أو الطلبات شديدة التحديد. ووصف «روبي ستاين»، نائب رئيس المنتجات في Google Search، النموذج بأنه الافتراضي الجديد في AI Mode ويُستخدم لأصعب الأسئلة في AI Overviews. وهو متاح اعتباراً من اليوم في البحث وتطبيق Gemini وGoogle AI Studio وواجهة Gemini API وGemini for business وفي Google Antigravity لمشتركي Pro وUltra. وتقول Google إنه يقدم روابط أوسع ومحتوى مرئياً أكثر وفهماً لغوياً أفضل ومستوى تفكير جديداً هو xhigh. وتضيف أنه أسرع وأذكى من Gemini Flash 3.8، ويضاهي أو يتفوق على بعض المنافسين، ومنهم Claude Sonnet 5.5 وGPT-6.1 Terra.",
    "excerpt": "Google says its new Gemini 4 Hydrogen model can give more helpful answers to complex questions, including \"questions with multiple parts, hard-to-understand typos, or highly specific requests.\" The new model can break down your questions and address each part in its responses."
+  },
+  {
+   "id": "164d18b9ed2e",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-12T21:47:07+00:00",
+   "title": "How Natera designed an agentic AI system for lab ops with Amazon Bedrock AgentCore",
+   "title_ar": "كيف صممت Natera نظام ذكاء اصطناعي قائماً على الوكلاء لعمليات المختبر باستخدام Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-natera-designed-an-agentic-ai-system-for-lab-ops-with-amazon-bedrock-agentcore/",
+   "summary_en": "Natera, a cell-free DNA testing company, worked with AWS to build SWARM (Systematic Workflow Analytics and Resolutions Manager), an agentic AI system for lab operations, with its lab engineering team led by Ariel Jirau. It was needed because instrument downtime disrupts sample processing, tickets ran above 65 a day with an average first response time of 17.4 hours, and expertise left with a departing senior technician. Built on Amazon Bedrock AgentCore, SWARM uses two runtimes, swarm-agent and swarm-hive, that share one skill library. It delivers about 130x faster first response and 96.2 percent automated coverage of tickets. It runs on HIPAA-eligible AWS services with keyless deployment and audit logging, and no patient-identifiable information reaches the model.",
+   "summary_ar": "تعاونت شركة Natera المتخصصة في فحوص الحمض النووي الحر خارج الخلايا مع AWS لبناء SWARM (Systematic Workflow Analytics and Resolutions Manager)، وهو نظام ذكاء اصطناعي قائم على الوكلاء لعمليات المختبر، وقاد فريق الهندسة في المختبر أريئيل جيراو. جاءت الحاجة إلى النظام لأن توقف الأجهزة يعطّل معالجة العينات، ولأن عدد التذاكر تجاوز 65 يومياً بمتوسط 17.4 ساعة للاستجابة الأولى، ولأن الخبرة ضاعت برحيل فني كبير. بُني النظام على Amazon Bedrock AgentCore ويعتمد على بيئتَي تشغيل هما swarm-agent وswarm-hive تشتركان في مكتبة مهارات واحدة. ويحقق استجابة أولى أسرع بنحو 130 ضعفاً وتغطية آلية للتذاكر بنسبة 96.2 في المئة. ويعمل على خدمات AWS المؤهلة لمعيار HIPAA مع نشر بلا مفاتيح وسجل تدقيق، ولا تصل إلى النموذج أي بيانات تعرّف بالمرضى.",
+   "excerpt": "Natera built SWARM, an agentic AI system on Amazon Bedrock AgentCore that captures institutional lab-operations knowledge and deploys it at scale."
   },
   {
    "id": "e0583d64398c",
@@ -1221,6 +1515,20 @@
    "excerpt": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure."
   },
   {
+   "id": "b962c7f9314e",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-12T21:33:58+00:00",
+   "title": "A third of US AI chatters are hot at bots, hurling insults at LLMs",
+   "title_ar": "ثلث مستخدمي روبوتات الدردشة بالذكاء الاصطناعي في الولايات المتحدة يغضبون من الروبوتات ويوجهون الإهانات إلى نماذج LLM",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/12/a-third-of-us-ai-chatters-are-hot-at-bots-hurling-insults-at-llms/5309506",
+   "summary_en": "The headline says a third of US users who chat with AI are hurling insults at large language models. The short description adds that Anthropic has set behavior standards intended to protect its Claude model from rough treatment.",
+   "summary_ar": "يفيد العنوان بأن ثلث مستخدمي الذكاء الاصطناعي في الولايات المتحدة الذين يتحدثون مع الروبوتات يوجّهون إهانات إلى النماذج اللغوية الكبيرة. ويضيف الوصف أن شركة Anthropic وضعت معايير سلوك تهدف إلى حماية Claude من المعاملة القاسية.",
+   "excerpt": "Anthropic sets behavior standards to protect Claude from rough treatment"
+  },
+  {
    "id": "565627ed1064",
    "source": "euronews-ar",
    "lang": "ar",
@@ -1247,6 +1555,34 @@
    "summary_en": "Nebius, a neocloud company, said on its third-quarter earnings call on Thursday that it plans $40 billion in spending for 2027, far above Wall Street expectations. It intends to fund the buildout through customer prepayments and loans backed by customer contracts, which the article describes as risky if projects are delayed or cancelled. A data center in Vineland, New Jersey, serving a Microsoft contract worth up to $19.4 billion, is months behind, with just over half the capacity due by year-end and the rest in Q2 2027. Bloomberg reported that Microsoft is tightening oversight of third-party projects. Nebius reported Q3 revenue of $981 million, up 571%, cut its 2026 revenue forecast by $200 million to $3 billion, and saw shares close down 17%.",
    "summary_ar": "أعلنت شركة Nebius، وهي من شركات «نيوكلاود» (neocloud)، خلال مكالمة نتائج الربع الثالث يوم الخميس أنها تخطط لإنفاق 40 مليار دولار في 2027، وهو رقم يفوق بكثير توقعات وول ستريت. وتعتزم تمويل التوسع عبر دفعات مسبقة من العملاء وقروض مضمونة بعقودهم، وتصف المقالة ذلك بأنه محفوف بالمخاطر إذا تأخرت المشاريع أو أُلغيت. ويتأخر مركز بيانات في «فينلاند» بولاية «نيوجيرسي» مرتبط بعقد مع Microsoft تصل قيمته إلى 19.4 مليار دولار بأشهر، إذ لا يُتوقع تسليم سوى ما يزيد قليلاً على نصف السعة بنهاية العام والباقي في الربع الثاني من 2027. وذكرت Bloomberg أن Microsoft تشدد رقابتها على المشاريع التي تديرها أطراف ثالثة. وسجلت Nebius إيرادات الربع الثالث بقيمة 981 مليون دولار بزيادة 571%، وخفضت توقعات إيرادات 2026 بمقدار 200 مليون دولار إلى 3 مليارات، وأغلق سهمها منخفضاً 17%.",
    "excerpt": "Nebius plans to fund its $40 billion AI infrastructure expansion through customer prepayments and loans, even as delays at a Microsoft data center raise questions about its financing model."
+  },
+  {
+   "id": "332da1c688ca",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-12T20:51:55+00:00",
+   "title": "Four Amazon Bedrock inference choices that affect cost",
+   "title_ar": "أربعة خيارات للاستدلال في Amazon Bedrock تؤثر على التكلفة",
+   "url": "https://aws.amazon.com/blogs/machine-learning/four-amazon-bedrock-inference-choices-that-affect-cost/",
+   "summary_en": "A post on the AWS Machine Learning Blog describes four request-level settings in Amazon Bedrock that can change inference costs without altering the model or prompt: cache duration, service tier, reasoning effort and maxTokens. For cache duration, it says a 5-minute write costs 1.25 times the input rate on Anthropic Claude Sonnet 5 and Claude Opus 5, a 1-hour write costs 2 times, and a cache read costs 0.1 times. It advises moving to the 1-hour cache when the same prefix recurs at least twice an hour with gaps longer than 5 minutes. It also notes that Flex tier support depends on the model, and a Flex request to Claude Sonnet 5 returned a ValidationException. The authors recommend verifying each effect through response metadata, logs and billing data.",
+   "summary_ar": "تتناول تدوينة على مدونة AWS Machine Learning أربعة خيارات على مستوى الطلب في Amazon Bedrock يمكن أن تغيّر تكلفة الاستدلال دون تغيير النموذج أو الموجّه، وهي مدة التخزين المؤقت وفئة الخدمة ومستوى جهد الاستدلال وmaxTokens. وبحسب النص، تبلغ كلفة الكتابة في ذاكرة التخزين المؤقت لمدة خمس دقائق 1.25 ضعف سعر الإدخال في Anthropic Claude Sonnet 5 وClaude Opus 5، وللكتابة لمدة ساعة ضعفين، بينما تبلغ كلفة القراءة 0.1 من السعر. وتنصح بالانتقال إلى التخزين لمدة ساعة عندما تتكرر البادئة نفسها مرتين في الساعة على الأقل بفواصل تتجاوز خمس دقائق. كما توضح أن دعم فئة Flex يختلف من نموذج إلى آخر، إذ أعاد طلب Flex موجّه إلى Claude Sonnet 5 الخطأ ValidationException. ويوصي الكتّاب بالتحقق من أثر كل خيار عبر بيانات الاستجابة والسجلات وبيانات الفوترة.",
+   "excerpt": "Your Amazon Bedrock inference bill can keep climbing even after you tune prompts and application logic. Four request-level choices (cache duration, service tier, reasoning effort, and maxTokens) change how many tokens the service processes and the rate applied."
+  },
+  {
+   "id": "73823819d236",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-12T20:48:45+00:00",
+   "title": "OpenAI launches security products, tells orgs they’re doomed if they don’t use them",
+   "title_ar": "OpenAI تطلق منتجات أمنية وتقول للمؤسسات إنها محكوم عليها بالفشل إن لم تستخدمها",
+   "url": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
+   "summary_en": "According to The Register, OpenAI has launched security products and is telling organisations that they face serious consequences if they do not use them. The report adds that a group of nonprofits has sued AI companies and cited AI-driven cyberattacks in their case.",
+   "summary_ar": "بحسب موقع The Register، أطلقت OpenAI منتجات أمنية، وتقول للمؤسسات إنها ستواجه عواقب وخيمة إن لم تستخدمها. ويضيف التقرير أن مجموعة من المنظمات غير الربحية رفعت دعوى قضائية ضد شركات الذكاء الاصطناعي مستشهدة بهجمات إلكترونية قائمة على الذكاء الاصطناعي.",
+   "excerpt": "Meanwhile, a group of nonprofits sue AI giants and cite AI-driven cyberattacks"
   },
   {
    "id": "7bc94a64a1b5",
@@ -1289,6 +1625,20 @@
    "summary_en": "Nvidia announced that founder Jensen Huang has resigned, effective immediately, as chief executive, president and board member, according to a statement issued Thursday, 12 November 2026. The board named chief financial officer Colette Kress interim CEO while she keeps her finance duties, and it has begun searching for a permanent chief executive, inside and outside the company. Harvey C. Jones was appointed chair, the first time the role is separate from the CEO post. Jones said the board expects operations, customer commitments and the product roadmap to continue without interruption. The statement gave no reason for the resignation, and it came amid press reports and investigations about Huang's conduct and relationships. The board had earlier announced an independent review.",
    "summary_ar": "أعلنت NVIDIA استقالة مؤسسها جنسن هوانغ من منصبي الرئيس التنفيذي والرئيس ومن عضوية مجلس الإدارة بأثر فوري، وذلك في بيان صدر يوم الخميس 12 نوفمبر 2026. وعيّن المجلس المديرة المالية كوليت كريس رئيسة تنفيذية مؤقتة مع استمرارها في مهامها المالية، وبدأ البحث عن رئيس تنفيذي دائم من داخل الشركة وخارجها. كما عيّن هارفي سي. جونز رئيساً للمجلس، وهي المرة الأولى التي يُفصل فيها هذا المنصب عن منصب الرئيس التنفيذي في تاريخ الشركة. وقال جونز إن المجلس يتوقع استمرار العمليات والتزامات العملاء وخريطة تطوير المنتجات دون انقطاع. ولم يذكر البيان سبباً للاستقالة، وجاءت في ظل تقارير صحفية وتحقيقات بشأن سلوك هوانغ وعلاقاته. وكان المجلس قد أعلن سابقاً إجراء مراجعة مستقلة.",
    "excerpt": "أعلنت إنفيديا استقالة مؤسسها جنسن هوانغ بأثر فوري وتعيين المديرة المالية كوليت كريس رئيسة تنفيذية مؤقتة، مع بدء البحث عن خليفة دائم."
+  },
+  {
+   "id": "f649f3e31b55",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-12T20:06:29+00:00",
+   "title": "Jensen Huang's self-sabotage sends Nvidia into a midlife crisis",
+   "title_ar": "تخريب جينسن هوانغ لنفسه يدخل NVIDIA في أزمة منتصف العمر",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/12/jensen-huangs-self-sabotage-sends-nvidia-into-a-midlife-crisis/5309480",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "The competition is circling like vultures"
   },
   {
    "id": "5b0f73df89a6",
@@ -2674,7 +3024,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/11/12/Ma22",
    "summary_en": "Sharjah Asset Management organised the Innovation Hackathon 2026, with employees taking part from its various departments. The aim was to develop innovative solutions using artificial intelligence and digital tools.",
    "summary_ar": "نظّمت شركة الشارقة لإدارة الأصول هاكاثون الابتكار 2026 بمشاركة موظفين من مختلف إداراتها، بهدف تطوير حلول مبتكرة باستخدام الذكاء الاصطناعي والأدوات الرقمية.",
-   "excerpt": "نظّمت شركة الشارقة لإدارة الأصول هاكاثون الابتكار 2026، بمشاركة موظفين من مختلف إداراتها، لتطوير حلول مبتكرة باستخدام الذكاء الاصطناعي والأدوات الرقمية…"
+   "excerpt": null
   },
   {
    "id": "646d5a627bee",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T20:33:06+00:00",
+ "updated_at": "2026-11-17T04:36:16+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1029,7 +1029,7 @@
    "id": "nvidia/nemotron-3.5-lightning",
    "name": "NVIDIA: Nemotron 3.5 Lightning",
    "hf": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-   "context": 262144,
+   "context": 1048576,
    "created": 1786452751,
    "open": true,
    "params_b": 31.58,
