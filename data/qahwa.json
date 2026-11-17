@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-16T20:20:00+04:00",
+  "generated_at": "2026-11-17T07:45:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11511,6 +11511,41 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-16T20:20:00+04:00",
       "cover": "images/qahwa/week-08-day-51--3-check-story.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-50--3-check-story-answer",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "64 GB unified memory is exactly the same as a 64 GB discrete GPU.",
+        "ar": "ذاكرة موحّدة بسعة 64 GB هي تماماً مثل كرت شاشة 64 GB."
+      },
+      "summary": {
+        "en": "Answer: Myth or fact?",
+        "ar": "الجواب: خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "answer",
+          "verdict": "myth",
+          "en": {
+            "title": "64 GB unified memory is ==exactly the same== as a 64 GB discrete GPU.",
+            "body": "Answer: Myth ❌ The number may match, but macOS and your open apps share that memory, and bandwidth, compute and software differ."
+          },
+          "ar": {
+            "title": "ذاكرة موحّدة بسعة 64 GB ==هي تماماً مثل== كرت شاشة 64 GB.",
+            "body": "الجواب: خرافة ❌ قد يتشابه الرقم، لكن النظام والتطبيقات المفتوحة تتقاسم هذه الذاكرة، ويختلف عرض النطاق والمعالجة والبرمجيات."
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-17T07:45:00+04:00",
+      "cover": "images/qahwa/week-08-day-50--3-check-story-answer.webp",
       "related_concepts": []
     }
   ]
