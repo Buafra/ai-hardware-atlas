@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-17T07:49:00+04:00",
+  "generated_at": "2026-11-17T08:02:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11581,6 +11581,43 @@
       "permalink": "https://www.instagram.com/qahwa.w.ai/",
       "published_at": "2026-11-17T07:49:00+04:00",
       "cover": "images/qahwa/week-08-day-51--3-check-story-answer.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "week-08-day-52--2-try-reel-cover",
+      "kind": "reel",
+      "lesson": null,
+      "code": null,
+      "week": 8,
+      "topic": "hardware",
+      "title": {
+        "en": "512 GB unified memory",
+        "ar": "ذاكرة موحّدة بسعة 512 GB"
+      },
+      "summary": {
+        "en": "A desktop with half a terabyte of unified memory. Why?",
+        "ar": "جهاز مكتبي بذاكرة موحّدة تبلغ نصف تيرابايت. لماذا؟"
+      },
+      "slides": [
+        {
+          "type": "reel-cover",
+          "duration": "0:30",
+          "en": {
+            "title": "A desktop with ==half a terabyte== of unified memory. Why?"
+          },
+          "ar": {
+            "title": "جهاز مكتبي ==بذاكرة موحّدة تبلغ نصف تيرابايت==. لماذا؟"
+          }
+        }
+      ],
+      "prompt": {
+        "en": "Compare which models fit in 96 GB of VRAM and which fit in 512 GB of unified memory, without assuming which one is faster.",
+        "ar": "قارن: أي النماذج تتّسع لها VRAM بسعة 96 GB، وأيها تتّسع لها ذاكرة موحّدة بسعة 512 GB، دون افتراض أيهما أسرع.",
+        "code": null
+      },
+      "permalink": "https://www.instagram.com/reel/Df1BkfAM_6z/",
+      "published_at": "2026-11-17T08:02:00+04:00",
+      "cover": "images/qahwa/week-08-day-52--2-try-reel-cover.webp",
       "related_concepts": []
     }
   ]
