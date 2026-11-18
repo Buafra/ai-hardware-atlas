@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T03:50:09+00:00",
+ "updated_at": "2026-11-18T19:01:25+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1565,6 +1565,17 @@
    "moe": false
   },
   {
+   "id": "tencent/hy4-flash",
+   "name": "Tencent: Hy4 flash",
+   "hf": "tencent/Hy4-flash",
+   "context": 1048576,
+   "created": 1794838706,
+   "open": true,
+   "params_b": 220.25,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "tencent/hy4-preview",
    "name": "Tencent: Hy4 preview",
    "hf": "tencent/Hy4-preview",
@@ -1667,7 +1678,7 @@
    "id": "xiaomi/mimo-v2.5-pro",
    "name": "Xiaomi: MiMo-V2.5-Pro",
    "hf": "XiaomiMiMo/MiMo-V2.5-Pro",
-   "context": 1024000,
+   "context": 262144,
    "created": 1776874273,
    "open": true,
    "params_b": 1023.18,
@@ -4045,17 +4056,6 @@
    "hf": null,
    "context": 256000,
    "created": 1779298123,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "tencent/hy4-flash",
-   "name": "Tencent: Hy4 flash",
-   "hf": null,
-   "context": 1048576,
-   "created": 1794838706,
    "open": false,
    "params_b": null,
    "params_source": null,

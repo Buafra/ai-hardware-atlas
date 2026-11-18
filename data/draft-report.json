@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-18T03:50:09+00:00",
+  "at": "2026-11-18T19:01:25+00:00",
   "created": [],
   "waiting": [],
   "in_pull_request": [
@@ -10,9 +10,9 @@
     3
   ],
   "usage": {
-    "requests": 1,
-    "input_tokens": 5356,
-    "output_tokens": 321,
-    "estimated_usd": 0.0139
+    "requests": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "estimated_usd": 0.0
   }
 }
