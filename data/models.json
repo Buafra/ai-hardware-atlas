@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T19:01:25+00:00",
+ "updated_at": "2026-11-19T03:30:30+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -2505,6 +2505,17 @@
    "hf": null,
    "context": 1048576,
    "created": 1794506460,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "google/gemini-4-neon",
+   "name": "Google: Gemini 4 Neon",
+   "hf": null,
+   "context": 1048576,
+   "created": 1795006977,
    "open": false,
    "params_b": null,
    "params_source": null,
