@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T19:10:38+00:00",
+ "updated_at": "2026-11-20T03:17:53+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -87,17 +87,6 @@
    "created": 1734158152,
    "open": true,
    "params_b": 8.03,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "cohere/north-mini-code",
-   "name": "Cohere: North Mini Code",
-   "hf": "CohereLabs/North-Mini-Code-1.0",
-   "context": 256000,
-   "created": 1781723748,
-   "open": true,
-   "params_b": 30.48,
    "params_source": "huggingface",
    "moe": false
   },
@@ -1560,8 +1549,8 @@
    "context": 1048576,
    "created": 1793766031,
    "open": true,
-   "params_b": null,
-   "params_source": null,
+   "params_b": 774.43,
+   "params_source": "huggingface",
    "moe": false
   },
   {
@@ -2808,6 +2797,17 @@
    "moe": false
   },
   {
+   "id": "mistralai/pixtral-large-2502",
+   "name": "Mistral: Pixtral Large 2502",
+   "hf": null,
+   "context": 128000,
+   "created": 1795135865,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "mistralai/mistral-saba",
    "name": "Mistral: Saba",
    "hf": null,
@@ -3997,7 +3997,7 @@
   },
   {
    "id": "x-ai/grok-4.20",
-   "name": "SpaceXAI: Grok 4.20",
+   "name": "SpaceXSI: Grok 4.20",
    "hf": null,
    "context": 2000000,
    "created": 1774979019,
@@ -4008,7 +4008,7 @@
   },
   {
    "id": "x-ai/grok-4.20-multi-agent",
-   "name": "SpaceXAI: Grok 4.20 Multi-Agent",
+   "name": "SpaceXSI: Grok 4.20 Multi-Agent",
    "hf": null,
    "context": 2000000,
    "created": 1774979158,
@@ -4019,7 +4019,7 @@
   },
   {
    "id": "x-ai/grok-4.3",
-   "name": "SpaceXAI: Grok 4.3",
+   "name": "SpaceXSI: Grok 4.3",
    "hf": null,
    "context": 1000000,
    "created": 1777591821,
@@ -4030,7 +4030,7 @@
   },
   {
    "id": "x-ai/grok-4.5",
-   "name": "SpaceXAI: Grok 4.5",
+   "name": "SpaceXSI: Grok 4.5",
    "hf": null,
    "context": 500000,
    "created": 1783523154,
@@ -4041,7 +4041,7 @@
   },
   {
    "id": "x-ai/grok-4.6",
-   "name": "SpaceXAI: Grok 4.6",
+   "name": "SpaceXSI: Grok 4.6",
    "hf": null,
    "context": 500000,
    "created": 1786548957,
@@ -4052,21 +4052,10 @@
   },
   {
    "id": "x-ai/grok-4.7",
-   "name": "SpaceXAI: Grok 4.7",
+   "name": "SpaceXSI: Grok 4.7",
    "hf": null,
    "context": 500000,
    "created": 1790007541,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "x-ai/grok-build-0.1",
-   "name": "SpaceXAI: Grok Build 0.1",
-   "hf": null,
-   "context": 256000,
-   "created": 1779298123,
    "open": false,
    "params_b": null,
    "params_source": null,
