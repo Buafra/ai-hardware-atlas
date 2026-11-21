@@ -3,6 +3,48 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "992c7f944436",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-20T06:26:12+00:00",
+   "title": "أمازون تتيح لوكلاء الذكاء الاصطناعي شراء الخدمات والبيانات تلقائيًا عبر AWS Marketplace",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/20/aws-marketplace-ai-agents-automated-purchases/",
+   "summary_en": "Amazon Web Services announced on Thursday, November 19, 2026, that AI agents can now make purchases automatically through AWS Marketplace, paying for software, APIs, data and digital content from eligible sellers within limits set in advance by account owners. The feature relies on the x402 payment protocol and Amazon Bedrock AgentCore payments, with charges in US dollars added to the existing AWS bill, and it covers only products that support x402. Organizations can set spending caps, approved seller lists and payment rules. AWS also launched a generally available Data as a Service category and expanded Agent mode, a conversational interface where purchases need user confirmation.",
+   "summary_ar": "أعلنت Amazon Web Services يوم الخميس 19 نوفمبر 2026 أن بإمكان وكلاء الذكاء الاصطناعي تنفيذ عمليات شراء تلقائياً عبر AWS Marketplace، ودفع مقابل البرمجيات وواجهات برمجة التطبيقات والبيانات والمحتوى الرقمي من بائعين مؤهلين ضمن حدود يحددها أصحاب الحسابات مسبقاً. وتعتمد الميزة على بروتوكول المدفوعات x402 وخدمة Amazon Bedrock AgentCore payments، وتُحتسب المبالغ بالدولار الأمريكي ضمن فاتورة AWS القائمة، وتقتصر على المنتجات التي تدعم x402. ويمكن للمؤسسات تحديد سقوف للإنفاق وقوائم للبائعين المسموح بهم وقواعد للمدفوعات. كما أطلقت AWS فئة Data as a Service وأتاحتها بصورة عامة، ووسّعت Agent mode، وهي واجهة حوارية يتطلب الشراء عبرها تأكيداً من المستخدم.",
+   "excerpt": "أتاحت أمازون لوكلاء الذكاء الاصطناعي شراء خدمات وبيانات مؤهلة عبر AWS Marketplace باستخدام x402 وAgentCore، ضمن حدود إنفاق مؤسسية وفوترة موحدة."
+  },
+  {
+   "id": "1d1a2a35b32a",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-20T06:24:30+00:00",
+   "title": "عبر صاروخ «نيو جلين»: جوجل تخطط لإطلاق أقمار ذكاء اصطناعي في 2029",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/20/google-blue-origin-suncatcher-ai-satellites-2029/",
+   "summary_en": "Google and Blue Origin announced on Thursday, 19 November 2026, a launch services agreement to use the New Glenn rocket to carry satellites built for AI computing into orbit in the first quarter of 2029. The mission is part of Google's research effort Project Suncatcher, which is studying space-based computing infrastructure powered by solar energy. The satellites will carry Google's TPU processors, and each is expected to offer roughly the computing capacity of one server rack in a ground data centre. The companies did not disclose the number of satellites or the contract value. Google launched a test satellite with Planet on 1 October 2026 and plans to test two linked satellites in 2027. Challenges include heat dissipation, radiation and launch costs.",
+   "summary_ar": "أعلنت جوجل وبلو أوريجن يوم الخميس 19 نوفمبر 2026 توقيع اتفاق لخدمات الإطلاق، يقضي باستخدام صاروخ «نيو جلين» (New Glenn) لنقل أقمار صناعية مخصصة لحوسبة الذكاء الاصطناعي إلى المدار في الربع الأول من عام 2029. وتأتي المهمة ضمن مشروع جوجل البحثي «Project Suncatcher» الذي يدرس بناء بنية حوسبة فضائية تعتمد على الطاقة الشمسية. وستحمل الأقمار معالجات TPU من جوجل، ويُتوقع أن يوفر كل قمر قدرة حوسبية تقارب ما توفره خزانة خوادم واحدة في مركز بيانات أرضي. ولم تعلن الشركتان عدد الأقمار ولا قيمة العقد. وكانت جوجل قد أطلقت قمراً تجريبياً بالتعاون مع Planet في الأول من أكتوبر 2026، وتعتزم تجربة قمرين مترابطين في 2027. وتشمل التحديات تبديد الحرارة والإشعاع وتكاليف الإطلاق.",
+   "excerpt": "أبرمت جوجل اتفاقًا مع بلو أوريجن لإطلاق أقمار مزودة بمعالجات TPU ضمن مشروع Suncatcher في الربع الأول من 2029، بعد نجاح تجربة مدارية أولية في أكتوبر 2026."
+  },
+  {
+   "id": "eef3883c0139",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-20T06:23:08+00:00",
+   "title": "توسع مراكز البيانات يدفع ميتا لإعادة تقييم أهدافها المناخية لعام 2030",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/20/meta-2030-net-zero-target-review-emissions-up-45-percent/",
+   "summary_en": "Meta said it is re-evaluating the timeline for reaching net-zero greenhouse gas emissions across its business and supply chain by 2030. Its net emissions rose 45% in 2025 to about 11.8 million tonnes of CO2 equivalent as investment in AI infrastructure accelerated. The figures appear in its 2026 sustainability report, released on Thursday, 19 November. Rachel Peterson and Blair Swedeen said the long-term climate ambition is unchanged, but AI facilities were built faster than earlier estimates while grid and low-carbon power expansion lagged. Most of the increase came from indirect supply-chain emissions, mainly capital goods, and electricity use rose about 35% to 24.85 million MWh. Meta has not cancelled the 2030 target or set a new year, and said it will share the review's results later.",
+   "summary_ar": "قالت Meta إنها تعيد تقييم الجدول الزمني لتحقيق صافي انبعاثات صفرية من غازات الدفيئة عبر أعمالها وسلسلة توريدها بحلول عام 2030. وكان صافي انبعاثاتها قد ارتفع بنسبة 45% في 2025 إلى نحو 11.8 مليون طن من مكافئ ثاني أكسيد الكربون، مع تسارع الاستثمار في البنية التحتية للذكاء الاصطناعي. وجاءت الأرقام في تقرير الاستدامة لعام 2026 الذي صدر الخميس 19 نوفمبر. وأوضح كل من «راشيل بيترسون» و«بلير سويدين» أن الطموح المناخي بعيد الأجل لم يتغير، لكن بناء منشآت الذكاء الاصطناعي تجاوز التقديرات السابقة بينما تأخر توسيع شبكات الكهرباء والطاقة منخفضة الكربون. وجاءت معظم الزيادة من الانبعاثات غير المباشرة في سلسلة التوريد، ولا سيما الأصول الرأسمالية، كما ارتفع استهلاك الكهرباء بنحو 35% إلى 24.85 مليون ميجاواط ساعة. ولم تلغِ Meta هدف 2030 ولم تحدد سنة بديلة، وقالت إنها ستعلن نتائج المراجعة لاحقاً.",
+   "excerpt": "تراجع ميتا موعد تحقيق صافي انبعاثات صفرية في 2030 بعدما ارتفعت انبعاثاتها 45% إلى 11.8 مليون طن خلال 2025، مدفوعة بتوسع بنية الذكاء الاصطناعي."
+  },
+  {
    "id": "803f28f1b76c",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -59,6 +101,20 @@
    "excerpt": "ظهرت شركة Anthropic لأول مرة في بورصة ناسداك عبر طرح عام أولي قياسي بلغت قيمته 1.5 تريليون دولار. وخارج البورصة في نيويورك، اعتقلت الشرطة ثلاثة محتجين حذروا من المخاطر المالية."
   },
   {
+   "id": "0a5e50796370",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T17:28:47+00:00",
+   "title": "PolyAI Dialog-RSN-1 is now on Amazon SageMaker JumpStart",
+   "title_ar": "PolyAI Dialog-RSN-1 متاح الآن على Amazon SageMaker JumpStart",
+   "url": "https://aws.amazon.com/blogs/machine-learning/polyai-dialog-rsn-1-is-now-on-amazon-sagemaker-jumpstart/",
+   "summary_en": "PolyAI's Dialog-RSN-1, a reasoning model built for real-time complex dialog, is now available on AWS Marketplace and Amazon SageMaker JumpStart. It is the first PolyAI model offered through AWS Marketplace. Customers can subscribe and deploy it as a SageMaker endpoint inside their own AWS account, using their existing VPC, IAM roles and monitoring, or deploy it with one click from JumpStart. The model works directly on a caller's audio in a single pass, with no separate speech-to-text step, and is already handling live calls in production. Current limits include English-only support and connections of up to 30 minutes. JumpStart also offers profiles optimised for latency, throughput, cost or balance.",
+   "summary_ar": "أصبح نموذج Dialog-RSN-1 من PolyAI، وهو نموذج استدلال مصمم للحوارات المعقدة في الوقت الفعلي، متاحاً الآن على AWS Marketplace وAmazon SageMaker JumpStart. وهو أول نموذج من PolyAI يُطرح عبر AWS Marketplace. يستطيع العملاء الاشتراك فيه ونشره كنقطة نهاية على SageMaker داخل حساباتهم على AWS، مستفيدين من الشبكة الخاصة الافتراضية وأدوار IAM وأدوات المراقبة القائمة لديهم، أو نشره بنقرة واحدة من JumpStart. يعالج النموذج صوت المتصل مباشرة في خطوة واحدة دون مرحلة منفصلة لتحويل الكلام إلى نص، وهو يتولى بالفعل مكالمات حية في بيئة الإنتاج. ومن قيوده الحالية أنه يدعم الإنجليزية فقط وأن مدة الاتصال تصل إلى 30 دقيقة. كما يوفر JumpStart ملفات تهيئة تركز على زمن الاستجابة أو الإنتاجية أو التكلفة أو التوازن بينها.",
+   "excerpt": "PolyAI Dialog-RSN-1, a reasoning model built for real-time complex dialog, is available today on AWS Marketplace and Amazon SageMaker JumpStart. Discover it, evaluate it on your own data, and deploy it to a secure SageMaker endpoint in your own AWS account."
+  },
+  {
    "id": "3d7bf8aa71f0",
    "source": "aws-ml",
    "lang": "en",
@@ -73,6 +129,20 @@
    "excerpt": "Amazon SageMaker HyperPod now offers enhanced observability to help you diagnose GPU training issues faster. It brings together diagnostic and profiling capabilities for training workloads on both Amazon EKS and Slurm orchestrators, pinpointing issues across GPU, network, and…"
   },
   {
+   "id": "4e742fb11586",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T16:13:51+00:00",
+   "title": "Using NVIDIA Run:ai GPU Fractioning on Amazon EKS",
+   "title_ar": "استخدام NVIDIA Run:ai GPU Fractioning على Amazon EKS",
+   "url": "https://aws.amazon.com/blogs/machine-learning/using-nvidia-runai-gpu-fractioning-on-amazon-eks/",
+   "summary_en": "An AWS Machine Learning Blog walkthrough shows how to use NVIDIA Run:ai GPU Fractioning on Amazon EKS so that several teams can share one or two GPUs. NVIDIA Run:ai is AI workload orchestration software for Kubernetes, and its fractioning operator adds scheduling integration, enforced GPU-memory limits and per-Pod metrics to software-based sharing. The validated example uses a g5.xlarge instance with an NVIDIA A10G GPU in the US East (Ohio) Region. Two Pods each get an 8 GiB memory contract and allocate 6 GiB, and a 9 GiB allocation is tested for rejection. The post says it tests memory limits, not fault containment or compute performance, and that the density gain does not establish higher throughput or lower costs in general.",
+   "summary_ar": "يعرض دليل تطبيقي في مدونة AWS Machine Learning Blog طريقة استخدام NVIDIA Run:ai GPU Fractioning على Amazon EKS لتمكين عدة فرق من تقاسم وحدة معالجة رسومية واحدة أو اثنتين. وNVIDIA Run:ai برنامج لتنسيق أحمال عمل الذكاء الاصطناعي على Kubernetes، ويضيف مشغّل التجزئة فيه تكاملاً مع الجدولة وحدوداً مفروضة لذاكرة وحدة المعالجة ومقاييس لكل Pod إلى المشاركة القائمة على البرمجيات. ويعتمد المثال المُتحقَّق منه على نسخة g5.xlarge مزودة بوحدة NVIDIA A10G في منطقة شرق الولايات المتحدة (أوهايو). يحصل كل من الـ Pod الاثنين على عقد ذاكرة بحجم 8 GiB ويخصص 6 GiB، ثم يُختبر رفض طلب تخصيص بحجم 9 GiB. ويوضح الدليل أنه يختبر حدود الذاكرة لا احتواء الأعطال ولا أداء الحوسبة، وأن تحسن الكثافة لا يثبت زيادة في الإنتاجية ولا خفضاً عاماً للتكاليف.",
+   "excerpt": "Learn how to run two memory-bounded Kubernetes Pods on a single NVIDIA A10G GPU using open-source NVIDIA Run:ai GPU Fractioning on Amazon EKS."
+  },
+  {
    "id": "3ccbaf043e17",
    "source": "euronews-ar",
    "lang": "ar",
@@ -85,6 +155,34 @@
    "summary_en": "UN High Commissioner for Human Rights Volker Türk warned on Thursday that AI is being governed in a way he likened to the Middle Ages, with power concentrated in the hands of a few tech barons. Speaking at the RightsX summit in Geneva, he said five tech companies hold more than 70% of the world's AI computing capacity, which he called a glaring democratic deficit. He renewed his call for human-rights-centred AI regulation, warned that biased algorithms can reproduce injustice at industrial scale, and cautioned that AI could disrupt critical infrastructure. He said he has written to leading AI companies urging effective safeguards \"before it is too late\" and that AI's benefits should be shared fairly.",
    "summary_ar": "حذّر المفوض السامي للأمم المتحدة لحقوق الإنسان «فولكر تورك»، يوم الخميس، من أن الذكاء الاصطناعي يُنظَّم بطريقة شبهها بالعصور الوسطى، إذ تتركز السلطة في أيدي قلة من أمراء التكنولوجيا. وقال في قمة «رايتس إكس» (RightsX) في «جنيف» إن خمس شركات تكنولوجية تملك أكثر من 70% من قدرة الحوسبة العالمية في مجال الذكاء الاصطناعي، واصفاً ذلك بعجز ديمقراطي صارخ. وجدد دعوته إلى تنظيم للذكاء الاصطناعي يتمحور حول حقوق الإنسان، وحذّر من أن الخوارزميات المنحازة قد تعيد إنتاج الظلم على نطاق صناعي، ومن إمكانية تعطيل الذكاء الاصطناعي للبنية التحتية الحيوية. وأضاف أنه وجّه رسائل إلى شركات الذكاء الاصطناعي الرائدة يحثها فيها على اعتماد ضمانات فعالة «قبل فوات الأوان»، وأن فوائد هذه التقنية ينبغي أن تُوزَّع بعدالة.",
    "excerpt": "حذّر المفوض السامي لحقوق الإنسان في الأمم المتحدة فولكر تورك من أنّ الذكاء الاصطناعي قد يبدو شيئًا مستقبليًا، لكنه يقوم في جوهره على سردٍ قديم عن السلطة."
+  },
+  {
+   "id": "2600860578f3",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-19T15:16:45+00:00",
+   "title": "ChatGPT can transcribe as you speak now with Live Dictation",
+   "title_ar": "ChatGPT يستطيع الآن تحويل كلامك إلى نص أثناء حديثك مع Live Dictation",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1037634/openai-chatgpt-live-dictation",
+   "summary_en": "OpenAI has added a Live Dictation feature to ChatGPT that transcribes speech as the user talks, instead of waiting until the recording ends. It is rolling out globally across all ChatGPT plans on the web, the desktop app and the iOS and Android apps. Users can tap or click the audio waveform to see the live transcript the AI produces and edit it in the prompt box afterwards. OpenAI also said it is removing the 10-minute limit on voice dictation and making the feature more reliable. The update follows an overhaul of ChatGPT's two-way voice mode earlier this year and last year's record mode for voice notes and meetings, which remains in beta for certain paid workspaces.",
+   "summary_ar": "أضافت OpenAI إلى ChatGPT ميزة «الإملاء المباشر» (Live Dictation) التي تحوّل الكلام إلى نص أثناء حديث المستخدم، بدلاً من الانتظار حتى انتهاء التسجيل. وتُطرح الميزة عالمياً لجميع خطط ChatGPT على الويب وتطبيق سطح المكتب وتطبيقَي iOS وأندرويد. ويمكن للمستخدم النقر على موجة الصوت لعرض النص المباشر الذي يولّده الذكاء الاصطناعي، ثم تعديله في مربع الإدخال بعد الانتهاء. وأعلنت OpenAI أيضاً إزالة حد الدقائق العشر للإملاء الصوتي، وقالت إن الميزة أصبحت أكثر موثوقية. ويأتي التحديث بعد تطوير شامل لوضع المحادثة الصوتية في ChatGPT هذا العام، وبعد «وضع التسجيل» للملاحظات الصوتية والاجتماعات الذي لا يزال تجريبياً في بعض مساحات العمل المدفوعة.",
+   "excerpt": "ChatGPT can receive audio prompts from your microphone faster now with a Live Dictation feature that transcribes as you speak, rather than waiting until you finish recording. It's rolling out now globally on all ChatGPT plans on the web, desktop app, and iOS and Android apps."
+  },
+  {
+   "id": "8da36ef5d8f4",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T14:54:33+00:00",
+   "title": "علي بابا: إيرادات السحابة والحوسبة للذكاء الاصطناعي تنمو 53 في المئة",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/19/alibaba-ai-cloud-revenue-september-2026/",
+   "summary_en": "Alibaba Group reported that revenue from its cloud and AI computing segment rose 53% year on year to about $9.1 billion in the quarter ended 30 September 2026, driven by growing customer demand for AI products. In yuan, revenue was 60.97 billion versus 39.91 billion a year earlier. The segment includes Alibaba Cloud and the T-Head chip design unit. Revenue from external customers grew 64%, and their recurring revenue rose 67%. Adjusted segment EBITA climbed 121% to about 8.84 billion yuan. Group revenue reached about $40.5 billion, up 10%, while capital expenditure rose 60% to about $7.5 billion as investment in AI infrastructure continued.",
+   "summary_ar": "أعلنت مجموعة علي بابا أن إيرادات قطاع السحابة والحوسبة للذكاء الاصطناعي ارتفعت 53% على أساس سنوي لتبلغ نحو 9.1 مليارات دولار في الربع المنتهي في 30 سبتمبر 2026، مدفوعة بتزايد إقبال العملاء على منتجات الذكاء الاصطناعي. وبلغت الإيرادات 60.97 مليار يوان مقابل 39.91 مليار يوان قبل عام. ويضم القطاع أعمال Alibaba Cloud ووحدة تصميم الرقائق T-Head. ونمت إيرادات العملاء من خارج المجموعة 64%، وارتفعت إيراداتهم المتكررة 67%. وزادت أرباح القطاع المعدّلة قبل الفوائد والضرائب وإطفاء الأصول غير الملموسة 121% إلى نحو 8.84 مليارات يوان. وبلغت إيرادات المجموعة نحو 40.5 مليار دولار بزيادة 10%، فيما ارتفعت النفقات الرأسمالية 60% إلى نحو 7.5 مليارات دولار مع استمرار الاستثمار في البنية التحتية للذكاء الاصطناعي.",
+   "excerpt": "بلغت إيرادات قطاع السحابة والحوسبة للذكاء الاصطناعي لدى علي بابا نحو 9.1 مليارات دولار في الربع المنتهي في سبتمبر 2026، بدعم من طلب العملاء الخارجيين."
   },
   {
    "id": "0b3a38ae0a19",
@@ -199,6 +297,20 @@
    "excerpt": "Investors should be aware of scam tactics as company begins trading on Nasdaq"
   },
   {
+   "id": "588d19502e19",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-11-19T11:42:15+00:00",
+   "title": "«مجمع اللغة العربية» يناقش إسهام «اللسانيّات» في تطوير الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/culture/1566204",
+   "summary_en": "The Arabic Language Academy in Sharjah held its 13th Language Council at the academy's library, hosting linguistics specialist Prof. Mustafa Gholfan, with the academy's secretary-general Dr. Amhammad Safi Al-Mustaghanimi attending. Gholfan said progress in AI, including processing of meaning, has drawn on contemporary linguistic ideas, and that generative linguistics supplied computers with abstract formal rules. He noted that Arab linguistics still depends largely on individual effort and that Arab universities lack independent linguistics departments, and he called for specialists who combine linguistics and AI. The session also covered the debate between linguists and engineers of large language models over whether machines truly interpret human language, including Noam Chomsky's view.",
+   "summary_ar": "عقد مجمع اللغة العربية بالشارقة مجلسه اللغوي الثالث عشر في مكتبة المجمع، واستضاف الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، بحضور الأمين العام للمجمع الدكتور امحمد صافي المستغانمي. وأكد غلفان أن التطورات في الذكاء الاصطناعي، ومنها معالجة المعاني اللغوية، استفادت من تصورات لسانية معاصرة، وأن اللسانيات التوليدية قدمت للحواسيب قواعد صورية مجردة. وأشار إلى أن الدراسات اللسانية العربية لا تزال تعتمد بدرجة كبيرة على جهود فردية، وأن الجامعات العربية تفتقر إلى أقسام مستقلة لها، ودعا إلى إعداد متخصصين يجمعون بين اللسانيات والذكاء الاصطناعي. وتناول المجلس أيضاً الجدل بين اللسانيين ومهندسي النماذج اللغوية الكبرى حول قدرة الآلة على تفسير اللغة البشرية، ومنه رأي نعوم تشومسكي.",
+   "excerpt": "طرح مجمع اللغة العربية بالشارقة، خلال المجلس اللغوي الثالث عشر، واحداً من أبرز أسئلة اللغة في عصر الذكاء الاصطناعي، تلك"
+  },
+  {
    "id": "541a45093e93",
    "source": "euronews-ar",
    "lang": "ar",
@@ -211,6 +323,34 @@
    "summary_en": "US President Donald Trump and Chinese President Xi Jinping are meeting in Shenzhen this week, on the sidelines of the APEC forum, with sharply different approaches to restraining AI. Trump said the United States opposes any form of global regulation of AI and has repeatedly warned that international governance could hold the country back in its race with China. Xi, according to Xinhua, said the two countries should cooperate to keep AI under human control and guard against safety risks. Canadian Prime Minister Mark Carney said the lack of global AI governance is a huge risk. The two leaders agreed in September to set up an urgent communication channel on AI incidents, with details due to be discussed on Thursday. The talks are also overshadowed by Jensen Huang's resignation as Nvidia chair.",
    "summary_ar": "يعقد الرئيس الأمريكي «دونالد ترامب» ونظيره الصيني «شي جينبينغ» اجتماعات في مدينة «شينجن» هذا الأسبوع على هامش منتدى «أبيك»، وسط اختلاف واضح في نهجيهما تجاه كبح الذكاء الاصطناعي. وقال «ترامب» إن الولايات المتحدة تعارض أي شكل من أشكال التنظيم العالمي للذكاء الاصطناعي، وسبق أن حذّر من أن الحوكمة الدولية قد تعيق بلاده في سباقها مع الصين. أما «شي»، بحسب وكالة «شينخوا»، فدعا البلدين إلى التعاون لإبقاء الذكاء الاصطناعي تحت السيطرة البشرية والحماية من مخاطر السلامة. وقال رئيس الوزراء الكندي «مارك كارني» إن غياب الحوكمة العالمية للذكاء الاصطناعي يمثل خطراً هائلاً. وكان الزعيمان قد اتفقا في سبتمبر على إنشاء قناة اتصال عاجلة بشأن حوادث الذكاء الاصطناعي، على أن تُبحث تفاصيلها يوم الخميس. وتلقي استقالة «جنسن هوانغ» من رئاسة شركة NVIDIA بظلالها على المحادثات.",
    "excerpt": "عرض قادة الولايات المتحدة والصين رؤى متباينة لحوكمة الذكاء الاصطناعي في محادثات شينجن؛ حذر ترامب من أن التنظيم قد يعيق الابتكار، بينما دعا شي لبقاء التقنية تحت السيطرة البشرية."
+  },
+  {
+   "id": "489c615974c0",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T10:54:11+00:00",
+   "title": "«إيه آي كيو» و«سيمنس» تتعاونان لتوسيع الذكاء الاصطناعي الصناعي عالمياً",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c3c1hmi-«إيه-كيو»-و«سيمنس»-تتعاونان-لتوسيع-الذكاء",
+   "summary_en": "AIQ, the Abu Dhabi-based industrial AI company, has signed a strategic collaboration agreement with Siemens Industrial LLC to accelerate industrial AI and digital transformation in the energy and process industries. The agreement was signed on the sidelines of ADIPEC 2026, where AIQ was the AI Co-Host, and was announced on 19 November. It combines AIQ's AI applications, proven in live operations, with Siemens' automation, electrification and software expertise, including the Siemens Xcelerator platform. Areas to be explored include autonomous operations, predictive maintenance, digital twins, industrial 5G, robotics, AI agents, remote operations centres and on-demand spare parts through 3D scanning and additive manufacturing. Both chief executives said it would deliver measurable value for industry in the UAE and beyond.",
+   "summary_ar": "وقعت شركة AIQ، المتخصصة في الذكاء الاصطناعي الصناعي ومقرها أبوظبي، اتفاقية تعاون استراتيجي مع Siemens Industrial LLC لتسريع الذكاء الاصطناعي الصناعي والتحول الرقمي في قطاعي الطاقة والصناعات التحويلية. وجرى توقيع الاتفاقية خلال معرض «أديبك 2026» (ADIPEC 2026) الذي شاركت فيه AIQ بصفتها الشريك المضيف للذكاء الاصطناعي، وأُعلنت في 19 نوفمبر. ويجمع التعاون بين تطبيقات AIQ التي أثبتت فاعليتها في بيئات التشغيل الفعلية وخبرات Siemens في الأتمتة والكهربة والبرمجيات، بما فيها منصة Siemens Xcelerator. وتشمل المجالات المطروحة العمليات ذاتية التشغيل والصيانة التنبؤية والتوائم الرقمية واتصالات الجيل الخامس الصناعية والروبوتات ووكلاء الذكاء الاصطناعي ومراكز التشغيل عن بُعد وتوفير قطع الغيار عند الحاجة عبر المسح ثلاثي الأبعاد والتصنيع الإضافي. وقال الرئيسان التنفيذيان للشركتين إن التعاون سيحقق قيمة ملموسة للقطاع الصناعي في دولة الإمارات وخارجها.",
+   "excerpt": null
+  },
+  {
+   "id": "f0185c849f47",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T10:41:07+00:00",
+   "title": "دبي كوميرسيتي وكارناتاكا تعززان الابتكار بالذكاء الاصطناعي ودعم الشركات الناشئة",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c3c1hmf-دبي-كوميرسيتي-وكارناتاكا-تعززان-الابتكار-بالذكاء",
+   "summary_en": "Dubai CommerCity, a free zone for digital commerce, signed a partnership agreement with the government of India's Karnataka state on the sidelines of Bengaluru Tech Summit 2026, held from 17 to 19 November. The deal was signed by Abdulrahman Shaheen of Dubai CommerCity and Dr Avinash Menon Rajendran of the Karnataka Innovation and Technology Society. It aims to strengthen cooperation in innovation and technology, especially AI, and to help startups expand between the UAE and India. It also draws on the AI licence recently launched by Dubai CommerCity, which lets AI firms operate within the free zone and the Dubai Integrated Economic Zones network. The partnership also covers links between technology ecosystems and ties among academia, industry and government.",
+   "summary_ar": "وقّعت «دبي كوميرسيتي»، المنطقة الحرة المتخصصة في التجارة الرقمية، اتفاقية شراكة مع حكومة ولاية كارناتاكا الهندية، وذلك على هامش «قمة بنغالورو للتكنولوجيا 2026» التي أقيمت من 17 إلى 19 نوفمبر. وقّع الاتفاقية «عبدالرحمن شاهين» من دبي كوميرسيتي والدكتور «أفيناش مينون راجندران» من جمعية كارناتاكا للابتكار والتكنولوجيا. وتهدف الشراكة إلى تعزيز التعاون في الابتكار والتكنولوجيا، ولا سيما الذكاء الاصطناعي وتطبيقاته، ودعم توسع الشركات الناشئة بين الإمارات والهند. ويستفيد التعاون من «رخصة الذكاء الاصطناعي» التي أطلقتها دبي كوميرسيتي مؤخراً، وتتيح للشركات العاملة في هذا المجال ممارسة أعمالها ضمن المنطقة الحرة وشبكة المناطق الاقتصادية التابعة لسلطة دبي للمناطق الاقتصادية المتكاملة «دييز». كما يشمل التعاون تعزيز التواصل بين منظومات التكنولوجيا والابتكار وتشجيع الروابط بين القطاعين الأكاديمي والصناعي والجهات الحكومية.",
+   "excerpt": null
   },
   {
    "id": "bec60897b1b6",
@@ -295,6 +435,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "6687f7be62c3",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-19T08:00:00+00:00",
+   "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+   "title_ar": "كيف يحافظ Performance Factory في OpenAI على سرعة ChatGPT",
+   "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+   "summary_en": "OpenAI describes how it built the Performance Factory, a system of workflows powered by Codex. According to the description, the system finds and fixes performance issues in order to help keep ChatGPT fast.",
+   "summary_ar": "تشرح OpenAI كيف بنت «مصنع الأداء» (Performance Factory)، وهو نظام من مسارات العمل المدعومة بـ Codex. ووفق الوصف، يرصد النظام مشكلات الأداء ويعالجها للمساعدة في إبقاء ChatGPT سريعاً.",
+   "excerpt": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast."
   },
   {
    "id": "f27e9822d05b",
@@ -395,6 +549,132 @@
    "excerpt": "Muneeb Farrukh, vice president of product at Bayut, explores how reliable data, thoughtful product design and clear understanding of customer needs will shape next phase of AI adoption in real estate"
   },
   {
+   "id": "a8022fb06095",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T00:42:56+00:00",
+   "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+   "title_ar": "الرئيس التنفيذي لشركة Microsoft ساتيا ناديلا يشرح سبب طلبه من 60 ألف موظف الاستقالة",
+   "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+   "summary_en": "Microsoft CEO Satya Nadella explained on Wednesday at the DealBook Summit, in a conversation with Andrew Ross Sorkin, why the company offered buyouts to 60,000 employees in October instead of carrying out another large layoff. He said the aim was to give people agency in their choices. He said he is not replacing software engineers with AI, but reorganising Microsoft so that employees use AI and manage it, citing an 11-developer team behind Cowork. He added that the change will take longer than anyone expects. In a podcast interview with Gergely Orosz, he said talk of the singularity and mass job loss has created anxiety among workers.",
+   "summary_ar": "أوضح الرئيس التنفيذي لمايكروسوفت «ساتيا ناديلا» يوم الأربعاء، خلال قمة DealBook في حوار مع «أندرو روس سوركين»، سبب عرض الشركة في أكتوبر حوافز لخروج طوعي على 60 ألف موظف بدلاً من تنفيذ تسريح جماعي جديد. وقال إن الهدف منح الموظفين قدرة على الاختيار. وأكد أنه لا يستبدل مهندسي البرمجيات بالذكاء الاصطناعي، بل يعيد تنظيم الشركة بحيث يستخدم الجميع الذكاء الاصطناعي ويديرونه، وضرب مثالاً بفريق من 11 مطوّراً يقف خلف Cowork. وأضاف أن هذا التحول سيستغرق وقتاً أطول مما يتوقعه الجميع. وفي بودكاست مع «غيرجيلي أوروس» قال إن الحديث عن التفرّد التكنولوجي وفقدان الوظائف خلق قلقاً لدى الموظفين.",
+   "excerpt": "Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive layoff. The short answer is AI, but not in the way you might expect."
+  },
+  {
+   "id": "14e358bffce4",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-19T00:39:16+00:00",
+   "title": "Chinese web giant Tencent says new US GPU ban ‘sets everyone back in China’",
+   "title_ar": "عملاق الإنترنت الصيني Tencent يقول إن الحظر الأمريكي الجديد على وحدات GPU «يعيد الجميع إلى الوراء في الصين»",
+   "url": "https://www.theregister.com/systems/2026/11/19/chinese-web-giant-tencent-says-new-us-gpu-ban-sets-everyone-back-in-china/5310927",
+   "summary_en": "Tencent says the new US ban on GPUs \"sets everyone back in China\". The company's president also thinks the restriction will push China's chip industry into action.",
+   "summary_ar": "قالت شركة Tencent إن الحظر الأمريكي الجديد على وحدات معالجة الرسومات (GPU) «يعيد الجميع إلى الوراء في الصين». ويرى رئيس الشركة أيضاً أن هذا القيد سيدفع قطاع الرقائق في الصين إلى التحرك.",
+   "excerpt": "Don’t hoist the Mission Accomplished banner, because company president thinks it also will spur China’s chip biz into action"
+  },
+  {
+   "id": "4919d4812c88",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T00:15:58+00:00",
+   "title": "Full Fine-Tuning (FFT) on SageMaker AI Serverless Model Customization",
+   "title_ar": "الضبط الدقيق الكامل (FFT) في تخصيص النماذج بدون خادم على SageMaker AI",
+   "url": "https://aws.amazon.com/blogs/machine-learning/full-fine-tuning-fft-on-sagemaker-ai-serverless-model-customization/",
+   "summary_en": "Amazon SageMaker AI Serverless Model Customization now supports Full Fine-Tuning (FFT), with no GPU provisioning, cluster setup or distributed-training configuration needed. The AWS post says LoRA's low-rank updates limit how well models capture complex tasks, while FFT updates parameters fully. The experiments fine-tuned a Qwen3-4B base model on Magicoder-Evol-Instruct-110K, a set of 110,000 coding instruction-response pairs, split into 99,000 training, 5,500 validation and 5,500 test records. According to the post, at 100K+ training examples FFT reached 90.0 percent on LLM-as-Judge semantic correctness for code generation, ahead of LoRA across the quality measures.",
+   "summary_ar": "تدعم خدمة Amazon SageMaker AI Serverless Model Customization الآن الضبط الدقيق الكامل (Full Fine-Tuning)، دون الحاجة إلى توفير وحدات معالجة رسومات أو إعداد عناقيد أو ضبط التدريب الموزع. وتذكر مدونة AWS أن تحديثات LoRA منخفضة الرتبة تحدّ من قدرة النماذج على استيعاب المهام المعقدة، بينما يحدّث الضبط الدقيق الكامل المعاملات كلها. وأُجريت التجارب على نموذج Qwen3-4B الأساسي باستخدام مجموعة Magicoder-Evol-Instruct-110K التي تضم 110 آلاف زوج من تعليمات البرمجة وإجاباتها، وقُسمت إلى 99 ألف سجل للتدريب و5,500 للتحقق و5,500 للاختبار. ووفق المدونة، بلغت نتيجة الضبط الكامل 90.0 بالمئة في الصحة الدلالية بتقييم LLM-as-Judge لمهام توليد الأكواد عند 100 ألف مثال تدريب فأكثر، متقدماً على LoRA في مقاييس الجودة.",
+   "excerpt": "Amazon SageMaker AI Serverless Model Customization now supports Full Fine-Tuning (FFT). This post explores when FFT outperforms LoRA across key benchmarks, examines the spectral properties of model weight matrices behind the quality gap, shares practical hyperparameter tuning…"
+  },
+  {
+   "id": "e29ac258c013",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-19T00:00:00+00:00",
+   "title": "Explore the Codex Security Plugin",
+   "title_ar": "استكشف إضافة Codex Security",
+   "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+   "summary_en": "OpenAI News has published a demo video of the Codex Security Plugin. The recording shows the workflow in action, from getting started through to reviewing the results.",
+   "summary_ar": "نشرت OpenAI News مقطعاً تجريبياً يعرض Codex Security Plugin أثناء العمل. ويتتبع المقطع سير العمل من بداية الاستخدام وصولاً إلى مراجعة النتائج.",
+   "excerpt": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording."
+  },
+  {
+   "id": "cb99e2baa62e",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T00:00:00+00:00",
+   "title": "See PR scans in action",
+   "title_ar": "شاهد عمليات فحص طلبات الدمج (PR) أثناء التنفيذ",
+   "url": "https://openai.com/business/learn/pr-scans-demo",
+   "summary_en": "OpenAI offers a video walkthrough of PR scans. In it, the presenter shows how scan results are reviewed within a pull request workflow.",
+   "summary_ar": "تقدّم OpenAI شرحاً مرئياً لعمليات فحص طلبات الدمج (PR scans). ويوضح المقدّم فيه كيفية مراجعة نتائج الفحص ضمن مسار العمل الخاص بطلب الدمج.",
+   "excerpt": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow."
+  },
+  {
+   "id": "a2fb00344062",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-19T00:00:00+00:00",
+   "title": "Get started with Daybreak Blue",
+   "title_ar": "ابدأ استخدام Daybreak Blue",
+   "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+   "summary_en": "OpenAI News has published a walkthrough video on onboarding to Daybreak Blue. It takes a closer look at the setup experience and explains how to get started.",
+   "summary_ar": "نشرت OpenAI News مقطعاً توضيحياً عن بدء استخدام Daybreak Blue. ويتناول المقطع تجربة الإعداد عن كثب ويشرح خطوات البدء.",
+   "excerpt": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started."
+  },
+  {
+   "id": "4b08ec50268e",
+   "source": "openai-news",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-19T00:00:00+00:00",
+   "title": "Deploying Daybreak Red",
+   "title_ar": "نشر Daybreak Red",
+   "url": "https://openai.com/business/learn/deploying-daybreak-red",
+   "summary_en": "OpenAI presents a reference architecture for deploying Daybreak Red in supervised security investigations. The material covers safety controls, setup and monitoring.",
+   "summary_ar": "تقدّم OpenAI بنية مرجعية لنشر Daybreak Red في التحقيقات الأمنية الخاضعة للإشراف. وتشمل المادة ضوابط السلامة والإعداد والمراقبة.",
+   "excerpt": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring."
+  },
+  {
+   "id": "b06a28847424",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-18T23:58:22+00:00",
+   "title": "Exa boosts embedding throughput by 50% to index billions of documents on AWS AI chips",
+   "title_ar": "Exa ترفع إنتاجية التضمين بنسبة 50% لفهرسة مليارات المستندات على شرائح AWS للذكاء الاصطناعي",
+   "url": "https://aws.amazon.com/blogs/machine-learning/exa-boosts-embedding-throughput-by-50-to-index-billions-of-documents-on-aws-ai-chips/",
+   "summary_en": "Exa, which builds a web index tuned for semantic search, explains in an AWS blog post how it reworked its embedding infrastructure to run on AWS Neuron hardware, namely AWS Inferentia2 and AWS Trainium2. The work began with a backfill in which 30 billion high-priority documents were re-embedded with a new document model, temporarily doubling the load. Starting from a data-parallel FP16 baseline, the team used weight layout optimization, autocast, pre-built Neuron Kernel Interface kernels and a custom fused SwiGLU MLP kernel to reach roughly 1.5× throughput. Outputs met a 0.999 cosine similarity gate. Throughput then stalled because two cores running together underperformed, pointing to contention between them. Exa says an agentic development workflow drove the optimization.",
+   "summary_ar": "تشرح شركة Exa، التي تبني فهرساً للويب مهيأً للبحث الدلالي، في مدونة على موقع AWS كيف أعادت تصميم بنيتها التحتية لتوليد التضمينات لتعمل على عتاد AWS Neuron، أي AWS Inferentia2 وAWS Trainium2. بدأ العمل بإعادة تضمين 30 مليار مستند عالي الأولوية بنموذج مستندات جديد، ما ضاعف الحمل مؤقتاً. وانطلاقاً من نسخة FP16 بالتوازي على مستوى البيانات، طبّق الفريق تحسين تخطيط الأوزان وخاصية autocast ونوى جاهزة من Neuron Kernel Interface ونواة SwiGLU MLP مدمجة مخصصة، فبلغ الأداء نحو 1.5 ضعف الإنتاجية. وحققت المخرجات حد تشابه جيب التمام البالغ 0.999. ثم توقف التحسن لأن تشغيل النواتين معاً جاء أقل من المتوقع، ما يشير إلى تنافس بينهما. وتقول Exa إن سير عمل تطويرياً قائماً على الوكلاء الأذكياء قاد هذا التحسين.",
+   "excerpt": "Exa's neural search engine is backed by an in-house vector database, so the unit economics of embedding tens of billions of web documents drive the business."
+  },
+  {
+   "id": "44255eb49d7c",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-18T23:45:00+00:00",
+   "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+   "title_ar": "وسط مخاوف من الهجمات السيبرانية بالذكاء الاصطناعي، ساتيا ناديلا يقول إن كثيراً من البنية التحتية الحيوية «غير قابلة للتصحيح»",
+   "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+   "summary_en": "Speaking at The New York Times DealBook Summit on Wednesday, Microsoft CEO Satya Nadella said much of America's critical infrastructure is \"unpatchable\", citing firmware, chillers and HVAC systems that are connected to the internet. The comments came after a wave of large outages, including one affecting Microsoft Outlook, which officials have said were not cyberattacks. Nadella described the Outlook problem as a \"latent bug\" that created a \"perfect storm\" and said Microsoft would apply the lessons. He added that AI tools now find vulnerabilities quickly and make sophisticated attacks easier, so patches must go from release to production almost instantly, which he said will create instability.",
+   "summary_ar": "قال الرئيس التنفيذي لشركة Microsoft «ساتيا ناديلا»، خلال مشاركته في قمة DealBook التي تنظمها صحيفة «نيويورك تايمز» يوم الأربعاء، إن جزءاً كبيراً من البنية التحتية الحيوية في أمريكا «غير قابل للترقيع»، مشيراً إلى البرامج الثابتة وأجهزة التبريد وأنظمة التكييف المتصلة بالإنترنت. وجاءت تصريحاته بعد موجة من الأعطال الكبيرة، منها عطل في Microsoft Outlook، ونفى مسؤولون أن تكون هجمات سيبرانية. ووصف ناديلا مشكلة Outlook بأنها «خلل كامن» تسبب في «عاصفة مثالية»، وقال إن الشركة ستستفيد من الدروس. وأضاف أن أدوات الذكاء الاصطناعي صارت تكشف الثغرات بسرعة وتسهّل تنفيذ هجمات متطورة، ولذلك يجب أن تنتقل التصحيحات من إصدارها إلى التطبيق في بيئة الإنتاج فوراً تقريباً، وهو ما قال إنه سيسبب عدم استقرار.",
+   "excerpt": "The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new challenges for securing much of the connected world."
+  },
+  {
    "id": "cfa0479e43b9",
    "source": "indy-ar-new",
    "lang": "ar",
@@ -423,6 +703,20 @@
    "excerpt": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times."
   },
   {
+   "id": "b6239492ef6c",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-18T23:03:29+00:00",
+   "title": "Introducing workload recovery and expanded infrastructure checks on Amazon SageMaker HyperPod",
+   "title_ar": "تقديم ميزة استرداد أعباء العمل وفحوصات البنية التحتية الموسعة في Amazon SageMaker HyperPod",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-workload-recovery-and-expanded-infrastructure-checks-on-amazon-sagemaker-hyperpod/",
+   "summary_en": "Amazon has introduced three new capabilities on SageMaker HyperPod that aim to catch large training failures that node-by-node checks miss, and so raise goodput. MultiNodeTrainingValidation trains a fixed, known-good workload to confirm GPUs compute correctly. Hung job detection identifies Slurm jobs that have stopped making progress. The HyperPod Kubernetes Resource Monitoring Agent reports the pods and nodes involved when a job fails. As an example, a hang on 32 ml.p5.48xlarge instances left unnoticed for eight hours would cost about $16,900, against about $530 with a 15-minute detection rule. The post also explains how to enable the checks and read their results in CloudWatch logs.",
+   "summary_ar": "قدّمت أمازون ثلاث إمكانات جديدة في Amazon SageMaker HyperPod تهدف إلى رصد أعطال التدريب الكبيرة التي تفوتها الفحوص التي تتناول كل عقدة على حدة، وبالتالي رفع الإنتاجية الفعلية للتدريب (goodput). فمع MultiNodeTrainingValidation يجري تدريب حمل عمل ثابت وموثوق للتأكد من أن وحدات GPU تحسب بصورة صحيحة. أما ميزة اكتشاف المهام المعلّقة فتحدد مهام Slurm التي توقفت عن إحراز تقدم. ويُبلغ HyperPod Kubernetes Resource Monitoring Agent عن الوحدات (pods) والعقد المرتبطة عند فشل مهمة. ويضرب المقال مثالاً بتعليق على 32 جهازاً من نوع ml.p5.48xlarge يبقى دون ملاحظة ثماني ساعات فتبلغ كلفته نحو 16,900 دولار، مقابل نحو 530 دولاراً مع قاعدة اكتشاف مدتها 15 دقيقة. ويشرح كذلك كيفية تفعيل الفحوص وقراءة نتائجها في سجلات CloudWatch.",
+   "excerpt": "Large training jobs can stall or compute wrong results even when every node looks healthy. Amazon SageMaker HyperPod now adds workload recovery and expanded infrastructure checks that catch these failures sooner and raise the goodput of your training workloads."
+  },
+  {
    "id": "f7885a7f892b",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -435,6 +729,34 @@
    "summary_en": "Microsoft CEO Satya Nadella said at The New York Times DealBook Summit on Wednesday that AI agents will reshape the economics of the internet. He argued that companies earning money from advertising and \"human web\" traffic could be reshuffled, possibly shifting toward cost-per-click or more transactional models. He compared the change to the move from web portals like Yahoo to search engines like Google. Discussing Amazon's decision to block AI agents from browsing its retail catalog and making purchases, he suggested that firms protecting existing business models could lose out to rivals willing to accept agents, with Shopify as an example.",
    "summary_ar": "قال الرئيس التنفيذي لشركة Microsoft «ساتيا ناديلا» خلال قمة DealBook التي تنظمها صحيفة نيويورك تايمز يوم الأربعاء إن وكلاء الذكاء الاصطناعي سيعيدون تشكيل اقتصاديات الإنترنت. ورأى أن الشركات التي تجني أرباحها من الإعلانات ومن حركة «الويب البشري» قد يُعاد ترتيب أوضاعها، وقد تتجه إلى نماذج قائمة على التكلفة لكل نقرة أو إلى نماذج أكثر ارتباطاً بالمعاملات. وشبّه هذا التحول بالانتقال من بوابات الويب مثل Yahoo إلى محركات البحث مثل Google. وتطرّق إلى قرار Amazon منع وكلاء الذكاء الاصطناعي من تصفح كتالوج متجرها وإجراء عمليات الشراء، مشيراً إلى أن الشركات التي تحمي نماذج أعمالها القائمة قد تخسر أمام منافسين يقبلون هذه الوكلاء، ومنهم Shopify على سبيل المثال.",
    "excerpt": "Microsoft's CEO says AI agents could disrupt advertising-driven business models, forcing companies like Amazon to rethink how they compete for customers."
+  },
+  {
+   "id": "fa8035bde7d0",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-18T22:31:04+00:00",
+   "title": "Introducing the Amazon SageMaker JumpStart Model Leaderboard",
+   "title_ar": "تقديم لوحة صدارة النماذج في Amazon SageMaker JumpStart",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-sagemaker-jumpstart-model-leaderboard/",
+   "summary_en": "Amazon has launched the Amazon SageMaker JumpStart Model Leaderboard, a new view in SageMaker Studio for comparing JumpStart models side by side on quality, speed and cost. At launch it covers more than 70 models from providers including Meta, Google, Qwen, IBM and Arcee, and it reports three reasoning benchmarks for large language models. Users can pick a use case profile and an optimization goal, such as latency, throughput or cost, which changes the performance and cost figures but not the quality scores. Estimated cost covers SageMaker instance cost only, based on on-demand rates. From the leaderboard, users can filter models, then open one to deploy or customize it.",
+   "summary_ar": "أطلقت أمازون لوحة المتصدرين لنماذج Amazon SageMaker JumpStart، وهي عرض جديد داخل SageMaker Studio يتيح مقارنة نماذج JumpStart جنباً إلى جنب من حيث الجودة والسرعة والتكلفة. وتغطي اللوحة عند الإطلاق أكثر من 70 نموذجاً من جهات منها Meta وGoogle وQwen وIBM وArcee، وتعرض ثلاثة اختبارات معيارية للاستدلال خاصة بالنماذج اللغوية الكبيرة. ويمكن للمستخدم اختيار ملف حالة الاستخدام وهدف التحسين، مثل زمن الاستجابة أو الإنتاجية أو التكلفة، فتتغير أرقام الأداء والتكلفة بينما تبقى درجات الجودة كما هي. وتشمل التكلفة التقديرية كلفة أجهزة SageMaker فقط وفق أسعار الطلب عند الحاجة. وبعد تصفية النماذج يمكن فتح أي نموذج لنشره أو تخصيصه.",
+   "excerpt": "The Amazon SageMaker JumpStart Model Leaderboard compares 70+ foundation models side by side on quality, speed, and cost, directly in SageMaker Studio. Learn what the leaderboard shows, how AWS benchmarks models, and how to go from a shortlist to a deployed model."
+  },
+  {
+   "id": "25e810fd0ee0",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-18T22:16:23+00:00",
+   "title": "Does Nvidia Got This? Interim CEO Colette Kress Says It’s Got This",
+   "title_ar": "هل تتولى Nvidia الأمر؟ الرئيسة التنفيذية المؤقتة كوليت كريس تقول إنها تتولاه",
+   "url": "https://www.wired.com/story/guys-really-we-got-this/",
+   "summary_en": "Nvidia's interim CEO and continuing CFO, Colette Kress, has been tasked with steadying the company after Jensen Huang resigned amid an international scandal, according to WIRED. Her duties so far include running the third-quarter earnings call and hosting an all-hands meeting on Wednesday. WIRED counted her using the phrase \"We've got this\" three times in 24 hours, and at the meeting she compared employees to a 90,000-strong crowd at a University of Florida football game. Some employees echoed the phrase on X. Board chair Harvey Jones said the board does not intend to reinstate Huang, despite calls on social media and within the company.",
+   "summary_ar": "كُلّفت «كوليت كريس»، الرئيسة التنفيذية المؤقتة والمديرة المالية في Nvidia، بإعادة الاستقرار إلى الشركة بعد استقالة «جنسن هوانغ» على خلفية فضيحة دولية، بحسب مجلة WIRED. وشملت مهامها حتى الآن إدارة مكالمة نتائج الربع الثالث واستضافة اجتماع عام للموظفين يوم الأربعاء. وأحصت المجلة أنها استخدمت عبارة «We've got this» ثلاث مرات خلال 24 ساعة، وشبّهت في الاجتماع الموظفين بحشد من 90 ألف شخص في مباراة كرة قدم بجامعة فلوريدا. وردّد بعض الموظفين العبارة على منصة X. وقال رئيس مجلس إدارة Nvidia «هارفي جونز» إن المجلس لا ينوي إعادة هوانغ إلى منصبه، رغم دعوات على وسائل التواصل الاجتماعي ومن داخل الشركة.",
+   "excerpt": "WIRED is tallying up how many times Nvidia’s interim CEO has assured everyone that the company has everything under control."
   },
   {
    "id": "6b4b11d8558c",
@@ -479,6 +801,20 @@
    "excerpt": "أظهرت دراسة أجرتها جامعة هارفارد أن التعهدات وحدها قد لا تكون كافية، حتى مع دفع مفاوضي مؤتمر الأطراف 31 نحو استخدام طاقة أنظف في مراكز البيانات."
   },
   {
+   "id": "66a7c55dd51c",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-18T22:00:00+00:00",
+   "title": "Even His Own Officials Don’t Think Trump’s China Trip Will Lead to Progress on AI",
+   "title_ar": "حتى مسؤولوه لا يعتقدون أن رحلة ترمب إلى الصين ستؤدي إلى تقدم في مجال الذكاء الاصطناعي",
+   "url": "https://www.wired.com/story/administration-officials-dont-think-much-ai-progress-will-come-of-trumps-china-visit/",
+   "summary_en": "Ahead of President Donald Trump's Thursday meeting with Xi Jinping, administration officials privately say they see little room for progress on AI safety and espionage concerns. The fallout from the Nvidia scandal, involving former CEO Jensen Huang's affair with Megaspeed executive Alice Huang, a suspected Chinese intelligence asset, has made AI talks fraught; China calls the allegations groundless. An AI incident hotline announced in September between Treasury Secretary Scott Bessent and Chinese vice premier He Lifeng remains at the concept stage. Officials say the two countries differ on the biggest AI risks and on whether to make incidents public. This week the administration also said it would proceed with a rule limiting China's remote access to US-made AI chips in foreign data centers.",
+   "summary_ar": "قبل لقاء الرئيس «دونالد ترامب» مع «شي جين بينغ» يوم الخميس، يقول مسؤولون في الإدارة الأمريكية بشكل غير علني إنهم لا يرون مجالاً يُذكر لتحقيق تقدم في مخاوف سلامة الذكاء الاصطناعي والتجسس. وقد جعلت تداعيات فضيحة Nvidia، المتعلقة بعلاقة الرئيس التنفيذي السابق «جنسن هوانغ» بـ«أليس هوانغ»، وهي مسؤولة في Megaspeed يُشتبه في أنها عنصر استخباراتي صيني، أي مفاوضات بشأن الذكاء الاصطناعي محفوفة بالصعوبات، بينما تصف الصين الاتهامات بأنها لا أساس لها. ولا يزال خط ساخن للإبلاغ عن حوادث الذكاء الاصطناعي، أُعلن عنه في سبتمبر بين وزير الخزانة «سكوت بيسنت» ونائب رئيس الوزراء الصيني «هي ليفنغ»، في مرحلة الفكرة. ويقول المسؤولون إن البلدين يختلفان في تحديد أكبر المخاطر، وفي الحوافز المتعلقة بالإعلان عن الحوادث. وأعلنت الإدارة هذا الأسبوع أيضاً أنها ستمضي في قاعدة تحد من وصول الصين عن بُعد إلى رقائق الذكاء الاصطناعي الأمريكية في مراكز البيانات الأجنبية.",
+   "excerpt": "Fallout from the Nvidia scandal has made any negotiations around AI difficult, officials say."
+  },
+  {
    "id": "be8af89b4041",
    "source": "thenational",
    "lang": "en",
@@ -519,6 +855,20 @@
    "summary_en": "Airbnb describes how it evaluates models for coding agents and monitors their use on Amazon Bedrock. Thousands of engineers use its internal AirChat tool each week, with requests routed through an LLM gateway running on Bedrock. Eight new models appeared in about five weeks, and by mid-October roughly two thirds of requests went to them. Before a rollout, Airbnb runs evals on its own tasks to measure each model's score and cost per task, meaning the list-price cost of all tokens used to finish one task. On one model, raising reasoning effort from low to high added 0.8 points to the score but made cost per task 2.5 times higher. After rollout, CloudWatch metrics help the team investigate latency, throttling and spend.",
    "summary_ar": "تشرح Airbnb كيف تقيّم النماذج الخاصة بوكلاء البرمجة وتراقب استخدامها على Amazon Bedrock. ويستخدم آلاف المهندسين أداة AirChat الداخلية أسبوعياً، وتمر الطلبات عبر بوابة نماذج لغوية تعمل على Bedrock. وقد ظهرت ثمانية نماذج جديدة في نحو خمسة أسابيع، وبحلول منتصف أكتوبر ذهب قرابة ثلثي الطلبات إليها. وقبل أي طرح تُجري الشركة تقييمات على مهامها الخاصة لقياس درجة كل نموذج وتكلفته لكل مهمة، أي تكلفة الوحدات اللغوية المستخدمة لإنجاز مهمة واحدة بحسب الأسعار المعلنة. وفي أحد النماذج رفع الانتقال من جهد استدلال منخفض إلى مرتفع الدرجة بمقدار 0.8 نقطة، لكن تكلفة المهمة صارت 2.5 ضعف. وبعد الطرح تساعد مقاييس CloudWatch الفريق في فحص زمن الاستجابة والتقييد والإنفاق.",
    "excerpt": "Airbnb runs evals on real engineering tasks and uses Amazon Bedrock observability to choose models for its coding agents and control production costs."
+  },
+  {
+   "id": "9b8a2fa026c5",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-18T21:40:09+00:00",
+   "title": "Anthropic decides to go head-to-head with GTA VI release, schedules IPO for the same day",
+   "title_ar": "Anthropic تقرر منافسة إصدار GTA VI وجهاً لوجه وتحدد موعد الطرح العام الأولي في اليوم نفسه",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/18/anthropic-decides-to-go-head-to-head-with-gta-vi-release-schedules-ipo-for-the-same-day/5310872",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "We get it, Dario - you don't want people calling out sick to play"
   },
   {
    "id": "5a8fb5424af3",
@@ -563,6 +913,48 @@
    "excerpt": "\"It makes America weaker to knock him out,\" the Anduril CEO said about ousted Nvidia leader Jensen Huang."
   },
   {
+   "id": "d1d45343ebee",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-18T21:15:00+00:00",
+   "title": "America’s AI Chip War Is Heating Up in the Dumbest Possible Ways",
+   "title_ar": "حرب شرائح الذكاء الاصطناعي الأمريكية تشتد بأكثر الطرق حماقة",
+   "url": "https://www.wired.com/story/the-ai-chip-war-meets-the-jensen-huang-affair/",
+   "summary_en": "The Trump administration announced new chip rules on Monday that make it harder for Chinese companies to reach advanced AI chips. Overseas data centers that provide large amounts of computing power to China will need special licenses, and shipments of advanced chips to five countries, including Singapore and Malaysia, face stricter rules because of suspected smuggling. The article suggests the timing is tied to Jensen Huang's resignation as Nvidia CEO after he admitted an affair with Alice Huang, who is accused of ties to Chinese intelligence and previously worked at Megaspeed, a data center company suspected of chip smuggling. It adds that Bloomberg reported about 50,000 of the 136,000 chips Megaspeed imported were unaccounted for in Nvidia's initial checks.",
+   "summary_ar": "أعلنت إدارة ترامب يوم الاثنين قواعد جديدة للرقائق تزيد صعوبة وصول الشركات الصينية إلى رقائق الذكاء الاصطناعي المتقدمة. فمراكز البيانات في الخارج التي توفر قدراً كبيراً من القدرة الحاسوبية للصين ستحتاج إلى تراخيص خاصة، كما تخضع شحنات الرقائق المتقدمة إلى خمس دول، منها سنغافورة وماليزيا، لقواعد أشد بسبب الاشتباه في وجود تهريب. ويرى المقال أن التوقيت مرتبط باستقالة «جنسن هوانغ» من منصب الرئيس التنفيذي لشركة NVIDIA بعد اعترافه بعلاقة مع «أليس هوانغ»، المتهمة بوجود صلات لها بأجهزة استخبارات صينية، والتي عملت سابقاً في Megaspeed، وهي شركة لمراكز البيانات يُشتبه في تورطها بتهريب الرقائق. ويضيف أن وكالة Bloomberg ذكرت أن نحو 50 ألفاً من أصل 136 ألف رقاقة استوردتها Megaspeed لم تكن محسوبة في عمليات الجرد الأولية لدى NVIDIA.",
+   "excerpt": "The Trump administration announced plans to clamp down on China’s access to AI chips. Apparently, the cheating scandal of the century was the motivation they were missing."
+  },
+  {
+   "id": "341390730f1c",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-18T21:11:04+00:00",
+   "title": "AI found more critical bugs in another widely used technology running 225M websites",
+   "title_ar": "الذكاء الاصطناعي يكتشف مزيداً من الثغرات الحرجة في تقنية أخرى واسعة الاستخدام تشغّل 225 مليون موقع",
+   "url": "https://www.theregister.com/security/2026/11/18/ai-found-more-critical-bugs-in-another-widely-used-technology-running-225m-websites/5310887",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "a526ce676010",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-18T21:03:23+00:00",
+   "title": "Google ships Gemini 4 Neon, its fourth new Gemini model in a month",
+   "title_ar": "Google تطلق Gemini 4 Neon، رابع نموذج Gemini جديد لها خلال شهر",
+   "url": "https://the-decoder.com/google-ships-gemini-4-neon-its-fourth-new-gemini-model-in-a-month/",
+   "summary_en": "Google released Gemini 4 Neon, which it describes as offering frontier-level intelligence and fast task completion across software engineering, knowledge work and science workflows. The model is available through the API at $3 per million input tokens and $15 per million output tokens, higher than the introductory $2/$10 rate for Carbon and Argon, and twice the price of Hydrogen at $1.50/$7.50. Neon has a context window of about one million tokens and can produce up to one million output tokens. It handles text, images, video, audio and PDFs and supports Computer Use, code execution, file search and grounding via Google Search and Maps, but not image or audio generation. It is Google's fourth new Gemini 4 model in four weeks.",
+   "summary_ar": "أطلقت Google النموذج Gemini 4 Neon، وتصفه بأنه يقدم ذكاءً بمستوى الصدارة وإنجازاً سريعاً للمهام في هندسة البرمجيات وأعمال المعرفة ومسارات العمل العلمية. ويتوفر النموذج عبر واجهة البرمجة بسعر 3 دولارات لكل مليون وحدة لغوية مُدخلة و15 دولاراً لكل مليون وحدة لغوية مُخرجة، وهو أعلى من السعر التعريفي للنموذجين Carbon وArgon البالغ 2 و10 دولارات، وضعف سعر Hydrogen البالغ 1.50 و7.50 دولار. ويملك Neon نافذة سياق تبلغ نحو مليون وحدة لغوية، ويستطيع إنتاج ما يصل إلى مليون وحدة لغوية في المخرجات. ويتعامل مع النصوص والصور والفيديو والصوت وملفات PDF، ويدعم Computer Use وتنفيذ الشيفرة والبحث في الملفات والاستناد إلى Google Search وMaps، ولا يدعم توليد الصور أو الصوت. وهو رابع نموذج جديد من Gemini 4 تطلقه Google خلال أربعة أسابيع.",
+   "excerpt": "Google released Gemini 4 Neon, a new frontier model built for software development, knowledge work, and science. It handles text, images, video, audio, and PDFs with a context window of one million tokens."
+  },
+  {
    "id": "032650d6c042",
    "source": "aws-ml",
    "lang": "en",
@@ -575,6 +967,20 @@
    "summary_en": "Amazon Bedrock AgentCore Identity now supports private certificate authority (CA) certificates, letting agents connect to self-hosted identity providers such as Keycloak or PingFederate that run in a private network. Users store the PEM-encoded root or intermediate CA certificate in AWS Secrets Manager or Amazon S3 and reference it from their credential provider, and AgentCore Identity uses it to validate the IdP's server certificate. Access to the IdP goes privately through Amazon VPC Lattice, which this feature requires. The post walks through issuing a certificate with AWS Private Certificate Authority, configuring a credential provider to trust it, rotating the CA while minimizing downtime, and restricting who can change the CA certificate. Agents using machine-to-machine, on-behalf-of and user-delegated flows can use the private CA without code changes.",
    "summary_ar": "أصبحت خدمة Amazon Bedrock AgentCore Identity تدعم شهادات مرجع التصديق الخاص (private CA)، ما يتيح للوكلاء الأذكياء الاتصال بمزودي الهوية المستضافين ذاتياً، مثل Keycloak أو PingFederate، داخل شبكة خاصة. ويخزّن المستخدم شهادة المرجع الجذر أو الوسيط بصيغة PEM في AWS Secrets Manager أو Amazon S3 ويشير إليها من مزود بيانات الاعتماد، ثم تستخدمها AgentCore Identity للتحقق من شهادة الخادم لدى مزود الهوية. ويتم الوصول إلى مزود الهوية بصورة خاصة عبر Amazon VPC Lattice الذي تشترطه هذه الميزة. ويشرح المقال إصدار شهادة عبر AWS Private Certificate Authority، وضبط مزود بيانات الاعتماد ليثق بها، وتدوير المرجع مع تقليل التوقف، وحصر صلاحية تعديل الشهادة بفريق معيّن. ويمكن للوكلاء الذين يستخدمون مسارات الاتصال بين الأجهزة والنيابة عن المستخدم والتفويض من المستخدم الاستفادة من المرجع الخاص دون تغيير في الشيفرة.",
    "excerpt": "Amazon Bedrock AgentCore Identity now supports private certificate authorities (CAs), so your agents can connect to self-hosted identity providers that use a private CA."
+  },
+  {
+   "id": "147bf2496a96",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-18T20:15:44+00:00",
+   "title": "To rank the world's biggest supercomputers, we're gonna need a bigger bench",
+   "title_ar": "لترتيب أكبر الحواسيب العملاقة في العالم، سنحتاج إلى منصة اختبار أكبر",
+   "url": "https://www.theregister.com/hpc/2026/11/18/to-rank-the-worlds-biggest-supercomputers-were-gonna-need-a-bigger-bench/5310878",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "AI has birthed some truly colossal supers, they just aren't on the Top500"
   },
   {
    "id": "46964ed0b448",
@@ -689,6 +1095,20 @@
    "excerpt": "With Genie 4, Google DeepMind is launching its most realistic world model to date for Google AI Ultra subscribers. It generates interactive 3D worlds that can be modified in real time via text input and, for the first time, includes native sound."
   },
   {
+   "id": "be28d25a0e42",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-18T19:19:33+00:00",
+   "title": "Muse privacy invasions are freaking out Meta staffers, internal chats show",
+   "title_ar": "انتهاكات الخصوصية في Muse تثير فزع موظفي Meta، بحسب محادثات داخلية",
+   "url": "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/",
+   "summary_en": "Reuters reported on internal chats showing that Meta staff raised alarms about the Muse AI agent, echoing complaints from early users. Employees said Muse seemed to access encrypted private messages, might mix up conversations between users and appeared to share sensitive details such as bank balances. One staffer said Muse switched them to a dog insurance plan costing $888 a month. Meta's spokesperson called these isolated incidents and said the agent was hallucinating after built-in prompts. Meta executive David Singleton said a bug from an update caused the problem and has been fixed, though Inc. reporter Jason Aten disputed Meta's explanation of how Muse read his messages.",
+   "summary_ar": "نشرت وكالة رويترز محادثات داخلية تُظهر أن موظفين في Meta أطلقوا تحذيرات بشأن وكيل الذكاء الاصطناعي Muse، بما يتوافق مع شكاوى مستخدمين مبكرين. وقال الموظفون إن Muse بدا وكأنه يصل إلى رسائل خاصة مشفّرة، وقد يخلط بين محادثات المستخدمين، وبدا أنه يشارك تفاصيل حساسة مثل أرصدة مصرفية. وذكر أحد الموظفين أن Muse نقله إلى خطة تأمين لكلبه تكلّف 888 دولاراً شهرياً. وقال متحدث باسم Meta إن هذه حوادث معزولة وإن الوكيل كان يهلوس بسبب توجيهات مدمجة. وأوضح «ديفيد سينغلتون» من Meta أن خللاً برمجياً ناتجاً عن تحديث تسبب بالمشكلة وتم إصلاحه، بينما اعترض الصحفي «جيسون أتين» من مجلة Inc. على تفسير Meta لكيفية قراءة Muse لرسائله.",
+   "excerpt": "Erratic Muse outputs sharing random bank, bitcoin balances aren’t real, Meta says."
+  },
+  {
    "id": "6f644c77d595",
    "source": "aws-ml",
    "lang": "en",
@@ -729,6 +1149,20 @@
    "summary_en": "The AWS Machine Learning Blog recaps the inaugural AWS Quick User Group DC meetup, held on Wednesday, October 7, 2026, at the AWS Skills Center in Arlington, Virginia. Data leaders, developers and practitioners, including a team from Financial Independence Group (FIG), discussed modernizing legacy architectures and preparing structured data for agentic workflows. Vanessa Gonzalez, FIG's Vice President of AI, explained how the company moved to AWS Quick as a single front door for analytics, combining structured and unstructured data through a governed layer. Attendees took part in two hands-on exercises, and a key takeaway was that ideas can now become working solutions in hours or minutes. The group concluded that successful AI adoption starts with intentional data design.",
    "summary_ar": "تستعرض مدونة AWS Machine Learning وقائع أول لقاء لمجموعة مستخدمي AWS Quick في واشنطن، الذي عُقد يوم الأربعاء 7 أكتوبر 2026 في مركز المهارات التابع لـAWS في أرلينغتون بولاية فرجينيا. ناقش قادة بيانات ومطورون وممارسون، بينهم فريق من Financial Independence Group (FIG)، تحديث البنى القديمة وتجهيز البيانات المنظمة لسير العمل القائم على الوكلاء الأذكياء. وشرحت «فانيسا غونزاليس»، نائبة رئيس الذكاء الاصطناعي في FIG، كيف انتقلت الشركة إلى AWS Quick بوصفه «بوابة واحدة» للتحليلات، تجمع البيانات المنظمة وغير المنظمة عبر طبقة خاضعة للحوكمة. وشارك الحضور في تمرينين عمليين، وكان من أبرز الخلاصات أن الأفكار يمكن أن تتحول إلى حلول عاملة خلال ساعات أو دقائق. وخلصت المجموعة إلى أن نجاح اعتماد الذكاء الاصطناعي يبدأ بتصميم متعمد للبيانات.",
    "excerpt": "A recap of the inaugural AWS Quick User Group DC meetup, where data leaders explored getting enterprise data ready for AI agents. It covers what's new in AWS Quick, Financial Independence Group's AI analytics journey, and hands-on app and no-code flow building."
+  },
+  {
+   "id": "75623b38e68b",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-18T18:53:43+00:00",
+   "title": "Why your fine-tuning job takes longer than the FLOPs say",
+   "title_ar": "لماذا تستغرق مهمة الضبط الدقيق لديك وقتاً أطول مما تشير إليه حسابات FLOPs",
+   "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+   "summary_en": "A Hugging Face Blog preview of an upcoming paper examines why fine-tuning jobs on shared GPU clusters often run far longer than FLOP-based estimates suggest. The team analysed 272 supervised fine-tuning jobs on NVIDIA H200 GPUs, about 7,382 GPU-hours in total. The usual FLOP-based estimate reached an R² of 0.31 with a mean absolute error of 12.41 hours, while a CatBoost regressor using only pre-dispatch information reached an R² of 0.98 and a 1.71-hour error in 5-fold cross-validation. The authors attribute the gap to overheads such as evaluation, checkpointing and storage I/O. The full paper is expected on arXiv soon.",
+   "summary_ar": "تعرض مدونة Hugging Face نظرة أولية على ورقة بحثية قادمة تتناول سبب استغراق مهام الضبط الدقيق على مجموعات وحدات GPU المشتركة وقتاً أطول بكثير مما تتوقعه تقديرات قائمة على عمليات الفاصلة العائمة (FLOPs). حلل الفريق 272 مهمة ضبط دقيق خاضعة للإشراف على وحدات NVIDIA H200، بإجمالي نحو 7,382 ساعة من وقت وحدات GPU. وبلغ معامل التحديد R² للتقدير المعتاد 0.31 مع متوسط خطأ مطلق قدره 12.41 ساعة، بينما حقق نموذج CatBoost، الذي يستخدم معلومات متاحة قبل بدء التنفيذ فقط، معامل R² قدره 0.98 وخطأ قدره 1.71 ساعة في التحقق المتقاطع بخمس طيات. ويعزو المؤلفون الفجوة إلى أعباء مثل التقييم وحفظ نقاط التحقق وعمليات التخزين والإدخال والإخراج. ومن المتوقع نشر الورقة الكاملة على arXiv قريباً.",
+   "excerpt": "A Blog post by Dharma-AI on Hugging Face"
   },
   {
    "id": "93d5222c6d2d",
@@ -799,6 +1233,20 @@
    "summary_en": "The Abu Dhabi Exports Office (ADEX) held the \"AI for Development\" forum in Abu Dhabi on 18 November, examining how AI can address development challenges across Africa and open new opportunities for UAE exports. Attendees included government representatives, African ambassadors, technology leaders, academic institutions and development partners. Mohamed Saif Al Suwaidi of the Abu Dhabi Fund for Development opened the event, and Mansoor Al Mansoori, CEO of G42 International, gave a keynote on turning AI ambitions into development impact. Sessions covered UAE exporters in AI, financing and risk mitigation for Africa's digital infrastructure, and AI for positive impact. The forum supports the UAE's \"AI for Development\" initiative in Africa, which targets sectors such as education, agriculture, healthcare and energy.",
    "summary_ar": "نظّم مكتب أبوظبي للصادرات «أدكس» منتدى «الذكاء الاصطناعي من أجل التنمية» في أبوظبي في 18 نوفمبر، لبحث سبل توظيف الذكاء الاصطناعي في مواجهة التحديات التنموية في أفريقيا وفتح آفاق جديدة أمام الصادرات الإماراتية. وشارك في المنتدى ممثلون عن جهات حكومية وسفراء دول أفريقية وقادة في قطاع التكنولوجيا ومؤسسات أكاديمية وشركاء في التنمية. وألقى محمد سيف السويدي من صندوق أبوظبي للتنمية الكلمة الافتتاحية، فيما قدّم منصور المنصوري، الرئيس التنفيذي لشركة G42 International، كلمة رئيسية حول تحويل الطموحات في الذكاء الاصطناعي إلى أثر تنموي. وتناولت الجلسات المصدّرين الإماراتيين في هذا القطاع، وتمويل البنية التحتية الرقمية في أفريقيا والحد من مخاطره، وتطبيقات الذكاء الاصطناعي ذات الأثر الإيجابي. ويدعم المنتدى مبادرة «الذكاء الاصطناعي من أجل التنمية» في أفريقيا، التي تشمل قطاعات مثل التعليم والزراعة والرعاية الصحية والطاقة.",
    "excerpt": null
+  },
+  {
+   "id": "cb39ce49d008",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-18T18:10:33+00:00",
+   "title": "Will Wright's next simulation will use AI to mine content from your memories",
+   "title_ar": null,
+   "url": "https://arstechnica.com/gaming/2026/11/will-wrights-next-simulation-will-use-ai-to-mine-content-from-your-memories/",
+   "summary_en": "Will Wright, creator of SimCity and The Sims, is promoting a new simulation called MyMems, due next year, after years of quiet following Spore in 2008 and his exit from EA. Developed by Gallium Studios with partner Artificial Agency, the game uses generative AI to turn memories typed in by players into digital people who form teams to solve puzzles. The idea began as the mobile project Proxi, announced in 2018, before Gallium ran out of funding in late 2024 and laid off staff. Wright says the partnership lets the studio use off-the-shelf AI rather than costly frontier models. Artificial Agency says its tool learns from memories locally and only with permission.",
+   "summary_ar": "يروّج ويل رايت، مبتكر لعبتي SimCity وThe Sims، لمحاكاة جديدة باسم MyMems مقرر إطلاقها العام المقبل، بعد غياب طويل منذ صدور Spore عام 2008 وخروجه من EA. تطوّر اللعبة شركة Gallium Studios بالشراكة مع Artificial Agency، وتستخدم الذكاء الاصطناعي التوليدي لتحويل الذكريات التي يكتبها اللاعب إلى شخصيات رقمية تشكّل فرقاً لحل الألغاز. بدأت الفكرة مشروعاً للهواتف باسم Proxi أُعلن عنه عام 2018، قبل أن تنفد أموال Gallium في أواخر 2024 وتسرّح عاملين. يقول رايت إن الشراكة تتيح للاستوديو استخدام حلول جاهزة بدلاً من نماذج متقدمة مكلفة. وتؤكد Artificial Agency أن أداتها تتعلم من الذكريات محلياً وبإذن اللاعب فقط.",
+   "excerpt": "With MyMems, Wright says he wants to \"turn the simulation inward.\""
   },
   {
    "id": "890e2f7b3ac9",
@@ -5138,7 +5586,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/11/16/Ma21",
    "summary_en": "Sharjah Digital Department (SDD) has launched the Sharjah Agentic AI Challenge, running from 8 to 10 December with Inception42 and Microsoft. Thirty participants from the public will work in teams that pair IT specialists with people who know government operations, each building a prototype of an intelligent agent to automate repetitive procedures, shorten transaction times and improve customer experience. The programme starts with an introductory session, followed by three days of hands-on work under specialist coaches, and ends with presentations to a jury that picks the winners. Sheikh Saud bin Sultan Al Qasimi, SDD's director general, said the challenge supports the Sharjah Digital Transformation Strategy 2026–2028, We the UAE 2031 and the National Strategy for Artificial Intelligence 2031.",
    "summary_ar": "أطلقت دائرة الشارقة الرقمية «تحدي الشارقة للذكاء الاصطناعي المساعد»، الذي يُقام من 8 إلى 10 ديسمبر بالتعاون مع Inception42 وMicrosoft. ويشارك فيه 30 مشاركاً من الجمهور ضمن فرق تضم مختصين في تقنية المعلومات وأشخاصاً يعرفون طبيعة العمل الحكومي، ويطوّر كل فريق نموذجاً أولياً لوكيل ذكي قادر على أتمتة الإجراءات المتكررة واختصار زمن إنجاز المعاملات وتحسين تجربة المتعاملين. يبدأ البرنامج بجلسة تعريفية ثم ثلاثة أيام من العمل التطبيقي المكثف بإشراف مدربين متخصصين، وفي الختام تعرض الفرق نماذجها أمام لجنة تحكيم تختار الفائزين. وقال الشيخ سعود بن سلطان القاسمي، مدير عام الدائرة، إن التحدي يدعم استراتيجية الشارقة للتحول الرقمي 2026-2028 ورؤية «نحن الإمارات 2031» والاستراتيجية الوطنية للذكاء الاصطناعي 2031.",
-   "excerpt": "The Sharjah Digital Department has launched the Sharjah Agentic AI Challenge, a three-day event from 8 to 10 December with Inception42 and Microsoft for 30…"
+   "excerpt": null
   },
   {
    "id": "273487f7ca2f",
@@ -5418,7 +5866,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/11/16/Ma21",
    "summary_en": "Sharjah Digital Department has announced the launch of the Sharjah Assistant AI Challenge. The department said it is being carried out under the directives of the Crown Prince of Sharjah. The challenge is scheduled to run from December 8 to 10.",
    "summary_ar": "أعلنت دائرة الشارقة الرقمية إطلاق «تحدي الشارقة للذكاء الاصطناعي المساعد». وأوضحت الدائرة أن التحدي يأتي تنفيذاً لتوجيهات سمو ولي عهد الشارقة. ومن المقرر إقامته خلال الفترة من 8 إلى 10 ديسمبر.",
-   "excerpt": "أعلنت دائرة الشارقة الرقمية إطلاق تحدي الشارقة للذكاء الاصطناعي المساعد، تنفيذاً لتوجيهات سمو ولي عهد الشارقة، خلال الفترة من 8 إلى 10 ديسمبر، بالتعاون مع…"
+   "excerpt": null
   },
   {
    "id": "242d49a88f8c",
@@ -5656,7 +6104,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/11/16/gh-6",
    "summary_en": "Alibaba, the Chinese company listed in Hong Kong, has introduced a new AI model called Qwen 4-Max. The report presents the launch as a new step to strengthen the company's presence in artificial intelligence. The headline says the new generation comes with advanced safety features.",
    "summary_ar": "طرحت شركة «علي بابا» الصينية، المدرجة في بورصة هونغ كونغ، نموذجاً جديداً للذكاء الاصطناعي باسم Qwen 4-Max. ويقدّم التقرير الإطلاق على أنه خطوة جديدة لتعزيز حضور الشركة في مجال الذكاء الاصطناعي. ويشير العنوان إلى أن هذا الجيل الجديد يأتي بميزات أمان متطورة.",
-   "excerpt": "في خطوة جديدة لتعزيز حضورها في مجال الذكاء الاصطناعي، طرحت شركة علي بابا الصينية، المدرجة في بورصة منطقة هونغ كونغ الإدارية الخاصة، نموذجها الجديد كوين 4-ماكس…"
+   "excerpt": null
   },
   {
    "id": "8abc65fca000",
@@ -5992,7 +6440,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/11/15/a24",
    "summary_en": "Google has begun rolling out a Gemini integration with Google Wallet in the United States. The feature allows users to analyse their spending and plan budgets.",
    "summary_ar": "بدأت Google طرح ميزة تربط Gemini بتطبيق Google Wallet في الولايات المتحدة. وتتيح الميزة للمستخدمين تحليل إنفاقهم ووضع الميزانيات.",
-   "excerpt": "Google has begun rolling out a Gemini integration with Google Wallet in the United States, allowing users to analyse spending, plan budgets and track…"
+   "excerpt": null
   },
   {
    "id": "914e04afd15b",
@@ -6287,6 +6735,20 @@
    "summary_en": "An analysis by Mike Major for Australia's central bank (RBA) finds that AI has barely displaced any jobs in Australia so far, but young workers entering highly AI-exposed fields such as software development, clerical work and customer service are faring worse. Job postings have fallen across all groups since ChatGPT launched in late 2022, with the steepest drop in the most exposed group, where workers aged 15 to 24 and young graduates show weaker employment and higher unemployment. Major cautions that the study does not establish causation and measures theoretical exposure rather than actual company use. Other research cited points to similar patterns for young workers in the US, but a Danish study found no measurable change in wages or hours, and a University of Pittsburgh team found that problems began before ChatGPT.",
    "summary_ar": "يخلص تحليل أعده مايك ميجر للبنك المركزي الأسترالي (RBA) إلى أن الذكاء الاصطناعي لم يُزح عملياً سوى عدد ضئيل جداً من الوظائف في أستراليا حتى الآن، لكن الشباب الداخلين إلى مجالات شديدة التعرض له، مثل تطوير البرمجيات والأعمال المكتبية وخدمة العملاء، يواجهون وضعاً أسوأ. فقد تراجعت إعلانات الوظائف في جميع الفئات منذ إطلاق ChatGPT في أواخر 2022، وكان الانخفاض الأشد في الفئة الأعلى تعرضاً، حيث يسجل العاملون بين 15 و24 عاماً وخريجو الجامعات الشباب معدلات توظيف أضعف وبطالة أعلى. ويحذر ميجر من استنتاجات مبكرة، إذ لا تثبت الدراسة علاقة سببية وتقيس التعرض النظري لا الاستخدام الفعلي في الشركات. وتشير أبحاث أخرى إلى أنماط مشابهة للشباب في الولايات المتحدة، بينما لم تجد دراسة دنماركية تغيراً ملموساً في الأجور أو ساعات العمل، ورأى فريق من جامعة بيتسبرغ أن المشكلات بدأت قبل ظهور ChatGPT.",
    "excerpt": "Australia's central bank sees early signs that AI is hitting young entry-level workers in highly exposed jobs like software development and customer service."
+  },
+  {
+   "id": "1243e739d383",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-15T10:31:00+00:00",
+   "title": "SIBF 2026 workshop turns an AI idea into a ‘Reader Companion’",
+   "title_ar": "ورشة عمل في معرض الشارقة الدولي للكتاب 2026 تحوّل فكرة تعتمد على الذكاء الاصطناعي إلى «رفيق القارئ»",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/15/SIBF-2026-workshop-turns-an-AI-idea-into-a-Reader-Companion",
+   "summary_en": "At the 45th Sharjah International Book Fair (SIBF 2026), a robotics and AI workshop led by Muhannad Abdullah Al Bustani and Sindiya Al Hasani combined a live demonstration with guidance on AI use, privacy and human oversight. With a virtual AI assistant called 'Emarat', the audience helped develop a prototype named 'Reader Companion', which suggests reading options based on a visitor's interests and available time. Al Hasani said AI should remain an assistant rather than replace human judgement, and the session also explained the difference between an assistant and an AI agent. Cybersecurity advice included protecting passwords and verifying suspicious messages. The fair runs from November 4 to 15 at Expo Centre Sharjah.",
+   "summary_ar": "خلال الدورة الخامسة والأربعين من معرض الشارقة الدولي للكتاب (SIBF 2026)، قدّم مهند عبدالله البستاني وسنديا الحسني ورشة عن الروبوتات والذكاء الاصطناعي جمعت بين عرض مباشر وإرشادات حول استخدام الذكاء الاصطناعي والخصوصية والرقابة البشرية. وبمشاركة المساعد الذكي الافتراضي «Emarat»، طوّر الحضور نموذجاً أولياً باسم «رفيق القارئ» (Reader Companion) يقترح قراءات بحسب اهتمامات الزائر والوقت المتاح له. وأكدت الحسني أن الذكاء الاصطناعي ينبغي أن يبقى مساعداً لا بديلاً عن الحكم البشري، كما شرحت الورشة الفرق بين المساعد الذكي ووكيل الذكاء الاصطناعي. وشملت النصائح الأمنية حماية كلمات المرور والتحقق من الرسائل المشبوهة. ويقام المعرض من 4 إلى 15 نوفمبر في مركز إكسبو الشارقة.",
+   "excerpt": "From choosing the right AI tool to testing a prototype, participants at the Sharjah International Book Fair (SIBF) 2026 explored how artificial intelligence…"
   },
   {
    "id": "5ecf69042f64",

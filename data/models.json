@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T18:44:43+00:00",
+ "updated_at": "2026-11-21T03:20:12+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1367,6 +1367,17 @@
    "moe": false
   },
   {
+   "id": "radixark/daisyrose-27b",
+   "name": "RadixArk: DaisyRose 27B",
+   "hf": "RadixArk/DaisyRose-27B",
+   "context": 262144,
+   "created": 1795222188,
+   "open": true,
+   "params_b": 27.78,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "recursive/flint-v1.0",
    "name": "Recursive: Flint",
    "hf": "RecursiveSI/flint",
@@ -1521,17 +1532,6 @@
    "moe": false
   },
   {
-   "id": "tencent/hy3-preview",
-   "name": "Tencent: Hy3 preview",
-   "hf": "tencent/Hy3-preview",
-   "context": 262144,
-   "created": 1776878150,
-   "open": true,
-   "params_b": 298.79,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "tencent/hy4",
    "name": "Tencent: Hy4",
    "hf": "tencent/Hy4",
@@ -1609,6 +1609,17 @@
    "moe": false
   },
   {
+   "id": "thinkingmachines/inkling-2-mini",
+   "name": "Thinking Machines: Inkling 2 Mini",
+   "hf": "thinkingmachines/Inkling-2-Mini",
+   "context": 1048576,
+   "created": 1795227585,
+   "open": true,
+   "params_b": 26.39,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "thinkingmachines/inkling-2-small",
    "name": "Thinking Machines: Inkling 2 Small",
    "hf": "thinkingmachines/Inkling-2-Small",
@@ -1667,7 +1678,7 @@
    "id": "xiaomi/mimo-v2.6-flash",
    "name": "Xiaomi: MiMo-V2.6-Flash",
    "hf": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
-   "context": 1050000,
+   "context": 1048576,
    "created": 1790021264,
    "open": true,
    "params_b": 310.76,
@@ -1678,7 +1689,7 @@
    "id": "xiaomi/mimo-v2.6-pro",
    "name": "Xiaomi: MiMo-V2.6-Pro",
    "hf": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
-   "context": 1050000,
+   "context": 1048576,
    "created": 1790021259,
    "open": true,
    "params_b": 1024.22,
