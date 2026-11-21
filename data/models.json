@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T03:20:12+00:00",
+ "updated_at": "2026-11-21T17:35:55+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -245,17 +245,6 @@
    "moe": false
   },
   {
-   "id": "dots-studio/dots-3-note-preview",
-   "name": "Dots Studio: Dots3-Note Preview",
-   "hf": "dots-studio/dots3-note-prev",
-   "context": 512000,
-   "created": 1786680361,
-   "open": true,
-   "params_b": 288.44,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "google/gemma-2-27b-it",
    "name": "Google: Gemma 2 27B",
    "hf": "google/gemma-2-27b-it",
@@ -439,17 +428,6 @@
    "created": 1729555200,
    "open": true,
    "params_b": 72.71,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "meituan/longcat-2.0",
-   "name": "Meituan: LongCat 2.0",
-   "hf": "meituan-longcat/LongCat-2.0",
-   "context": 1048756,
-   "created": 1784554658,
-   "open": true,
-   "params_b": 1775.56,
    "params_source": "huggingface",
    "moe": false
   },

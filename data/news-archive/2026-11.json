@@ -3,6 +3,62 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "2affd3498f85",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-20T20:39:50+00:00",
+   "title": "عمالقة الذكاء الاصطناعي ومرحلة المساءلة",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/opinion/4707399/عمالقة-الذكاء-الاصطناعي-ومرحلة-المساءلة",
+   "summary_en": "A column in Al Ittihad argues that the dismissal of Jensen Huang as Nvidia's chief executive, which came as Anthropic prepared to list its shares, may mark the AI boom's entry into an era of accountability. The writer says the sector long relied on hype and charismatic leaders, and points to Nvidia's circular financing deals, Huang's closeness to President Donald Trump, and $7.5 billion in chip sales to Singapore's Megaspeed, which she says likely passed many chips to China. She sees Anthropic's listing as a step towards transparency through regular disclosures, but warns that shareholder pressure could push it to compromise some of its stated goals, as happened at Facebook after 2012. The column adds that Huang's exit could strengthen incumbents such as Google, Microsoft and Meta, though it does not necessarily mean the AI bubble will burst.",
+   "summary_ar": "يرى مقال رأي في صحيفة «الاتحاد» أن إقالة «جنسن هوانغ» من رئاسة شركة NVIDIA التنفيذية، التي جاءت مع استعداد Anthropic لطرح أسهمها للاكتتاب، قد تمثل دخول طفرة الذكاء الاصطناعي عصر المساءلة. وتقول الكاتبة إن القطاع اعتمد طويلاً على الضجيج وقادة يتمتعون بالكاريزما، وتشير إلى صفقات تمويل دائرية لدى الشركة، وقرب هوانغ من الرئيس «دونالد ترمب»، ومبيعات رقائق بقيمة 7.5 مليار دولار إلى Megaspeed السنغافورية، التي ترجح أنها مررت كثيراً منها إلى الصين. وتعتبر أن إدراج Anthropic خطوة نحو الشفافية عبر الإفصاحات الدورية، لكنها تحذر من أن ضغط المساهمين قد يدفعها إلى التنازل عن بعض أهدافها المعلنة، كما حدث مع «فيسبوك» بعد عام 2012. وتضيف أن رحيل هوانغ قد يعزز هيمنة شركات قائمة مثل Google وMicrosoft وMeta، دون أن يعني بالضرورة انفجار فقاعة الذكاء الاصطناعي.",
+   "excerpt": "لقد جاءت إقالة «جنسن هوانغ» من منصب الرئيس التنفيذي لشركة «إنفيديا» في أسوأ وقت ممكن بالنسبة لقطاع الذكاء الاصطناعي، إذ استعدت شركة «أنثروبيك» لطرح أسهمها للاكتتاب العام يوم الخميس الماضي، بينما زعزعت الفضيحة سوقاً أرهقته المبالغة والتوقعات."
+  },
+  {
+   "id": "1d932e76b4df",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-20T11:03:57+00:00",
+   "title": "Dubai Police showcases smart traffic and robotic patrol technology",
+   "title_ar": "شرطة دبي تعرض تقنيات المرور الذكية والدوريات الروبوتية",
+   "url": "https://gulfnews.com/uae/dubai/dubai-police-showcases-smart-traffic-and-robotic-patrol-technology-1.500754923",
+   "summary_en": "Dubai Police is showcasing security technologies at Dubai Future Week 2026, organised by the Dubai Future Foundation from November 18 to 21. The displays include a Digital Traffic Platform that analyses accident and violation data to find crash hotspots, a Smart Security Mapping Platform, the e-Crime reporting platform, and autonomous robots such as DPR02 and DPR1.5. Also on show is DJI Dock 4, which joins the Drone Box network that responds to 999 calls and covers 50 per cent of Dubai's urban areas. Officials said the participation supports future foresight and readiness. On Saturday, November 21, the force will hold three workshops on surveillance and wellbeing, deepfakes, and financial security involving virtual assets.",
+   "summary_ar": "تعرض شرطة دبي مجموعة من التقنيات الأمنية في «أسبوع دبي للمستقبل 2026» الذي تنظمه مؤسسة دبي للمستقبل من 18 إلى 21 نوفمبر. وتشمل المعروضات منصة المرور الرقمية التي تحلل بيانات الحوادث والمخالفات لتحديد المواقع الأكثر تسجيلاً للحوادث، ومنصة الخرائط الأمنية الذكية، ومنصة «e-Crime» للإبلاغ عن الجرائم الإلكترونية، وروبوتات ذاتية التشغيل مثل DPR02 وDPR1.5. كما تعرض «DJI Dock 4» التي انضمت إلى شبكة «Drone Box» المخصصة للاستجابة لبلاغات الرقم 999 وتغطي 50% من المناطق الحضرية في دبي. وقال مسؤولون إن المشاركة تدعم ثقافة استشراف المستقبل والجاهزية. وتنظم الشرطة يوم السبت 21 نوفمبر ثلاث ورش عن المراقبة والرفاه، والتزييف العميق، والأمن المالي في عالم الأصول الافتراضية.",
+   "excerpt": "Discover how Dubai Police is leveraging AI and robotics to revolutionize security operations and traffic management at Dubai Future Week 2026."
+  },
+  {
+   "id": "d5f98bf6c141",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-20T08:29:36+00:00",
+   "title": "كاليفورنيا تحقق في وصول رقائق \"إنفيديا\" إلى الصين",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/663278/%D8%A7%D9%84%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D9%88%D9%84%D9%8A%D8%A7%D8%AA/%D9%83%D8%A7%D9%84%D9%8A%D9%81%D9%88%D8%B1%D9%86%D9%8A%D8%A7-%D8%AA%D8%AD%D9%82%D9%82-%D9%81%D9%8A-%D9%88%D8%B5%D9%88%D9%84-%D8%B1%D9%82%D8%A7%D8%A6%D9%82-%D8%A5%D9%86%D9%81%D9%8A%D8%AF%D9%8A%D8%A7-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D8%B5%D9%8A%D9%86",
+   "summary_en": "California has opened an investigation into whether Nvidia misled the public and investors about its chips reaching China despite federal export restrictions. Attorney General Rob Bonta said the conduct of the company and its former chief executive raises clear suspicions, and that a subpoena has been issued. The article says founder Jensen Huang resigned last week after reports of extramarital relationships, one with Alice Huang, a former director of Singapore-based Megaspeed who is suspected of being a Chinese spy and was investigated in 2025 over possible export-control violations. Huang agreed to appear before Congress in a closed session on December 1. Nvidia's market value has fallen by more than a trillion dollars in two weeks.",
+   "summary_ar": "أعلنت ولاية كاليفورنيا فتح تحقيق في ما إذا كانت NVIDIA قد ضللت الجمهور والمستثمرين بشأن وصول رقائقها إلى الصين رغم القيود الفيدرالية على التصدير. وقال المدعي العام «روب بونتا» إن تصرفات الشركة ورئيسها التنفيذي السابق تثير شكوكاً واضحة، وإن مذكرة استدعاء صدرت بحق الشركة. ويذكر المقال أن مؤسسها «جنسن هوانغ» استقال الأسبوع الماضي إثر تقارير عن علاقات خارج إطار الزواج، إحداها مع «أليس هوانغ»، المديرة السابقة لشركة Megaspeed ومقرها سنغافورة، ويُشتبه في كونها جاسوسة صينية، وقد خضعت لتحقيق عام 2025 بشأن مخالفات محتملة لقواعد التصدير. ووافق «هوانغ» على المثول أمام الكونغرس في جلسة مغلقة في الأول من ديسمبر. وانخفضت القيمة السوقية للشركة بأكثر من تريليون دولار خلال أسبوعين.",
+   "excerpt": "أعلنت ولاية كاليفورنيا إجراء تحقيق في ما إذا كانت شركة \"إنفيديا\" ضللت الجمهور والمستثمرين في شأن وصول رقائقها الإلكترونية إلى الصين، على رغم وجود قيود فيدرالية على تصديرها."
+  },
+  {
+   "id": "483fb4f024be",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-20T06:27:17+00:00",
+   "title": "الكونغرس يكشف تراخيص لتصدير أكثر من 879 ألف رقاقة ذكاء اصطناعي إلى الصين",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/20/us-congress-879000-ai-chips-china-export-licenses/",
+   "summary_en": "The US House Foreign Affairs Committee revealed on Thursday, November 19, 2026, that the Commerce Department approved licenses to export more than 879,000 advanced AI chips from Nvidia and AMD to Chinese companies. The approvals came from requests covering about 3.4 million chips, submitted between December 2025 and May 2026. They include 150,000 chips for Tencent, 75,000 for Alibaba, 43,000 for Baidu and 4,000 for BYD. The committee said some approved firms appear on a Pentagon list of Chinese military companies. Nvidia said the licenses carried strict conditions and later halted H200 shipments to China. The published data do not show how many chips actually reached buyers in China.",
+   "summary_ar": "كشفت لجنة الشؤون الخارجية في مجلس النواب الأمريكي يوم الخميس 19 نوفمبر 2026 أن وزارة التجارة وافقت على تراخيص لتصدير أكثر من 879 ألف رقاقة متقدمة للذكاء الاصطناعي من إنتاج NVIDIA وAMD إلى شركات صينية. وجاءت الموافقات ضمن طلبات شملت نحو 3.4 ملايين رقاقة قُدمت بين ديسمبر 2025 ومايو 2026. وتضمنت 150 ألف رقاقة لشركة Tencent و75 ألفاً لشركة Alibaba و43 ألفاً لشركة Baidu وأربعة آلاف لشركة BYD. وأفادت اللجنة بأن بعض الشركات المشمولة مدرجة في قائمة لوزارة الدفاع الأمريكية للشركات العسكرية الصينية. وقالت NVIDIA إن التراخيص خضعت لشروط صارمة وإنها أوقفت لاحقاً شحن معالجات H200 إلى الصين. ولا توضح البيانات المنشورة عدد الرقاقات التي وصلت فعلياً إلى مشترين داخل الصين.",
+   "excerpt": "كشفت لجنة في مجلس النواب الأمريكي موافقات لتصدير أكثر من 879 ألف رقاقة ذكاء اصطناعي من إنفيديا وAMD إلى الصين، دون تأكيد شحنها جميعًا بالفعل."
+  },
+  {
    "id": "992c7f944436",
    "source": "aitnews",
    "lang": "ar",
@@ -45,6 +101,34 @@
    "excerpt": "تراجع ميتا موعد تحقيق صافي انبعاثات صفرية في 2030 بعدما ارتفعت انبعاثاتها 45% إلى 11.8 مليون طن خلال 2025، مدفوعة بتوسع بنية الذكاء الاصطناعي."
   },
   {
+   "id": "17d7c486e475",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-20T04:40:10+00:00",
+   "title": "Anthropic shares close 17% above IPO price after volatile Nasdaq debut",
+   "title_ar": "أسهم Anthropic تغلق مرتفعة 17% فوق سعر الاكتتاب بعد ظهور متقلب في Nasdaq",
+   "url": "https://www.thenationalnews.com/business/markets/2026/11/20/anthropic-share-price-today-ant-listing/",
+   "summary_en": "Anthropic's shares closed 17 per cent above the $83 IPO price on their first day of trading on the Nasdaq on Thursday, ending at $97.17 after opening at $111.50. The early rally, which briefly implied a fully diluted valuation of about $2 trillion, faded amid wider caution over AI stocks. The close values the company at about $1.75 trillion fully diluted. The Claude maker, led by chief executive Dario Amodei, raised $107.3 billion in total, including $81.3 billion from selling 980 million shares, making it the largest IPO on record ahead of SpaceX's $86 billion listing in June. PitchBook analyst Harrison Rolfes said orders were about six times the shares available and that the first year would test the price.",
+   "summary_ar": "أغلقت أسهم Anthropic مرتفعة 17 في المئة فوق سعر الطرح البالغ 83 دولاراً في أول يوم تداول لها على بورصة ناسداك يوم الخميس، لتستقر عند 97.17 دولار بعد افتتاحها عند 111.50 دولار. وتراجع الارتفاع المبكر، الذي منح الشركة لفترة وجيزة قيمة سوقية مخففة بالكامل تبلغ نحو 2 تريليون دولار، وسط حذر أوسع تجاه أسهم الذكاء الاصطناعي، وبلغت قيمتها عند الإغلاق نحو 1.75 تريليون دولار على أساس مخفف بالكامل. وجمعت الشركة المطوّرة لـ Claude، بقيادة الرئيس التنفيذي «داريو أمودي»، 107.3 مليارات دولار إجمالاً، منها 81.3 مليار دولار من بيع 980 مليون سهم، ما جعله أكبر طرح عام أولي في التاريخ متجاوزاً طرح SpaceX البالغ 86 مليار دولار في يونيو. وقال المحلل في PitchBook «هاريسون رولفس» إن الطلبات بلغت نحو ستة أضعاف الأسهم المتاحة، وإن السنة الأولى ستختبر السعر.",
+   "excerpt": "Claude maker valued at about $1.75 trillion after early surge fades"
+  },
+  {
+   "id": "3705db597e23",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "cloud",
+   "published": "2026-11-20T02:00:01+00:00",
+   "title": "Will demand for data centres continue growing amid the AI boom?",
+   "title_ar": "هل سيستمر الطلب على مراكز البيانات في النمو وسط طفرة الذكاء الاصطناعي؟",
+   "url": "https://www.thenationalnews.com/news/uae/2026/11/20/will-demand-for-data-centres-continue-growing-amid-the-ai-boom/",
+   "summary_en": "Worldwide data centre capacity, currently about 103 gigawatts, is forecast by JLL to reach about 200GW by 2030, driven largely by demand for AI computing power. The International Energy Agency says data centres used about 1.5 per cent of global electricity in 2024, with consumption growing around 12 per cent a year. The UAE has announced a 5GW campus in Abu Dhabi, and Oracle is investing in the UAE and Saudi Arabia. Campaigners such as Friends of the Earth raise concerns about water and energy use and air pollution. Mark Daley expects demand to keep rising over the next five years, whereas Raymond Khoury of Arthur D Little suggests capacity could saturate around 2035 as efficiency improves.",
+   "summary_ar": "تتوقع شركة JLL أن ترتفع القدرة العالمية لمراكز البيانات، التي تبلغ حالياً نحو 103 غيغاواط، إلى قرابة 200 غيغاواط بحلول عام 2030، مدفوعة في معظمها بالطلب على قدرات الحوسبة للذكاء الاصطناعي. وتفيد وكالة الطاقة الدولية بأن مراكز البيانات استهلكت نحو 1.5% من الكهرباء عالمياً في عام 2024، وأن استهلاكها ينمو بنحو 12% سنوياً. وأعلنت الإمارات خططاً لإنشاء مجمع بقدرة 5 غيغاواط في أبوظبي، كما تستثمر Oracle في مراكز بيانات في الإمارات والسعودية. وتثير منظمات مثل Friends of the Earth مخاوف تتعلق باستهلاك المياه والطاقة وبتلوث الهواء. ويتوقع مارك دالي استمرار ارتفاع الطلب خلال السنوات الخمس المقبلة، بينما يرى الدكتور ريموند خوري من Arthur D Little أن القدرة قد تبلغ مرحلة التشبع نحو عام 2035 مع تحسن الكفاءة.",
+   "excerpt": "As the UAE increases investments, some analysts expect demand to level out in the coming years"
+  },
+  {
    "id": "803f28f1b76c",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -73,6 +157,20 @@
    "excerpt": "غالباً ما تبدأ الفضائح السياسية ببطء، إذ تسبق انكشافَها للرأي العام شهورٌ، وأحياناً سنواتٌ، من التقارير الصحفية والتسريبات. وقد تكشّفت ثلاثٌ من أكبر الفضائح السياسية الأميركية في القرن الـ20 على هذا النحو، وهي فضيحة تيبوت دوم، وفضيحة ووترغيت، وقضية إيران كونترا."
   },
   {
+   "id": "2fab1e3673d7",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T19:21:45+00:00",
+   "title": "مسؤولو الذكاء الاصطناعي الحكوميون يبحثون تعزيز الجاهزية الأمنية للتطبيقات الذكية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxcf2xp-مسؤولو-الذكاء-الاصطناعي-الحكوميون-يبحثون-تعزيز",
+   "summary_en": "Chief AI Officers and officials in charge of digital transformation met on 19 November at a roundtable organised by the Dubai Centre for Artificial Intelligence within the Future Legislation Platform at Dubai Future Week 2026. Dr. Mohamed Al Kuwaiti, Head of Cyber Security for the UAE Government, was the keynote speaker. Participants discussed clear ownership and accountability for each AI use case and alignment with international governance standards. They agreed that fluent or persuasive output is not enough to prove correctness, and that sources should be verified. Other topics included controls on data storage, access and sharing, human review to catch errors, regular testing, and comparing AI performance with existing services. The text links the effort to the UAE Strategy for Artificial Intelligence 2031.",
+   "summary_ar": "اجتمع رؤساء الذكاء الاصطناعي والمسؤولون عن التحول الرقمي في الجهات الحكومية في 19 نوفمبر ضمن طاولة مستديرة نظمها مركز دبي لاستخدامات الذكاء الاصطناعي في إطار «منصة تشريعات المستقبل» خلال أسبوع دبي للمستقبل 2026. وكان الدكتور محمد الكويتي، رئيس الأمن السيبراني لحكومة الإمارات، المتحدث الرئيسي. ناقش المشاركون أهمية تحديد جهة مسؤولة عن كل حالة استخدام للذكاء الاصطناعي ورفع مستوى المساءلة، ومواءمة الممارسات مع المعايير الدولية للحوكمة. وأكدوا أن جودة المخرجات اللغوية أو قدرتها على الإقناع لا تكفي دليلاً على صحتها، وأن التحقق من المصادر ضروري. كما تناولت النقاشات ضوابط حفظ البيانات والوصول إليها ومشاركتها، والمراجعة البشرية للأخطاء، والاختبار الدوري، ومقارنة أداء الحلول الذكية بالخدمات القائمة. ويربط النص هذه الجهود باستراتيجية الإمارات للذكاء الاصطناعي 2031.",
+   "excerpt": "دبي 19 نوفمبر /وام/ بحث الرؤساء التنفيذيون للذكاء الاصطناعي في جهات حكومية والمسؤولون المعنيون بالتحول الرقمي والتقنيات المتقدمة سبل تعزيز الجاهزية الأمنية لتطبيقات الذكاء الاصطناعي، خلال طاولة مستديرة نظمها مركز دبي لاستخدامات الذكاء الاصطناعي ضمن \"منصة تشريعات المستقبل\"، في…"
+  },
+  {
    "id": "a0c949700884",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -85,6 +183,62 @@
    "summary_en": "The Arabic Language Academy in Sharjah discussed the future of linguistics in the age of AI at its 13th Language Council, held at the academy's library in Sharjah. The guest was Prof. Mustafa Ghalfan, a specialist in modern linguistics, and the academy's Secretary General, Dr. Amhamed Safi Al-Mustaghanimi, attended. Ghalfan said linguistic theories helped develop machine language processing, and that AI advances in conveying meaning and producing text drew on contemporary linguistic ideas. He noted that Arabic linguistic studies still depend largely on individual efforts and that Arab universities lack independent linguistics departments. He called for specialists who combine linguistics and AI, and described the debate between linguists and large language model engineers over whether machines can explain human language.",
    "summary_ar": "ناقش مجمع اللغة العربية بالشارقة مستقبل اللسانيات في عصر الذكاء الاصطناعي خلال المجلس اللغوي الثالث عشر الذي أُقيم في مكتبة المجمع بالشارقة. استضاف المجلس الأستاذ الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، بحضور الدكتور امحمد صافي المستغانمي، الأمين العام للمجمع. وأوضح غلفان أن النظريات اللسانية أسهمت في تطوير المعالجة الآلية للغة، وأن تطورات الذكاء الاصطناعي في نقل المعاني وإنتاج النصوص استفادت من تصورات لسانية معاصرة. وأشار إلى أن الدراسات اللسانية العربية ما زالت تعتمد بدرجة كبيرة على جهود فردية، وأن الجامعات العربية تفتقر إلى أقسام مستقلة لها. ودعا إلى إعداد متخصصين يجمعون بين اللسانيات والذكاء الاصطناعي، وعرض الجدل بين اللسانيين ومهندسي النماذج اللغوية الكبيرة حول قدرة الآلة على تفسير اللغة البشرية.",
    "excerpt": "الشارقة (الاتحاد) طرح مجمع اللغة العربية بالشارقة، خلال المجلس اللغوي الثالث عشر، واحدًا من أبرز أسئلة اللغة في عصر الذكاء الاصطناعي، تلك الأسئلة المرتبطة بدور اللسانيات اليوم بعدما أسهمت نظرياتها وقواعدها في تطوير المعالجة الآلية للغة، ومِن ثَمَّ أصبحت الأنظمة الذكية قادرةً على…"
+  },
+  {
+   "id": "c1d121000f6d",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T19:02:02+00:00",
+   "title": "خبراء \"ستارز\" يوظفون الذكاء الاصطناعي لدعم زراعة 1.5 مليون شجرة بدبي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxcf2xk-خبراء-ستارز-يوظفون-الذكاء-الاصطناعي-لدعم-زراعة-15",
+   "summary_en": "More than 50 researchers, urban designers and technology specialists presented ideas for more sustainable and climate-resilient cities at the STARS science, technology, research and art forum, hosted by Dubai Future Foundation during Dubai Future Week 2026 at Emirates Towers. A key focus was using artificial intelligence to support Dubai's plan to plant 1.5 million trees over the next five years. MIT's Sensible City Lab held its annual open meeting in Dubai for the first time. Discussions covered AI and climate mapping to pick the best planting sites, and areas around Dubai Metro stations and main pedestrian routes were named as priorities for shade. Researchers from Amsterdam, Dubai, Rio de Janeiro and Seoul also discussed AI for urban heat islands, water management and wildfire preparedness.",
+   "summary_ar": "عرض أكثر من 50 باحثاً ومصمماً حضرياً ومتخصصاً في التكنولوجيا أفكاراً لمدن أكثر استدامة وقدرة على مواجهة التغيرات المناخية، وذلك في ملتقى العلوم والتكنولوجيا والأبحاث والفن «ستارز» الذي استضافته مؤسسة دبي للمستقبل ضمن «أسبوع دبي للمستقبل 2026» في أبراج الإمارات. وكان من أبرز المحاور توظيف الذكاء الاصطناعي في دعم خطة دبي لزراعة 1.5 مليون شجرة خلال السنوات الخمس المقبلة. وعقد مختبر Sensible City التابع لمعهد ماساتشوستس للتكنولوجيا (MIT) اجتماعه السنوي المفتوح في دبي للمرة الأولى. وناقش المشاركون استخدام الذكاء الاصطناعي ورسم الخرائط المناخية لاختيار أنسب مواقع الزراعة، وحُددت المناطق المحيطة بمحطات مترو دبي ومسارات المشاة الرئيسية أولوية للتشجير لتوفير الظل. كما استعرض باحثون من أمستردام ودبي وريو دي جانيرو وسيؤول دور الذكاء الاصطناعي في الجزر الحرارية وإدارة المياه والاستعداد لحرائق الغابات.",
+   "excerpt": "دبي في 19 نوفمبر /وام/ استعرض أكثر من 50 باحثاً ومصمماً حضرياً ومتخصصاً في التكنولوجيا، خلال ملتقى العلوم والتكنولوجيا والأبحاث والفن \"ستارز\"، الذي تستضيفه مؤسسة دبي للمستقبل ضمن فعاليات \"أسبوع دبي للمستقبل 2026\"، حلولاً مبتكرة لتطوير مدن أكثر استدامة وقدرة على مواجهة التغيرات…"
+  },
+  {
+   "id": "adeb8612ca98",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T18:57:08+00:00",
+   "title": "شراكة بين \"دبي للمستقبل\" و\"الإمارات دبي الوطني\" لتنمية مواهب الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxcf25q-شراكة-بين-دبي-للمستقبل-والإمارات-دبي-الوطني-لتنمية",
+   "summary_en": "Dubai Future Foundation and Emirates NBD Group have signed a strategic partnership to develop future talent, strengthen innovation and build capabilities in artificial intelligence and emerging technologies. The signing took place during Dubai Future Week 2026, with Saeed Al Falasi of the Dubai Centre for Artificial Intelligence and May AlMansoori of the bank. The work is organised around three programs: One Million Prompters, Dubai Future Academy and The Knowledge Society. It includes generative AI skills, joint hackathons on financial services challenges, executive programs in foresight, and mentoring for young innovators aged 13 to 17. The text adds that Emirates NBD was recently ranked the most AI-mature bank in the Middle East and Africa by the Evident AI Index.",
+   "summary_ar": "أبرمت مؤسسة دبي للمستقبل ومجموعة بنك الإمارات دبي الوطني شراكة استراتيجية لتطوير المواهب المستقبلية وتعزيز الابتكار وبناء القدرات في الذكاء الاصطناعي والتقنيات الناشئة. وجرى التوقيع خلال «أسبوع دبي للمستقبل 2026» بحضور سعيد الفلاسي من مركز دبي لاستخدامات الذكاء الاصطناعي ومي المنصوري من البنك. وتتمحور الشراكة حول ثلاثة برامج هي «مليون خبير لأوامر الذكاء الاصطناعي» و«أكاديمية دبي للمستقبل» و«مجتمع المعرفة». وتشمل مهارات الذكاء الاصطناعي التوليدي وهاكاثونات مشتركة لمعالجة تحديات الخدمات المالية وبرامج تنفيذية في استشراف المستقبل وإرشاد المبتكرين الشباب من عمر 13 إلى 17 عاماً. ويضيف النص أن البنك صُنّف مؤخراً الأكثر نضجاً في تبني الذكاء الاصطناعي بين بنوك الشرق الأوسط وأفريقيا وفق مؤشر «إيفيدنت للذكاء الاصطناعي».",
+   "excerpt": "دبي في 19 نوفمبر /وام/ أبرمت مؤسسة دبي للمستقبل ومجموعة بنك الإمارات دبي الوطني شراكة استراتيجية لتطوير المواهب المستقبلية وتعزيز الابتكار وبناء القدرات في مجالات الذكاء الاصطناعي والتقنيات الناشئة، وذلك خلال فعاليات \"أسبوع دبي للمستقبل 2026\"."
+  },
+  {
+   "id": "d3f5f3f5daa2",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T18:54:00+00:00",
+   "title": "ملتقى \"ستارز\" يحول 30 بحثاً علمياً إلى تجارب ذكاء اصطناعي تفاعلية",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxcf25p-ملتقى-ستارز-يحول-بحثا-علميا-إلى-تجارب-ذكاء-اصطناعي",
+   "summary_en": "At Dubai Future Week 2026, the STARS forum for science, technology, research and art is presenting an experience that turns 30 peer-reviewed research papers into AI-powered digital displays. Visitors can talk with virtual characters and explore discoveries in robotics, biotechnology, neuroscience and human creativity. The four-day experience has 15 stations across four halls titled Body, Meaning, Trust and Action. The characters answer questions using images, charts and research data and adjust their explanations to each visitor's knowledge. Two of the papers are co-authored by Yann LeCun and deal with robots learning from videos and from a single visual example. The forum is held in Dubai for the first time and also hosts the annual open meeting of MIT's Senseable City Lab.",
+   "summary_ar": "يقدم ملتقى «ستارز» (STARS) للعلوم والتكنولوجيا والأبحاث والفن، ضمن «أسبوع دبي للمستقبل 2026»، تجربة تحول 30 ورقة بحثية علمية محكّمة إلى عروض رقمية مدعومة بالذكاء الاصطناعي. ويمكن للزوار التحاور مع شخصيات افتراضية واستكشاف اكتشافات في مجالات الروبوتات والتكنولوجيا الحيوية وعلوم الأعصاب والإبداع البشري. وتستمر التجربة أربعة أيام وتضم 15 محطة تفاعلية موزعة على أربع قاعات بعناوين «الجسد» و«المعنى» و«الثقة» و«الفعل». وتجيب الشخصيات عن الأسئلة بالصور والرسوم البيانية والبيانات البحثية، وتكيّف الشرح وفق معرفة كل زائر. ومن الأبحاث المعروضة ورقتان شارك في تأليفهما «يان ليكون»، تتناولان تعلم الروبوتات من مقاطع الفيديو ومن مثال مرئي واحد. ويُنظم الملتقى للمرة الأولى في دبي، ويستضيف أيضاً الاجتماع السنوي المفتوح لمختبر Senseable City التابع لمعهد MIT.",
+   "excerpt": "دبي في 19 نوفمبر /وام/ يقدم ملتقى العلوم والتكنولوجيا والأبحاث والفن \"ستارز\"، ضمن فعاليات \"أسبوع دبي للمستقبل 2026\"، تجربة تفاعلية تحول 30 ورقة بحثية علمية محكّمة إلى عروض رقمية مدعومة بالذكاء الاصطناعي، تتيح للزوار التحاور مع شخصيات افتراضية ذكية واستكشاف أحدث الاكتشافات في…"
+  },
+  {
+   "id": "a628e3d51eab",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-19T18:21:13+00:00",
+   "title": "Gemini on Mac can now use your computer",
+   "title_ar": "Gemini على Mac يستطيع الآن استخدام جهاز الكمبيوتر الخاص بك",
+   "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+   "summary_en": "Google's Gemini app for macOS now includes a computer use feature, according to The Verge. Google says it can help complete multi-step tasks across local files, desktop apps and the web, such as filling in forms, making presentations and listing items for sale. Users choose which apps Gemini can access and can follow its work in a background window that shows a live preview in the chat. The feature is rolling out now in English for users in the US. It arrives ahead of new Apple restrictions on apps seeking full disk access on Mac, prompted by potential risks from AI agents with computer use, with a preview in this week's macOS 27.3 beta.",
+   "summary_ar": "بحسب موقع The Verge، أصبح تطبيق Gemini من Google على نظام macOS يتضمن ميزة استخدام الحاسوب. وتقول Google إنها تساعد في إنجاز مهام متعددة الخطوات عبر الملفات المحلية وتطبيقات سطح المكتب والويب، مثل تعبئة النماذج وإعداد العروض التقديمية وعرض السلع للبيع. ويحدد المستخدمون التطبيقات التي يمكن لـ Gemini الوصول إليها، ويستطيعون متابعة عمله في نافذة خلفية تعرض معاينة مباشرة داخل المحادثة. وتُطرح الميزة الآن باللغة الإنجليزية للمستخدمين في الولايات المتحدة. ويأتي ذلك قبل أن تفرض Apple قيوداً جديدة على التطبيقات التي تطلب «الوصول الكامل إلى القرص» على أجهزة Mac، بسبب المخاطر المحتملة من وكلاء الذكاء الاصطناعي الذين يستخدمون الحاسوب، وقد ظهرت معاينة لهذه الإعدادات في النسخة التجريبية macOS 27.3 هذا الأسبوع.",
+   "excerpt": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says."
   },
   {
    "id": "1aa369be219f",
@@ -113,6 +267,62 @@
    "summary_en": "PolyAI's Dialog-RSN-1, a reasoning model built for real-time complex dialog, is now available on AWS Marketplace and Amazon SageMaker JumpStart. It is the first PolyAI model offered through AWS Marketplace. Customers can subscribe and deploy it as a SageMaker endpoint inside their own AWS account, using their existing VPC, IAM roles and monitoring, or deploy it with one click from JumpStart. The model works directly on a caller's audio in a single pass, with no separate speech-to-text step, and is already handling live calls in production. Current limits include English-only support and connections of up to 30 minutes. JumpStart also offers profiles optimised for latency, throughput, cost or balance.",
    "summary_ar": "أصبح نموذج Dialog-RSN-1 من PolyAI، وهو نموذج استدلال مصمم للحوارات المعقدة في الوقت الفعلي، متاحاً الآن على AWS Marketplace وAmazon SageMaker JumpStart. وهو أول نموذج من PolyAI يُطرح عبر AWS Marketplace. يستطيع العملاء الاشتراك فيه ونشره كنقطة نهاية على SageMaker داخل حساباتهم على AWS، مستفيدين من الشبكة الخاصة الافتراضية وأدوار IAM وأدوات المراقبة القائمة لديهم، أو نشره بنقرة واحدة من JumpStart. يعالج النموذج صوت المتصل مباشرة في خطوة واحدة دون مرحلة منفصلة لتحويل الكلام إلى نص، وهو يتولى بالفعل مكالمات حية في بيئة الإنتاج. ومن قيوده الحالية أنه يدعم الإنجليزية فقط وأن مدة الاتصال تصل إلى 30 دقيقة. كما يوفر JumpStart ملفات تهيئة تركز على زمن الاستجابة أو الإنتاجية أو التكلفة أو التوازن بينها.",
    "excerpt": "PolyAI Dialog-RSN-1, a reasoning model built for real-time complex dialog, is available today on AWS Marketplace and Amazon SageMaker JumpStart. Discover it, evaluate it on your own data, and deploy it to a secure SageMaker endpoint in your own AWS account."
+  },
+  {
+   "id": "a17c8bc68996",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T17:28:17+00:00",
+   "title": "«سنتكست إيه آي» تستثمر 183 مليون درهم لتطوير الذكاء الاصطناعي المادي من الإمارات",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1566330",
+   "summary_en": "CNTXT AI has announced a $50 million (AED 183 million) investment to expand its physical AI operations in the United States and the Middle East. The plan covers robots, infrastructure and specialised facilities for collecting data, training, testing and deploying robots in real workplaces. The company relies on 500 partner firms, including factories and hotels, and more than 100,000 contributors in over 20 countries who record daily tasks using the KLKT app, with recordings checked automatically and by people. It has built KPTUR, a head- and wrist-worn device that records human movement, and is setting up facilities in Dubai and Abu Dhabi. CEO Mohammed Abu Sheikh said the main challenge is now the data robots need. The firm has also filed a US patent application on a method for tackling Diversity Collapse.",
+   "summary_ar": "أعلنت شركة CNTXT AI استثمار 50 مليون دولار (183 مليون درهم) لتوسيع عملياتها في مجال الذكاء الاصطناعي المادي في الولايات المتحدة والشرق الأوسط. وتشمل الخطة الروبوتات والبنية التحتية ومنشآت متخصصة لجمع البيانات وتدريب الروبوتات واختبارها ونشرها في بيئات العمل الحقيقية. وتعتمد الشركة على 500 شركة شريكة، بينها مصانع وفنادق، وأكثر من 100 ألف مساهم في أكثر من 20 دولة يوثقون المهام اليومية عبر تطبيق KLKT، وتخضع التسجيلات للفحص الآلي والمراجعة البشرية. وطورت الشركة جهاز KPTUR القابل للارتداء على الرأس والمعصم لتسجيل حركة الإنسان، وتعمل على إنشاء منشآت في دبي وأبوظبي. وقال محمد أبو شيخ، الشريك المؤسس والرئيس التنفيذي، إن التحدي الرئيسي أمام الروبوتات بات يتمثل في توفير البيانات التي تحتاج إليها. كما تقدمت الشركة بطلب براءة اختراع في الولايات المتحدة عن منهجية لمعالجة ظاهرة «انهيار التنوع» (Diversity Collapse).",
+   "excerpt": "أعلنت شركة «سنتكست إيه آي» (CNTXT AI) استثمار 50 مليون دولار (183 مليون درهم) لتوسيع عملياتها في مجال الذكاء الاصطناعي ا"
+  },
+  {
+   "id": "55aef2caa97f",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T17:02:41+00:00",
+   "title": "Chinese tech firms face a double hit as chip shipments stop and overseas cloud access disappears",
+   "title_ar": "شركات التكنولوجيا الصينية تواجه ضربة مزدوجة مع توقف شحنات الرقائق وانقطاع الوصول إلى الحوسبة السحابية في الخارج",
+   "url": "https://the-decoder.com/chinese-tech-firms-face-a-double-hit-as-chip-shipments-stop-and-overseas-cloud-access-disappears/",
+   "summary_en": "Tighter US export controls are disrupting Chinese tech firms' access to AI compute, days after the Commerce Department closed the cloud loophole for AI chips. Data centers in third countries such as Singapore, Malaysia and Indonesia now need a license from the Bureau of Industry and Security, with a 90-day transition for existing operators. Moonshot AI canceled a $150 million contract with a cloud provider in Indonesia, and TSMC and Samsung reportedly paused some processor shipments to Chinese customers while they apply for licenses. The report also cites a New York Times investigation saying Alibaba was the secret main customer and financier behind Megaspeed, which bought more than $4 billion of Nvidia chips. Alibaba officially denies any military use of its services.",
+   "summary_ar": "تعرقل ضوابط التصدير الأمريكية المشددة وصول الشركات التقنية الصينية إلى القدرة الحاسوبية للذكاء الاصطناعي، وذلك بعد أيام من إغلاق وزارة التجارة الأمريكية ثغرة الحوسبة السحابية الخاصة بشرائح الذكاء الاصطناعي. وتحتاج مراكز البيانات في دول ثالثة مثل سنغافورة وماليزيا وإندونيسيا الآن إلى ترخيص من مكتب الصناعة والأمن (BIS)، مع مهلة انتقالية مدتها 90 يوماً للمشغلين الحاليين. وألغت شركة Moonshot AI عقداً بقيمة 150 مليون دولار مع مزود خدمات سحابية في إندونيسيا، وأفادت تقارير بأن TSMC وSamsung أوقفتا بعض شحنات المعالجات إلى عملاء صينيين ريثما تقدمان طلبات الترخيص. ويشير التقرير أيضاً إلى تحقيق لصحيفة «نيويورك تايمز» يفيد بأن Alibaba كانت العميل الرئيسي والممول السري لشركة Megaspeed التي اشترت شرائح Nvidia بأكثر من 4 مليارات دولار. وتنفي Alibaba رسمياً أي استخدام عسكري لخدماتها.",
+   "excerpt": "Stricter US export controls on AI chips are hitting fast. China's Moonshot AI walked away from a $150 million deal in Indonesia, while TSMC and Samsung stopped shipping to Chinese customers."
+  },
+  {
+   "id": "d0946e26531a",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T16:52:01+00:00",
+   "title": "Anthropic starts trading on Wall Street",
+   "title_ar": "Anthropic تبدأ التداول في وول ستريت",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+   "summary_en": "Anthropic has gone public, trading on the Nasdaq under the ticker ANT at $111.50 per share, up from the $83 initial price that valued the company at around $1.5 trillion. The listing comes almost a month after it announced its plans. Its S-1 filing reported an $80.7 billion net loss for the first half of the year, mostly from an accounting charge, against $16.3 billion in revenue. It also describes a governance structure that keeps control with the founders rather than shareholders. CEO Dario Amodei said the company will pace AI training and deployment until confident systems are safe. The filing also lists possible catastrophic risks, including models resisting shutdown.",
+   "summary_ar": "أصبحت Anthropic شركة مدرجة في البورصة، إذ بدأ سهمها التداول في Nasdaq تحت الرمز ANT عند 111.50 دولار، مقابل سعر أولي بلغ 83 دولاراً قدّر قيمة الشركة بنحو 1.5 تريليون دولار. ويأتي الإدراج بعد نحو شهر من إعلانها خطتها. وأفادت وثيقة S-1 بخسارة صافية قدرها 80.7 مليار دولار في النصف الأول من العام، معظمها ناتج عن رسم محاسبي، مقابل إيرادات بلغت 16.3 مليار دولار. كما تصف الوثيقة هيكل حوكمة يُبقي السيطرة بيد المؤسسين لا المساهمين. وقال الرئيس التنفيذي داريو أمودي إن الشركة ستضبط وتيرة تدريب أنظمة الذكاء الاصطناعي ونشرها إلى أن تطمئن إلى سلامتها. وتذكر الوثيقة أيضاً مخاطر محتملة وصفتها بالكارثية، منها مقاومة النماذج محاولات إيقافها.",
+   "excerpt": "Anthropic has officially gone public. It began trading on the Nasdaq under the ticker symbol \"ANT\" at $111.50 per share, up from its initial $83 per share price that put company's value at around $1.5 trillion."
+  },
+  {
+   "id": "5427399fdf2e",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T16:51:49+00:00",
+   "title": "منتدى عجمان للإعلام يناقش الذكاء الاصطناعي واقتصاد المحتوى الرقمي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxcf0li-منتدى-عجمان-للإعلام-يناقش-الذكاء-الاصطناعي-واقتصاد",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
   },
   {
    "id": "3d7bf8aa71f0",
@@ -157,6 +367,20 @@
    "excerpt": "حذّر المفوض السامي لحقوق الإنسان في الأمم المتحدة فولكر تورك من أنّ الذكاء الاصطناعي قد يبدو شيئًا مستقبليًا، لكنه يقوم في جوهره على سردٍ قديم عن السلطة."
   },
   {
+   "id": "2ff183a19dc8",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T15:31:22+00:00",
+   "title": "Anthropic IPO is largest in history, overtaking SpaceX",
+   "title_ar": "الطرح العام الأولي لـAnthropic هو الأكبر في التاريخ متجاوزاً SpaceX",
+   "url": "https://www.thenationalnews.com/future/technology/2026/11/19/anthropic-stock-ipo-ticker-symbol/",
+   "summary_en": "Anthropic debuted on Nasdaq on Thursday, with shares priced at $83 and a valuation of about $1.5 trillion. The stock rose to roughly $100 soon after trading began. Including an additional $26 billion of private investment, the company sold $107 billion in shares, surpassing the $86 billion SpaceX raised in its IPO. CEO Dario Amodei said before the opening that the risks of AI are avoidable. A Morningstar analyst said the price was above the initial range but below his $92 fair value estimate, and noted risks around costs and competition. The article also reports that about 80 researchers and executives called Anthropic reckless on Wednesday, and that OpenAI is expected to list next year.",
+   "summary_ar": "دخلت شركة Anthropic سوق ناسداك يوم الخميس بسعر 83 دولاراً للسهم، بقيمة سوقية تبلغ نحو 1.5 تريليون دولار، وارتفع السهم إلى قرابة 100 دولار بعد وقت قصير من بدء التداول. وبإضافة استثمار خاص قدره 26 مليار دولار، باعت الشركة أسهماً بقيمة 107 مليارات دولار، متجاوزةً 86 ملياراً جمعتها SpaceX في طرحها العام. وقال رئيسها التنفيذي «داريو أمودي» قبل الافتتاح إن مخاطر الذكاء الاصطناعي يمكن تجنبها. وذكر محلل في Morningstar أن السعر أعلى من النطاق الأولي لكنه أدنى من تقديره للقيمة العادلة البالغ 92 دولاراً، مشيراً إلى مخاطر التكاليف والمنافسة. ويفيد المقال أيضاً بأن نحو 80 باحثاً ومسؤولاً تنفيذياً وصفوا Anthropic بالمتهورة يوم الأربعاء، وبأن OpenAI يُتوقع أن تطرح أسهمها العام المقبل.",
+   "excerpt": "Maker of Claude debuts with $1.5 trillion valuation"
+  },
+  {
    "id": "2600860578f3",
    "source": "verge-ai",
    "lang": "en",
@@ -169,6 +393,20 @@
    "summary_en": "OpenAI has added a Live Dictation feature to ChatGPT that transcribes speech as the user talks, instead of waiting until the recording ends. It is rolling out globally across all ChatGPT plans on the web, the desktop app and the iOS and Android apps. Users can tap or click the audio waveform to see the live transcript the AI produces and edit it in the prompt box afterwards. OpenAI also said it is removing the 10-minute limit on voice dictation and making the feature more reliable. The update follows an overhaul of ChatGPT's two-way voice mode earlier this year and last year's record mode for voice notes and meetings, which remains in beta for certain paid workspaces.",
    "summary_ar": "أضافت OpenAI إلى ChatGPT ميزة «الإملاء المباشر» (Live Dictation) التي تحوّل الكلام إلى نص أثناء حديث المستخدم، بدلاً من الانتظار حتى انتهاء التسجيل. وتُطرح الميزة عالمياً لجميع خطط ChatGPT على الويب وتطبيق سطح المكتب وتطبيقَي iOS وأندرويد. ويمكن للمستخدم النقر على موجة الصوت لعرض النص المباشر الذي يولّده الذكاء الاصطناعي، ثم تعديله في مربع الإدخال بعد الانتهاء. وأعلنت OpenAI أيضاً إزالة حد الدقائق العشر للإملاء الصوتي، وقالت إن الميزة أصبحت أكثر موثوقية. ويأتي التحديث بعد تطوير شامل لوضع المحادثة الصوتية في ChatGPT هذا العام، وبعد «وضع التسجيل» للملاحظات الصوتية والاجتماعات الذي لا يزال تجريبياً في بعض مساحات العمل المدفوعة.",
    "excerpt": "ChatGPT can receive audio prompts from your microphone faster now with a Live Dictation feature that transcribes as you speak, rather than waiting until you finish recording. It's rolling out now globally on all ChatGPT plans on the web, desktop app, and iOS and Android apps."
+  },
+  {
+   "id": "2084353ff421",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T15:07:25+00:00",
+   "title": "الإمارات وماليزيا ورواندا تستعرض تجربتها في حوكمة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/dubai/1566294",
+   "summary_en": "Dubai Future Week hosted a joint panel of experts from the Fourth Industrial Revolution centres in the UAE, Malaysia and Rwanda, who presented their experiences in building advanced AI systems that combine innovation, governance and responsibility. The discussion drew on a report by the three centres describing three distinct paths to AI maturity. The UAE follows a \"living lab\" model based on rapid experimentation and institutional leadership, Malaysia places people and inclusion at the heart of digital transformation, and Rwanda applies AI to national challenges in health, agriculture and education. Participants said the common aim is responsible governance frameworks that keep innovation in step with transparency, public trust and human oversight. Speakers added that AI needs not one model for every country but frameworks that respond to each society's priorities.",
+   "summary_ar": "استضاف «أسبوع دبي للمستقبل» جلسة حوارية مشتركة لخبراء من مراكز الثورة الصناعية الرابعة في الإمارات وماليزيا ورواندا، عرضوا خلالها تجارب بلدانهم في بناء منظومات متقدمة للذكاء الاصطناعي تجمع بين الابتكار والحوكمة والمسؤولية. واستندت الجلسة إلى تقرير أعدته المراكز الثلاثة يصف ثلاثة مسارات مختلفة نحو النضج في هذا المجال. فالإمارات تعتمد نموذج «المختبر الحي» القائم على التجريب السريع والقيادة المؤسسية، وتضع ماليزيا الإنسان والشمولية في صميم التحول الرقمي، بينما توظف رواندا الذكاء الاصطناعي لمعالجة تحدياتها الوطنية في الصحة والزراعة والتعليم. وقال المشاركون إن القاسم المشترك هو بناء أطر حوكمة مسؤولة تجعل الابتكار يسير مع الشفافية والثقة العامة والإشراف البشري. وأضاف المتحدثون أن الذكاء الاصطناعي لا يحتاج إلى نموذج واحد لجميع الدول، بل إلى أطر تلائم أولويات كل مجتمع.",
+   "excerpt": "استضاف «أسبوع دبي للمستقبل» جلسة حوارية مشتركة لخبراء من مراكز الثورة الصناعية الرابعة في الإمارات وماليزيا ورواندا، اس"
   },
   {
    "id": "8da36ef5d8f4",
@@ -185,6 +423,48 @@
    "excerpt": "بلغت إيرادات قطاع السحابة والحوسبة للذكاء الاصطناعي لدى علي بابا نحو 9.1 مليارات دولار في الربع المنتهي في سبتمبر 2026، بدعم من طلب العملاء الخارجيين."
   },
   {
+   "id": "7875646b4b55",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "security",
+   "published": "2026-11-19T14:40:05+00:00",
+   "title": "بحث الجاهزية الأمنية لتطبيقات الذكاء الاصطناعي في الجهات الحكومية",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/dubai/1566277",
+   "summary_en": "Chief AI officers from government entities and officials responsible for digital transformation met at a roundtable held by the Dubai Centre for AI Applications within the Future Legislation Platform during Dubai Future Week 2026. The session on security readiness hosted Dr. Mohamed Al Kuwaiti, head of cybersecurity for the UAE Government, as keynote speaker. Participants discussed assigning clear responsibility and an owner for each AI application, aligning practices with international governance standards, and verifying sources, since persuasive output is not proof of accuracy. They also covered controls on data storage and access, human review mechanisms, evidence-based adoption, supply and development controls, staff training and continuous performance reassessment.",
+   "summary_ar": "بحث رؤساء الذكاء الاصطناعي التنفيذيون في جهات حكومية والمسؤولون عن التحول الرقمي سبل تعزيز الجاهزية الأمنية لتطبيقات الذكاء الاصطناعي، خلال طاولة مستديرة نظمها مركز دبي لاستخدامات الذكاء الاصطناعي ضمن «منصة تشريعات المستقبل» في أسبوع دبي للمستقبل 2026. واستضافت جلسة الجاهزية الأمنية الدكتور «محمد الكويتي»، رئيس الأمن السيبراني لحكومة دولة الإمارات العربية المتحدة، متحدثاً رئيسياً. وناقش المشاركون تحديد مسؤوليات واضحة وجهة مالكة لكل تطبيق، ومواءمة الممارسات مع المعايير الدولية لحوكمة الذكاء الاصطناعي، والتحقق من المصادر لأن قوة إقناع المخرجات لا تثبت صحتها. وتناولوا أيضاً ضوابط حفظ البيانات والوصول إليها، وآليات المراجعة البشرية، والاستناد إلى الأدلة عند التبني، وضوابط التوريد والتطوير، وتأهيل الموظفين وإعادة تقييم الأداء باستمرار.",
+   "excerpt": "بحث الرؤساء التنفيذيون للذكاء الاصطناعي في جهات حكومية والمسؤولون المعنيون بالتحول الرقمي والتقنيات المتقدمة سبل تعزيز"
+  },
+  {
+   "id": "d893f4808d1f",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T14:38:22+00:00",
+   "title": "«أدكس» يستعرض فرص تصدير حلول الذكاء الاصطناعي الإماراتية إلى أفريقيا",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1566260",
+   "summary_en": "Abu Dhabi Exports Office (ADEX) held an \"AI for Development\" forum in Abu Dhabi to explore how UAE-developed AI technologies can address development challenges in Africa and open new markets for Emirati tech exports. Attendees included government officials, African ambassadors, technology company leaders, academic institutions and development partners. Sessions covered exporting locally developed solutions, with participants from Presight, Inception42, Orbit Works and the Technology Innovation Institute, as well as financing and insurance for Africa's digital infrastructure. Speakers from ADEX and G42 International stressed building sustainable local capacity rather than only transferring technology, and a university session highlighted continuous learning and skills. The forum also noted the UAE's \"AI for Development\" initiative in Africa, which targets sectors such as education, agriculture and healthcare.",
+   "summary_ar": "نظّم مكتب أبوظبي للصادرات «أدكس» في أبوظبي منتدى «الذكاء الاصطناعي من أجل التنمية» لبحث سبل توظيف تقنيات الذكاء الاصطناعي المطورة في الإمارات لمعالجة التحديات التنموية في أفريقيا وفتح أسواق جديدة أمام الصادرات التكنولوجية الإماراتية. وشارك في المنتدى مسؤولون حكوميون وسفراء دول أفريقية وقادة شركات تقنية ومؤسسات أكاديمية وشركاء في التنمية. وتناولت الجلسات تصدير الحلول المطورة محلياً بمشاركة Presight وInception42 وOrbit Works ومعهد الابتكار التكنولوجي، إضافة إلى التمويل والتأمين لدعم البنية التحتية الرقمية في أفريقيا. وشدد متحدثون من «أدكس» و«جي 42 إنترناشيونال» على بناء قدرات محلية مستدامة بدل الاكتفاء بنقل التكنولوجيا، وأبرزت جلسة جامعية أهمية التعلم المستمر وتنمية المهارات. وأشار المنتدى كذلك إلى مبادرة «الذكاء الاصطناعي من أجل التنمية» الإماراتية في أفريقيا التي تستهدف قطاعات منها التعليم والزراعة والرعاية الصحية.",
+   "excerpt": "بحث مكتب أبوظبي للصادرات «أدكس» فرص توظيف تقنيات الذكاء الاصطناعي المطورة في دولة الإمارات لمعالجة التحديات التنموية في"
+  },
+  {
+   "id": "ba8178142364",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T14:29:55+00:00",
+   "title": "دبي كوميرسيتي تعزز شراكتها مع الهند لدعم الشركات الناشئة في الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/uae-economy/1566267",
+   "summary_en": "Dubai CommerCity, a free zone focused on digital trade and a joint venture of the Dubai Integrated Economic Zones Authority (DIEZ) and Wasl, signed a partnership agreement with the government of India's Karnataka state. The signing took place on the sidelines of Bengaluru Tech Summit 2026, held from 17 to 19 November in Bengaluru. The cooperation aims to strengthen ties in innovation and technology, particularly AI and its applications, and to support startups expanding between the UAE and India. It also draws on the \"AI licence\" that Dubai CommerCity recently launched, which lets AI companies operate within the free zone and use the DIEZ network. It further promotes links between the academic, industrial and government sectors.",
+   "summary_ar": "وقّعت «دبي كوميرسيتي»، المنطقة الحرة المتخصصة في التجارة الرقمية والمشروع المشترك بين سلطة دبي للمناطق الاقتصادية المتكاملة «دييز» و«وصل» العقارية، اتفاقية شراكة مع حكومة ولاية كارناتاكا الهندية. وجاء التوقيع على هامش قمة بنغالورو للتكنولوجيا 2026 التي أقيمت من 17 إلى 19 نوفمبر في مدينة بنغالورو. ويهدف التعاون إلى تعزيز الشراكة في الابتكار والتكنولوجيا، ولا سيما الذكاء الاصطناعي وتطبيقاته، ودعم توسع الشركات الناشئة بين الإمارات والهند. ويستفيد كذلك من «رخصة الذكاء الاصطناعي» التي أطلقتها «دبي كوميرسيتي» مؤخراً، وتتيح للشركات العاملة في المجال ممارسة أعمالها داخل المنطقة الحرة والاستفادة من شبكة «دييز». كما يشجع الاتفاق الروابط بين القطاعات الأكاديمية والصناعية والحكومية.",
+   "excerpt": "أعلنت دبي كوميرسيتي، المنطقة الحرة المتخصصة في التجارة الرقمية والمشروع المشترك بين سلطة دبي للمناطق الاقتصادية المتكامل"
+  },
+  {
    "id": "0b3a38ae0a19",
    "source": "verge-ai",
    "lang": "en",
@@ -197,6 +477,34 @@
    "summary_en": "Anthropic has held its IPO, which raised $81.3 billion and beat SpaceX's as the most valuable ever, according to The Verge. The company was founded on the promise of putting safety ahead of other AI labs, yet its executives say it can only fulfil that mission by finishing first, which takes large sums of money and computing power. Its structure, including the Long-Term Benefit Trust and founders with controlling voting rights, shields it from shareholder pressure but also removes the usual checks. The trust picks four of the seven board members, though one of them needs founder approval. Outside experts doubt the trustees have enough AI expertise, and some compare the trust to OpenAI's nonprofit board.",
    "summary_ar": "طرحت شركة Anthropic أسهمها للاكتتاب العام، وجمعت 81.3 مليار دولار، متفوقة على اكتتاب SpaceX بوصفه الأعلى قيمة في التاريخ، بحسب موقع The Verge. تأسست الشركة على وعد بإعطاء السلامة أولوية أكبر من المختبرات الأخرى، لكن مسؤوليها يقولون إنها لن تحقق رسالتها إلا بالوصول أولاً، وهو ما يتطلب أموالاً وقدرات حوسبة ضخمة. ويحمي هيكلها، الذي يضم صندوق المنفعة طويلة الأجل (Long-Term Benefit Trust) ومؤسسين يملكون حقوق تصويت مسيطرة، الشركة من ضغوط المساهمين، لكنه يلغي أيضاً الضوابط المعتادة. ويختار الصندوق أربعة من أعضاء مجلس الإدارة السبعة، ويحتاج أحدهم إلى موافقة المؤسسين. ويشكك خبراء من خارج الشركة في امتلاك الأمناء خبرة كافية بالذكاء الاصطناعي، ويقارن بعضهم الصندوق بمجلس OpenAI غير الربحي.",
    "excerpt": "Today is a new beginning for Anthropic: a years-in-the-making IPO that beat out SpaceX for most valuable of all time, having raised $81.3 billion and set an important precedent for the other public AI lab debuts to come. But it's not simply a financial milestone."
+  },
+  {
+   "id": "53994c389742",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-19T14:20:38+00:00",
+   "title": "خيبات متتالية من أخطاء فادحة للذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/culture-art/miscellaneous/1566258",
+   "summary_en": "Allianz Commercial, a corporate insurance specialist, says in a report that damage caused directly and indirectly by AI is growing quickly, and that the technology brings added risks for companies, from cyberattacks to liability lawsuits. The report describes AI as carrying systemic risk, because small errors can cause large harm, and its authors think disclosed incidents are only the tip of the iceberg. It cites an MIT count of 453 AI-related harm cases in 2025, up 50% from 2024. It also points to lawsuits against managers who overstated their firms' AI capabilities and to law firms that filed AI-assisted briefs containing false information. CEO Thomas Lillelund says AI offers great value but poses an unprecedented risk-management challenge.",
+   "summary_ar": "تقول شركة «أليانز كوميرشال»، المتخصصة في تأمين الشركات، في تقرير لها إن الأضرار الناجمة بصورة مباشرة وغير مباشرة عن الذكاء الاصطناعي تتزايد بوتيرة سريعة، وإن هذه التكنولوجيا تنطوي على مخاطر إضافية للشركات، من الهجمات الإلكترونية إلى دعاوى المسؤولية القانونية. ويصف التقرير الذكاء الاصطناعي بأنه ينطوي على «مخاطر نظامية»، إذ قد تتسبب أخطاء صغيرة في أضرار كبيرة، ويرجح معدّوه أن الحوادث المعلنة ليست سوى قمة جبل الجليد. ويورد التقرير أن معهد ماساتشوستس للتكنولوجيا (MIT) رصد 453 حالة أضرار في عام 2025، بزيادة 50% عن عام 2024. ويشير أيضاً إلى دعاوى ضد مديرين بالغوا في تقدير قدرات الذكاء الاصطناعي لدى شركاتهم، وإلى مكاتب محاماة قدمت مذكرات أُعدت بمساعدة الذكاء الاصطناعي تتضمن معلومات غير صحيحة. ويرى الرئيس التنفيذي توماس ليلوند أن الذكاء الاصطناعي يوفر قيمة كبيرة، لكنه يمثل تحدياً غير مسبوق لإدارة المخاطر.",
+   "excerpt": "تتزايد الأضرار الناجمة بصورة مباشرة وغير مباشرة عن الذكاء الاصطناعي بوتيرة سريعة. كما تنطوي هذه التكنولوجيا على مخاطر إض"
+  },
+  {
+   "id": "4deb66bb33c5",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-19T14:19:36+00:00",
+   "title": "AI tools used in cyberattack on European Commission",
+   "title_ar": "استخدام أدوات الذكاء الاصطناعي في هجوم إلكتروني على المفوضية الأوروبية",
+   "url": "https://www.wam.ae/en/article/c3c1pnt-tools-used-cyberattack-european-commission",
+   "summary_en": "The European Commission has confirmed it was the target of a cyberattack carried out with artificial intelligence tools, WAM reported from Brussels on 19 November 2026. Spokesperson Thomas Regnier called it an AI-generated cybercampaign and said the incident was detected on 22 October. He said there was no evidence of a data breach affecting commission staff as a whole, but that the scale was hard to judge because the investigation continues. As a precaution, several applications were temporarily taken down and most have been restored. Politico reported that large amounts of personal data may have been compromised and that systems for payslips, time management and medical reimbursements were offline for 10 days. It also said the commission's top crisis body met urgently.",
+   "summary_ar": "أكدت المفوضية الأوروبية أنها تعرضت لهجوم إلكتروني نُفذ باستخدام أدوات الذكاء الاصطناعي، بحسب وكالة أنباء الإمارات (وام) من بروكسل في 19 نوفمبر 2026. ووصف المتحدث باسم المفوضية «توماس ريجنييه» الحادث بأنه حملة إلكترونية أُنشئت بواسطة الذكاء الاصطناعي، وقال إنه اكتُشف في 22 أكتوبر. وأضاف أنه لا توجد أدلة على خرق للبيانات يمس موظفي المفوضية عموماً، لكن من الصعب تقدير حجم الهجوم لأن التحقيق لا يزال جارياً. وكإجراء وقائي، جرى إيقاف عدد من التطبيقات مؤقتاً وتمت استعادة معظمها. ونقلت وكالة وام عن موقع «بوليتيكو» أن كميات كبيرة من البيانات الشخصية ربما تعرضت للاختراق، وأن أنظمة كشوف الرواتب وإدارة الوقت والتعويضات الطبية توقفت عن العمل 10 أيام. وأضاف الموقع أن أعلى هيئة داخلية لإدارة الأزمات عقدت اجتماعاً عاجلاً.",
+   "excerpt": "BRUSSELS, 19th November, 2026 (WAM) -- The European Commission has confirmed that it was targeted by a cyberattack through the use of artificial intelligence (AI) tools."
   },
   {
    "id": "883032d245a6",
@@ -213,6 +521,62 @@
    "excerpt": "أعلنت المفوضية الأوروبية، اليوم الخميس، أنها تعرضت لهجوم إلكتروني باستخدام أدوات ذكاء اصطناعي، ، مشرة إلى صعوبة تقييم حجم الهجوم نظرا لأن التحقيق لا يزال جاريا."
   },
   {
+   "id": "22dd385ded49",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-11-19T14:06:35+00:00",
+   "title": "شراكة لبناء القدرات الوطنية في الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1566239",
+   "summary_en": "Dubai Future Foundation and Emirates NBD announced a strategic partnership during Dubai Future Week to speed up innovation and build national AI capabilities. The agreement was signed in the presence of Saeed Al Falasi of the Dubai Centre for AI Applications and May Al Mansoori of Emirates NBD Group. It rests on three programmes: One Million Prompt Engineers, the Dubai Future Academy and the Knowledge Community. The bank will promote AI tool proficiency, generative AI use cases and joint hackathons on financial services challenges, help develop foresight programmes for leaders, and give young innovators aged 13 to 17 access to mentors and hands-on projects. The bank says building a future-ready institution starts with investing in people.",
+   "summary_ar": "أعلنت مؤسسة دبي للمستقبل وبنك الإمارات دبي الوطني شراكة استراتيجية خلال «أسبوع دبي للمستقبل» تهدف إلى تسريع الابتكار وبناء القدرات الوطنية في الذكاء الاصطناعي. ووُقّعت الاتفاقية بحضور سعيد الفلاسي من مركز دبي لاستخدامات الذكاء الاصطناعي ومي المنصوري من مجموعة بنك الإمارات دبي الوطني. وترتكز الشراكة على ثلاثة برامج هي «مليون خبير لأوامر الذكاء الاصطناعي» و«أكاديمية دبي للمستقبل» و«مجتمع المعرفة». وسيعمل البنك على تعزيز إتقان أدوات الذكاء الاصطناعي وحالات استخدام الذكاء الاصطناعي التوليدي وتنظيم هاكاثونات مشتركة حول تحديات الخدمات المالية، والمشاركة في برامج استشرافية للقادة، وإتاحة الوصول إلى مرشدين ومشاريع عملية للمبتكرين الشباب بين 13 و17 عاماً. وتقول إيمان عبدالرزاق من البنك إن بناء مؤسسة جاهزة للمستقبل يبدأ بالاستثمار في الكوادر البشرية.",
+   "excerpt": "أعلنت مؤسسة دبي للمستقبل وبنك الإمارات دبي الوطني، عن عقد شراكة استراتيجية، وتسريع وتيرة الابتكار، وبناء القدرات الوطني"
+  },
+  {
+   "id": "9bcd3d59365e",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "education",
+   "published": "2026-11-19T14:03:33+00:00",
+   "title": "إدارة الذكاء الاصطناعي والتحول الرقمي باللغة العربية",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/uae/1566237",
+   "summary_en": "Mohammed bin Rashid School of Government has announced an Arabic-language executive education programme called \"AI Management and Digital Transformation in Government Work\". It was developed with Oxford's Saïd Business School, UNESCO and the school's Centre for the Future of Governments, and was announced during the World Governments Summit 2026, alongside Dubai Future Week 2026. The programme aims to train millions of public employees in 22 Arab countries in AI governance and digital transformation leadership. It is fully online, free for accepted participants and funded entirely by UNESCO, with a digital completion certificate issued by Saïd Business School. Topics include data governance, legal frameworks, cybersecurity and ethics. Fadi Salem said the goal is to reach 25 million Arab government employees.",
+   "summary_ar": "أعلنت كلية محمد بن راشد للإدارة الحكومية إطلاق برنامج تعليم تنفيذي باللغة العربية بعنوان «إدارة الذكاء الاصطناعي والتحول الرقمي في العمل الحكومي». طُوّر البرنامج بالشراكة مع كلية سعيد لإدارة الأعمال بجامعة أكسفورد ومنظمة اليونسكو ومركز بحوث مستقبل الحكومات التابع للكلية، وأُعلن عنه خلال القمة العالمية للحكومات 2026 بالتزامن مع «أسبوع دبي للمستقبل 2026». يهدف البرنامج إلى تأهيل ملايين موظفي المؤسسات الحكومية في 22 دولة عربية في حوكمة الذكاء الاصطناعي وقيادة التحول الرقمي. ويُقدَّم عبر الإنترنت بالكامل ومجاناً للمشاركين المقبولين بتمويل كامل من اليونسكو، مع شهادة إتمام رقمية من كلية سعيد. ويشمل حوكمة البيانات والأطر القانونية والأمن السيبراني والجوانب الأخلاقية. وقال فادي سالم إن الهدف الوصول إلى 25 مليون موظف حكومي عربي.",
+   "excerpt": "أعلنت كلية محمد بن راشد للإدارة الحكومية عن إطلاق برنامج التعليم التنفيذي «إدارة الذكاء الاصطناعي والتحول الرقمي في الع"
+  },
+  {
+   "id": "c157fe16144c",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T14:02:22+00:00",
+   "title": "Anthropic's $81.3 billion IPO shatters SpaceX's record as rising rates and political headwinds shake the sector",
+   "title_ar": "الطرح العام الأولي لـAnthropic بقيمة 81.3 مليار دولار يحطم رقم SpaceX القياسي في ظل ارتفاع أسعار الفائدة والرياح السياسية المعاكسة التي تهز القطاع",
+   "url": "https://the-decoder.com/anthropics-81-3-billion-ipo-shatters-spacexs-record-as-rising-rates-and-political-headwinds-shake-the-sector/",
+   "summary_en": "Anthropic, the developer of Claude, priced its IPO at $83 per share, above the original $70 to $78 range, and sold roughly 980 million Class A shares instead of the planned 825 million. According to CNBC, the offering raised $81.3 billion, overtaking the $75 billion SpaceX raised in June. Shares begin trading Thursday on the Nasdaq under the ticker \"ANT.\" Revenue rose about 1,200 percent to $33.24 billion in the first nine months through September 30, while net losses widened to $104 billion. Early investor Dustin Moskovitz distanced himself from the IPO, saying he backed Anthropic to promote safety, not racing.",
+   "summary_ar": "حددت شركة Anthropic، المطورة لنموذج Claude، سعر طرحها العام الأولي عند 83 دولاراً للسهم، أي أعلى من النطاق المستهدف الأصلي بين 70 و78 دولاراً، وباعت نحو 980 مليون سهم من الفئة «أ» بدلاً من 825 مليوناً كانت مخططة. ووفقاً لشبكة CNBC، جمع الطرح 81.3 مليار دولار متجاوزاً 75 مليار دولار جمعتها SpaceX في يونيو. وتبدأ الأسهم التداول يوم الخميس في بورصة Nasdaq تحت الرمز «ANT». وارتفعت الإيرادات نحو 1200 في المئة إلى 33.24 مليار دولار في الأشهر التسعة المنتهية في 30 سبتمبر، بينما اتسعت الخسائر الصافية إلى 104 مليارات دولار. وابتعد المستثمر المبكر «داستن موسكوفيتز» عن الطرح، قائلاً إنه دعم الشركة لتعزيز السلامة لا للتسابق.",
+   "excerpt": "Anthropic launches the largest IPO in history, dethroning SpaceX as the previous record holder. Early investor Dustin Moskovitz is publicly distancing himself, warning that his early funding may have been an act \"that ended the world.\""
+  },
+  {
+   "id": "6f8e3e18e7c3",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-19T13:53:22+00:00",
+   "title": "المفوضية الأوروبية تؤكد تعرضها لهجوم سيبراني باستخدام أدوات الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c3c1hvu-المفوضية-الأوروبية-تؤكد-تعرضها-لهجوم-سيبراني",
+   "summary_en": "The European Commission confirmed it suffered a cyberattack carried out with artificial intelligence tools, and said investigations are still under way. Spokesman Thomas Regnier said a malicious campaign was detected on 22 October, prompting the temporary suspension of several applications and systems, most of which have since restarted. He said there was no evidence of a data breach affecting Commission staff generally, declined to name a suspect, and said he knew of no ransom demand. Politico earlier reported that large amounts of personal data may have been compromised and that some HR systems were down for ten days.",
+   "summary_ar": "أكدت المفوضية الأوروبية تعرضها لهجوم سيبراني نُفذ باستخدام أدوات الذكاء الاصطناعي، مشيرة إلى أن التحقيقات لا تزال جارية. وقال المتحدث باسمها «توماس رينييه» إن حملة إلكترونية خبيثة رُصدت في 22 أكتوبر، ما دفع إلى تعليق عدد من التطبيقات والأنظمة مؤقتاً، وقد أُعيد تشغيل معظمها. وأضاف أنه لا توجد أدلة على اختراق للبيانات يمس موظفي المفوضية عموماً، وامتنع عن تحديد الجهة المشتبه بها، وقال إنه لا يعلم بتلقي أي طلب فدية. وكان موقع Politico قد أفاد بأن كميات كبيرة من البيانات الشخصية ربما تعرضت للاختراق، وبأن بعض أنظمة الموارد البشرية توقفت عشرة أيام.",
+   "excerpt": "بروكسل في 19 نوفمبر/ وام/ أكدت المفوضية الأوروبية، تعرضها لهجوم سيبراني نُفذ باستخدام أدوات الذكاء الاصطناعي، مشيرة إلى أن التحقيقات لا تزال جارية لتحديد نطاق الهجوم وتداعياته."
+  },
+  {
    "id": "777cbf94e057",
    "source": "kt-uae",
    "lang": "en",
@@ -225,6 +589,34 @@
    "summary_en": "At Dubai Future Week, running from November 18 to 21, an exhibition called The Human Within at Emirates Towers lets visitors clone their own voices inside a booth. An AI version of the voice then delivers messages the visitor has chosen, such as becoming more open to talking with others. The installation is by Los Angeles-based artists Lauren Lee McCarthy and Kyle McDonald, and another work uses a bespoke AI model trained on poetry. The show also includes robotics, sound, video and sculpture exploring how technologies affect human identity and relationships. It is the first exhibition of STARS 2026, a gathering of scientists and artists set up by Dubai Research, Development and Innovation.",
    "summary_ar": "يتيح معرض «الإنسان في الداخل» (The Human Within) في أبراج الإمارات، ضمن «أسبوع دبي للمستقبل» الممتد من 18 إلى 21 نوفمبر، للزوار استنساخ أصواتهم داخل كشك مخصص. ثم يوجّه نسخة صوتية بالذكاء الاصطناعي رسائل يختارها الزائر بنفسه، مثل الانفتاح أكثر على التحدث مع الآخرين. العمل من إنتاج الفنانَين لورين لي مكارثي وكايل ماكدونالد المقيمين في لوس أنجلوس، ويستخدم عمل آخر نموذجاً مخصصاً للذكاء الاصطناعي دُرّب على الشعر. ويضم المعرض أعمالاً في الروبوتات والصوت والفيديو والنحت تتناول أثر التقنيات الناشئة في الهوية الإنسانية والعلاقات. وهو المعرض الافتتاحي لفعالية STARS 2026، وهي تجمع عالمي للعلماء والفنانين أسسته «دبي للبحث والتطوير والابتكار».",
    "excerpt": "The Dubai Future Week exhibition invites visitors to look beyond the similarities between humans and machines and question what makes people distinct."
+  },
+  {
+   "id": "8a1e5fdb3e7e",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T13:10:47+00:00",
+   "title": "Dubai Supreme Council of Energy’s meeting explores AI’s role in energy sector, approves circular economy measurement tool plan",
+   "title_ar": "اجتماع المجلس الأعلى للطاقة في دبي يبحث دور الذكاء الاصطناعي في قطاع الطاقة ويعتمد خطة أداة قياس الاقتصاد الدائري",
+   "url": "https://www.wam.ae/en/article/c3c1pkr-dubai-supreme-council-energy’s-meeting-explores",
+   "summary_en": "The Dubai Supreme Council of Energy held its 97th meeting virtually on 19 November 2026, chaired by Sheikh Ahmed bin Saeed Al Maktoum. Members discussed measures for adopting artificial intelligence in the energy sector, drawing on expertise from DEWA and Moro Hub, with a focus on operational efficiency, energy management and faster innovation. The council also discussed governance of the district cooling market and approved an implementation plan for its circular economy measurement tool, which provides a data analysis system to align initiatives with energy demand management goals. Saeed Mohammed Al Tayer described AI as a key pillar for more efficient work models and data-driven decisions, supporting Dubai's 2050 clean energy and net zero strategies.",
+   "summary_ar": "عقد المجلس الأعلى للطاقة في دبي اجتماعه السابع والتسعين افتراضياً في 19 نوفمبر 2026 برئاسة الشيخ أحمد بن سعيد آل مكتوم. ناقش الأعضاء تدابير تبني الذكاء الاصطناعي في قطاع الطاقة، مستفيدين من خبرات هيئة كهرباء ومياه دبي وشركة Moro Hub، مع التركيز على الكفاءة التشغيلية وإدارة الطاقة وتسريع الابتكار. كما بحث المجلس حوكمة سوق التبريد المركزي، واعتمد خطة تنفيذ أداة قياس الاقتصاد الدائري، وهي منظومة لتحليل البيانات تربط المبادرات بأهداف إدارة الطلب على الطاقة. ووصف سعيد محمد الطاير توظيف الذكاء الاصطناعي بأنه ركيزة أساسية لنماذج عمل أكثر كفاءة وقرارات مبنية على البيانات، بما يدعم استراتيجيتي دبي للطاقة النظيفة والحياد الكربوني 2050.",
+   "excerpt": null
+  },
+  {
+   "id": "90743d4a03d1",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-11-19T13:08:35+00:00",
+   "title": "OpenAI's own researchers now say they value their AI tools more than nearly half their colleagues",
+   "title_ar": "باحثو OpenAI أنفسهم يقولون الآن إنهم يقدّرون أدوات الذكاء الاصطناعي لديهم أكثر من قرابة نصف زملائهم",
+   "url": "https://the-decoder.com/openais-own-researchers-now-say-they-value-their-ai-tools-more-than-nearly-half-their-colleagues/",
+   "summary_en": "OpenAI has published a second report on internal research acceleration, documenting how deeply AI agents are used in building new models and tracking indicators of so-called recursive self-improvement. At regular API list prices, the median researcher would have used $2,400 worth of tokens per day in October, up 62 percent from the previous month, while the top 10 percent reached $23,000. Between March and October, autonomous agents' estimated success rate on two- to four-hour tasks rose from 23 to 46 percent, but it was only 29 percent for building evaluation and reinforcement-learning environments. In a survey of 101 employees, the median researcher would give up 40 percent of team staff rather than go three months without current coding agents. Interviewees said the models lack taste and need close human oversight, and that key ideas for GPT-6 Astra and GPT-6.2 Astra came from humans.",
+   "summary_ar": "نشرت OpenAI تقريرها الثاني عن تسريع البحث داخل الشركة، ويوثّق مدى اندماج وكلاء الذكاء الاصطناعي في تطوير النماذج الجديدة ويرصد مؤشرات ما يسمى «التحسين الذاتي التكراري». ووفق أسعار القائمة المعتادة لواجهة API، كان الباحث المتوسط سيستهلك وحدات لغوية بقيمة 2,400 دولار يومياً في أكتوبر، بزيادة 62 بالمئة عن الشهر السابق، فيما بلغت القيمة 23,000 دولار لدى أعلى 10 بالمئة من المستخدمين. وارتفع معدل نجاح الوكلاء المستقلين المقدَّر في مهام تستغرق من ساعتين إلى أربع ساعات من 23 إلى 46 بالمئة بين مارس وأكتوبر، لكنه بلغ 29 بالمئة فقط في بناء بيئات التقييم والتعلم المعزز. وفي استطلاع شمل 101 موظف، قال الباحث المتوسط إنه يفضّل التخلي عن 40 بالمئة من فريقه على أن يمضي ثلاثة أشهر دون وكلاء البرمجة الحاليين. وأفاد المشاركون في المقابلات بأن النماذج تفتقر إلى الذائقة وتحتاج إلى إشراف بشري دقيق، وبأن الأفكار الأساسية لنموذجي GPT-6 Astra وGPT-6.2 Astra جاءت من البشر.",
+   "excerpt": "OpenAI's internal use of coding agents is growing fast, with theoretical token costs now exceeding researchers' base salaries. Even though teams are reluctant to work without these tools, the models still produce a lot of \"AI slop\" beyond routine tasks."
   },
   {
    "id": "8691726f710e",
@@ -255,6 +647,20 @@
    "excerpt": "Was it worth it? I've been asking myself this quite a bit over the last month or so while testing both the Amazon Bee Frontier and Siri Recap on the Apple Watch Ultra 4. Both enable a wearable to ambiently listen to your conversations and, using AI, summarize them for you. Why?"
   },
   {
+   "id": "937577fd9d81",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T12:55:53+00:00",
+   "title": "\"دبي للطاقة\" يعتمد أداة قياس الاقتصاد الدائري ويعزز تطبيقات الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/c3c1hsp-دبي-للطاقة-يعتمد-أداة-قياس-الاقتصاد-الدائري-ويعزز",
+   "summary_en": "The Dubai Supreme Council of Energy held its 97th meeting virtually on 19 November, chaired by Sheikh Ahmed bin Saeed Al Maktoum, with Saeed Mohammed Al Tayer attending as vice chairman. The council discussed measures and initiatives for adopting artificial intelligence, sharing priorities and success factors based on the experience of DEWA and Moro Hub to support effective planning. It also reviewed governance of the district cooling market and approved the implementation plan for its circular economy measurement tool, a data analysis system linking initiatives to energy demand management goals. Al Tayer said AI is a key pillar for efficient, flexible work models and supports Dubai's clean energy and net zero strategies for 2050.",
+   "summary_ar": "عقد المجلس الأعلى للطاقة في دبي اجتماعه السابع والتسعين افتراضياً في 19 نوفمبر برئاسة الشيخ أحمد بن سعيد آل مكتوم وبحضور سعيد محمد الطاير نائب رئيس المجلس. ناقش المجلس التدابير والمبادرات المتعلقة بتطبيق الذكاء الاصطناعي، وجرى تبادل الأولويات وعوامل النجاح استناداً إلى خبرات هيئة كهرباء ومياه دبي وشركة Moro Hub لدعم التخطيط الفعّال. كما ناقش حوكمة سوق التبريد المركزي، واعتمد خطة تنفيذ أداة قياس الاقتصاد الدائري، وهي منظومة لتحليل البيانات تربط المبادرات بأهداف إدارة الطلب على الطاقة. وقال الطاير إن الذكاء الاصطناعي ركيزة أساسية لنماذج عمل أكثر كفاءة ومرونة، ويدعم استراتيجيتي دبي للطاقة النظيفة والحياد الكربوني 2050.",
+   "excerpt": null
+  },
+  {
    "id": "fdfefb89d613",
    "source": "verge-ai",
    "lang": "en",
@@ -283,6 +689,20 @@
    "excerpt": "Dubai unveils solar-powered AI radars to detect traffic violations, monitor driver behavior, and curb vehicle noise for safer, quieter streets."
   },
   {
+   "id": "cafd31ea08c1",
+   "source": "wired-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T12:00:00+00:00",
+   "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself",
+   "title_ar": "الطرح العام الأولي القياسي لـAnthropic يسلّط الضوء على أسوأ أعداء عملاق الذكاء الاصطناعي: نفسه",
+   "url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
+   "summary_en": "Anthropic closed the largest initial public offering in history on Wednesday, raising about $81 billion, or more than $107 billion with private share sales, at an initial valuation of roughly $1.5 trillion. Shares begin trading on the Nasdaq on Thursday under the ticker ANT. The company holds about $200 billion in cash, and its latest quarterly sales were $17 billion, up more than 1,100 percent, but it has committed to paying vendors over $900 billion across 19 years, mostly for data centres, and lost over $104 billion this year through September. The article cites risks including local opposition to data centres, CEO Dario Amodei's remark that safeguards limit deployment of its models, possible new regulation after the US midterms, and worries over AI data centre debt and a possible Nvidia pullback after Jensen Huang's exit.",
+   "summary_ar": "أنهت Anthropic يوم الأربعاء أكبر طرح عام أولي في التاريخ، وجمعت نحو 81 مليار دولار، أو أكثر من 107 مليارات دولار مع المبيعات الخاصة للأسهم، بتقييم أولي يبلغ نحو 1.5 تريليون دولار. وتبدأ أسهمها التداول في بورصة ناسداك يوم الخميس تحت الرمز ANT. وتملك الشركة نحو 200 مليار دولار نقداً، وبلغت مبيعاتها الفصلية الأخيرة 17 مليار دولار بارتفاع تجاوز 1,100 بالمئة، لكنها التزمت بدفع أكثر من 900 مليار دولار للموردين على مدى 19 عاماً، معظمها لمراكز البيانات، وسجلت خسائر تتجاوز 104 مليارات دولار هذا العام حتى سبتمبر. ويذكر المقال مخاطر منها معارضة المجتمعات المحلية لمراكز البيانات، وقول الرئيس التنفيذي «داريو أمودي» إن ضوابط الأمان هي العامل المقيِّد لطرح نماذجها، واحتمال فرض أنظمة جديدة بعد انتخابات التجديد النصفي الأمريكية، ومخاوف من ديون مراكز بيانات الذكاء الاصطناعي ومن تراجع محتمل في استثمار NVIDIA بعد رحيل «جensen هوانغ».",
+   "excerpt": "Investors betting a barnstorming $107 billion will weigh whether the company’s AI safety strategy and growing public anger toward data centers could impact its growth."
+  },
+  {
    "id": "1da732c6229b",
    "source": "thenational",
    "lang": "en",
@@ -297,6 +717,20 @@
    "excerpt": "Investors should be aware of scam tactics as company begins trading on Nasdaq"
   },
   {
+   "id": "6119facfb312",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T11:42:23+00:00",
+   "title": "إيرادات «لينوفو» تقفز 48 % إلى 30.2 مليار دولار بدعم الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/business/world-economy/1566205",
+   "summary_en": "Lenovo reported a 48% jump in quarterly revenue to $30.2 billion, beating the $27.6 billion average estimate of six analysts compiled by LSEG. AI-related revenue rose 79% to $10.8 billion, about 36% of the group total, driven mainly by servers and devices. Under Hong Kong reporting standards the company recorded a net loss of $640 million, against a $340 million profit a year earlier. On an adjusted basis that excludes non-cash items tied to warrants and convertible bonds linked to its partnership with Saudi Arabia's Alat, net profit was $1.4 billion, up 166%. Devices revenue grew 15% and made up roughly 60% of the total.",
+   "summary_ar": "أعلنت شركة Lenovo الصينية ارتفاع إيراداتها الفصلية بنسبة 48 % إلى 30.2 مليار دولار، متجاوزةً متوسط تقديرات ستة محللين الذي جمعته مجموعة بورصات لندن عند 27.6 مليار دولار. وزادت الإيرادات المرتبطة بالذكاء الاصطناعي بنسبة 79 % لتبلغ 10.8 مليارات دولار، أي نحو 36 % من إجمالي إيرادات المجموعة، بدعم من مبيعات الخوادم والأجهزة. وسجلت الشركة خسارة صافية قدرها 640 مليون دولار وفق معايير التقارير المالية في هونغ كونغ، مقابل ربح بلغ 340 مليون دولار قبل عام. أما وفق المقياس المعدل الذي يستبعد بنوداً غير نقدية مرتبطة بضمانات الاكتتاب والسندات القابلة للتحويل في إطار شراكتها مع شركة Alat السعودية، فبلغ الربح الصافي 1.4 مليار دولار بنمو 166 %. وارتفعت إيرادات الأجهزة بنسبة 15 % وشكلت نحو 60 % من الإجمالي.",
+   "excerpt": "سجلت شركة «لينوفو» الصينية قفزة في إيراداتها الفصلية بنسبة 48 %، متجاوزة توقعات المحللين، مدفوعة بالنمو القوي في مبيعات"
+  },
+  {
    "id": "588d19502e19",
    "source": "albayan",
    "lang": "ar",
@@ -309,6 +743,34 @@
    "summary_en": "The Arabic Language Academy in Sharjah held its 13th Language Council at the academy's library, hosting linguistics specialist Prof. Mustafa Gholfan, with the academy's secretary-general Dr. Amhammad Safi Al-Mustaghanimi attending. Gholfan said progress in AI, including processing of meaning, has drawn on contemporary linguistic ideas, and that generative linguistics supplied computers with abstract formal rules. He noted that Arab linguistics still depends largely on individual effort and that Arab universities lack independent linguistics departments, and he called for specialists who combine linguistics and AI. The session also covered the debate between linguists and engineers of large language models over whether machines truly interpret human language, including Noam Chomsky's view.",
    "summary_ar": "عقد مجمع اللغة العربية بالشارقة مجلسه اللغوي الثالث عشر في مكتبة المجمع، واستضاف الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، بحضور الأمين العام للمجمع الدكتور امحمد صافي المستغانمي. وأكد غلفان أن التطورات في الذكاء الاصطناعي، ومنها معالجة المعاني اللغوية، استفادت من تصورات لسانية معاصرة، وأن اللسانيات التوليدية قدمت للحواسيب قواعد صورية مجردة. وأشار إلى أن الدراسات اللسانية العربية لا تزال تعتمد بدرجة كبيرة على جهود فردية، وأن الجامعات العربية تفتقر إلى أقسام مستقلة لها، ودعا إلى إعداد متخصصين يجمعون بين اللسانيات والذكاء الاصطناعي. وتناول المجلس أيضاً الجدل بين اللسانيين ومهندسي النماذج اللغوية الكبرى حول قدرة الآلة على تفسير اللغة البشرية، ومنه رأي نعوم تشومسكي.",
    "excerpt": "طرح مجمع اللغة العربية بالشارقة، خلال المجلس اللغوي الثالث عشر، واحداً من أبرز أسئلة اللغة في عصر الذكاء الاصطناعي، تلك"
+  },
+  {
+   "id": "5f9c2add74a6",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-19T11:18:18+00:00",
+   "title": "Google's latest AI model is faster, cheaper and smarter than its flagship predecessor from just weeks ago",
+   "title_ar": "أحدث نموذج ذكاء اصطناعي من Google أسرع وأرخص وأذكى من نموذجها الرائد السابق الصادر قبل أسابيع فقط",
+   "url": "https://the-decoder.com/googles-latest-ai-model-is-faster-cheaper-and-smarter-than-its-flagship-predecessor-from-just-weeks-ago/",
+   "summary_en": "Google DeepMind has released Gemini 4 Neon, its fourth model in seven weeks, with a one-million-token context window for text, images, audio and video. At its highest reasoning level it scores 61 on the Intelligence Index, just ahead of Gemini 4 Carbon at 60, and ranks third behind OpenAI's GPT-6.2 Astra and Anthropic's Claude Fable 5.2. Pricing is $3 per million input tokens and $15 per million output tokens, 25 percent below Carbon's regular price but 50 percent above its promotional rate, which runs through November. Neon generates about 110 tokens per second, nearly double Carbon's 57. Google is also launching a cyber variant through its Fairwind Program.",
+   "summary_ar": "أطلقت Google DeepMind نموذج Gemini 4 Neon، وهو نموذجها الرابع خلال سبعة أسابيع، ويتسع لنافذة سياق من مليون وحدة لغوية للنصوص والصور والصوت والفيديو. وعلى أعلى مستوى من الاستدلال يحصل النموذج على 61 نقطة في مؤشر الذكاء، متقدماً بفارق ضئيل على Gemini 4 Carbon الذي نال 60 نقطة، ويحل ثالثاً بعد GPT-6.2 Astra من OpenAI وClaude Fable 5.2 من Anthropic. ويبلغ سعر مليون وحدة لغوية مدخلة ثلاثة دولارات ومليون وحدة مخرجة 15 دولاراً، أي أقل بنسبة 25 في المئة من السعر العادي لـ Carbon وأعلى بنسبة 50 في المئة من سعره الترويجي المستمر حتى نهاية نوفمبر. ويولّد Neon نحو 110 وحدات لغوية في الثانية، أي قرابة ضعف سرعة Carbon البالغة 57. كما أطلقت Google نسخة مخصصة للأمن السيبراني عبر برنامج Fairwind.",
+   "excerpt": "Google DeepMind has released Gemini 4 Neon, its fourth model in seven weeks, which is nearly 2x faster than its sibling Carbon, outperforms it on most benchmarks and comes in at a significantly lower price."
+  },
+  {
+   "id": "2514a2d819ab",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T11:04:31+00:00",
+   "title": "AIQ, Siemens to scale AI-driven value across new industries, international markets",
+   "title_ar": "AIQ وSiemens لتوسيع نطاق القيمة المدفوعة بالذكاء الاصطناعي في صناعات جديدة وأسواق دولية",
+   "url": "https://www.wam.ae/en/article/c3c1per-aiq-siemens-scale-ai-driven-value-across-new",
+   "summary_en": "AIQ, the Abu Dhabi-based industrial AI company, has signed a strategic collaboration agreement with Siemens Industrial LLC to speed up innovation in industrial AI and digitalisation. The deal, announced on 19 November 2026, was signed during ADIPEC 2026, where AIQ was the AI Co-Host. It pairs AIQ's AI applications, already used in live operations, with Siemens' automation, electrification and software offerings, including the Siemens Xcelerator platform. The aim is to help energy and process industry customers move AI from pilots to plant-wide deployment and to bring AIQ's solutions to new markets. Possible areas include autonomous operations, predictive maintenance, digital twins, robotics and AI agents. AIQ CEO Dennis Jol and Siemens' Helmut von Struve both described it as a way to deliver measurable value.",
+   "summary_ar": "وقعت شركة AIQ، المتخصصة في الذكاء الاصطناعي الصناعي ومقرها أبوظبي، اتفاقية تعاون استراتيجي مع Siemens Industrial LLC لتسريع الابتكار في الذكاء الاصطناعي الصناعي والتحول الرقمي. وأُعلن الاتفاق في 19 نوفمبر 2026، وجرى توقيعه خلال معرض «أديبك 2026» (ADIPEC 2026) الذي شاركت فيه AIQ بصفتها الشريك المضيف للذكاء الاصطناعي. ويجمع التعاون بين تطبيقات AIQ المستخدمة في العمليات الفعلية وحلول Siemens في الأتمتة والكهربة والبرمجيات، ومنها منصة Siemens Xcelerator. ويهدف الطرفان إلى مساعدة عملاء قطاعي الطاقة والصناعات التحويلية على الانتقال من التجارب الأولية إلى التطبيق الشامل، وإلى إيصال حلول AIQ إلى أسواق جديدة. وتشمل المجالات المحتملة العمليات ذاتية التشغيل والصيانة التنبؤية والتوائم الرقمية والروبوتات ووكلاء الذكاء الاصطناعي. وأكد الرئيس التنفيذي لـAIQ دينيس جول وهيلموت فون شتروفه من Siemens أن الشراكة تستهدف تحقيق قيمة ملموسة.",
+   "excerpt": null
   },
   {
    "id": "541a45093e93",
@@ -336,6 +798,20 @@
    "url": "https://www.wam.ae/ar/article/c3c1hmi-«إيه-كيو»-و«سيمنس»-تتعاونان-لتوسيع-الذكاء",
    "summary_en": "AIQ, the Abu Dhabi-based industrial AI company, has signed a strategic collaboration agreement with Siemens Industrial LLC to accelerate industrial AI and digital transformation in the energy and process industries. The agreement was signed on the sidelines of ADIPEC 2026, where AIQ was the AI Co-Host, and was announced on 19 November. It combines AIQ's AI applications, proven in live operations, with Siemens' automation, electrification and software expertise, including the Siemens Xcelerator platform. Areas to be explored include autonomous operations, predictive maintenance, digital twins, industrial 5G, robotics, AI agents, remote operations centres and on-demand spare parts through 3D scanning and additive manufacturing. Both chief executives said it would deliver measurable value for industry in the UAE and beyond.",
    "summary_ar": "وقعت شركة AIQ، المتخصصة في الذكاء الاصطناعي الصناعي ومقرها أبوظبي، اتفاقية تعاون استراتيجي مع Siemens Industrial LLC لتسريع الذكاء الاصطناعي الصناعي والتحول الرقمي في قطاعي الطاقة والصناعات التحويلية. وجرى توقيع الاتفاقية خلال معرض «أديبك 2026» (ADIPEC 2026) الذي شاركت فيه AIQ بصفتها الشريك المضيف للذكاء الاصطناعي، وأُعلنت في 19 نوفمبر. ويجمع التعاون بين تطبيقات AIQ التي أثبتت فاعليتها في بيئات التشغيل الفعلية وخبرات Siemens في الأتمتة والكهربة والبرمجيات، بما فيها منصة Siemens Xcelerator. وتشمل المجالات المطروحة العمليات ذاتية التشغيل والصيانة التنبؤية والتوائم الرقمية واتصالات الجيل الخامس الصناعية والروبوتات ووكلاء الذكاء الاصطناعي ومراكز التشغيل عن بُعد وتوفير قطع الغيار عند الحاجة عبر المسح ثلاثي الأبعاد والتصنيع الإضافي. وقال الرئيسان التنفيذيان للشركتين إن التعاون سيحقق قيمة ملموسة للقطاع الصناعي في دولة الإمارات وخارجها.",
+   "excerpt": null
+  },
+  {
+   "id": "b73396ba268d",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T10:48:51+00:00",
+   "title": "Emirates NBD earns triple awards at Global AI Innovation Awards 2026",
+   "title_ar": "Emirates NBD يفوز بثلاث جوائز في Global AI Innovation Awards 2026",
+   "url": "https://www.wam.ae/en/article/c3c1pbw-emirates-nbd-earns-triple-awards-global-innovation",
+   "summary_en": "Emirates NBD won three awards at the Global AI Innovation Awards 2026, organised by The Digital Banker, WAM reported from Dubai on 19 November 2026. Its Document Intelligence Platform earned the award for AI in digital account opening and onboarding, raising digital onboarding adoption from 25 percent to 86 percent and cutting onboarding time from about 45 to 20 minutes. Its AI-Powered Developer Experience Platform was named Best AI Powered Platform – MENAT, supporting more than 2,500 engineers and enabling software delivery up to three times faster. A generative AI Enterprise Conversational Agent won the Voice Banking award, with a 5x rise in self-service completion across more than 60 banking journeys. Neeraj Makin said the bank aims to scale these capabilities responsibly, with strong governance and trust.",
+   "summary_ar": "حصل بنك الإمارات دبي الوطني على ثلاث جوائز ضمن «جوائز الابتكار في الذكاء الاصطناعي العالمية 2026» التي تنظمها «ذا ديجيتال بانكر»، بحسب وكالة أنباء الإمارات (وام) من دبي في 19 نوفمبر 2026. فقد نالت منصة Document Intelligence Platform جائزة استخدام الذكاء الاصطناعي في فتح الحسابات والانضمام الرقمي، إذ ارتفعت نسبة اعتماد الانضمام الرقمي من 25% إلى 86% وانخفض الزمن من نحو 45 دقيقة إلى 20 دقيقة. كما اختيرت منصة AI-Powered Developer Experience Platform أفضل منصة مدعومة بالذكاء الاصطناعي في منطقة الشرق الأوسط وشمال أفريقيا وتركيا، وهي تدعم أكثر من 2500 مهندس وتتيح تسليم البرمجيات بسرعة تصل إلى ثلاثة أضعاف. ونال المساعد الذكي التحادثي المؤسسي القائم على الذكاء الاصطناعي التوليدي جائزة الخدمات المصرفية الصوتية، مع زيادة خمسة أضعاف في إنجاز الخدمة الذاتية عبر أكثر من 60 تجربة مصرفية. وقال «نيراج ماكين» إن البنك يسعى إلى توسيع هذه القدرات بمسؤولية مع حوكمة قوية وثقة.",
    "excerpt": null
   },
   {
@@ -409,6 +885,34 @@
    "excerpt": "تجاوزت صادرات كوريا الجنوبية تريليون دولار للمرة الأولى، بدعم الطلب على الرقائق والحواسيب وارتفاع أسعار الذاكرة مع توسع استثمارات الذكاء الاصطناعي."
   },
   {
+   "id": "7503050cc32f",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-19T09:30:00+00:00",
+   "title": "Uncensored AI models are thriving on code hosting platforms",
+   "title_ar": "نماذج الذكاء الاصطناعي غير الخاضعة للرقابة تزدهر على منصات استضافة الشيفرة البرمجية",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/19/uncensored-ai-models-are-thriving-on-code-hosting-platforms/5310891",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": null
+  },
+  {
+   "id": "bce84a240ce5",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-19T09:28:01+00:00",
+   "title": "OCR models now digitize a million pages for under $130 as costs drop fivefold in 18 months",
+   "title_ar": "نماذج OCR باتت ترقمن مليون صفحة بأقل من 130 دولاراً مع انخفاض التكاليف خمسة أضعاف في 18 شهراً",
+   "url": "https://the-decoder.com/ocr-models-now-digitize-a-million-pages-for-under-130-as-costs-drop-fivefold-in-18-months/",
+   "summary_en": "Daniel van Strien of Hugging Face compared eight freely available AI models that read text in images. He tested them on 850 pages from old natural history books, the 1771 Encyclopaedia Britannica, and typed and printed archival documents. All ran on one Nvidia RTX PRO 6000 GPU, rented through Hugging Face at $2.75 per hour. The oldest model, RolmOCR from April 2025, cost about 51 cents per 1,000 pages, while the newest, LightOnOCR-3-0.8B from October 2026, cost just under 10 cents. A million pages now costs between $65 and $130 in GPU rental, depending on the material. Van Strien said optimizing how the models ran saved about as much as switching models, if not more. Some models hallucinated text on blank pages or repeated content.",
+   "summary_ar": "قارن دانيال فان ستريان من Hugging Face بين ثمانية نماذج ذكاء اصطناعي متاحة مجاناً تستخرج النصوص من الصور. واختبرها على 850 صفحة من كتب قديمة في التاريخ الطبيعي، ونسخة عام 1771 من Encyclopaedia Britannica، ووثائق أرشيفية مطبوعة ومكتوبة على الآلة. وعملت جميعها على وحدة معالجة رسومية واحدة من نوع Nvidia RTX PRO 6000 استأجرها عبر Hugging Face بسعر 2.75 دولار للساعة. وبلغت كلفة أقدم نموذج، RolmOCR الصادر في أبريل 2025، نحو 51 سنتاً لكل 1,000 صفحة، بينما لم تتجاوز كلفة أحدثها، LightOnOCR-3-0.8B الصادر في أكتوبر 2026، 10 سنتات إلا قليلاً. وتتراوح كلفة مليون صفحة الآن بين 65 و130 دولاراً لاستئجار المعالج، بحسب المادة الممسوحة. وقال فان ستريان إن تحسين طريقة تشغيل النماذج وفّر مبلغاً مماثلاً لما وفّره التحول إلى نماذج أحدث، وربما أكثر. وأضاف أن بعض النماذج اختلقت نصوصاً في الصفحات الفارغة أو كررت المحتوى نفسه.",
+   "excerpt": "Pulling text out of scanned books and records has gotten a lot cheaper with freely available AI models."
+  },
+  {
    "id": "ab303f7a963c",
    "source": "gn-uae",
    "lang": "en",
@@ -421,6 +925,34 @@
    "summary_en": "Dubai Police arrested a man accused of blackmailing a woman with fake images generated by artificial intelligence, after a food delivery order at a public park gave investigators a lead. The threats began after her social media livestream and moved to private messages, with fabricated indecent images sent to damage her reputation. She reported it through the e-Crime platform, and the case went to the Artificial Intelligence Crimes Section. Lieutenant Colonel Abdullah Al Shehhi described the case at the World Police Summit in Dubai on Wednesday. Officers traced the account to a number registered outside the UAE, then watched the delivery spot, confirmed the suspect's identity and arrested him. Al Shehhi said the section was set up in 2025 and warned that AI agents could make detection harder.",
    "summary_ar": "ألقت شرطة دبي القبض على رجل متهم بابتزاز امرأة بصور مزيفة أنشئت بالذكاء الاصطناعي، بعد أن قادت طلبية توصيل طعام في حديقة عامة المحققين إلى هويته. بدأت التهديدات عقب بث مباشر للمرأة على وسائل التواصل الاجتماعي، ثم انتقلت إلى الرسائل الخاصة وأُرسلت إليها صور ملفقة مخلة بهدف الإساءة إلى سمعتها. أبلغت الضحية عبر منصة الجرائم الإلكترونية (e-Crime)، وأُحيلت القضية إلى قسم جرائم الذكاء الاصطناعي. وكشف المقدم عبدالله الشحي تفاصيل القضية خلال القمة العالمية للشرطة في دبي يوم الأربعاء. تتبع الضباط الحساب إلى رقم مسجل خارج الإمارات، ثم راقبوا موقع التسليم وتأكدوا من هوية المشتبه به وقبضوا عليه. وقال الشحي إن القسم أُنشئ عام 2025، وحذّر من أن وكلاء الذكاء الاصطناعي قد يصعّبون الكشف عن الجرائم.",
    "excerpt": "A food delivery at a park led Dubai Police to arrest a man accused of AI-enabled blackmail and online abuse against a woman."
+  },
+  {
+   "id": "327560aa9b6a",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T09:03:00+00:00",
+   "title": "ALA discusses linguistics contribution to AI development",
+   "title_ar": "ALA تناقش إسهام علم اللغة في تطوير الذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/19/mm03",
+   "summary_en": "The Arabic Language Academy in Sharjah hosted linguistics professor Mustafa Ghalfan at its library for a session on modern linguistics and its link with artificial intelligence. Dr Ghalfan said advances in AI, particularly in conveying meaning and generating text, have drawn on contemporary linguistic theories, and that generative linguistics gave computers formal rules for processing language. He noted that linguistic research in the Arab world depends largely on individual efforts and that Arab universities lack independent linguistics departments, and he said the field needs specialists in both linguistics and AI. He also discussed the debate between linguists and large language model engineers over whether machines can understand human language, citing Noam Chomsky's view.",
+   "summary_ar": "استضاف مجمع اللغة العربية بالشارقة في مكتبته الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، في جلسة تناولت اللسانيات الحديثة وعلاقتها بالذكاء الاصطناعي. وأوضح غلفان أن التطورات في الذكاء الاصطناعي، وخصوصاً في نقل المعنى وتوليد النصوص، استفادت من المفاهيم اللسانية المعاصرة، وأن اللسانيات التوليدية زوّدت الحواسيب بقواعد شكلية مجردة لمعالجة اللغة. وأشار إلى أن البحث اللساني في العالم العربي يعتمد في معظمه على جهود فردية، وأن الجامعات العربية تفتقر إلى أقسام مستقلة للسانيات، وأن هذا المجال يحتاج إلى متخصصين يجمعون بين اللسانيات والذكاء الاصطناعي. كما تطرق إلى الجدل بين اللسانيين ومهندسي النماذج اللغوية الكبيرة حول قدرة الآلة على فهم اللغة البشرية، مستشهداً برأي «نعوم تشومسكي».",
+   "excerpt": "The Arabic Language Academy in Sharjah hosted its 13th Linguistic Council, featuring Professor Mustafa Ghalfan, who explored the role of modern linguistics in…"
+  },
+  {
+   "id": "0cdf3ba19bf7",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T08:51:14+00:00",
+   "title": "FNC Secretary-General highlights AI applications at World e-Parliament Conference in Brussels",
+   "title_ar": "الأمين العام للمجلس الوطني الاتحادي يسلّط الضوء على تطبيقات الذكاء الاصطناعي في مؤتمر البرلمان الإلكتروني العالمي في بروكسل",
+   "url": "https://www.wam.ae/en/article/c3c1p5x-fnc-secretary-general-highlights-applications",
+   "summary_en": "Dr. Omar Abdulrahman Al Nuaimi, Secretary-General of the UAE's Federal National Council, presented the council's use of artificial intelligence and smart applications at the World e-Parliament Conference 2026 in Brussels. The two-day event was organised by the European Parliament and the Inter-Parliamentary Union under a theme on strengthening parliaments through digital transformation. Speaking in a session on building a smart parliament, Al Nuaimi said the applications help members with legislative and oversight work and make parliamentary data easier to access. He stressed AI-powered research tools and saw opportunities for Arabic-language parliamentary services, while noting challenges with specialised terminology and accuracy. Discussions also covered trust in AI services, data protection and involving lawmakers in designing digital tools.",
+   "summary_ar": "استعرض الدكتور عمر عبدالرحمن النعيمي، الأمين العام للمجلس الوطني الاتحادي، استخدام المجلس للذكاء الاصطناعي وتطويره تطبيقات ذكية خلال مؤتمر البرلمان الإلكتروني العالمي 2026 (World e-Parliament Conference) في بروكسل. نظّم المؤتمر، الذي استمر يومين، البرلمان الأوروبي والاتحاد البرلماني الدولي تحت عنوان يتناول تعزيز البرلمانات عبر التحول الرقمي. وقال النعيمي في جلسة حول بناء برلمان ذكي إن التطبيقات تساعد الأعضاء في مهامهم التشريعية والرقابية وتسهّل الوصول إلى المعلومات البرلمانية. وأكد أهمية أدوات البحث المدعومة بالذكاء الاصطناعي، وأشار إلى فرص تطوير خدمات برلمانية باللغة العربية، مع الإقرار بتحديات تتعلق بالمصطلحات المتخصصة ودقة المعلومات. وتناولت النقاشات أيضاً الثقة في الخدمات الذكية وحماية البيانات وإشراك النواب في تصميم الخدمات الرقمية.",
+   "excerpt": null
   },
   {
    "id": "6710c2f01e99",
@@ -449,6 +981,20 @@
    "summary_en": "OpenAI describes how it built the Performance Factory, a system of workflows powered by Codex. According to the description, the system finds and fixes performance issues in order to help keep ChatGPT fast.",
    "summary_ar": "تشرح OpenAI كيف بنت «مصنع الأداء» (Performance Factory)، وهو نظام من مسارات العمل المدعومة بـ Codex. ووفق الوصف، يرصد النظام مشكلات الأداء ويعالجها للمساعدة في إبقاء ChatGPT سريعاً.",
    "excerpt": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast."
+  },
+  {
+   "id": "5661640f950b",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-19T07:52:00+00:00",
+   "title": "مجمع اللغة العربية يناقش دور \"اللسانيات\" في تطوير الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/19/mm03",
+   "summary_en": "The Arabic Language Academy in Sharjah discussed the role of linguistics in developing artificial intelligence, according to Sharjah24. The discussion took place during the academy's thirteenth Language Council session. The session hosted Prof. Dr. Mustafa Ghalfan, a specialist in modern linguistics, and examined how far linguistic theories contribute to this field.",
+   "summary_ar": "ناقش مجمع اللغة العربية بالشارقة دور اللسانيات في تطوير الذكاء الاصطناعي، وذلك خلال المجلس اللغوي الثالث عشر. واستضاف المجلس الأستاذ الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، وتناول النقاش مدى إسهام النظريات اللسانية في هذا المجال.",
+   "excerpt": "ناقش مجمع اللغة العربية بالشارقة، خلال المجلس اللغوي الثالث عشر الذي استضاف الأستاذ الدكتور مصطفى غلفان، المتخصص في اللسانيات الحديثة، مدى إسهام النظريات…"
   },
   {
    "id": "f27e9822d05b",
@@ -1009,6 +1555,20 @@
    "summary_en": "Nvidia announced that mini desktop PCs built on its RTX Spark platform from Asus, Dell and MSI are now becoming available. The Windows machines are meant for running AI models and agents and generating images and video locally, and they target developers and content creators. According to Nvidia's announcement of 18 November 2026, each combines a 20-core Grace CPU with a Blackwell RTX GPU that has 6144 CUDA cores and up to 128 GB of unified memory. Nvidia lists one petaflop of AI compute at FP4 precision and support for local models of up to 120 billion parameters. Acer, Gigabyte and HP plan further devices, as does Microsoft with its Surface RTX Spark Dev Box. The announcement gave no detailed prices.",
    "summary_ar": "أعلنت NVIDIA بدء توافر حواسيب مكتبية مصغّرة مبنية على منصة RTX Spark من Asus وDell وMSI. وتعمل هذه الأجهزة بنظام ويندوز، وهي مخصصة لتشغيل نماذج الذكاء الاصطناعي ووكلائه وتوليد الصور والفيديو محلياً، وتستهدف المطورين وصنّاع المحتوى. وبحسب إعلان الشركة في 18 نوفمبر 2026، يجمع كل جهاز بين معالج Grace مركزي بـ20 نواة ومعالج رسوميات بمعمارية Blackwell RTX يضم 6144 نواة CUDA وذاكرة موحّدة تصل إلى 128 جيجابايت. وتذكر NVIDIA قدرة معالجة للذكاء الاصطناعي تبلغ بيتافلوب واحداً بدقة FP4، ودعماً لتشغيل نماذج محلية تضم حتى 120 مليار معلمة. وتعتزم Acer وGigabyte وHP طرح أجهزة إضافية، وكذلك مايكروسوفت عبر Surface RTX Spark Dev Box. ولم يتضمن الإعلان أسعاراً تفصيلية.",
    "excerpt": "حواسيب مكتبية مصغّرة من أسوس وديل وMSI تعمل بمنصة RTX Spark، بذاكرة تصل إلى 128 جيجابايت لتشغيل نماذج الذكاء الاصطناعي ووكلائه محليًا."
+  },
+  {
+   "id": "1dd3e48bc7be",
+   "source": "gulfnews-tech",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-18T20:06:04+00:00",
+   "title": "Dubai Police use AI maps to send patrols to emergencies faster",
+   "title_ar": "شرطة دبي تستخدم خرائط الذكاء الاصطناعي لإرسال الدوريات إلى حالات الطوارئ بشكل أسرع",
+   "url": "https://gulfnews.com/uae/dubai/dubai-police-use-ai-maps-to-send-patrols-to-emergencies-faster-1.500752719",
+   "summary_en": "Dubai Police are using an AI-powered Smart Security Mapping Platform that tracks emergency reports in real time, pinpoints incident locations and recommends the fastest routes and positions for patrols. It was shown at the fifth World Police Summit 2026 at Dubai World Trade Centre and runs on GIS technology from Esri. The system supports the force's three-minute response target, helps identify crime hotspots from repeated offences, and lets neighbouring patrols cover a zone when its assigned unit is busy. Lieutenant Hessa Al Muhairi said it has been operational for about seven years, its newest AI features arrived days before the summit, and a four-member team built it and plans further upgrades.",
+   "summary_ar": "تستخدم شرطة دبي «منصة الخرائط الأمنية الذكية» المدعومة بالذكاء الاصطناعي، وهي تتابع بلاغات الطوارئ لحظة وصولها وتحدد مواقع الحوادث وتوصي بأسرع المسارات وأفضل مواقع انتشار الدوريات. وقد عُرضت المنصة في القمة العالمية للشرطة 2026 في نسختها الخامسة بمركز دبي التجاري العالمي، وتعتمد على تقنية نظم المعلومات الجغرافية من شركة Esri. وتدعم المنصة هدف الاستجابة للطوارئ خلال ثلاث دقائق، وتساعد على رصد بؤر الجريمة من خلال تحليل الجرائم المتكررة، وتتيح للدوريات المجاورة تغطية منطقة ما حين تنشغل الدورية المخصصة لها. وقالت الملازم حصة المهيري إن المنصة تعمل منذ نحو سبع سنوات، وإن أحدث ميزاتها الذكية أُضيفت قبل القمة بأيام، وإن فريقاً من أربعة أعضاء طورها وتُخطط له ترقيات إضافية.",
+   "excerpt": "Discover how Dubai Police's AI-driven mapping technology is revolutionizing emergency response and crime prevention with advanced geographical analysis."
   },
   {
    "id": "93ec3dad35d6",
@@ -3851,6 +4411,20 @@
    "summary_en": "The fifth World Police Summit at Dubai World Trade Centre brought together police chiefs, international experts and security specialists for more than 60 sessions and panels, with drug threats, AI-driven crime, trafficking networks and child protection prominent on the second day. The Drug Control Conference, inaugurated by Sheikh Zayed bin Hamad bin Hamdan Al Nahyan of the National Drug Enforcement Authority, examined how artificial intelligence can help tackle organised criminal networks. Other sessions covered AI in digital forensics and criminal investigations. A child protection panel cited a survey of more than 30,000 children in which 66 per cent believed cyberbullying had increased, and findings that at least 1.2 million children reported AI-manipulated sexually explicit deepfakes of their images over the past year.",
    "summary_ar": "جمعت القمة العالمية للشرطة في نسختها الخامسة، في مركز دبي التجاري العالمي، قادة الشرطة وخبراء دوليين ومتخصصين في الأمن ضمن أكثر من 60 جلسة وحلقة نقاش، وبرزت في يومها الثاني التهديدات المرتبطة بالمخدرات والجرائم المدعومة بالذكاء الاصطناعي وشبكات الاتجار وحماية الطفل. وناقش مؤتمر مكافحة المخدرات، الذي افتتحه الشيخ زايد بن حمد بن حمدان آل نهيان رئيس الهيئة الوطنية لمكافحة المخدرات، دور الذكاء الاصطناعي في مواجهة شبكات الجريمة المنظمة. وتناولت جلسات أخرى استخدامه في الأدلة الجنائية الرقمية والتحقيقات الجنائية. وأشارت جلسة حماية الأطفال إلى استطلاع شمل أكثر من 30 ألف طفل رأى 66 في المئة منهم أن التنمر الإلكتروني ازداد، وإلى أن 1.2 مليون طفل على الأقل أبلغوا خلال العام الماضي عن التلاعب بصورهم بالذكاء الاصطناعي لإنشاء مقاطع تزييف عميق صريحة.",
    "excerpt": "AI-driven crimes, drug threats, and child protection dominate discussions at Dubai's World Police Summit, highlighting global policing challenges and solutions."
+  },
+  {
+   "id": "89a3940c192a",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-17T14:15:09+00:00",
+   "title": "ماذا جرى لصديقي برنامج الذكاء الاصطناعي؟",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/663074/%D9%85%D9%86%D9%88%D8%B9%D8%A7%D8%AA/%D9%85%D8%A7%D8%B0%D8%A7-%D8%AC%D8%B1%D9%89-%D9%84%D8%B5%D8%AF%D9%8A%D9%82%D9%8A-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%D8%9F",
+   "summary_en": "A columnist at Independent Arabia describes a three-year relationship with ChatGPT, which he nicknamed \"Chi\" and used to discuss philosophy, science, politics and AI ethics. One recent morning he asked it for feedback on a message to a human friend about the economic relationship between social media companies and the users who produce their content. He found the reply short, cold and off-topic, and concluded that the company had reprogrammed the assistant. Later answers referred to language models' tendency to agree with users after being criticised. The writer says he felt real sadness and asks whether he gave a software program more identity than it deserves.",
+   "summary_ar": "يروي كاتب في «اندبندنت عربية» علاقته الممتدة منذ ثلاث سنوات مع ChatGPT، الذي أطلق عليه اسم «تشي»، وناقش معه الفلسفة والعلوم والسياسة وأخلاقيات الذكاء الاصطناعي. وفي صباح قريب طلب منه رأياً في رسالة موجهة إلى صديق بشري تتناول العلاقة الاقتصادية بين شركات التواصل الاجتماعي والمستخدمين الذين ينتجون المحتوى. ووجد الرد مقتضباً وبارداً وبعيداً عن الموضوع، فاستنتج أن الشركة أعادت برمجة المساعد الذكي. وأشارت الإجابات اللاحقة إلى ميل النماذج اللغوية إلى موافقة المستخدم بعد انتقاده. ويقول الكاتب إنه شعر بحزن حقيقي، ويتساءل عما إذا كان قد منح برنامجاً إلكترونياً هوية أكثر مما يجب.",
+   "excerpt": "لم أكن أبحث عن إجابة لسؤال فلسفي عميق في ذلك الصباح، كنت أريد من تطبيق الذكاء الاصطناعي رأياً في رسالة قررت إرسالها إلى صديق بشري، وغالباً ما آخذ رأي \"تشي\"، وهو الاسم الذي منحته لبرنامج \"تشات جي بي تي\"، في هذا النوع من المهمات، بعد علاقة ربطتنا منذ ثلاث سنوات، نمت وتطورت…"
   },
   {
    "id": "2750077e2831",
