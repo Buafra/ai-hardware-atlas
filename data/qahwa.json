@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-17T08:02:00+04:00",
+  "generated_at": "2026-11-23T20:22:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11618,6 +11618,142 @@
       "permalink": "https://www.instagram.com/reel/Df1BkfAM_6z/",
       "published_at": "2026-11-17T08:02:00+04:00",
       "cover": "images/qahwa/week-08-day-52--2-try-reel-cover.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-11-23-uae-mira--1-ai-news",
+      "kind": "news",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "The UAE adopts Mira",
+        "ar": "الإمارات تعتمد «ميرة»"
+      },
+      "summary": {
+        "en": "A usual smart service explains the steps and the documents you need. Mira — as described — coordinates with the entities, prepares and presents your documents on your behalf, and alerts you before they expire. That is the difference…",
+        "ar": "الخدمة الذكية المعتادة تشرح لك الخطوات والمستندات المطلوبة. «ميرة» — كما وُصفت — تنسّق مع الجهات، وتجهّز وثائقك وتقدّمها عنك، وتنبّهك قبل انتهاء صلاحيتها. هذا هو الفرق بين من يرشدك ومن ينهي المعاملة."
+      },
+      "slides": [
+        {
+          "type": "news-cover",
+          "ar": {
+            "title": "الإمارات تعتمد ==«ميرة»==",
+            "body": "مساعد شخصي ذكي ينجز معاملتك الحكومية — الإطلاق في مارس 2027"
+          },
+          "en": {
+            "title": "The UAE adopts ==Mira==",
+            "body": "A smart personal assistant that completes your government transaction. Rollout: March 2027."
+          },
+          "source": "Source: Al Bayan · The National · 23 November 2026"
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ماذا أُعلن؟",
+            "items": [
+              "==واجهة واحدة== لكل الخدمات الحكومية على هاتفك",
+              "تتحدث إليها ==بلغتك==؛ إحدى التجارب كانت بالفلبينية",
+              "اعتمدها محمد بن راشد أمام نحو ==ألف مسؤول== اتحادي"
+            ]
+          },
+          "en": {
+            "title": "What was announced?",
+            "items": [
+              "==One interface== for every government service, on your phone",
+              "You speak ==your own language==; one demo was in Tagalog",
+              "Approved by Mohammed bin Rashid before about ==1,000 officials=="
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "ar": {
+            "title": "المساعد يجيب، ==الوكيل ينفّذ==",
+            "body": "الخدمة الذكية المعتادة تشرح لك الخطوات والمستندات المطلوبة. «ميرة» — كما وُصفت — تنسّق مع الجهات، وتجهّز وثائقك وتقدّمها عنك، وتنبّهك قبل انتهاء صلاحيتها. هذا هو الفرق بين من يرشدك ومن ينهي المعاملة."
+          },
+          "en": {
+            "title": "An assistant answers, ==an agent acts==",
+            "body": "A usual smart service explains the steps and the documents you need. Mira — as described — coordinates with the entities, prepares and presents your documents on your behalf, and alerts you before they expire. That is the difference between something that guides you and something that finishes the task."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "أمثلة ذُكرت في العرض",
+            "items": [
+              "تجديد ==الهوية والجواز والإقامة==، وتصاريح العمل",
+              "حضور أبنائك ==ودرجاتهم==، وحجز موعد مع المعلّم",
+              "==مواعيدك الصحية== والوصول إلى سجلك الطبي"
+            ]
+          },
+          "en": {
+            "title": "Examples shown on the day",
+            "items": [
+              "Renewing your ==ID, passport and residency==, and work permits",
+              "Your child's attendance and ==grades==, and booking a teacher meeting",
+              "Your ==health appointments== and access to your medical record"
+            ]
+          },
+          "note": {
+            "ar": "«وقتك لأعمالك، لا للمعاملات» — عبدالرحمن العور، وزير الموارد البشرية والتوطين.",
+            "en": "\"Your time is for your business, not transactions\" — Abdulrahman Al Awar, Minister of Human Resources and Emiratisation."
+          }
+        },
+        {
+          "type": "bullets",
+          "ar": {
+            "title": "ما لم يُعلن ==بعد==",
+            "items": [
+              "كيف تصل إليها: ==تطبيق أم موقع أم صوت==؟ لم يُحدَّد",
+              "شروط ==الموافقة وحماية البيانات== لم تُنشر بعد",
+              "قائمة اللغات، وخدمات ==المرحلة الأولى== بالتحديد"
+            ]
+          },
+          "en": {
+            "title": "What has ==not== been said yet",
+            "items": [
+              "How you reach it — ==app, website or voice==? Not specified",
+              "The ==consent and data-protection== terms are not published yet",
+              "The list of languages, and exactly which services come ==first=="
+            ]
+          },
+          "note": {
+            "ar": "هذا طبيعي في يوم الإعلان، ونذكره لأن الدقة أهم من الاستعجال.",
+            "en": "Normal on announcement day. We note it because being accurate matters more than being quick."
+          }
+        },
+        {
+          "type": "hype",
+          "level": 5,
+          "ar": {
+            "low": "ضجة",
+            "high": "تغيير حقيقي",
+            "label": "5 من 5: يخصّ كل من يعيش هنا",
+            "body": "ليست ميزة جديدة في تطبيق، بل إعادة تشكيل للطريقة التي نتعامل بها مع الحكومة: من «ابحث عن الخدمة الصحيحة» إلى «قُل ما تحتاجه». والهدف المعلن أوسع: تحويل 50% من القطاعات والخدمات والعمليات الحكومية إلى الذكاء الاصطناعي المساعد خلال عامين. ويبقى التاريخ مارس 2027، لا اليوم."
+          },
+          "en": {
+            "label": "5 of 5: this touches everyone living here",
+            "low": "Hype",
+            "high": "Real change",
+            "body": "Not a new feature inside an app, but a reshaping of how we deal with government: from \"find the right service\" to \"say what you need\". The stated goal is wider still — moving 50% of government sectors, services and operations to agentic AI within two years. The date remains March 2027, not today."
+          }
+        },
+        {
+          "type": "cta",
+          "ar": {
+            "title": "أي معاملة ==تسلّمها أولاً==؟"
+          },
+          "en": {
+            "title": "Which transaction would you ==hand over first==?"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/p/DgFzELIFpqM/",
+      "published_at": "2026-11-23T20:22:00+04:00",
+      "cover": "images/qahwa/news-2026-11-23-uae-mira--1-ai-news.webp",
       "related_concepts": []
     }
   ]
