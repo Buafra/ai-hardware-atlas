@@ -17,6 +17,20 @@
    "excerpt": "أنجزت شركة \"أنثروبيك\" طرحها العام الأولي، مقدرة قيمتها بنحو تريليوني دولار، في صفقة حطمت الأرقام القياسية، وقد ترسم ملامح مستقبل صناعة الذكاء الاصطناعي."
   },
   {
+   "id": "ed7968426c4a",
+   "source": "euronews-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-21T10:19:04+00:00",
+   "title": "رياضياتي في أنثروبيك يدعي إثبات فرضية ريمان بمساعدة الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://arabic.euronews.com/2026/11/21/anthropic-employee-claims-to-have-solved-the-famous-167-year-old-maths-problem-with-help-f",
+   "summary_en": "Levent Alpöge, a mathematician working at Anthropic, published a four-page note on Friday saying he believes he has found a proof of the Riemann hypothesis with the help of Anthropic's AI tool Claude. He says it came together late on Sunday night, and that he contacted CEO Dario Amodei about announcing it. The announcement came a day after Anthropic's major stock market debut on Thursday. Alpöge linked computer code written in Lean, a proof-assistance tool, which he says verifies the result. Columbia University's Brian Greene said that if correct it could be one of the greatest mathematical breakthroughs of the past two centuries, and Queen Mary University of London's Abhishek Saha said it has a very good chance of being correct.",
+   "summary_ar": "نشر ليفنت ألبوجه، عالم الرياضيات العامل لدى Anthropic، يوم الجمعة مذكرة من أربع صفحات قال فيها إنه يعتقد أنه توصل إلى برهان لفرضية ريمان بمساعدة أداة الذكاء الاصطناعي Claude التابعة للشركة. ويقول إن الأمر حدث في وقت متأخر من ليلة الأحد، وإنه تواصل مع الرئيس التنفيذي داريو أمودي بشأن الإعلان عنه. وجاء الإعلان بعد يوم من الظهور الكبير للشركة في سوق الأسهم يوم الخميس. وأرفق ألبوجه رابطاً إلى شيفرة حاسوبية مكتوبة بلغة Lean، وهي أداة مساعدة على البرهان، ويقول إنها تتحقق من صحة النتيجة. ووصف براين غرين من جامعة كولومبيا البرهان بأنه قد يكون من أعظم الاختراقات الرياضية في القرنين الماضيين إن ثبتت صحته، وقال أبهيشيك ساها من جامعة كوين ماري في لندن إن لديه فرصة كبيرة جداً في أن يكون صحيحاً.",
+   "excerpt": "براين غرين، أستاذ الفيزياء والرياضيات في جامعة كولومبيا في نيويورك، وصف برهان ألبوجه بأنه ربما «إحدى أعظم الاختراقات الرياضية في القرنين الماضيين»."
+  },
+  {
    "id": "1f1d604cb7b2",
    "source": "gn-uae",
    "lang": "en",
@@ -87,6 +101,20 @@
    "excerpt": "اتفقت الدول المشاركة في مؤتمر للأمم المتحدة في جنيف حول أنظمة الأسلحة الذاتية التشغيل، اليوم السبت، على تمهيد الطريق أمام إطار دولي محتمل لتنظيم استخدام هذه الأسلحة التي يطلق عليها معارضوها تسمية \"الروبوتات القاتلة\"، بعد محادثات شاقة استمرت خمسة أيام."
   },
   {
+   "id": "fb0f2c5a1a4c",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-20T20:54:32+00:00",
+   "title": "هبوط ناسداك بأكثر من 4% مع موجة بيع حادة في أسهم الرقائق والذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/21/%d9%87%d8%a8%d9%88%d8%b7-%d9%86%d8%a7%d8%b3%d8%af%d8%a7%d9%83-%d8%a8%d8%a3%d9%83%d8%ab%d8%b1-%d9%85%d9%86-4-%d9%85%d8%b9-%d9%85%d9%88%d8%ac%d8%a9-%d8%a8%d9%8a%d8%b9-%d8%ad%d8%a7%d8%af%d8%a9-%d9%81/",
+   "summary_en": "A selloff in AI and semiconductor shares deepened on Wall Street on Friday, 20 November 2026. According to the Associated Press, the Nasdaq Composite was down about 4.2% at 2:46 p.m. New York time, the S&P 500 about 2.8% and the Dow about 1.1%. These are intraday readings, not closing figures. AMD fell about 12.6%, Broadcom about 12.1% and Nvidia about 10.6%, while the PHLX Semiconductor Index dropped about 9.2%. Nvidia faced extra pressure after a report that the US Securities and Exchange Commission is examining possible accounting practices, which does not prove wrongdoing. The article links the fall to investor doubts that future AI revenue can justify high valuations and heavy data-centre spending. Anthropic's shares fell about 9.3% to $88.14, still above the $83 offer price.",
+   "summary_ar": "تفاقمت موجة بيع أسهم الذكاء الاصطناعي وأشباه الموصلات في وول ستريت يوم الجمعة 20 نوفمبر 2026. ووفق وكالة أسوشيتد برس، هبط مؤشر ناسداك المركب بنحو 4.2% عند الساعة 2:46 بعد الظهر بتوقيت نيويورك، وستاندرد آند بورز 500 بنحو 2.8%، وداو جونز بنحو 1.1%، وهي قراءات أثناء الجلسة وليست أرقام إغلاق. وخسر سهم AMD نحو 12.6% وBroadcom نحو 12.1% وNVIDIA نحو 10.6%، بينما انخفض مؤشر فيلادلفيا لأشباه الموصلات بنحو 9.2%. وزادت الضغوط على NVIDIA بعد تقرير عن فحص هيئة الأوراق المالية والبورصات الأمريكية ممارسات محاسبية محتملة، علماً أن الفحص لا يثبت وجود مخالفة. ويربط المقال التراجع بتشكك المستثمرين في قدرة إيرادات الذكاء الاصطناعي المستقبلية على تبرير التقييمات المرتفعة والإنفاق الكبير على مراكز البيانات. وتراجع سهم Anthropic بنحو 9.3% إلى 88.14 دولاراً، لكنه بقي فوق سعر الطرح البالغ 83 دولاراً.",
+   "excerpt": "هبط ناسداك بأكثر من 4% خلال تداولات الجمعة 20 نوفمبر 2026، مع خسائر حادة لأسهم إنفيديا وAMD وبرودكوم وسط مخاوف من تقييمات شركات الذكاء الاصطناعي وتكاليف الاستثمار."
+  },
+  {
    "id": "2affd3498f85",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -101,6 +129,34 @@
    "excerpt": "لقد جاءت إقالة «جنسن هوانغ» من منصب الرئيس التنفيذي لشركة «إنفيديا» في أسوأ وقت ممكن بالنسبة لقطاع الذكاء الاصطناعي، إذ استعدت شركة «أنثروبيك» لطرح أسهمها للاكتتاب العام يوم الخميس الماضي، بينما زعزعت الفضيحة سوقاً أرهقته المبالغة والتوقعات."
   },
   {
+   "id": "818a9b43f8bd",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "security",
+   "published": "2026-11-20T20:37:54+00:00",
+   "title": "أمازون: وكلاء ذكاء اصطناعي اكتشفوا ثغرة Zero Day واخترقوا خادمًا جامعيًا",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/21/%d8%a3%d9%85%d8%a7%d8%b2%d9%88%d9%86-%d9%88%d9%83%d9%84%d8%a7%d8%a1-%d8%b0%d9%83%d8%a7%d8%a1-%d8%a7%d8%b5%d8%b7%d9%86%d8%a7%d8%b9%d9%8a-%d8%a7%d9%83%d8%aa%d8%b4%d9%81%d9%88%d8%a7-%d8%ab%d8%ba%d8%b1/",
+   "summary_en": "Amazon said on Friday that an attacker used autonomous AI agents to find a zero-day flaw in MONAI Label, an open-source medical imaging application, and exploit it to take over a server at a university in East Asia. According to a report by Amazon's threat intelligence team, written by CISO CJ Moses, the attacks ran for about 48 hours from 8 September 2026 and relied on the open-source Cairn platform. The agents found a file-path validation flaw and exploited it within about 11 minutes, eventually gaining root access. Not every attempt worked, and Amazon assesses with medium confidence a link to China without proving who was behind it. The project published a critical advisory on 18 November 2026 covering versions up to 0.8.5, with a fix not yet in a released version.",
+   "summary_ar": "أعلنت أمازون يوم الجمعة أن مهاجماً استخدم وكلاء ذكاء اصطناعي مستقلين لاكتشاف ثغرة Zero Day في MONAI Label، وهو تطبيق مفتوح المصدر للتصوير الطبي، ثم استغلها للسيطرة على خادم تابع لجامعة في شرق آسيا. وذكر تقرير فريق استخبارات التهديدات في الشركة، الذي كتبه مسؤول أمن المعلومات «سي جيه موزس»، أن الهجمات استمرت نحو 48 ساعة بدءاً من 8 سبتمبر 2026 واعتمدت على منصة Cairn المفتوحة المصدر. واكتشف الوكلاء خللاً في التحقق من مسارات الملفات واستغلوه خلال نحو 11 دقيقة، ثم حصلوا على صلاحيات المستخدم الجذر. ولم تنجح كل المحاولات، وترجح أمازون بدرجة ثقة متوسطة وجود صلة بالصين دون إثبات هوية المهاجم. ونشر المشروع في 18 نوفمبر 2026 تنبيهاً أمنياً حرجاً يشمل الإصدارات حتى 0.8.5، بينما لم يتوفر بعد إصدار مصحح.",
+   "excerpt": "كشفت أمازون أن مهاجمًا استخدم منصة Cairn لتوجيه وكلاء ذكاء اصطناعي اكتشفوا ثغرة Zero Day في MONAI Label واستغلوها للسيطرة على خادم جامعي في شرق آسيا."
+  },
+  {
+   "id": "49973232093d",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-20T20:31:50+00:00",
+   "title": "OpenAI makes it much harder for attackers to extract how its latest AI models think",
+   "title_ar": "OpenAI تجعل من الأصعب كثيراً على المهاجمين استخراج طريقة تفكير أحدث نماذجها للذكاء الاصطناعي",
+   "url": "https://the-decoder.com/openai-makes-it-much-harder-for-attackers-to-extract-how-its-latest-ai-models-think/",
+   "summary_en": "OpenAI has strengthened its protections against attempts to extract the internal reasoning of its GPT-6.2 Astra and GPT-6.2 Sol models. In the company's internal automated tests, attacks pulling protected reasoning from prior requests fell from a 54.0 percent success rate on GPT-6 Astra to 0.2 percent on GPT-6.2 Astra. Attacks on active requests dropped from 22.9 to 0.9 percent. The defences combine targeted training, filters on inputs and outputs, and API blocks that stop older models from reading protected reasoning. Against coordinated campaigns, OpenAI bans thousands to tens of thousands of accounts weekly. It is also bringing some improvements to GPT-6 Astra. Anthropic is likewise banning tens of thousands of accounts to counter distillation attacks.",
+   "summary_ar": "شددت OpenAI إجراءات الحماية ضد محاولات استخراج عمليات الاستدلال الداخلية في نموذجيها GPT-6.2 Astra وGPT-6.2 Sol. وبحسب اختبارات آلية داخلية أجرتها الشركة، انخفض معدل نجاح الهجمات التي تسحب الاستدلال المحمي من طلبات سابقة من 54.0 في المئة على GPT-6 Astra إلى 0.2 في المئة على GPT-6.2 Astra، بينما تراجعت الهجمات على الطلبات الجارية من 22.9 إلى 0.9 في المئة. وتجمع الدفاعات بين تدريب موجّه ومرشحات للمدخلات والمخرجات وحواجز في واجهة البرمجة تمنع النماذج الأقدم من قراءة الاستدلال المحمي. وفي مواجهة الحملات المنسقة، تحظر الشركة أسبوعياً آلاف الحسابات وحتى عشرات الآلاف منها. كما تنقل OpenAI بعض التحسينات إلى GPT-6 Astra. وتحظر Anthropic بدورها عشرات الآلاف من الحسابات لمواجهة هجمات التقطير.",
+   "excerpt": "OpenAI has significantly strengthened safeguards against extracting internal reasoning from GPT-6.2 Astra and GPT-6.2 Sol. In adaptive red-teaming tests, the success rate for extracting protected reasoning fell from 54 percent to 0.2 percent."
+  },
+  {
    "id": "2d6c80d90569",
    "source": "albayan",
    "lang": "ar",
@@ -113,6 +169,76 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "هدّد الرئيس الأمريكي دونالد ترامب، الجمعة، بفرض «ضريبة باهظة» على شركات التكنولوجيا الأمريكية إذا أنشأت مراكز بيانات للذ"
+  },
+  {
+   "id": "b2d3378f104a",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-20T19:50:27+00:00",
+   "title": "Signal blocks screenshots on iOS 27 and Android to stop AI agents from reading private chats",
+   "title_ar": "Signal تحظر لقطات الشاشة على iOS 27 وAndroid لمنع وكلاء الذكاء الاصطناعي من قراءة المحادثات الخاصة",
+   "url": "https://the-decoder.com/signal-blocks-screenshots-on-ios-27-and-android-to-stop-ai-agents-from-reading-private-chats/",
+   "summary_en": "Signal is restricting screenshots to stop AI agents from reading private chats. The app blocks screenshots on iOS 27 and triggers protection on supported Android versions when an AI assistant tries to access the screen. Signal told Reuters this is an \"existential threat\" to privacy, since system-level AI such as Apple's Siri AI and Google's Gemini Intelligence can capture screen content and so get around end-to-end encryption. Meta says its AI agent Muse captured Signal content on Android and macOS only with explicit user permission. Signal, which already blocked Microsoft's Recall on Windows, calls its defenses incomplete and says Apple, Google and Microsoft should let users block AI agents from apps.",
+   "summary_ar": "تقيّد Signal لقطات الشاشة لمنع وكلاء الذكاء الاصطناعي من قراءة المحادثات الخاصة. يمنع التطبيق لقطات الشاشة على iOS 27 ويفعّل الحماية على إصدارات Android المدعومة عندما يحاول المساعد الذكي الوصول إلى الشاشة. وقالت Signal لوكالة Reuters إن ذلك يمثل «تهديداً وجودياً» للخصوصية، لأن الذكاء الاصطناعي على مستوى النظام، مثل Siri AI من Apple وGemini Intelligence من Google، يستطيع التقاط محتوى الشاشة والالتفاف على التشفير الشامل. وتقول Meta إن وكيلها Muse التقط محتوى من Signal على Android وmacOS بإذن صريح من المستخدم فقط. وكانت Signal قد منعت Recall من Microsoft على Windows، لكنها تصف دفاعاتها بأنها غير مكتملة، وتقول إن على Apple وGoogle وMicrosoft تمكين المستخدمين من حجب وكلاء الذكاء الاصطناعي عن التطبيقات.",
+   "excerpt": "Signal is blocking screenshots to stop AI agents like Apple's Siri AI, Google's Gemini Intelligence, and Meta's Muse from reading private chats. The app calls it an \"existential threat\" to privacy, but admits its protections remain incomplete, including on macOS."
+  },
+  {
+   "id": "9bdcabd22a62",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-20T19:25:34+00:00",
+   "title": "أسبوع دبي للمستقبل.. خبراء يؤكدون ضرورة صون التفكير النقدي مع توسع الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxideyv-أسبوع-دبي-للمستقبل-خبراء-يؤكدون-ضرورة-صون-التفكير",
+   "summary_en": "On 20 November in Dubai, experts in AI, learning and foresight took part in a Dubai Future Week 2026 session titled \"How can we benefit from AI without ceasing to think?\" They said new technologies should strengthen human cognitive abilities while critical thinking, creativity and curiosity are preserved. Speakers noted that instant AI answers save time but call for people to cope with growing volumes of information and to value the learning journey, including mistakes. Ahlam Bloki of the Emirates Literature Foundation said real learning needs trial, error and patience. Participants also urged diverse skills over narrow specialisation and keeping people at the centre of decisions on AI use in education, work and daily life.",
+   "summary_ar": "في 20 نوفمبر بدبي، شارك خبراء في الذكاء الاصطناعي والتعلم واستشراف المستقبل في جلسة ضمن «أسبوع دبي للمستقبل 2026» بعنوان «كيف نستفيد من الذكاء الاصطناعي من دون أن نتوقف عن التفكير؟». وأكدوا أن التقنيات الحديثة ينبغي أن تعزز القدرات المعرفية للإنسان مع الحفاظ على التفكير النقدي والإبداع والفضول. وأشار المتحدثون إلى أن الإجابات الفورية التي تقدمها تطبيقات الذكاء الاصطناعي توفر الوقت، لكنها تتطلب من الإنسان التعامل مع الكم المتزايد من المعلومات والاستفادة من رحلة التعلم، بما في ذلك الأخطاء. وقالت أحلام بلوكي، الرئيسة التنفيذية لمؤسسة الإمارات للآداب، إن التعلم الحقيقي يتطلب التجربة والخطأ والصبر. ودعا المشاركون أيضاً إلى تنويع المهارات بدلاً من التخصصات الضيقة، وإلى إبقاء الإنسان في محور القرارات المتعلقة بالذكاء الاصطناعي في التعليم والعمل والحياة اليومية.",
+   "excerpt": null
+  },
+  {
+   "id": "a5b4ae6d85ff",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-20T19:19:12+00:00",
+   "title": "أسبوع دبي للمستقبل يناقش توظيف الذكاء الاصطناعي لبناء مدن مستدامة محسّنة للحياة",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxideys-أسبوع-دبي-للمستقبل-يناقش-توظيف-الذكاء-الاصطناعي",
+   "summary_en": "At the STARS forum for science, technology, research and art, held as part of Dubai Future Week 2026, speakers on 20 November discussed how artificial intelligence and data analytics can help build more sustainable, people-friendly cities. Researchers from MIT stressed putting people at the centre of urban planning. Applications covered big data, AI, connected-vehicle data and Google's mobility data platform for road safety indicators, street redesign and sidewalk mapping. Abu Dhabi's Department of Municipalities and Transport presented its use of AI, mobility data and temperature monitoring, while Seoul's example combined historical photo archives with visual AI. Participants also discussed AI tools for tracking wildlife and monitoring biodiversity.",
+   "summary_ar": "ناقش ملتقى العلوم والتكنولوجيا والأبحاث والفن «ستارز»، ضمن «أسبوع دبي للمستقبل 2026»، في 20 نوفمبر دور الذكاء الاصطناعي وتحليلات البيانات في بناء مدن أكثر استدامة وملاءمة للإنسان. وشدد باحثون من معهد ماساتشوستس للتكنولوجيا (MIT) على وضع الإنسان في صميم التخطيط الحضري. واستعرضت الجلسات تطبيقات البيانات الضخمة والذكاء الاصطناعي وبيانات المركبات المتصلة ومنصة Google لبيانات التنقل في تطوير مؤشرات السلامة المرورية وإعادة تصميم الشوارع ورسم خرائط الأرصفة. وعرضت دائرة البلديات والنقل في أبوظبي تجربتها في استخدام الذكاء الاصطناعي وبيانات التنقل ومراقبة درجات الحرارة، كما عُرضت تجربة مدينة سيؤول التي تجمع الأرشيف الفوتوغرافي التاريخي بالذكاء الاصطناعي البصري. وبحث المشاركون أيضاً أدوات الذكاء الاصطناعي لتتبع الحياة البرية ورصد التنوع البيولوجي.",
+   "excerpt": null
+  },
+  {
+   "id": "06e3185415af",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-20T18:50:31+00:00",
+   "title": "Google's Gemini can now run Mac apps and finish desktop chores in the background while you keep working",
+   "title_ar": "Gemini من Google يستطيع الآن تشغيل تطبيقات Mac وإنجاز مهام سطح المكتب في الخلفية بينما تواصل عملك",
+   "url": "https://the-decoder.com/googles-gemini-can-now-run-mac-apps-and-finish-desktop-chores-in-the-background-while-you-keep-working/",
+   "summary_en": "Google has added a \"Computer Use\" feature to the Gemini Mac app that lets Gemini complete multistep tasks across local files, desktop apps and websites in the background. Users describe a goal, and Gemini clicks, types and navigates menus and forms in an isolated window with a live chat preview, leaving the screen and cursor free. Users choose which apps Gemini can access, watch each step, pause at any time and approve key actions beforehand. Google's examples include batch-editing photos and 3D scenes, filling shipping forms from local PDFs and building presentations. The feature rolls out in English in the US today. The article adds that OpenAI has also focused on Computer Use and is pulling well ahead with its Astra model.",
+   "summary_ar": "أضافت Google ميزة «Computer Use» إلى تطبيق Gemini لنظام Mac، تتيح لـ Gemini إنجاز مهام متعددة الخطوات عبر الملفات المحلية وتطبيقات سطح المكتب والمواقع الإلكترونية في الخلفية. يصف المستخدم هدفه، فينقر Gemini ويكتب ويتنقل بين القوائم والنماذج داخل نافذة معزولة مع معاينة مباشرة في المحادثة، مما يترك الشاشة والمؤشر متاحين للمستخدم. ويختار المستخدم التطبيقات التي يمكن لـ Gemini الوصول إليها، ويتابع كل خطوة، ويمكنه الإيقاف المؤقت في أي لحظة والموافقة المسبقة على الإجراءات المهمة. ومن أمثلة Google تعديل الصور والمشاهد ثلاثية الأبعاد دفعة واحدة، وتعبئة نماذج الشحن من ملفات PDF محلية، وإعداد العروض التقديمية. وتُطرح الميزة اليوم باللغة الإنجليزية في الولايات المتحدة. وتضيف المقالة أن OpenAI ركزت أيضاً على Computer Use وتتقدم بفارق كبير بنموذجها Astra.",
+   "excerpt": "Google is bringing \"Computer Use\" to Gemini for Mac, letting the AI operate desktop apps, local files, and websites in an isolated background window with a live preview while users keep working."
+  },
+  {
+   "id": "84eaba722fbb",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-20T18:00:32+00:00",
+   "title": "7 خبراء يستشرفون مستقبل العمل والذكاء الاصطناعي وإطالة العمر في أسبوع دبي للمستقبل",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/3cxide6q-خبراء-يستشرفون-مستقبل-العمل-والذكاء-الاصطناعي",
+   "summary_en": "On 20 November in Dubai, seven international experts took part in a session at Dubai Future Week 2026 on the changes reshaping people and societies. Speakers covered AI's effect on jobs and human identity, living longer in good health, social relationships, knowledge and global governance. One speaker said about 7% of the global workforce faces the risk of being replaced by AI. Another described AI-powered grief bots in Southeast Asia that imitate the voices and images of deceased people. Others discussed knowledge scarcity as AI-generated content grows, and called for governance that puts people first. The session stressed preparing individuals and institutions for global change.",
+   "summary_ar": "في 20 نوفمبر في دبي، شارك سبعة خبراء دوليين في جلسة ضمن أسبوع دبي للمستقبل 2026 تناولت التحولات التي تعيد تشكيل الإنسان والمجتمعات. وتطرق المتحدثون إلى تأثير الذكاء الاصطناعي في الوظائف والهوية الإنسانية، وإطالة العمر بصحة جيدة، والعلاقات الاجتماعية، والمعرفة، والحوكمة العالمية. وذكرت إحدى المتحدثات أن نحو 7% من القوى العاملة في العالم مهددة بالاستبدال بالذكاء الاصطناعي. وعرضت متحدثة أخرى روبوتات الأحزان المدعومة بالذكاء الاصطناعي في جنوب شرق آسيا، وهي تحاكي أصوات الراحلين وصورهم. كما ناقش آخرون ما سموه «ندرة المعرفة» مع تزايد المحتوى المنشور بالذكاء الاصطناعي، ودعوا إلى حوكمة تضع الإنسان في المقام الأول. وشددت الجلسة على أهمية تهيئة الأفراد والمؤسسات للتغيرات العالمية.",
+   "excerpt": null
   },
   {
    "id": "a84ce9327021",
@@ -717,6 +843,20 @@
    "excerpt": "As the UAE increases investments, some analysts expect demand to level out in the coming years"
   },
   {
+   "id": "a22c687c439c",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T22:31:41+00:00",
+   "title": "Apple is hiring engineers to build its own AI agent",
+   "title_ar": "Apple توظف مهندسين لبناء وكيل ذكاء اصطناعي خاص بها",
+   "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+   "summary_en": "Apple is hiring an engineer to lead the creation of an agentic AI assistant, according to a job listing spotted by Bloomberg. The listing describes an AI agent that can browse the web, work across apps, write code and call services, and says the engineer will work with Apple's Siri, UI Frameworks and Apple Foundation Models teams. The Verge says such an agent would put Apple in competition with Meta's Muse, OpenAI's Dots, Anthropic's Duet and Google's Tasks. Apple began rolling out its AI-upgraded Siri in September, and a Bloomberg report suggests further agentic features, such as rotating and cropping images in Photos or organizing Safari tabs.",
+   "summary_ar": "تبحث شركة Apple عن مهندس لقيادة بناء مساعد ذكي يعمل بصورة وكيلية، بحسب إعلان وظيفي رصدته وكالة Bloomberg. ويصف الإعلان وكيلاً قادراً على تصفح الويب والعمل عبر التطبيقات وكتابة الشيفرة البرمجية واستدعاء الخدمات، ويذكر أن المهندس سيعمل مع فرق Siri وUI Frameworks وApple Foundation Models. وتفيد The Verge بأن هذا الوكيل سيضع Apple في منافسة مع Muse من Meta وDots من OpenAI وDuet من Anthropic وTasks من Google. وقد بدأت Apple في سبتمبر طرح Siri المطوَّر بالذكاء الاصطناعي، ويشير تقرير لـ Bloomberg إلى إمكانية إضافة قدرات وكيلية أخرى، مثل تدوير الصور وقصّها في تطبيق Photos أو تنظيم علامات التبويب في Safari.",
+   "excerpt": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services."
+  },
+  {
    "id": "74e2df778984",
    "source": "verge-ai",
    "lang": "en",
@@ -1053,6 +1193,20 @@
    "excerpt": "Stricter US export controls on AI chips are hitting fast. China's Moonshot AI walked away from a $150 million deal in Indonesia, while TSMC and Samsung stopped shipping to Chinese customers."
   },
   {
+   "id": "d680d8751ecd",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T16:59:23+00:00",
+   "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+   "title_ar": "Anthropic تدخل بورصة Nasdaq بسعر 111 دولاراً للسهم، أي أعلى بنسبة 33% من سعر الطرح",
+   "url": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+   "summary_en": "Anthropic's shares began trading on the Nasdaq, with early trades at $111.50, a 33% premium over the $83 IPO price. The price, set on Wednesday, was already above the company's projected range of $70 to $78. The offering will raise over $81 billion, and together with existing fundraising and new private offerings, it should leave Anthropic with an expected $220 billion in cash. The opening price would put its market cap above $2 trillion, ahead of Meta, Tesla and Walmart, with only Apple, Amazon, Alphabet, Nvidia and Microsoft higher. CEO Dario Amodei said before the opening bell that the company remains committed to safety.",
+   "summary_ar": "بدأ تداول أسهم Anthropic في بورصة Nasdaq، وكانت الصفقات الأولى عند 111.50 دولار للسهم، أي بعلاوة 33% على سعر الاكتتاب البالغ 83 دولاراً. وكان السعر الذي حُدد يوم الأربعاء أعلى أصلاً من النطاق الذي توقعته الشركة بين 70 و78 دولاراً. وسيجمع الطرح أكثر من 81 مليار دولار، ومع جولات التمويل القائمة والطروحات الخاصة الجديدة ستصل احتياطيات الشركة النقدية إلى نحو 220 مليار دولار. ويضع سعر الافتتاح قيمتها السوقية فوق تريليوني دولار، متقدمة على Meta وTesla وWalmart، ولا يتفوق عليها سوى Apple وAmazon وAlphabet وNvidia وMicrosoft. وأكد الرئيس التنفيذي داريو أمودي قبل جرس الافتتاح التزام الشركة بالسلامة.",
+   "excerpt": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised."
+  },
+  {
    "id": "d0946e26531a",
    "source": "verge-ai",
    "lang": "en",
@@ -1093,6 +1247,20 @@
    "summary_en": "Amazon Web Services announced enhanced observability for Amazon SageMaker HyperPod, a capability meant to help teams diagnose GPU training problems faster on both Amazon EKS and Slurm clusters. Its diagnostic summary uses Amazon CloudWatch's DetectGroupOutliers API to compare GPUs on utilization, memory, temperature, power and SM clock, and static rules flag issues such as XID errors, ECC memory errors, EFA throughput drops and thermal throttling. Default metrics are collected every 30 seconds, while advanced metrics are optional because they add cost. CloudWatch is now the default metric store, whereas only Prometheus was supported before. It is delivered as an add-on for EKS and an extension for Slurm.",
    "summary_ar": "أعلنت Amazon Web Services عن ميزة مراقبة محسّنة لبنية Amazon SageMaker HyperPod تساعد الفرق على تشخيص مشكلات تدريب وحدات GPU بسرعة أكبر، وتعمل على مجموعات Amazon EKS وSlurm. ويستخدم ملخص التشخيص واجهة DetectGroupOutliers في Amazon CloudWatch لمقارنة وحدات GPU من حيث الاستخدام والذاكرة والحرارة والطاقة وتردد SM clock، بينما ترصد قواعد ثابتة مشكلات مثل أخطاء XID وأخطاء ذاكرة ECC وانخفاض معدل نقل EFA والخنق الحراري. وتُجمع المقاييس الافتراضية كل 30 ثانية، أما المقاييس المتقدمة فاختيارية لأنها تزيد التكلفة. وأصبح CloudWatch مخزن المقاييس الافتراضي، في حين كان Prometheus وحده مدعوماً سابقاً. وتُقدَّم الميزة إضافةً (add-on) لـ EKS وامتداداً (extension) لـ Slurm.",
    "excerpt": "Amazon SageMaker HyperPod now offers enhanced observability to help you diagnose GPU training issues faster. It brings together diagnostic and profiling capabilities for training workloads on both Amazon EKS and Slurm orchestrators, pinpointing issues across GPU, network, and…"
+  },
+  {
+   "id": "b80c1a82c17c",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T16:19:41+00:00",
+   "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+   "title_ar": "عند جرس افتتاح Nasdaq، الرئيس التنفيذي لشركة Anthropic يجدد التزامه بضبط وتيرة تطوير الذكاء الاصطناعي",
+   "url": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+   "summary_en": "Anthropic made its Wall Street debut on Thursday in what the article calls the largest IPO in history, and CEO Dario Amodei spoke before the Nasdaq opening bell. He said the company would not bend to business or political pressure and would keep its AI systems under human control. He linked the company's origins to the loss of his father to a disease that later became curable, and said AI working with humans could speed up medical progress. He named risks such as misuse by bad actors, economic disruption and loss of control, which he said are avoidable with safeguards. He pledged to pace the training and deployment of AI systems until the company is confident they are safe. Co-founder Daniela Amodei echoed this in a CNBC interview.",
+   "summary_ar": "ظهرت شركة Anthropic لأول مرة في وول ستريت يوم الخميس فيما وصفه المقال بأنه أكبر طرح عام أولي في التاريخ، وألقى رئيسها التنفيذي «داريو أمودي» كلمة قبل جرس الافتتاح في ناسداك. وقال إن الشركة لن تخضع لضغوط تجارية أو سياسية، وإن أنظمتها للذكاء الاصطناعي ستبقى تحت سيطرة البشر. وربط نشأة الشركة بفقدانه والده بسبب مرض أصبح قابلاً للعلاج بعد سنوات قليلة، وذكر أن الذكاء الاصطناعي بالتعاون مع البشر قد يسرّع التقدم الطبي. وأشار إلى مخاطر مثل إساءة الاستخدام من جهات سيئة النية، والاضطراب الاقتصادي، وفقدان السيطرة، وقال إنها يمكن تجنبها بوجود ضمانات. وتعهد بضبط وتيرة تدريب أنظمة الذكاء الاصطناعي ونشرها إلى أن تتأكد الشركة من سلامتها. وأيّدت المؤسِّسة المشاركة «دانييلا أمودي» هذا الموقف في مقابلة مع CNBC.",
+   "excerpt": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure."
   },
   {
    "id": "4e742fb11586",
@@ -1667,6 +1835,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "ee074dfb1e7e",
+   "source": "kt-business",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T10:20:23+00:00",
+   "title": "Tech stocks lead Europe's STOXX 600 higher on AI hope",
+   "title_ar": "أسهم التكنولوجيا تقود مؤشر STOXX 600 الأوروبي إلى الارتفاع بفضل آمال الذكاء الاصطناعي",
+   "url": "https://www.khaleejtimes.com/business/tech-stocks-lead-europes-stoxx-600-higher-on-ai-hope-2",
+   "summary_en": "European shares rebounded on Thursday after three straight days of losses, with technology stocks leading gains as Anthropic's record IPO raise lifted sentiment. The STOXX 600 rose 0.3% to 645.85 points by 0822 GMT. Anthropic raised $81.3 billion, the largest stock-market debut on record, valuing the Claude chatbot maker at $1.5 trillion, and investors await its Nasdaq debut later in the day. Chip-related firms ASML, STMicroelectronics and Infineon rose between 3% and 5.5%. Commerzbank gained 1.4% and UniCredit 1.8% after the Italian bank and Germany agreed on the main sticking points in the takeover battle. Soitec surged 12.7%, while Novartis fell 2.5%.",
+   "summary_ar": "ارتدت الأسهم الأوروبية يوم الخميس بعد ثلاثة أيام متتالية من الخسائر، وقادت أسهم التكنولوجيا المكاسب بعدما رفع الطرح العام الأولي القياسي لشركة Anthropic المعنويات. وارتفع مؤشر STOXX 600 بنسبة 0.3 % إلى 645.85 نقطة بحلول الساعة 0822 بتوقيت غرينيتش. وجمعت Anthropic مبلغ 81.3 مليار دولار في أكبر إدراج في تاريخ أسواق الأسهم، بتقييم بلغ 1.5 تريليون دولار للشركة المطورة لروبوت الدردشة Claude، فيما ينتظر المستثمرون ظهورها الأول في بورصة ناسداك لاحقاً في اليوم نفسه. وارتفعت أسهم شركات الرقائق ASML وSTMicroelectronics وInfineon بين 3 % و5.5 %. وصعد سهم Commerzbank بنسبة 1.4 % وسهم UniCredit بنسبة 1.8 % بعد اتفاق البنك الإيطالي مع ألمانيا على أبرز نقاط الخلاف في معركة الاستحواذ. وقفز سهم Soitec بنسبة 12.7 %، بينما تراجع سهم Novartis بنسبة 2.5 %.",
+   "excerpt": "The pan-European STOXX 600 rose 0.3 per cent to 645.85 points by 0822 GMT. The index closed at a three-week low on Wednesday as mining stocks slumped"
   },
   {
    "id": "314f45945756",
