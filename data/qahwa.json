@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-23T20:22:00+04:00",
+  "generated_at": "2026-11-23T20:50:00+04:00",
   "profile": "https://www.instagram.com/qahwa.w.ai/",
   "posts": [
     {
@@ -11754,6 +11754,43 @@
       "permalink": "https://www.instagram.com/p/DgFzELIFpqM/",
       "published_at": "2026-11-23T20:22:00+04:00",
       "cover": "images/qahwa/news-2026-11-23-uae-mira--1-ai-news.webp",
+      "related_concepts": []
+    },
+    {
+      "id": "news-2026-11-23-uae-mira--2-check-story",
+      "kind": "story",
+      "lesson": null,
+      "code": null,
+      "week": null,
+      "topic": "news",
+      "title": {
+        "en": "Mira is available today for all transactions",
+        "ar": "«ميرة» متاحة من اليوم لكل المعاملات"
+      },
+      "summary": {
+        "en": "Myth or fact?",
+        "ar": "خرافة أم حقيقة؟"
+      },
+      "slides": [
+        {
+          "type": "myth",
+          "chip": "news",
+          "ar": {
+            "title": "«ميرة» ==متاحة من اليوم== لكل المعاملات",
+            "hint": "صوّت",
+            "answer": "الجواب صباح الغد"
+          },
+          "en": {
+            "title": "Mira is ==available today== for all transactions",
+            "hint": "Vote",
+            "answer": "Answer tomorrow morning"
+          }
+        }
+      ],
+      "prompt": null,
+      "permalink": "https://www.instagram.com/qahwa.w.ai/",
+      "published_at": "2026-11-23T20:50:00+04:00",
+      "cover": "images/qahwa/news-2026-11-23-uae-mira--2-check-story.webp",
       "related_concepts": []
     }
   ]
