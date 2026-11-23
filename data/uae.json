@@ -1,13 +1,13 @@
 {
-  "checked": "2026-09-26",
+  "checked": "2026-11-23",
   "facts": [
     {
       "id": "national-ai-strategy-2031",
       "title_en": "AI Strategy 2031 and AI minister",
-      "text_en": "In October 2017 the UAE launched its National Strategy for Artificial Intelligence 2031 and appointed Omar Sultan Al Olama as Minister of State for Artificial Intelligence. The UAE was the first country in the world to create this ministerial post.",
+      "text_en": "In October 2017 the UAE launched the UAE Strategy for Artificial Intelligence and appointed Omar Sultan Al Olama as Minister of State for Artificial Intelligence, becoming the first country in the world to create this post. On 21 April 2019 the Cabinet adopted the National Artificial Intelligence Strategy 2031.",
       "title_ar": "استراتيجية 2031 ووزير الذكاء الاصطناعي",
-      "text_ar": "في أكتوبر 2017 أطلقت دولة الإمارات الاستراتيجية الوطنية للذكاء الاصطناعي 2031، وعيّنت عمر سلطان العلماء وزير دولة للذكاء الاصطناعي. وكانت الإمارات أول دولة في العالم تستحدث هذا المنصب الوزاري.",
-      "as_of": "2017-10",
+      "text_ar": "في أكتوبر 2017 أطلقت دولة الإمارات استراتيجية الإمارات للذكاء الاصطناعي، وعيّنت عمر سلطان العلماء وزير دولة للذكاء الاصطناعي، لتكون أول دولة في العالم تستحدث هذا المنصب. وفي 21 أبريل 2019 اعتمد مجلس الوزراء الاستراتيجية الوطنية للذكاء الاصطناعي 2031.",
+      "as_of": "2019-04-21",
       "hardware": [],
       "sources": [
         {
@@ -17,6 +17,14 @@
         {
           "label": "UAE Government portal (u.ae): Chief AI Officer page (minister appointment)",
           "url": "https://u.ae/en/about-the-uae/digital-uae/whole-of-government-approach/Chief-Artificial-Intelligence-Officer-CAIO"
+        },
+        {
+          "label": "Dubai Protocol: UAE Cabinet adopts National AI Strategy 2031 (21 Apr 2019)",
+          "url": "https://protocol.dubai.ae/en/media-listing/news-events/uae-cabinet-adopts-national-artificial-intelligence-strategy-2031/"
+        },
+        {
+          "label": "Dubai Media Office: first country to appoint an AI minister (23 Apr 2026)",
+          "url": "https://www.mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
         }
       ]
     },
@@ -34,21 +42,33 @@
         {
           "label": "G42 newsroom: Global Tech Alliance Launches Stargate UAE",
           "url": "https://www.g42.ai/resources/news/global-tech-alliance-launches-stargate-uae"
+        },
+        {
+          "label": "OpenAI: Introducing Stargate UAE",
+          "url": "https://openai.com/index/introducing-stargate-uae/"
         }
       ]
     },
     {
       "id": "stargate-uae-first-phase",
       "title_en": "Stargate UAE first phase",
-      "text_en": "In December 2025 Mubadala's managing director said Stargate UAE's first 200 MW phase would be ready in the third quarter of 2026.",
+      "text_en": "In December 2025 Khaldoon Al Mubarak, managing director and group CEO of Mubadala, said Stargate UAE's first 200 MW phase would be ready in the third quarter of 2026. On 5 June 2026 the UAE Embassy in Washington said the first 200 MW of the 5 GW UAE–US AI Campus in Abu Dhabi would come online by the end of 2026.",
       "title_ar": "المرحلة الأولى من ستارغيت الإمارات",
-      "text_ar": "في ديسمبر 2025 قال العضو المنتدب لشركة مبادلة إن المرحلة الأولى من ستارغيت الإمارات بقدرة 200 ميغاواط ستكون جاهزة في الربع الثالث من عام 2026.",
-      "as_of": "2025-12",
+      "text_ar": "في ديسمبر 2025 قال خلدون المبارك، العضو المنتدب والرئيس التنفيذي لمجموعة مبادلة، إن المرحلة الأولى من ستارغيت الإمارات بقدرة 200 ميغاواط ستكون جاهزة في الربع الثالث من عام 2026. وفي 5 يونيو 2026 قالت سفارة الإمارات في واشنطن إن أول 200 ميغاواط من مجمّع الذكاء الاصطناعي الإماراتي الأمريكي بقدرة 5 غيغاواط في أبوظبي ستدخل الخدمة بحلول نهاية عام 2026.",
+      "as_of": "2026-06-05",
       "hardware": [],
       "sources": [
         {
           "label": "The National: Stargate UAE's first phase to be completed in Q3 2026",
           "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+        },
+        {
+          "label": "UAE Embassy in Washington: UAE, US deepen investment in key sectors (5 June 2026)",
+          "url": "https://www.uae-embassy.org/news/uae-us-deepen-investment-key-sectors-building-foundational-partnership"
+        },
+        {
+          "label": "UAE Embassy in Washington: The UAE-US AI & Advanced Tech Partnership",
+          "url": "https://www.uae-embassy.org/uae-us-cooperation/economic/artificial-intelligence"
         }
       ]
     },
@@ -70,6 +90,10 @@
         {
           "label": "The National: Stargate UAE's first phase (GB300 authorisation)",
           "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+        },
+        {
+          "label": "G42 newsroom: G42 receives US approval for advanced AI chips (20 Nov 2025)",
+          "url": "https://www.g42.ai/resources/news/g42-receives-us-approval-advanced-ai-chip-exports-enabling-full-scale-deployment-trusted-ai-infrastructure"
         }
       ]
     },
@@ -109,29 +133,33 @@
     {
       "id": "khazna-data-centers",
       "title_en": "Khazna Data Centers",
-      "text_en": "Khazna, a G42 company, describes itself as the largest data centre platform in the UAE and the Middle East. It is the G42 unit developing Stargate UAE in Abu Dhabi.",
+      "text_en": "G42 describes Khazna, its data centre company, as the largest data centre platform in the UAE and the Middle East. Khazna's website lists 30 live data centres and 673 MW of capacity. Khazna is delivering the infrastructure for Stargate UAE in Abu Dhabi and plans to add more than 1 GW of capacity across multiple countries by 2030.",
       "title_ar": "خزنة لمراكز البيانات",
-      "text_ar": "تصف خزنة، إحدى شركات G42، نفسها بأنها أكبر منصة لمراكز البيانات في الإمارات والشرق الأوسط. وهي الوحدة التابعة لـG42 التي تتولى تطوير مشروع ستارغيت الإمارات في أبوظبي.",
-      "as_of": "2025-12",
+      "text_ar": "تصف G42 شركة خزنة لمراكز البيانات التابعة لها بأنها أكبر منصة لمراكز البيانات في الإمارات والشرق الأوسط. ويذكر موقع خزنة 30 مركز بيانات قيد التشغيل وقدرة تبلغ 673 ميغاواط. وتتولى خزنة تنفيذ البنية التحتية لمشروع ستارغيت الإمارات في أبوظبي، وتخطط لإضافة أكثر من 1 غيغاواط من القدرة في عدة دول بحلول عام 2030.",
+      "as_of": "2026-11",
       "hardware": [],
       "sources": [
         {
-          "label": "G42: Khazna Data Centers",
-          "url": "https://www.g42.ai/companies/khazna-data-centers"
+          "label": "Khazna Data Centers: official website (portfolio figures)",
+          "url": "https://khaznadatacenters.com/"
         },
         {
-          "label": "The National: Stargate UAE's first phase (Khazna's role)",
-          "url": "https://www.thenationalnews.com/business/2025/12/05/stargate-uaes-first-phase-to-be-completed-in-third-quarter-of-2026/"
+          "label": "Khazna: to add over 1GW hyperscale capacity by 2030 (14 Oct 2025)",
+          "url": "https://khaznadatacenters.com/press-release/khazna-data-centers-to-add-over-1gw-hyperscale-capacity-across-multiple-countries-by-2030/"
+        },
+        {
+          "label": "G42: Khazna Data Centers",
+          "url": "https://www.g42.ai/companies/khazna-data-centers"
         }
       ]
     },
     {
       "id": "mbzuai-k2-think",
       "title_en": "MBZUAI and K2 Think",
-      "text_en": "MBZUAI, founded in Abu Dhabi in 2019, is described as the world's first graduate AI research university. Its Institute of Foundation Models released the open-source K2 Think reasoning model (32 billion parameters) with G42 in September 2025, and K2 Think V2 (70 billion parameters) in January 2026.",
+      "text_en": "MBZUAI, founded in Abu Dhabi in 2019, describes itself as the world's first graduate-level, research-based AI university. Its Institute of Foundation Models released the open-source K2 Think reasoning model (32 billion parameters) with G42 on 9 September 2025, and K2 Think V2 (70 billion parameters), which MBZUAI says is the first version open from end to end, on 27 January 2026.",
       "title_ar": "جامعة محمد بن زايد ونموذج K2 Think",
-      "text_ar": "تأسست جامعة محمد بن زايد للذكاء الاصطناعي في أبوظبي عام 2019، وتوصف بأنها أول جامعة دراسات عليا بحثية في الذكاء الاصطناعي في العالم. وأطلق معهد النماذج التأسيسية التابع لها مع G42 نموذج الاستدلال مفتوح المصدر K2 Think (32 مليار معامل) في سبتمبر 2025، ثم K2 Think V2 (70 مليار معامل) في يناير 2026.",
-      "as_of": "2026-01-28",
+      "text_ar": "تصف جامعة محمد بن زايد للذكاء الاصطناعي، التي تأسست في أبوظبي عام 2019، نفسها بأنها أول جامعة دراسات عليا بحثية في الذكاء الاصطناعي في العالم. وأطلق معهد النماذج التأسيسية التابع لها مع G42 نموذج الاستدلال مفتوح المصدر K2 Think (32 مليار معامل) في 9 سبتمبر 2025، ثم K2 Think V2 (70 مليار معامل) في 27 يناير 2026، وتقول الجامعة إنه أول إصدار مفتوح بالكامل من البداية إلى النهاية.",
+      "as_of": "2026-01-27",
       "hardware": [],
       "sources": [
         {
@@ -139,17 +167,21 @@
           "url": "https://www.g42.ai/resources/news/mbzuai-and-g42-launch-k2-think-leading-open-source-system-advanced-ai-reasoning"
         },
         {
-          "label": "Times Higher Education: the world's first graduate AI research university",
-          "url": "https://www.timeshighereducation.com/hub/mohamed-bin-zayed-university-artificial-intelligence/p/pioneering-work-pursued-worlds-first"
+          "label": "MBZUAI newsroom: MBZUAI launches K2 Think V2",
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuai-launches-k2-think-v2-uaes-fully-sovereign-next-generation-reasoning-system"
+        },
+        {
+          "label": "MBZUAI: About us",
+          "url": "https://mbzuai.ac.ae/about-us"
         }
       ]
     },
     {
       "id": "tii-falcon-h1-arabic",
       "title_en": "TII's Falcon-H1 Arabic",
-      "text_en": "On 5 January 2026 Abu Dhabi's Technology Innovation Institute released Falcon-H1 Arabic in 3B, 7B and 34B parameter sizes, built on a hybrid Mamba-Transformer architecture with context of up to 256K tokens. TII says it tops the Open Arabic LLM Leaderboard across all model sizes.",
+      "text_en": "On 5 January 2026 Abu Dhabi's Technology Innovation Institute released Falcon-H1 Arabic in 3B, 7B and 34B parameter sizes, built on a hybrid Mamba-Transformer architecture with context of up to 256K tokens. TII says it tops the Open Arabic LLM Leaderboard across model sizes.",
       "title_ar": "نموذج فالكون H1 العربي من TII",
-      "text_ar": "في 5 يناير 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-H1 Arabic بأحجام 3 و7 و34 مليار معامل، وهو مبني على معمارية هجينة تجمع Mamba وTransformer مع سياق يصل إلى 256 ألف وحدة لغوية. ويقول المعهد إنه يتصدر لوحة Open Arabic LLM Leaderboard في جميع الأحجام.",
+      "text_ar": "في 5 يناير 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-H1 Arabic بأحجام 3 و7 و34 مليار معامل، وهو مبني على معمارية هجينة تجمع Mamba وTransformer مع سياق يصل إلى 256 ألف وحدة لغوية. ويقول المعهد إنه يتصدر لوحة Open Arabic LLM Leaderboard في مختلف أحجام النماذج.",
       "as_of": "2026-01-05",
       "hardware": [],
       "sources": [
@@ -161,39 +193,51 @@
     },
     {
       "id": "jais-arabic-llm",
-      "title_en": "Jais Arabic language model",
-      "text_en": "On 30 August 2023 G42's Inception open-sourced Jais, a 13-billion-parameter Arabic–English model developed with MBZUAI and Cerebras Systems. It was trained on 116 billion Arabic and 279 billion English tokens on the Condor Galaxy 1 supercomputer built by G42 and Cerebras.",
-      "title_ar": "نموذج جيس للغة العربية",
-      "text_ar": "في 30 أغسطس 2023 أتاحت شركة Inception التابعة لـG42 نموذج جيس مفتوح المصدر، وهو نموذج عربي إنجليزي بحجم 13 مليار معامل طُوّر بالتعاون مع جامعة محمد بن زايد للذكاء الاصطناعي وCerebras Systems. ودُرّب على 116 مليار وحدة لغوية عربية و279 مليار وحدة لغوية إنجليزية باستخدام الحاسوب الفائق Condor Galaxy 1 الذي بنته G42 وCerebras.",
-      "as_of": "2023-08-30",
+      "title_en": "Jais and Jais 3",
+      "text_en": "On 30 August 2023 G42's Inception (now Inception42) open-sourced Jais, a 13-billion-parameter Arabic–English model built with MBZUAI and Cerebras Systems. On 15 October 2026 MBZUAI's Institute of Foundation Models and Inception42 launched Jais 3: six open Arabic models from 900 million to 375 billion parameters, plus the Jais Speech recognition model, all built on K2 Horizon.",
+      "title_ar": "نموذج جيس وجيس 3",
+      "text_ar": "في 30 أغسطس 2023 أتاحت شركة Inception التابعة لـG42 (Inception42 حالياً) نموذج جيس مفتوح المصدر، وهو نموذج عربي إنجليزي بحجم 13 مليار معامل طُوّر بالتعاون مع جامعة محمد بن زايد للذكاء الاصطناعي وCerebras Systems. وفي 15 أكتوبر 2026 أطلق معهد النماذج التأسيسية في الجامعة وInception42 مجموعة جيس 3، وهي ستة نماذج عربية مفتوحة من 900 مليون إلى 375 مليار معامل، إضافة إلى نموذج التعرف على الكلام Jais Speech، وكلها مبنية على K2 Horizon.",
+      "as_of": "2026-10-15",
       "hardware": [],
       "sources": [
         {
           "label": "G42 newsroom: Meet Jais",
           "url": "https://www.g42.ai/resources/news/meet-jais-worlds-most-advanced-arabic-llm-open-sourced-g42s-inception"
+        },
+        {
+          "label": "MBZUAI newsroom: IFM and Inception42 launch Jais 3",
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-inception42-launch-jais-3-arabic-native-ai"
+        },
+        {
+          "label": "IFM press release: Jais 3",
+          "url": "https://ifm.ai/jais3/press-release/"
         }
       ]
     },
     {
       "id": "agentic-ai-government",
       "title_en": "Agentic AI in government",
-      "text_en": "On 23 April 2026 Sheikh Mohammed bin Rashid announced a framework to move 50% of UAE Government sectors and services to agentic AI within two years. A dedicated taskforce oversees implementation.",
-      "title_ar": "الذكاء الاصطناعي الوكيل في الحكومة",
-      "text_ar": "في 23 أبريل 2026 أعلن الشيخ محمد بن راشد عن إطار لتحويل 50% من قطاعات حكومة الإمارات وخدماتها إلى الذكاء الاصطناعي الوكيل خلال عامين. ويشرف فريق عمل مخصص على التنفيذ.",
-      "as_of": "2026-04-23",
+      "text_en": "On 23 April 2026 Sheikh Mohammed bin Rashid announced a framework to move 50% of UAE Government sectors, services and operations to agentic AI within two years, led by a taskforce chaired by Mohammad Al Gergawi. On 18 May 2026 the Cabinet approved the Phase One list of services and a programme to train 80,000 federal employees.",
+      "title_ar": "الذكاء الاصطناعي المساعد في الحكومة",
+      "text_ar": "في 23 أبريل 2026 أعلن الشيخ محمد بن راشد إطاراً لتحويل 50% من قطاعات حكومة الإمارات وخدماتها وعملياتها إلى الذكاء الاصطناعي المساعد خلال عامين، بإشراف فريق عمل يرأسه محمد القرقاوي. وفي 18 مايو 2026 اعتمد مجلس الوزراء قائمة خدمات المرحلة الأولى وبرنامجاً لتدريب 80 ألف موظف اتحادي.",
+      "as_of": "2026-05-18",
       "hardware": [],
       "sources": [
         {
-          "label": "Dubai Media Office: Mohammed bin Rashid chairs UAE Cabinet meeting",
+          "label": "Dubai Media Office: Mohammed bin Rashid chairs UAE Cabinet meeting (23 Apr 2026)",
           "url": "https://www.mediaoffice.ae/en/news/2026/april/23-04/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "label": "Dubai Media Office: Cabinet approves federal framework for Agentic AI Project (18 May 2026)",
+          "url": "https://mediaoffice.ae/en/news/2026/may/18-05/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
         }
       ]
     },
     {
       "id": "g42-cisco-amd-mi350x",
-      "title_en": "G42 and Cisco deploy AMD MI350X",
+      "title_en": "G42 and Cisco plan AMD MI350X cluster",
       "text_en": "On 28 October 2025 Cisco and G42 announced a large-scale AI cluster in the UAE using AMD Instinct MI350X GPUs, with Cisco supplying the infrastructure.",
-      "title_ar": "G42 وCisco تنشران AMD MI350X",
+      "title_ar": "G42 وCisco تخططان لعنقود AMD MI350X",
       "text_ar": "في 28 أكتوبر 2025 أعلنت Cisco وG42 عن عنقود واسع للذكاء الاصطناعي في الإمارات يعتمد على وحدات AMD Instinct MI350X، على أن توفر Cisco البنية التحتية.",
       "as_of": "2025-10-28",
       "hardware": [
@@ -203,6 +247,185 @@
         {
           "label": "G42 newsroom: Cisco and G42 deepen US-UAE technology partnership",
           "url": "https://www.g42.ai/resources/news/cisco-and-g42-deepen-us-uae-technology-partnership-build-secure-end-end-ai-infrastructure-uae"
+        }
+      ]
+    },
+    {
+      "id": "mira-government-ai-agent",
+      "title_en": "Mira, the government AI agent",
+      "text_en": "On 23 November 2026 Sheikh Mohammed bin Rashid witnessed the launch of a new model for UAE Government services and Mira, the government's AI concierge agent, at Expo City Dubai. People describe what they need in their own words and complete services in one conversation. The first services will be available in March 2027, with more to follow.",
+      "title_ar": "المساعد الحكومي الشخصي «ميره»",
+      "text_ar": "في 23 نوفمبر 2026 شهد الشيخ محمد بن راشد في مدينة إكسبو دبي إطلاق الشكل الجديد لخدمات حكومة الإمارات والمساعد الحكومي الشخصي «ميره»، الذي يتيح للمتعامل التعبير عن احتياجه بلغته وإنجاز معاملاته في محادثة واحدة. وستكون الخدمات الأولى جاهزة في مارس 2027، على أن تتوسع حزم الخدمات تدريجياً.",
+      "as_of": "2026-11-23",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "WAM: Mohammed bin Rashid witnesses launch of new UAE Government services model, AI concierge agent 'Mira'",
+          "url": "https://www.wam.ae/en/article/c3efg2l-mohammed-bin-rashid-witnesses-launch-new-uae"
+        },
+        {
+          "label": "Dubai Media Office: launch of new UAE Government services model and AI concierge agent 'Mira'",
+          "url": "https://mediaoffice.ae/en/news/2026/novemebr/23-11/mohammed-bin-rashid-launches-new-uae-government-services-model-and-ai-agent-mira"
+        }
+      ]
+    },
+    {
+      "id": "abu-dhabi-openai-agreements",
+      "title_en": "Abu Dhabi signs OpenAI deals",
+      "text_en": "On 2 November 2026 Sheikh Khaled bin Mohamed bin Zayed, Crown Prince of Abu Dhabi, met OpenAI CEO Sam Altman and witnessed the signing of four agreements between Abu Dhabi entities and OpenAI. They include ADNOC becoming the first energy company to deploy OpenAI Frontier, with G42, and a Machine-Readable Government initiative between the Abu Dhabi Government and OpenAI.",
+      "title_ar": "أبوظبي توقّع اتفاقيات مع OpenAI",
+      "text_ar": "في 2 نوفمبر 2026 التقى الشيخ خالد بن محمد بن زايد، ولي عهد أبوظبي، سام ألتمان الرئيس التنفيذي لشركة OpenAI، وشهد توقيع أربع اتفاقيات بين مؤسسات وشركات في أبوظبي وOpenAI، منها شراكة تصبح بموجبها أدنوك، مع G42، أول شركة طاقة توظف تقنية OpenAI Frontier، ومبادرة «الحكومة القابلة للقراءة آلياً» بين حكومة أبوظبي وOpenAI.",
+      "as_of": "2026-11-02",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "Abu Dhabi Media Office: Khaled bin Mohamed bin Zayed meets Sam Altman, witnesses signing of agreements with OpenAI",
+          "url": "https://www.mediaoffice.abudhabi/en/crown-prince-news/khaled-bin-mohamed-bin-zayed-meets-sam-altman-and-witnesses-signing-of-agreements-with-openai/"
+        },
+        {
+          "label": "G42 newsroom: ADNOC signs partnership agreement with OpenAI and G42",
+          "url": "https://www.g42.ai/resources/news/adnoc-signs-landmark-partenrship-agreement-openai-g42-first-energy-deploying-ai"
+        },
+        {
+          "label": "The National: Abu Dhabi agrees OpenAI deals",
+          "url": "https://www.thenationalnews.com/news/uae/2026/11/02/abu-dhabi-agrees-openai-deals-to-boost-government-services-and-education/"
+        }
+      ]
+    },
+    {
+      "id": "mbzuai-pan-2",
+      "title_en": "MBZUAI releases PAN 2",
+      "text_en": "On 11 November 2026 MBZUAI's Institute of Foundation Models released PAN 2, an open world model that takes a starting scene and a written action and simulates a video of what happens next. IFM released the video model weights and full training and inference code under the Apache 2.0 licence. It reports that PAN 2 placed third overall and first among open-weight models on the Physics-IQ Verified leaderboard.",
+      "title_ar": "جامعة محمد بن زايد تطلق PAN 2",
+      "text_ar": "في 11 نوفمبر 2026 أطلق معهد النماذج التأسيسية في جامعة محمد بن زايد للذكاء الاصطناعي نموذج PAN 2، وهو نموذج عالم (world model) مفتوح يأخذ مشهداً أولياً وإجراءً مكتوباً ويحاكي في فيديو ما يحدث بعد ذلك. ونشر المعهد أوزان نموذج الفيديو والشيفرة الكاملة للتدريب والتشغيل بترخيص Apache 2.0، ويقول إن PAN 2 حلّ ثالثاً في الترتيب العام وأولاً بين النماذج مفتوحة الأوزان على لوحة Physics-IQ Verified.",
+      "as_of": "2026-11-11",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "MBZUAI newsroom: IFM unveils PAN 2",
+          "url": "https://mbzuai.ac.ae/news-events/news/the-institute-foundation-models-unveils-pan-2-open-world-model-physical"
+        }
+      ]
+    },
+    {
+      "id": "tii-falcon-emirati",
+      "title_en": "TII's Falcon-Emirati",
+      "text_en": "On 6 October 2026 Abu Dhabi's Technology Innovation Institute launched Falcon-Emirati, a 7-billion-parameter model built on Falcon-H1-Arabic for the Emirati dialect, which scored 84.83% on the Alyah Emirati benchmark. It launched alongside Falcon-ASR, a 1.6-billion-parameter model that transcribes Standard and Emirati Arabic, English, French, Spanish and Portuguese, and Falcon-OCR-Arabic, which reads Arabic text in images and documents.",
+      "title_ar": "نموذج Falcon-Emirati من TII",
+      "text_ar": "في 6 أكتوبر 2026 أطلق معهد الابتكار التكنولوجي في أبوظبي نموذج Falcon-Emirati بحجم 7 مليارات معامل، المبني على Falcon-H1-Arabic للهجة الإماراتية، وقد سجّل 84.83% على معيار Alyah الإماراتي. وأُطلق معه نموذج Falcon-ASR (1.6 مليار معامل) الذي يحوّل الكلام إلى نص بالعربية الفصحى والإماراتية والإنجليزية والفرنسية والإسبانية والبرتغالية، ونموذج Falcon-OCR-Arabic الذي يقرأ النص العربي في الصور والمستندات.",
+      "as_of": "2026-10-06",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "TII newsroom: TII launches Falcon-Emirati alongside new Arabic AI models",
+          "url": "https://www.tii.ae/news/tii-launches-falcon-emirati-alongside-new-arabic-ai-models-speech-and-visual-text"
+        },
+        {
+          "label": "Gulf News: New Abu Dhabi AI models speak Emirati",
+          "url": "https://gulfnews.com/uae/new-abu-dhabi-ai-models-speak-emirati-transcribe-six-languages-and-read-arabic-1.500701521"
+        }
+      ]
+    },
+    {
+      "id": "mbzuai-k2-horizon",
+      "title_en": "MBZUAI launches K2 Horizon",
+      "text_en": "On 3 September 2026 MBZUAI's Institute of Foundation Models launched K2 Horizon, a fleet of six fully open AI models from 0.9 billion to 375 billion parameters, including two sparse models with 4 billion and 23 billion active parameters. Each model ships with its weights, code, training data and methodology, and MBZUAI calls it the largest fully open model release in AI history.",
+      "title_ar": "جامعة محمد بن زايد تطلق K2 Horizon",
+      "text_ar": "في 3 سبتمبر 2026 أطلق معهد النماذج التأسيسية في جامعة محمد بن زايد للذكاء الاصطناعي مجموعة K2 Horizon، وهي ستة نماذج مفتوحة بالكامل من 0.9 مليار إلى 375 مليار معامل، منها نموذجان متناثران بـ4 مليارات و23 مليار معامل نشط. ويُنشر كل نموذج مع أوزانه وشيفرته وبيانات تدريبه ومنهجيته، وتصف الجامعة المجموعة بأنها أكبر إصدار لنماذج مفتوحة بالكامل في تاريخ الذكاء الاصطناعي.",
+      "as_of": "2026-09-03",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "MBZUAI newsroom: IFM launches K2 Horizon",
+          "url": "https://mbzuai.ac.ae/news-events/news/mbzuais-institute-foundation-models-launches-k2-horizon-the-worlds-largest-fully"
+        },
+        {
+          "label": "The National: UAE's AI university introduces world's largest 'fully open' models",
+          "url": "https://www.thenationalnews.com/future/technology/2026/09/03/mbzuai-k2-horizon-ai-open-model-uae/"
+        }
+      ]
+    },
+    {
+      "id": "cabinet-ai-advisor-school-curriculum",
+      "title_en": "Cabinet AI Advisor and AI curriculum",
+      "text_en": "On 2 September 2026 the UAE Cabinet launched the Cabinet AI Advisor system, in which 32 specialised AI advisors assess the financial, economic, social and environmental impact of items before the Cabinet. The same meeting approved an AI curriculum for all public and private schools in the UAE, with a goal of training 22,000 teachers and educators to use AI in teaching.",
+      "title_ar": "مستشار الذكاء الاصطناعي لمجلس الوزراء ومنهج الذكاء الاصطناعي",
+      "text_ar": "في 2 سبتمبر 2026 أطلق مجلس الوزراء نظام مستشار الذكاء الاصطناعي لمجلس الوزراء، الذي يعمل من خلال 32 مستشاراً متخصصاً من مستشاري الذكاء الاصطناعي يقيّمون الأثر المالي والاقتصادي والاجتماعي والبيئي للبنود المعروضة على المجلس. واعتمد الاجتماع نفسه منهجاً للذكاء الاصطناعي في جميع المدارس الحكومية والخاصة في الدولة، بهدف تدريب 22 ألف معلم وتربوي على توظيف الذكاء الاصطناعي في التعليم.",
+      "as_of": "2026-09-02",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "Dubai Media Office: Mohammed bin Rashid chairs UAE Cabinet meeting (2 Sep 2026)",
+          "url": "https://www.mediaoffice.ae/en/news/2026/september/02-09/mohammed-bin-rashid-chairs-uae-cabinet-meeting"
+        },
+        {
+          "label": "The National: Sheikh Mohammed bin Rashid announces AI curriculum for all schools in UAE",
+          "url": "https://www.thenationalnews.com/news/uae/2026/09/02/sheikh-mohammed-bin-rashid-announces-ai-curriculum-for-all-schools-in-uae/"
+        }
+      ]
+    },
+    {
+      "id": "uae-country-group-a5",
+      "title_en": "UAE moved to US Country Group A:5",
+      "text_en": "On 10 July 2026 the US Commerce Department's Bureau of Industry and Security moved the UAE into Country Group A:5, giving the UAE Government and approved companies licence-free access to US advanced computing items, including chips and servers. On 17 July G42 welcomed the approval of G42 and Core42 as authorised recipients.",
+      "title_ar": "نقل الإمارات إلى المجموعة A:5 الأمريكية",
+      "text_ar": "في 10 يوليو 2026 نقل مكتب الصناعة والأمن التابع لوزارة التجارة الأمريكية دولة الإمارات إلى مجموعة الدول A:5، ما يتيح لحكومة الإمارات والشركات المعتمدة الحصول على منتجات الحوسبة المتقدمة الأمريكية، ومنها الرقائق والخوادم، من دون ترخيص. وفي 17 يوليو رحّبت G42 باعتمادها هي وCore42 جهتين مستلمتين معتمدتين.",
+      "as_of": "2026-07-17",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "G42 newsroom: G42 welcomes a new milestone in the U.S.-UAE AI partnership (17 Jul 2026)",
+          "url": "https://www.g42.ai/resources/news/g42-welcomes-new-milestone-us-uae-ai-partnership"
+        },
+        {
+          "label": "Federal Register final rule 2026-14132: Enhanced Favorable Treatment for the UAE (14 Jul 2026)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/html/2026-14132.htm"
+        },
+        {
+          "label": "Gulf News: UAE gets easier access to US AI chips",
+          "url": "https://gulfnews.com/technology/uae-gets-easier-access-to-us-ai-chips-what-changed-and-why-it-matters-1.500605585"
+        }
+      ]
+    },
+    {
+      "id": "uae-ai-data-authority",
+      "title_en": "AI and Data Authority",
+      "text_en": "On 14 June 2026 Sheikh Mohammed bin Rashid approved the establishment of the Artificial Intelligence and Data Authority, the single national body for data, AI and digital government, reporting directly to the Cabinet. It merges the Office of AI, Digital Economy and Remote Work Applications, the UAE Data Office and TDRA's Digital Government Sector, and is chaired by Omar Sultan Al Olama.",
+      "title_ar": "الهيئة الاتحادية للذكاء الاصطناعي والبيانات",
+      "text_ar": "في 14 يونيو 2026 اعتمد الشيخ محمد بن راشد إنشاء الهيئة الاتحادية للذكاء الاصطناعي والبيانات، الجهة الوطنية الموحدة للبيانات والذكاء الاصطناعي والحكومة الرقمية، وتتبع مجلس الوزراء مباشرة. وتضم مكتب الذكاء الاصطناعي والاقتصاد الرقمي وتطبيقات العمل عن بعد، ومكتب الإمارات للبيانات، وقطاع الحكومة الرقمية في هيئة تنظيم الاتصالات والحكومة الرقمية، ويرأسها عمر سلطان العلماء.",
+      "as_of": "2026-06-14",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "Dubai Media Office: Mohammed bin Rashid approves establishing Artificial Intelligence and Data Authority",
+          "url": "https://mediaoffice.ae/en/news/2026/june/14-06/mohammed-bin-rashid-approves-establishing-artificial-intelligence-and-data-authority"
+        },
+        {
+          "label": "The National: UAE unveils AI and data authority",
+          "url": "https://www.thenationalnews.com/news/uae/2026/06/14/uae-unveils-ai-and-data-authority-to-create-faster-and-smarter-government/"
+        }
+      ]
+    },
+    {
+      "id": "first-advanced-chips-delivered",
+      "title_en": "First advanced US chips delivered",
+      "text_en": "On 8 May 2026 Yousef Al Otaiba, the UAE's Ambassador to the US, said in Washington that the first batch of advanced chips had been delivered to the UAE, with more on the way. The National reported that the shipment included NVIDIA CPUs and GPUs.",
+      "title_ar": "وصول أول دفعة من الرقائق الأمريكية المتقدمة",
+      "text_ar": "في 8 مايو 2026 قال يوسف العتيبة، سفير الإمارات لدى الولايات المتحدة، في واشنطن إن أول دفعة من الرقائق المتقدمة وصلت إلى الإمارات وإن المزيد في الطريق. وذكرت صحيفة ذا ناشيونال أن الشحنة شملت معالجات مركزية ووحدات معالجة رسومية من NVIDIA.",
+      "as_of": "2026-05-08",
+      "hardware": [],
+      "sources": [
+        {
+          "label": "UAE Embassy in Washington: Ambassador Al Otaiba remarks at SCSP AI+ Expo (8 May 2026)",
+          "url": "https://www.uae-embassy.org/news/ambassador-al-otaiba-delivers-remarks-scsp-ai-expo-uae-us-ai-partnership"
+        },
+        {
+          "label": "The National: UAE receives first shipment of Nvidia's advanced AI chips",
+          "url": "https://www.thenationalnews.com/future/technology/2026/05/08/uae-ai-nvidia-chips-shipped/"
+        },
+        {
+          "label": "Gulf News: UAE receives first batch of next-generation US AI chips",
+          "url": "https://gulfnews.com/uae/al-otaiba-uae-receives-first-batch-of-next-generation-us-ai-chips-under-strategic-partnership-1.500534873"
         }
       ]
     }
