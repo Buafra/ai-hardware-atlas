@@ -3,6 +3,62 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "de0d0a8da4b5",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-23T11:50:33+00:00",
+   "title": "تقرير: اتصالات أليس هوانغ بالاستخبارات الصينية تزامنت مع علاقتها برئيس إنفيديا السابق",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/23/%d8%a7%d8%aa%d8%b5%d8%a7%d9%84%d8%a7%d8%aa-%d8%a3%d9%84%d9%8a%d8%b3-%d9%87%d9%88%d8%a7%d9%86%d8%ba-%d8%a7%d9%84%d8%b5%d9%8a%d9%86/",
+   "summary_en": "The New York Times reported on Sunday, November 22, 2026, that US intelligence agencies detected contacts between Chinese businesswoman Alice Hwang and an officer of China's Ministry of State Security, lasting from spring 2025 to autumn 2026 and overlapping with her relationship with Nvidia's former chief executive Jensen Huang. She formerly held a senior role at Singapore-based Megaspeed International, an Nvidia customer that US authorities have reportedly investigated since 2024 over suspected chip export violations. US officials have not concluded that she spied or passed Nvidia information to Beijing, and China's foreign ministry called the claims baseless. Jensen Huang resigned as chairman and from the board on November 11.",
+   "summary_ar": "ذكرت صحيفة نيويورك تايمز يوم الأحد 22 نوفمبر 2026 أن أجهزة الاستخبارات الأمريكية رصدت اتصالات بين سيدة الأعمال الصينية «أليس هوانغ» وضابط في وزارة أمن الدولة الصينية، امتدت من ربيع 2025 إلى خريف 2026 وتداخلت مع علاقتها بالرئيس التنفيذي السابق لشركة Nvidia «جنسن هوانغ». وكانت قد شغلت سابقاً موقعاً قيادياً في شركة Megaspeed International ومقرها سنغافورة، وهي من عملاء Nvidia، وتفيد التقارير بأن السلطات الأمريكية تحقق فيها منذ عام 2024 للاشتباه في مخالفة قيود تصدير الرقائق. ولم تعلن السلطات الأمريكية التوصل إلى أن «أليس هوانغ» مارست التجسس أو نقلت معلومات من Nvidia إلى بكين، ووصفت وزارة الخارجية الصينية الاتهامات بأنها لا أساس لها. وكان «جنسن هوانغ» قد استقال من رئاسة الشركة ومجلس إدارتها في 11 نوفمبر.",
+   "excerpt": "تقرير لنيويورك تايمز يحدد فترة اتصالات منسوبة لأليس هوانغ بضابط في الاستخبارات الصينية، تزامنت مع علاقتها بجنسن هوانغ. التحقيق الأمريكي لم يحسم وقوع تجسس."
+  },
+  {
+   "id": "bdfc213bd158",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "general",
+   "published": "2026-11-23T11:29:51+00:00",
+   "title": "كوسبي يخسر 3.3% مع تراجع أسهم سامسونج وSK Hynix وسط موجة بيع الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/23/%d9%87%d8%a8%d9%88%d8%b7-%d8%b3%d8%a7%d9%85%d8%b3%d9%88%d9%86%d8%ac-%d9%87%d8%a7%d9%8a%d9%86%d9%83%d8%b3-23/",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "أغلق كوسبي الكوري منخفضًا 3.31% بعد خسائر تجاوزت 4% أثناء جلسة سامسونج وSK Hynix، فيما تستعد سيول لإجراءات تهدئة السوق وسط موجة بيع أسهم الذكاء الاصطناعي."
+  },
+  {
+   "id": "106e5d1cffec",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-23T11:00:00+00:00",
+   "title": "Meta Muse can do your Black Friday shopping at Walmart",
+   "title_ar": null,
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "Walmart will now let Meta's Muse shop on your behalf, allowing the AI agent to find and purchase Black Friday deals via Walmart's Sparky AI assistant."
+  },
+  {
+   "id": "b05e2f3f4bb5",
+   "source": "gn-uae",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-23T08:26:47+00:00",
+   "title": "UAE launches mira, AI assistant for government services; available from March 2027",
+   "title_ar": null,
+   "url": "https://gulfnews.com/uae/dubai/uae-launches-mira-ai-assistant-for-government-services-1.500757702",
+   "summary_en": "The UAE on Monday unveiled mira, an AI-enabled personal assistant for citizens and residents, as part of its Government 4.0 vision. Sheikh Mohammed bin Rashid Al Maktoum launched it, and officials said it uses agentic AI to understand needs, coordinate services and process requirements proactively. Rollout begins in March 2027 with priority services such as residency, identity documents, passport renewals, education and healthcare, and all government services are meant to be available through it by the end of 2027. It will also let users communicate in their own languages. Minister Mohammad Abdullah Al Gergawi said the UAE aims to transform 50 per cent of government sectors, services and operations through agentic AI within two years.",
+   "summary_ar": "كشفت دولة الإمارات يوم الاثنين عن «mira»، مساعد شخصي مدعوم بالذكاء الاصطناعي للمواطنين والمقيمين، ضمن رؤية «الحكومة 4.0». وأطلقه الشيخ محمد بن راشد آل مكتوم، وقال مسؤولون إنه يعتمد على الذكاء الاصطناعي الوكيلي لفهم احتياجات الناس وتنسيق الخدمات ومعالجة المتطلبات بشكل استباقي. وسيبدأ طرحه في مارس 2027 بخدمات ذات أولوية مثل الإقامة والوثائق الثبوتية وتجديد جوازات السفر والتعليم والرعاية الصحية، على أن تتوفر جميع الخدمات الحكومية عبره بحلول نهاية 2027. كما سيتيح للمستخدمين التواصل بلغاتهم الخاصة. وقال وزير شؤون مجلس الوزراء محمد عبدالله القرقاوي إن الإمارات تستهدف تحويل 50 في المئة من القطاعات والخدمات والعمليات الحكومية عبر الذكاء الاصطناعي الوكيلي خلال عامين.",
+   "excerpt": "UAE unveils Mira, an AI-powered assistant to revolutionize government services for citizens and residents, driving innovation in public service delivery."
+  },
+  {
    "id": "265c68ec3a4c",
    "source": "verge-ai",
    "lang": "en",
@@ -15,6 +71,34 @@
    "summary_en": "The Binding of Isaac: Repentance Plus was review-bombed on Steam after a Reddit user found that a Grand Theft Auto-themed section used AI-generated music. Audio files carried Suno metadata linking back to tracks on Suno's site. Creator Edmund McMillen apologised on X and said he had no idea generative AI music was used. Valve requires developers to disclose generative AI use, and the studio Nicalis does not appear to have done so. Within hours, Nicalis said the game had been updated and the AI music files removed. Steam reviews remain overwhelmingly negative, while users on X appear to be giving McMillen the benefit of the doubt, as he has criticised AI in game development before.",
    "summary_ar": "تعرضت لعبة The Binding of Isaac: Repentance Plus لحملة تقييمات سلبية على Steam بعد أن اكتشف مستخدم على Reddit أن قسماً مستوحى من Grand Theft Auto استخدم موسيقى مولّدة بالذكاء الاصطناعي. وحملت ملفات صوتية بيانات وصفية من Suno تشير إلى مقاطع على موقعها. واعتذر مبتكر اللعبة إدموند ماكميلين عبر X، وقال إنه لم يكن يعلم باستخدام موسيقى مولّدة بالذكاء الاصطناعي. وتشترط Valve على المطورين الإفصاح عن استخدام الذكاء الاصطناعي التوليدي، ويبدو أن استوديو Nicalis لم يفعل ذلك. وبعد ساعات أعلنت Nicalis تحديث اللعبة وإزالة الملفات الصوتية المولّدة. وما زالت تقييمات Steam سلبية للغاية، في حين يبدو أن مستخدمين على X يمنحون ماكميلين فرصة الشك، لأنه انتقد سابقاً استخدام الذكاء الاصطناعي في تطوير الألعاب.",
    "excerpt": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section."
+  },
+  {
+   "id": "ea48b7976d96",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-22T13:49:21+00:00",
+   "title": "الإمارات تعزز الريادة في الرعاية الصحية بتبني أحدث تقنيات الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/economy/1566875",
+   "summary_en": "The article presents the UAE as a growing regional and global hub for advanced healthcare, citing investment in medical infrastructure, adoption of AI tools and the ability to attract international medical talent. It points to the fifth annual international conference of Faqeeh Health, held on 20 and 21 November 2026 at JW Marriott Marquis Dubai under the theme \"Innovation, Excellence and Precision in Surgery\", which drew 841 doctors, surgeons and specialists. Sessions covered AI and robotic systems in surgery, including medical image analysis, operation planning and clinical decision support. Dr. Muhaimen Abdul Ghani, the group CEO, said AI must be integrated responsibly while keeping human medical expertise and patient safety central.",
+   "summary_ar": "تقدّم المادة دولة الإمارات مركزاً إقليمياً وعالمياً متناميًا للرعاية الصحية المتقدمة، مستندةً إلى استثمارات في البنية التحتية الطبية وتبني تقنيات الذكاء الاصطناعي وقدرتها على استقطاب الكفاءات الطبية العالمية. وتتوقف عند النسخة الخامسة من المؤتمر الدولي السنوي لـ Faqeeh Health الذي عُقد يومي 20 و21 نوفمبر 2026 في فندق جي دبليو ماريوت ماركيز بدبي تحت شعار «الابتكار والتميز والدقة في الجراحة»، بمشاركة 841 من الأطباء والجراحين والمتخصصين. وتناولت الجلسات دور الذكاء الاصطناعي والأنظمة الروبوتية في الجراحة، ومنها تحليل الصور الطبية وتحسين التخطيط للعمليات ودعم القرارات السريرية. وقال الدكتور مهيمن عبد الغني، الرئيس التنفيذي للمجموعة، إن دمج هذه الحلول ينبغي أن يتم بصورة مسؤولة مع بقاء الخبرة البشرية وسلامة المريض في المقدمة.",
+   "excerpt": "تواصل دولة الإمارات ترسيخ مكانتها مركزاً إقليمياً وعالمياً للرعاية الصحية المتقدمة، مستفيدة من استثمارات متسارعة في البن"
+  },
+  {
+   "id": "3d8c5fd5e0b5",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-22T13:08:19+00:00",
+   "title": "UAE to train one million AI coders in Dominican Republic under digital drive",
+   "title_ar": "الإمارات تدرّب مليون مبرمج على الذكاء الاصطناعي في جمهورية الدومينيكان ضمن مبادرة رقمية",
+   "url": "https://www.thenationalnews.com/news/uae/2026/11/22/uae-to-train-1-million-ai-coders-in-dominican-republic-under-digital-drive/",
+   "summary_en": "The UAE and the Dominican Republic have announced a joint action plan to give citizens in the Caribbean country AI skills. It was unveiled at the second World Governments Summit Dialogue for Latin America and the Caribbean, held in the Dominican Republic. Its centrepiece, One Million AI Coders, will teach one million Dominicans foundational AI and prompt engineering skills. It was announced in the presence of President Luis Abinader and Sheikh Shakhboot bin Nahyan. The package also includes the Classrooms of Hope project, giving about 60,000 pupils in at least 10 public schools digital infrastructure, including 400 computers, and a Government Accelerators programme. The effort follows One Million Arab Coders, launched in 2017.",
+   "summary_ar": "أعلنت الإمارات وجمهورية الدومينيكان خطة عمل مشتركة لتزويد المواطنين في الدولة الكاريبية بمهارات الذكاء الاصطناعي. وجاء الإعلان خلال النسخة الثانية من حوار القمة العالمية للحكومات لأمريكا اللاتينية ومنطقة الكاريبي الذي استضافته الدومينيكان. ويتمثل محور الخطة في مشروع «مليون مبرمج في الذكاء الاصطناعي» (One Million AI Coders) الذي سيمنح مليون مواطن دومينيكاني مهارات أساسية في الذكاء الاصطناعي وهندسة الأوامر، وقد أُعلن بحضور الرئيس «لويس أبي نادر» والشيخ «شخبوط بن نهيان». وتشمل الحزمة أيضاً مشروع «فصول الأمل» (Classrooms of Hope) الذي يوفر البنية الرقمية لنحو 60 ألف طالب في 10 مدارس حكومية على الأقل، ويتضمن 400 جهاز حاسوب، إضافة إلى برنامج لتسريع المبادرات الحكومية. وتأتي الخطوة بعد مبادرة «مليون مبرمج عربي» التي أُطلقت عام 2017.",
+   "excerpt": "Agreement made during World Governments Summit Dialogue for Latin America and the Caribbean"
   },
   {
    "id": "0f50037c76f2",
@@ -1599,6 +1683,34 @@
    "excerpt": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion."
   },
   {
+   "id": "211fbe8009a4",
+   "source": "huggingface",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-20T00:00:00+00:00",
+   "title": "Introducing harness adapters: adapt your favorite model to your harness to improve performance and cost",
+   "title_ar": "نقدّم لكم harness adapters: طوّعوا نموذجكم المفضل ليتلاءم مع الـ harness الخاص بكم لتحسين الأداء والتكلفة",
+   "url": "https://huggingface.co/blog/harness-adapters-at-scale",
+   "summary_en": "Hugging Face describes harness adapters, a method that uses reinforcement learning on a custom task distribution to tune a model for a specific agent harness. For Qwen3.8-27B with the pi harness, Terminal-Bench 2.1 pass@1 rose from 39% to 55% after adding an RL-trained LoRA adapter, while average token use fell from 2.9K to 1.5K per task. The work covers three harnesses: Pi, OpenCode and Hermes Agent. The team built a task set from two Hub sources plus tasks generated with Tasksmith, and 858 of 1,127 Hub candidates passed validation. It says the recipe is reusable for other tasks, harnesses and models.",
+   "summary_ar": "تعرض Hugging Face أسلوب «محوّلات الإطار» (harness adapters)، وهو يعتمد على التعلم المعزز في توزيع مهام مخصص لضبط نموذج ما لإطار وكيل بعينه. فبالنسبة إلى Qwen3.8-27B مع إطار pi، ارتفعت نتيجة pass@1 في Terminal-Bench 2.1 من 39% إلى 55% بعد إضافة محوّل LoRA مدرَّب بالتعلم المعزز، بينما انخفض متوسط استخدام الوحدات اللغوية من 2.9K إلى 1.5K لكل مهمة. ويشمل العمل ثلاثة أطر هي Pi وOpenCode وHermes Agent. وأعد الفريق مجموعة مهام من مصدرين على Hub إضافة إلى مهام ولّدتها أداة Tasksmith، واجتاز 858 من أصل 1,127 مرشحاً من Hub عملية التحقق. وتقول الشركة إن الوصفة قابلة لإعادة الاستخدام مع مهام وأطر ونماذج أخرى.",
+   "excerpt": null
+  },
+  {
+   "id": "4257f147f104",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T23:02:16+00:00",
+   "title": "Enable AI agents to pay for AWS Marketplace x402 products with Amazon Bedrock AgentCore payments",
+   "title_ar": "تمكين وكلاء الذكاء الاصطناعي من الدفع مقابل منتجات x402 في AWS Marketplace عبر مدفوعات Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/enable-ai-agents-to-pay-for-aws-marketplace-x402-products-with-amazon-bedrock-agentcore-payments/",
+   "summary_en": "Amazon Bedrock AgentCore payments, generally available since August 2026, lets agents pay for paid APIs, MCP servers and web content over protocols such as x402 and MPP. AWS now adds AWS Billing as a payment option, so agents can buy from x402-enabled AWS Marketplace sellers and pay in USD on the developer's AWS bill, without stablecoin wallets or API keys. Developers set spending limits and approved sellers, and AgentCore payments enforces the session cap. Purchases can be audited in AWS CloudTrail and AWS Cost Explorer. A new AWS Marketplace connector in AgentCore Gateway helps agents find products. At launch, only the x402 exact scheme is supported, and Tavily is among the sellers.",
+   "summary_ar": "أصبحت خدمة Amazon Bedrock AgentCore payments متاحة للجميع منذ أغسطس 2026، وتتيح للوكلاء الأذكياء الدفع مقابل واجهات برمجية مدفوعة وخوادم MCP ومحتوى الويب عبر بروتوكولات مثل x402 وMPP. وتضيف AWS الآن خيار AWS Billing للدفع، بحيث يستطيع الوكلاء الشراء من بائعي AWS Marketplace الذين يدعمون x402 والدفع بالدولار الأمريكي على فاتورة AWS الخاصة بالمطوّر، دون الحاجة إلى محافظ العملات المستقرة أو مفاتيح API. ويحدد المطوّرون حدود الإنفاق والبائعين المعتمدين، وتفرض الخدمة سقف جلسة الدفع، ويمكن تدقيق المشتريات عبر AWS CloudTrail وAWS Cost Explorer. كما يساعد موصل AWS Marketplace الجديد في AgentCore Gateway الوكلاء على العثور على المنتجات. وعند الإطلاق يُدعم نظام x402 exact فقط، وتُعد Tavily من البائعين.",
+   "excerpt": "Amazon Bedrock AgentCore payments now supports AWS Marketplace, so agents can discover and buy x402-enabled products, APIs, data, and content and pay in USD on the developer's AWS bill, with no stablecoin wallets or API keys."
+  },
+  {
    "id": "a22c687c439c",
    "source": "verge-ai",
    "lang": "en",
@@ -1611,6 +1723,48 @@
    "summary_en": "Apple is hiring an engineer to lead the creation of an agentic AI assistant, according to a job listing spotted by Bloomberg. The listing describes an AI agent that can browse the web, work across apps, write code and call services, and says the engineer will work with Apple's Siri, UI Frameworks and Apple Foundation Models teams. The Verge says such an agent would put Apple in competition with Meta's Muse, OpenAI's Dots, Anthropic's Duet and Google's Tasks. Apple began rolling out its AI-upgraded Siri in September, and a Bloomberg report suggests further agentic features, such as rotating and cropping images in Photos or organizing Safari tabs.",
    "summary_ar": "تبحث شركة Apple عن مهندس لقيادة بناء مساعد ذكي يعمل بصورة وكيلية، بحسب إعلان وظيفي رصدته وكالة Bloomberg. ويصف الإعلان وكيلاً قادراً على تصفح الويب والعمل عبر التطبيقات وكتابة الشيفرة البرمجية واستدعاء الخدمات، ويذكر أن المهندس سيعمل مع فرق Siri وUI Frameworks وApple Foundation Models. وتفيد The Verge بأن هذا الوكيل سيضع Apple في منافسة مع Muse من Meta وDots من OpenAI وDuet من Anthropic وTasks من Google. وقد بدأت Apple في سبتمبر طرح Siri المطوَّر بالذكاء الاصطناعي، ويشير تقرير لـ Bloomberg إلى إمكانية إضافة قدرات وكيلية أخرى، مثل تدوير الصور وقصّها في تطبيق Photos أو تنظيم علامات التبويب في Safari.",
    "excerpt": "Apple is working on its own AI agent that can perform a range of tasks for you, including browsing the web, working across apps, writing code, and calling services."
+  },
+  {
+   "id": "28154b618072",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T22:20:23+00:00",
+   "title": "How the BMW Group governs hundreds of agents across thousands of developers",
+   "title_ar": "كيف تضبط مجموعة BMW Group حوكمة مئات الوكلاء لدى آلاف المطورين",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-the-bmw-group-governs-hundreds-of-agents-across-thousands-of-developers/",
+   "summary_en": "An AWS post describes how the BMW Group governs agents at scale in its R&D organization, where more than 12,500 developers work on roughly 500 million lines of vehicle software code. The Connected Vehicle backend comprises over 1,300 microservices serving 24 million vehicles. BMW's approach is to build agents that can cooperate from the start, supported by an agent harness and five practices codified as infrastructure as code. Governance should be framework-agnostic, graduated by risk with trust levels set per step, and enforced deterministically in the CI/CD pipeline. Observability and evaluation must be built in from day one, and teams should move from monolithic agents toward specialized, composable ones.",
+   "summary_ar": "يعرض منشور من AWS كيف تدير مجموعة BMW Group حوكمة الوكلاء الأذكياء على نطاق واسع في قسم البحث والتطوير، حيث يعمل أكثر من 12,500 مطوّر على نحو 500 مليون سطر من شيفرة برمجيات المركبات. ويضم النظام الخلفي Connected Vehicle أكثر من 1,300 خدمة مصغّرة تخدم 24 مليون مركبة. ويقوم نهج الشركة على بناء وكلاء قادرين على التعاون منذ البداية، بالاعتماد على بيئة تشغيل للوكيل (agent harness) وخمس ممارسات مكتوبة على هيئة بنية تحتية برمجية. وتكون الحوكمة مستقلة عن الأطر البرمجية ومتدرجة بحسب المخاطر مع تحديد مستوى الثقة لكل خطوة، وتُطبَّق بصورة حتمية في مسار CI/CD. ويجب إدراج المراقبة والتقييم منذ اليوم الأول، والانتقال من وكلاء أحاديين شاملين إلى وكلاء متخصصين قابلين للتركيب.",
+   "excerpt": "When hundreds of agents serve thousands of developers, governance cannot be an afterthought. The BMW Group shares the practices and patterns its R&D teams use to build, govern, and operate AI agents at enterprise scale without sacrificing speed, quality, or compliance."
+  },
+  {
+   "id": "e02aa7f35fb5",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T22:16:22+00:00",
+   "title": "Run your whole selling business in AWS Quick",
+   "title_ar": "أدِر أعمال البيع لديك بالكامل في AWS Quick",
+   "url": "https://aws.amazon.com/blogs/machine-learning/run-your-whole-selling-business-in-aws-quick/",
+   "summary_en": "At Amazon Accelerate on September 23, 2026, Amazon announced the Selling Partner plugin and launched it in beta in AWS Quick, for US stores. The plugin connects Quick to live Seller Central data after one sign-in, letting sellers ask questions about listings, inventory and sales in plain language and receive recommended next steps. Sellers grant None, View or Edit access per data category. AWS says Quick does not use seller data to train models. Every primary selling account holder worldwide can claim 12 months of AWS Quick Plus free, with access for 10 additional users, by signing up before December 31, 2026.",
+   "summary_ar": "أعلنت Amazon خلال فعالية «أمازون أكسلريت» (Amazon Accelerate) في 23 سبتمبر 2026 عن إضافة Selling Partner وأطلقتها بنسخة تجريبية ضمن AWS Quick للمتاجر الأمريكية. وتربط الإضافة Quick ببيانات Seller Central الحية بعد تسجيل دخول واحد، فيسأل البائعون بلغة بسيطة عن القوائم والمخزون والمبيعات ويحصلون على إجابات وخطوات تالية مقترحة. ويمنح البائع صلاحية «بلا» أو «عرض» أو «تعديل» لكل فئة من البيانات. وتقول AWS إن Quick لا يستخدم بيانات البائعين لتدريب النماذج. ويمكن لكل صاحب حساب بيع رئيسي في العالم الحصول مجاناً على اشتراك AWS Quick Plus لمدة 12 شهراً، مع وصول لـ 10 مستخدمين إضافيين، بشرط التسجيل قبل 31 ديسمبر 2026.",
+   "excerpt": "Most sellers do not need another AI product to learn. They need the tools and information they already use brought together, so they can see what is happening in their business and act on it."
+  },
+  {
+   "id": "4665289b81f8",
+   "source": "mit-news-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "health",
+   "published": "2026-11-19T22:15:00+00:00",
+   "title": "AI helps researchers investigate how thousands of medical studies share code",
+   "title_ar": "الذكاء الاصطناعي يساعد الباحثين في دراسة كيفية مشاركة آلاف الدراسات الطبية للشيفرة البرمجية",
+   "url": "https://news.mit.edu/2026/ai-helps-researchers-investigate-how-medical-studies-share-code-1119",
+   "summary_en": "An international team led by researchers at MIT and Dana-Farber Cancer Institute used large language models to screen nearly 4,000 papers on clinical prediction models and to assess hundreds of linked code repositories. Only about 1 in 8 studies reported sharing code, and the shared repositories varied widely in the documentation and information needed for reuse. Among journals, the share of studies sharing code ranged from zero to more than 70 percent, and some journals with low rates had written policies. Human reviewers checked the models' work, and agreement was stronger on concrete features than on documentation quality. The findings, published in Nature Medicine, are informing TRIPOD-Code, a reporting guideline being developed to clarify what researchers should share.",
+   "summary_ar": "استخدم فريق دولي بقيادة باحثين من MIT ومعهد Dana-Farber Cancer Institute نماذج لغوية كبيرة لفحص نحو 4000 ورقة بحثية عن نماذج التنبؤ السريرية، ولتقييم مئات مستودعات الشيفرة البرمجية المرتبطة بها. وتبيّن أن دراسة واحدة فقط من كل ثماني دراسات تقريباً أشارت إلى مشاركة الشيفرة، وأن المستودعات المنشورة تفاوتت كثيراً في التوثيق والمعلومات اللازمة لإعادة الاستخدام. وتراوحت نسبة الدراسات التي تشارك شيفرتها بين الصفر وأكثر من 70 في المئة بحسب المجلة، وكان لدى بعض المجلات منخفضة النسبة سياسات مكتوبة. وراجع باحثون عمل النماذج يدوياً، وكان الاتفاق أقوى في الخصائص الملموسة منه في تقدير جودة التوثيق. وتُسهم النتائج، المنشورة في Nature Medicine، في إعداد TRIPOD-Code، وهو دليل للإبلاغ قيد التطوير يوضح ما ينبغي للباحثين مشاركته.",
+   "excerpt": "An MIT and Dana-Farber Institute-led team used large language models to examine nearly 4,000 studies and hundreds of code repositories, revealing gaps in the information needed to scrutinize and reuse published research."
   },
   {
    "id": "74e2df778984",
@@ -1655,6 +1809,34 @@
    "excerpt": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say."
   },
   {
+   "id": "b3fe3802af9c",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T21:28:18+00:00",
+   "title": "Amazon SageMaker AI now detects latency drift, idle GPUs, and missed optimizations on your inference endpoints",
+   "title_ar": "Amazon SageMaker AI باتت تكشف الآن انحراف زمن الاستجابة ووحدات GPU الخاملة وفرص التحسين الفائتة في نقاط نهاية الاستدلال لديك",
+   "url": "https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-now-detects-latency-drift-idle-gpus-and-missed-optimizations-on-your-inference-endpoints/",
+   "summary_en": "Amazon SageMaker AI now monitors generative AI inference endpoints and flags changes that could improve performance or cut cost, according to a post on the AWS Machine Learning Blog. Monitoring is on by default for endpoints that use vLLM serving containers and GPU instances, needs no setup, and can be switched off per endpoint. It checks only latency, GPU utilization and serving configuration, not requests or responses. Findings, such as latency drift and idle GPUs, arrive through AWS Health, one notification per endpoint. They link to SageMaker Studio, where users can benchmark alternatives on separate compute and compare response time, throughput and cost per million tokens. Nothing changes on the endpoint until the user applies a result.",
+   "summary_ar": "أعلنت AWS في مقال على مدونتها للتعلم الآلي أن Amazon SageMaker AI صار يراقب نقاط الاستدلال الخاصة بالذكاء الاصطناعي التوليدي وينبّه المستخدم إلى تغييرات قد تحسّن الأداء أو تخفّض التكلفة. المراقبة مفعّلة افتراضياً للنقاط التي تستخدم حاويات vLLM ومعالجات GPU، ولا تتطلب أي إعداد، ويمكن إيقافها لكل نقطة على حدة. وتفحص الخدمة زمن الاستجابة واستخدام GPU وإعدادات التشغيل فقط، ولا تطّلع على الطلبات أو الردود. وتصل النتائج، مثل انحراف زمن الاستجابة ووجود معالجات خاملة، عبر AWS Health بإشعار واحد لكل نقطة. ويقود الإشعار إلى SageMaker Studio، حيث يمكن اختبار بدائل على موارد حوسبة منفصلة ومقارنة زمن الاستجابة والإنتاجية وتكلفة المليون وحدة لغوية. ولا يتغير شيء في النقطة ما لم يطبّق المستخدم النتيجة بنفسه.",
+   "excerpt": "Amazon SageMaker AI now monitors your generative AI inference endpoints by default and tells you when a change could improve performance or lower cost."
+  },
+  {
+   "id": "a9a170b01293",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-19T21:23:20+00:00",
+   "title": "Inside Amazon Connect Talent: The science of structured AI interviews",
+   "title_ar": "داخل Amazon Connect Talent: علم المقابلات المنظمة بالذكاء الاصطناعي",
+   "url": "https://aws.amazon.com/blogs/machine-learning/inside-amazon-connect-talent-the-science-of-structured-ai-interviews/",
+   "summary_en": "An AWS Machine Learning Blog post describes Amazon Connect Talent, a service that brings structured behavioral interviewing to AI-led interviews at scale. It builds questions and scorecards from job requirements, and the AI interviewer asks follow-ups when evidence is missing. The interviewer does not assign scores; a separate process rates each competency from 1 to 5 using a fixed formula and cites transcript passages, and it does not use video, voice tone or appearance. In an evaluation by an independent psychology firm, 98% of questions targeted the intended competencies, and the service matched expert scoring in 89.3% of cases, with a Cohen's kappa of 0.79. Hiring teams can review and edit the content.",
+   "summary_ar": "يعرض مقال على مدونة AWS للتعلم الآلي خدمة Amazon Connect Talent، التي تطبّق أسلوب المقابلات السلوكية المنظمة على مقابلات يجريها الذكاء الاصطناعي على نطاق واسع. تُبنى الأسئلة وبطاقات التقييم انطلاقاً من متطلبات الوظيفة، ويطرح المحاور الآلي أسئلة متابعة عندما تنقص الأدلة. ولا يمنح المحاور أي درجات، بل تتولى عملية تقييم منفصلة تقدير كل كفاءة من 1 إلى 5 وفق معادلة ثابتة مع الاستشهاد بمقاطع من النص المكتوب للمقابلة، ولا تعتمد على الفيديو أو نبرة الصوت أو المظهر. وفي تقييم أجرته شركة مستقلة في علم النفس الصناعي والتنظيمي، استهدفت 98% من الأسئلة الكفاءات المقصودة، وتطابق تقييم الخدمة مع تقييم الخبراء في 89.3% من الحالات، مع معامل كابا لكوهين بلغ 0.79. ويمكن لفرق التوظيف مراجعة المحتوى وتعديله.",
+   "excerpt": "For organizations hiring hundreds or thousands of people, every interview presents the same challenge: How do you give candidates a consistent opportunity to demonstrate their skills while gathering the evidence needed to make informed hiring decisions?"
+  },
+  {
    "id": "803f28f1b76c",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -1697,6 +1879,20 @@
    "excerpt": "Meta is planning to price the Muse Charm, a little gadget with a screen that lets you chat with your Muse AI agent, at $300, according to The Information."
   },
   {
+   "id": "a18d40e53c3a",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-19T20:19:28+00:00",
+   "title": "Traumatized teens sue school, cops after Doritos bag triggers AI gun alert",
+   "title_ar": "مراهقون يعانون صدمة نفسية يقاضون المدرسة والشرطة بعد أن تسبب كيس Doritos في تنبيه ذكاء اصطناعي بوجود سلاح",
+   "url": "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/",
+   "summary_en": "Four Black high school students in Baltimore County have sued after the Omnilert AI gun detection system flagged a bag of Cool Ranch Doritos as a possible weapon in October 2025. School officials reviewed the footage and cancelled the alert within two minutes, yet police still arrived with at least six patrol cars, and some officers drew their guns. The students say they were handcuffed and searched without being told why, and the lawsuit alleges violations of their constitutional rights. They want an injunction barring Baltimore County Public Schools from using Omnilert until protocols prevent police responses to cancelled alerts. An inspector general review found no bias in the system but said the principal missed the cancellation and asked for police 15 minutes later. It recommended biannual training.",
+   "summary_ar": "رفع أربعة طلاب من السود في مدرسة ثانوية بمقاطعة بالتيمور دعوى قضائية بعد أن صنّف نظام Omnilert للكشف عن الأسلحة بالذكاء الاصطناعي كيس رقائق Cool Ranch Doritos سلاحاً محتملاً في أكتوبر 2025. وكان مسؤولو المدرسة قد راجعوا التسجيلات وألغوا التنبيه خلال دقيقتين، لكن الشرطة وصلت رغم ذلك بما لا يقل عن ست سيارات دورية، وسحب بعض الضباط أسلحتهم. ويقول الطلاب إنهم قُيّدوا بالأصفاد وفُتّشوا دون أن يُبلَّغوا بالسبب، وتتهم الدعوى الجهات المعنية بانتهاك حقوقهم الدستورية. ويطلب الطلاب أمراً قضائياً يمنع مدارس مقاطعة بالتيمور العامة (BCPS) من استخدام Omnilert إلى حين وضع إجراءات تحول دون استدعاء الشرطة بعد تنبيهات ملغاة. وخلصت مراجعة المفتش العام إلى أن النظام خالٍ من التحيز، لكنها ذكرت أن مديرة المدرسة لم تلاحظ إلغاء التنبيه وطلبت تدخل الشرطة بعد 15 دقيقة، وأوصت بتدريبات مرتين سنوياً.",
+   "excerpt": "Lawsuit: Over 99% of school system’s AI gun alerts were false positives."
+  },
+  {
    "id": "423b8c753c11",
    "source": "techcrunch-ai",
    "lang": "en",
@@ -1737,6 +1933,34 @@
    "summary_en": "Google is adding a collapsible sidebar to its homepage that lists a user's recent AI Mode searches. Robby Stein, Google's vice president of product, showed the feature in a post on X. From the sidebar, users can continue earlier chats, start a new thread, search their threads or connect a Gemini Notebook. Stein said people increasingly arrive with questions that are not one-and-done, and that in testing the sidebar helped users keep exploring. The change follows the AI Mode button added to the search bar last year and a May update for longer queries and AI-powered autocomplete. The new homepage is rolling out globally on desktop.",
    "summary_ar": "تضيف Google إلى صفحتها الرئيسية شريطاً جانبياً قابلاً للطي يعرض عمليات البحث الأخيرة التي أجراها المستخدم عبر AI Mode. وعرض «روبي ستاين»، نائب رئيس المنتجات في Google، هذه الميزة في منشور على منصة X. ومن الشريط الجانبي يمكن للمستخدمين متابعة محادثاتهم السابقة، أو بدء محادثة جديدة، أو البحث في محادثاتهم، أو ربط Gemini Notebook. وقال ستاين إن الناس يزداد قدومهم إلى البحث بأسئلة لا تنتهي بإجابة واحدة، وإن الشريط الجانبي ساعد في الاختبارات على مواصلة الاستكشاف. ويأتي التغيير بعد إضافة زر AI Mode إلى شريط البحث العام الماضي، وتحديث في مايو للسماح باستعلامات أطول وإكمال تلقائي مدعوم بالذكاء الاصطناعي. ويجري طرح الصفحة الرئيسية الجديدة عالمياً على أجهزة الحاسوب المكتبي.",
    "excerpt": "Google is updating its homepage to include AI searches. In a post on X, Google's vice president of product, Robby Stein, shows how you can now open a collapsible sidebar to view and continue your AI chats."
+  },
+  {
+   "id": "576cfc788ae1",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T20:01:06+00:00",
+   "title": "Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks",
+   "title_ar": "Amazon Bedrock AgentCore harness يضيف إعدادات Strands harness الافتراضية وأدوات مدمجة وخطافات دورة الحياة",
+   "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks/",
+   "summary_en": "Amazon has upgraded Bedrock AgentCore harness to use Strands harness, its open-source agent harness released under an Apache 2.0 license, and has added lifecycle hooks. Agents using the managed defaults get a recommended model, a task-oriented system prompt, automatic prompt caching (initially for Anthropic models on Amazon Bedrock), proactive context management, and new built-in tools for planning, web retrieval, filesystem access, context offloading and task delegation. Hooks let developers run deterministic code at four lifecycle events. Lambda hooks can allow or deny actions, while SNS and EventBridge hooks only send notifications. In one example, a hook checks each refund against an approval limit before the tool runs. Hooks also apply to subagents, and the failure mode defaults to deny. No new resource type is needed.",
+   "summary_ar": "قامت Amazon بترقية Amazon Bedrock AgentCore harness ليعتمد على Strands harness، وهو إطار مفتوح المصدر لتشغيل الوكلاء الأذكياء صدر بترخيص Apache 2.0، وأضافت إليه خطافات دورة الحياة (lifecycle hooks). وتحصل الوكلاء التي تستخدم الإعدادات الافتراضية المُدارة على نموذج موصى به، وتعليمات نظام موجّهة للمهام، وتخزين مؤقت تلقائي للتعليمات (يبدأ مع نماذج Anthropic على Amazon Bedrock)، وإدارة استباقية للسياق، إضافة إلى أدوات مدمجة جديدة للتخطيط واسترجاع محتوى الويب والوصول إلى نظام الملفات وتفريغ السياق وتفويض المهام. وتتيح الخطافات للمطورين تشغيل شيفرة حتمية عند أربعة أحداث في دورة حياة الوكيل؛ فخطافات Lambda يمكنها السماح أو الرفض، أما خطافات SNS وEventBridge فتقتصر على الإشعارات. ومن الأمثلة خطاف يتحقق من كل عملية استرداد مالي مقابل حد معتمد قبل تشغيل الأداة. وتسري الخطافات على الوكلاء الفرعيين أيضاً، ويكون الوضع الافتراضي عند الفشل هو الرفض. ولا يتطلب ذلك أي نوع جديد من الموارد.",
+   "excerpt": "Amazon Bedrock AgentCore harness now runs on the open-source Strands harness, bringing a recommended model, task-oriented defaults, automatic prompt caching, proactive context management, and new built-in tools."
+  },
+  {
+   "id": "706e76d41875",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-19T19:53:32+00:00",
+   "title": "Amazon Polly launches voice cloning: A unique voice for your brand",
+   "title_ar": "Amazon Polly تطلق استنساخ الصوت: صوت فريد لعلامتك التجارية",
+   "url": "https://aws.amazon.com/blogs/machine-learning/amazon-polly-launches-voice-cloning-a-unique-voice-for-your-brand/",
+   "summary_en": "Amazon Polly has made voice cloning generally available as a gated release. Customers provide a few minutes of recordings from a speaker who has consented, and the service builds a cloned voice that runs on the Amazon Polly generative engine. It launches in seven languages: English, Spanish, German, French, Italian, Portuguese and Hindi, and each cloned voice speaks only the language it was recorded in. Cloned voices are encrypted and accessible only to the customer. Building a voice is free, while usage is charged pay-as-you-go. Access is already enabled for select customers, and others can contact their AWS account team or apply. AWS points to uses such as IVR systems, voice agents, audiobooks and accessibility tools.",
+   "summary_ar": "أتاحت Amazon Polly ميزة استنساخ الأصوات للجميع بصيغة إصدار مقيّد الوصول. يقدّم العميل بضع دقائق من التسجيلات الصوتية لمتحدث وافق على ذلك، فتبني الخدمة صوتاً مستنسخاً يعمل على المحرك التوليدي في Amazon Polly. وتنطلق الميزة بسبع لغات هي الإنجليزية والإسبانية والألمانية والفرنسية والإيطالية والبرتغالية والهندية، ويتحدث كل صوت مستنسخ باللغة التي سُجّل بها فقط. وتُشفَّر الأصوات المستنسخة تلقائياً ولا يستطيع الوصول إليها سوى العميل. وإنشاء الصوت مجاني، بينما يُحاسَب الاستخدام وفق مبدأ الدفع حسب الاستهلاك. والوصول متاح بالفعل لبعض العملاء، ويمكن للآخرين التواصل مع فريق حساباتهم في AWS أو التقديم على الوصول. وتشير AWS إلى استخدامات مثل أنظمة الرد الصوتي التفاعلي والمساعدات الصوتية والكتب الصوتية وأدوات إتاحة المحتوى.",
+   "excerpt": "Voice cloning in Amazon Polly is now generally available. Give Amazon Polly a few minutes of recordings from a consenting speaker, and it builds a custom voice that reads new text in that speaker's voice."
   },
   {
    "id": "3237309af1de",
@@ -1921,6 +2145,34 @@
    "excerpt": "دبي في 19 نوفمبر /وام/ يقدم ملتقى العلوم والتكنولوجيا والأبحاث والفن \"ستارز\"، ضمن فعاليات \"أسبوع دبي للمستقبل 2026\"، تجربة تفاعلية تحول 30 ورقة بحثية علمية محكّمة إلى عروض رقمية مدعومة بالذكاء الاصطناعي، تتيح للزوار التحاور مع شخصيات افتراضية ذكية واستكشاف أحدث الاكتشافات في…"
   },
   {
+   "id": "a2b7f42905cf",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-19T18:48:55+00:00",
+   "title": "Optimize AI economics on Amazon Bedrock with Accenture’s sequenced approach",
+   "title_ar": "تحسين اقتصاديات الذكاء الاصطناعي على Amazon Bedrock عبر النهج المتسلسل من Accenture",
+   "url": "https://aws.amazon.com/blogs/machine-learning/optimize-ai-economics-on-amazon-bedrock-with-accentures-sequenced-approach/",
+   "summary_en": "The AWS Machine Learning Blog explains how enterprises running AI on Amazon Bedrock can keep token spend under control even as usage grows. It says cheaper tokens and agentic workloads can push consumption up faster than unit prices fall, and that the Linux Foundation has launched a Tokenomics Foundation for open standards on AI cost economics. Accenture applied six levers in four client engagements across telecom, insurance, mining and a large enterprise, and where savings were measured, token spend fell by about 40–85 percent. The steps start with cost allocation tags and Accenture's Cost per Business Transaction metric. The levers include prompt caching, batch inference at 50 percent lower cost for select models, intelligent prompt routing and RAG optimization.",
+   "summary_ar": "تشرح مدونة AWS Machine Learning Blog كيف تستطيع الشركات التي تشغّل الذكاء الاصطناعي على Amazon Bedrock ضبط إنفاقها على الوحدات اللغوية رغم نمو الاستخدام. وتذكر أن انخفاض أسعار هذه الوحدات وتزايد أعباء العمل القائمة على الوكلاء قد يرفعان الاستهلاك بوتيرة أسرع من تراجع الأسعار، وأن مؤسسة لينكس أطلقت Tokenomics Foundation لوضع معايير مفتوحة لاقتصاديات تكلفة الذكاء الاصطناعي. وطبّقت Accenture ست أدوات للتحكم في التكلفة في أربع مشاريع لعملاء في قطاعات الاتصالات والتأمين والتعدين ونشر مؤسسي كبير، وانخفض الإنفاق على الوحدات اللغوية بنحو 40–85 بالمئة حيثما قيست الوفورات. وتبدأ الخطوات بوسوم تخصيص التكلفة ومقياس Accenture المسمى Cost per Business Transaction. وتشمل الأدوات التخزين المؤقت للمطالبات، والاستدلال الدفعي بتكلفة أقل بنسبة 50 بالمئة لنماذج مختارة، والتوجيه الذكي للمطالبات، وتحسين RAG.",
+   "excerpt": "As enterprises scale AI on Amazon Bedrock, token spend can grow even as per-token prices fall. This post walks through six composable optimization levers, shows how Accenture applied them across four client engagements, and recommends a sequence for cutting AI token spend on…"
+  },
+  {
+   "id": "992f4f009669",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-19T18:26:22+00:00",
+   "title": "From learning to leaderboard: How Cisco upskilled 1,200 engineers in agentic AI with AWS AI League",
+   "title_ar": "من التعلّم إلى لوحة المتصدرين: كيف رفعت Cisco مهارات 1200 مهندس في الذكاء الاصطناعي الوكيلي مع AWS AI League",
+   "url": "https://aws.amazon.com/blogs/machine-learning/from-learning-to-leaderboard-how-cisco-upskilled-1200-engineers-in-agentic-ai-with-aws-ai-league/",
+   "summary_en": "The AWS Machine Learning Blog describes how Cisco used AWS AI League, a gamified competition for building agents and customizing models on AWS, to train engineers in agentic AI. In 2025, Cisco engineer Hemanth V became the first AWS AI League Champion at AWS re:Invent 2025. In 2026, 1,200 Cisco engineers competed at Cisco Transformation Fest 4.0, and the winner, Nishanth Aluhonnu, earned a full pass to AWS re:Invent 2026 in Las Vegas. Transformation Fest began in 2022 and has reached around 2,000 engineers across four editions. Finalists were scored on time efficiency, accuracy, agent planning and token consumption efficiency, and the post also explains how other organizations can host their own league.",
+   "summary_ar": "تصف مدونة AWS Machine Learning Blog كيف استخدمت شركة Cisco مسابقة AWS AI League، وهي منافسة قائمة على الألعاب لبناء الوكلاء وتخصيص النماذج على AWS، لتدريب مهندسيها على الذكاء الاصطناعي الوكيلي. ففي عام 2025 أصبح مهندس Cisco المدعو هيمانث في أول بطل لمسابقة AWS AI League خلال AWS re:Invent 2025. وفي عام 2026 تنافس 1,200 مهندس من Cisco في Cisco Transformation Fest 4.0، وفاز نيشانث ألوهونّو بتذكرة كاملة لحضور AWS re:Invent 2026 في لاس فيغاس. وانطلق Transformation Fest عام 2022 ووصل إلى نحو 2,000 مهندس عبر أربع دورات. وقُيّم المتأهلون للنهائي بحسب كفاءة الوقت والدقة وتخطيط الوكيل وكفاءة استهلاك الوحدات اللغوية، كما يشرح المقال كيف تستطيع المؤسسات الأخرى استضافة دوري خاص بها.",
+   "excerpt": "Cisco and AWS used Cisco Transformation Fest and AWS AI League to turn hands-on AI learning into a culture of building. A Cisco engineer won the 2025 AWS AI League global title and 1,200 engineers competed in 2026."
+  },
+  {
    "id": "a628e3d51eab",
    "source": "verge-ai",
    "lang": "en",
@@ -1933,6 +2185,20 @@
    "summary_en": "Google's Gemini app for macOS now includes a computer use feature, according to The Verge. Google says it can help complete multi-step tasks across local files, desktop apps and the web, such as filling in forms, making presentations and listing items for sale. Users choose which apps Gemini can access and can follow its work in a background window that shows a live preview in the chat. The feature is rolling out now in English for users in the US. It arrives ahead of new Apple restrictions on apps seeking full disk access on Mac, prompted by potential risks from AI agents with computer use, with a preview in this week's macOS 27.3 beta.",
    "summary_ar": "بحسب موقع The Verge، أصبح تطبيق Gemini من Google على نظام macOS يتضمن ميزة استخدام الحاسوب. وتقول Google إنها تساعد في إنجاز مهام متعددة الخطوات عبر الملفات المحلية وتطبيقات سطح المكتب والويب، مثل تعبئة النماذج وإعداد العروض التقديمية وعرض السلع للبيع. ويحدد المستخدمون التطبيقات التي يمكن لـ Gemini الوصول إليها، ويستطيعون متابعة عمله في نافذة خلفية تعرض معاينة مباشرة داخل المحادثة. وتُطرح الميزة الآن باللغة الإنجليزية للمستخدمين في الولايات المتحدة. ويأتي ذلك قبل أن تفرض Apple قيوداً جديدة على التطبيقات التي تطلب «الوصول الكامل إلى القرص» على أجهزة Mac، بسبب المخاطر المحتملة من وكلاء الذكاء الاصطناعي الذين يستخدمون الحاسوب، وقد ظهرت معاينة لهذه الإعدادات في النسخة التجريبية macOS 27.3 هذا الأسبوع.",
    "excerpt": "Google's Gemini app for macOS now has computer use, meaning it can help you \"get multi-step tasks done across your local files, desktop apps, and the web,\" the company says."
+  },
+  {
+   "id": "0b5c4561b261",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-19T18:20:54+00:00",
+   "title": "Keep inference running through regional capacity shortfalls with cross-Region inference routing in Amazon SageMaker AI",
+   "title_ar": "إبقاء الاستدلال قيد التشغيل رغم نقص السعة الإقليمية عبر توجيه الاستدلال بين المناطق في Amazon SageMaker AI",
+   "url": "https://aws.amazon.com/blogs/machine-learning/keep-inference-running-through-regional-capacity-shortfalls-with-cross-region-inference-routing-in-amazon-sagemaker-ai/",
+   "summary_en": "The AWS Machine Learning Blog announces cross-Region inference routing in Amazon SageMaker AI, built around a new resource called the inference router. It gives an application one invocation path across endpoints and inference components in one or more AWS Regions and accounts. The router keeps requests in its own Region while local destinations are healthy, moves new requests elsewhere when they are not, and returns traffic gradually after recovery. Health scores draw on server errors, throttles and timeouts, and SageMaker AI manages the failover thresholds. A real-time request that fails without running the model is retried once on another destination. The router does not create capacity, scale endpoints or deploy models.",
+   "summary_ar": "تعلن مدونة AWS Machine Learning Blog عن خاصية توجيه الاستدلال عبر المناطق في Amazon SageMaker AI، وهي قائمة على مورد جديد يسمى موجّه الاستدلال (inference router). ويمنح التطبيق مساراً واحداً لاستدعاء نقاط النهاية ومكونات الاستدلال في منطقة AWS واحدة أو أكثر وفي حسابات متعددة. ويُبقي الموجّه الطلبات في منطقته ما دامت الوجهات المحلية سليمة، وينقل الطلبات الجديدة إلى وجهة أخرى عندما لا تكون كذلك، ثم يعيد حركة المرور تدريجياً بعد التعافي. وتعتمد درجات السلامة على أخطاء الخادم وحالات التقييد وانتهاء المهلة، وتتولى SageMaker AI إدارة حدود التحويل عند الفشل. ويُعاد محاولة الطلب الفوري الذي يفشل دون تشغيل النموذج مرة واحدة على وجهة أخرى. ولا ينشئ الموجّه سعة إضافية ولا يوسّع نقاط النهاية ولا ينشر النماذج.",
+   "excerpt": "Cross-Region inference routing in Amazon SageMaker AI gives your application one invocation path across the endpoints and inference components you already run, in one or more AWS Regions and AWS accounts."
   },
   {
    "id": "0752c95e43f1",
@@ -3263,6 +3529,20 @@
    "summary_en": "New York, Los Angeles and Chicago schools are considering alternatives to Google, according to The New York Times, after Google said that starting next year schools cannot disable Gemini-powered features without also losing Search. Google's education vice president Chris Phillips said Search and AI are deeply integrated. Officials including New York City Mayor Zohran Mamdani and Senator Bernie Sanders called the move extortion, and New York's chancellor said the city will explore other search options if Google does not reconsider. Google said it is piloting Guided Learning in Search and will make Gemini app, Gemini Notebook and Search off by default until schools choose. The article notes that US classrooms rely heavily on Google services.",
    "summary_ar": "بحسب صحيفة «نيويورك تايمز»، تدرس مدارس نيويورك ولوس أنجلوس وشيكاغو بدائل لخدمات Google، بعد أن أعلنت الشركة أنه ابتداءً من العام المقبل لن يكون بوسع المدارس تعطيل ميزات Gemini دون تعطيل Search أيضاً. وقال نائب رئيس Google للتعليم «كريس فيليبس» إن البحث والذكاء الاصطناعي «متكاملان بعمق». ووصف مسؤولون منتخبون، بينهم عمدة نيويورك «زهران ممداني» والسيناتور «بيرني ساندرز»، هذه الخطوة بأنها «ابتزاز»، وقال مستشار التعليم في المدينة إنها ستستكشف خيارات بحث أخرى إذا لم تراجع Google موقفها. وذكرت Google أنها تجرّب ميزة Guided Learning في Search، وأن تطبيق Gemini وGemini Notebook وSearch ستكون معطلة افتراضياً إلى أن تختار المدارس ما تفعّله. وتشير المقالة إلى أن الفصول الدراسية الأمريكية تعتمد كثيراً على خدمات Google.",
    "excerpt": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times."
+  },
+  {
+   "id": "4e9ea484e2cc",
+   "source": "gulfnews-tech",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-18T23:14:25+00:00",
+   "title": "Hot demand lifts Anthropic IPO price to $83 a share: US media",
+   "title_ar": "الطلب القوي يرفع سعر الطرح العام الأولي لـ Anthropic إلى 83 دولاراً للسهم: وسائل إعلام أمريكية",
+   "url": "https://gulfnews.com/business/markets/hot-demand-lifts-anthropic-ipo-price-to-83-a-share-us-media-2-1.500751452",
+   "summary_en": "Anthropic priced its initial public offering at $83 a share on Wednesday, above the $70 to $78 range it had set, US media reported. The sale of 825 million shares would raise about $68.5 billion and value the maker of the Claude chatbot at about $1.5 trillion. Trading is expected to begin Thursday on the Nasdaq under the ticker \"ANT.\" Institutional investors placed about $400 billion in orders and retail investors about $100 billion, according to CNBC, even as markets were unsettled by the resignation of Nvidia chief executive Jensen Huang. Anthropic's third-quarter revenue reached $17 billion, up from $1.4 billion a year earlier. Its filing warns of catastrophic risks from advanced AI and possible political backlash.",
+   "summary_ar": "حدّدت شركة Anthropic سعر طرحها العام الأولي عند 83 دولاراً للسهم يوم الأربعاء، أي أعلى من النطاق الذي أعلنته سابقاً بين 70 و78 دولاراً، بحسب وسائل إعلام أمريكية. ومن المتوقع أن يجمع بيع 825 مليون سهم نحو 68.5 مليار دولار، وأن تبلغ قيمة الشركة المطوّرة لروبوت المحادثة Claude نحو 1.5 تريليون دولار. ويُنتظر بدء التداول الخميس في بورصة Nasdaq تحت الرمز «ANT». وقدّمت المؤسسات الاستثمارية طلبات بنحو 400 مليار دولار والمستثمرون الأفراد بنحو 100 مليار دولار، وفق CNBC، رغم اضطراب الأسواق بعد استقالة الرئيس التنفيذي لشركة Nvidia «جنسن هوانغ». وبلغت إيرادات Anthropic في الربع الثالث 17 مليار دولار مقابل 1.4 مليار قبل عام. وتحذّر وثائق الطرح من مخاطر كارثية محتملة للذكاء الاصطناعي المتقدم ومن ردود فعل سياسية.",
+   "excerpt": "Anthropic's IPO price surges to $83 per share amid strong demand, valuing the AI giant at $1.5 trillion. Trading begins Thursday on Nasdaq under 'ANT.'"
   },
   {
    "id": "b6239492ef6c",

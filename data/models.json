@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T22:14:22+00:00",
+ "updated_at": "2026-11-24T06:09:10+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -20,8 +20,8 @@
    "context": 1024000,
    "created": 1794333533,
    "open": true,
-   "params_b": null,
-   "params_source": null,
+   "params_b": 299.56,
+   "params_source": "huggingface",
    "moe": false
   },
   {
@@ -336,7 +336,7 @@
    "id": "inclusionai/ling-3.0-flash",
    "name": "inclusionAI: Ling 3.0 Flash",
    "hf": "inclusionAI/Ling-3.0-flash",
-   "context": 262144,
+   "context": 131072,
    "created": 1784818580,
    "open": true,
    "params_b": 127.49,
@@ -784,17 +784,6 @@
    "moe": true
   },
   {
-   "id": "moonshotai/kimi-k2",
-   "name": "MoonshotAI: Kimi K2 0711",
-   "hf": "moonshotai/Kimi-K2-Instruct",
-   "context": 131072,
-   "created": 1752263252,
-   "open": true,
-   "params_b": 1026.41,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "moonshotai/kimi-k2-0905",
    "name": "MoonshotAI: Kimi K2 0905",
    "hf": "moonshotai/Kimi-K2-Instruct-0905",
@@ -802,17 +791,6 @@
    "created": 1757021147,
    "open": true,
    "params_b": 1026.47,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "moonshotai/kimi-k2-thinking",
-   "name": "MoonshotAI: Kimi K2 Thinking",
-   "hf": "moonshotai/Kimi-K2-Thinking",
-   "context": 262144,
-   "created": 1762440622,
-   "open": true,
-   "params_b": 1026.41,
    "params_source": "huggingface",
    "moe": false
   },
@@ -1458,7 +1436,7 @@
    "id": "stepfun/step-3.7-flash",
    "name": "StepFun: Step 3.7 Flash",
    "hf": "stepfun-ai/Step-3.7-Flash",
-   "context": 262144,
+   "context": 256000,
    "created": 1779985069,
    "open": true,
    "params_b": 201.37,
