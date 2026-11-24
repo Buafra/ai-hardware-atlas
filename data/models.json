@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T06:09:10+00:00",
+ "updated_at": "2026-11-24T20:47:06+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -245,17 +245,6 @@
    "moe": false
   },
   {
-   "id": "dots-studio/dots-3-note-preview",
-   "name": "Dots Studio: Dots3-Note Preview",
-   "hf": "dots-studio/dots3-note-prev",
-   "context": 512000,
-   "created": 1786680361,
-   "open": true,
-   "params_b": 288.44,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
    "id": "google/gemma-2-27b-it",
    "name": "Google: Gemma 2 27B",
    "hf": "google/gemma-2-27b-it",
@@ -336,7 +325,7 @@
    "id": "inclusionai/ling-3.0-flash",
    "name": "inclusionAI: Ling 3.0 Flash",
    "hf": "inclusionAI/Ling-3.0-flash",
-   "context": 131072,
+   "context": 262144,
    "created": 1784818580,
    "open": true,
    "params_b": 127.49,
@@ -556,7 +545,7 @@
    "id": "minimax/minimax-m2.5",
    "name": "MiniMax: MiniMax M2.5",
    "hf": "MiniMaxAI/MiniMax-M2.5",
-   "context": 198000,
+   "context": 65536,
    "created": 1770908502,
    "open": true,
    "params_b": 228.7,
@@ -782,17 +771,6 @@
    "params_b": 9.27,
    "params_source": "huggingface",
    "moe": true
-  },
-  {
-   "id": "moonshotai/kimi-k2-0905",
-   "name": "MoonshotAI: Kimi K2 0905",
-   "hf": "moonshotai/Kimi-K2-Instruct-0905",
-   "context": 262144,
-   "created": 1757021147,
-   "open": true,
-   "params_b": 1026.47,
-   "params_source": "huggingface",
-   "moe": false
   },
   {
    "id": "moonshotai/kimi-k2.5",
@@ -1616,17 +1594,6 @@
    "created": 1752094966,
    "open": true,
    "params_b": 24.01,
-   "params_source": "huggingface",
-   "moe": false
-  },
-  {
-   "id": "xiaomi/mimo-v2.5",
-   "name": "Xiaomi: MiMo-V2.5",
-   "hf": "XiaomiMiMo/MiMo-V2.5",
-   "context": 1000000,
-   "created": 1776874269,
-   "open": true,
-   "params_b": 310.78,
    "params_source": "huggingface",
    "moe": false
   },
@@ -2725,28 +2692,6 @@
    "hf": null,
    "context": 256000,
    "created": 1754079630,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "mistralai/mistral-medium-3",
-   "name": "Mistral: Mistral Medium 3",
-   "hf": null,
-   "context": 131072,
-   "created": 1746627341,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "mistralai/mistral-medium-3.1",
-   "name": "Mistral: Mistral Medium 3.1",
-   "hf": null,
-   "context": 131072,
-   "created": 1755095639,
    "open": false,
    "params_b": null,
    "params_source": null,
