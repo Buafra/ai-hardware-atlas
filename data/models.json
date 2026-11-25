@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T20:47:06+00:00",
+ "updated_at": "2026-11-25T05:05:10+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1603,6 +1603,17 @@
    "hf": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
    "context": 1048576,
    "created": 1790021264,
+   "open": true,
+   "params_b": 310.76,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
+   "id": "xiaomi/mimo-v2.6-flash-mopd",
+   "name": "Xiaomi: MiMo-V2.6-Flash-MOPD",
+   "hf": "XiaomiMiMo/MiMo-V2.6-Flash-MOPD",
+   "context": 1048576,
+   "created": 1795456634,
    "open": true,
    "params_b": 310.76,
    "params_source": "huggingface",
@@ -3985,11 +3996,33 @@
    "moe": false
   },
   {
+   "id": "upstage/solar-mini-4-5",
+   "name": "Upstage: Solar Mini 4.5 (Preview)",
+   "hf": null,
+   "context": 524288,
+   "created": 1795562304,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
    "id": "upstage/solar-pro4",
    "name": "Upstage: Solar Pro 4",
    "hf": null,
    "context": 524288,
    "created": 1786371636,
+   "open": false,
+   "params_b": null,
+   "params_source": null,
+   "moe": false
+  },
+  {
+   "id": "upstage/solar-pro-4-contributor",
+   "name": "Upstage: Solar Pro 4 Contributor",
+   "hf": null,
+   "context": 524288,
+   "created": 1795562304,
    "open": false,
    "params_b": null,
    "params_source": null,

@@ -3,6 +3,48 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "6f44d9ab320b",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-24T19:45:08+00:00",
+   "title": "Is Nvidia too big to fail or is Jensen Huang temporarily irreplaceable?",
+   "title_ar": "هل Nvidia أكبر من أن تفشل أم أن جينسن هوانغ لا غنى عنه مؤقتاً؟",
+   "url": "https://www.thenationalnews.com/business/markets/2026/11/24/is-nvidia-too-big-to-fail-or-is-jensen-huang-temporarily-irreplaceable/",
+   "summary_en": "The National reports that Jensen Huang's return as Nvidia chief executive on Monday helped lift the Nasdaq Composite by $2 trillion and restored about $1 trillion in the company's market value. Nvidia shares rose 31 per cent, then fell about 7 per cent on Tuesday. Analysts quoted say the rally shows how dependent the AI buildout is on one person and one company. The article points to Nvidia's Cuda software platform, its Blackwell GPUs and its large investment portfolio, including stakes in OpenAI and Anthropic's IPO. The board's unanimous reversal followed allegations of an affair with a purported Chinese spy. Mr Huang is due before four congressional committees, with a Senate Banking hearing on December 3.",
+   "summary_ar": "تذكر صحيفة «ذا ناشيونال» أن عودة «جنسن هوانغ» إلى منصب الرئيس التنفيذي لشركة NVIDIA يوم الاثنين ساهمت في رفع مؤشر Nasdaq Composite بمقدار تريليوني دولار، وأعادت نحو تريليون دولار إلى القيمة السوقية للشركة. وارتفع سهم الشركة 31 في المائة ثم تراجع نحو 7 في المائة يوم الثلاثاء. ويرى محللون نقلت عنهم الصحيفة أن هذا الصعود يبيّن مدى اعتماد التوسع في بنية الذكاء الاصطناعي على شخص واحد وشركة واحدة. وتشير الصحيفة إلى منصة البرمجة Cuda ومعالجات Blackwell ومحفظة استثمارات واسعة تشمل حصصاً في OpenAI وطرح Anthropic للاكتتاب العام. وجاء قرار مجلس الإدارة بالإجماع بعد مزاعم عن علاقة مع امرأة يُشتبه في أنها جاسوسة صينية. ومن المقرر أن يمثل هوانغ أمام أربع لجان في الكونغرس، بينها جلسة علنية في لجنة الخدمات المصرفية بمجلس الشيوخ في 3 ديسمبر.",
+   "excerpt": "Investigations loom as Silicon Valley and Wall Street cheer CEO's return"
+  },
+  {
+   "id": "0ff37d492164",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-24T11:36:00+00:00",
+   "title": "الإمارات تتصدر العالم في توظيف الذكاء الاصطناعي للتعافي السيبراني",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/24/gh-16",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "تصدرت المؤسسات في دولة الإمارات نظيراتها عالمياً في توظيف الذكاء الاصطناعي للتعافي من الهجمات السيبرانية، إذ أفادت 41% من المؤسسات التي تعرضت لهجمات بأن…"
+  },
+  {
+   "id": "1eedcea21649",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-24T06:05:00+00:00",
+   "title": "بعد ضغوط من ترامب ومستثمرين..\"إنفيديا\" تعيد جنسن هوانغ رئيساً لها",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/24/Nvidia-reinstates-Huang-as-CEO-after-Trump-intervention",
+   "summary_en": null,
+   "summary_ar": null,
+   "excerpt": "عاد جنسن هوانغ إلى رئاسة إنفيديا بعد نحو أسبوعين من تنحيه، إثر ضغوط من الرئيس الأميركي دونالد ترامب ومستثمرين، ومشاورات مع الإدارة الأميركية بددت المخاوف…"
+  },
+  {
    "id": "8d7d1f8606ed",
    "source": "aitnews",
    "lang": "ar",
@@ -101,6 +143,48 @@
    "excerpt": "Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions and AI-generated summaries, similar to Apple's new Watch feature and…"
   },
   {
+   "id": "6a7990e1ad10",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-23T17:14:23+00:00",
+   "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+   "title_ar": "Amazon تستحوذ على تقنية تحسين الذكاء الاصطناعي من Decart مقابل 7.5 مليار دولار تمهيداً لبيع رقائق Trainium",
+   "url": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+   "summary_en": "Amazon has agreed to acquire a good chunk of Israeli startup Decart, paying $7.5 billion according to Bloomberg. Decart builds interactive real-time world models, most recently Oasis 3, and AI video-generation tools. It also makes the Decart Optimization Stack (DOS), software that helps AI models run efficiently on Nvidia, Amazon and Google hardware. Amazon will take over the DOS technology along with Decart's founding team and its AI researchers and engineers. Amazon's Peter DeSantis said that getting more out of every chip drives progress in AI. Amazon plans to start selling its Trainium chips to customers as a rival to Nvidia, and Decart's technology could make it easier to run workloads on them. Neither company immediately responded to requests for comment.",
+   "summary_ar": "وافقت أمازون على الاستحواذ على جزء كبير من شركة Decart الناشئة الإسرائيلية، مقابل 7.5 مليار دولار بحسب Bloomberg. وتبني Decart نماذج عالم تفاعلية في الزمن الحقيقي، كان آخرها Oasis 3، إضافة إلى أدوات لتوليد الفيديو بالذكاء الاصطناعي. كما تطوّر حزمة Decart Optimization Stack (DOS)، وهي برمجيات تساعد نماذج الذكاء الاصطناعي على العمل بكفاءة على عتاد Nvidia وأمازون وغوغل. وستحصل أمازون على تقنية DOS إلى جانب الفريق المؤسس وباحثي الشركة ومهندسيها. وقال بيتر ديسانتيس من أمازون إن تحقيق أقصى استفادة من كل شريحة يقود التقدم في الذكاء الاصطناعي. وتستعد أمازون لبدء بيع شرائح Trainium للعملاء منافسةً لـ Nvidia، وقد تسهّل تقنية Decart تشغيل أعباء العمل عليها. ولم ترد الشركتان فوراً على طلبات التعليق.",
+   "excerpt": "Amazon is acquiring Decart’s AI optimization technology and research team in a reported $7.5 billion deal."
+  },
+  {
+   "id": "b7579835e4e7",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-23T16:57:40+00:00",
+   "title": "Jensen Huang isn’t out of the woods yet",
+   "title_ar": "جنسن هوانغ لم يخرج من دائرة الخطر بعد",
+   "url": "https://techcrunch.com/2026/11/23/jensen-huang-isnt-out-of-the-woods-yet/",
+   "summary_en": "Jensen Huang returned as Nvidia CEO on Monday after resigning following reports of multiple affairs, including one with a subordinate and one with a woman tied to Chinese intelligence services. Share prices rose, especially for neoclouds such as CoreWeave and Nebius, and the Nasdaq gained 7%. This TechCrunch analysis argues that problems remain: open questions about how Nvidia chips were smuggled into China and what the company knew, likely investigations by a Democratic-led Congress, and President Trump's intervention, which it calls unprecedented. It notes that Huang donated $25 million to Trump's ballroom project and says Commerce Secretary Howard Lutnick may face scrutiny. The author says the risks the board saw earlier remain in place.",
+   "summary_ar": "عاد «جينسن هوانغ» إلى منصب الرئيس التنفيذي لشركة Nvidia يوم الاثنين بعد استقالته إثر تقارير عن علاقات متعددة، منها علاقة مع مرؤوسة وأخرى مع امرأة مرتبطة بأجهزة الاستخبارات الصينية. وارتفعت أسعار الأسهم، خصوصاً لشركات السحابة الجديدة مثل CoreWeave وNebius، وصعد مؤشر Nasdaq بنسبة 7%. ويرى هذا التحليل في TechCrunch أن المشكلات لم تنتهِ: فثمة أسئلة قائمة حول كيفية تهريب رقائق Nvidia إلى الصين وما كانت الشركة تعلمه، وتحقيقات محتملة من كونغرس يقوده الديمقراطيون، إضافة إلى تدخل الرئيس «دونالد ترامب» الذي يصفه بأنه غير مسبوق. ويشير إلى أن «هوانغ» تبرع بمبلغ 25 مليون دولار لمشروع قاعة الاحتفالات الذي يتبناه «ترامب»، وأن وزير التجارة «هاوارد لوتنيك» قد يخضع للتدقيق. ويرى الكاتب أن المخاطر التي رآها مجلس الإدارة سابقاً ما زالت قائمة.",
+   "excerpt": "Tech leaders should be clear-eyed about all the problems likely to come with Huang's reinstatement."
+  },
+  {
+   "id": "81a464b2bd01",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-23T16:39:10+00:00",
+   "title": "Trump reportedly called into Nvidia board meeting to advocate for Huang’s return",
+   "title_ar": "ترامب اتصل باجتماع مجلس إدارة Nvidia للدفاع عن عودة هوانغ، بحسب تقارير",
+   "url": "https://techcrunch.com/2026/11/23/trump-reportedly-called-into-nvidia-board-meeting-to-advocate-for-huangs-return/",
+   "summary_en": "Semafor reported on Monday that President Donald Trump dialed into an Nvidia board meeting to push for Jensen Huang's return as CEO, and Nvidia announced his reinstatement shortly afterward. Huang had stepped down after 33 years in the role following news of affairs with an alleged Chinese spy and two Nvidia employees, one of them a direct report. Trump told CNBC he convinced the board and said on Truth Social that the government has no reason to see a national security risk. Huang is expected to testify in closed sessions before three House committees on December 1, and later publicly before the Senate Banking Committee on a date not yet set.",
+   "summary_ar": "ذكرت Semafor يوم الاثنين أن الرئيس «دونالد ترامب» شارك عبر الهاتف في اجتماع لمجلس إدارة Nvidia للضغط من أجل عودة «جينسن هوانغ» إلى منصب الرئيس التنفيذي، وأعلنت الشركة إعادته بعد وقت قصير. وكان «هوانغ» قد تنحى بعد 33 عاماً في المنصب إثر أنباء عن علاقات مع جاسوسة صينية مزعومة وموظفتين في Nvidia، إحداهما ترتبط به مباشرة في الهيكل الإداري. وقال «ترامب» لشبكة CNBC إنه أقنع المجلس، وكتب على Truth Social أن الحكومة لا ترى سبباً للاعتقاد بوجود خطر على الأمن القومي. ومن المتوقع أن يدلي «هوانغ» بشهادته في جلسات مغلقة أمام ثلاث لجان في مجلس النواب في الأول من ديسمبر، ثم علناً أمام لجنة الشؤون المصرفية في مجلس الشيوخ في موعد لم يُحدد بعد.",
+   "excerpt": "\"I spoke to them, let me put it that way … And I convinced them,\" the president told CNBC."
+  },
+  {
    "id": "1cb78417896f",
    "source": "verge-ai",
    "lang": "en",
@@ -171,6 +255,34 @@
    "excerpt": "كشف الرئيس الأميركي دونالد ترمب عن أنه تواصل \"مباشرة\" مع مجلس إدارة شركة \"إنفيديا\" الذي قرر اليوم الإثنين، إعادة تعيين جنسن هوانغ رئيساً تنفيذياً للشركة، بعد نحو أسبوعين من تنحيه بعد علاقة مع امرأة يُشتبه في تجسسها لمصلحة الصين."
   },
   {
+   "id": "aa93777566bc",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-23T15:04:01+00:00",
+   "title": "Trump endorses Jensen Huang’s return to Nvidia, says US has no evidence of wrongdoing",
+   "title_ar": "ترامب يؤيد عودة جنسن هوانغ إلى Nvidia ويقول إن الولايات المتحدة لا تملك أدلة على أي مخالفة",
+   "url": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+   "summary_en": "President Trump praised Nvidia's decision on Monday to reinstate Jensen Huang as CEO and president, saying on Truth Social that the US government has no reason to see a national security risk in his return. He claimed Attorney General Todd Blanche found no evidence of unlawful conduct, which the article calls unusual because attorneys general typically investigate independently; Blanche has not yet made a formal statement. Huang was accused of several extramarital relationships, the most concerning being with alleged Chinese spy Alice Huang, no relation, an executive at Singapore-based Megaspeed, which bought billions of dollars in Nvidia chips. That raised concerns about possible Chinese access to advanced US AI chips, which face export restrictions. Trump also said Nvidia should continue its internal investigation into export-control compliance.",
+   "summary_ar": "أشاد الرئيس «دونالد ترامب» يوم الإثنين بقرار Nvidia إعادة «جينسن هوانغ» إلى منصبي الرئيس التنفيذي ورئيس الشركة، وقال في منشور على Truth Social إن الحكومة الأمريكية لا ترى سبباً للاعتقاد بأن عودته تشكّل خطراً على الأمن القومي. وزعم ترامب أن المدعي العام «تود بلانش» لم يجد دليلاً على أي سلوك غير قانوني، وهو تصريح تصفه المقالة بأنه غير معتاد لأن المدعي العام يجري عادةً هذه التحقيقات باستقلالية، ولم يصدر بلانش بعد بياناً رسمياً. واتُّهم هوانغ بعدة علاقات خارج إطار الزواج، وأكثرها إثارة للقلق علاقته بالجاسوسة الصينية المزعومة «أليس هوانغ»، وهي لا تمتّ له بصلة قرابة، وتعمل مسؤولة تنفيذية في شركة Megaspeed ومقرها «سنغافورة»، التي اشترت رقائق من Nvidia بمليارات الدولارات. وأثار ذلك مخاوف من احتمال وصول الصين إلى رقائق الذكاء الاصطناعي الأمريكية المتقدمة الخاضعة لقيود التصدير. كما قال ترامب إن على Nvidia مواصلة تحقيقها الداخلي في التزامها بضوابط التصدير.",
+   "excerpt": "The president cited the U.S. attorney general in defending Huang's return, while urging Nvidia to continue its export-control investigation."
+  },
+  {
+   "id": "d6a5b08e3fa8",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-23T14:43:03+00:00",
+   "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+   "title_ar": "Sierra تضاعف تقييمها إلى 30 مليار دولار خلال ستة أشهر مع تزايد الطلب على الذكاء الاصطناعي في تجربة العملاء",
+   "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+   "summary_en": "Sierra, an enterprise customer experience company co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round that doubles its valuation to $30 billion. The previous round, less than six months earlier, valued it at $15 billion. Greenoaks and Lightspeed Venture Partners led the round, joined by existing investors including Benchmark, Sequoia, GV and Tiger Global. Sierra says it serves almost 50% of Fortune 50 companies and recently said its outcome-based pricing helped it double run-rate revenue to $400 million within five months. It plans to use the money to build out its technology stack for service agents and to hire more sales staff.",
+   "summary_ar": "أعلنت شركة Sierra المتخصصة في تجربة العملاء للمؤسسات، والتي شارك في تأسيسها الرئيس التنفيذي المشارك السابق لشركة Salesforce «بريت تايلور»، يوم الاثنين أنها جمعت 1.75 مليار دولار في جولة تمويل من الفئة F، ما يضاعف قيمتها إلى 30 مليار دولار. وكانت الجولة السابقة، قبل أقل من ستة أشهر، قد قيّمتها بـ 15 مليار دولار. قادت الجولة شركتا Greenoaks وLightspeed Venture Partners، بمشاركة مستثمرين حاليين بينهم Benchmark وSequoia وGV وTiger Global. وتقول الشركة إنها تخدم نحو 50% من شركات Fortune 50، وإن نموذج التسعير القائم على النتائج ساعدها على مضاعفة إيراداتها السنوية المتكررة إلى 400 مليون دولار خلال خمسة أشهر. وتعتزم استخدام التمويل لتطوير بنيتها التقنية وإضافة وكلاء للخدمة، وتوظيف مزيد من فريق المبيعات.",
+   "excerpt": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round."
+  },
+  {
    "id": "758480de7405",
    "source": "albayan",
    "lang": "ar",
@@ -185,6 +297,20 @@
    "excerpt": "أعاد مجلس إدارة شركة «إنفيديا» (Nvidia) جينسن هوانغ إلى منصبه رئيساً ومديراً تنفيذياً وعضواً في مجلس الإدارة، بعد تصويت"
   },
   {
+   "id": "8f025dd00df3",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-23T14:12:23+00:00",
+   "title": "Jensen Huang 'honoured to return' to Nvidia less than two weeks after resignation",
+   "title_ar": "جنسن هوانغ «يتشرف بالعودة» إلى Nvidia بعد أقل من أسبوعين على استقالته",
+   "url": "https://www.thenationalnews.com/news/us/2026/11/23/jensen-huang-statement-nvidia-returns-trump/",
+   "summary_en": "Jensen Huang said on Monday he was honoured to return to Nvidia, after its board brought him back less than two weeks after he resigned. He had stepped down after admitting an extramarital affair with a technology executive whom US authorities believe was spying for China, and he also faces accusations of knowingly circumventing US export laws on AI and semiconductor technology. Nvidia shares rose roughly 30 percent at the open. President Donald Trump welcomed the move, while Elon Musk, Benjamin Netanyahu and Sam Altman also reacted. Senator Elizabeth Warren said Nvidia still owes Congress answers on export controls, and the SEC is reportedly investigating the company. Huang had been scheduled for a December 3 Senate hearing on AI and export controls.",
+   "summary_ar": "قال «جنسن هوانغ» يوم الاثنين إنه يشعر بالفخر لعودته إلى «إنفيديا» (Nvidia)، بعدما أعاده مجلس إدارتها بعد أقل من أسبوعين على استقالته. وكان قد استقال بعد اعترافه بعلاقة خارج إطار الزواج مع مسؤولة تنفيذية في قطاع التقنية تعتقد السلطات الأميركية أنها كانت تتجسس لصالح الصين، كما يواجه اتهامات بالتحايل عن عمد على قوانين التصدير الأميركية الخاصة بتقنيات الذكاء الاصطناعي وأشباه الموصلات. وارتفعت أسهم الشركة بنحو 30 في المئة عند افتتاح السوق. ورحّب الرئيس «دونالد ترامب» بالقرار، وعلّق عليه أيضاً «إيلون ماسك» و«بنيامين نتنياهو» و«سام ألتمان». وقالت السيناتورة «إليزابيث وارن» إن الشركة ما زالت مدينة للكونغرس بإجابات بشأن ضوابط التصدير، وتفيد تقارير بأن هيئة الأوراق المالية والبورصات تحقق في أعمالها. وكان من المقرر أن يشارك «هوانغ» في جلسة استماع بمجلس الشيوخ في 3 ديسمبر حول الذكاء الاصطناعي وضوابط التصدير.",
+   "excerpt": "Nvidia's share price leapt by roughly 30 per cent at market opening"
+  },
+  {
    "id": "202fdedbb1c0",
    "source": "gn-uae",
    "lang": "en",
@@ -197,6 +323,20 @@
    "summary_en": "Sheikh Mohammed bin Rashid Al Maktoum said on Monday that mira, an AI-powered personal assistant for government services, is designed to carry out transactions for citizens and residents so they no longer need to use several platforms or deal separately with each department. He wrote on X that the new model was approved at Expo City in Dubai in front of 1,000 senior federal officials. Users can speak to the assistant in everyday language, and it coordinates with the relevant authorities, recognises the user and provides their government documents at any hour. It becomes available in March 2027, starting with identity cards, residency, passports, education and healthcare, and is to cover all government services by the end of 2027. It is among initiatives of the National Artificial Intelligence Committee, which aims to transform 50 per cent of government sectors, services and operations through AI within two years.",
    "summary_ar": "قال الشيخ محمد بن راشد آل مكتوم يوم الاثنين إن mira، وهو مساعد شخصي يعمل بالذكاء الاصطناعي للخدمات الحكومية، صُمم لإنجاز المعاملات نيابةً عن المواطنين والمقيمين، بحيث لا يحتاجون إلى التنقل بين عدة منصات أو التعامل مع كل جهة على حدة. وكتب على منصة X أنه جرى اعتماد النموذج الجديد في مدينة إكسبو بدبي بحضور 1,000 من كبار مسؤولي الحكومة الاتحادية. ويمكن للمستخدمين التحدث إلى المساعد بلغة يومية بسيطة، فينسق مع الجهات المعنية ويتعرف على المستخدم ويوفر له وثائقه الحكومية على مدار الساعة. ويصبح متاحاً في مارس 2027 بدءاً بالهويات والإقامة وجوازات السفر والتعليم والرعاية الصحية، على أن يشمل جميع الخدمات الحكومية بحلول نهاية 2027. وهو من مبادرات اللجنة الوطنية للذكاء الاصطناعي التي تستهدف تحويل 50 في المئة من القطاعات والخدمات والعمليات الحكومية بالاستعانة بالذكاء الاصطناعي خلال عامين.",
    "excerpt": "Single interface for all government services will integrate services of different departments"
+  },
+  {
+   "id": "31d5da7f4942",
+   "source": "indy-ar-new",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-23T13:43:52+00:00",
+   "title": "أسهم \"أنثروبيك\" حققت مليارات لكن مستقبل الذكاء الاصطناعي لا يبدو ورديا",
+   "title_ar": null,
+   "url": "https://www.independentarabia.com/node/663520/%D8%A2%D8%B1%D8%A7%D8%A1/%D8%A3%D8%B3%D9%87%D9%85-%D8%A3%D9%86%D8%AB%D8%B1%D9%88%D8%A8%D9%8A%D9%83-%D8%AD%D9%82%D9%82%D8%AA-%D9%85%D9%84%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D9%84%D9%83%D9%86-%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A-%D9%84%D8%A7-%D9%8A%D8%A8%D8%AF%D9%88-%D9%88%D8%B1%D8%AF%D9%8A%D8%A7",
+   "summary_en": "This opinion piece says the strong demand for Anthropic shares at its IPO does not settle doubts about AI's future. The author describes watching a large data centre rise in London's Docklands on the day of the listing and links it to growing public resistance to such sites over energy use and local impact. Anthropic's revenue reached 16.2 billion dollars in the first half of this year, against 4.6 billion for all of 2025, yet it reported net losses of 80 billion dollars over six months and 104 billion over nine. Dario Amodei, whose wealth is estimated at over 20 billion dollars, has reportedly urged slower AI development while committing to nearly 900 billion dollars of infrastructure spending. US stock indexes hit seven-month lows as trading began, and Democrats promise tighter rules on AI firms.",
+   "summary_ar": "يرى هذا المقال أن الإقبال القياسي على أسهم Anthropic في اكتتابها العام لا يحسم الشكوك المحيطة بمستقبل الذكاء الاصطناعي. ويصف الكاتب مشاهدته مركزاً ضخماً للبيانات قيد الإنشاء في منطقة دوكلاندز بلندن يوم الإدراج، ويربط ذلك بتصاعد الاعتراض الشعبي على هذه المراكز بسبب استهلاكها الطاقة وتأثيرها في المناطق السكنية. وبلغت إيرادات الشركة 16.2 مليار دولار في النصف الأول من هذا العام، مقابل 4.6 مليار دولار طوال 2025، لكنها أعلنت صافي خسائر قدره 80 مليار دولار في ستة أشهر و104 مليارات في تسعة أشهر. ويُقدَّر أن ثروة الرئيس التنفيذي «داريو أمودي» تتجاوز 20 مليار دولار، وقد دعا بحسب التقارير إلى إبطاء تطوير الذكاء الاصطناعي، بينما يلتزم بخطط إنفاق على البنية التحتية تقارب 900 مليار دولار. وتراجعت مؤشرات الأسهم الأميركية إلى أدنى مستوياتها في سبعة أشهر مع بدء التداول، ويتعهد الديمقراطيون بتشديد القيود على الشركات.",
+   "excerpt": "في اليوم الذي طرحت فيه شركة \"أنثروبيك\" أسهمها للتداول العام في البورصة، كنت في عربة تليفريك فوق نهر التيمز، أنظر من عَلٍ إلى هيكل مركز جديد للبيانات مخصص للذكاء الاصطناعي."
   },
   {
    "id": "43bc0eab87a3",
@@ -225,6 +365,20 @@
    "summary_en": "Abdullah Al Falasi, director general of the Dubai Government Human Resources Department, said the department has revisited the government performance management system after two years of development. It is studying whether AI could measure employee productivity and document achievements more precisely, possibly reducing disagreements between staff and their managers. He stressed that using AI in the system is still under study. The department devoted its second HR forum of 2026 to AI in government bodies, including legislation and governance, and he said grievance mechanisms would remain in place whether a decision comes from an official or from AI. He also noted a new AI-based job-seeker platform and said humans must stay involved in selecting candidates.",
    "summary_ar": "قال عبدالله الفلاسي، المدير العام لدائرة الموارد البشرية لحكومة دبي، إن الدائرة أعادت النظر في نظام إدارة الأداء الحكومي بعد عامين من تطويره. وتدرس الدائرة إمكانية استخدام الذكاء الاصطناعي لقياس إنتاجية الموظفين وتوثيق إنجازاتهم بدقة أكبر، بما قد يقلل الخلافات بين الموظفين ومسؤوليهم المباشرين. وأكد أن توظيف هذه التقنيات في النظام لا يزال قيد الدراسة. وخصصت الدائرة الملتقى الثاني للموارد البشرية لعام 2026 لبحث استخدام الذكاء الاصطناعي في الجهات الحكومية، ومنها التشريعات والحوكمة، وأوضح أن آليات التظلم ستبقى قائمة سواء صدر القرار عن مسؤول أو عن الذكاء الاصطناعي. كما أشار إلى منصة تعتمد على الذكاء الاصطناعي للباحثين عن عمل، وشدد على أن العنصر البشري يجب أن يبقى حاضراً في اختيار المرشحين.",
    "excerpt": "كشف عبدالله الفلاسي مدير عام دائرة الموارد البشرية لحكومة دبي، أن الدائرة أعادت دراسة تطوير نظام إدارة الأداء الحكومي"
+  },
+  {
+   "id": "b6db121f1740",
+   "source": "thenational",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-23T12:09:23+00:00",
+   "title": "Why finance matters as much as technology in UAE's AI ambitions",
+   "title_ar": "لماذا يهمّ التمويل بقدر أهمية التكنولوجيا في طموحات الإمارات في الذكاء الاصطناعي",
+   "url": "https://www.thenationalnews.com/podcasts/business-extra/2026/11/23/why-finance-matters-as-much-as-technology-in-uaes-ai-ambitions/",
+   "summary_en": "In an episode of The National's Business Extra, produced in partnership with the Abu Dhabi Exports Office, host Khaled Abuljebain speaks to Khalil Al Mansoori, the office's executive director. They discuss the UAE's growing role in global technology exports and AI development. Al Mansoori explains how investment in infrastructure, regulation and innovation is opening opportunities for domestic businesses to expand abroad, supported by financing from the office. The conversation also covers the UAE's $1 billion AI for Development initiative in Africa, which targets sectors such as health care, education, agriculture and digital infrastructure.",
+   "summary_ar": "في حلقة من برنامج «بزنس إكسترا» الذي تقدمه صحيفة «ذا ناشيونال» بالشراكة مع مكتب أبوظبي للصادرات، يحاور المقدم خالد أبو الجبين خليل المنصوري، المدير التنفيذي للمكتب. ويتناول الحوار الدور المتنامي للإمارات في صادرات التقنية العالمية وتطوير الذكاء الاصطناعي. ويشرح المنصوري كيف يتيح الاستثمار في البنية التحتية والتنظيم والابتكار فرصاً للشركات المحلية للتوسع في الأسواق الدولية، بدعم تمويلي من مكتب أبوظبي للصادرات. كما يتطرق الحديث إلى مبادرة «الذكاء الاصطناعي من أجل التنمية» في أفريقيا (AI for Development) التي تبلغ قيمتها مليار دولار وتستهدف قطاعات مثل الرعاية الصحية والتعليم والزراعة والبنية التحتية الرقمية.",
+   "excerpt": "From supporting exporters to financing AI development in Africa, Abu Dhabi Exports Office outlines its international strategy"
   },
   {
    "id": "de0d0a8da4b5",
@@ -409,6 +563,20 @@
    "excerpt": "تتسع دائرة التحقيقات الأمريكية في قضية الاشتباه بتهريب رقائق الذكاء الاصطناعي المتطورة التابعة لشركة \"إنفيديا\" إلى الصين"
   },
   {
+   "id": "8733a83a4bfc",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-23T04:29:37+00:00",
+   "title": "Study finds AI processes visual information differently from human brain",
+   "title_ar": "دراسة: الذكاء الاصطناعي يعالج المعلومات البصرية بطريقة تختلف عن الدماغ البشري",
+   "url": "https://www.wam.ae/en/article/17jfxxg-study-finds-processes-visual-information",
+   "summary_en": "A study from Canada's York University, published in Nature Machine Intelligence, found that AI models used to predict brain activity may process visual information through very different internal mechanisms from the brain. The researchers created a method called reverse predictivity testing and used 1,320 natural and synthetic images plus 300 more showing the same subjects in different visual styles. The AI models predicted recorded neuron responses well, but those neuronal responses were much less effective at predicting many of the models' internal features. The researchers warned that relying on such models could lead to misleading conclusions in neuroscience and research on human behaviour.",
+   "summary_ar": "خلصت دراسة أجرتها جامعة يورك الكندية، ونُشرت في مجلة Nature Machine Intelligence، إلى أن نماذج الذكاء الاصطناعي المستخدمة للتنبؤ بنشاط الدماغ قد تعتمد على آليات داخلية مختلفة جداً عن الدماغ في معالجة المعلومات البصرية. وابتكر الباحثون أسلوباً يسمى «اختبار التنبؤ العكسي» (reverse predictivity testing)، واستخدموا 1,320 صورة طبيعية واصطناعية، إضافة إلى 300 صورة أخرى تُظهر المواضيع نفسها بأنماط بصرية مختلفة. وتنبأت النماذج بنجاح عموماً باستجابات الخلايا العصبية المسجلة، لكن هذه الاستجابات كانت أقل فعالية بكثير في التنبؤ بكثير من الخصائص الداخلية للنماذج. وحذّر الباحثون من أن الاعتماد على هذه النماذج قد يقود إلى استنتاجات مضللة في علم الأعصاب وأبحاث السلوك البشري.",
+   "excerpt": "TORONTO, 23rd November, 2026 (WAM) -- A study from Canada’s York University found that artificial intelligence (AI) models used to predict brain activity may rely on very different internal mechanisms to process visual information."
+  },
+  {
    "id": "a61066676902",
    "source": "thenational",
    "lang": "en",
@@ -435,6 +603,20 @@
    "summary_en": "Anthropic raised $81.3 billion in the largest IPO in history on Wednesday, reaching a fully diluted valuation of about $1.5 trillion before trading began the next day. Early backers are now sitting on large paper gains. Notable Capital put roughly 10% of the U.S. portion of its $1 billion-plus fund into the Series E at a $61.5 billion valuation, a return of about 15 times on paper. Singapore's sovereign wealth fund GIC invested more than $4.5 billion across three rounds, for a stake of about 1% after the IPO. Baillie Gifford invested a total of $1.5 billion across three rounds.",
    "summary_ar": "جمعت شركة Anthropic مبلغ 81.3 مليار دولار في أكبر طرح عام أولي في التاريخ يوم الأربعاء، لتبلغ قيمتها المخففة بالكامل نحو 1.5 تريليون دولار قبل بدء تداول أسهمها في اليوم التالي. ويحقق المستثمرون الأوائل الآن مكاسب ورقية كبيرة. فقد وضعت Notable Capital نحو 10% من الجزء الأمريكي من صندوقها البالغ أكثر من مليار دولار في الجولة E بتقييم 61.5 مليار دولار، أي عائد ورقي يقارب 15 ضعفاً. أما صندوق الثروة السيادي السنغافوري GIC فاستثمر أكثر من 4.5 مليارات دولار عبر ثلاث جولات، وبات يملك نحو 1% من الشركة بعد الطرح. واستثمرت Baillie Gifford ما مجموعه 1.5 مليار دولار عبر ثلاث جولات تمويل.",
    "excerpt": "Three significant backers share what gave them conviction to bet billions on Anthropic."
+  },
+  {
+   "id": "ad74df50a235",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-22T22:59:18+00:00",
+   "title": "دراسة تكشف اختلاف معالجة الذكاء الاصطناعي للمعلومات البصرية عن الدماغ البشري",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17jfx3x-دراسة-تكشف-اختلاف-معالجة-الذكاء-الاصطناعي",
+   "summary_en": "Researchers at Canada's York University have found major differences between how AI models process visual information and how the human brain does it, according to a study reported from Toronto on 23 November. Published in Nature Machine Intelligence, it says that a model's ability to predict neuron responses does not mean it works like the brain. The team devised a method called the \"reverse prediction test\", which checks whether brain activity can predict a model's internal properties. In tests using 1,320 photographic and synthetic images plus 300 artistic images and simple drawings, the models predicted brain responses, but neural activity failed to predict many of their properties. The researchers warn that relying on such models could lead to inaccurate conclusions in neuroscience and behaviour research, and call for tools to assess their fit with real neural activity.",
+   "summary_ar": "توصل باحثون في جامعة يورك الكندية إلى اختلافات جوهرية بين طريقة معالجة نماذج الذكاء الاصطناعي للمعلومات البصرية وطريقة عمل الدماغ البشري، وفق دراسة أُعلن عنها من تورونتو في 23 نوفمبر. وتوضح الدراسة، المنشورة في مجلة «نيتشر ماشين إنتليجنس»، أن قدرة النموذج على التنبؤ باستجابات الخلايا العصبية لا تعني أن آلية عمله تطابق الدماغ. وابتكر الفريق منهجية سماها «اختبار التنبؤ العكسي» لمعرفة ما إذا كان النشاط العصبي قادراً على التنبؤ بالخصائص الداخلية للنماذج. وشملت الاختبارات 1320 صورة فوتوغرافية واصطناعية و300 صورة فنية ورسومات مبسطة، ونجحت النماذج في التنبؤ باستجابات الدماغ بينما أخفق النشاط العصبي في التنبؤ بخصائص كثيرة منها. وحذر الباحثون من أن الاعتماد على هذه النماذج قد يؤدي إلى استنتاجات غير دقيقة في أبحاث علم الأعصاب والسلوك البشري، ودعوا إلى تطوير أدوات لتقييم مدى توافقها مع النشاط العصبي الحقيقي.",
+   "excerpt": "تورونتو في 23 نوفمبر/ وام/ توصلت دراسة علمية أجراها باحثون في جامعة يورك الكندية إلى وجود اختلافات جوهرية بين الآليات الداخلية التي تعتمدها نماذج الذكاء الاصطناعي في معالجة المعلومات البصرية وتلك التي يستخدمها الدماغ البشري."
   },
   {
    "id": "716c53fa8fce",
@@ -1429,6 +1611,76 @@
    "summary_en": "Countries attending a UN conference in Geneva on autonomous weapons systems agreed on Saturday to launch a process to draft an international instrument on lethal autonomous weapons, due within two years, after five days of difficult talks. Conference president Julien Thöni said the 128 states parties backed the move. Most states favour a legally binding agreement, but countries that hold the technology, led by the United States and Russia, oppose one. The Stop Killer Robots coalition, which has more than 300 member organisations, and Human Rights Watch said the outcome falls short because it does not guarantee a binding framework while such technology, including AI in targeting, is already on battlefields.",
    "summary_ar": "اتفقت الدول المشاركة في مؤتمر للأمم المتحدة في جنيف حول أنظمة الأسلحة الذاتية التشغيل، يوم السبت، على إطلاق عملية لصياغة أداة دولية بشأن الأسلحة الفتاكة ذاتية التشغيل، يُفترض إنجازها خلال عامين، وذلك بعد خمسة أيام من المحادثات الشاقة. وقال رئيس المؤتمر جوليان ثوني إن الدول الأطراف البالغ عددها 128 وافقت على ذلك. وتؤيد غالبية الدول اتفاقاً ملزماً قانونياً، لكن الدول التي تملك هذه التكنولوجيا، وفي مقدمتها الولايات المتحدة وروسيا، تعارضه. واعتبر ائتلاف «أوقفوا الروبوتات القاتلة» (Stop Killer Robots) الذي يضم أكثر من 300 منظمة، ومعه Human Rights Watch، أن النتيجة دون المطلوب لأنها لا تضمن إطاراً ملزماً، فيما تنتشر هذه التكنولوجيا، ومنها الذكاء الاصطناعي في دورة الاستهداف، في ساحات القتال.",
    "excerpt": "اتفقت الدول المشاركة في مؤتمر للأمم المتحدة في جنيف حول أنظمة الأسلحة الذاتية التشغيل، اليوم السبت، على تمهيد الطريق أمام إطار دولي محتمل لتنظيم استخدام هذه الأسلحة التي يطلق عليها معارضوها تسمية \"الروبوتات القاتلة\"، بعد محادثات شاقة استمرت خمسة أيام."
+  },
+  {
+   "id": "5c33aa5118e6",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-21T00:14:26+00:00",
+   "title": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill",
+   "title_ar": "خفّض تكلفة وزمن استجابة نماذج LLM المستضافة ذاتياً باستخدام مهارة الوكيل للتخزين المؤقت الموزّع لـ KV",
+   "url": "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill/",
+   "summary_en": "AWS describes a distributed KV caching skill in its Agent Toolkit for AWS that helps teams who self-host large language models on GPUs. The post says redundant prefill work slows responses when a server lacks a conversation's history, and that distributed KV caching with Amazon ElastiCache can cut inference costs by up to 40% and time to first token by up to 80%. The skill works with Kiro, Claude Code, OpenAI Codex and other coding agents, guiding checks, cache setup and troubleshooting. It also points to the KVTrace tool, which estimates benefits from a team's own model and traffic before any infrastructure is deployed. The post walks through four example conversations covering diagnosis, sizing, setup and a failed transfer.",
+   "summary_ar": "تعرض AWS مهارة للتخزين المؤقت الموزع لحالات المفاتيح والقيم (KV) ضمن Agent Toolkit for AWS، موجهة للفرق التي تستضيف نماذج لغوية كبيرة ذاتياً على وحدات GPU. وتذكر المدونة أن إعادة حساب سياق المحادثة، وهي خطوة تُعرف بالـprefill، تبطئ الاستجابة عندما لا يحتفظ الخادم بتاريخها، وأن التخزين المؤقت الموزع عبر Amazon ElastiCache قد يخفض تكاليف الاستدلال بما يصل إلى 40% والزمن حتى أول وحدة لغوية بما يصل إلى 80%. وتعمل المهارة مع Kiro وClaude Code وOpenAI Codex وغيرها من وكلاء البرمجة، وترشد إلى فحص الجدوى وإعداد المجموعة المخزنة وحل المشكلات. كما تشير إلى أداة KVTrace التي تقدّر الفوائد انطلاقاً من نموذج الفريق وحركة استخدامه قبل نشر أي بنية. وتستعرض المدونة أربع محادثات تشمل التشخيص وتحديد الحجم والإعداد ومعالجة فشل في النقل.",
+   "excerpt": "Self-hosting LLMs on GPUs means paying to recompute the same context on every turn. Distributed KV caching with Amazon ElastiCache can cut inference cost by up to 40% and time to first token by up to 80%."
+  },
+  {
+   "id": "a7a1e6c55413",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-20T23:07:03+00:00",
+   "title": "Introducing managed cluster extensions for observability and user management in Amazon SageMaker HyperPod Slurm",
+   "title_ar": "تقديم إضافات العناقيد المُدارة لقابلية المراقبة وإدارة المستخدمين في Amazon SageMaker HyperPod Slurm",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-managed-cluster-extensions-for-observability-and-user-management-in-amazon-sagemaker-hyperpod-slurm/",
+   "summary_en": "Amazon SageMaker HyperPod has launched cluster extensions for Slurm clusters, which AWS describes as software packages it manages and that users install, configure, update and remove through APIs or the SageMaker AI console. The first two cover observability and user management, including directory integration. AWS says lifecycle scripts run only when a node is provisioned, so software changes can leave nodes drifting apart with nothing reporting what is installed. Extensions are meant to be declared in one place, validated on submission and kept consistent across nodes. Users keep full access to every node, including SSH, and can still use custom AMIs and lifecycle scripts for organisation-specific software.",
+   "summary_ar": "أطلقت Amazon SageMaker HyperPod ميزة امتدادات المجموعات (cluster extensions) لمجموعات Slurm، وتصفها AWS بأنها حزم برمجية تديرها الشركة ويمكن للمستخدمين تثبيتها وضبطها وتحديثها وإزالتها عبر واجهات برمجة التطبيقات أو وحدة تحكم Amazon SageMaker AI. وتشمل أول امتدادين المراقبة وإدارة المستخدمين، بما في ذلك التكامل مع الدليل. وتذكر AWS أن سكربتات دورة الحياة تعمل فقط عند تجهيز العقدة، ما قد يجعل العقد تتباعد دون أن يبلغ شيء بما هو مثبت عليها. وتهدف الامتدادات إلى تعريف البرمجيات في مكان واحد والتحقق منها عند إرسالها وإبقائها متسقة عبر العقد. ويحتفظ المستخدمون بوصول كامل إلى كل العقد، بما فيها الاتصال عبر SSH، ويمكنهم الاستمرار في استخدام صور AMI مخصصة وسكربتات دورة الحياة للبرمجيات الخاصة بالمؤسسة.",
+   "excerpt": "Amazon SageMaker HyperPod now offers managed cluster extensions for observability and user management, bringing declarative, API- and console-driven configuration to the software running on Slurm cluster nodes."
+  },
+  {
+   "id": "62e6c491de1f",
+   "source": "aws-ml",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-20T22:35:24+00:00",
+   "title": "Introducing Amazon SageMaker HyperPod Global Inference Gateway: One endpoint across Regions and clusters",
+   "title_ar": "تقديم Amazon SageMaker HyperPod Global Inference Gateway: نقطة وصول واحدة عبر المناطق والعناقيد",
+   "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/",
+   "summary_en": "Amazon SageMaker HyperPod has introduced the Global Inference Gateway, a managed gateway that routes requests across all registered clusters, within one Region or across several. It chooses the cluster, carries the request over the AWS backbone, fails over automatically, and authenticates callers with SigV4 and IAM, while each cluster's Inference Gateway still picks the pod. In the article's example, four models on five clusters in two Regions would otherwise mean 20 endpoints. The gateway scores healthy clusters on four signals, and users can set weights between 0.0 and 1.0 that add up to 1.0. Clusters must be published first. Bagelcode reported cross-Region failover in beta tests.",
+   "summary_ar": "قدّمت Amazon SageMaker HyperPod خدمة Global Inference Gateway، وهي بوابة مُدارة توجّه الطلبات عبر جميع العناقيد المسجّلة، سواء في منطقة واحدة أو عدة مناطق. تختار البوابة العنقود المناسب، وتنقل الطلب عبر شبكة AWS الأساسية، وتنفّذ التحويل التلقائي عند الأعطال، وتصادق على المتصلين عبر SigV4 وIAM، بينما تواصل بوابة الاستدلال داخل كل عنقود اختيار الوحدة المناسبة. وفي المثال الوارد، تتطلب أربعة نماذج على خمسة عناقيد في منطقتين 20 نقطة اتصال من دون البوابة. تقيّم البوابة العناقيد السليمة وفق أربع إشارات، ويمكن للمستخدم ضبط أوزان بين 0.0 و1.0 يكون مجموعها 1.0. ويجب نشر العنقود أولاً. وأفادت Bagelcode في اختبارات تجريبية بنجاح التحويل بين المناطق.",
+   "excerpt": "Amazon SageMaker HyperPod introduces the Global Inference Gateway, one managed endpoint that routes inference requests across your HyperPod clusters in one Region or across Regions."
+  },
+  {
+   "id": "5a49fd4a2d77",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "research",
+   "published": "2026-11-20T21:58:29+00:00",
+   "title": "Google rolls out new search homepage with AI chat history and no search button",
+   "title_ar": "Google تطرح صفحة رئيسية جديدة للبحث تتضمن سجل محادثات الذكاء الاصطناعي ومن دون زر بحث",
+   "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
+   "summary_en": "Google has made official a redesign of its desktop search homepage that had been in testing for several weeks. Search VP Robby Stein confirmed the rollout on X. Under the search bar there are now buttons for image generation, file analysis and brainstorming with Gemini, and the \"I'm Feeling Lucky\" button stays, but the Google Search button is removed. Logged-in users also get an expandable sidebar listing recent AI Mode threads, which can be reached from the results page too. Stein said the sidebar made a big difference in helping people continue their searches. The article says the change shows Google giving AI features priority over traditional search.",
+   "summary_ar": "أعلنت Google رسمياً إطلاق تصميم جديد للصفحة الرئيسية للبحث على الحاسوب، بعد أن ظل قيد الاختبار عدة أسابيع. وأكد نائب رئيس البحث «روبي شتاين» عبر منصة X بدء طرحه. تضم الصفحة الآن أزراراً أسفل شريط البحث لتوليد الصور وتحليل الملفات والعصف الذهني مع Gemini، ويبقى زر «I'm Feeling Lucky»، بينما أُزيل زر Google Search. كما يحصل المستخدمون المسجّلون على شريط جانبي قابل للتوسيع يعرض محادثات AI Mode الأخيرة، ويمكن الوصول إليه من صفحة النتائج أيضاً. وقال شتاين إن الشريط الجانبي أحدث فرقاً كبيراً في مساعدة المستخدمين على متابعة بحثهم. ويرى المقال أن التغيير يعكس إعطاء Google أولوية لميزات الذكاء الاصطناعي على حساب البحث التقليدي.",
+   "excerpt": "Google search is making it even easier to access AI tools on the search page."
+  },
+  {
+   "id": "c4b0222f29f2",
+   "source": "ars-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-20T21:47:10+00:00",
+   "title": "Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers",
+   "title_ar": "Meta تعيد النظر في هدف الحياد الكربوني بحلول 2030 وسط انبعاثات قياسية من مراكز بيانات الذكاء الاصطناعي",
+   "url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
+   "summary_en": "Meta's 2026 sustainability report says the company is re-evaluating its 2030 net-zero emissions goal. Executives Rachel Peterson and Blair Swedeen attribute this to AI infrastructure demand growing faster than almost anyone projected. Total emissions rose from 15.6 million to more than 21.7 million metric tonnes of CO2 equivalent between 2024 and 2025, nearly 40 percent, the largest rise among the four major US tech companies. Microsoft reported 25 percent, Google 18 percent and Amazon 16 percent. Net emissions rose 45 percent to over 11.8 million tonnes. Facility water use fell from 825 to 790 million gallons, but use in water-stressed areas rose from 198 to 246 million gallons.",
+   "summary_ar": "يقول تقرير الاستدامة لعام 2026 الصادر عن Meta إن الشركة تعيد تقييم هدفها المتمثل في بلوغ الحياد الكربوني بحلول عام 2030. ويعزو المسؤولان «راشيل بيترسون» و«بلير سويدن» ذلك إلى أن الطلب على بنية الذكاء الاصطناعي التحتية نما أسرع مما توقعه معظم الناس. ارتفعت الانبعاثات الإجمالية من 15.6 مليون طن متري من مكافئ ثاني أكسيد الكربون إلى أكثر من 21.7 مليون طن بين 2024 و2025، أي نحو 40 في المئة، وهي أكبر زيادة بين شركات التقنية الأمريكية الأربع الكبرى. وسجلت Microsoft زيادة 25 في المئة وGoogle 18 في المئة وAmazon 16 في المئة. وارتفعت الانبعاثات الصافية 45 في المئة إلى أكثر من 11.8 مليون طن. وانخفض استهلاك المياه في المنشآت من 825 إلى 790 مليون غالون، لكنه ارتفع في المناطق الشحيحة مياهها من 198 إلى 246 مليون غالون.",
+   "excerpt": "Meta is “re-evaluating” 2030 sustainability goals. Will others follow?"
   },
   {
    "id": "7f3a9bebe980",
