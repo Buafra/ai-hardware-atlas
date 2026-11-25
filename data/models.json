@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T05:05:10+00:00",
+ "updated_at": "2026-11-25T20:06:22+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1587,6 +1587,17 @@
    "moe": false
   },
   {
+   "id": "tngtech/deepseek-r1t2-chimera",
+   "name": "TNG: DeepSeek R1T2 Chimera",
+   "hf": "tngtech/DeepSeek-TNG-R1T2-Chimera",
+   "context": 131072,
+   "created": 1751986985,
+   "open": true,
+   "params_b": 684.49,
+   "params_source": "huggingface",
+   "moe": false
+  },
+  {
    "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
    "name": "Venice: Uncensored",
    "hf": "cognitivecomputations/Dolphin-Mistral-24B-Venice-Edition",
@@ -1700,7 +1711,7 @@
    "id": "z-ai/glm-4.7-flash",
    "name": "Z.ai: GLM 4.7 Flash",
    "hf": "zai-org/GLM-4.7-Flash",
-   "context": 200000,
+   "context": 131072,
    "created": 1768833913,
    "open": true,
    "params_b": 31.22,
@@ -3523,39 +3534,6 @@
    "moe": false
   },
   {
-   "id": "unbiased/pareto-26.10",
-   "name": "Pareto 26.10",
-   "hf": null,
-   "context": 1048576,
-   "created": 1792073620,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "unbiased/pareto-26.10-preview",
-   "name": "Pareto 26.10 Preview",
-   "hf": null,
-   "context": 1048576,
-   "created": 1790863623,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
-   "id": "unbiased/pareto-26.9",
-   "name": "Pareto 26.9",
-   "hf": null,
-   "context": 262144,
-   "created": 1791930537,
-   "open": false,
-   "params_b": null,
-   "params_source": null,
-   "moe": false
-  },
-  {
    "id": "openrouter/pareto-code",
    "name": "Pareto Code Router",
    "hf": null,
@@ -3570,7 +3548,7 @@
    "id": "~unbiased/pareto-latest",
    "name": "Pareto Latest",
    "hf": null,
-   "context": 1048576,
+   "context": 262144,
    "created": 1791933050,
    "open": false,
    "params_b": null,
