@@ -3,6 +3,62 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "d274d310769c",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "cloud",
+   "published": "2026-11-25T19:25:56+00:00",
+   "title": "US gives SpaceX approval for data centres in space",
+   "title_ar": "الولايات المتحدة تمنح SpaceX الموافقة على إنشاء مراكز بيانات في الفضاء",
+   "url": "https://www.thenationalnews.com/future/2026/11/25/data-centers-in-space/",
+   "summary_en": "The US Federal Communications Commission has given SpaceX regulatory approval to eventually put data centres in space, which the agency describes as the first authorisation of its kind. The approval covers the deployment of 1,000,000 orbital compute modules to process data for use on Earth, as AI demand has raised the need for data centres. Concerns over environmental impact, noise and electricity use have led state and local governments to slow construction. FCC chair Brendan Carr welcomed the work. The article stresses that researchers are still at an early stage, and expert Ariel Ekblaw warned of cooling, radiation and chip-upgrade challenges.",
+   "summary_ar": "منحت لجنة الاتصالات الفيدرالية الأمريكية (FCC) شركة SpaceX موافقة تنظيمية لإقامة مراكز بيانات في الفضاء مستقبلاً، وتصف اللجنة ذلك بأنه أول ترخيص من نوعه. ويتيح الترخيص نشر مليون وحدة حوسبة مدارية لمعالجة البيانات التي تُستخدم على الأرض، في وقت رفع فيه الطلب على الذكاء الاصطناعي الحاجة إلى مراكز البيانات. وكانت المخاوف المتعلقة بالأثر البيئي والضجيج واستهلاك الكهرباء قد دفعت حكومات الولايات والسلطات المحلية إلى إبطاء البناء. ورحّب رئيس اللجنة «بريندان كار» بهذه الجهود. ويؤكد المقال أن الباحثين لا يزالون في مرحلة مبكرة، وحذّرت الخبيرة «أرييل إكبلو» من تحديات التبريد والإشعاع وترقية الرقائق.",
+   "excerpt": "FCC greenlights plan for 1 million 'orbital compute modules'"
+  },
+  {
+   "id": "4005607a5429",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "policy",
+   "published": "2026-11-24T21:30:53+00:00",
+   "title": "«الموارد البشرية والتوطين» توظّف الذكاء الاصطناعي للشكاوى العمالية",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الإمارات/4708189/-الموارد-البشرية-والتوطين--توظف-الذكاء-الاصطناعي-للشكاوى-الع",
+   "summary_en": "The Ministry of Human Resources and Emiratisation has announced it is developing its labour complaint process using digital technologies and artificial intelligence, as part of efforts to improve government services. It has opened a public consultation until the end of December, with an online survey of five main questions on whether people support using AI to handle labour complaints and which improvements matter most. Options include online case tracking, faster processing, automatic calculation of dues and easier submission of documents. A virtual clients' council in August drew 160 participants, who raised 7 inquiries and 14 development proposals. In the first half of 2026 the ministry settled 185,793 labour disputes, or 98.6% of those registered.",
+   "summary_ar": "أعلنت وزارة الموارد البشرية والتوطين تطوير مسار الشكوى العمالية باستخدام التقنيات الرقمية والذكاء الاصطناعي، ضمن جهودها لتحسين الخدمات الحكومية. وفتحت الوزارة باب تلقي مقترحات الجمهور وآرائهم حتى نهاية ديسمبر المقبل عبر استبيان إلكتروني من خمسة استفسارات رئيسية، يسأل عن مدى تأييد استخدام الذكاء الاصطناعي في معالجة الشكاوى العمالية، وعن أهم التحسينات المطلوبة، ومنها متابعة الشكوى إلكترونياً وتسريع المعالجة واحتساب المستحقات تلقائياً وتسهيل تقديم المستندات. وكان مجلس المتعاملين الافتراضي في أغسطس الماضي قد جمع 160 متعاملاً طرحوا 7 استفسارات و14 مقترحاً تطويرياً. وسوّت الوزارة في النصف الأول من 2026 ما مجموعه 185 ألفاً و793 منازعة عمالية، بنسبة 98.6% من المنازعات المسجلة.",
+   "excerpt": "أعلنت وزارة الموارد البشرية والتوطين، تطوير مسار الشكوى العمالية باستخدام التقنيات الرقمية والذكاء الاصطناعي، وذلك في إطار جهود الوزارة الرامية إلى تطوير منظومة الخدمات الحكومية، وتبني الحلول الرقمية المبتكرة، وتعزيز كفاءة الإجراءات المرتبطة بتنظيم علاقات العمل."
+  },
+  {
+   "id": "ae0de4fefa3c",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-24T21:30:11+00:00",
+   "title": "شرطة دبي توقع مذكرة تفاهم لتوظيف الذكاء الاصطناعي الوكيلي",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الإمارات/4708181/شرطة-دبي-توقع-مذكرة-تفاهم-لتوظيف-الذكاء-الاصطناعي-الوكيلي",
+   "summary_en": "TACTICAAI, a company that specialises in strengthening operational decision-making, has signed a memorandum of understanding with Dubai Police. The agreement is meant to explore opportunities to use agentic AI, integrate data from multiple sources and apply operations-orchestration technologies to support the development of policing operations. It also sets out a framework for the two sides to cooperate in assessing, adapting and developing capabilities that meet Dubai Police's operational requirements.",
+   "summary_ar": "وقّعت شركة TACTICAAI، المتخصصة في تعزيز اتخاذ القرارات التشغيلية، مذكرة تفاهم مع شرطة دبي. وتهدف المذكرة إلى بحث فرص توظيف الذكاء الاصطناعي الوكيلي ودمج البيانات من مصادر متعددة وتطبيق تقنيات تنسيق العمليات، بما يدعم تطوير العمل الشرطي. كما تضع المذكرة إطاراً للتعاون بين الطرفين في تقييم القدرات وتكييفها وتطويرها بما يلبّي المتطلبات التشغيلية لشرطة دبي.",
+   "excerpt": "وقعت TACTICAAI، الشركة المتخصصة في تعزيز اتخاذ القرارات التشغيلية، مذكرة تفاهم مع شرطة دبي لبحث فرص توظيف الذكاء الاصطناعي الوكيلي ودمج البيانات متعددة المصادر وتقنيات تنسيق العمليات بما يدعم تطوير العمليات الشرطية."
+  },
+  {
+   "id": "e3fe17084142",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-24T21:29:00+00:00",
+   "title": "أبوظبي تستعرض 80 مشروعاً ومبادرة مدعومة بالذكاء الاصطناعي في «جيتكس 2026»",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الاقتصادي/4708216/أبوظبي-تستعرض-80-مشروعا-ومبادرة-مدعومة-بالذكاء-الاصطناعي-في",
+   "summary_en": "The Abu Dhabi government is taking part in GITEX Global 2026, presenting more than 80 AI-supported projects and initiatives that it says save time for millions of people. The projects form part of its ambition to become the first fully AI-native government in the world by 2027. The event opens at Dubai World Trade Centre on 7 December 2026 and moves to Expo City Dubai from 8 to 11 December. The Abu Dhabi pavilion includes more than 30 government and academic bodies and five interactive zones, along with the latest version of the TAMM platform. Featured projects include a health app that combines wearable and health-record data, a student-profile initiative for school years six to twelve, and an AI-supported guidance service for entrepreneurs.",
+   "summary_ar": "تشارك حكومة أبوظبي في معرض «جيتكس العالمي للتقنية 2026» بأكثر من 80 مشروعاً ومبادرة مدعومة بالذكاء الاصطناعي، تقول إنها توفر الوقت لملايين الأفراد. وتأتي هذه المشاريع ضمن طموح الإمارة بأن تصبح أول حكومة في العالم تعتمد بالكامل على الذكاء الاصطناعي بحلول عام 2027. ينطلق المعرض في مركز دبي التجاري العالمي في 7 ديسمبر 2026، ثم ينتقل إلى مدينة إكسبو دبي من 8 إلى 11 ديسمبر. ويضم جناح أبوظبي أكثر من 30 جهة حكومية وأكاديمية وخمس مناطق تفاعلية، إضافة إلى أحدث نسخة من منصة «تم». ومن المشاريع المعروضة تطبيق صحي يجمع بيانات الأجهزة القابلة للارتداء والسجلات الصحية، ومبادرة ملفات شخصية للطلبة من الصف السادس إلى الثاني عشر، وخدمة إرشاد لرواد الأعمال مدعومة بالذكاء الاصطناعي.",
+   "excerpt": "تشارك حكومة أبوظبي في معرض «جيتكس العالمي للتقنية 2026»، الذي ينعقد تحت شعار «نمنح الوقت قيمته. ونترك لكم أجمل لحظاته»؛ بهدف استعراض دور الذكاء الاصطناعي في توفير الوقت لملايين الأفراد، من خلال أكثر من 80 مشروعاً ومبادرة يجري تنفيذها حالياً في الإمارة، في إطار جهودها لتحقيق…"
+  },
+  {
    "id": "6f44d9ab320b",
    "source": "thenational",
    "lang": "en",
@@ -45,6 +101,34 @@
    "excerpt": "تقول شركة البث العملاقة إنها بدأت في حظر وإزالة ما يصل إلى ٢٩ مليون مقطع موسيقي مُنشأ بالذكاء الاصطناعي من منصتها، في قرار تتوقع أن يلقى ترحيب الفنانين والجمهور."
   },
   {
+   "id": "ee2357a4074e",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-24T16:02:37+00:00",
+   "title": "Pinterest will now let parents limit the AI-generated content their teens see",
+   "title_ar": "Pinterest تتيح الآن لأولياء الأمور الحد من المحتوى المولّد بالذكاء الاصطناعي الذي يشاهده المراهقون",
+   "url": "https://techcrunch.com/2026/11/24/pinterest-will-now-let-parents-limit-the-ai-generated-content-their-teens-see/",
+   "summary_en": "Pinterest announced this week that it is expanding its parental controls, including a new setting that lets parents control how much AI-generated content their children see. TechCrunch says this makes Pinterest one of the first major social platforms to offer such a control. Other platforms have mostly limited minors' access to AI features, such as Snap's setting for its chatbot and Meta's pause on teens' access to AI characters. Pinterest says AI content can still reach feeds even with its 2025 restrictions switched on. The update also adds options to stop video auto-play and adjust notification volume, and the Parental Controls Page was redesigned, including settings for personalized ads.",
+   "summary_ar": "أعلنت Pinterest هذا الأسبوع توسيع أدوات الرقابة الأبوية، ومنها إعداد جديد يتيح للوالدين التحكم في مقدار المحتوى المولَّد بالذكاء الاصطناعي الذي يراه أبناؤهم. ويذكر موقع TechCrunch أن ذلك يجعل المنصة من أوائل منصات التواصل الكبرى التي تقدم هذه الخاصية. وقد ركزت منصات أخرى في الغالب على تقييد وصول القاصرين إلى ميزات الذكاء الاصطناعي، مثل إعداد Snap الخاص بروبوت الدردشة وإيقاف Meta وصول المراهقين إلى شخصيات الذكاء الاصطناعي مؤقتاً. ويشير المقال إلى أن محتوى الذكاء الاصطناعي ما زال يصل إلى الخلاصات حتى مع تفعيل القيود التي أطلقتها الشركة في 2025. كما تضمن التحديث خيارات لإيقاف التشغيل التلقائي للفيديو وضبط الإشعارات، وإعادة تصميم صفحة الرقابة الأبوية وإضافة إعدادات الإعلانات المخصصة.",
+   "excerpt": "While other social platforms have focused on restricting teens' access to AI chatbots, Pinterest is addressing the AI content filling their feeds."
+  },
+  {
+   "id": "4a847676e926",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-24T15:51:07+00:00",
+   "title": "Amazon’s Decart acquisition is a bet on using software to narrow the silicon gap with Nvidia",
+   "title_ar": "استحواذ Amazon على Decart رهان على استخدام البرمجيات لتضييق فجوة الرقائق مع Nvidia",
+   "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+   "summary_en": "Amazon has decided to acquire Decart's technology and team for a reported $7.5 billion. Decart's tech optimizes AI models to run on non-Nvidia chips, and Anthropic reportedly tried to buy the startup in the same ballpark, while Nvidia, an investor in its $300 million round at a $4 billion valuation, was also rumored as a buyer. Amazon is not interested in the world models Decart had been building. By adding the Decart Optimization Stack (DOS), it hopes to extract more performance from its Trainium chips as it tries to turn AWS into a $1 trillion revenue business. Amazon has worked with Decart since 2025 and could offer Trainium-based data centers, which Anthropic already uses, to more customers, though it still has far to go against Nvidia's near-monopoly on AI chips.",
+   "summary_ar": "قررت Amazon الاستحواذ على تقنية Decart وفريقها مقابل 7.5 مليار دولار بحسب ما ورد. وتعمل تقنية الشركة الناشئة على تحسين أداء نماذج الذكاء الاصطناعي على رقائق غير تابعة لـ NVIDIA. وذُكر أن Anthropic حاولت شراء الشركة بمبلغ مماثل تقريباً، كما أُشيع أن NVIDIA، التي استثمرت في جولة تمويلها البالغة 300 مليون دولار بتقييم 4 مليارات دولار، كانت مشترياً محتملاً. ولا تهتم Amazon بنماذج العالم التي كانت Decart تعمل عليها. وتأمل Amazon عبر دمج Decart Optimization Stack (DOS) في رفع أداء رقائق Trainium، بينما تسعى إلى جعل AWS نشاطاً تبلغ إيراداته تريليون دولار. وتعاونت الشركتان منذ عام 2025، وقد تتيح Amazon مراكز بيانات قائمة على Trainium، التي تستخدمها Anthropic بالفعل، لمزيد من العملاء، لكن الطريق ما زال طويلاً أمام منافسة هيمنة NVIDIA شبه الاحتكارية على رقائق الذكاء الاصطناعي.",
+   "excerpt": "Amazon’s decision to acquire Decart for a reported $7.5 billion is part of its efforts to improve the efficiency of its Trainium chips."
+  },
+  {
    "id": "06e5823beee1",
    "source": "indy-ar-new",
    "lang": "ar",
@@ -57,6 +141,20 @@
    "summary_en": "US President Donald Trump said on Monday that Nvidia's board made the right decision in reinstating CEO Jensen Huang, about two weeks after he left over a relationship with a woman suspected of being a Chinese spy, and he admitted pressing the company directly. Democrats Hakeem Jeffries and Chuck Schumer condemned the move, Schumer promising to investigate, while Republican Senator Tom Cotton said the matter is not over and Congress would pursue chip export legislation. Nvidia shares rose 31% on the news. The New York Times reported that the woman, Alice Huang, had contact with Chinese intelligence and ran Megaspeed International, suspected of helping Chinese firms obtain Nvidia chips despite a US ban. Trump said the Justice Department found no evidence Huang broke the law.",
    "summary_ar": "قال الرئيس الأميركي دونالد ترمب يوم الإثنين إن مجلس إدارة Nvidia اتخذ القرار الصحيح بإعادة الرئيس التنفيذي جنسن هوانغ، بعد نحو أسبوعين من مغادرته منصبه بسبب علاقة مع امرأة يُشتبه في أنها جاسوسة للصين، وأقر بأنه مارس ضغوطاً مباشرة على الشركة. ونددت قيادات ديمقراطية، منها حكيم جيفريز وتشاك شومر، بالقرار، وتعهد شومر باستخدام كامل سلطة حزبه للتحقيق، بينما قال السيناتور الجمهوري توم كوتون إن القضية لم تنتهِ وإن الكونغرس سيعمل على تمرير قوانين لمنع تصدير الرقائق. وارتفعت أسهم Nvidia بنسبة 31 في المئة. وذكرت صحيفة «ذا نيويورك تايمز» أن المرأة، أليس هوانغ، كانت على تواصل مع الاستخبارات الصينية وأدارت شركة Megaspeed International المشتبه في مساعدتها شركات صينية على الحصول على رقائق Nvidia رغم الحظر الأميركي. وقال ترمب إن وزارة العدل لم تجد دليلاً على مخالفة هوانغ للقانون.",
    "excerpt": "أثارت مجاهرة الرئيس الأميركي دونالد ترمب بالتدخل المباشر لإعادة جنسن هوانغ لمنصبه على رأس مجموعة \"إنفيديا\" العملاقة في تصنيع الرقائق الإلكترونية، انتقادات واسعة لم تقتصر على خصومه الديمقراطيين."
+  },
+  {
+   "id": "d03aa36db6fc",
+   "source": "thenational",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-24T13:52:13+00:00",
+   "title": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
+   "title_ar": "Anthropic تنشر وظيفة براتب 405 آلاف دولار سنوياً لمتخصص في الغاز لتأمين الوقود للذكاء الاصطناعي",
+   "url": "https://www.thenationalnews.com/future/technology/2026/11/24/anthropic-job-gas-specialist-role-salary-ai-jobs/",
+   "summary_en": "Anthropic is advertising for a natural gas specialist, paying $320,000 to $405,000 a year, to secure fuel for its data centres in the US and Canada, The Wall Street Journal reported. The role covers negotiating fuel contracts and managing pipeline deliveries, and the pay is about double that of comparable recent roles. Tech companies are increasingly bypassing electricity grids, and climate scientist Zeke Hausfather estimates on-site engines and turbines can emit 63 to 80 per cent more greenhouse gases than grid power. Anthropic has committed about $900 billion in spending, almost entirely on computing and infrastructure. Its shares fell 6.5 per cent to $82 in premarket trading on Tuesday, below the $83 IPO price.",
+   "summary_ar": "تعلن شركة Anthropic عن وظيفة لأخصائي في الغاز الطبيعي براتب سنوي يتراوح بين 320 ألفاً و405 آلاف دولار، لتأمين الوقود لمراكز البيانات التابعة لها في الولايات المتحدة وكندا، بحسب ما نقلته صحيفة «وول ستريت جورنال». وتشمل المهمة التفاوض على عقود الوقود وإدارة إمدادات خطوط الأنابيب، والراتب يعادل نحو ضعف ما عُرض مؤخراً لوظائف مماثلة. وتتجاوز شركات التقنية شبكات الكهرباء بشكل متزايد، ويقدّر عالم المناخ «زيك هاوسفاذر» أن المحركات والتوربينات في الموقع قد تنتج انبعاثات غازات دفيئة أكثر بنسبة 63 إلى 80 في المئة من كهرباء الشبكة. والتزمت Anthropic بإنفاق نحو 900 مليار دولار، يذهب معظمها إلى الحوسبة والبنية التحتية. وتراجع سهمها 6.5 في المئة إلى 82 دولاراً في تداولات ما قبل افتتاح الثلاثاء، أي أقل من سعر الطرح العام البالغ 83 دولاراً.",
+   "excerpt": "Claude developer’s shares slip below IPO price as it expands investment in energy infrastructure"
   },
   {
    "id": "74828dddda23",
@@ -194,8 +292,8 @@
    "title": "بعد ضغوط من ترامب ومستثمرين..\"إنفيديا\" تعيد جنسن هوانغ رئيساً لها",
    "title_ar": null,
    "url": "https://sharjah24.ae/ar/Articles/2026/11/24/Nvidia-reinstates-Huang-as-CEO-after-Trump-intervention",
-   "summary_en": null,
-   "summary_ar": null,
+   "summary_en": "Jensen Huang has returned as head of NVIDIA about two weeks after stepping down. The company's description says this followed pressure from US President Donald Trump and from investors, as well as consultations with the US administration that eased concerns.",
+   "summary_ar": "عاد جنسن هوانغ إلى رئاسة NVIDIA بعد نحو أسبوعين من تنحيه. ويذكر الوصف أن ذلك جاء إثر ضغوط من الرئيس الأميركي «دونالد ترامب» ومن مستثمرين، إضافة إلى مشاورات مع الإدارة الأميركية بددت المخاوف.",
    "excerpt": "عاد جنسن هوانغ إلى رئاسة إنفيديا بعد نحو أسبوعين من تنحيه، إثر ضغوط من الرئيس الأميركي دونالد ترامب ومستثمرين، ومشاورات مع الإدارة الأميركية بددت المخاوف…"
   },
   {
@@ -255,6 +353,20 @@
    "excerpt": "أطلقت AWS خمسة نماذج مفتوحة الأوزان من Strands Decider v2 لاتخاذ القرارات بكفاءة، وأضافت دعم Claude Code وCodex وKiro CLI إلى بيئة العزل Strands Box."
   },
   {
+   "id": "6d47fa2decc6",
+   "source": "albayan",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-24T05:07:44+00:00",
+   "title": "الرقائق الأمريكية تحت الرقابة.. سنغافورة تنسق مع واشنطن لمنع تحويل وجهتها",
+   "title_ar": null,
+   "url": "https://www.albayan.ae/news/world/1567258",
+   "summary_en": "Singapore Prime Minister Lawrence Wong said on Tuesday that his country is working with the United States to stop electronic chips from being rerouted through its territory. Speaking to reporters during a visit to Australia, he said Singapore is not part of the US investigation involving Nvidia but is conducting its own probes into possible violations of Singaporean law by some companies. He added that authorities are also examining firms that might use Singapore as a transit hub to reship chips to other countries. Reports say US officials believe Megaspeed helped ship Nvidia chips to China. On Monday, the US Commerce Department added Megaspeed and two affiliates in Malaysia and Thailand to its entity list. Nvidia has also set up a committee overseeing national security and export controls.",
+   "summary_ar": "قال رئيس وزراء سنغافورة لورانس وونغ يوم الثلاثاء إن بلاده تتعاون مع الولايات المتحدة لمنع إعادة توجيه الرقائق الإلكترونية إلى وجهات أخرى عبر أراضيها. وأوضح للصحافيين خلال زيارة إلى أستراليا أن سنغافورة ليست طرفاً في التحقيق الأميركي المتعلق بشركة Nvidia، لكنها تجري تحقيقاتها الخاصة في احتمال انتهاك بعض الشركات للقوانين السنغافورية. وأضاف أن السلطات تنظر أيضاً في أنشطة شركات قد تستغل سنغافورة مركز عبور لإعادة شحن الرقائق إلى دول أخرى. وتفيد تقارير بأن مسؤولين أميركيين يعتقدون أن شركة Megaspeed ساعدت في شحن رقائق Nvidia إلى الصين. وأدرجت وزارة التجارة الأميركية يوم الاثنين Megaspeed وشركتين تابعتين لها في ماليزيا وتايلاند في قائمة الكيانات المحظورة. كما شكلت Nvidia لجنة للرقابة على شؤون الأمن القومي وضوابط التصدير.",
+   "excerpt": "أعلن رئيس الوزراء لورانس وونغ الثلاثاء أن سنغافورة تتعاون مع الولايات المتحدة لمنع إعادة توجيه الرقائق الإلكترونية إلى و"
+  },
+  {
    "id": "06eee60e5183",
    "source": "euronews-ar",
    "lang": "ar",
@@ -309,6 +421,20 @@
    "summary_en": "Sheikh Ahmed bin Saeed Al Maktoum, chairman of the Dubai Integrated Economic Zones Authority (DIEZ), opened the Future of Trade Hub summit in Dubai. Dubai Airport Freezone (DAFZA) organised it with Forbes Middle East to mark its 30th anniversary. It drew more than 300 participants, including 27 speakers, officials, diplomats, business leaders and investors. Sheikh Ahmed said the free zone has become a regional base for leading global companies and a driver of Dubai's non-oil trade, supporting the D33 economic agenda. Foreign Trade Minister Dr Thani bin Ahmed Al Zeyoudi said the ministry is developing an AI-powered platform to help exporters and importers anticipate global trade disruptions, respond flexibly and find new opportunities in international markets.",
    "summary_ar": "افتتح الشيخ أحمد بن سعيد آل مكتوم، رئيس سلطة دبي للمناطق الاقتصادية المتكاملة (دييز)، قمة «محور مستقبل التجارة» في دبي، التي نظمتها المنطقة الحرة بمطار دبي (DAFZA) بالشراكة مع Forbes Middle East بمناسبة مرور ثلاثين عاماً على تأسيسها. وشارك في القمة أكثر من 300 شخص، بينهم 27 متحدثاً ومسؤولون حكوميون وممثلون دبلوماسيون وقادة شركات ومستثمرون. وقال الشيخ أحمد إن المنطقة الحرة أصبحت مقراً إقليمياً لنخبة من الشركات العالمية ومحركاً لنمو تجارة دبي غير النفطية، بما يدعم أجندة دبي الاقتصادية D33. وأوضح وزير التجارة الخارجية الدكتور ثاني بن أحمد الزيودي أن الوزارة تعمل على تطوير منصة مدعومة بالذكاء الاصطناعي، تساعد المصدّرين والمستوردين على استشراف اضطرابات التجارة العالمية والتعامل معها بمرونة، وتحديد فرص جديدة في الأسواق الدولية.",
    "excerpt": "افتتح سمو الشيخ أحمد بن سعيد آل مكتوم، رئيس سلطة دبي للمناطق الاقتصادية المتكاملة «دييز»، قمة «محور مستقبل التجارة» التي نظّمتها المنطقة الحرة بمطار دبي «دافز» بمناسبة الذكرى الثلاثين لتأسيسها، بالشراكة مع فوربس الشرق الأوسط."
+  },
+  {
+   "id": "049542555c2c",
+   "source": "verge-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "policy",
+   "published": "2026-11-23T22:25:12+00:00",
+   "title": "Trump engineered a risky comeback for Jensen Huang",
+   "title_ar": "ترامب دبّر عودة محفوفة بالمخاطر لجنسن هوانغ",
+   "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
+   "summary_en": "Jensen Huang has been reinstated as Nvidia's CEO, president and board director, with the article saying President Donald Trump pushed for it. After Huang resigned following reports of an affair with an alleged Chinese spy, Trump first said he would land on his feet, then softened. Reportedly, Vice President JD Vance acted as a liaison to the board, and Trump dialed into its Sunday meeting. The vote came about a week after the board said it did not intend to bring him back, and Nasdaq-100 futures briefly hit a circuit-breaker limit. The board said it had formed a national security and export control committee, will hire a chief compliance officer and will continue its independent investigation. Huang is scheduled to testify before Congress on December 1st.",
+   "summary_ar": "أعاد مجلس إدارة NVIDIA «جينسن هوانغ» إلى منصب الرئيس التنفيذي ورئيس الشركة وعضو المجلس، وتقول المقالة إن الرئيس «دونالد ترامب» دفع نحو ذلك. فبعد استقالة هوانغ إثر تقارير عن علاقة مع امرأة يُزعم أنها جاسوسة صينية، قال ترامب في البداية إنه سيتجاوز الأزمة، ثم خفف موقفه. وبحسب التقارير، تولى نائب الرئيس «جيه دي فانس» دور الوسيط مع المجلس، وشارك ترامب هاتفياً في اجتماعه مساء الأحد. وجاء التصويت بعد نحو أسبوع من إعلان المجلس أنه لا ينوي إعادته، وبلغت العقود الآجلة لمؤشر ناسداك 100 حد التوقف الآلي للتداول لفترة وجيزة. وقال المجلس إنه شكّل لجنة للأمن القومي وضوابط التصدير، وسيعيّن مسؤولاً للامتثال، وسيواصل تحقيقه المستقل. ومن المقرر أن يدلي هوانغ بشهادته أمام الكونغرس في الأول من ديسمبر.",
+   "excerpt": "After Nvidia's board accepted Jensen Huang's resignation as CEO, following reports that Huang had an affair with an alleged Chinese spy, President Donald Trump, too, appeared to submit to the new reality."
   },
   {
    "id": "8ab70d6f89cf",
@@ -381,6 +507,20 @@
    "excerpt": "رافي روزنر-أودين انضم مهندسو برمجيات في «أمازون» إلى احتجاجات شعبية في سياتل، للمطالبة بوقف مؤقت لإقرار مراكز بيانات جد"
   },
   {
+   "id": "96be4e3313c2",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-23T21:19:20+00:00",
+   "title": "UN chief urges global AI safety framework as risks outpace safeguards",
+   "title_ar": "أمين عام الأمم المتحدة يدعو إلى إطار عالمي لسلامة الذكاء الاصطناعي مع تجاوز المخاطر لإجراءات الحماية",
+   "url": "https://www.wam.ae/en/article/17ji319-chief-urges-global-safety-framework-risks-outpace",
+   "summary_en": "UN Secretary-General António Guterres has called for stronger multilateral cooperation and an international framework, backed by credible and independent oversight, to manage the risks of artificial intelligence. Speaking on Monday at the Bridgetown Special Summit on AI Safety, co-hosted by the UN and Barbados, he said the technology is advancing faster than the safeguards meant to govern it, and he warned against a race to the bottom on safety standards. He pointed to potential benefits in healthcare, science, education, weather forecasting and sustainable development, but also to growing risks, including outages, cyberattacks and warnings from leading developers about existential dangers. He said the UN-supported global AI capacity-building network now has 27 centres of excellence across five regions and that he had proposed a global capacity-building fund.",
+   "summary_ar": "دعا الأمين العام للأمم المتحدة «أنطونيو غوتيريش» إلى تعزيز التعاون متعدد الأطراف ووضع إطار دولي لإدارة مخاطر الذكاء الاصطناعي، يستند إلى آليات رقابة مستقلة وموثوقة. وقال في كلمته يوم الاثنين أمام القمة الخاصة بشأن سلامة الذكاء الاصطناعي في بريدجتاون (Bridgetown Special Summit on AI Safety)، التي استضافتها الأمم المتحدة وبربادوس بالاشتراك، إن هذه التقنية تتقدم بوتيرة أسرع من إجراءات الحماية اللازمة، وحذّر من سباق نحو الحضيض في معايير السلامة. وأشار إلى فوائدها المحتملة في الرعاية الصحية والعلوم والتعليم والتنبؤ بالطقس والتنمية المستدامة، وإلى مخاطر متزايدة تشمل الأعطال والهجمات السيبرانية وتحذيرات مطوّري الذكاء الاصطناعي الرائدين من مخاطر وجودية. وذكر أن الشبكة العالمية لبناء القدرات في مجال الذكاء الاصطناعي التي تدعمها الأمم المتحدة تضم 27 مركز تميز في خمس مناطق، وأنه اقترح إنشاء صندوق عالمي لبناء القدرات في هذا المجال.",
+   "excerpt": null
+  },
+  {
    "id": "8146f9e1ad1e",
    "source": "albayan",
    "lang": "ar",
@@ -407,6 +547,20 @@
    "summary_en": "The COP31 UN climate conference ended chaotically in Antalya, Turkey, on Sunday, after delegates failed to win enough support for the pact they had negotiated for two weeks. The EU, the UK and several vulnerable nations rejected it as too weak, and it omitted the term fossil fuels. One aim was to raise electricity's share of global energy use to 35 percent by 2035 from about 20 percent, which is harder as AI data centers push demand up. Countries made only voluntary commitments on AI and electrification, and the US did not attend. Meta said it is re-evaluating its net zero timeline as it focuses on AI, after reporting a 45 percent annual rise in climate pollution. The International Energy Agency forecasts data center electricity use will double by 2030.",
    "summary_ar": "اختُتم مؤتمر الأمم المتحدة للمناخ «كوب 31» (COP31) في أنطاليا بتركيا يوم الأحد وسط أجواء من الفوضى، بعد أن عجز المندوبون عن حشد دعم كافٍ للاتفاق الذي تفاوضوا عليه طوال أسبوعين. ورفض الاتحاد الأوروبي والمملكة المتحدة ودول عدة معرّضة بشدة لتغيّر المناخ الاتفاق لأنه ضعيف في نظرها، كما خلا من عبارة «الوقود الأحفوري». وكان أحد الأهداف رفع حصة الكهرباء في استهلاك الطاقة العالمي إلى 35 بالمئة بحلول عام 2035 مقارنة بنحو 20 بالمئة حالياً، وهو أمر يزداد صعوبة مع ارتفاع الطلب بسبب مراكز البيانات الخاصة بالذكاء الاصطناعي. ولم تقدّم الدول سوى التزامات طوعية بشأن الذكاء الاصطناعي والكهربة، وغابت الولايات المتحدة عن المؤتمر. وأعلنت Meta أنها تعيد تقييم جدولها الزمني لبلوغ الحياد الكربوني مع تركيزها على الذكاء الاصطناعي، بعد ارتفاع انبعاثاتها 45 بالمئة على أساس سنوي. وتتوقع وكالة الطاقة الدولية أن يتضاعف استهلاك مراكز البيانات للكهرباء بحلول عام 2030.",
    "excerpt": "The clean energy revolution hinges on electrifying the entire global economy just as power-hungry data centers are surging."
+  },
+  {
+   "id": "94d323914d6a",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-23T20:39:18+00:00",
+   "title": "OpenAI updates ChatGPT to handle complex everyday questions, web searches, and images more reliably",
+   "title_ar": "OpenAI تحدّث ChatGPT للتعامل بشكل أكثر موثوقية مع الأسئلة اليومية المعقدة وعمليات البحث على الويب والصور",
+   "url": "https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/",
+   "summary_en": "OpenAI is rolling out a chat-tuned version of GPT-6.2 Sol worldwide for ChatGPT Plus, Pro, Business and Enterprise users. The company says it handles complex requests and web searches better than GPT-6 and asks more relevant follow-up questions. In internal tests, image understanding rose to 71.7 percent from 47.4, and following difficult instructions to 78.1 percent from 62.5. It also beats GPT-6 on an internal expert-level benchmark at all four reasoning levels and leads on an internal BrowseComp version. According to the system card, it follows safety policies in 91 to 94 percent of difficult conversations, up from 77 to 80 percent, with the biggest gains in youth safety. The changes apply only to chat mode, the Work and Codex models are unchanged, and Enterprise admins decide whether users get access.",
+   "summary_ar": "تطرح OpenAI عالمياً نسخة من GPT-6.2 Sol مضبوطة للمحادثة لمستخدمي ChatGPT في باقات Plus وPro وBusiness وEnterprise. وتقول الشركة إن النموذج يتعامل مع الطلبات المعقدة وعمليات البحث على الويب بصورة أفضل من GPT-6، ويطرح أسئلة متابعة أكثر صلة. وفي اختبارات داخلية ارتفع فهم الصور إلى 71.7 بالمئة مقابل 47.4، واتباع التعليمات الصعبة إلى 78.1 بالمئة مقابل 62.5. كما يتفوق على GPT-6 في معيار داخلي للمهام على مستوى الخبراء عبر مستويات الاستدلال الأربعة كلها، ويتصدر في نسخة داخلية من BrowseComp. وبحسب بطاقة النظام، يلتزم النموذج بسياسات السلامة في 91 إلى 94 بالمئة من المحادثات الصعبة، مقابل 77 إلى 80 بالمئة لـ GPT-6، وجاءت أكبر المكاسب في سلامة الشباب. وتقتصر هذه الأرقام على وضع المحادثة، فيما تبقى نماذج Work وCodex كما هي، ويقرر مسؤولو المؤسسات في Enterprise ما إذا كان مستخدموهم سيحصلون على النموذج.",
+   "excerpt": "OpenAI is making GPT-6.2 Sol the new default model in ChatGPT's chat tab, rolling it out worldwide. In internal tests, image understanding jumped from 47.4 to 71.7 percent, and the model now handles difficult instructions correctly 78.1 percent of the time."
   },
   {
    "id": "49ef9cf5084c",
@@ -449,6 +603,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "شهدت أسواق الأسهم العالمية موجة انتعاش قوية، قادتها بورصة وول ستريت وأسهم التكنولوجيا والذكاء الاصطناعي، عقب إعلان شركة"
+  },
+  {
+   "id": "c8fc880fe15f",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-23T19:33:00+00:00",
+   "title": "غوتيريش يدعو لإطار دولي لإدارة مخاطر الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/23/d78",
+   "summary_en": "UN Secretary-General Antonio Guterres called on Monday for an international framework to manage the risks of artificial intelligence. He made the appeal in a speech to the special summit on AI safety. The available text is cut off after describing the summit's hosts, so no further details of his remarks are given.",
+   "summary_ar": "دعا الأمين العام للأمم المتحدة أنطونيو غوتيريش، يوم الاثنين، إلى إطار دولي لإدارة مخاطر الذكاء الاصطناعي. وجاءت دعوته في كلمة ألقاها أمام القمة الخاصة المعنية بسلامة الذكاء الاصطناعي. ويتوقف النص المتاح عند الحديث عن الجهات المستضيفة للقمة، ولذلك لا تتوافر تفاصيل أخرى عن مضمون كلمته.",
+   "excerpt": "دعا أنطونيو غوتيريش، الأمين العام للأمم المتحدة، اليوم الاثنين، في كلمة ألقاها أمام القمة الخاصة المعنية بسلامة الذكاء الاصطناعي، التي تستضيفها كل من الأمم…"
   },
   {
    "id": "c1738f6622b3",
@@ -4396,7 +4564,7 @@
    "url": "https://sharjah24.ae/en/Articles/2026/11/19/a16",
    "summary_en": "The European Commission has confirmed that a cyber campaign it detected on 22 October was AI-generated, according to spokesperson Thomas Regnier. As a protective measure, the Commission temporarily took down several applications, most of which have been restored. The investigation is ongoing, and the Commission said it is hard to judge the extent of the attack for now. Regnier said there was no evidence of a data breach affecting commission staff as a whole. Politico reported that large amounts of personal data may have been compromised and that systems for payslips, time management and medical reimbursements were offline during a 10-day disruption. Commissioner Henna Virkkunen briefed fellow commissioners after an urgent crisis-body meeting.",
    "summary_ar": "أكدت المفوضية الأوروبية أن الحملة الإلكترونية التي رصدتها في 22 أكتوبر نُفذت بالذكاء الاصطناعي، بحسب المتحدث باسمها توماس رينييه. وقد أوقفت المفوضية مؤقتاً عدداً من التطبيقات كإجراء وقائي، وأُعيد تشغيل معظمها. ولا يزال التحقيق جارياً، وتقول المفوضية إن من الصعب حالياً تقدير حجم الهجوم. وأضاف رينييه أنه لا توجد أدلة على اختراق للبيانات يمس موظفي المفوضية بصورة عامة. وذكر موقع «بوليتيكو» أن كميات كبيرة من البيانات الشخصية ربما تعرضت للاختراق، وأن أنظمة كشوف الرواتب وإدارة الوقت والتعويضات الطبية توقفت خلال اضطراب استمر عشرة أيام. وعقدت المفوضية اجتماعاً طارئاً لهيئة إدارة الأزمات، وأطلعت هينا فيركونن زملاءها المفوضين على التطورات.",
-   "excerpt": "The European Commission confirmed it was targeted by an AI-generated cyber campaign detected on 22 October. Spokesperson Thomas Regnier said the Commission…"
+   "excerpt": null
   },
   {
    "id": "0a5e50796370",
