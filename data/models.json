@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T04:23:24+00:00",
+ "updated_at": "2026-11-27T19:35:11+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1315,7 +1315,7 @@
    "id": "qwen/qwen3.8-2.4t-a95b",
    "name": "Qwen: Qwen3.8 2.4T A95B",
    "hf": "Qwen/Qwen3.8-2.4T-A95B",
-   "context": 1048576,
+   "context": 1000000,
    "created": 1786551702,
    "open": true,
    "params_b": 2446.18,
