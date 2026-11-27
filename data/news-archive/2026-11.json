@@ -3,6 +3,20 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "bd95951bddf0",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-26T10:03:57+00:00",
+   "title": "كيوكسيا وإنفيديا تختبران توسيع الذاكرة المتاحة لمعالجات الرسوميات إلى أكثر من بيتابايت",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/26/%d9%83%d9%8a%d9%88%d9%83%d8%b3%d9%8a%d8%a7-%d8%a5%d9%86%d9%81%d9%8a%d8%af%d9%8a%d8%a7-%d8%aa%d9%88%d8%b3%d9%8a%d8%b9-%d8%a7%d9%84%d8%b0%d8%a7%d9%83%d8%b1%d8%a9/",
+   "summary_en": "Japan's Kioxia says it is working with NVIDIA to test a technology that lets GPUs reach datasets larger than their built-in memory by using SSD storage, in a trial totalling about 1.1 petabytes. The test is part of NVIDIA's Storage-Next initiative. It used a GB200 NVL72 system with 18 server nodes, each holding eight Kioxia XD8 NVMe drives of 7.68 terabytes, or 144 drives in all. A software library called SCADA lets GPUs request small pieces of data directly from storage. Kioxia says the setup supports 512-byte accesses and could handle a database of two trillion vectors. The capacity does not enlarge HBM memory or match its speed. The work is still at the feasibility and performance-evaluation stage, with no detailed speed comparisons or commercial availability date disclosed.",
+   "summary_ar": "أعلنت شركة «كيوكسيا» اليابانية تعاونها مع NVIDIA لاختبار تقنية تتيح لمعالجات الرسوميات الوصول إلى مجموعات بيانات تفوق سعة ذاكرتها المدمجة باستخدام وحدات تخزين الحالة الصلبة (SSD)، في تجربة بلغت سعتها الإجمالية نحو 1.1 بيتابايت. ويندرج الاختبار ضمن مبادرة Storage-Next التابعة لـNVIDIA. واعتمدت التجربة على منظومة GB200 NVL72 من 18 عقدة خوادم، تضم كل منها ثماني وحدات NVMe من سلسلة XD8 من «كيوكسيا» بسعة 7.68 تيرابايت للوحدة، أي 144 وحدة إجمالاً. وتتيح مكتبة برمجية تُسمى SCADA لمعالجات الرسوميات طلب أجزاء صغيرة من البيانات مباشرةً من التخزين. وتقول «كيوكسيا» إن المنظومة تدعم عمليات وصول بحجم 512 بايت ويمكنها معالجة قاعدة بيانات تضم تريليوني متجه. ولا تعني هذه السعة زيادة حجم ذاكرة HBM أو بلوغ سرعتها. ولا يزال التعاون في مرحلة اختبار الجدوى وتقييم الأداء، ولم تكشف الشركتان نتائج مفصلة عن السرعة أو موعداً لإتاحة التقنية تجارياً.",
+   "excerpt": "اختبرت كيوكسيا وإنفيديا منظومة تخزين تضم 144 وحدة SSD بسعة إجمالية تبلغ 1.1 بيتابايت، بهدف تجاوز قيود ذاكرة معالجات الرسوميات في تطبيقات الذكاء الاصطناعي."
+  },
+  {
    "id": "1c6c4dc76bd1",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -157,6 +171,48 @@
    "excerpt": "From tapping into a deep executive bench to 'experimenting', other tech majors give a clue on their next bosses"
   },
   {
+   "id": "5c667d63499c",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-24T23:51:01+00:00",
+   "title": "Services in AI sphere in Russia reached $450.7 mn in 2025 — PM",
+   "title_ar": "الخدمات في مجال الذكاء الاصطناعي في روسيا بلغت 450.7 مليون دولار في 2025، بحسب رئيس الوزراء",
+   "url": "https://www.wam.ae/en/article/17jk87n-services-sphere-russia-reached-4507-2025",
+   "summary_en": "Russian Prime Minister Mikhail Mishustin said the volume of services for developing and implementing artificial intelligence solutions reached nearly 37 billion rubles ($450.7 mn) last year. He spoke at a strategic session on the implementation and regulation of AI, as quoted by TASS. He said this is three times the 2022 level, when the targets were set. Russia has its own foundation models, and applied tools are being rolled out in industry, the social sphere and public administration. Over the same period, organisations doubled their investment in deploying these products. Mishustin said a new source of labour productivity growth and competitiveness for domestic companies is taking shape.",
+   "summary_ar": "قال رئيس الوزراء الروسي «ميخائيل ميشوستين» إن حجم الخدمات المتعلقة بتطوير حلول الذكاء الاصطناعي وتنفيذها بلغ العام الماضي نحو 37 مليار روبل (450.7 مليون دولار). وجاء ذلك خلال جلسة استراتيجية حول تطبيق الذكاء الاصطناعي وتنظيمه، بحسب ما نقلته وكالة TASS. وأوضح أن هذا الرقم يعادل ثلاثة أضعاف مستواه في عام 2022، حين وُضعت الأهداف. وأضاف أن لدى روسيا نماذج أساسية خاصة بها، وأن الأدوات التطبيقية تُطرح بنشاط في الصناعة والمجال الاجتماعي والإدارة العامة. كما ضاعفت المؤسسات استثماراتها في نشر هذه المنتجات واستخدامها خلال الفترة نفسها. وقال ميشوستين إن مصدراً جديداً لنمو إنتاجية العمل وتنافسية الشركات المحلية آخذ في التشكل.",
+   "excerpt": "MOSCOW, 25th November, 2026 (WAM) -- The volume of services for the development and implementation of artificial intelligence (AI) solutions reached nearly 37 billion rubles ($450.7 mn) last year, Russian Prime Minister Mikhail Mishustin said at a strategic session on the…"
+  },
+  {
+   "id": "af1edeac1a7c",
+   "source": "wam-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-24T23:43:16+00:00",
+   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+   "title_ar": "Anthropic تطلق Claude Ship ليتيح لوكلاء الذكاء الاصطناعي مراجعة تغييرات الشيفرة البرمجية وإصلاحها والموافقة عليها",
+   "url": "https://www.wam.ae/en/article/17jk87m-anthropic-launches-claude-ship-letting-agents",
+   "summary_en": "Anthropic has launched Claude Ship, which brings AI agents to GitHub that can review, fix and even approve routine code changes according to a team's rules. The offering combines three tools covering the path from code submission to final approval. Code Review is already generally available, while two new agents, PR Steward and Claude Approvals, are in beta. PR Steward deals with failing CI checks, merge conflicts and Code Review feedback, and comments after each push on what it changed and how to roll it back. Claude Approvals applies an approval policy that the team writes in natural language as a file in the repository.",
+   "summary_ar": "أطلقت شركة Anthropic خدمة Claude Ship التي تجلب وكلاء الذكاء الاصطناعي إلى GitHub لمراجعة التغييرات البرمجية الروتينية وإصلاحها، بل والموافقة عليها، وفقاً لقواعد الفريق. وتجمع الخدمة ثلاث أدوات تغطي المسار من تقديم الشيفرة حتى الموافقة النهائية. وتتوفر أداة Code Review للجميع بالفعل، بينما يوجد وكيلان جديدان هما PR Steward وClaude Approvals في المرحلة التجريبية. ويعالج PR Steward مشكلات مثل فشل فحوص CI وتعارضات الدمج وملاحظات Code Review، ويعلّق بعد كل عملية رفع على ما غيّره وكيفية التراجع عنه عند الحاجة. أما Claude Approvals فيطبق سياسة موافقة يكتبها الفريق بلغة طبيعية في ملف داخل المستودع.",
+   "excerpt": "WASHINGTON, 25th November, 2026 (WAM) -- Anthropic's new Claude Ship brings AI agents to GitHub that can automatically review, fix, and even approve routine code changes based on a team's rules, helping developers ship software much faster."
+  },
+  {
+   "id": "11ad683dcba8",
+   "source": "wam-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-24T23:09:33+00:00",
+   "title": "\"أنثروبيك\" تطلق وكلاء ذكاء اصطناعي لمراجعة الشيفرات البرمجية وإصلاحها تلقائيا",
+   "title_ar": null,
+   "url": "https://www.wam.ae/ar/article/17jk7fs-أنثروبيك-تطلق-وكلاء-ذكاء-اصطناعي-لمراجعة-الشيفرات",
+   "summary_en": "Anthropic announced on 25 November in Washington a new set of tools called Claude Ship. They use AI agents to review code, detect bugs, fix them and approve changes automatically under set policies. The company says the aim is to speed up software development by checking proposed changes and resolving problems before approval, which reduces the need for human involvement in some review stages. The suite has three tools: one reviews code and finds possible errors, one fixes problems caused by changes, and one approves changes automatically under rules set by development teams. It is available to Claude Team and Claude Enterprise subscribers. The code review tool is generally available, while the other two are still in a trial phase, and teams keep control over changes that need human approval.",
+   "summary_ar": "أعلنت شركة Anthropic في 25 نوفمبر من واشنطن إطلاق مجموعة أدوات جديدة باسم Claude Ship، تعتمد على وكلاء الذكاء الاصطناعي لمراجعة الشيفرات البرمجية ورصد الأخطاء وإصلاحها، واعتماد التعديلات تلقائياً وفق سياسات محددة. وتقول الشركة إن الهدف هو تسريع تطوير البرمجيات عبر فحص التعديلات المقترحة ومعالجة المشكلات قبل إقرارها، ما يقلل الحاجة إلى التدخل البشري في بعض مراحل المراجعة والموافقة. وتضم المجموعة ثلاث أدوات: الأولى لمراجعة الشيفرات واكتشاف الأخطاء المحتملة، والثانية لمعالجة المشكلات الناجمة عن التعديلات، والثالثة لاعتماد التغييرات تلقائياً وفق قواعد تضعها فرق التطوير. وهي متاحة لمشتركي باقتي Claude Team وClaude Enterprise. وأداة مراجعة الشيفرات متاحة بشكل عام، بينما لا تزال الأداتان الأخريان في المرحلة التجريبية، مع احتفاظ فرق التطوير بالسيطرة على التعديلات التي تتطلب موافقة بشرية.",
+   "excerpt": "واشنطن في 25 نوفمبر/ وام/ أعلنت شركة «أنثروبيك» إطلاق مجموعة أدوات جديدة تحت اسم «كلود شيب» (Claude Ship)، تعتمد على وكلاء الذكاء الاصطناعي لمراجعة الشيفرات البرمجية ورصد الأخطاء وإصلاحها، واعتماد التعديلات تلقائياً وفق سياسات محددة."
+  },
+  {
    "id": "4005607a5429",
    "source": "alittihad-feed",
    "lang": "ar",
@@ -197,6 +253,20 @@
    "summary_en": "The Abu Dhabi government is taking part in GITEX Global 2026, presenting more than 80 AI-supported projects and initiatives that it says save time for millions of people. The projects form part of its ambition to become the first fully AI-native government in the world by 2027. The event opens at Dubai World Trade Centre on 7 December 2026 and moves to Expo City Dubai from 8 to 11 December. The Abu Dhabi pavilion includes more than 30 government and academic bodies and five interactive zones, along with the latest version of the TAMM platform. Featured projects include a health app that combines wearable and health-record data, a student-profile initiative for school years six to twelve, and an AI-supported guidance service for entrepreneurs.",
    "summary_ar": "تشارك حكومة أبوظبي في معرض «جيتكس العالمي للتقنية 2026» بأكثر من 80 مشروعاً ومبادرة مدعومة بالذكاء الاصطناعي، تقول إنها توفر الوقت لملايين الأفراد. وتأتي هذه المشاريع ضمن طموح الإمارة بأن تصبح أول حكومة في العالم تعتمد بالكامل على الذكاء الاصطناعي بحلول عام 2027. ينطلق المعرض في مركز دبي التجاري العالمي في 7 ديسمبر 2026، ثم ينتقل إلى مدينة إكسبو دبي من 8 إلى 11 ديسمبر. ويضم جناح أبوظبي أكثر من 30 جهة حكومية وأكاديمية وخمس مناطق تفاعلية، إضافة إلى أحدث نسخة من منصة «تم». ومن المشاريع المعروضة تطبيق صحي يجمع بيانات الأجهزة القابلة للارتداء والسجلات الصحية، ومبادرة ملفات شخصية للطلبة من الصف السادس إلى الثاني عشر، وخدمة إرشاد لرواد الأعمال مدعومة بالذكاء الاصطناعي.",
    "excerpt": "تشارك حكومة أبوظبي في معرض «جيتكس العالمي للتقنية 2026»، الذي ينعقد تحت شعار «نمنح الوقت قيمته. ونترك لكم أجمل لحظاته»؛ بهدف استعراض دور الذكاء الاصطناعي في توفير الوقت لملايين الأفراد، من خلال أكثر من 80 مشروعاً ومبادرة يجري تنفيذها حالياً في الإمارة، في إطار جهودها لتحقيق…"
+  },
+  {
+   "id": "0794865ff5e3",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "models",
+   "published": "2026-11-24T20:42:29+00:00",
+   "title": "Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows",
+   "title_ar": "Anthropic تحوّل Claude Artifacts إلى تطبيقات مستقلة لسطح المكتب على macOS وWindows",
+   "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/",
+   "summary_en": "Anthropic now lets users install Claude Artifacts as standalone apps on Mac or Windows. The feature is in beta from today and needs the latest Claude app for macOS or Windows. Users build an Artifact in chat and keep it in the dock without writing code. The installed apps can use OS APIs, connectors and Claude itself, so they can add menu bar items, create transparent windows and send notifications. Examples include custom terminals, file managers and video editors, and several demos are available. Anthropic's Felix Rieseberg wrote on X that a Claude account and the Claude app are required for now, though a free account is enough.",
+   "summary_ar": "أتاحت Anthropic للمستخدمين تثبيت Claude Artifacts كتطبيقات مستقلة على أجهزة Mac أو Windows. والميزة في مرحلة تجريبية (بيتا) اعتباراً من اليوم، وتتطلب أحدث إصدار من تطبيق Claude لنظام macOS أو Windows. ويُنشئ المستخدم الأداة داخل المحادثة ثم يبقيها في شريط التطبيقات دون كتابة أي شيفرة برمجية. ويمكن للتطبيقات المثبّتة استخدام واجهات برمجة نظام التشغيل والموصّلات وClaude نفسه، ما يتيح لها إضافة عناصر إلى شريط القوائم وإنشاء نوافذ شفافة وإرسال إشعارات. ومن الأمثلة أجهزة طرفية مخصصة ومديرو ملفات ومحررو فيديو، وتتوفر عدة نماذج تجريبية. وكتب فيليكس ريزبرغ من Anthropic على منصة X أن المستخدم يحتاج حالياً إلى حساب Claude وتطبيق Claude، ويكفي حساب مجاني.",
+   "excerpt": "Anthropic now lets you install Claude Artifacts as desktop apps on Mac and Windows, and a free account is enough. You build one in chat without writing code, and it can add menu bar items, send notifications, and create transparent windows."
   },
   {
    "id": "3ccf5fffffa7",
@@ -393,6 +463,20 @@
    "summary_en": "The Dubai Government Human Resources Department held its second HR Forum 2026 under the theme \"AI: new roles and renewed skills\". About 250 HR leaders and experts from government and the private sector attended at InterContinental Dubai Festival City. Discussions covered four themes: quality of working life, trust and governance, career growth, and keeping pace with rapid change. Director General Abdullah Ali bin Zayed Al Falasi said the success of the transformation is measured by its effect on employee experience, not just by how fast AI tools are adopted. Sessions also addressed legislation, with Dubai's Higher Committee for Legislation working on a flexible framework for responsible AI use. The department announced three guides and tools, including an AI assistant for HR, and held a roundtable of about 40 senior HR officials.",
    "summary_ar": "نظّمت دائرة الموارد البشرية لحكومة دبي «ملتقى الموارد البشرية الثاني 2026» تحت شعار «الذكاء الاصطناعي: أدوار جديدة ومهارات متجددة»، بمشاركة نحو 250 من قيادات الموارد البشرية والخبراء من القطاعين الحكومي والخاص، وذلك في فندق إنتركونتيننتال دبي فيستيفال سيتي. وناقش الملتقى أربعة محاور هي جودة الحياة الوظيفية، والثقة والحوكمة، والنمو المهني، ومواكبة التغيير المتسارع. وقال مدير عام الدائرة عبدالله علي بن زايد الفلاسي إن نجاح هذا التحول لا يُقاس بسرعة تبني أدوات الذكاء الاصطناعي فقط، بل بأثرها في تجربة الموظف. وتناولت الجلسات أيضاً الجانب التشريعي، إذ تعمل اللجنة العليا للتشريعات في دبي على منظومة مرنة تنظم الاستخدام المسؤول للذكاء الاصطناعي. وأعلنت الدائرة ثلاثة إصدارات وأدوات، من بينها أداة المساعد الذكي في الموارد البشرية، كما عُقدت طاولة مستديرة ضمت نحو 40 من كبار مسؤولي الموارد البشرية.",
    "excerpt": "نظّمت دائرة الموارد البشرية لحكومة دبي «ملتقى الموارد البشرية الثاني 2026»، تحت شعار «الذكاء الاصطناعي: أدوار جديدة ومها"
+  },
+  {
+   "id": "26c3ceae0894",
+   "source": "techcrunch-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "apps",
+   "published": "2026-11-24T16:46:00+00:00",
+   "title": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
+   "title_ar": "Tidal تحظر ملايين المقطوعات المولّدة بالذكاء الاصطناعي وتزيلها مع اجتياح المحتوى الرديء المولّد بالذكاء الاصطناعي منصات بث الموسيقى",
+   "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
+   "summary_en": "Tidal said on Tuesday that it will ban and remove songs generated fully with AI, citing a flood of submissions: more than 43% of tracks uploaded over the past 90 days were AI-generated. Removals begin on December 9 and will delete more than 29 million songs by the end of the year, while roughly 80,000-85,000 tracks a day will be rejected. Distribution services may no longer deliver 100% AI-generated tracks, though songs made with AI assistance are still accepted. Tidal says 27 million tracks, or 6.3% of its catalogue, are fully AI-generated, and 96% of them have no streams. Bandcamp has also banned AI music, while Spotify and YouTube Music label it instead.",
+   "summary_ar": "قالت منصة Tidal للبث الموسيقي يوم الثلاثاء إنها ستحظر الأغاني المولدة بالكامل بالذكاء الاصطناعي وتزيلها، بسبب تدفق كبير من المواد المرفوعة، إذ إن أكثر من 43% من المقاطع المرفوعة خلال آخر 90 يوماً أُنشئت بالذكاء الاصطناعي. وتبدأ عمليات الإزالة في 9 ديسمبر، وسيُحذف أكثر من 29 مليون أغنية بنهاية العام، فيما سيُرفض نحو 80 ألفاً إلى 85 ألف مقطع يومياً. ولن يُسمح لخدمات التوزيع بتسليم مقاطع مولدة بالكامل بالذكاء الاصطناعي، مع بقاء الأغاني المنجزة بمساعدته مقبولة. وتفيد Tidal بأن 27 مليون مقطع، أي 6.3% من كتالوجها، مولدة بالكامل، وأن 96% منها بلا أي استماع. وكانت Bandcamp قد حظرت الموسيقى المولدة بالذكاء الاصطناعي أيضاً، بينما تكتفي Spotify وYouTube Music بوضع علامات عليها.",
+   "excerpt": "The company said it will still accept songs that were made with AI assistance, but not fully generated."
   },
   {
    "id": "72b59b6b65e3",
@@ -871,6 +955,20 @@
    "excerpt": "دبي في 24 نوفمبر/ وام/ نظّمت دائرة الموارد البشرية لحكومة دبي أمس \"ملتقى الموارد البشرية الثاني 2026\"، تحت شعار \"الذكاء الاصطناعي: أدوار جديدة ومهارات متجددة\"، بمشاركة نحو 250 من قيادات الموارد البشرية والخبراء وممثلي الجهات الحكومية والقطاع الخاص، لمناقشة تحولات بيئة العمل…"
   },
   {
+   "id": "2e70dd4f7f11",
+   "source": "register-ai",
+   "lang": "en",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-24T09:16:00+00:00",
+   "title": "UK gov invests in defense startup making virtual training ground for AI",
+   "title_ar": "الحكومة البريطانية تستثمر في شركة ناشئة دفاعية تبني ساحة تدريب افتراضية للذكاء الاصطناعي",
+   "url": "https://www.theregister.com/ai-and-ml/2026/11/24/uk-gov-invests-in-defense-startup-making-virtual-training-ground-for-ai/5311707",
+   "summary_en": "The UK government has invested in a defence startup that is building a virtual training ground for AI. According to the publisher's description, Britain wants a sovereign capability to test whether military AI will work before it is deployed for real.",
+   "summary_ar": "استثمرت الحكومة البريطانية في شركة ناشئة في مجال الدفاع تعمل على بناء ساحة تدريب افتراضية للذكاء الاصطناعي. ووفق وصف الناشر، تريد بريطانيا امتلاك قدرة سيادية لاختبار مدى نجاح الذكاء الاصطناعي العسكري قبل نشره فعلياً.",
+   "excerpt": "Britain wants sovereign capability to test whether military AI will work before it gets deployed for real"
+  },
+  {
    "id": "7f6d6b27b26f",
    "source": "thenational",
    "lang": "en",
@@ -924,7 +1022,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/11/24/Nvidia-reinstates-Huang-as-CEO-after-Trump-intervention",
    "summary_en": "Jensen Huang has returned as head of NVIDIA about two weeks after stepping down. The company's description says this followed pressure from US President Donald Trump and from investors, as well as consultations with the US administration that eased concerns.",
    "summary_ar": "عاد جنسن هوانغ إلى رئاسة NVIDIA بعد نحو أسبوعين من تنحيه. ويذكر الوصف أن ذلك جاء إثر ضغوط من الرئيس الأميركي «دونالد ترامب» ومن مستثمرين، إضافة إلى مشاورات مع الإدارة الأميركية بددت المخاوف.",
-   "excerpt": "عاد جنسن هوانغ إلى رئاسة إنفيديا بعد نحو أسبوعين من تنحيه، إثر ضغوط من الرئيس الأميركي دونالد ترامب ومستثمرين، ومشاورات مع الإدارة الأميركية بددت المخاوف…"
+   "excerpt": null
   },
   {
    "id": "8d7d1f8606ed",
@@ -1316,7 +1414,7 @@
    "url": "https://sharjah24.ae/ar/Articles/2026/11/23/d78",
    "summary_en": "UN Secretary-General Antonio Guterres called on Monday for an international framework to manage the risks of artificial intelligence. He made the appeal in a speech to the special summit on AI safety. The available text is cut off after describing the summit's hosts, so no further details of his remarks are given.",
    "summary_ar": "دعا الأمين العام للأمم المتحدة أنطونيو غوتيريش، يوم الاثنين، إلى إطار دولي لإدارة مخاطر الذكاء الاصطناعي. وجاءت دعوته في كلمة ألقاها أمام القمة الخاصة المعنية بسلامة الذكاء الاصطناعي. ويتوقف النص المتاح عند الحديث عن الجهات المستضيفة للقمة، ولذلك لا تتوافر تفاصيل أخرى عن مضمون كلمته.",
-   "excerpt": "دعا أنطونيو غوتيريش، الأمين العام للأمم المتحدة، اليوم الاثنين، في كلمة ألقاها أمام القمة الخاصة المعنية بسلامة الذكاء الاصطناعي، التي تستضيفها كل من الأمم…"
+   "excerpt": null
   },
   {
    "id": "c1738f6622b3",
