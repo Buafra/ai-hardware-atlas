@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T19:35:11+00:00",
+ "updated_at": "2026-11-28T04:02:20+00:00",
  "source": "https://openrouter.ai/api/v1/models",
  "models": [
   {
@@ -1108,17 +1108,6 @@
    "hf": "Qwen/Qwen3-235B-A22B-Instruct-2507",
    "context": 262144,
    "created": 1753119555,
-   "open": true,
-   "params_b": 235.09,
-   "params_source": "huggingface",
-   "moe": true
-  },
-  {
-   "id": "qwen/qwen3-235b-a22b-thinking-2507",
-   "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-   "hf": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-   "context": 128000,
-   "created": 1753449557,
    "open": true,
    "params_b": 235.09,
    "params_source": "huggingface",

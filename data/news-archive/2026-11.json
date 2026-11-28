@@ -3,6 +3,34 @@
  "policy_version": 1,
  "items": [
   {
+   "id": "cb797b970882",
+   "source": "alittihad-feed",
+   "lang": "ar",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-27T11:20:00+00:00",
+   "title": "«بنك أبوظبي الأول» يُرسي معايير جديدة للخدمات المصرفية القائمة على الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://www.aletihad.ae/news/الاقتصادي/4708817/-بنك-أبوظبي-الأول--يرسي-معايير-جديدة-للخدمات-المصرفية-القائم",
+   "summary_en": "First Abu Dhabi Bank says it is committed to setting new standards for AI-based banking services in the UAE and beyond. The bank announced the launch of an app called FAB First, which it presents as a step towards shaping the future of smart banking.",
+   "summary_ar": "أكد بنك أبوظبي الأول التزامه بإرساء معايير جديدة للخدمات المصرفية القائمة على الذكاء الاصطناعي في الإمارات وخارجها. وأعلن البنك إطلاق تطبيق FAB First، في خطوة يقول إنها تسهم في تشكيل مستقبل الخدمات المصرفية الذكية.",
+   "excerpt": "أكد بنك أبوظبي الأول، التزامه بإرساء معايير جديدة للخدمات المصرفية القائمة على الذكاء الاصطناعي في دولة الإمارات وخارجها، حيث أعلن عن إطلاق تطبيق FAB First في خطوةٍ تسهم في تشكيل مستقبل الخدمات المصرفية الذكية."
+  },
+  {
+   "id": "99dbc461826c",
+   "source": "aitnews",
+   "lang": "ar",
+   "uae": false,
+   "topic": "business",
+   "published": "2026-11-26T20:03:24+00:00",
+   "title": "بلومبرغ: SAP تدرس إلغاء 10 آلاف وظيفة على الأقل ضمن تحولها نحو الذكاء الاصطناعي",
+   "title_ar": null,
+   "url": "https://aitnews.com/2026/11/27/%d8%b3%d8%a7%d8%a8-%d8%aa%d8%af%d8%b1%d8%b3-%d8%a5%d9%84%d8%ba%d8%a7%d8%a1-10-%d8%a2%d9%84%d8%a7%d9%81-%d9%88%d8%b8%d9%8a%d9%81%d8%a9/",
+   "summary_en": "German enterprise software company SAP is considering cutting at least 10,000 jobs as part of a restructuring meant to prepare its business for a shift toward AI, Bloomberg reported on 26 November, citing people familiar with the talks. That equals about 9% of a workforce of more than 110,000, and the final number could change after talks with employee representatives. Management has asked departments to identify cuts, with particular attention to product development, engineering and sales. SAP did not confirm a specific plan and said it constantly reviews its organisational structure. Reuters said it could not independently verify the report. The text adds that job cuts do not necessarily mean equal layoffs and that the report does not show AI systems will directly replace staff.",
+   "summary_ar": "تدرس شركة SAP الألمانية للبرمجيات المؤسسية خطة لإلغاء 10 آلاف وظيفة على الأقل ضمن إعادة هيكلة تهدف إلى تهيئة أعمالها للتحول نحو الذكاء الاصطناعي، وفقاً لما أوردته وكالة «بلومبرغ» في 26 نوفمبر نقلاً عن أشخاص مطلعين على المناقشات. وتعادل هذه الوظائف نحو 9% من القوى العاملة التي يتجاوز عددها 110 آلاف موظف، وقد يتغير الرقم النهائي بعد التفاوض مع ممثلي العاملين. وطلبت الإدارة من الأقسام تحديد فرص خفض الوظائف، مع اهتمام خاص بفرق تطوير المنتجات والهندسة والمبيعات. ولم تؤكد SAP وجود خطة محددة، وقالت إنها تراجع هيكلها التنظيمي باستمرار، فيما ذكرت «رويترز» أنها لم تتمكن من التحقق من التقرير بصورة مستقلة. ويشير النص إلى أن إلغاء الوظائف لا يعني بالضرورة تسريح عدد مماثل من العاملين، وأن التقرير لا يثبت أن أنظمة الذكاء الاصطناعي ستحل محلهم مباشرة.",
+   "excerpt": "تدرس شركة SAP الألمانية إعادة هيكلة قد تطال نحو 9% من قوتها العاملة، وفقًا لبلومبرغ، في حين لم تحسم الشركة عدد الوظائف المعنية أو تؤكد اعتماد الخطة."
+  },
+  {
    "id": "0c1476f9203c",
    "source": "gn-uae",
    "lang": "en",
@@ -213,6 +241,34 @@
    "excerpt": "نجحت الإدارة العامة للمرور في شرطة دبي في استخدام تقنيات الذكاء الاصطناعي لإنتاج محاكاة ثلاثية الأبعاد للحوادث المرورية، بما يفتح آفاقاً جديدة للاستفادة من هذه التقنيات في إعادة تمثيل سيناريو الحوادث، وعرض تسلسل أحداثها بصورة مرئية."
   },
   {
+   "id": "bf32abdcd127",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "hardware",
+   "published": "2026-11-25T20:51:02+00:00",
+   "title": "US chip-access curbs and anti-distillation measures are reportedly already slowing Chinese AI labs",
+   "title_ar": "قيود الولايات المتحدة على الوصول إلى الرقائق وإجراءات مكافحة التقطير تبطئ بالفعل مختبرات الذكاء الاصطناعي الصينية، بحسب ما تردد",
+   "url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/",
+   "summary_en": "The Information reports that US measures are already slowing Chinese AI developers including Deepseek, Moonshot AI and Alibaba. Since September they have faced restrictions on remote access to advanced Nvidia chips in foreign data centers, as well as successful anti-distillation measures from OpenAI and Anthropic. Many projects are reportedly delayed. Deepseek researchers estimated last month that their gap to top US models could grow from three to six months to nine months if distillation disappears completely, and Moonshot AI has canceled a $150 million deal for Nvidia Blackwell chips in Indonesia. Chinese firms are looking for workarounds, such as renting computing power through non-Chinese third parties, relying more on domestic chips, as MiniMax, Mihoyo and Alibaba are doing, and investing more in training data for reinforcement learning.",
+   "summary_ar": "تفيد The Information بأن إجراءات أمريكية بدأت تبطئ مطوري الذكاء الاصطناعي الصينيين، ومنهم Deepseek وMoonshot AI وAlibaba. فمنذ سبتمبر تواجه هذه الشركات قيوداً على الوصول عن بعد إلى رقائق NVIDIA المتقدمة في مراكز بيانات أجنبية، إضافة إلى إجراءات ناجحة لمكافحة التقطير اتخذتها OpenAI وAnthropic. ويُقال إن كثيراً من المشاريع تأخرت. وقدّر باحثو Deepseek الشهر الماضي أن الفجوة بينهم وبين أفضل النماذج الأمريكية قد تتسع من ثلاثة إلى ستة أشهر إلى تسعة أشهر إذا اختفى التقطير تماماً، كما ألغت Moonshot AI صفقة بقيمة 150 مليون دولار لشراء رقائق NVIDIA Blackwell في إندونيسيا. وتبحث الشركات الصينية عن حلول بديلة، مثل استئجار قدرات حوسبة عبر أطراف ثالثة غير صينية، والاعتماد بدرجة أكبر على الرقائق المحلية كما تفعل MiniMax وMihoyo وAlibaba، والاستثمار أكثر في بيانات التدريب الخاصة بالتعلم المعزز.",
+   "excerpt": "Chip restrictions, anti-distillation measures, and shrinking access to Nvidia hardware abroad are putting growing pressure on Deepseek, Moonshot AI, and Alibaba, according to a report."
+  },
+  {
+   "id": "9136aa5e82c2",
+   "source": "the-decoder",
+   "lang": "en",
+   "uae": false,
+   "topic": "agents",
+   "published": "2026-11-25T20:15:50+00:00",
+   "title": "Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\"",
+   "title_ar": "الرئيس التنفيذي لشركة Anthropic داريو أمودي يقول إن ترك الذكاء الاصطناعي يحكم المجتمع سيكون «فكرة سيئة»",
+   "url": "https://the-decoder.com/anthropic-ceo-dario-amodei-says-letting-ai-govern-society-would-be-a-bad-idea/",
+   "summary_en": "Anthropic CEO Dario Amodei said it was absurd to suggest he believes people should give up their free will to AI systems. In a long post on X, he responded to an Axios report, based on people familiar with internal discussions, that some Anthropic employees believed humanity would safely hand authority to superintelligent systems. Amodei wrote that AI must be governed through legitimate democratic processes and that handing governance to AI is a bad idea, just as autocracy is. He said automating tasks such as driving, developing cancer drugs and writing software could benefit humanity, but warned that end-to-end automation carries risks, including serious job disruption and AI building new models without human oversight. He added that Anthropic refused to let its models be used for autonomous weapons during its dispute with the Pentagon, even at risk to its future.",
+   "summary_ar": "قال الرئيس التنفيذي لشركة Anthropic «داريو أمودي» إن من العبث الادعاء بأنه يرى أن على الناس التخلي عن إرادتهم الحرة لصالح أنظمة الذكاء الاصطناعي. وفي منشور طويل على منصة X ردّ على تقرير لموقع Axios، استند إلى أشخاص مطلعين على نقاشات داخلية، أفاد بأن بعض موظفي Anthropic يعتقدون أن البشرية ستسلّم السلطة بأمان إلى أنظمة فائقة الذكاء. وكتب أمودي أن الذكاء الاصطناعي يجب أن يُحكم عبر عمليات ديمقراطية مشروعة، وأن تسليم الحكم للذكاء الاصطناعي فكرة سيئة، كما هو الحال مع الاستبداد. وأوضح أن أتمتة مهام مثل القيادة وتطوير أدوية السرطان وكتابة البرمجيات قد تفيد البشرية، لكنه حذّر من أن الأتمتة الشاملة تنطوي على مخاطر، منها اضطراب كبير في الوظائف وبناء الذكاء الاصطناعي نماذج جديدة دون إشراف بشري. وأضاف أن Anthropic رفضت السماح باستخدام نماذجها في الأسلحة الذاتية خلال خلافها مع البنتاغون، حتى مع تعريض مستقبلها للخطر.",
+   "excerpt": "Anthropic CEO Dario Amodei is pushing back on an Axios report saying some employees believe humanity will hand power to superintelligent systems. Amodei says \"turning over governance to AI is a bad idea.\""
+  },
+  {
    "id": "fbb58af4fca5",
    "source": "thenational",
    "lang": "en",
@@ -351,6 +407,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": "أعلنت لجنة الاتصالات الاتحادية الأمريكية اليوم الأربعاء أنها سمحت لشركة سبيس إكس المملوكة للملياردير إيلون ماسك بنشر مل"
+  },
+  {
+   "id": "9a8b82e7f7b4",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": true,
+   "topic": "uae",
+   "published": "2026-11-25T17:07:00+00:00",
+   "title": "UAE Cabinet approves the UAE Government AI agent 'Mira'",
+   "title_ar": "مجلس الوزراء الإماراتي يعتمد وكيل الذكاء الاصطناعي لحكومة الإمارات «Mira»",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/25/d62",
+   "summary_en": "The UAE Cabinet, chaired by Sheikh Mohammed bin Rashid Al Maktoum, approved the rollout of Mira, a government concierge agent that will be available to everyone using UAE Government services from March 2027. Federal entities were told to connect their services to it within approved timelines. The Cabinet also approved a government strategy for Agentic AI, described as the world's first, which targets Agentic AI-supported models across 50% of government operations and training for 80,000 federal employees. It launched FedAI, a unified, secure and sovereign platform for building and running Agentic AI solutions, with a National AI Gateway as a single access point. Other approvals included a National Zero Trust Security Policy and a dedicated AI procurement section in federal financial policies.",
+   "summary_ar": "اعتمد مجلس الوزراء الإماراتي برئاسة الشيخ «محمد بن راشد آل مكتوم» خطة إطلاق «ميرا» (Mira)، وهي الوكيل الذكي الحكومي المرافق الذي سيكون متاحاً لجميع مستخدمي الخدمات الحكومية الإماراتية اعتباراً من مارس 2027. وجرى توجيه الجهات الاتحادية بربط خدماتها به ضمن الأطر الزمنية المعتمدة. كما أقرّ المجلس استراتيجية حكومية للذكاء الاصطناعي الوكيلي (Agentic AI) وُصفت بأنها الأولى من نوعها عالمياً، وتستهدف التحول إلى نماذج مدعومة بهذه التقنية في 50% من العمليات الحكومية وتدريب 80 ألف موظف اتحادي. وأطلق المجلس منصة FedAI، وهي منصة موحدة وآمنة وسيادية لتطوير حلول الذكاء الاصطناعي الوكيلي وتشغيلها، وتضم بوابة وطنية للذكاء الاصطناعي (National AI Gateway) كنقطة وصول واحدة. ومن القرارات الأخرى سياسة وطنية للأمن السيبراني بمبدأ انعدام الثقة، وإضافة قسم خاص بمشتريات الذكاء الاصطناعي إلى السياسات المالية للحكومة الاتحادية.",
+   "excerpt": "His Highness Sheikh Mohammed bin Rashid Al Maktoum, Vice President, Prime Minister of the UAE and Ruler of Dubai, chaired a Cabinet meeting that approved the…"
   },
   {
    "id": "bd3e6e0a0b0f",
@@ -647,6 +717,20 @@
    "excerpt": "بروكسل في 25 نوفمبر/ وام/ أعلنت المفوضية الأوروبية عزمها إنشاء صندوق سيادي بقيمة 50 مليار يورو، يجمع بين رؤوس الأموال العامة والخاصة، بهدف تمويل التقنيات المتقدمة، وفي مقدمتها الذكاء الاصطناعي والحوسبة الكمومية، وتعزيز الاستقلال التكنولوجي والأمن الاقتصادي للاتحاد الأوروبي."
   },
   {
+   "id": "110c4396a457",
+   "source": "sharjah24-en",
+   "lang": "en",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-25T11:02:00+00:00",
+   "title": "Crescent Petroleum, Edraak records +130,000 enrollment in AI prog",
+   "title_ar": "Crescent Petroleum وEdraak تسجلان أكثر من 130,000 تسجيل في برنامج للذكاء الاصطناعي",
+   "url": "https://sharjah24.ae/en/Articles/2026/11/25/mm06",
+   "summary_en": "A four-course Arabic-language specialization called AI for Employment, run by Crescent Petroleum and its partner Edraak, has recorded more than 130,000 enrolments within two months of launch. The free online programme teaches AI-powered productivity tools, effective prompting and real-world AI applications across job functions and industries. Uptake is highest in Egypt, Saudi Arabia, Jordan and Algeria, women make up over half of participants, and nearly half of learners hold bachelor's degrees. Those who finish receive a certificate. Crescent Petroleum's Majid Jafar and Edraak chairman Bassem Saad said the response shows young people want relevant, practical skills. The course builds on the Career Compass Pathway, which has trained 1.3 million young people.",
+   "summary_ar": "سجّل أكثر من 130 ألف متعلم في تخصص «الذكاء الاصطناعي من أجل التوظيف» (AI for Employment) خلال شهرين فقط من إطلاقه، وهو تخصص من أربع دورات يُدرَّس بالعربية وتنفذه Crescent Petroleum بالشراكة مع Edraak. ويقدّم البرنامج المجاني عبر الإنترنت تدريباً عملياً على أدوات الإنتاجية المدعومة بالذكاء الاصطناعي وصياغة التوجيهات بفاعلية وتطبيقاته الواقعية في مختلف الوظائف والقطاعات. وسجّل أعلى إقبال في مصر والسعودية والأردن والجزائر، وتشكّل النساء أكثر من نصف المشاركين، ويحمل قرابة نصف المتعلمين شهادة البكالوريوس. ويحصل من يُنهي التخصص على شهادة. وقال «ماجد جعفر» و«باسم سعد» إن الإقبال يدل على رغبة الشباب في تعلّم مهارات مناسبة وقابلة للتطبيق. ويبني التخصص على مسار «بوصلة المهن» (Career Compass Pathway) الذي درّب 1.3 مليون شاب وشابة.",
+   "excerpt": "More than 130,000 young people across the Middle East have enrolled in the AI for Employment specialization, developed by Crescent Petroleum, the Middle East’s…"
+  },
+  {
    "id": "7745856464ba",
    "source": "wam-ar",
    "lang": "ar",
@@ -717,6 +801,20 @@
    "excerpt": "UAE Cabinet approves AI-powered assistant 'Mira' to streamline government services, aiming for efficiency and innovation in public administration."
   },
   {
+   "id": "2b837da688fd",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-25T09:27:00+00:00",
+   "title": "\"المعاشات\" توظّف الذكاء الاصطناعي لتطوير خدمات استباقية",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/25/gh-10",
+   "summary_en": "The General Authority for Pensions and Social Security has developed an integrated data platform supported by artificial intelligence. The platform holds about 7 terabytes of extracted and archived data. According to the headline, the authority is using AI to develop proactive services.",
+   "summary_ar": "طوّرت الهيئة العامة للمعاشات والتأمينات الاجتماعية منصة متكاملة للبيانات المدعومة بالذكاء الاصطناعي، تضم نحو 7 تيرابايت من البيانات المستخلصة والمؤرشفة. وبحسب العنوان، توظّف الهيئة الذكاء الاصطناعي لتطوير خدمات استباقية.",
+   "excerpt": "طوّرت الهيئة العامة للمعاشات والتأمينات الاجتماعية منصة متكاملة للبيانات المدعومة بالذكاء الاصطناعي، تضم نحو 7 تيرابايت من البيانات المستخلصة والمؤرشفة من 5…"
+  },
+  {
    "id": "0f99e4b62eb5",
    "source": "kt-business",
    "lang": "en",
@@ -771,6 +869,20 @@
    "summary_en": null,
    "summary_ar": null,
    "excerpt": null
+  },
+  {
+   "id": "e0634b773f44",
+   "source": "sharjah24-ar",
+   "lang": "ar",
+   "uae": false,
+   "topic": "uae",
+   "published": "2026-11-25T08:12:00+00:00",
+   "title": "نفط الهلال وإدراك تستقطبان 130 ألف متعلم لتخصص \"الذكاء الاصطناعي\"",
+   "title_ar": null,
+   "url": "https://sharjah24.ae/ar/Articles/2026/11/25/mm06",
+   "summary_en": "The AI for Employment specialization, launched by Crescent Petroleum in partnership with the Edraak platform, has attracted more than 130,000 young men and women from across the Middle East.",
+   "summary_ar": "استقطب تخصص «الذكاء الاصطناعي من أجل التوظيف»، الذي أطلقته Crescent Petroleum بالشراكة مع منصة Edraak، أكثر من 130 ألف شاب وشابة من مختلف أنحاء الشرق الأوسط.",
+   "excerpt": "استقطب تخصص الذكاء الاصطناعي من أجل التوظيف، الذي أطلقته شركة نفط الهلال بالشراكة مع منصة إدراك، أكثر من 130 ألف شاب وشابة من مختلف أنحاء الشرق الأوسط، خلال…"
   },
   {
    "id": "943f5591bcdb",
